@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+
+<config>
+    <sections>
+        <quickview translate="label">
+            <label>Quick View</label>
+             <tab>templines</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment>
+                    <![CDATA[
+                            
+                    ]]>
+                    </comment>
+                    <fields>
+                        <enabled translate="label comment">
+                            <label>Enabled</label>
+                            <!-- <comment><![CDATA[]]></comment> -->
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+												
+						
+						
+
+                    </fields>
+                </settings>
+				 <frontend translate="label">
+					<label>Frontend</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>111</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+                                        <comment>
+                                          <![CDATA[
+                                                  ]]>
+                                        </comment>
+                                        <fields>
+											 <width translate="label comment">
+												<label>Window Width</label>
+												<!-- <comment><![CDATA[]]></comment> -->
+												<frontend_type>text</frontend_type>                            
+												<sort_order>12</sort_order>
+												<show_in_default>1</show_in_default>
+												<show_in_website>1</show_in_website>
+												<show_in_store>1</show_in_store>
+											</width>
+											 <height translate="label comment">
+												<label>Window Height</label>
+												<!-- <comment><![CDATA[]]></comment> -->
+												<frontend_type>text</frontend_type>                            
+												<sort_order>14</sort_order>
+												<show_in_default>1</show_in_default>
+												<show_in_website>1</show_in_website>
+												<show_in_store>1</show_in_store>
+											</height>
+											 <imagesize translate="label comment">
+												<label>Product Image Size</label>
+												<!-- <comment><![CDATA[]]></comment> -->
+												<frontend_type>text</frontend_type>                            
+												<sort_order>15</sort_order>
+												<show_in_default>1</show_in_default>
+												<show_in_website>1</show_in_website>
+												<show_in_store>1</show_in_store>
+											</imagesize>
+											<listwidth translate="label comment">
+												<label>Product List Image Width</label>
+												<!-- <comment><![CDATA[]]></comment> -->
+												<frontend_type>text</frontend_type>                            
+												<sort_order>127</sort_order>
+												<show_in_default>1</show_in_default>
+												<show_in_website>1</show_in_website>
+												<show_in_store>1</show_in_store>
+											</listwidth>
+											<listheight translate="label comment">
+												<label>Product List Image Height</label>
+												<!-- <comment><![CDATA[]]></comment> -->
+												<frontend_type>text</frontend_type>                            
+												<sort_order>128</sort_order>
+												<show_in_default>1</show_in_default>
+												<show_in_website>1</show_in_website>
+												<show_in_store>1</show_in_store>
+											</listheight>
+											  <image translate="label comment">
+                                                    <label>Show Product Image</label>
+                                                    <!-- <comment><![CDATA[]]></comment> -->
+                                                    <frontend_type>select</frontend_type>
+                                                    <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                                                    <sort_order>16</sort_order>
+                                                    <show_in_default>1</show_in_default>
+                                                    <show_in_website>1</show_in_website>
+                                                    <show_in_store>1</show_in_store>
+                                            </image>
+                                            <shortdesc translate="label comment">
+                                                    <label>Show Product Short Description</label>
+                                                    <!-- <comment><![CDATA[]]></comment> -->
+                                                    <frontend_type>select</frontend_type>
+                                                    <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                                                    <sort_order>17</sort_order>
+                                                    <show_in_default>1</show_in_default>
+                                                    <show_in_website>1</show_in_website>
+                                                    <show_in_store>1</show_in_store>
+                                            </shortdesc>
+                                             <desc translate="label comment">
+                                                    <label>Show Product Full Description</label>
+                                                    <!-- <comment><![CDATA[]]></comment> -->
+                                                    <frontend_type>select</frontend_type>
+                                                    <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                                                    <sort_order>18</sort_order>
+                                                    <show_in_default>1</show_in_default>
+                                                    <show_in_website>1</show_in_website>
+                                                    <show_in_store>1</show_in_store>
+                                            </desc>
+                                             <addinfo translate="label comment">
+                                                    <label>Show Product Additional Information</label>
+                                                    <!-- <comment><![CDATA[]]></comment> -->
+                                                    <frontend_type>select</frontend_type>
+                                                    <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                                                    <sort_order>19</sort_order>
+                                                    <show_in_default>1</show_in_default>
+                                                    <show_in_website>1</show_in_website>
+                                                    <show_in_store>1</show_in_store>
+                                            </addinfo>
+                                            <ajaxloader translate="label comment">
+                                                    <label>Ajax Loading Picture</label>
+                                                    <!-- <comment><![CDATA[]]></comment> -->
+                                                    <frontend_type>image</frontend_type>
+                                                    <source_model>adminhtml/system_config_source_product_thumbnail</source_model>
+                                                    <backend_model>adminhtml/system_config_backend_image</backend_model>
+                                                    <upload_dir config="system/filesystem/media" scope_info="1">catalog/product/ajaxcart</upload_dir>
+                                                    <base_url type="media" scope_info="1">catalog/product/ajaxcart</base_url>
+                                                    <sort_order>10</sort_order>
+                                                    <show_in_default>1</show_in_default>
+                                                    <show_in_website>1</show_in_website>
+                                                    <show_in_store>1</show_in_store>
+                                            </ajaxloader>
+                                         </fields>
+				</frontend>
+            </groups>
+        </quickview>
+    </sections>
+</config>
