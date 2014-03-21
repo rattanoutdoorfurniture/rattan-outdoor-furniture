@@ -1,0 +1,248 @@
+/* 11.12.2013  ========================================================================= */
+
+/* Fixed bg title
+
+Edited Files:
+* page/topmenu.tpl
+*/
+
+
+.category-full-image {
+	clear: both;
+	min-height: 42px;
+	width: 100%;
+}
+/* 12.01.2014  ========================================================================= */
+
+/* Fixed compare page
+
+Edited Files:
+* page/topmenu.tpl
+*/
+
+
+
+.page-popup .link-print {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+	color: #3E4448;
+	display: block;
+	font-size: 16px;
+	font-weight: normal !important;
+	padding: 10px;
+	text-transform: none !important;
+}
+.compare-table tbody th {
+	background:none !important;
+}
+.add-to-links {
+	float:none !important;
+}
+html .product-collateral .box-collateral {
+	margin: 30px 0 25px;
+}
+html .product-view .box-up-sell .products-grid td {
+	padding-top:0;
+}
+html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .price-box {
+	display:none;
+}
+
+
+/* 18.01.2014  ========================================================================= */
+
+/* Fixed ie 8 emulation ie11
+*/
+
+
+.ua-ie-8 #iview {
+	display: block;
+	position: relative;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+.ua-ie-8 #iview .iviewSlider {
+	display: block;
+	height: 536px;
+	overflow: hidden;
+
+}
+
+
+
+.ua-ie-8 #iview div.iview-directionNav {
+  bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+}
+
+
+.ua-ie-8 #iview div.iview-directionNav a:hover{
+    height: 50px;	
+}
+
+
+.ua-ie-8 #iview div.iview-directionNav a {
+    background-image: url("../../img/theme-control.png");
+    background-position: center 11px !important;
+    background-repeat: no-repeat;
+    bottom: 0 !important;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    position: absolute;
+    text-indent: -9999px;
+    top: auto !important;
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+    transition-property: left, right;
+    transition-timing-function: ease-in-out;
+    width: 167px;
+}
+
+.ua-ie-8 #iview div.iview-directionNav a.iview-nextNav {
+ right: 20% !important;
+    background-position: center 11px !important;
+}
+
+.ua-ie-8 #iview div.iview-directionNav a.iview-prevNav {
+  background-position: center -180px !important;
+    left: 20% !important;
+}
+
+.ua-ie-8 #iview.iview-hover div.iview-directionNav a.iview-nextNav {
+	right: 20px;
+}
+
+.ua-ie-8 #iview.iview-hover div.iview-directionNav a.iview-prevNav {
+	left: 20px;
+}
+
+.ua-ie-8 .iview-caption {
+	background: url('../../img/caption-bg.png');
+	color: #FFF;
+	border-radius: 3px;
+	padding: 10px 15px;
+	font-family: Verdana;
+	font-size: 12px;
+	text-shadow: #000 1px 1px 0px;
+}
+
+.ua-ie-8 .iview-caption.caption1 {
+	text-shadow: none;
+}
+
+.ua-ie-8 .iview-caption.caption2 {
+	background: #FFF;
+	color: #000;
+	text-shadow: none;
+}
+
+.ua-ie-8 .iview-caption.caption3 {
+	background: #c4302b;
+	box-shadow: rgba(0, 0, 0, 0.7) 10px 10px 15px 0px;
+	text-shadow: none;
+}
+
+.ua-ie-8 #iview-preloader {
+	border: #666 1px solid;
+	width: 150px
+}
+
+.ua-ie-8 #iview-preloader div {
+	background: #666;
+}
+.ua-ie-8 #iview-timer {
+	border-radius: 10px;
+}
+
+.ua-ie-8 #iview-timer div {
+	border-radius: 10px;
+}
+
+
+
+
+.block .block-title {
+	background-image:none !important;
+}
+.block .block-title strong {
+	background-image:none !important;
+}
+.block .block-title strong span {
+	background-image:none !important;
+}
+
+
+
+
+.ua-ie-8 .container_9 {
+	margin: 0 auto;
+	width: 1170px;
+}
+.ua-ie-8 body .grid #product_list li.item {
+	margin: 15px 20px 15px 0 !important;
+}
+.ua-ie-8 #presta-slider .bx-wrapper .bx-caption span {
+	background:#ccc;
+}
+.ua-ie-8 .pagination ul .active a, .ua-ie-8 .sf-menu li a:after {
+	display:none !important;
+}
+.ua-ie-8 .container_9 .grid_2 {
+	width: 260px;
+}
+.ua-ie-8 .container_9 .grid_2 {
+	float: left;
+	width: 270px;
+}
+.ua-ie-8 .quickview-button {
+	display:none !important;
+}
+.ua-ie-8 .breadcrumb {
+	background:  #555555;
+}
+
+
+.ua-ie-8 .quick-access li:hover  .cart-items{
+	display:block;
+}
+
+.ua-ie-8 .cart-items{
+	display:none;
+}
+
+
+.ua-ie-8 .products-list .product-shop {
+    margin-left: 65px;
+}
+
+.ua-ie-8  .products-list .product-image {
+  
+    width: 240px;
+}
+
+
+
+
+
+.ua-ie-8 body .grid #product_list li.item {
+	margin: 15px 20px 15px 0 !important;
+}
+.ua-ie-8 #presta-slider .bx-wrapper .bx-caption span {
+	background:#ccc;
+}
+.ua-ie-8 .prd-line {
+	background:#fff !important;
+}
+.ua-ie-8 .quickview-button {
+	display:none !important;
+}
+
+
+.ua-ie-8  .overlay{
+	display:none !important;
+}
+

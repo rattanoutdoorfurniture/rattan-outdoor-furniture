@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<layout version="0.2.0">
+	
+    <slider_slider_view>
+        <reference name="root">
+				<action method="setTemplate"><template>slider/slider.phtml</template></action>
+        </reference>
+		<reference name="root">
+			<block type="slider/mainslider" name="main" template="slider/slider3.phtml">
+				<block type="slider/slider" name="content" as="content" template="slider/slider1.phtml">
+					<block type="slider/tool" name="toolbar" as="toolbar" template="slider/slider2.phtml">
+						<block type="slider/pager" name="slider_pager" as="slider_pager" template="slider/slider4.phtml" />                       
+					</block>
+				</block>
+			</block>
+		</reference>
+	</slider_slider_view>
+	<catalog_category_layered translate="label">
+        <label>Catalog Category (Anchor)</label>
+        <reference name="left">
+            <block type="catalog/layer_view" name="catalog.leftnav1" after="currency" template="slider/view.phtml"/>
+        </reference>
+	</catalog_category_layered>
+</layout> 

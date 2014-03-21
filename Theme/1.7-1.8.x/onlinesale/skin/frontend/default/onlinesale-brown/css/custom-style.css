@@ -1,0 +1,61 @@
+html .first-bg, .block .block-title, .pagination ul .active a, button.button span, .button.btn-checkout, .iview-prevNav, a.iview-nextNav, .dl-menuwrapper button, .dl-menuwrapper .dl-menu, .i-tab li.active, .error-msg, .success-msg, .note-msg, .notice-msg, .product-view .tabs li.active,.sf-menu ul li:hover,.category-list h3 a{
+	background-color:#edac3b;
+}
+html .first-bg-hover:hover, .pagination ul a:hover,.category-list h3 a:hover,.category-list li:hover a {
+	background-color:#edac3b !important;
+}
+html .first-color, .price, .btn-icon i, .price-box, .product-shop .btn-icon i {
+	color:#edac3b;
+}
+html .first-brd, .pagination ul .active a, .sf-menu li a:after {
+	border-color:#edac3b;
+}
+html .second-bg, .sf-menu ul {
+	background:#555555;
+}
+html .second-color {
+	color:#555555;
+}
+html .second-brd {
+	border-color:#555555;
+}
+html .third-bg {
+	background:#fff;
+}
+html .third-color {
+	color:#fff;
+}
+html .third-brd {
+	border-color:#fff;
+}
+html .fourth-bg, .cart-table .btn-update span, .opc .active .step-title {
+	background-color:#424242;
+}
+html .fourth-color {
+	color:#424242;
+}
+html .fourth-brd {
+	border-color:#424242;
+}
+html .fifth-bg, .cart .discount h2, .cart .shipping h2, .cart .totals th {
+	background-color:#212224;
+}
+html .fifth-color {
+	color:#212224;
+}
+html .fifth-brd {
+	border-color:#212224;
+}
+
+
+
+#edac3b
+#2394e4
+#edac3b
+#edac3b
+#edac3b
+#5cc698
+#5cb6c6
+#815cc6
+#ea5050
+#50ead6
