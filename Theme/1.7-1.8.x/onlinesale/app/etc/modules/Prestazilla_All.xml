@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-	<modules>
-		<Prestazilla_All>
-			<active>true</active>
-			<codePool>community</codePool>
-        </Prestazilla_All>
-	</modules>
-</config>
