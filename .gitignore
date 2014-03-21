@@ -1,2 +1,7 @@
 .DS_Store
-
+.idea/*
+.idea*
+var/session/*
+var/cache/*
+var/locks/*
+error_log
