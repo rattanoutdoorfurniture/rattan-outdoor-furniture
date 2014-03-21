@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <tabs>
-        <templines translate="label" module="prestazillaall">
-            <label>Theme Modules</label>
-            <sort_order>400</sort_order>
-        </templines>
-    </tabs>
-</config>
