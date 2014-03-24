@@ -246,3 +246,15 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
 	display:none !important;
 }
 
+/* 24.03.2014 ========================================================================== */
+
+.logo img {
+    height: 110px;
+    margin-top: -25px;
+    padding-top: 0px;
+}
+
+.quick-access,
+#searchbox {
+    margin-top: 15px !important;
+}
