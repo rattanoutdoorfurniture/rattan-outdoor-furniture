@@ -1,0 +1,11 @@
+<div class="cms-widget-state-list">
+    <div class="cms-widget-state-list-title"></div>
+    <div class="cms-widget-state-list-link-list">
+        <?php foreach($this->getStateLinks() as $stateLink): ?>
+        <div class="cms-widget-state-list-link">
+            <?php echo var_export($stateLink); ?>
+<!--            <a --><?php //echo $$stateLink->getLinkAttributes() ?><!-->--><?php //echo $this->escapeHtml($stateLink->getAnchorText()) ?><!--</a>-->
+        </div>
+        <?php endforeach; ?>
+    </div>
+</div>

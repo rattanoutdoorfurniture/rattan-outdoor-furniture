@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<widgets>
+    <states_list type="states/list">
+        <name>State City List</name>
+        <description type="desc">Adds a list of Cities related to the selected State.</description>
+        <is_email_compatible>1</is_email_compatible>
+        <parameters>
+            <!--<page_id type="complex" translate="label">-->
+                <!--<visible>1</visible>-->
+                <!--<required>1</required>-->
+                <!--<label>CMS Page</label>-->
+                <!--<type>label</type>-->
+                <!--<helper_block>-->
+                    <!--<type>adminhtml/cms_page_widget_chooser</type>-->
+                    <!--<data>-->
+                        <!--<button translate="open">-->
+                            <!--<open>Select Page...</open>-->
+                        <!--</button>-->
+                    <!--</data>-->
+                <!--</helper_block>-->
+                <!--<sort_order>10</sort_order>-->
+            <!--</page_id>-->
+            <title translate="label description">
+                <visible>1</visible>
+                <label>Title Text</label>
+                <description>If empty, the State name selected will be used</description>
+                <type>text</type>
+            </title>
+            <state translate="label">
+                <label>State</label>
+                <visible>1</visible>
+                <type>select</type>
+                <value>0</value>
+                <values>
+                    <default translate="label">
+                        <value>0</value>
+                        <label>Select a State</label>
+                    </default>
+                    <alabama translate="label">
+                        <value>alabama</value>
+                        <label>Alabama</label>
+                    </alabama>
+                    <alaska translate="label">
+                        <value>alaska</value>
+                        <label>Alaska</label>
+                    </alaska>
+                    <arizona translate="label">
+                        <value>arizona</value>
+                        <label>Arizona</label>
+                    </arizona>
+                    <arkansas translate="label">
+                        <value>arkansas</value>
+                        <label>Arkansas</label>
+                    </arkansas>
+                    <california translate="label">
+                        <value>california</value>
+                        <label>California</label>
+                    </california>
+                    <colorado translate="label">
+                        <value>colorado</value>
+                        <label>Colorado</label>
+                    </colorado>
+                    <connecticut translate="label">
+                        <value>connecticut</value>
+                        <label>Connecticut</label>
+                    </connecticut>
+                    <delaware translate="label">
+                        <value>delaware</value>
+                        <label>Delaware</label>
+                    </delaware>
+                    <district-of-columbia translate="label">
+                        <value>district-of-columbia</value>
+                        <label>District of Columbia</label>
+                    </district-of-columbia>
+                    <florida translate="label">
+                        <value>florida</value>
+                        <label>Florida</label>
+                    </florida>
+                    <georgia translate="label">
+                        <value>georgia</value>
+                        <label>Georgia</label>
+                    </georgia>
+                    <hawaii translate="label">
+                        <value>hawaii</value>
+                        <label>Hawaii</label>
+                    </hawaii>
+                    <idaho translate="label">
+                        <value>idaho</value>
+                        <label>Idaho</label>
+                    </idaho>
+                    <illinois translate="label">
+                        <value>illinois</value>
+                        <label>Illinois</label>
+                    </illinois>
+                    <indiana translate="label">
+                        <value>indiana</value>
+                        <label>Indiana</label>
+                    </indiana>
+                    <iowa translate="label">
+                        <value>iowa</value>
+                        <label>Iowa</label>
+                    </iowa>
+                    <kansas translate="label">
+                        <value>kansas</value>
+                        <label>Kansas</label>
+                    </kansas>
+                    <kentucky translate="label">
+                        <value>kentucky</value>
+                        <label>Kentucky</label>
+                    </kentucky>
+                    <louisiana translate="label">
+                        <value>louisiana</value>
+                        <label>Louisiana</label>
+                    </louisiana>
+                    <maine translate="label">
+                        <value>maine</value>
+                        <label>Maine</label>
+                    </maine>
+                    <maryland translate="label">
+                        <value>maryland</value>
+                        <label>Maryland</label>
+                    </maryland>
+                    <massachusetts translate="label">
+                        <value>massachusetts</value>
+                        <label>Massachusetts</label>
+                    </massachusetts>
+                    <michigan translate="label">
+                        <value>michigan</value>
+                        <label>Michigan</label>
+                    </michigan>
+                    <minnesota translate="label">
+                        <value>minnesota</value>
+                        <label>Minnesota</label>
+                    </minnesota>
+                    <mississippi translate="label">
+                        <value>mississippi</value>
+                        <label>Mississippi</label>
+                    </mississippi>
+                    <missouri translate="label">
+                        <value>missouri</value>
+                        <label>Missouri</label>
+                    </missouri>
+                    <montana translate="label">
+                        <value>montana</value>
+                        <label>Montana</label>
+                    </montana>
+                    <nebraska translate="label">
+                        <value>nebraska</value>
+                        <label>Nebraska</label>
+                    </nebraska>
+                    <nevada translate="label">
+                        <value>nevada</value>
+                        <label>Nevada</label>
+                    </nevada>
+                    <new-hampshire translate="label">
+                        <value>new-hampshire</value>
+                        <label>New Hampshire</label>
+                    </new-hampshire>
+                    <new-jersey translate="label">
+                        <value>new-jersey</value>
+                        <label>New Jersey</label>
+                    </new-jersey>
+                    <new-mexico translate="label">
+                        <value>new-mexico</value>
+                        <label>New Mexico</label>
+                    </new-mexico>
+                    <new-york translate="label">
+                        <value>new-york</value>
+                        <label>New York</label>
+                    </new-york>
+                    <north-carolina translate="label">
+                        <value>north-carolina</value>
+                        <label>North Carolina</label>
+                    </north-carolina>
+                    <north-dakota translate="label">
+                        <value>north-dakota</value>
+                        <label>North Dakota</label>
+                    </north-dakota>
+                    <ohio translate="label">
+                        <value>ohio</value>
+                        <label>Ohio</label>
+                    </ohio>
+                    <oklahoma translate="label">
+                        <value>oklahoma</value>
+                        <label>Oklahoma</label>
+                    </oklahoma>
+                    <oregon translate="label">
+                        <value>oregon</value>
+                        <label>Oregon</label>
+                    </oregon>
+                    <pennsylvania translate="label">
+                        <value>pennsylvania</value>
+                        <label>Pennsylvania</label>
+                    </pennsylvania>
+                    <rhode-island translate="label">
+                        <value>rhode-island</value>
+                        <label>Rhode Island</label>
+                    </rhode-island>
+                    <south-carolina translate="label">
+                        <value>south-carolina</value>
+                        <label>South Carolina</label>
+                    </south-carolina>
+                    <south-dakota translate="label">
+                        <value>south-dakota</value>
+                        <label>South Dakota</label>
+                    </south-dakota>
+                    <tennessee translate="label">
+                        <value>tennessee</value>
+                        <label>Tennessee</label>
+                    </tennessee>
+                    <texas translate="label">
+                        <value>texas</value>
+                        <label>Texas</label>
+                    </texas>
+                    <utah translate="label">
+                        <value>utah</value>
+                        <label>Utah</label>
+                    </utah>
+                    <vermont translate="label">
+                        <value>vermont</value>
+                        <label>Vermont</label>
+                    </vermont>
+                    <virginia translate="label">
+                        <value>virginia</value>
+                        <label>Virginia</label>
+                    </virginia>
+                    <washington translate="label">
+                        <value>washington</value>
+                        <label>Washington</label>
+                    </washington>
+                    <west-virginia translate="label">
+                        <value>west-virginia</value>
+                        <label>West Virginia</label>
+                    </west-virginia>
+                    <wisconsin translate="label">
+                        <value>wisconsin</value>
+                        <label>Wisconsin</label>
+                    </wisconsin>
+                    <wyoming translate="label">
+                        <value>wyoming</value>
+                        <label>Wyoming</label>
+                    </wyoming>
+                </values>
+            </state>
+        </parameters>
+    </states_list>
+</widgets>
