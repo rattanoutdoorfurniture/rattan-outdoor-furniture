@@ -258,3 +258,50 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
 #searchbox {
     margin-top: 15px !important;
 }
+
+/* 27.03.2014 =========================================================================== */
+
+#center_column > .page-title {
+    display: block !important;
+    float: none;
+    clear: both;
+}
+
+    /* State / City Widget Styles */
+
+.cms-widget-state-list {
+    float: left;
+    margin: 20px;
+    width: auto;
+    overflow: visible;
+    border: 1px solid #815cc6;
+    min-width: 25%;
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 1000px) {
+    .cms-widget-state-list { min-width: 25%; }
+}
+@media only screen and (max-width: 1000px) {
+    .cms-widget-state-list { min-width: 44%; }
+}
+@media only screen and (max-width: 800px) {
+    .cms-widget-state-list { min-width: 90%; }
+}
+
+
+.cms-widget-state-list-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    color: #FFF;
+    background-color: #815cc6;
+}
+.cms-widget-state-list-link-list {
+    padding: 5px 20px 5px 10px;
+}
+
+.cms-widget-state-list-link {
+    padding: 2px 5px;
+    font-weight: 600;
+}
