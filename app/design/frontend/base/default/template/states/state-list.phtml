@@ -1,3 +1,4 @@
+<?php if(count($this->getCities())>0): ?>
 <div class="cms-widget-state-list">
     <div class="cms-widget-state-list-title">
     <?php if(stristr($_SERVER["REQUEST_URI"],$this->getState())===false): ?>
@@ -13,3 +14,4 @@
         <?php endforeach; ?>
     </div>
 </div>
+<?php endif; ?>

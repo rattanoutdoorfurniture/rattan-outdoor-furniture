@@ -75,17 +75,16 @@ class Locations_States_Block_List
      */
     public function getCities() {
         if (!$this->_cities) {
-            $this->_cities = $this->_getLocationPsges($this->getState());
+            $this->_cities = $this->_getLocationPages($this->getState());
         }
 
         return $this->_cities;
     }
 
-    protected function _getLocationPsges($state = null) {
+    protected function _getLocationPages($state = null) {
         // if(is_null($state)) $state = $this->getState(); // was going to make it default to the current state, but all should be an option if null
         $cmsPages = Mage::getModel('cms/page')->getCollection(); // ->toOptionArray() will give array of values
         $cmsPages->getSelect()->where("identifier LIKE ?", is_null($state) ? "locations/%" : "locations/$state/%");
-        // die(var_export($cmsPages->getData()));
         return $cmsPages->getData();
     }
 
