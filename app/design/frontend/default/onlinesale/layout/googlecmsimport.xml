@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout>
+    <googlecmsimport_index_index>
+        <update handle="googlecmsimport_index_index"/>
+        <reference name="content">
+            <block type="catalog/product_list" name="index" template="googlecmsimport/index.phtml"/>
+        </reference>
+    </googlecmsimport_index_index>
+</layout>

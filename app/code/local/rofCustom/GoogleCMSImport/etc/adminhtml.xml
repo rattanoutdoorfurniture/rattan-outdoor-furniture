@@ -1,0 +1,31 @@
+<!--<?xml version="1.0"?>-->
+<!--<config>-->
+    <!--<menu>-->
+        <!--<rofcustom translate="title" module="googlecmsimport">-->
+            <!--<title>Google CMS Import</title>-->
+            <!--<sort_order>1</sort_order>-->
+            <!--<children>-->
+                <!--<index>-->
+                    <!--<title>Index</title>-->
+                    <!--<sort_order>1</sort_order>-->
+                    <!--<action>googlecmsimport/admin/index</action>-->
+                <!--</index>-->
+            <!--</children>-->
+        <!--</rofcustom>-->
+    <!--</menu>-->
+    <!--<acl>-->
+        <!--<resources>-->
+            <!--&lt;!&ndash;<all>&ndash;&gt;-->
+                <!--&lt;!&ndash;<title>Allow Everything</title>&ndash;&gt;-->
+            <!--&lt;!&ndash;</all>&ndash;&gt;-->
+            <!--<admin>-->
+                <!--<children>-->
+                    <!--<rofcustom translate="title" module="googlecmsimport">-->
+                        <!--<title>Google CMS Import</title>-->
+                        <!--<sort_order>1</sort_order>-->
+                    <!--</rofcustom>-->
+                <!--</children>-->
+            <!--</admin>-->
+        <!--</resources>-->
+    <!--</acl>-->
+<!--</config>-->
