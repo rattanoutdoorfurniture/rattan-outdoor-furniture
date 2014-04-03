@@ -1,31 +1,16 @@
-<!--<?xml version="1.0"?>-->
-<!--<config>-->
-    <!--<menu>-->
-        <!--<rofcustom translate="title" module="googlecmsimport">-->
-            <!--<title>Google CMS Import</title>-->
-            <!--<sort_order>1</sort_order>-->
-            <!--<children>-->
-                <!--<index>-->
-                    <!--<title>Index</title>-->
-                    <!--<sort_order>1</sort_order>-->
-                    <!--<action>googlecmsimport/admin/index</action>-->
-                <!--</index>-->
-            <!--</children>-->
-        <!--</rofcustom>-->
-    <!--</menu>-->
-    <!--<acl>-->
-        <!--<resources>-->
-            <!--&lt;!&ndash;<all>&ndash;&gt;-->
-                <!--&lt;!&ndash;<title>Allow Everything</title>&ndash;&gt;-->
-            <!--&lt;!&ndash;</all>&ndash;&gt;-->
-            <!--<admin>-->
-                <!--<children>-->
-                    <!--<rofcustom translate="title" module="googlecmsimport">-->
-                        <!--<title>Google CMS Import</title>-->
-                        <!--<sort_order>1</sort_order>-->
-                    <!--</rofcustom>-->
-                <!--</children>-->
-            <!--</admin>-->
-        <!--</resources>-->
-    <!--</acl>-->
-<!--</config>-->
+<?xml version="1.0"?>
+<config>
+<menu>
+    <googlecmsimport translate="title" module="googlecmsimport">
+        <title>Google CMS Import</title>
+        <sort_order>65</sort_order>
+        <children>
+            <index translate="title" module="googlecmsimport">
+                <title>Index</title>
+                <action>googlecmsimport</action>
+                <resource>googlecmsimport/index_index</resource>
+            </index>
+        </children>
+    </googlecmsimport>
+</menu>
+</config>
