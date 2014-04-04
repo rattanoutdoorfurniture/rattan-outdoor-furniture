@@ -1,10 +1,15 @@
 <?php
-class Rofcustom_Googlecmsimport_Block_Admin_Googlecmsimport extends Mage_Core_Block_Template
+class Rofcustom_Googlecmsimport_Block_Googlecmsimport extends Mage_Core_Block_Template
 {
     public function __construct()
     {
         parent::__construct();
         $this->setTemplate('googlecmsimport/index.phtml');
+    }
+
+    protected function _prepareLayout() {
+        $this->getLayout()->getBlock('head')->addJs('googlecmsimport/googlecmsimport.js');
+        parent::_prepareLayout();
     }
 
     /**
