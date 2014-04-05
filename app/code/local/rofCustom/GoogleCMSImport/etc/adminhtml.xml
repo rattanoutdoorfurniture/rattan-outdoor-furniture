@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config>
 <menu>
-    <googlecmsimport translate="title" module="googlecmsimport">
+    <googlecmsimport_menu translate="title" module="googlecmsimport">
         <title>Google CMS Import</title>
         <sort_order>65</sort_order>
         <children>
@@ -11,6 +11,6 @@
                 <resource>googlecmsimport/index_index</resource>
             </index>
         </children>
-    </googlecmsimport>
+    </googlecmsimport_menu>
 </menu>
 </config>

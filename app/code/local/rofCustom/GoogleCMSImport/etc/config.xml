@@ -109,17 +109,20 @@
             </resources>
         </acl>
         <menu>
-            <googlecmsimport translate="title" module="googlecmsimport">
+            <googlecmsimport_menu translate="title" module="googlecmsimport">
                 <title>Google CMS Import</title>
                 <sort_order>65</sort_order>
                 <children>
                     <index translate="title" module="googlecmsimport">
                         <title>Index</title>
                         <action>googlecmsimport</action>
-                        <resource>googlecmsimport/index_index</resource>
                     </index>
+                    <import translate="title" module="googlecmsimport">
+                        <title>Import</title>
+                        <action>googlecmsimport/index/import</action>
+                    </import>
                 </children>
-            </googlecmsimport>
+            </googlecmsimport_menu>
         </menu>
     </adminhtml>
 </config>

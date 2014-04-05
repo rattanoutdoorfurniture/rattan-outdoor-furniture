@@ -2,7 +2,16 @@
     <?php
     // echo $this->getChildHtml('main');
     // die("Google CMS Import");
-    echo "Google CMS Import import.phtml";
+    echo "Google CMS Import import.phtml<br/>";
     ?>
-    <?php /*echo $this->getChildHtml('main')*/ ?>
+    <?php
+    Mage::getSingleton("adminhtml/session")->setGoogleShit();
+        echo "<pre>";
+        echo "Client ID:\t"     . $this->getClientId() . "\n";
+        echo "Client Secret:\t" . $this->getClientSecret() . "\n";
+        echo "Request URI:\t"   . $this->model->requestUri() . "\n";
+        echo "Session Val:\t"   . Mage::getSingleton("adminhtml/session")->getGoogleShit();
+        echo "</pre>";
+
+    ?>
 </div>
