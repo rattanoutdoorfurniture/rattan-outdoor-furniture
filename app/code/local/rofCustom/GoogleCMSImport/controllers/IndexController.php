@@ -23,9 +23,9 @@ class Rofcustom_Googlecmsimport_IndexController extends Mage_Adminhtml_Controlle
     {
         // load layout, set active menu and breadcrumbs
         $this->loadLayout()
-            ->_setActiveMenu('interaktingslider/slide')
-            ->_addBreadcrumb(Mage::helper('interaktingslider')->__('Interaktingslider'), Mage::helper('interaktingslider')->__('Interaktingslider'))
-            ->_addBreadcrumb(Mage::helper('interaktingslider')->__('Interaktingslider Slides'), Mage::helper('interaktingslider')->__('Interaktingslider Slides'))
+            ->_setActiveMenu('googlecmsimport/index')
+            ->_addBreadcrumb(Mage::helper('googlecmsimport')->__('Google CMS Import'), Mage::helper('googlecmsimport')->__('Google CMS Import'))
+            ->_addBreadcrumb(Mage::helper('googlecmsimport')->__('Index'), Mage::helper('googlecmsimport')->__('Index'))
         ;
         return $this;
     }
@@ -33,19 +33,10 @@ class Rofcustom_Googlecmsimport_IndexController extends Mage_Adminhtml_Controlle
     /**
      * Index action
      */
-    public function indexAction()
-    {
-//        if(Mage::helper('interaktingslider')->versionUseAdminTitle()){
-//            $this->_title($this->__('Interaktingslider'));
-//        }
-
-//        $this->loadLayout()
-//        $this->renderLayout();
-//            ->_addContent('googlecmsimport/import.phtml')
-//            ->renderLayout();
+    public function indexAction() {
 
         $this->_initAction()
-            ->_addContent($this->getLayout()->createBlock('googlecmsimport/import'))
+            ->_addContent($this->getLayout()->createBlock('googlecmsimport/googlecmsimport'))
             ->renderLayout();
 
 
@@ -73,6 +64,12 @@ class Rofcustom_Googlecmsimport_IndexController extends Mage_Adminhtml_Controlle
 //        echo $this->getLayout()->createBlock('rofcustom/googlecmsimport')->toHtml();
 
     } // END INDEX ACTION HERE
+
+    public function importAction() {
+        $this->_initAction()
+            ->_addContent($this->getLayout()->createBlock('googlecmsimport/import'))
+            ->renderLayout();
+    }
 //
 //    /**
 //     * Create new CMS block

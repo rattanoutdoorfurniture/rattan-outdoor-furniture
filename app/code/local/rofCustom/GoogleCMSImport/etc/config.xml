@@ -5,18 +5,39 @@
             <version>0.1.0</version>
         </Rofcustom_Googlecmsimport>
     </modules>
+    <admin>
+        <routers>
+            <rofcustom_googlecmsimport>
+                <use>admin</use>
+                <args>
+                    <module>Rofcustom_Googlecmsimport</module>
+                    <frontName>googlecmsimport</frontName>
+                </args>
+            </rofcustom_googlecmsimport>
+        </routers>
+    </admin>
     <global>
+        <models>
+            <googlecmsimport>
+                <class>Rofcustom_Googlecmsimport_Model</class>
+            </googlecmsimport>
+        </models>
+        <blocks>
+            <googlecmsimport>
+                <class>Rofcustom_Googlecmsimport_Block</class>
+            </googlecmsimport>
+        </blocks>
+        <helpers>
+            <googlecmsimport>
+                <class>Rofcustom_Googlecmsimport_Helper</class>
+            </googlecmsimport>
+        </helpers>
         <!--<rewrite>-->
             <!--<mage_adminhtml_system_variable>-->
                 <!--<from><![CDATA[#^/googlecmsimport/system_variable#]]></from>-->
                 <!--<to>/admin/system_variable</to>-->
             <!--</mage_adminhtml_system_variable>-->
         <!--</rewrite>-->
-        <models>
-            <googlecmsimport>
-                <class>Rofcustom_Googlecmsimport_Model</class>
-            </googlecmsimport>
-        </models>
         <!--
         <resources>
             <googlecmsimport_setup>
@@ -38,16 +59,6 @@
                 </connection>
             </googlecmsimport_read>
         </resources>-->
-        <blocks>
-            <googlecmsimport>
-                <class>Rofcustom_Googlecmsimport_Block</class>
-            </googlecmsimport>
-        </blocks>
-        <helpers>
-            <googlecmsimport>
-                <class>Rofcustom_Googlecmsimport_Helper</class>
-            </googlecmsimport>
-        </helpers>
     </global>
     <frontend>
         <routers>
@@ -67,17 +78,6 @@
             </updates>
         </layout>
     </frontend>
-    <admin>
-        <routers>
-            <rofcustom_googlecmsimport>
-                <use>admin</use>
-                <args>
-                    <module>Rofcustom_Googlecmsimport</module>
-                    <frontName>googlecmsimport</frontName>
-                </args>
-            </rofcustom_googlecmsimport>
-        </routers>
-    </admin>
     <adminhtml>
         <acl>
             <resources>
@@ -109,17 +109,20 @@
             </resources>
         </acl>
         <menu>
-            <googlecmsimport translate="title" module="googlecmsimport">
+            <googlecmsimport_menu translate="title" module="googlecmsimport">
                 <title>Google CMS Import</title>
                 <sort_order>65</sort_order>
                 <children>
                     <index translate="title" module="googlecmsimport">
                         <title>Index</title>
                         <action>googlecmsimport</action>
-                        <resource>googlecmsimport/index_index</resource>
                     </index>
+                    <import translate="title" module="googlecmsimport">
+                        <title>Import</title>
+                        <action>googlecmsimport/index/import</action>
+                    </import>
                 </children>
-            </googlecmsimport>
+            </googlecmsimport_menu>
         </menu>
     </adminhtml>
 </config>
