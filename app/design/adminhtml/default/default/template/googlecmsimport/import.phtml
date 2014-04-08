@@ -5,6 +5,31 @@
     echo "Google CMS Import import.phtml<br/>";
     ?>
     <?php
+    /******************** FIX PAGE CHILDREN **********************
+
+    $write = Mage::getSingleton('core/resource')->getConnection('core_write');
+
+    $squery = <<<QUERY
+SELECT *, (SELECT COUNT(*) FROM cms_page_tree WHERE identifier LIKE CONCAT(c1.identifier,"/%")) as num_children FROM `cms_page_tree` c1 WHERE identifier LIKE 'locations/%' AND identifier NOT LIKE 'locations/%/%' ORDER BY title ASC
+QUERY;
+
+    $sresult = $write->query($squery);
+
+    // now $write is an instance of Zend_Db_Adapter_Abstract
+
+
+    while ($row = $sresult->fetch()) {
+        $categoryIds[] = $row['id'];
+        $newQuery = "UPDATE cms_page_tree SET children_count = " . $row['num_children'] . " WHERE page_id = " . $row['page_id'];
+        //$write->query($newQuery);
+        echo $row['title'] . "<br/>" . $newQuery . "<br/><br/>";
+    }
+
+
+
+    //exit;
+    ****************** END FIX PAGE CHILDREN **************************************/
+
     Mage::getSingleton("adminhtml/session")->setGoogleShit();
         echo "<pre>";
         echo "Client ID:\t"     . $this->getClientId() . "\n";
@@ -195,21 +220,12 @@ NOW(),
 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, {$parentId}, '2/22/{$parentId}/{$cityId}', {$citiesNum}, 0, 0, 1
 );
 QUERY;
-                //echo "<p>Query: ".$query . "\n</p>\n";
                 $queries[]= $query;
                 $cityId++;
             }
         }
-//die(var_export($queries));
     echo "<div id='queries'>".implode("\n",$queries)."</div>";
 
-    //}
-
-        //$text = parseWord($docs[0]);
-        //$textArr = procText($text);
-        //echo var_export($text,true) . "\n\n" . var_export($textArr,true);
-    //}
-    //echo "</pre>";
 
     $recoredMesa = <<<INSERT
 INSERT INTO `cms_page_tree`

@@ -19,3 +19,6 @@ LEFT JOIN (
 SELECT parent_id, COUNT(*) subPages FROM cms_page_tree WHERE identifier REGEXP "^locations\/[^\/]+\/[^\/]+$"
 ) c2 ON c1.page_id = c2.parent_id
 SET c1.children_count = COALESCE(c2.subPages, 0);
+
+-- Get city count for each state --
+SELECT *, (SELECT COUNT(*) FROM cms_page_tree WHERE identifier LIKE CONCAT(c1.identifier,"/%")) as num_children FROM `cms_page_tree` c1 WHERE identifier LIKE 'locations/%' AND identifier NOT LIKE 'locations/%/%'

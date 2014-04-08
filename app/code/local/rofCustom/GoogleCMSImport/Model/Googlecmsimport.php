@@ -95,4 +95,45 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
         }
         return $this->_service;
     }
+
+    public function parseWord($userDoc)
+    {
+        $fileHandle = fopen($userDoc, "r");
+        $line = @fread($fileHandle, filesize($userDoc));
+        $lines = explode(chr(0x0D),$line);
+        $outtext = "";
+        foreach($lines as $thisline)
+        {
+            $pos = strpos($thisline, chr(0x00));
+            if (($pos !== FALSE)||(strlen($thisline)==0))
+            {
+            } else {
+                $outtext .= $thisline." ";
+            }
+        }
+        $outtext = preg_replace("/[^a-zA-Z0-9\s\,\.\-\n\r\t@\/\_\(\)]/","",$outtext);
+        return $outtext;
+    }
+
+    public function procText($text) {
+        preg_match_all('/\(2\d{2}\)/', $text, $matches, PREG_OFFSET_CAPTURE);
+        $code       = $matches[0][0][0];
+        $pos        = $matches[0][0][1];
+        $meta       = substr($text,$pos+strlen($code));
+        $cont       = trim(substr($text,0,$pos));
+        $metaArr    = preg_split('/\s\d\.?\d?\s?/', $meta); array_pop($metaArr);
+        for($i=0;$i<count($metaArr);$i++) {
+            $metaArr[$i]=ucwords($metaArr[$i]);
+        }
+        $retval     = array(
+            "cont"  => $cont,
+            "code"  => $code,
+            "meta"  => array(
+                "city"      => ucwords($metaArr[0]),
+                "state"     => ucwords($metaArr[1]),
+                "keywords"  => array_slice($metaArr,2)
+            )
+        );
+        return $retval;
+    }
 }
