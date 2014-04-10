@@ -5,4 +5,5 @@ var/session/*
 var/cache/*
 var/locks/*
 var/report/*
-error_log
+*error_log
+*DEV_NOTES

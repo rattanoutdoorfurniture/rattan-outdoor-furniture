@@ -7,17 +7,12 @@ class Rofcustom_Googlecmsimport_IndexController extends Mage_Adminhtml_Controlle
 //        // die("Google CMS Import! Pre-Dispatch.");
 //        // echo("Google CMS Import! Pre-Dispatch.");
 //    }
-//    public function indexAction() {
-//        // die('GoogleCMSImport Index!');
-//        echo('GoogleCMSImport Index this file!');
-//        //$this->loadLayout();
-//        //$this->renderLayout();
-//    }
+
 
     /**
-     * Init actions
+     * Init Action
      *
-     * @return Mage_Adminhtml_Cms_BlockController
+     * @return Rofcustom_Googlecmsimport_IndexController
      */
     protected function _initAction()
     {
@@ -34,41 +29,25 @@ class Rofcustom_Googlecmsimport_IndexController extends Mage_Adminhtml_Controlle
      * Index action
      */
     public function indexAction() {
-
         $this->_initAction()
             ->_addContent($this->getLayout()->createBlock('googlecmsimport/googlecmsimport'))
             ->renderLayout();
 
-
-//        echo $this->getChildHtml('googlecmsimport/index_index');
-//        $resFunc = function($arr) {
-//            foreach($arr as $key=>$val) {
-//                echo var_export($key, true) . "\n";
-//                foreach($val as $subkey=>$subval) {
-//                    echo var_export($subkey, true);
-//                    echo $subval->__toString();
-//                }
-//            }
-//        };
-//        $this->loadLayout();
-//        $this->renderLayout();//->setActiveMenu("googlecmsimport/index");//->_addContent($this->getLayout()->createBlock('googlecmsimport/index_index')->setData('action', $this->getUrl('*/index')));
-        // die(var_export($this->renderLayout(),true));//getLayout()->getOutput(),true));
-//        $layout = $this->renderLayout();//$this->getLayout();
-//        die(var_export($layout,true));
-//        $layout_cont = $layout->createBlock("googlecmsimport/index_index");
-//        die(var_export($layout,true));
-//        $layout->_addContent($layout_cont);
-//
-//        $res = $resFunc($this->getLayout());
-//        die(var_export($res,true));
-//        echo $this->getLayout()->createBlock('rofcustom/googlecmsimport')->toHtml();
-
     } // END INDEX ACTION HERE
 
     public function importAction() {
-        $this->_initAction()
-            ->_addContent($this->getLayout()->createBlock('googlecmsimport/import'))
-            ->renderLayout();
+
+
+        $gim = MAGE::getSingleton("googlecmsimport/googlecmsimport");
+        $gim->getClient();
+        $drs = $gim->getService();
+        $gim->doAuth();
+
+        $this->_initAction()->
+               _addContent(
+                    $this->getLayout()->createBlock('googlecmsimport/import')
+               )->
+               renderLayout();
     }
 //
 //    /**

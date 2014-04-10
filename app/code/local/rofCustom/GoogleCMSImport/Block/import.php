@@ -19,6 +19,7 @@ class Rofcustom_Googlecmsimport_Block_Import extends Mage_Core_Block_Template {
     public function __get($name) {
         $methodName = "get".ucfirst($name);
         if(method_exists($this,$methodName)) return $this->$methodName();
+        if(method_exists($this->getModel(), $name)) return $this->getModel()->$name;
         if(method_exists($this->getModel(), $methodName)) return $this->getModel()->$methodName;
         throw new Exception("Neither Google Import Block nor Model supports the $methodName() method.");
     }
@@ -47,7 +48,7 @@ class Rofcustom_Googlecmsimport_Block_Import extends Mage_Core_Block_Template {
      */
     public function getModel(){
         if(is_null($this->_model)) {
-            $this->_model = Mage::getModel('googlecmsimport/googlecmsimport');
+            $this->_model = Mage::getSingleton('googlecmsimport/googlecmsimport');
         }
         return $this->_model;
     }
@@ -77,6 +78,16 @@ class Rofcustom_Googlecmsimport_Block_Import extends Mage_Core_Block_Template {
         }
         return $retval;
     }
+
+    public function getAuthed() {
+        return $this->getModel()->getAuthed();
+    }
+
+    public function getAuthUrl() {
+        return $this->getModel()->getAuthUrl();
+    }
+
+
 
     /**
      * Code d'ajout du fichier Js de l'Interakting Slider

@@ -1,0 +1,24 @@
+-- get sub pages: (specificially locations in this example) --
+SELECT * FROM cms_page_tree WHERE identifier LIKE CONCAT("locations/",SUBSTR((SELECT identifier FROM `cms_page_tree` WHERE identifier NOT LIKE "locations/%/%" AND identifier LIKE "locations/%" LIMIT 1),11),"/%");
+
+-- update number of children --
+ UPDATE cms_page_tree as daddy SET children_count = COUNT((SELECT * FROM cms_page_tree as notdaddy WHERE identifier LIKE CONCAT(daddy.identifier,"%"))) WHERE identifier NOT LIKE "locations/%/%" AND identifier LIKE "locations/%" LIMIT 1);
+
+UPDATE cms_page_tree c1	JOIN cms_page_tree c2 ON c1.page_id = c2.parent_id
+SET c1.`children_count` = COUNT(c2.page_id)
+WHERE c1.`identifier` NOT LIKE "locations/%/%" AND c1.`identifier` LIKE "locations/%"
+
+UPDATE nations SET count = (SELECT COUNT(id) FROM poets WHERE poets.nation = nations.id GROUP BY id);
+
+UPDATE cms_page_tree AS c1 SET c1.children_count = (SELECT COUNT(page_id) FROM cms_page_tree AS c2 WhERE c1.idetifier LIKE CONCAT(c1.identifer,"%") ) WHERE c1.identifier LIKE "locations/%" AND c1.identifier NOT LIKE "locations/%/%"
+
+SELECT * FROM cms_page_tree WHERE `identifier` LIKE CONCAT("locations/",SUBSTR((SELECT `identifier` FROM `cms_page_tree` WHERE `identifier` NOT LIKE "locations/%/%" AND `identifier` LIKE "locations/%"),11),"/%")
+
+UPDATE cms_page_tree c1
+LEFT JOIN (
+SELECT parent_id, COUNT(*) subPages FROM cms_page_tree WHERE identifier REGEXP "^locations\/[^\/]+\/[^\/]+$"
+) c2 ON c1.page_id = c2.parent_id
+SET c1.children_count = COALESCE(c2.subPages, 0);
+
+-- Get city count for each state --
+SELECT *, (SELECT COUNT(*) FROM cms_page_tree WHERE identifier LIKE CONCAT(c1.identifier,"/%")) as num_children FROM `cms_page_tree` c1 WHERE identifier LIKE 'locations/%' AND identifier NOT LIKE 'locations/%/%'

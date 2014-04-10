@@ -5,13 +5,17 @@
         <a href="/locations/<?php echo $this->getState(); ?>"><?php echo $this->getTitle(); ?></a>
     <?php else: echo $this->getTitle(); endif; ?>
     </div>
+    <?php $citiesList = $this->getCities(); ?>
+    <?php for($i=0;$i<(count($citiesList)+5);$i+=5): ?>
     <div class="cms-widget-state-list-link-list">
-        <?php foreach($this->getCities() as $stateLink): ?>
+        <?php for($j=$i;$j<count($citiesList)&&($j<$i+5||count($citiesList)<$j+5);$j++): ?>
+        <?php $stateLink = $citiesList[$j]; ?>
         <div class="cms-widget-state-list-link">
             <!-- <?php echo var_export($stateLink); ?> -->
             <a href="/<?php echo $stateLink['identifier'] ?>"><?php echo $this->escapeHtml($stateLink['title']) ?></a>
         </div>
-        <?php endforeach; ?>
+        <?php endfor; ?>
     </div>
+    <?php endfor; ?>
 </div>
 <?php endif; ?>
