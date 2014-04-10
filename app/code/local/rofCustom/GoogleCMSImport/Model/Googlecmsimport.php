@@ -82,7 +82,8 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
     }
 
     public function getRequestUri() {
-        if(is_null($this->_requestUri)) $this->_requestUri = $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
+        if(is_null($this->_requestUri)) $this->_requestUri =(isset($_SERVER['HTTPS'])?"https://":"http://"). $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
+        $this->_requestUri = strstr($this->_requestUri, "/key",true);
         return $this->_requestUri;
     }
 
@@ -124,7 +125,7 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
     }
 
     public function authCodeSet() {
-        return !boolVal($this->getAuthCode()==='');
+        return !is_null($this->getAuthCode());
     }
 
     protected function updatePathArray(&$arr, $path, $val = null) {
@@ -201,8 +202,10 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
         $accessToken = $this->session('auth/access');
         if(strlen($accessToken)>5&&$accessToken) {
             $this->client->setAccessToken($accessToken);
+            $this->setAuthed(true);
         } else {
             $this->setAuthUrl();
+            $this->setAuthed(false);
         }
     }
 

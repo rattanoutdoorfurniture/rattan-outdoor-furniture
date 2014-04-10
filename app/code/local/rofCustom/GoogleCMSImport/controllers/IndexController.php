@@ -29,9 +29,6 @@ class Rofcustom_Googlecmsimport_IndexController extends Mage_Adminhtml_Controlle
      * Index action
      */
     public function indexAction() {
-        $gim = MAGE::getModel("googlecmsimport/googlecmsimport");
-        $drs = $gim->getService();
-
         $this->_initAction()
             ->_addContent($this->getLayout()->createBlock('googlecmsimport/googlecmsimport'))
             ->renderLayout();
@@ -39,9 +36,18 @@ class Rofcustom_Googlecmsimport_IndexController extends Mage_Adminhtml_Controlle
     } // END INDEX ACTION HERE
 
     public function importAction() {
-        $this->_initAction()
-            ->_addContent($this->getLayout()->createBlock('googlecmsimport/import'))
-            ->renderLayout();
+
+
+        $gim = MAGE::getSingleton("googlecmsimport/googlecmsimport");
+        $gim->getClient();
+        $drs = $gim->getService();
+        $gim->doAuth();
+
+        $this->_initAction()->
+               _addContent(
+                    $this->getLayout()->createBlock('googlecmsimport/import')
+               )->
+               renderLayout();
     }
 //
 //    /**

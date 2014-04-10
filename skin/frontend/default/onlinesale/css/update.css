@@ -299,6 +299,8 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
 }
 .cms-widget-state-list-link-list {
     padding: 5px 20px 5px 10px;
+    float: left;
+    min-width: 28%;
 }
 
 .cms-widget-state-list-link {
