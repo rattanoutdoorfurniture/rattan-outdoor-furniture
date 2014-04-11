@@ -846,3 +846,29 @@ Stack trace:
 #20 C:\Projects\rof\code\dev\app\Mage.php(684): Mage_Core_Model_App->run(Array)
 #21 C:\Projects\rof\code\dev\index.php(111): Mage::run('', 'store')
 #22 {main}
+2014-04-11T18:06:52+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'Invalid block type: Mage_Rofcustom_Block_Import' in C:\Projects\rof\code\dev\app\Mage.php:595
+Stack trace:
+#0 C:\Projects\rof\code\dev\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\Projects\rof\code\dev\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('rofcustom/impor...', Array)
+#2 C:\Projects\rof\code\dev\app\code\local\Rofcustom\Googlecmsimport\controllers\IndexController.php(47): Mage_Core_Model_Layout->createBlock('rofcustom/impor...')
+#3 C:\Projects\rof\code\dev\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rofcustom_Googlecmsimport_IndexController->importAction()
+#4 C:\Projects\rof\code\dev\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('import')
+#5 C:\Projects\rof\code\dev\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\Projects\rof\code\dev\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\Projects\rof\code\dev\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\Projects\rof\code\dev\index.php(111): Mage::run('', 'store')
+#9 {main}
+2014-04-11T18:07:14+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'Invalid block type: Mage_Googlecmsimport_Block_Import' in C:\Projects\rof\code\dev\app\Mage.php:595
+Stack trace:
+#0 C:\Projects\rof\code\dev\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\Projects\rof\code\dev\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Googlecmsimport...', Array)
+#2 C:\Projects\rof\code\dev\app\code\local\Rofcustom\Googlecmsimport\controllers\IndexController.php(47): Mage_Core_Model_Layout->createBlock('Googlecmsimport...')
+#3 C:\Projects\rof\code\dev\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Rofcustom_Googlecmsimport_IndexController->importAction()
+#4 C:\Projects\rof\code\dev\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('import')
+#5 C:\Projects\rof\code\dev\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\Projects\rof\code\dev\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\Projects\rof\code\dev\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\Projects\rof\code\dev\index.php(111): Mage::run('', 'store')
+#9 {main}

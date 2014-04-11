@@ -43,3 +43,11 @@
 2014-04-02T10:50:44+00:00 ERR (3): Warning: simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 13: parser error : Opening and ending tag mismatch: googlecmsimport line 13 and helloworld  in /Users/mike/Projects/RattanOutdoorFurniture/code/dev/lib/Varien/Simplexml/Config.php on line 510
 2014-04-02T10:50:44+00:00 ERR (3): Warning: simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]:     &lt;googlecmsimport&gt;Rofcustom_Googlecmsimport_Block_Googlecmsimport&lt;/helloworld  in /Users/mike/Projects/RattanOutdoorFurniture/code/dev/lib/Varien/Simplexml/Config.php on line 510
 2014-04-02T10:50:44+00:00 ERR (3): Warning: simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]:                                                                                ^  in /Users/mike/Projects/RattanOutdoorFurniture/code/dev/lib/Varien/Simplexml/Config.php on line 510
+2014-04-11T18:19:44+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] C:\Projects\rof\code\dev\app\code\core\Mage\Core\Controller\Response\Http.php:52
+[1] C:\Projects\rof\code\dev\lib\Zend\Controller\Response\Abstract.php:766
+[2] C:\Projects\rof\code\dev\app\code\core\Mage\Core\Controller\Response\Http.php:83
+[3] C:\Projects\rof\code\dev\app\code\core\Mage\Core\Controller\Varien\Front.php:184
+[4] C:\Projects\rof\code\dev\app\code\core\Mage\Core\Model\App.php:354
+[5] C:\Projects\rof\code\dev\app\Mage.php:684
+[6] C:\Projects\rof\code\dev\index.php:111
+</pre>

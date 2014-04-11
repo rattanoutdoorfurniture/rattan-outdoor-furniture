@@ -9,7 +9,13 @@
     <googlecmsimport_index_index>
         <update handle="googlecmsimport_index_index"/>
         <reference name="content">
-            <block type="adminhtml/template" name="index" template="googlecmsimport/import.phtml"/>
+            <block type="googlecmsimport/index" name="index" template="googlecmsimport/index.phtml"/>
         </reference>
     </googlecmsimport_index_index>
+    <googlecmsimport_index_import>
+        <update handle="googlecmsimport_index_import"/>
+        <reference name="content">
+            <block type="googlecmsimport/import" name="index" template="googlecmsimport/import.phtml"/>
+        </reference>
+    </googlecmsimport_index_import>
 </layout>

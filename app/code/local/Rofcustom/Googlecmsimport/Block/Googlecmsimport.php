@@ -8,7 +8,7 @@ class Rofcustom_Googlecmsimport_Block_Googlecmsimport extends Mage_Core_Block_Te
     }
 
     protected function _prepareLayout() {
-        $this->getLayout()->getBlock('head')->addJs('googlecmsimport/googlecmsimport.js');
+        // $this->getLayout()->getBlock('head')->addJs('googlecmsimport/googlecmsimport.js');
         parent::_prepareLayout();
     }
 
