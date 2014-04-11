@@ -13,7 +13,7 @@ class Rofcustom_Googlecmsimport_Block_GooglecmsImport extends Mage_Core_Block_Te
     public function __construct()
     {
         parent::__construct();
-        $this->setTemplate('googlecmsimport/googlecmsimport.phtml');
+        $this->setTemplate('googlecmsimport/index.phtml');
     }
 
     public function __get($name) {
