@@ -82,8 +82,8 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
     }
 
     public function getRequestUri() {
-        if(is_null($this->_requestUri)) $this->_requestUri =(isset($_SERVER['HTTPS'])?"https://":"http://"). $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
-        $this->_requestUri = strstr($this->_requestUri, "/key",true);
+        if(is_null($this->_requestUri)) $this->_requestUri ="http" . (isset($_SERVER['HTTPS'])?"s":""). "://" . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
+        // $this->_requestUri = strstr($this->_requestUri, "/key",true);
         return $this->_requestUri;
     }
 

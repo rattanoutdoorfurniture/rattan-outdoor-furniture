@@ -1,9 +1,11 @@
 <div>
     <?php
+    $gci = MAGE::getSingleton("googlecmsimport/googlecmsimport");
     echo "<pre>";
     echo "Client ID:\t"     . $this->getClientId() . "\n";
     echo "Client Secret:\t" . $this->getClientSecret() . "\n";
-    echo "Request URI:\t"   . $this->model->requestUri() . "\n";
+    echo "Request URI:\t"   . var_export($gci->getRequestUri(),true) . "\n";
+    //echo "Class Methods:\t" . var_export(get_class_methods($gci),true) . "\n";
     echo "Session Val:\t"   . var_export(Mage::getSingleton("adminhtml/session")->getGoogleImport(),true);
     echo "</pre><br/><br/>";
     ?>
