@@ -83,7 +83,9 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
 
     public function getRequestUri() {
         if(is_null($this->_requestUri)) {
-            $this->_requestUri = substr("http" . (isset($_SERVER['HTTPS'])?"s":""). "://" . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'],0,-1);
+            $uri = "http" . (isset($_SERVER['HTTPS'])?"s":""). "://" . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
+            if(substr($uri,-1)=="/") $this->_requestUri = substr($uri,0,-1);
+            if(strpos($uri,"?")!==false) $this->_requestUri = substr($uri,0,strpos($uri,"?"));
         }
         return $this->_requestUri;
     }
@@ -129,7 +131,7 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
     }
 
     protected function updatePathArray(&$arr, $path, $val = null) {
-        $layers = preg_split("/\/",$path);
+        $layers = preg_split("/\//",$path);
         $layers = array_reverse($layers);
         $tree   = "[".implode("][",$layers)."]";
         ${"arr".$tree} = $val;
@@ -137,7 +139,7 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
 
     protected function _setSesssion($path, $val) {
         $curSession = $this->getSession();
-        $this->updatePathArry($curSession,$path,$val);
+        $this->updatePathArray($curSession,$path,$val);
         Mage::getSingleton("adminhtml/session")->setGoogleImport($curSession);
     }
 

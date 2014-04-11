@@ -119,6 +119,8 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract
     } else {
       $decodedResponse = json_decode($response->getResponseBody(), true);
       if ($decodedResponse != null && $decodedResponse['error']) {
+          $decodedResponse["request_uri"] = Mage::getSingleton("googlecmsimport/googlecmsimport")->getRequestUri();
+        die(var_export($decodedResponse,true));
         $decodedResponse = $decodedResponse['error'];
       }
       throw new Google_Auth_Exception(
