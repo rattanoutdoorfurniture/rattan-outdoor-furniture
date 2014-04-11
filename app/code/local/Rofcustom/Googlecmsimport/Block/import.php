@@ -81,13 +81,6 @@ class Rofcustom_Googlecmsimport_Block_Import extends Mage_Core_Block_Template {
 
     public function getRequestUri() {
         return $this->getModel()->getRequestUri();
-        $retval = null;
-        try {
-
-        } catch(Exception $e) {
-            $retval = $this->getErrorArr($e);
-        }
-        return $retval;
     }
 
     public function getAuthed() {
