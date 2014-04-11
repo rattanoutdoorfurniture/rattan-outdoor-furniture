@@ -95,17 +95,16 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
     }
 
     protected function _initClient() {
-        $client = new Google_Client();
-        $client->setClientId($this->clientId);
-        $client->setClientSecret($this->clientSecret);
-        $client->addScope($this->scope);
-        $client->setRedirectUri($this->requestUri);
-        $this->_client = $client;
+        $this->_client = new Google_Client();
+        $this->_client->setClientId($this->getClientId());
+        $this->_client->setClientSecret($this->getClientSecret());
+        $this->_client->addScope($this->getScope());
+        $this->_client->setRedirectUri($this->getRequestUri());
     }
 
     public function getService() {
         if(is_null($this->_service)) {
-            $this->_service = new Google_Service_Drive($this->client);
+            $this->_service = new Google_Service_Drive($this->getClient());
         }
         return $this->_service;
     }
@@ -119,7 +118,7 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
 
     public function getAuthCode() {
         if(is_null($this->_authCode)) {
-            $this->_authCode = $this->request->getParam("code");
+            $this->_authCode = $this->getRequest()->getParam("code");
         }
         return $this->_authCode;
     }
@@ -195,7 +194,7 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
 
     public function doAuth() {
         if($this->authCodeSet()) {
-            $this->client->authenticate($this->authCode);
+            $this->getClient()->authenticate($this->authCode);
             $this->setAuthToken();
             header('Location: ' . filter_var($this->requestUri, FILTER_SANITIZE_URL));
         }

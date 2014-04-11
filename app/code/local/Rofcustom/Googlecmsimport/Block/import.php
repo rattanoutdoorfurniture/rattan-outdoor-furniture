@@ -62,7 +62,7 @@ class Rofcustom_Googlecmsimport_Block_Import extends Mage_Core_Block_Template {
     public function getClientId() {
         $retval = null;
         try {
-            $retval = $this->getModel()->clientId;
+            $retval = $this->getModel()->getClientId();
         } catch(Exception $e) {
             $retval = $this->getErrorArr($e);
         }
@@ -72,7 +72,17 @@ class Rofcustom_Googlecmsimport_Block_Import extends Mage_Core_Block_Template {
     public function getClientSecret() {
         $retval = null;
         try {
-            $retval = $this->getModel()->clientSecret;
+            $retval = $this->getModel()->getClientSecret();
+        } catch(Exception $e) {
+            $retval = $this->getErrorArr($e);
+        }
+        return $retval;
+    }
+
+    public function getRequestUri() {
+        $retval = null;
+        try {
+            $retval = $this->getModel()->getRequestUri();
         } catch(Exception $e) {
             $retval = $this->getErrorArr($e);
         }
