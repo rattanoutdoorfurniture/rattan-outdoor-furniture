@@ -186,11 +186,11 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
     }
 
     public function setAuthed($authed) {
-        $this->_authed = boolval($authed);
+        $this->_authed = ($authed===true);
     }
 
     public function getAuthed() {
-        return boolval($this->_authed);
+        return ($this->_authed===true);
     }
 
     public function doAuth() {
