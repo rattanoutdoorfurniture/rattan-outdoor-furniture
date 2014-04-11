@@ -26,9 +26,6 @@
             <googlecmsimport>
                 <class>Rofcustom_Googlecmsimport_Block</class>
             </googlecmsimport>
-            <import>
-                <class>Rofcustom_Googlecmsimport_Block</class>
-            </import>
         </blocks>
         <helpers>
             <googlecmsimport>
