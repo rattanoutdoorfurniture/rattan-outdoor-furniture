@@ -8,6 +8,12 @@ class Rofcustom_Googlecmsimport_IndexController extends Mage_Adminhtml_Controlle
 //        // echo("Google CMS Import! Pre-Dispatch.");
 //    }
 
+    public function preDispatch()
+    {
+        Mage::getSingleton('adminhtml/url')->turnOffSecretKey();
+        parent::preDispatch();
+    }
+
 
     /**
      * Init Action
