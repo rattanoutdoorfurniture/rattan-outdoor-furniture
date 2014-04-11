@@ -1,4 +1,12 @@
 <div>
+    <?php
+    echo "<pre>";
+    echo "Client ID:\t"     . $this->getClientId() . "\n";
+    echo "Client Secret:\t" . $this->getClientSecret() . "\n";
+    echo "Request URI:\t"   . $this->model->requestUri() . "\n";
+    echo "Session Val:\t"   . var_export(Mage::getSingleton("adminhtml/session")->getGoogleImport(),true);
+    echo "</pre><br/><br/>";
+    ?>
 <?php if(!$this->authed): ?>
     <a href="<?php echo $this->authUrl;?>">Login</a>
 <?php else: ?>
