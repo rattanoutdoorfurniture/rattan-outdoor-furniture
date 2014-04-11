@@ -1,35 +1,93 @@
 <?php
-class Rofcustom_Googlecmsimport_Block_Googlecmsimport extends Mage_Core_Block_Template
-{
+/**
+ * Created by PhpStorm.
+ * User: mike
+ * Date: 4/2/14
+ * Time: 7:40 PM
+ */
+
+class Rofcustom_Googlecmsimport_Block_GooglecmsImport extends Mage_Core_Block_Template {
+
+    protected $_model = null;
+
     public function __construct()
     {
         parent::__construct();
-        $this->setTemplate('googlecmsimport/index.phtml');
+        $this->setTemplate('googlecmsimport/googlecmsimport.phtml');
+    }
+
+    public function __get($name) {
+        $methodName = "get".ucfirst($name);
+        if(method_exists($this,$methodName)) return $this->$methodName();
+        if(method_exists($this->getModel(), $name)) return $this->getModel()->$name;
+        if(method_exists($this->getModel(), $methodName)) return $this->getModel()->$methodName;
+        throw new Exception("Neither Google Import Block nor Model supports the $methodName() method.");
     }
 
     protected function _prepareLayout() {
-        // $this->getLayout()->getBlock('head')->addJs('googlecmsimport/googlecmsimport.js');
+        $this->getLayout()->getBlock('head')->addJs('googlecmsimport/googlecmsimport.js');
         parent::_prepareLayout();
     }
 
+    protected function getErrorArr(Exception $e) {
+        return array(
+            "error" => array(
+                "message"   => $e->getMessage(),
+                "code"      => $e->getCode(),
+                "file"      => $e->getFile(),
+                "line"      => $e->getLine(),
+                "trace"     => $e->getTraceAsString()
+            )
+        );
+    }
+
     /**
-     * Retourne le model
+     * Return the model
      *
-     * @return BusinessDecision_googlecmsimport_Model_googlecmsimport
+     * @return Rofcustom_Googlecmsimport_Model_Googlecmsimport
      */
     public function getModel(){
-        return Mage::getModel('googlecmsimport/googlecmsimport');
+        if(is_null($this->_model)) {
+            $this->_model = Mage::getSingleton('googlecmsimport/googlecmsimport');
+        }
+        return $this->_model;
     }
 
 
     /**
-     * Retourne la collection des slides
+     * Return the Client ID
      *
-     * @return array
+     * @return string
      */
-    public function getSlides(){
-        return $this->getModel()->getSlides();
+    public function getClientId() {
+        $retval = null;
+        try {
+            $retval = $this->getModel()->clientId;
+        } catch(Exception $e) {
+            $retval = $this->getErrorArr($e);
+        }
+        return $retval;
     }
+
+    public function getClientSecret() {
+        $retval = null;
+        try {
+            $retval = $this->getModel()->clientSecret;
+        } catch(Exception $e) {
+            $retval = $this->getErrorArr($e);
+        }
+        return $retval;
+    }
+
+    public function getAuthed() {
+        return $this->getModel()->getAuthed();
+    }
+
+    public function getAuthUrl() {
+        return $this->getModel()->getAuthUrl();
+    }
+
+
 
     /**
      * Code d'ajout du fichier Js de l'Interakting Slider
