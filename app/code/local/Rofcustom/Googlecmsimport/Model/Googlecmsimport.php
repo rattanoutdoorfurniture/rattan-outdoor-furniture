@@ -13,7 +13,7 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
     protected $_service      = null;
     protected $_authCode     = null;
     protected $_request      = null;
-    protected $_session      = null;
+    protected $_session      = array();
     protected $_authed       = false;
     protected $_authUrl      = null;
     protected $_authToken    = null;
@@ -82,10 +82,18 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
     }
 
     public function getRequestUri() {
-        if(is_null($this->_requestUri)) {
-            $uri = "http" . (isset($_SERVER['HTTPS'])?"s":""). "://" . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
-            if(substr($uri,-1)=="/") $this->_requestUri = substr($uri,0,-1);
-            if(strpos($uri,"?")!==false) $this->_requestUri = substr($uri,0,strpos($uri,"?"));
+        if(is_null($this->_requestUri) || strlen($this->_requestUri)==0) {
+            $uriOrg = "http" . (isset($_SERVER['HTTPS'])?"s":""). "://" . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
+            $uriArr = parse_url($uriOrg);
+            unset(
+                $uriArr['user'],
+                $uriArr['pass'],
+                $uriArr['query'],
+                $uriArr['fragment']
+            );
+            array_splice($uriArr,1,0,"://");
+            $uri    = implode("",$uriArr);
+            $this->_requestUri = rtrim($uri,"/");
         }
         return $this->_requestUri;
     }
@@ -127,19 +135,17 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
     }
 
     public function authCodeSet() {
-        return !is_null($this->getAuthCode());
+        return !(is_null($this->getAuthCode()) || (strlen($this->_authCode)==0));
     }
 
-    protected function updatePathArray(&$arr, $path, $val = null) {
-        $layers = preg_split("/\//",$path);
-        $layers = array_reverse($layers);
-        $tree   = "[".implode("][",$layers)."]";
-        ${"arr".$tree} = $val;
+    public function updatePathArray($arr, $path, $val = null) {
+        $arr[$path] = $val;
+        return $arr;
     }
 
     protected function _setSesssion($path, $val) {
         $curSession = $this->getSession();
-        $this->updatePathArray($curSession,$path,$val);
+        $curSession = $this->updatePathArray($curSession,$path,$val);
         Mage::getSingleton("adminhtml/session")->setGoogleImport($curSession);
     }
 
@@ -154,10 +160,10 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
     }
 
     public function getSession($path='',$force=FALSE) {
-        if(is_null($this->_session)||$force) {
-            $this->_session = Mage::getSingleton("adminhtml/session")->getGoogleImport($path);
+        if(empty($this->_session)||$force) {
+            $this->_session = Mage::getSingleton("adminhtml/session")->getGoogleImport();
         }
-        return $this->_session;
+        return strlen($path) ? $this->_session[$path] : $this->_session;
     }
 
     public function setAuthToken($token = null) {
@@ -178,6 +184,7 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
 
     public function setAuthUrl($url=null) {
         $this->_authUrl = !is_null($url) ? $url : $this->client->createAuthUrl();
+        return $this;
     }
 
     public function getAuthUrl() {
@@ -195,13 +202,28 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
         return ($this->_authed===true);
     }
 
+    public function checkLogout($logout=null) {
+        $logout_flag = is_bool($logout) ? $logout : !is_null($this->getRequest()->getParam("logout"));
+        if($logout_flag) {
+            $this->setSession('auth/access_token','');
+        }
+    }
+
     public function doAuth() {
         if($this->authCodeSet()) {
-            $this->getClient()->authenticate($this->authCode);
-            $this->setAuthToken();
-            header('Location: ' . filter_var($this->requestUri, FILTER_SANITIZE_URL));
+            try {
+                $this->getClient()->authenticate($this->getAuthCode());
+                $this->setAuthToken();
+            } catch(Google_Auth_Exception $gaex) {
+                $msg = $gaex->getMessage();
+                if(strpos($msg,"invalid_grant")===false){
+                    return $this->setAuthUrl()->doAuth();
+                }
+            }
+            header('Location: ' . filter_var($this->getRequestUri(), FILTER_SANITIZE_URL));
         }
-        $accessToken = $this->session('auth/access');
+        $this->checkLogout();
+        $accessToken = $this->getSession('auth/access_token');
         if(strlen($accessToken)>5&&$accessToken) {
             $this->client->setAccessToken($accessToken);
             $this->setAuthed(true);

@@ -1,17 +1,37 @@
 <div>
     <?php
     $gci = MAGE::getSingleton("googlecmsimport/googlecmsimport");
+//    $uri = "http" . (isset($_SERVER['HTTPS'])?"s":""). "://" . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
+//    echo "<!-- originalUri: $uri -->";
+//    if(substr($uri,-1)=="/") $uri = substr($uri,0,-1);
+//    if(strpos($uri,"?")!==false) $uri = substr($uri,0,strpos($uri,"?"));
+    /*echo "<!-- " . "http" . (isset($_SERVER['HTTPS'])?"s":""). "://" . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'] . " -->";
     echo "<pre>";
     echo "Client ID:\t"     . $this->getClientId() . "\n";
     echo "Client Secret:\t" . $this->getClientSecret() . "\n";
     echo "Request URI:\t"   . $gci->getRequestUri() . "\n";
+    echo "Auth Code Set:\t" .($gci->authCodeSet()?"true":"false") . "\n";
+    echo "Auth Code:\t"     . $gci->getAuthCode() . "\n";
+    $googleSession = $gci->getSession();
+    echo "Access Token:\t"  . $googleSession['auth/access_token'] . "\n";
     //echo "Class Methods:\t" . var_export(get_class_methods($gci),true) . "\n";
-    echo "Session Val:\t"   . var_export(Mage::getSingleton("adminhtml/session")->getGoogleImport(),true);
-    echo "</pre><br/><br/>";
+    echo "Session Val:\t"   . var_export($googleSession,true) . "\n";
+    echo "</pre><br/><br/>";*/
     ?>
 <?php if(!$this->authed): ?>
-    <a href="<?php echo $this->authUrl;?>">Login</a>
+    <div id="login" class="login"><a href="<?php echo $this->authUrl;?>">Connect to Google Apps</a></div>
 <?php else: ?>
-    <a href="?logout">Logout</a>
+    <div id="logout" class="login"><a href="?logout">Disconnect from Google Apps</a></div>
+    <h3>Google Import:</h3>
+    <div id="dr_results" style="white-space: pre;">
+        <?php
+        $all = $this->listFiles()->getItems();
+        $titles = array();
+        foreach($all as $item) {
+            $titles[$item->id] = $item->title;
+        }
+        echo var_export($titles,true);
+        ?>
+    </div>
 <?php endif; ?>
 </div>
