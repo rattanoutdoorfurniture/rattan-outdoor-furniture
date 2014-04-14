@@ -48,8 +48,8 @@ class Rofcustom_Googlecmsimport_IndexController extends Mage_Adminhtml_Controlle
 
         $gim = Mage::getSingleton("googlecmsimport/googlecmsimport");
         $gim->getClient();
-        $drs = $gim->getService();
         $gim->doAuth();
+        $drs = $gim->getService();
 
 
         $this->_initAction()
