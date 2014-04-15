@@ -26,11 +26,47 @@
     <div id="dr_results" style="white-space: pre;">
         <?php
         $all = $this->listFiles()->getItems();
+//        $rootFolder = "0B9_hVhBJdknvYUNLZWpuclhUUEU";
+//        global $drs;
+//        $drs = $this->getModel()->getService();
+//        $children = $drs->children->listChildren($rootFolder);
+//        //echo var_export($children->getItems(),true);
+//
+//        function getSubs($folderId) {
+//            global $drs;
+//            $children = $drs->children->listChildren($folderId);
+//            foreach($children as $child) {
+//                echo "die child";
+//                die(var_export($drs->children->get($child),true));
+//                echo $child->title;
+//                getSubs($child->id);
+//            }
+//        }
+//        getSubs($rootFolder);
+
+
+//        echo var_export($this->listFiles()->getItems(),true);
+//        echo "<br>----------<br>";
+//        $top = $this->listFiles()->getItems()[0];
+//        $one = $this->listFiles($top->id)->getItems()[0];
+//        $two = $this->listFiles($one->id)->getItems()[0];
+//        echo $top->title . "/" . $one->title . "/" . $two->title . "<br/>";
+//        echo "downloadUrl: " . $two['downloadUrl'] . "<br/>";
+//        $text = $this->getModel()->downloadFile($two['downloadUrl']);
+//        $lines = explode(chr(0x0D),$text);
+//        echo "<pre>";
+//        echo var_export($lines,true);
+//        echo "</pre>";
+
+
         $titles = array();
         foreach($all as $item) {
-            $titles[$item->id] = $item->title;
+            echo $item->id ." = ". $item->title."<br/>";
+            $subItems = $this->listFiles($item->id)->getItems();
+            foreach($subItems as $subItem) {
+                echo " - " . $subItem->id . " = " . $subItem->title . "<br/>";
+            }
         }
-        echo var_export($titles,true);
         ?>
     </div>
 <?php endif; ?>

@@ -2,6 +2,7 @@
 
 require_once 'Google/Client.php';
 require_once 'Google/Service/Drive.php';
+require_once 'Google/Http/Request.php';
 
 Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
 
@@ -233,10 +234,50 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
         }
     }
 
+    /**
+     * Download a file's content.
+     *
+     * @param Google_DriveService $service Drive API service instance.
+     * @param File $file Drive File instance.
+     * @return String The file's content if successful, null otherwise.
+     */
+    function downloadFile($downloadUrl) {
+        //$downloadUrl = $file->getDownloadUrl();
+        if ($downloadUrl) {
+            $request = new Google_Http_Request($downloadUrl, 'GET', null, null);
+            $httpRequest = $this->getClient()->getAuth()->authenticatedRequest($request);
+            if ($httpRequest->getResponseHttpCode() == 200) {
+                return $httpRequest->getResponseBody();
+            } else {
+                // An error occurred.
+                return null;
+            }
+        } else {
+            // The file doesn't have any content stored on Drive.
+            return null;
+        }
+    }
+
     public function parseWord($userDoc)
     {
         $fileHandle = fopen($userDoc, "r");
         $line = @fread($fileHandle, filesize($userDoc));
+        $lines = explode(chr(0x0D),$line);
+        $outtext = "";
+        foreach($lines as $thisline)
+        {
+            $pos = strpos($thisline, chr(0x00));
+            if (($pos !== FALSE)||(strlen($thisline)==0))
+            {
+            } else {
+                $outtext .= $thisline." ";
+            }
+        }
+        $outtext = preg_replace("/[^a-zA-Z0-9\s\,\.\-\n\r\t@\/\_\(\)]/","",$outtext);
+        return $outtext;
+    }
+
+    public function cleanWord($line) {
         $lines = explode(chr(0x0D),$line);
         $outtext = "";
         foreach($lines as $thisline)
