@@ -1,0 +1,12 @@
+/* Webfont: FuturaStd-BookOblique */@font-face {
+    font-family: 'FuturaStdBook';
+    src: url('FuturaStd-BookOblique.eot'); /* IE9 Compat Modes */
+    src: url('FuturaStd-BookOblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('FuturaStd-BookOblique.woff') format('woff'), /* Modern Browsers */
+         url('FuturaStd-BookOblique.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('FuturaStd-BookOblique.svg#FuturaStd-BookOblique') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

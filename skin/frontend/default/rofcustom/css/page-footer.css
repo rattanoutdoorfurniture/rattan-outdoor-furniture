@@ -1,0 +1,151 @@
+#page-footer {
+
+}
+
+.footer-rule {
+    margin: 5px 0;
+    border-color: #e6e6e6;
+}
+
+.footer-box {
+    margin-top: 10px;
+}
+
+.footer-box-inner {
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #e6e6e6;;
+    min-height: 130px;
+}
+
+.footer-box-inner.last {
+    border: none;
+}
+
+.footer-box h5 {
+    /*color: #895c9a;*/
+    color: #8a6399;
+    font-size: 15px;
+    font-family: 'FuturaStd-Medium';
+    text-transform: uppercase;
+
+}
+
+.footer-box ul {
+
+}
+
+.footer-box ul li {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.footer-box a {
+    text-decoration: none;
+    font-size: 11px;
+    color: #888;
+    font-family: 'Tahoma';
+}
+
+/* Newsletter Footer Box
+**********************************************************/
+#footer-newsletter {
+    margin: 20px 0 5px;
+}
+
+#footer-newsletter-input {
+    float: left;
+    /*width: 110px;*/
+    width: 130px;
+    color: #888;
+    font-family: 'Tahoma';
+}
+
+#footer-newsletter-submit {
+    /*width: 90px;*/
+    width: 55px;
+    height: 30px;
+    border: none;
+    background: #895c9a url('../images/footer-newsletter-submit-2.png') center center no-repeat;
+    margin-left: -10px;
+    text-indent: -10000px;
+}
+
+#footer-social-label {
+    top: -2px;
+    position: relative;
+    color: #888;
+    font-family: 'Tahoma';
+}
+
+.footer-social-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: transparent url('../images/footer-social-icon.png') 0 0 no-repeat;
+}
+.footer-social-icon.fb {
+    background-position: 0px 0px;
+}
+.footer-social-icon.tw {
+    background-position: -20px 0px;
+}
+.footer-social-icon.pn {
+    background-position: -40px 0px;
+}
+.footer-social-icon.gp {
+    background-position: -60px 0px;
+}
+.footer-social-icon.ig {
+    background-position: -80px 0px;
+}
+
+/* Logo Section in Footer
+*************************************************************/
+
+#footer-logo-wrap {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#footer-logo-img {
+    margin: 5px auto;
+}
+
+#footer-logo-email {
+    font-size: 10px;
+    font-weight: normal;
+    color: #888;
+    font-family: 'OpenSans';
+    text-align: center;
+    width: 100%;
+}
+
+#footer-logo-phone {
+    text-align: center;
+    font-size: 16px;
+    color: #895c9a;
+    font-weight: 400;
+    font-family: 'Tahoma';
+}
+
+/* Footer Sub Info (Copyright and CC icons)
+*************************************************************/
+
+#footer-sub {
+    margin: 2px auto 10px;
+    height: 40px;
+}
+
+#footer-sub-copyright {
+    font-size: 11px;
+    padding-top: 7px;
+    color: #888;
+    font-family: 'Tahoma';
+
+}
+
+#footer-sub-icons #cc-icons {
+    float: right;
+}

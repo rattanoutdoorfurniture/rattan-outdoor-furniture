@@ -1,0 +1,132 @@
+
+/* Main Image Slider
+*******************************************/
+
+#home-slider {
+    background: transparent url('../images/hash-border.png');
+    width: 940px;
+    height: 380px;
+    margin-bottom: 20px;
+}
+
+/*#home-slider-inner {*/
+/*position: relative;*/
+/*width: 100%;*/
+/*}*/
+
+.home-slide {
+    position: relative;
+    margin: 10px;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.home-slide.current {
+    display: block;
+    z-index: 98;
+}
+
+.home-slide.next {
+    z-index: 99;
+}
+
+.home-slide.prev {
+    z-index: 97;
+}
+
+.home-slide-img {
+    width: 920px;
+    height: 360px;
+    outline: none;
+}
+
+.home-slide-detail {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    display: block;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.home-slide-detail-title {
+    font-size: 2em;
+    clear: both;
+    text-align: center;
+    color: #8a6399;
+    text-shadow: 1px 1px 1px #CCC;
+    padding: 5px 2px;
+    font-family: 'abeatbyKai';
+    margin-bottom: 3px;
+    /*text-transform: uppercase;*/
+}
+
+.home-slide-detail-under {
+    text-align: center;
+}
+
+.home-slide-detail-sub {
+    position: relative;
+    top: 4px;
+    font-size: 16px;
+    display: inline-block;
+    color: #555;
+    font-family: 'FuturaStd-Book';
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.home-slide-detail-btn {
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+/* Sub Main-Image Category Boxes
+*******************************************/
+
+.home-cat {
+    background: transparent url('../images/hash-border.png') left top repeat;
+    height: 170px;
+    position: relative;
+    margin-bottom: 20px;
+    /* padding: 0; */
+    /* padding: 0; */
+    /* width: auto; */
+}
+
+#home-cat-right {
+
+}
+
+#home-cat-left {
+
+}
+
+.home-cat-img-wrap {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.home-cat-img {
+    width: 440px;
+    height: auto;
+}
+
+.home-cat-label {
+    position: absolute;
+    bottom: 13px;
+    right: 10px;
+    background: rgba(255,255,255,0.8);
+    color: #8a6399;
+    font-family: 'abeatbyKai';
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/*@import url('category-slider.css');*/

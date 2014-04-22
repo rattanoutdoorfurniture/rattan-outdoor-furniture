@@ -1,0 +1,123 @@
+
+<!-- Basic Page Needs
+================================================== -->
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+<title><?php echo $this->getTitle() ?></title>
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<meta name="author" content="">
+<meta name="google-site-verification" content="FZDC31mGIrSoBbOqM8oSp6RrVMZA5IgzITFazM8x3xE" />
+
+<!-- Mobile Specific Metas
+================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/base.css">
+<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/skeleton.css">
+<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/layout.css">
+<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/fonts.css">
+
+<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/page-header.css">
+<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/page-footer.css">
+<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/category-slider.css">
+
+<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/home.css">
+<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/category.css">
+<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/product.css">
+<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/cart-checkout.css">
+
+
+<!-- Favicons
+================================================== -->
+<link rel="shortcut icon" href="skin/frontend/default/rofcustom/images/favicon.ico">
+<link rel="apple-touch-icon" href="skin/frontend/default/rofcustom/images/apple/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="skin/frontend/default/rofcustom/images/apple/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="skin/frontend/default/rofcustom/images/apple/apple-touch-icon-114x114.png">
+
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+
+<script type="text/javascript">
+
+    function getUrlParams(key) {
+        var Params = {};
+        var params = decodeURIComponent(location.search.slice(1)).split("&");
+        for(i=0;i<params.length;i++){
+            keyval=params[i].split("=");
+            Params[keyval[0]]=keyval[1];
+        }
+        return typeof(key)==typeof(undefined) ? Params : ( typeof(Params[key])==typeof(undefined) ? Params : Params[key] );
+    }
+
+    function nextCheckoutStepUrl(step) {
+        params = getUrlParams();
+        params.step = (typeof(step)==typeof(undefined)) ? params.step+1 : step;
+        newParams = jQuery.param(params);
+        base = location.href.slice(0,location.href.indexOf('?'));
+        return base + "?" + newParams;
+    }
+
+    function nextCheckoutStep(step) {
+        step = typeof(step)==typeof(undefined) ? getUrlParams('step') : step;
+        $("#checkout-box").removeClass('step'+(step)).addClass('step'+(++step));
+        history.pushState(null, "Step " + step, (location.href.slice(0,-1)+step));
+    }
+
+    jQuery(document).ready(function($){
+        if($(".product-tab").length) {
+            if($(location.hash).length) {
+                $(".product-tab.active").removeClass("active");
+                $(location.hash).addClass("active");
+            }
+        }
+        $(".product-tab-title a").on("click", function(ev){
+            ev.preventDefault();
+            $("#product-tabs").find(".product-tab.active").removeClass("active");
+            $(this.hash).addClass("active");
+            scrollTop = $(document).scrollTop();
+            location.hash = this.hash;
+            $(document).scrollTop(scrollTop);
+        });
+        $(".checkout-step-next-step").on("click", function(e) {
+            e.preventDefault();
+            if(this.id=="checkout-step3-submit-order") {
+                formdata = $("#checkout-box-form").serializeArray();
+                htmldata = $("<div/>");
+                $(formdata).each(function(){
+                    row = $("<div/>");
+                    row.append(
+                            $("<strong/>").text(this.name)
+                        ).append(
+                            $("<span/>").text(this.value)
+                        );
+                    htmldata.append(row);
+                });
+                $("#checkout-box-step-4").append(htmldata);
+            }
+            nextCheckoutStep();
+        });
+    });
+    //<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+    //]]>
+</script>
+
+
+
+

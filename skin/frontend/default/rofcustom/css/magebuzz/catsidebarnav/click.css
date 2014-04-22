@@ -1,0 +1,52 @@
+
+#sidenav li ul.level0 {
+    display: none;
+}
+#sidenav li ul li ul {
+    display: none;
+}
+.block-category-nav .block-title {
+    border-bottom: 0 none !important;
+}
+.show-cat {
+}
+html #sidenav li {
+    display: inline-block;
+    font-weight: normal;
+    position: relative;
+    width: 100%;
+}
+.show-cat {
+    position: absolute;
+    right: 0 !important;
+    text-decoration: none !important;
+    top: 0;
+    z-index: 100;
+}
+.show-cat:before {
+    content: "+";
+    display: block;
+    font-family: icomoon;
+    font-size: 20px;
+    height: 18px;
+    position: absolute;
+    right: 13px;
+    text-decoration: none !important;
+    top: 5px;
+    width: 10px;
+}
+.show-cat.active:before {
+    content: "_";
+    display: block;
+    font-family: icomoon;
+    font-size: 20px;
+    height: 18px;
+    position: absolute;
+    right: 13px;
+    text-decoration: none !important;
+    top: -1px;
+    width: 10px;
+}
+#sidenav * {
+    outline: medium none !important;
+}

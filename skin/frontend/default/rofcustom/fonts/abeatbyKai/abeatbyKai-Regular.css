@@ -1,0 +1,13 @@
+/* Webfont: abeatbyKai-Regular */
+@font-face {
+    font-family: 'abeatbyKai';
+    src: url('abeatbyKai-Regular.eot'); /* IE9 Compat Modes */
+    src: url('abeatbyKai-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('abeatbyKai-Regular.woff') format('woff'), /* Modern Browsers */
+         url('abeatbyKai-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('abeatbyKai-Regular.svg#abeatbyKai-Regular') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
