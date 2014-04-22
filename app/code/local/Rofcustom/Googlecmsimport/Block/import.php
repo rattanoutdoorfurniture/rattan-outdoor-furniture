@@ -91,18 +91,8 @@ class Rofcustom_Googlecmsimport_Block_Import extends Mage_Core_Block_Template {
         return $this->getModel()->getAuthUrl();
     }
 
-    public function listFiles($parentFolder = "0B9_hVhBJdknvYUNLZWpuclhUUEU") {
-        $drs = $this->getModel()->getService();
-        // return $drs->about->get()->getRootFolderId();
-        $drs_results = null;
-        try {
-            $drs_results = $drs->files->listFiles(array(
-                "q" => "'$parentFolder' in parents"
-            ));
-        } catch(Exception $e) {
-            echo "Exception: " . $e->getMessage();
-        }
-        return $drs_results;
+    public function listFiles($parentFolder=null) {
+        return $this->getModel()->listFiles($parentFolder);
     }
 
 

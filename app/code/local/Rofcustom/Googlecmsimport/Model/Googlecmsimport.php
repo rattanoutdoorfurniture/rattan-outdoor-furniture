@@ -241,8 +241,8 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
      * @param File $file Drive File instance.
      * @return String The file's content if successful, null otherwise.
      */
-    function downloadFile($downloadUrl) {
-        //$downloadUrl = $file->getDownloadUrl();
+    function downloadFile($downloadUrl, $savePath='') {
+        $downloadUrl = is_string($downloadUrl) ? $downloadUrl : $downloadUrl->getDownloadUrl();
         if ($downloadUrl) {
             $request = new Google_Http_Request($downloadUrl, 'GET', null, null);
             $httpRequest = $this->getClient()->getAuth()->authenticatedRequest($request);
@@ -256,6 +256,59 @@ Class Rofcustom_Googlecmsimport_Model_Googlecmsimport {
             // The file doesn't have any content stored on Drive.
             return null;
         }
+    }
+
+    public function syncDriveFiles() {
+        $files  = array("drive"=>array(),"local"=>array());
+        $dFiles = $this->listFiles()->getItems();
+        foreach($dFiles as $dFile) {
+            $files['drive'][] = $dFile->title;
+        }
+        $lFiles = glob(Mage::getBaseDir("media")."/MagentoImport/*");
+        $files['local'] = $lFiles;
+        echo var_export($files,true);
+
+    }
+
+    public function listFiles($parentFolder = "0B9_hVhBJdknvYUNLZWpuclhUUEU") {
+        $drs = $this->getService();
+        // return $drs->about->get()->getRootFolderId();
+        $drs_results = null;
+        try {
+            $drs_results = $drs->files->listFiles(array(
+                "q" => "'$parentFolder' in parents"
+            ));
+        } catch(Exception $e) {
+            echo "Exception: " . $e->getMessage();
+        }
+        return $drs_results;
+    }
+
+    function parseWordX($archiveFile, $dataFile="word/document.xml") {
+        // Create new ZIP archive
+        $zip = new ZipArchive;
+
+        // Open received archive file
+        if (true === $zip->open($archiveFile)) {
+            // If done, search for the data file in the archive
+            if (($index = $zip->locateName($dataFile)) !== false) {
+                // If found, read it to the string
+                $data = $zip->getFromIndex($index);
+                // Close archive file
+                $zip->close();
+                // Load XML from a string
+                // Skip errors and warnings
+                $xml = new DOMDocument();
+                $xml->loadXML($data, LIBXML_NOENT | LIBXML_XINCLUDE | LIBXML_NOERROR | LIBXML_NOWARNING);
+                // Return data without XML formatting tags
+                return $xml->saveXML();
+                return strip_tags($xml->saveXML());
+            }
+            $zip->close();
+        }
+
+        // In case of failure return empty string
+        return "";
     }
 
     public function parseWord($userDoc)

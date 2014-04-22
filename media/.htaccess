@@ -6,6 +6,11 @@ php_flag engine 0
 AddHandler cgi-script .php .pl .py .jsp .asp .htm .shtml .sh .cgi
 Options -ExecCGI
 
+###########################################
+## hide MagentoImport folder
+
+IndexIgnore MagentoImport
+
 <IfModule mod_rewrite.c>
 
 ############################################

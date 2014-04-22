@@ -25,7 +25,6 @@
     <h3>Google Import:</h3>
     <div id="dr_results" style="white-space: pre;">
         <?php
-        $all = $this->listFiles()->getItems();
 //        $rootFolder = "0B9_hVhBJdknvYUNLZWpuclhUUEU";
 //        global $drs;
 //        $drs = $this->getModel()->getService();
@@ -58,15 +57,33 @@
 //        echo var_export($lines,true);
 //        echo "</pre>";
 
+//        $this->getModel()->syncDriveFiles();
 
-        $titles = array();
-        foreach($all as $item) {
-            echo $item->id ." = ". $item->title."<br/>";
-            $subItems = $this->listFiles($item->id)->getItems();
-            foreach($subItems as $subItem) {
-                echo " - " . $subItem->id . " = " . $subItem->title . "<br/>";
-            }
-        }
+
+//        $all = $this->getModel()->listFiles()->getItems();
+//        $titles = array();
+//        foreach($all as $item) {
+//            $subItems = $this->listFiles($item->id)->getItems();
+//            echo $item->id ." = ". $item->title." (".count($subItems).")<br/>";
+//            foreach($subItems as $subItem) {
+//                $subItems2 = $this->listFiles($subItem->id)->getItems();
+//                echo "\t - " . $subItem->id . " = " . $subItem->title . " (".count($subItems2).")<br/>";
+//                if(count($subItems2)==0) continue;
+//                foreach($subItems2 as $subItem2) {
+//                    echo "\t\t - " . $subItem2->id . " = " . $subItem2->title . "<br/>";
+//                }
+//            }
+//        }
+
+        $dir = Mage::getBaseDir("media") . "/MagentoImport";
+        $files = glob($dir."/locations/*/*.docx");
+        //echo var_export($files, true);
+        $wordx = array();
+        $wordx[$files[0]] = $this->getModel()->parseWordX($files[0]);
+        echo "<pre>";
+        echo var_export($wordx,true);
+        echo "</pre>";
+
         ?>
     </div>
 <?php endif; ?>
