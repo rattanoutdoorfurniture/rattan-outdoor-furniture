@@ -29,30 +29,16 @@
  * @see Mage_Page_Block_Template_Links
  */
 ?>
+<?php /* Top Menu For Mobile *************************************************************
 
-<!--<div class="btn-group btn-group-top-mobile" style="display:none;">-->
-<!---->
-<!--<button data-toggle="dropdown" class="btn btn-large dropdown-toggle"> --><?php //echo $this->__(' Menu') ?><!-- &nbsp;<i class="icon-user"></i></button>-->
-<?php //$_links = $this->getLinks(); ?>
-<?php //if(count($_links)>0): ?>
-<!---->
-<!--<ul class="dropdown-menu"--><?php //if($this->getName()): ?><!-- id="--><?php //echo $this->getName() ?><!--"--><?php //endif;?><!--  >-->
-<!---->
-<!--    --><?php //foreach($_links as $_link): ?>
-<!--        --><?php //if ($_link instanceof Mage_Core_Block_Abstract):?>
-<!--            --><?php //echo $_link->toHtml() ?>
-<!--        --><?php //else: ?>
-<!--            <li--><?php //if($_link->getIsFirst()||$_link->getIsLast()): ?><!-- class="nav-top-item--><?php //if($_link->getIsFirst()): ?><!-- first--><?php //endif; ?><!----><?php //if($_link->getIsLast()): ?><!-- last--><?php //endif; ?><!--"--><?php //endif; ?><!-- --><?php //echo $_link->getLiParams() ?><!-->--><?php //echo $_link->getBeforeText() ?><!--<a href="--><?php //echo $_link->getUrl() ?><!--" title="--><?php //echo $_link->getTitle() ?><!--" --><?php //echo $_link->getAParams() ?><!-->--><?php //echo $_link->getLabel() ?><!--</a>--><?php //echo $_link->getAfterText() ?><!--</li>-->
-<!--        --><?php //endif;?>
-<!--    --><?php //endforeach; ?>
-<!--</ul>-->
-<?php //endif; ?>
-<!---->
-<!--</div>-->
+<div class="btn-group btn-group-top-mobile" style="display:none;">
 
+<button data-toggle="dropdown" class="btn btn-large dropdown-toggle"> <?php echo $this->__(' Menu') ?> &nbsp;<i class="icon-user"></i></button>
 <?php $_links = $this->getLinks(); ?>
 <?php if(count($_links)>0): ?>
-<!--<ul class="nav pull-left btn-group-top-desctop"--><?php //if($this->getName()): ?><!-- id="--><?php //echo $this->getName() ?><!--"--><?php //endif;?><!--  >-->
+
+<ul class="dropdown-menu"<?php if($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif;?>  >
+
     <?php foreach($_links as $_link): ?>
         <?php if ($_link instanceof Mage_Core_Block_Abstract):?>
             <?php echo $_link->toHtml() ?>
@@ -60,5 +46,27 @@
             <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="nav-top-item<?php if($_link->getIsFirst()): ?> first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
         <?php endif;?>
     <?php endforeach; ?>
-<!--</ul>-->
+</ul>
+<?php endif; ?>
+
+</div>
+
+*******************************************************************************************/?>
+
+<?php $_links = $this->getLinks(); ?>
+<?php if(count($_links)>0): ?>
+<nav id="nav-top" class="nav-top">
+    <ul id="nav-top-list" class="nav-top-list">
+    <?php foreach($_links as $_link): ?>
+        <?php if ($_link instanceof Mage_Core_Block_Abstract):?>
+            <?php echo $_link->toHtml() ?>
+        <?php else: ?>
+            <li class="nav-top-item<?php if($this->getName()): ?><?php echo $this->getName() ?><?php endif;?><?php if($_link->getIsFirst()): ?> first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>" <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
+        <?php endif;?>
+<!--        <li class="nav-top-item first"><a href="/?page=checkout&step=1" title="Login/Register">Login/Register</a></li>-->
+<!--        <li class="nav-top-item"><a href="/?page=cart" title="Cart">Cart (<span id="nav-top-cart-count">0</span>)</a></li>-->
+<!--        <li class="nav-top-item last"><a href="/?page=checkout&step=1" title="Checkout">Checkout</a></li>-->
+    <?php endforeach; ?>
+    </ul>
+</nav>
 <?php endif; ?>

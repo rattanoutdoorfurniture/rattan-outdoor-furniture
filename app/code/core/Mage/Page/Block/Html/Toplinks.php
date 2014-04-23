@@ -67,7 +67,7 @@ class Mage_Page_Block_Html_Toplinks extends Mage_Core_Block_Template
      */
     public function addLink($liParams, $aParams, $innerText, $position='', $beforeText='', $afterText='')
     {
-        $params = '';
+        $params = 'class="nav-top-link"';
         if (!empty($liParams) && is_array($liParams)) {
             foreach ($liParams as $key=>$value) {
                 $params .= ' ' . $key . '="' . addslashes($value) . '"';
@@ -103,7 +103,7 @@ class Mage_Page_Block_Html_Toplinks extends Mage_Core_Block_Template
             reset($this->_toplinks);
             $this->_toplinks[key($this->_toplinks)]['first'] = true;
             end($this->_toplinks);
-            $this->_toplinks[key($this->_toplinks)]['last'] = true;
+            $this->_toplinks[key($this->_toplinks)]['last'] = false;
         }
         $this->assign('toplinks', $this->_toplinks);
         return parent::_toHtml();

@@ -43,7 +43,7 @@
 
   
   
-<?php $_menu = $this->getHtml('level-top') ?>
+<?php $_menu = $this->getHtml('nav-main-item') ?>
 <?php if($_menu): ?>
 
 
@@ -51,35 +51,58 @@
 
 
 
-<div id="dl-menu" class="dl-menuwrapper"  style="display:none;">
-
-      <button class="dl-trigger"><?php echo $this->__('Open Menu') ?></button>
-       <ul class="dl-menu">
-        <li> <?php echo $_menu ?> </li>
-           
+<!--<div id="dl-menu" class="dl-menuwrapper"  style="display:none;">-->
+<!---->
+<!--      <button class="dl-trigger">--><?php //echo $this->__('Open Menu') ?><!--</button>-->
+<!--       <ul class="dl-menu">-->
+<!--        <li> --><?php //echo $_menu ?><!-- </li>-->
+<!--           -->
+<!--    -->
+<!--    --><?php // if ($helper->isEnabled()): ?><!--<li class="last parent blog-link"><a class="level-top" href="--><?php //echo $this->getUrl('').$route ?><!--"> --><?php //echo $route ?><!--</a></li> -->
+<!--   --><?php //endif ?>
+<!--        </ul>-->
+<!--       -->
+<!--    </div>-->
     
-    <?php  if ($helper->isEnabled()): ?><li class="last parent blog-link"><a class="level-top" href="<?php echo $this->getUrl('').$route ?>"> <?php echo $route ?></a></li> 
-   <?php endif ?>
-        </ul>
-       
-    </div>
     
-    
-<div class="sf-contener clearfix second-bg ">
+<!--<div class="sf-contener clearfix second-bg ">-->
+<!---->
+<!---->
+<!--  <nav class="nav-wrap container_9">-->
+<!---->
+<!--    <ul class="sf-menu  ">-->
+<!--      --><?php //echo $_menu ?>
+<!--        </li>-->
+<!--    --><?php // if ($helper->isEnabled()): ?><!--<li class="last parent blog-link"><a class="level-top" href="--><?php //echo $this->getUrl('').$route ?><!--"> --><?php //echo $route ?><!--</a></li>-->
+<!--   --><?php //endif ?>
+<!---->
+<!--     </ul>-->
+<!---->
+<!---->
+<!---->
+<!--  </nav>-->
+<!--</div>-->
 
-
-  <nav class="nav-wrap container_9">
-  
-    <ul class="sf-menu  ">
-      <?php echo $_menu ?> 
+<nav id="nav-main" class="nav-main">
+    <ul id="nav-main-list" class="nav-main-list">
+        <li class="nav-main-item last search">
+            <form id="glob-search-form">
+                <input type="search" id="glob-search-input" placeholder="Search"/>
+                <input type="submit" id="glob-search-submit" value="Search"/>
+            </form>
         </li>
-    <?php  if ($helper->isEnabled()): ?><li class="last parent blog-link"><a class="level-top" href="<?php echo $this->getUrl('').$route ?>"> <?php echo $route ?></a></li> 
-   <?php endif ?>
+<!--        <li class="nav-main-item first selected"><a href="/" title="Rattan Outdoor Furniture">Home</a></li>-->
+<!--        <li class="nav-main-item"><a href="#products" title="Our Products">Products</a></li>-->
+<!--        <li class="nav-main-item"><a href="#about_us" title="About Us">About&nbsp;Us</a></li>-->
 
-     </ul> 
-     
-      
-   
-  </nav>
-</div>
+<!--        </li>-->
+        <?php echo $_menu; ?>
+        <?php if($helper->isEnabled()): ?>
+        <li class="nav-main-item"><a href="<?php echo $this->getUrl('').$route ?>"> <?php echo $route ?></a></li>
+        <?php endif; ?>
+    </ul>
+</nav>
+
+
+
 <?php endif ?>
