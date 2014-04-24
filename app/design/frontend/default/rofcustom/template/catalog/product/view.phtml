@@ -55,10 +55,10 @@
 
 
   <div class="product-commander">
-    <?php if ($customPro[$index-1]):?>
+    <?php if (isset($customPro[$index-1])&&$customPro[$index-1]):?>
     <span class="prev"> <a  href="<?php echo $customPro[$index-1]->getUrlPath()?>"> &lt;&lt; </a> </span>
     <?php endif;?>
-    <?php if ($customPro[$index+1]):?>
+    <?php if (isset($customPro[$index+1])&&$customPro[$index+1]):?>
     <span class="next"> <a  href="<?php echo $customPro[$index+1]->getUrlPath()?>"> &gt;&gt; </a>
     <?php endif;?>
     </span> </div>

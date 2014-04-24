@@ -27,12 +27,19 @@
 /* @var $catalogSearchHelper Mage_Catalogsearch_Helper_Data */
 $catalogSearchHelper =  $this->helper('catalogsearch');
 ?>
-<form class="mobile-hide" id="searchbox" action="<?php echo $catalogSearchHelper->getResultUrl() ?>" method="get">
-    <div class="form-search">
-      
-        <input id="search" type="text" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>" class="input-text" maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>" />
-        <button type="submit"  class="btn-search"></button>
-        <div id="search_autocomplete" class="search-autocomplete"></div>
-       
-    </div>
+<!--<form class="mobile-hide" id="searchbox" action="--><?php //echo $catalogSearchHelper->getResultUrl() ?><!--" method="get">-->
+<!--    <div class="form-search">-->
+<!--      -->
+<!--        <input id="search" type="text" name="--><?php //echo $catalogSearchHelper->getQueryParamName() ?><!--" value="--><?php //echo $catalogSearchHelper->getEscapedQueryText() ?><!--" class="input-text" maxlength="--><?php //echo $catalogSearchHelper->getMaxQueryLength();?><!--" />-->
+<!--        <button type="submit"  class="btn-search"></button>-->
+<!--        <div id="search_autocomplete" class="search-autocomplete"></div>-->
+<!--       -->
+<!--    </div>-->
+<!--</form>-->
+
+
+<form id="glob-search-form" class="moblie-hide" action="<?php echo $catalogSearchHelper->getResultUrl() ?>" method="get">
+    <input type="search" id="glob-search-input" placeholder="Search" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>" maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>" />
+    <input type="submit" id="glob-search-submit" value="Search"/>
+    <div id="search_autocomplete" class="search-autocomplete"></div>
 </form>

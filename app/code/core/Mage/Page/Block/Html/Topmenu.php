@@ -73,6 +73,8 @@ class Mage_Page_Block_Html_Topmenu extends Mage_Core_Block_Template
             'block' => $this
         ));
 
+        //$this->_menu = current($this->_menu->getChildren());
+
         $this->_menu->setOutermostClass($outermostClass);
         $this->_menu->setChildrenWrapClass('');//$childrenWrapClass);
 
@@ -91,14 +93,20 @@ class Mage_Page_Block_Html_Topmenu extends Mage_Core_Block_Template
      *
      * @param Varien_Data_Tree_Node $menuTree
      * @param string $childrenWrapClass
+     * @see Varien_Data_Tree_Node
      * @return string
      */
     protected function _getHtml(Varien_Data_Tree_Node $menuTree, $childrenWrapClass)
     {
         $_html = array();
         $html = '';
-
         $children = $menuTree->getChildren();
+//        die('<div id="dumper_dump">'.dumper::dump($menuTree).'\n\n\n'.dumper::dump($children->getNodes()).'</div>');
+//        if($children->count()==1) {
+//            $nodes = $children->getNodes();
+//            $newTree = current($nodes);
+//            return $this->_getHtml($newTree, $childrenWrapClass);
+//        }
         $parentLevel = $menuTree->getLevel();
         $childLevel = is_null($parentLevel) ? 0 : $parentLevel + 1;
 
@@ -110,23 +118,6 @@ class Mage_Page_Block_Html_Topmenu extends Mage_Core_Block_Template
 
         foreach ($children as $child) {
 
-            $child->setLevel($childLevel);
-            $child->setIsFirst($counter == 1);
-            $childUrl = $child->getUrl();
-            $childUrlArr = explode("/",$childUrl);
-            $childPop = array_pop($childUrlArr);
-            echo dumper::dump(
-                array(
-                    "mageUrl"   => Mage::getUrl(),
-                    "baseUrl"   => Mage::getBaseUrl(),
-                    "childUrl"  => $child->getUrl(),
-                    "childPop"  => $childPop,
-                    "request"   => Mage::app()->getRequest()->getRequestString(),
-                )
-            );
-            $child->setIsLast($childrenWrapClass=='nav-main-item'?$counter == $childrenCount:false);
-            //$child->setPositionClass($itemPositionClassPrefix . $counter);
-
             $outermostClassCode = '';
             $outermostClass = $menuTree->getOutermostClass();
 
@@ -134,9 +125,13 @@ class Mage_Page_Block_Html_Topmenu extends Mage_Core_Block_Template
                 $outermostClassCode = ' class="' . $outermostClass . '" ';
                 $child->setClass($outermostClass);
             }
-            $liInternals = '';
+
+            $child->setLevel($childLevel);
+            $child->setIsFirst($outermostClass!=='nav-main-item'?$counter==1:false);
+            $child->setIsLast($outermostClass!=='nav-main-item'?$counter == $childrenCount:false);
+            //$child->setPositionClass($itemPositionClassPrefix . $counter);
+
             $html .= '<li' . ($liInternals = $this->_getRenderedMenuItemAttributes($child)) . '>';
-//            $html .= '<div style="display:none">'.json_encode(Dumper::dump($child)).'</div>';
             $html .= '<a href="' . $child->getUrl() . '" ' . !$outermostClassCode . '><span>'
                 . $this->escapeHtml($child->getName()) . '</span></a>';
 
@@ -154,29 +149,36 @@ class Mage_Page_Block_Html_Topmenu extends Mage_Core_Block_Template
             }
             $html .= '</li>';
 
-            $_html[$liInternals] = $html;
+            $_html[] = $html;
             $html    = '';
 
             $counter++;
         }
 
-        $selected = false;
-        foreach($_html as $liInternal=>$liHtml) {
-            if(strpos($liInternal,"selected")!==false) {
-                $selected = $liInternal;
-                break;
+        if(false&&Mage::app()->getRequest()->getRequestString() !== "/") {
+            $selected = false;
+            foreach($_html as $liInternalCount=>$liHtml) {
+                $liInternal = substr($liInternalCount,0,1);
+                if(strpos($liInternal,"selected")!==false) {
+                    $selected = $liInternal;
+                    break;
+                }
+            }
+
+            if($selected===false) {
+                reset($_html);
+                $flipped  = array_flip($_html);
+                $flippedk = array_keys($flipped);
+                $orgFirst = substr($flippedk[0],0,-1);
+                $firstKey = array_shift($flipped);
+                $newKey   = substr($firstKey,0,-1) . " selected\"";
+                $newFirst = str_replace($firstKey,$newKey,$orgFirst);
+                $_html[$firstKey] = $newFirst;
+
             }
         }
 
-//        if($selected===false) {
-            reset($_html);
-            $flipped  = array_flip($_html);
-            $firstKey = array_shift($flipped);
-            echo die(var_export($firstKey,true));
-
-//        }
-
-        return $html;
+        return implode("\n",$_html);
     }
 
     /**

@@ -86,13 +86,15 @@ nav a {
     text-align: center;
 }
 
-#header-phone-num {
+#header-phone-num,
+#header-phone-num a {
     font-size: 35px;
     line-height: 35px;
     color: #895c9a;
     font-weight: 400;
     margin-top: 0;
     font-family: 'Tahoma';
+    text-decoration: none;
 }
 
 

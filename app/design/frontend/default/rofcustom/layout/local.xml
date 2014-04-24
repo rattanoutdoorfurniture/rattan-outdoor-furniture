@@ -23,15 +23,17 @@
     ============================================================================== -->
 	
 
-<action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
-<action method="addCss"><stylesheet>css/custom-style.css</stylesheet></action>
-<action method="addCss"><stylesheet>css/prettyPhoto.css</stylesheet></action>
-<action method="addCss"><stylesheet>css/magento.css</stylesheet></action>
-<action method="addCss"><stylesheet>css/jquery.bxslider.css</stylesheet></action>
-<action method="addCss"><stylesheet>css/iview.css</stylesheet></action>
-<action method="addCss"><stylesheet>css/skin/slider.css</stylesheet></action>
-<action method="addCss"><stylesheet>css/jquery-ui-1.8rc1.custom.css</stylesheet></action>
-<action method="addCss"><stylesheet>css/update.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/base.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/skeleton.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/layout.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/fonts.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/page-header.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/page-footer.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/category-slider.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/home.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/category.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/product.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/cart-checkout.css</stylesheet></action>
 
 
 
@@ -39,29 +41,24 @@
 	<!-- JS 
     ============================================================================== -->
 
-<action method="addItem"><type>skin_js</type><name>js/jquery-1.7.1.min.js</name><params/><if/></action>
-<action method="addItem"><type>skin_js</type><name>js/cssua.min.js</name><params/><if/></action>
-<action method="addItem"><type>skin_js</type><name>js/noconflict.js</name><params/><if/></action>
-<action method="addItem"><type>skin_js</type><name>js/modernizr.custom.js</name><params/><if/></action>
 
 
+<!--&lt;!&ndash;Price slider &ndash;&gt;-->
+<!--<action method="addItem"><type>skin_js</type><name>js/price-slider/jquery-ui-1.8rc1.custom.min.js</name><params/><if/></action>  -->
 
-<!--Price slider -->
-<action method="addItem"><type>skin_js</type><name>js/price-slider/jquery-ui-1.8rc1.custom.min.js</name><params/><if/></action>  
+<!--&lt;!&ndash;Bx Carousel &ndash;&gt;-->
+<!--<action method="addItem"><type>skin_js</type><name>js/jquery.bxslider.js</name><params/><if/></action>-->
 
-<!--Bx Carousel -->
-<action method="addItem"><type>skin_js</type><name>js/jquery.bxslider.js</name><params/><if/></action>
+<!--&lt;!&ndash;Mobile navigation &ndash;&gt;-->
+<!--<action method="addItem"><type>skin_js</type><name>js/jquery.dlmenu.js</name><params/><if/></action> -->
 
-<!--Mobile navigation -->
-<action method="addItem"><type>skin_js</type><name>js/jquery.dlmenu.js</name><params/><if/></action> 
+<!--&lt;!&ndash;Slider &ndash;&gt;-->
+<!--<action method="addItem"><type>skin_js</type><name>js/slider/raphael-min.js</name><params/><if/></action>-->
+<!--<action method="addItem"><type>skin_js</type><name>js/slider/jquery.easing.js</name><params/><if/></action>-->
+<!--<action method="addItem"><type>skin_js</type><name>js/slider/iview.js</name><params/><if/></action>-->
+<!--<action method="addItem"><type>skin_js</type><name>js/respond.src.js</name><params/><if/></action>-->
 
-<!--Slider -->
-<action method="addItem"><type>skin_js</type><name>js/slider/raphael-min.js</name><params/><if/></action>
-<action method="addItem"><type>skin_js</type><name>js/slider/jquery.easing.js</name><params/><if/></action>
-<action method="addItem"><type>skin_js</type><name>js/slider/iview.js</name><params/><if/></action>
-<action method="addItem"><type>skin_js</type><name>js/respond.src.js</name><params/><if/></action>
-
-<action method="addItem"><type>skin_js</type><name>js/scripts.js</name><params/><if/></action>
+<!--<action method="addItem"><type>skin_js</type><name>js/scripts.js</name><params/><if/></action>-->
 
 
 

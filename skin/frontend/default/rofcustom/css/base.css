@@ -56,8 +56,9 @@
 		color: #444;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
- }
+    }
 
+    .container > div:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
 
 /* #Typography
 ================================================== */

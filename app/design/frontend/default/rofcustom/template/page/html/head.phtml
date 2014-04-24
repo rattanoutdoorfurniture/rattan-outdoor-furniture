@@ -13,23 +13,6 @@
 ================================================== -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!-- CSS
-================================================== -->
-<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/base.css">
-<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/skeleton.css">
-<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/layout.css">
-<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/fonts.css">
-
-<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/page-header.css">
-<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/page-footer.css">
-<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/category-slider.css">
-
-<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/home.css">
-<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/category.css">
-<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/product.css">
-<link rel="stylesheet" href="skin/frontend/default/rofcustom/css/cart-checkout.css">
-
-
 <!-- Favicons
 ================================================== -->
 <link rel="shortcut icon" href="skin/frontend/default/rofcustom/images/favicon.ico">
@@ -40,16 +23,14 @@
 <link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
 <link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
 
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 <?php echo $this->getCssJsHtml() ?>
 <?php echo $this->getChildHtml() ?>
 <?php echo $this->helper('core/js')->getTranslatorScript() ?>
 <?php echo $this->getIncludes() ?>
 
-<!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 
 
 <script type="text/javascript">
