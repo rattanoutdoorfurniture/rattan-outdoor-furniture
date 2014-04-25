@@ -18,6 +18,11 @@ Global To Do:
 Change Log:
 ------------
 
+##2014-04-25##
+
+*Set Listing image dimensions in the magento backend. __DO NOT FORGET TO UPLOAD DATABASE LATER__!
+*Begin working on the product list (browse) page. Worry about 'selected' menu item later.
+
 ###2014-04-24###
 *TODO: Next to be done, to be started tomorrow morning) continue syling the sub-pages: focus on the browse (/products.html) and product (/products/chairs/*.html) pages.
 *Fixed 'About Us' menu issue, but need to fix the "selected" menu item code.

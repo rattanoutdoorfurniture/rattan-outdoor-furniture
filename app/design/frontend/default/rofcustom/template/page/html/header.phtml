@@ -27,8 +27,6 @@
     * @var Mage_Page_Block_Html_Header $this
     */
    ?>
-
-
 <header id="page-header">
     <div id="page-header-logo" class="five columns">
         <a id="link-logo-main" href="/" title="Rattan Outdoor Furniture">
@@ -41,43 +39,3 @@
         <?php echo $this->getChildHtml('topMenu') ?>
     </div>
 </header>
-
-<!----------------------------------------------------------------------->
-
-<!--<header class="third-bg" role="heading" id="header">-->
-<!--  <div class="header-content container_9"> <a href="--><?php //echo $this->getUrl('') ?><!--" title="--><?php //echo $this->getLogoAlt() ?><!--" class="logo"><img src="--><?php //echo $this->getLogoSrc() ?><!--" alt="--><?php //echo $this->getLogoAlt() ?><!--" /></a>-->
-<!--    <div class="logo-alt" style="visibility:hidden;">--><?php //echo $this->getLogoAlt() ?><!--</div>-->
-<!--    <div class="quick-access">-->
-<!--      <ul>-->
-<!--        <li> <a class="cart-btn first-bg" href="--><?php //echo $this->getUrl('') ?><!--/wishlist/index/index/"  rel="nofollow"> <i class="icon-exchange"></i> </a> </li>-->
-<!--        <li> <a class="cart-btn  first-bg"  href="--><?php //echo $this->getUrl('checkout/cart')?><!--"> <i class="icon-shopping-cart"></i></a> -->
-<!--        -->
-<!--        <span> --><?php //echo Mage::getModel('checkout/cart')->getItemsCount() ?>
-<!--         --><?php //echo $this->__('item') ?><!----><?php //if(Mage::getModel('checkout/cart')->getItemsCount()>1){echo's';}?>
-<!--          - --><?php //echo $this->helper('checkout')->formatPrice(Mage::getModel('checkout/cart')->getQuote()->getSubtotal())?><!--</span>-->
-<!--          -->
-<!--          -->
-<!--          <ul class="cart-items clearfix">-->
-<!--            --><?php //foreach(Mage::getModel('checkout/cart')->getItems() as $_item):	$_product = Mage::getModel('catalog/product')->load($_item->getProductId());?>
-<!--            <li class="item">-->
-<!--              <div class="item-thumbnail"> <a href="--><?php //echo $_product->getProductUrl()?><!--"> <img src="--><?php //echo $this->helper('catalog/image')->init($_product,"image")->resize(189)?><!--" alt="--><?php //echo $this->getLogoAlt() ?><!--" /></a> </div>-->
-<!--              <div class="info-item-cart"> <a href="--><?php //echo $_product->getProductUrl()?><!--" class="item-name">--><?php //echo $_product->getName()?><!--</a> --><?php //echo $this->helper('checkout')->formatPrice($_product->getPrice())?><!-- </div>-->
-<!--            </li>-->
-<!--            --><?php //endforeach?>
-<!--            <li class="footer-cart-items">-->
-<!--              <div class="footer-totals"> <span> --><?php //echo $this->__('Total') ?><!-- :</span> --><?php //echo $this->helper('checkout')->formatPrice(Mage::getModel('checkout/cart')->getQuote()->getSubtotal())?><!--</div>-->
-<!--              <div class="footer-checkout">-->
-<!--                <button  onclick="setLocation('--><?php //echo $this->getUrl('checkout/cart')?><!--')"  class="btn-icon btn btn-cart">--><?php //echo $this->__('View Shopping Cart') ?><!--</button>-->
-<!--              </div>-->
-<!--            </li>-->
-<!--          </ul>-->
-<!--        </li>-->
-<!--      </ul>-->
-<!--    </div>-->
-<!--    --><?php //echo $this->getChildHtml('topSearch') ?><!-- </div>-->
-<!--</header>-->
-<?php //echo $this->getChildHtml('topMenu') ?>
-
-<?php if (Mage::app()->getRequest()->getRequestString() == "/"): ?>
-<?php /*echo $this->getLayout()->createBlock('interaktingslider/interaktingslider')->toHtml()*/ ?>
-<?php endif ?>

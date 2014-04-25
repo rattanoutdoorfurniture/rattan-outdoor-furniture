@@ -90,6 +90,7 @@
     content: "|";
 }
 
+.text-filters-option:last-child:after,
 .text-filters-option.last:after {
     content: "";
 }
