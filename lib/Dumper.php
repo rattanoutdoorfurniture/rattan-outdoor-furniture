@@ -33,6 +33,94 @@ class Dumper
     private static $_objects;
     private static $_output;
     private static $_depth;
+    public  static $_auto = <<<DUMP
+<script type="text/javascript">
+var jq_inj = document.createElement('script');
+jq_inj.onload = function () {
+jQuery.noConflict();
+(function ($) {
+jQuery("#dumper_dump").appendTo("body").css({
+'position':'fixed',
+'top':'0px',
+'left':'0px',
+'width':'100%',
+'height':'100%',
+'white-space':'pre',
+'z-index':'99999999',
+'margin':'0 auto',
+'padding':'10px 0px',
+'background':'#FFF',
+'overflow':'auto'
+}).wrapInner(
+jQuery('<pre id="dumper_dump_inner"/>').css({
+'width':'50%',
+'margin':'20px 35%'
+})
+);
+jQuery('<div id="dumper_dump_close"/>').on('click',function(e) {
+jQuery("body").css("overflow","auto");
+jQuery("#dumper_dump_reopen").fadeIn("fast");
+jQuery("#dumper_dump").slideUp("fast");
+}).css({
+'position':'fixed',
+'top':'10px',
+'right':'30px',
+'width':'23px',
+'height':'23px',
+'background-color':'rgb(0, 0, 0)',
+'color':'rgb(255, 255, 255)',
+'font-style':'normal',
+'font-variant':'normal',
+'font-weight':'normal',
+'font-size':'20px',
+'line-height':'20px',
+'font-family':'Verdana',
+'vertical-align':'middle',
+'text-align':'center',
+'font-weight':'bold',
+'border-radius':'100%',
+'cursor':'pointer'
+}).html('&#215;').appendTo("#dumper_dump");
+
+jQuery('<div id="dumper_dump_reopen"/>').on('click',function(e) {
+jQuery("body").css("overflow","hidden");
+jQuery("#dumper_dump_reopen").fadeOut("fast");
+jQuery("#dumper_dump").slideDown("fast");
+}).css({
+'position':'fixed',
+'top':'10px',
+'right':'30px',
+'width':'23px',
+'height':'23px',
+'background-color':'rgb(0, 0, 0)',
+'color':'rgb(255, 255, 255)',
+'font-style':'normal',
+'font-variant':'normal',
+'font-weight':'normal',
+'font-size':'20px',
+'line-height':'20px',
+'font-family':'Verdana',
+'vertical-align':'middle',
+'text-align':'center',
+'font-weight':'bold',
+'border-radius':'100%',
+'cursor':'pointer'
+}).html('&#x25BC;').appendTo("body");
+
+jQuery("body").css("overflow","hidden");
+jQuery("#dumper_dump_reopen").fadeOut("fast");
+jQuery("#dumper_dump").slideDown("fast");
+})(jQuery);
+};
+if (typeof(jQuery) === typeof(undefined_var)) {
+jq_inj.setAttribute("src", "http://code.jquery.com/jquery-2.1.0.min.js");
+var jq_body = document.getElementsByTagName("body")[0];
+jq_body.appendChild(jq_inj);
+} else {
+jQuery(jq_inj).trigger("load");
+}
+</script>
+DUMP;
 
     /**
      * Converts a variable into a string representation.
@@ -55,6 +143,20 @@ class Dumper
         }
         else
             return self::$_output;
+    }
+
+    public static function auto($var) {
+        $args = func_get_args();
+        $retval = '<div id="dumper_dump">';
+        if(func_num_args()==1) {
+            $retval.= self::dump($var);
+        } else {
+            foreach($args as $arg) {
+                $retval.=self::dump($arg)."\n\n";
+            }
+        }
+        $retval.= '</div>' . self::$_auto;
+        return $retval;
     }
 
     private static function dumpInternal($var,$level)

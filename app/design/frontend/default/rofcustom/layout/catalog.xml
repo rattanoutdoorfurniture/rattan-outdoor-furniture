@@ -62,7 +62,7 @@ Default layout, loads most of the pages
         <reference name="footer_links">
             <action method="addLink" translate="label title" module="catalog" ifconfig="catalog/seo/site_map"><label>Site Map</label><url helper="catalog/map/getCategoryUrl" /><title>Site Map</title></action>
         </reference>
-        <block type="catalog/product_price_template" name="catalog_product_price_template" />
+        <!--<block type="catalog/product_price_template" name="catalog_product_price_template" />-->
     </default>
 
 
@@ -254,6 +254,7 @@ Product view
                 </block>
                 <action method="unsetCallChild"><child>container1</child><call>ifEquals</call><if>0</if><key>alias_in_layout</key><key>options_container</key></action>
                 <action method="unsetCallChild"><child>container2</child><call>ifEquals</call><if>0</if><key>alias_in_layout</key><key>options_container</key></action>
+                <block type="catalog/product_list_related" name="catalog.product.related" before="-" template="catalog/product/list/related.phtml"/>
             </block>
         </reference>
         <reference name="right">

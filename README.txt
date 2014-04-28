@@ -13,13 +13,21 @@ Global To Do:
 *Add functionality to footer newsletter form
 *Decide Product Categories and create pages/categories
 *Fix "Selected" main menu style
+*Create Category Pages (As they are noted on the design)
 
 
 Change Log:
 ------------
 
-##2014-04-25##
+###2014-04-28###
+*Setup all the site category pages, and lineage for flat url and logical url progression (The canonical link thing we talked about before.)
+*Continue (move on past related products bug) with the product page. Add new markup, and begin styling.
+*Working on a bug with the related products on the product page. This may be something that will solve itself when there are more products to be related to, but for now, change the logic in the "RelatedCategory" module (Related.php). For now just leave this with the fix added here. (@see: \Magebuzz_Relatedcategory_Block_Catalog_Product_List_Related::_prepareData )
+*Work on category/product page lineage. "products" root category with url "../products" and sub-categories like "loungers" shouuld be "../products/loungers", and the individual product page would have a url something like "../products/loungers/brighton-sling-chaise-lounge"
+*Finish working on the Browse (Category) page. Remove the ".html" from the link (Do this in the Admin interface / database update) Admin>System>Configuration>Catalog>Catalog>SEO>(Product & Category URL Suffix). This will require a flush of the cache.
 
+###2014-04-25###
+*List Products in browse. Get category logic fixed. Work on Category/Product view.
 *Set Listing image dimensions in the magento backend. __DO NOT FORGET TO UPLOAD DATABASE LATER__!
 *Begin working on the product list (browse) page. Worry about 'selected' menu item later.
 

@@ -13,7 +13,7 @@ class Magebuzz_Relatedcategory_Model_Relatedcategory extends Mage_Core_Model_Abs
     $select = $connection->select()
     ->from($tableName, array('*')) 
     ->where('product_id in('.$productList.')')
-    ->group('category_id');  
+    ->group('category_id');
     $categorySelect = $connection->fetchAll($select); 
     foreach($categorySelect as $category){
       $categoryIds[] = $category['category_id'];

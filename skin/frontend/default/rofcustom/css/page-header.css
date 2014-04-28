@@ -152,6 +152,22 @@ nav a {
     font-family: 'FuturaStd-Medium';
 }
 
+.nav-main-item.parent {
+    position: relative;
+}
+
+.nav-main-item.parent ul {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 36px;
+    width: 100%;
+    margin: 0;
+    padding: 10px 10px 10px 15px;
+    background: #e6e6e6 url('../images/nav-main-unselected.png') left bottom repeat-x;
+    background-size: auto 100%;
+}
+
 #glob-search-form {
     display: inline-block;
     padding: 6px 0;
