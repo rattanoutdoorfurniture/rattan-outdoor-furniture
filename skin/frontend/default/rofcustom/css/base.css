@@ -266,5 +266,19 @@
 	.remove-bottom { margin-bottom: 0 !important; }
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
+    .hashborder {
+        min-height: 40px;
+        position: relative;
+        background: transparent url('../images/hash-border.png') 0 0 repeat;
+        height: auto;
+    }
+    .hashborder-border {
+        width: 100%;
+        height: 10px !important;
+        display: block;
+    }
+    .hashborder-border._05 {
+        height: 5px !important;
+    }
 
 

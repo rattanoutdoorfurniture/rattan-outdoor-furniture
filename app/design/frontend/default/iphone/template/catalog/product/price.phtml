@@ -57,7 +57,7 @@ $_minimalPrice = $_taxHelper->getPrice($_product, $_minimalPriceValue, $_simpleP
     <?php $_weeeTaxAmountInclTaxes = $_weeeHelper->getAmountInclTaxes($_weeeTaxAttributes); ?>
     <?php endif; ?>
 
-<div class="price-box">
+<div class="price-box category-product-price">
     <?php $_price = $_taxHelper->getPrice($_product, $_product->getPrice()) ?>
     <?php $_regularPrice = $_taxHelper->getPrice($_product, $_product->getPrice(), $_simplePricesTax) ?>
     <?php $_finalPrice = $_taxHelper->getPrice($_product, $_product->getFinalPrice()) ?>
@@ -389,7 +389,7 @@ $_minimalPrice = $_taxHelper->getPrice($_product, $_minimalPriceValue, $_simpleP
     $_inclTax = $_taxHelper->getPrice($_product, $_minimalPriceValue, true);
     ?>
 <?php if ($this->getDisplayMinimalPrice() && $_minimalPriceValue): ?>
-    <div class="price-box">
+    <div class="price-box category-product-price">
         <p class="minimal-price">
             <span class="price-label"><?php echo $this->__('Starting at:') ?></span>
             <?php if ($_taxHelper->displayBothPrices()): ?>

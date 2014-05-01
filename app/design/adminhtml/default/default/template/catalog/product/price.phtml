@@ -62,7 +62,7 @@ $_inclTax = $_taxHelper->getPrice($_product, $_minimalPriceValue, $includingTax 
     <?php $_weeeTaxAttributes = $_weeeHelper->getProductWeeeAttributesForRenderer($_product, null, null, $_website); ?>
 <?php endif; ?>
 
-<div class="price-box">
+<div class="price-box category-product-price">
 <?php $_price = $_taxHelper->getPrice($_product, $_product->getPrice()) ?>
 <?php $_regularPrice = $_taxHelper->getPrice($_product, $_product->getPrice(), $_simplePricesTax) ?>
 <?php $_finalPrice = $_taxHelper->getPrice($_product, $_product->getFinalPrice()) ?>

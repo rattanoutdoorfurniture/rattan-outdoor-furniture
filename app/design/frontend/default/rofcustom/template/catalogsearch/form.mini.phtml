@@ -39,7 +39,12 @@ $catalogSearchHelper =  $this->helper('catalogsearch');
 
 
 <form id="glob-search-form" class="moblie-hide" action="<?php echo $catalogSearchHelper->getResultUrl() ?>" method="get">
-    <input type="search" id="glob-search-input" placeholder="Search" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>" maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>" />
+    <input type="search" id="glob-search-input" placeholder="Search"
+           name="<?php echo $catalogSearchHelper->getQueryParamName() ?>"
+           value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>"
+           maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>"
+           form="glob-search-form"
+           autocomplete="on" />
     <input type="submit" id="glob-search-submit" value="Search"/>
     <div id="search_autocomplete" class="search-autocomplete"></div>
 </form>

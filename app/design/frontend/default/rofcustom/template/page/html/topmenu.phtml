@@ -46,46 +46,13 @@
 <?php $_menu = $this->getHtml('nav-main-item') ?>
 <?php if($_menu): ?>
 
-
-<!--<div id="dl-menu" class="dl-menuwrapper"  style="display:none;">-->
-<!---->
-<!--      <button class="dl-trigger">--><?php //echo $this->__('Open Menu') ?><!--</button>-->
-<!--       <ul class="dl-menu">-->
-<!--        <li> --><?php //echo $_menu ?><!-- </li>-->
-<!--           -->
-<!--    -->
-<!--    --><?php // if ($helper->isEnabled()): ?><!--<li class="last parent blog-link"><a class="level-top" href="--><?php //echo $this->getUrl('').$route ?><!--"> --><?php //echo $route ?><!--</a></li> -->
-<!--   --><?php //endif ?>
-<!--        </ul>-->
-<!--       -->
-<!--    </div>-->
-    
-    
-<!--<div class="sf-contener clearfix second-bg ">-->
-<!---->
-<!---->
-<!--  <nav class="nav-wrap container_9">-->
-<!---->
-<!--    <ul class="sf-menu  ">-->
-<!--      --><?php //echo $_menu ?>
-<!--        </li>-->
-<!--    --><?php // if ($helper->isEnabled()): ?><!--<li class="last parent blog-link"><a class="level-top" href="--><?php //echo $this->getUrl('').$route ?><!--"> --><?php //echo $route ?><!--</a></li>-->
-<!--   --><?php //endif ?>
-<!---->
-<!--     </ul>-->
-<!---->
-<!---->
-<!---->
-<!--  </nav>-->
-<!--</div>-->
-
 <nav id="nav-main" class="nav-main">
     <ul id="nav-main-list" class="nav-main-list">
         <li class="nav-main-item last search">
             <?php echo $this->getChildHtml("topSearch"); ?>
         </li>
         <li class="nav-main-item first<?php echo (Mage::app()->getRequest()->getRequestString() == "/") ? ' selected':''; ?>">
-            <a href="/" title="Rattan Outdoor Furniture">Home</a>
+            <a href="/" title="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"><?php echo $this->__("Home"); ?></a>
         </li>
         <?php echo $_menu; ?>
         <?php if($helper->isEnabled()): ?>

@@ -69,7 +69,7 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
         <?php $_weeeTaxAmount = $_store->roundPrice($_store->convertPrice($_weeeTaxAmount)); ?>
         <?php $_weeeTaxAmountInclTaxes = $_store->roundPrice($_store->convertPrice($_weeeTaxAmountInclTaxes)); ?>
 
-        <div class="price-box">
+        <div class="price-box category-product-price">
         <?php $_convertedPrice = $_store->roundPrice($_store->convertPrice($_product->getPrice())); ?>
         <?php $_price = $_taxHelper->getPrice($_product, $_convertedPrice); ?>
         <?php $_regularPrice = $_taxHelper->getPrice($_product, $_convertedPrice, $_simplePricesTax); ?>
@@ -416,7 +416,7 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
         $_inclTax = $this->helper('tax')->getPrice($_product, $_minimalPriceValue, $includingTax = true);
         ?>
         <?php if ($this->getDisplayMinimalPrice() && $_minimalPriceValue): ?>
-            <div class="price-box">
+            <div class="price-box category-product-price">
                 <p class="minimal-price">
                     <span class="price-label"><?php echo $this->__('Starting at:') ?></span>
                     <?php if ($this->helper('tax')->displayBothPrices()): ?>

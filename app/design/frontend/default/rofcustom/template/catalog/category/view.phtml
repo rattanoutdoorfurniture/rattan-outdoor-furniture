@@ -39,6 +39,8 @@
         $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->htmlEscape($_category->getName()).'" title="'.$this->htmlEscape($_category->getName()).'" /></p>';
         $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
     }
+    $_title     = $_helper->categoryAttribute($_category, $_category->getMetaTitle(), "meta_title");
+    $_title     = strlen($_title) ? $this->htmlEscape($_title) : $this->htmlEscape($_helper->categoryAttribute($_category, $_category->getName(), 'name'));
 ?>
 <?php /*?><div class="page-title category-title">
     <?php if($this->IsRssCatalogEnable() && $this->IsTopCategory()): ?>
@@ -47,19 +49,27 @@
     <h1><?php echo $_helper->categoryAttribute($_category, $_category->getName(), 'name') ?></h1>
 </div><?php */?>
 
+
+
+<!-- Category Banner ---------------------------------------------------------------------------------->
+
+<div id="category-banner" class="sixteen columns">
+    <img id="category-banner-img" src="<?php echo $_imgUrl; ?>" alt="<?php echo $this->htmlEscape($_category->getPageTitle()); ?>" />
+    <aside id="category-banner-blurb">
+        <h2 id="category-banner-blurb-title"><?php echo $_title; ?></h2>
+        <div id="category-banner-blurb-sub" class="clearfix">
+            <span id="category-banner-blurb-text"><?php echo $_helper->categoryAttribute($_category, $this->getCurrentCategory()->getDescription(), 'description') ?></span>
+            <button id="category-banner-blurb-btn">Buy Now</button>
+        </div>
+    </aside>
+</div>
+<!----------------------------------------------------------------------------------------------------->
+
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
 
-<?php if($_imgUrl): ?>
-<div class="category-images">
-    <?php echo $_imgHtml ?>
-    </div>
-<?php endif; ?>
-
-<?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
-    <div class="category-description std">
-        <?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
-    </div>
-    <?php endif; ?>
+<!-- Category Slider ---------------------------------------------------------------------------------->
+<?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('category-slider')->toHtml(); ?>
+<!----------------------------------------------------------------------------------------------------->
 
 <?php if($this->isContentMode()): ?>
     <?php echo $this->getCmsBlockHtml() ?>
@@ -72,3 +82,7 @@
 <?php else: ?>
     <?php echo $this->getProductListHtml() ?>
 <?php endif; ?>
+
+<!-- Related Products --------------------------------------------------------------------------------->
+<?php echo $this->getChildHtml('upsell'); ?>
+<!----------------------------------------------------------------------------------------------------->
