@@ -14,10 +14,35 @@ Global To Do:
 *Decide Product Categories and create pages/categories
 *Fix "Selected" main menu style
 *Create Category Pages (As they are noted on the design)
+*[FIXED] Finalize and Normalize canonicalization of category / product links (also fixed canonical link (html element), which is readable by google, so the lineage of the site should be good now. (SEO Win)
+*Product reviews (just remove the reviews section for now.)
+*Color swatches on Product page. for now just assign a name for each fake color, and pass that along.
+*Add color options to the Product in the Magento Backend. This way we can remove a color if it's out of stock. (begin working on this now)
 
 
 Change Log:
 ------------
+
+###2014-05-01###
+*Make it so you can add the product to the cart. The cart is still unstyled, but the products do add.
+*Begin working on color options handled by magento.
+*Fixes in the Product details section. Fix quantity to reflect inventory. fix price section. format price as currency.
+*Fix the link to the product from the "Newest Products" page. Fixed that canonical / flat url problem with the url.
+*Add a notice in the reviews box saying this feature is not available yet. (not a priority for launch). I added a bookmark link, so people can come back to the reviews section.
+*Focus on the Product Detials tab box. Make this load the description and add a static block (same for every product) for the FAQ and Special. I think I will remove reviews for now. not needed at launch. add feature in later.
+*Take a few minutes to talk to Lesley about a 1br house for rent. Schedule an appointment for later tonight? Also, reply to email regarding unlocked property. I would like to view these 2 tonight. Back into the product page now though.
+*To remove Customer Product Tags: "To remove the product tags module (ie. not use product tags?  Admin->system->advanced-> Mage_Tag Disable"
+*Take out the trash. And then back into the product page. Remove Customer Product Tagging. This is not a feature we need, at least especially not now. So i will disable it in the admin (require db update).
+*I'm feeling pretty good with the product images for now. They pop-up and you can cycle thru them. and "Save Image As..." on right click works (we can make it not, if you'd like).
+*Start at 8. Jump right into working on that product page more.
+
+###2014-04-30###
+*Some small amount of work done towards the product page. Continue this tomorrow.
+*Spent most of the day working on finding a location to live at closer to work.
+
+###2014-04-29###
+*Continue working on the category / product linking, for now. once I have this to the point where it leads to no dead links, I will move on to styling the product page. I will come back to finalizing the canonicalization of the category/product links.
+*Internet down this morning. Continuing with the category/product issues. I'm going to attempt to mostly just move ahead to the product page.
 
 ###2014-04-28###
 *Setup all the site category pages, and lineage for flat url and logical url progression (The canonical link thing we talked about before.)

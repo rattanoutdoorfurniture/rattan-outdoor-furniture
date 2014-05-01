@@ -188,6 +188,17 @@ nav a {
     background: white url('../images/glob-search-bg.png') 7px center no-repeat;
     font-family: 'FuturaStd-MediumOblique';
     color: #888;
+    position:relative;
+}
+
+#glob-search-input::-webkit-search-cancel-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: #555;
+    text-align: center;
+    cursor: pointer;
 }
 
 #glob-search-submit {

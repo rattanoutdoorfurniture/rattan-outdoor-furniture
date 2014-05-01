@@ -24,9 +24,15 @@
   <?php if($this->getMode()!='grid'): ?>
   <?php $_iterator = 0; ?>
     <?php foreach ($_productCollection as $_product): ?>
+    <?php
+          $proCats = $_product->getCategoryIds();
+          $pc = end($proCats);
+          $category = Mage::getModel('catalog/category')->load($pc);
+          $url = $this->getUrl($category->getUrlPath()).basename($_product->getProductUrl());
+    ?>
     <section class="category-product four columns<?php if( ++$_iterator == sizeof($_productCollection) ): ?> last<?php endif; ?>">
         <?php $_productNameStripped = $this->stripTags($_product->getName(), null, true); ?>
-        <a id="category-product-inner-<?php echo $_product->getId()?>" href="<?php echo $_product->getProductUrl() ?>" class="category-product-inner clearfix"  title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>">
+        <a id="category-product-inner-<?php echo $_product->getId()?>" href="<?php echo $url ?>" class="category-product-inner clearfix"  title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>">
             <img class="category-product-img" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($imageWidth,$imageHeight); ?>" alt="The Willis Wheat Collection - 5pc. Power Reclining Sectional" width="<?php echo $imageWidth;?>"<!-- 200 --> height="<?php echo $imageHeight; ?>"<!-- 142 --> />
             <div class="category-product-img-underline"></div>
             <section class="category-product-collection" title="<?php echo $_productNameStripped; ?>">
@@ -60,7 +66,13 @@
         <?php if(false&&$isNew):?>
             <div class="ribbon new first-bg"><?php echo $this->__('new') ?></div>
         <?php endif;?>
-        <a id="category-product-inner-<?php echo $_product->getId()?>" href="<?php echo $_product->getProductUrl() ?>" class="category-product-inner clearfix"  title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>">
+        <?php
+        $proCats = $_product->getCategoryIds();
+        $pc = end($proCats);
+        $category = Mage::getModel('catalog/category')->load($pc);
+        $url = $this->getUrl($category->getUrlPath()).basename($_product->getProductUrl());
+        ?>
+        <a data-position="<?php echo $_product->getPosition(); ?>" id="category-product-inner-<?php echo $_product->getId()?>" href="<?php echo $url; ?>" class="category-product-inner clearfix"  title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>">
             <img class="category-product-img" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($imageWidth,$imageHeight); ?>" alt="The Willis Wheat Collection - 5pc. Power Reclining Sectional" width="<?php echo $imageWidth;?>" height="<?php echo $imageHeight; ?>" /><!-- 200x142 -->
             <div class="category-product-img-underline"></div>
             <section class="category-product-collection" title="<?php echo $_productNameStripped; ?>">

@@ -152,7 +152,7 @@ DUMP;
             $retval.= self::dump($var);
         } else {
             foreach($args as $arg) {
-                $retval.=self::dump($arg)."\n\n";
+                $retval.=self::dump($arg).PHP_EOL.PHP_EOL;
             }
         }
         $retval.= '</div>' . self::$_auto;
