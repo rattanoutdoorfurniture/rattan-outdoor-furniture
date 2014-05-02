@@ -17,11 +17,20 @@ Global To Do:
 *[FIXED] Finalize and Normalize canonicalization of category / product links (also fixed canonical link (html element), which is readable by google, so the lineage of the site should be good now. (SEO Win)
 *Product reviews (just remove the reviews section for now.)
 *Color swatches on Product page. for now just assign a name for each fake color, and pass that along.
-*Add color options to the Product in the Magento Backend. This way we can remove a color if it's out of stock. (begin working on this now)
+*[FIXED]Add color options to the Product in the Magento Backend. This way we can remove a color if it's out of stock. (begin working on this now)
 
 
 Change Log:
 ------------
+
+###2014-05-02###
+
+*Instead of moving past the colors, after talking to Larry, I thought this needed to just be fixed so i can move on to the cart. Fixed add to cart. Set and send color and quantity to cart. Working now on re-styling the quantity (now managed by magento too).
+*Pulling in color options broke the Add-to-Cart functionality. This should be fixed. Needs to be styled on "container2" for add-to-buttons.
+*Got the color options to pull into the product page. Now I'm about to make sure it gets passed to the cart, along with quantity.
+*Continue on the product to cart process. Make sure color option and product gets added correctly and start styling the cart and checkout.
+*Stop progress on the color swatches. Move this to a later date. Not a priority. we can manage it manually for now. Come back to this. Already added to the TODO.
+*Get right back into the colors swatches custom product attribute. So we can manage the cushion color options from the magento admin.
 
 ###2014-05-01###
 *Make it so you can add the product to the cart. The cart is still unstyled, but the products do add.

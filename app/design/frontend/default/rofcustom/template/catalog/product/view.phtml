@@ -64,93 +64,29 @@
  * New Product Markup Section
  */
 ?>
+<?php
+/**
+ * @see Mage_Catalog_Model_Product_Option
+ */
+//    $colorSwatchOptions = $_helper->productAttribute($_product, $_product->getOptions(), 'color');
+//    $colorSwatch = current($colorSwatchOptions);
+//    $colorSwatches = $colorSwatch->getValues();
+    $swatches = array();
+//    foreach($colorSwatches as $swatch) {
+//        $swatches[] = $swatch->getData();
+//    }
+?>
+<form class="clearfix" action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
 
-<?php /*
-$values = array();
-foreach ($_product->getOptions() as $o) {
-    $p = $o->getValues();
-    foreach($p as $v) {
-        / **
-         * @see Mage_Catalog_Model_Product_Option_Value
-         * /
-        echo '<div class="sometext" style="white-space: pre;">'.PHP_EOL;
-        echo dumper::dump($v->getOption()).PHP_EOL;
-        echo '</div>'.PHP_EOL;
-//        $values[$v->getId()]['option_type_id']= $v->getId();
-//        $values[$v->getId()]['title']= 'test';
-//        $values[$v->getId()]['price']= 23;
-//        $values[$v->getId()]['price_type']= 'fixed';
-//        $values[$v->getId()]['sku']= $value1;
-    }
-//    $v->setValues($values);
-//    $v->saveValues();
-}
-//$product->save();
-*/ ?>
-<div class="sometext" style="white-space: pre;">
-    <?php
-    // specify the select or multiselect attribute code
-    $attributeCode = 'color-swatch';
+<?php echo $this->getBlockHtml('formkey') ?>
 
-    // build and filter the product collection
-    $products = Mage::getResourceModel('catalog/product_collection')
-        ->addAttributeToFilter($attributeCode, array('notnull' => true))
-        ->addAttributeToFilter($attributeCode, array('neq' => ''))
-        ->addAttributeToSelect($attributeCode);
-
-    $usedAttributeValues = array_unique($products->getColumnValues($attributeCode));
-
-    // ---- this is the different part compared to the previous example ----
-
-    // fetch the attribute model
-    $attributeModel = Mage::getSingleton('eav/config')
-        ->getAttribute('catalog_product', $attributeCode);
-
-    // map the option id's to option labels
-    $usedAttributeValues = $attributeModel->getSource()->getOptionText(
-        implode(',', $usedAttributeValues)
-    );
-
-    // $usedAttributeValues now contains an array of used values in human readable format
-        $attributes = Mage::getResourceModel('eav/entity_attribute_collection')
-            ->setEntityTypeFilter($_product->getResource()->getTypeId())
-            ->addFieldToFilter('attribute_code', 'color-swatch') // This can be changed to any attribute code
-            ->load(false);
-
-        $attribute = $attributes->getFirstItem()->setEntity($_product->getResource());
-
-        /* @var $attribute Mage_Eav_Model_Entity_Attribute */
-        $swatches = array();
-        $colors = $attribute->getSource()->getAllOptions(false);
-        foreach ($colors as $swatch) {
-            $swatches[$swatch['value']] = $swatch['label'];
-        }
-        //echo dumper::auto($attribute);
-    ?>
-</div>
-<form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
 <div class="no-display">
     <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
     <input type="hidden" name="related_product" id="related-products-field" value="" />
 </div>
 
 <?php echo $this->getChildHtml('media') ?>
-<!--<section id="product-imgs" class="seven columns">-->
-<!--    <section id="product-img-main">-->
-<!--        <img id="product-img-main-img" src="skin/frontend/default/rofcustom/images/product_01_full.jpg" alt="Some Alt Text" />-->
-<!--    </section>-->
-<!--    <section id="product-img-views" class="clearfix">-->
-<!--        <section class="product-img-view first">-->
-<!--            <img class="product-img-view-thumb" src="/skin/frontend/default/rofcustom/images/product_02_thumb.jpg" alt="Product Image 1" />-->
-<!--        </section>-->
-<!--        <section class="product-img-view current">-->
-<!--            <img class="product-img-view-thumb" src="/skin/frontend/default/rofcustom/images/product_01_thumb.jpg" alt="Product Image 2" />-->
-<!--        </section>-->
-<!--        <section class="product-img-view last">-->
-<!--            <img class="product-img-view-thumb" src="/skin/frontend/default/rofcustom/images/product_03_thumb.jpg" alt="Product Image 3" />-->
-<!--        </section>-->
-<!--    </section>-->
-<!--</section>-->
+
 <section id="product-details" class="nine columns">
 
     <!-- Product Title ----------------------------------------------------------------->
@@ -197,18 +133,23 @@ foreach ($_product->getOptions() as $o) {
 
     <div id="product-details-options" class="clearfix">
         <section id="product-details-options-color" class="product-details-options-section">
-            <input id="product-details-options-color-value" type="hidden" name="product[swatch]" value="peach" />
+<!--            <input id="product-details-options-color-value" type="hidden" name="color_swatch" value="peach" />-->
             <span id="product-details-options-color-label" class="product-details-options-label">Choose Color:</span>
             <span id="product-details-options-color-swatches">
-                <aside class="product-details-options-color-swatch selected" data-color="peach">
-                    <div class="product-details-options-color-swatch-color" style="background-color: #ddccb8;" onclick="var sel=document.querySelectorAll('.product-details-options-color-swatch.selected');sel.length?sel[0].classList.remove('selected'):'';this.parentElement.classList.add('selected');document.getElementById('product-details-options-color-value').value=this.parentElement.getAttribute('data-color');"></div>
-                </aside>
-                <aside class="product-details-options-color-swatch" data-color="pink">
-                    <div class="product-details-options-color-swatch-color" style="background-color: #dd95bc;" onclick="var sel=document.querySelectorAll('.product-details-options-color-swatch.selected');sel.length?sel[0].classList.remove('selected'):'';this.parentElement.classList.add('selected');document.getElementById('product-details-options-color-value').value=this.parentElement.getAttribute('data-color');"></div>
-                </aside>
-                <aside class="product-details-options-color-swatch" data-color="blue">
-                    <div class="product-details-options-color-swatch-color" style="background-color: #56b2dd;" onclick="var sel=document.querySelectorAll('.product-details-options-color-swatch.selected');sel.length?sel[0].classList.remove('selected'):'';this.parentElement.classList.add('selected');document.getElementById('product-details-options-color-value').value=this.parentElement.getAttribute('data-color');"></div>
-                </aside>
+                <?php foreach($swatches as $swatch): ?>
+                    <aside class="product-details-options-color-swatch<?php echo $swatch==$swatches[0] ? ' selected':''; ?>" data-color="<?php echo $swatch['title']; ?>">
+                        <div class="product-details-options-color-swatch-color" style="background-color: <?php echo $swatch['sku']; ?>;" onclick="var sel=document.querySelectorAll('.product-details-options-color-swatch.selected');sel.length?sel[0].classList.remove('selected'):'';this.parentElement.classList.add('selected');document.getElementById('product-details-options-color-value').value=this.parentElement.getAttribute('data-color');"></div>
+                    </aside>
+                <?php endforeach; ?>
+<!--                <aside class="product-details-options-color-swatch selected" data-color="peach">-->
+<!--                    <div class="product-details-options-color-swatch-color" style="background-color: #ddccb8;" onclick="var sel=document.querySelectorAll('.product-details-options-color-swatch.selected');sel.length?sel[0].classList.remove('selected'):'';this.parentElement.classList.add('selected');document.getElementById('product-details-options-color-value').value=this.parentElement.getAttribute('data-color');"></div>-->
+<!--                </aside>-->
+<!--                <aside class="product-details-options-color-swatch" data-color="pink">-->
+<!--                    <div class="product-details-options-color-swatch-color" style="background-color: #dd95bc;" onclick="var sel=document.querySelectorAll('.product-details-options-color-swatch.selected');sel.length?sel[0].classList.remove('selected'):'';this.parentElement.classList.add('selected');document.getElementById('product-details-options-color-value').value=this.parentElement.getAttribute('data-color');"></div>-->
+<!--                </aside>-->
+<!--                <aside class="product-details-options-color-swatch" data-color="blue">-->
+<!--                    <div class="product-details-options-color-swatch-color" style="background-color: #56b2dd;" onclick="var sel=document.querySelectorAll('.product-details-options-color-swatch.selected');sel.length?sel[0].classList.remove('selected'):'';this.parentElement.classList.add('selected');document.getElementById('product-details-options-color-value').value=this.parentElement.getAttribute('data-color');"></div>-->
+<!--                </aside>-->
             </span>
         </section>
         <section id="product-details-options-qty" class="product-details-options-section">
@@ -216,7 +157,7 @@ foreach ($_product->getOptions() as $o) {
             <aside id="product-details-options-qty-selector">
                 <?php $qtyMax = floor(Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getQty()); ?>
                 <?php $qtyPad = strlen($qtyMax); ?>
-                <select id="product-details-options-qty-select">
+                <select id="product-details-options-qty-select" name="qty">
                     <?php for($i=1;$i<=$qtyMax;$i++):?>
                         <option class="product-details-options-qty-select-opt" value="<?php echo $i; ?>"><?php echo sprintf("%0".$qtyPad."s",$i); ?></option>
                     <?php endfor; ?>
@@ -225,8 +166,30 @@ foreach ($_product->getOptions() as $o) {
         </section>
     </div>
 
+    <div id="product-details-options" class="clearfix">
+    <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+        <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+    <?php endif;?>
+    </div>
+
     <!-- Call to Action buttons ---------------------------------------------------------->
 
+    <?php if (!$this->hasOptions()):?>
+        <div class="add-to-box">
+            <?php if($_product->isSaleable()): ?>
+                <?php echo $this->getChildHtml('addtocart') ?>
+                <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                    <span class="or"><?php echo $this->__('OR') ?></span>
+                <?php endif; ?>
+            <?php endif; ?>
+            <?php echo $this->getChildHtml('addto') ?>
+        </div>
+        <?php echo $this->getChildHtml('extra_buttons') ?>
+    <?php elseif (!$_product->isSaleable()): ?>
+        <div class="add-to-box">
+            <?php echo $this->getChildHtml('addto') ?>
+        </div>
+    <?php endif; ?>
     <div id="product-details-btns">
         <section id="product-details-btns-add" class="product-details-btn">
             <button id="product-details-btns-add-btn" class="product-details-btn-img" onclick="productAddToCartForm.submit(this)">Add To Cart</button>
@@ -249,6 +212,7 @@ foreach ($_product->getOptions() as $o) {
     </div>
 
 </section>
+
 
 <!-- Page Tabs Section ---------------------------------------------------------------------->
 
@@ -357,7 +321,7 @@ foreach ($_product->getOptions() as $o) {
         </div>
 
         <div class="product-shop">
-        
+
                 <div class="product-shop-wrap">
             <div class="product-name">
                 <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
@@ -369,15 +333,15 @@ foreach ($_product->getOptions() as $o) {
 
             <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
             <?php echo $this->getChildHtml('alert_urls') ?>
-            <?php echo $this->getChildHtml('product_type_data') ?> 
+            <?php echo $this->getChildHtml('product_type_data') ?>
             <?php echo $this->getTierPriceHtml() ?>
             <?php echo $this->getChildHtml('extrahint') ?>
 
-  
+
 
             <?php if ($_product->getShortDescription()):?>
                 <div class="short-description">
-               
+
                     <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                 </div>
             <?php endif;?>
@@ -387,9 +351,8 @@ foreach ($_product->getOptions() as $o) {
             <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                 <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
             <?php endif;?>
-            
+
              </div>
-            
                       <?php if (!$this->hasOptions()):?>
                 <div class="add-to-box">
                     <?php if($_product->isSaleable()): ?>
@@ -406,8 +369,7 @@ foreach ($_product->getOptions() as $o) {
                     <?php echo $this->getChildHtml('addto') ?>
                 </div>
             <?php endif; ?>
-
-        </div>  
+        </div>
 
         <div class="product-img-box">
             <?php echo $this->getChildHtml('media') ?>
@@ -418,7 +380,7 @@ foreach ($_product->getOptions() as $o) {
             <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
         <?php endif;?>
 */?>
-    </form>
+</form>
     <script type="text/javascript">
     //<![CDATA[
         var productAddToCartForm = new VarienForm('product_addtocart_form');
@@ -470,20 +432,7 @@ foreach ($_product->getOptions() as $o) {
         }.bind(productAddToCartForm);
     //]]>
     </script>
-    <?php //</div>?>
-    <!--div class="product-collateral">
-<?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
-        <div class="box-collateral <?php echo "box-{$alias}"?>">
-            <?php if ($title = $this->getChildData($alias, 'title')):?>
-            <h2><?php echo $this->escapeHtml($title); ?></h2>
-            <?php endif;?>
-            <?php echo $html; ?>
-        </div>
-<?php endforeach;?>
 
-         
-    </div-->
 <?php echo $this->getChildHtml('product_additional_data') ?>
-
 
 <?php echo $this->getChildHtml('upsell_products') ?>
