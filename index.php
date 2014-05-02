@@ -97,7 +97,7 @@ define(SERVER_ENV, $environment);
 if (isset($_SERVER['MAGE_IS_DEVELOPER_MODE'])||SERVER_ENV!="www") {
     Mage::setIsDeveloperMode(true);
     include_once("Dumper.php");
-    include_once("ChromePHP.php");
+    //include_once("ChromePHP.php");
 }
 
 #ini_set('display_errors', 1);
