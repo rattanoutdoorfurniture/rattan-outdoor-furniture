@@ -149,5 +149,18 @@ class Mage_Catalog_Block_Product_View_Options_Type_Select
             return $selectHtml;
         }
     }
+    /**
+     * Return html for control element without drop down
+     *
+     * @return string
+     */
+    public function getValues() {
+        $_option = $this->getOption();
+        $retVals = array();
+        foreach($_option->getValues() as $optVal) {
+            $retVals[] = $optVal->getData();
+        }
+        return $retVals;
+    }
 
 }
