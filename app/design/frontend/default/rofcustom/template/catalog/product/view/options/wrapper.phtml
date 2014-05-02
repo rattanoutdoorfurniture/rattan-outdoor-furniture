@@ -24,11 +24,11 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<!-- ********** Remove Wrapper. We don't want it. But this file must call the next **************
-<div id="product-details-options" class="product-options clearfix">-->
+<!-- ********** Remove Wrapper. We don't want it. But this file must call the next **************-->
+<div id="product-details-options" class="product-options clearfix">
     <?php echo $this->getChildHtml('', true, true);?>
     <?php if (false&&$this->hasRequiredOptions()):?>
         <p class="required"><?php echo $this->__('* Required Fields') ?></p>
     <?php endif;?>
-<!--</div>-->
+</div>
 <!--<script type="text/javascript">decorateGeneric($$('#product-options-wrapper dl'), ['last']);</script>-->

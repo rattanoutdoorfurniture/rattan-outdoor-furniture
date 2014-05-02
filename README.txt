@@ -25,6 +25,7 @@ Change Log:
 
 ###2014-05-02###
 
+*Work on a little bug that keeps plaguing me today with the cart details. I was hung up on this, then I stopped to work on the Laptop Recovery. I'm back working on it now. I will update this with details on the fix.
 *Instead of moving past the colors, after talking to Larry, I thought this needed to just be fixed so i can move on to the cart. Fixed add to cart. Set and send color and quantity to cart. Working now on re-styling the quantity (now managed by magento too).
 *Pulling in color options broke the Add-to-Cart functionality. This should be fixed. Needs to be styled on "container2" for add-to-buttons.
 *Got the color options to pull into the product page. Now I'm about to make sure it gets passed to the cart, along with quantity.
