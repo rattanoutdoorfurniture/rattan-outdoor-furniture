@@ -1,0 +1,46 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+
+<?php /* @var $this Mage_Catalog_Block_Product_View_Options_Type_Select */ ?>
+<?php $_option = $this->getOption() ?>
+<?php $title = $this->escapeHtml($_option->getTitle()) ?>
+
+    <section id="product-details-options-<?=$title?>" class="product-details-options-section">
+        <?php
+            $swatches = $this->getValues();
+            $default = current($swatches)['title'];
+        ?>
+        <input id="product-details-options-<?=$title?>-value" type="hidden" name="<?=$title?>" value="<?php echo $default; ?>" />
+        <span id="product-details-options-<?=$title?>-label" class="product-details-options-label">Choose <?php echo ucwords($title) ?>:</span>
+            <span id="product-details-options-<?=$title?>-swatches">
+                <?php foreach($swatches as $swatch): ?>
+                    <aside class="product-details-options-<?=$title?>-swatch<?php echo $swatch==$swatches[0] ? ' selected':''; ?>" data-color="<?php echo $swatch['title']; ?>">
+                        <div class="product-details-options-<?=$title?>-swatch-color" style="background-color: <?php echo $swatch['sku']; ?>;" onclick="var sel=document.querySelectorAll('.product-details-options-color-swatch.selected');sel.length?sel[0].classList.remove('selected'):'';this.parentElement.classList.add('selected');document.getElementById('product-details-options-color-value').value=this.parentElement.getAttribute('data-color');"></div>
+                    </aside>
+                <?php endforeach; ?>
+            </span>
+    </section>

@@ -71,8 +71,12 @@ class Mage_Catalog_Block_Product_View extends Mage_Catalog_Block_Product_Abstrac
                 $headBlock->setDescription(Mage::helper('core/string')->substr($product->getDescription(), 0, 255));
             }
             if ($this->helper('catalog/product')->canUseCanonicalTag()) {
-                $params = array('_ignore_category' => true);
-                $headBlock->addLinkRel('canonical', $product->getUrlModel()->getUrl($product, $params));
+                $params = array('_ignore_category' => false);
+                $proCats = $product->getCategoryIds();
+                $pc = end($proCats);
+                $category = Mage::getModel('catalog/category')->load($pc);
+                $url = $product->getProductUrl($category->getUrlPath());
+                $headBlock->addLinkRel('canonical', $url);
             }
         }
 

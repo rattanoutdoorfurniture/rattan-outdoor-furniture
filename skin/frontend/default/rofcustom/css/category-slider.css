@@ -1,0 +1,100 @@
+/* Product Category Slider
+*******************************************/
+
+#category-slider {
+    height: 150px;
+    margin-bottom: 20px;
+
+}
+
+#category-slider-title {
+    text-indent: -10000px;
+    background: transparent url('../images/category-slider-title.png') center center no-repeat;
+    height: 40px;
+    margin-bottom: 20px;
+
+}
+
+.category-slider-nav {
+    float: left;
+    display: block;
+    height: 90px;
+    width: 30px;
+}
+
+#category-slider-prev {
+
+}
+
+#category-slider-next {
+
+}
+
+#category-slider-inner {
+    float: left;
+    display: block;
+    height: 90px;
+    width: 880px;
+}
+
+.category-slider-slide {
+    float: left;
+    display: block;
+    height: 90px;
+    width: 130px;
+    margin: 0 8px;
+}
+
+.category-slider-slide-link {
+    display: block;
+    text-decoration: none;
+}
+
+.category-slider-slide-img {
+    height: 64px;
+    width: 91px;
+    background: transparent url('../images/categories-icon-sprite.png') 0px 0px no-repeat;
+    margin: 0 auto;
+
+}
+
+.cat-sectionals .category-slider-slide-img {
+    background-position: 0px center;
+}
+
+
+.cat-sofas .category-slider-slide-img {
+    background-position: -148px center;
+}
+
+
+.cat-chairs .category-slider-slide-img {
+    background-position: -282px center;
+}
+
+
+.cat-loungers .category-slider-slide-img {
+    background-position: -415px center;
+}
+
+
+.cat-diningtables .category-slider-slide-img {
+    background-position: -567px center;
+}
+
+
+.cat-barsets .category-slider-slide-img {
+    background-position: -707px center;
+}
+
+
+.category-slider-slide-label {
+    text-align: center;
+    text-decoration: none;
+    color: #888;
+    font-family: "Tahoma";
+}
+
+.category-slider-slide-link:hover .category-slider-slide-label {
+    text-decoration: underline;
+}

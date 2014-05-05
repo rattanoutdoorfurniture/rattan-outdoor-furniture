@@ -32,9 +32,14 @@ Default layout, loads most of the pages
 
     <default translate="label" module="page">
         <label>All Pages</label>
-        <block type="page/html" name="root" output="toHtml" template="page/3columns.phtml">
+        <block type="page/html" name="root" output="toHtml" template="page/1column.phtml">
 
             <block type="page/html_head" name="head" as="head">
+
+                <action method="addItem"><type>remote_js</type><name>https://code.jquery.com/jquery-2.1.0.js</name><params/><if/></action>
+                <action method="addItem"><type>js</type><name>jquery/noconflict.js</name><params/><if/></action>
+                <action method="addItem"><type>js</type><name>jquery/modernizr.js</name><params/><if/></action>
+
                 <action method="addJs"><script>prototype/prototype.js</script></action>
                 <action method="addJs"><script>lib/ccard.js</script></action>
                 <action method="addJs"><script>prototype/validation.js</script></action>
@@ -51,7 +56,7 @@ Default layout, loads most of the pages
 
                 <block type="page/js_cookie" name="js_cookies" template="page/js/cookie.phtml"/>
 
-                <action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
+                <!--<action method="addCss"><stylesheet>css/styles.css</stylesheet></action>-->
                 <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 8</if></action>
                 <action method="addCss"><stylesheet>css/widgets.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>
@@ -71,13 +76,18 @@ Default layout, loads most of the pages
                 <block type="page/switch" name="store_language" as="store_language" template="page/switch/languages.phtml"/>
                 <block type="core/text_list" name="top.menu" as="topMenu" translate="label">
                     <label>Navigation Bar</label>
-                    <block type="page/html_topmenu" name="catalog.topnav" template="page/html/topmenu.phtml"/>
+                    <block type="page/html_topmenu" name="catalog.topnav" template="page/html/topmenu.phtml">
+                        <block type="core/text_list" name="top.search" as="topSearch" translate="label">
+                            <label>Navigation Search</label>
+                            <block type="core/template" name="catalogsearch.topsearch" template="catalogsearch/form.mini.phtml"/>
+                        </block>
+                    </block>
                 </block>
                 <block type="page/html_wrapper" name="top.container" as="topContainer" translate="label">
                     <label>Page Header</label>
                     <action method="setElementClass"><value>top-container</value></action>
                 </block>
-                <block type="page/html_welcome" name="welcome" as="welcome"/>
+                <!--<block type="page/html_welcome" name="welcome" as="welcome"/>-->
             </block>
 
             <block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>

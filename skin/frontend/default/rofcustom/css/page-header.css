@@ -1,0 +1,213 @@
+/*******************************\
+* Styles for Global Page Header *
+\*******************************/
+
+#page-header {
+    position: relative;
+    margin: 10px 0;
+    height: 150px;
+    z-index: 999;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.nav-top {
+    position: absolute;
+    top: 0px;
+    right: 12px;
+    height: 29px;
+    z-index: 998;
+}
+
+#nav-top-list {
+    /*padding: 3px 0;*/
+}
+
+.nav-top-item {
+    display: inline;
+    list-style-type: none;
+    color: #666666;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    /*border-radius: 7px/9px;*/
+    border-right: none;
+    margin: -2px;
+    padding: 5px 7px;
+    background: #FFF;
+    font-family: 'Tahoma';
+}
+
+.nav-top-item.first {
+    border-radius: 7px 0 0 7px / 9px 0 0 9px;
+}
+
+.nav-top-item.last {
+    border-right: 1px solid #ccc;
+    border-radius: 0 7px 7px 0 / 0 9px 9px 0;
+}
+
+.nav-top-item a {
+    text-decoration: none;
+}
+
+.nav-top-item:hover {
+    box-shadow: inset 0 0 2px 2px #EEE;
+}
+
+#page-header-right {
+    position: relative;
+    height: 100%;
+}
+
+#page-header-cart {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    font-size: 13px;
+    z-index: 996;
+}
+
+#page-header-cart a {
+    text-decoration: none;
+}
+
+#header-cart-cart:hover,
+#header-cart-checkout:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#page-header-phone {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    text-align: center;
+}
+
+#header-phone-num,
+#header-phone-num a {
+    font-size: 35px;
+    line-height: 35px;
+    color: #895c9a;
+    font-weight: 400;
+    margin-top: 0;
+    font-family: 'Tahoma';
+    text-decoration: none;
+}
+
+
+/* MAIN NAV
+***********************/
+.nav-main {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    z-index: 997;
+    background-color: #F0F0F0;
+}
+
+.nav-main-list {
+    height: 40px;
+}
+
+.nav-main-item {
+    display: inline-block;
+    height: 28px;
+    list-style-type: none;
+    padding: 12px 10px 0;
+    border-right: 3px solid #FFF;
+    background: #F0F0F0 url('../images/nav-main-unselected.png')  left bottom repeat-x;
+    margin-bottom: 0;
+}
+
+.nav-main-item.selected,
+.nav-main-item:hover {
+    background: #F0F0F0 url('../images/nav-main-selected.png') left bottom repeat-x;
+}
+
+.nav-main-list:hover .nav-main-item.selected {
+    background-image: url('../images/nav-main-unselected.png');
+}
+.nav-main-list:hover .nav-main-item.selected:hover {
+    background-image: url('../images/nav-main-selected.png') !important;
+}
+.nav-main-item.search:hover ~ .nav-main-item.selected {
+    background-image: url('../images/nav-main-selected.png') !important;
+}
+
+.nav-main-item.last {
+    float: right;
+    position: relative;
+    padding: 0 5px 0 0;
+    border: none;
+    background-image: url('../images/nav-main-unselected.png') !important;
+}
+
+.nav-main-item a {
+    text-transform: uppercase;
+    color: #555;
+    font-family: 'FuturaStd-Medium';
+}
+
+.nav-main-item.parent {
+    position: relative;
+}
+
+.nav-main-item.parent ul {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 36px;
+    width: 100%;
+    margin: 0;
+    padding: 10px 10px 10px 15px;
+    background: #e6e6e6 url('../images/nav-main-unselected.png') left bottom repeat-x;
+    background-size: auto 100%;
+}
+
+#glob-search-form {
+    display: inline-block;
+    padding: 6px 0;
+    float: right;
+}
+
+#glob-search-form input {
+    outline: none;
+    float: left;
+}
+
+#glob-search-input{
+    height: 28px;
+    width: 205px;
+    margin: 0;
+    padding: 0 0 0 30px;
+    border: none;
+    background: white url('../images/glob-search-bg.png') 7px center no-repeat;
+    font-family: 'FuturaStd-MediumOblique';
+    color: #888;
+    position:relative;
+}
+
+#glob-search-input::-webkit-search-cancel-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: #555;
+    text-align: center;
+    cursor: pointer;
+}
+
+#glob-search-submit {
+    width: 98px;
+    height: 28px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent url('../images/glob-search-submit.png') center center no-repeat;
+    text-indent: -10000px;
+}

@@ -1,0 +1,2 @@
+Get Key - Values of lines like "key: value;"
+^([a-z\-]+):\s([0-9a-zA-Z\d\s\,\(\)\%]+);$

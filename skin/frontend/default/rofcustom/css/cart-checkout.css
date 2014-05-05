@@ -1,0 +1,557 @@
+/*********************************\
+|* Cart and Checkout Page Styles *|
+\*********************************/
+
+/* Page Heading
+*************************************************************************/
+
+#cart-heading {
+    border-bottom: 1px solid #e6e6e6;
+    color: #895c9a;
+    font-family: "Tahoma";
+    text-transform: uppercase;
+    margin: 10px 10px 20px;
+    font-size: 22px;
+    line-height: 22px;
+    padding-bottom: 10px;
+}
+
+img, button {
+    outline: 0 none;
+}
+
+/* Cart Box class styles (boxes for cart content are styled similarly)
+*************************************************************************/
+
+.cart-box {
+    min-height: 40px;
+    position: relative;
+    background: transparent url('../images/hash-border.png') 0 0 repeat;
+    height: auto;
+}
+
+.cart-box-border {
+    width: 100%;
+    height: 10px !important;
+    display: block;
+}
+
+.cart-box  .cart-box-inner {
+    background:#FFF;
+    display: block;
+    margin: auto 10px;
+}
+
+.cart-btn-wrap {
+    text-align: center;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Left Column
+******************************************************************/
+
+    /* Cart Row
+    **********************************************************/
+
+    #cart-cartbox-table {
+        width: 100%;
+    }
+
+    #cart-cartbox.hide-items #cart-cartbox-table {
+        display: none;
+    }
+
+    #cart-cartbox.hide-items ~ #cart-btns {
+        margin-top: -60px;
+
+    }
+
+    #cart-cartbox-table-header {
+        background-color: #ebebeb;
+    }
+
+    .cart-cartbox-table-header-label {
+        padding: 10px 0 15px;
+        font: normal 14px/14px "Tahoma";
+        color: #8a6399;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    #cart-cartbox-table-header th:nth-child(1) {
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    #cart-cartbox-table-edit {
+        padding: 0 !important;
+    }
+
+    #cart-cartbox-table-edit-btn {
+        display: inline-block;
+    }
+
+    #cart-cartbox-table-edit-btn-img {
+        height: 20px;
+        width: auto;
+        margin-bottom: -5px;
+        margin-right: -5px;
+    }
+
+    .cart-cartbox-table-product {
+        border-bottom: 1px solid #e6e6e6;
+        padding: 0 20px;
+    }
+
+    .cart-cartbox-table-product td {
+        text-align:center;
+        /*border: 1px solid black;*/
+        vertical-align: middle;
+        margin-top: -20px;
+        padding: 10px 0 10px;/* 20px;*/
+    }
+
+    .cart-cartbox-table-product td:first-child {
+        padding-left: 20px;
+    }
+
+    .cart-cartbox-table-product td:last-child {
+        padding: 0 8px 0 12px;
+    }
+
+    .cart-cartbox-table-product-detail {
+
+    }
+
+    .cart-cartbox-table-product-detail td {
+        vertical-align: middle;
+    }
+
+    .cart-cartbox-table-product-detail-img-wrap {
+        width: 80px;
+        float: left;
+        margin: 10px 20px 10px 10px;
+        border: 1px solid #e6e6e6;
+        padding: 0 10px 0 0;
+    }
+
+    .cart-cartbox-table-product-detail-img {
+        width: 100%;
+        height: auto;
+        margin: 7px 5px 4px;
+    }
+
+    .cart-cartbox-table-product-detail-title {
+        font: normal 14px/14px "Tahoma";
+        color: #8a6399;
+        display: block;
+        text-align: left;
+        margin: 15px 0 5px;
+    }
+
+    .cart-cartbox-table-product-detail-item,
+    .cart-cartbox-table-product-detail-model {
+        font: normal 12px/12px "Tahoma";
+        color: #555;
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    #cart-cartbox-toggle {
+        display: none;
+    }
+
+    #cart-cartbox.hide-items #cart-cartbox-toggle {
+        display: block;
+        height: 20px;
+        padding: 10px 20px;
+        color: #8a6399;
+        font: normal 16px/16px "Tahoma";
+        text-align: left;
+        background: #ededed;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    #cart-cartbox.hide-items #cart-cartbox-toggle-btn {
+        float: right;
+        width: 20px;
+        height: 10px;
+        height: 100%;
+        margin: 0 5px;
+        text-indent: -10000px;
+        background: transparent url('../images/cart-cartbox-toggle.png') center center no-repeat;
+    }
+
+    /*#cart-cartbox-table-edit-row {*/
+
+    /*}*/
+
+    /*#cart-cartbox-table-edit {*/
+        /*text-align: right;*/
+    /*}*/
+
+    /*#cart-cartbox-table-edit-btn {*/
+        /*background: #ebebeb url('../images/cart-cartbox-table-edit-btn.png') center center no-repeat;*/
+        /*margin: 10px;*/
+        /*text-indent: -10000px;*/
+        /*width: 80px;*/
+        /*height: 25px;*/
+        /*background-size: 80px 25px;*/
+    /*}*/
+
+    /* Checkout Row
+    **********************************************************/
+
+    #checkout-box {
+        margin: 20px 10px;
+    }
+
+    #checkout-box-progress {
+        width: 540px;
+        padding: 20px 0px 10px;
+        margin: auto 10px 10px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    #checkout-box-progress-inner {
+        width: 540px;
+        height: 74px;
+        background: #FFF url('../images/checkout-steps-progress.png') 0px 0px no-repeat;
+    }
+
+    #checkout-box.step1 #checkout-box-progress-inner { background-position: 0px 0px; }
+    #checkout-box.step2 #checkout-box-progress-inner { background-position: 0px -75px; }
+    #checkout-box.step3 #checkout-box-progress-inner { background-position: 0px -150px; }
+
+    .checkout-box-progress-step {
+        display: inline-block;
+        width: 177px;
+        height: 100%;
+    }
+
+    #checkout-box-form {
+        margin: 0;
+        padding: 10px 0 20px;
+    }
+
+    .checkout-box-step {
+        padding: 0 20px;
+    }
+
+    .checkout-box-step:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+
+    #checkout-box.step1 .checkout-box-step,
+    #checkout-box.step2 .checkout-box-step,
+    #checkout-box.step3 .checkout-box-step,
+    #checkout-box.step4 .checkout-box-step {
+        display: none;
+    }
+
+    #checkout-box.step1 #checkout-box-step-1,
+    #checkout-box.step2 #checkout-box-step-2,
+    #checkout-box.step3 #checkout-box-step-3,
+    #checkout-box.step4 #checkout-box-step-4 {
+        display: block;
+    }
+
+    .checkout-item-100,
+    .checkout-item-100 > input {
+        width: 510px !important;
+    }
+
+    .checkout-item-50 {
+        width: 250px;
+        margin: 0 10px 0 0;
+        float: left;
+    }
+
+    .checkout-item-50 + .checkout-item-50 {
+        margin: 0 0 0 10px;
+        clear: right;
+    }
+
+    .checkout-item-50 > input,
+    .checkout-item-50 > select {
+        width: 240px !important;
+    }
+
+    /* Checkout Step 1 - Login - Account / Guest - Continue
+    *******************************************************************************/
+
+    .checkout-box-login-box {
+        width: 240px;
+        background: transparent url('../images/hash-border.png') 0 0 repeat;
+        margin: 0 5px 10px;
+        padding: 5px;
+        float: left;
+    }
+
+    .checkout-box-login-box-inner {
+        background: #FFF;
+        padding: 20px 10px 10px;
+    }
+
+    .checkout-box-login-box-inner:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    .checkout-box-login-box-heading {
+        color: #8a6399;
+        font: normal 16px/16px "Tahoma";
+        text-transform: uppercase;
+        padding: 0 0 10px 5px;
+        border-bottom: 1px solid #e6e6e6;
+        margin-bottom: 15px;
+    }
+
+    .checkout-step1-input {
+        margin-bottom: 5px !important;
+        padding: 6px 9px !important;
+        height: 26px !important;
+        width: 200px !important;
+    }
+
+    .checkout-step1-spacer {
+        text-align: center;
+        color: #555;
+        text-transform: uppercase;
+        font-variant: small-caps;
+        margin: 5px auto;
+        font-size: 10px;
+        font-weight: bold;
+        font-family: "Tahoma";
+    }
+
+    #checkout-step1-facebook {
+        width: 220px;
+        height: 40px;
+        background: transparent url('../images/connect-with-facebook.png') 0 0 no-repeat;
+        text-indent: -10000px;
+        border: none;
+        margin-bottom: 5px;
+    }
+
+    .checkout-step1-next-step {
+        margin: 20px auto 5px auto;
+        float: right;
+        border: none;
+        border-radius: 0;
+        background-color: #8a6399;
+        background-image: none;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-indent: -10000px;
+        height: 30px;
+    }
+
+    #checkout-step1-next-step-guest {
+        background-image: url('../images/checkout-step1-next-step-guest.png');
+        width: 90px;
+    }
+
+    #checkout-step1-next-step-account {
+        background-image: url('../images/checkout-step1-next-step-account.png');
+        width: 90px;
+    }
+
+    /* Checkout Step 2 - Payment Information - Continue
+    *************************************************************************************************/
+
+    #checkout-box-step-2-heading {
+        font: normal 14px/14px "Tahoma";
+        color: #8a6399;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    .checkout-step2-label {
+        color: #555;
+        text-transform: uppercase;
+        font: normal 12px/12px "Tahoma";
+    }
+
+    #checkout-step2-card-expire,
+    #checkout-step2-card-cvv {
+        width: 170px;
+        float: left;
+    }
+
+    #checkout-step2-card-expire select {
+        margin: 15px 5px 0 0;
+        width: 50px;
+        float: left;
+        height: 30px;
+    }
+
+    #checkout-step2-card-cvv-input {
+        margin: 15px 0 0 0;
+        width: 100px;
+        height: 16px;
+    }
+
+    #checkout-step2-next-step {
+        width: 170px;
+        height: 40px;
+        background: transparent url('../images/checkout-step2-next-step.png') center center no-repeat;
+        float: right;
+        text-indent: -10000px;
+        margin: 20px 0 0 0;
+    }
+
+    /* Checkout Step 3 - Shipping Information - Complete
+    *************************************************************************************/
+
+    #checkout-box-step-3-heading {
+        font: normal 14px/14px "Tahoma";
+        color: #8a6399;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    #checkout-step3-country {
+        height: 30px;
+        width: 250px !important;
+    }
+
+    #checkout-step3-submit-order {
+        width: 170px;
+        height: 40px;
+        background: transparent url('../images/checkout-step3-submit-order.png') center center no-repeat;
+        float: right;
+        text-indent: -10000px;
+        margin: 0;
+    }
+
+
+
+/* Right Column
+*******************************************************************/
+
+    /* Subtotal Box area
+    **********************************************************/
+
+    #cart-subtotal-header {
+        color: #8a6399;
+        font-family: "Tahoma";
+        font-size: 18px;
+        line-height: 18px;
+        padding: 10px 20px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    #cart-subtotal-sub {
+        color: #555;
+        font-family: "Tahoma";
+        font-size: 16px;
+        line-height: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        text-align: center;
+        font-variant: small-caps;
+        text-transform: lowercase;
+    }
+
+    #cart-subtotal-table {
+        width: 100%;
+    }
+
+    #cart-subtotal-table:before,
+    #cart-subtotal-table:after {
+        content: '';
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    #cart-subtotal-table-title th {
+        color: #555;
+        font-family: "Tahoma";
+        font-weight: bold;
+        padding: 10px 20px 10px;
+        text-align: left;
+    }
+
+    .cart-subtotal-table-left {
+        text-align: left;
+        padding-left: 10px;
+        float: left;
+    }
+
+    .cart-subtotal-table-right {
+        text-align: right;
+        padding-right: 10px;
+        float: right;
+    }
+
+    .cart-subtotal-table-left,
+    .cart-subtotal-table-right {
+        border-bottom: 1px solid #e6e6e6;
+        width: 130px;
+        display: inline-block;
+    }
+
+    .cart-subtotal-table-row {
+        padding: 5px 20px 10px;
+        display: block;
+        /*width: 100%;*/
+    }
+
+    #cart-subtotal-table-items {
+
+    }
+
+    #cart-subtotal-table-shipping {
+
+    }
+
+    #cart-subtotal-table-shipping {
+
+    }
+
+    /* Cart / Checkout Buttons
+    **********************************************************/
+
+    #cart-continue {
+        width: 45%;
+    }
+
+    #cart-cartbox.hide-items ~ #cart-btns #cart-continue {
+        width: 100%;
+    }
+
+    #cart-cartbox.hide-items ~ #cart-btns #cart-checkout {
+        display: none;
+    }
+
+    #cart-checkout {
+        width: 55%;
+    }
+
+    .cart-btn {
+        height: 40px;
+        text-indent: -10000px;
+        width: 100%;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    #cart-continue-btn {
+        background: #8a6399 url('../images/cart-continue-btn.png') center center no-repeat;
+        width: 130px;
+    }
+
+    #cart-cartbox.hide-items ~ #cart-btns #cart-continue-btn {
+        background: #8a6399 url('../images/cart-continue-btn-hide-items.png') center center no-repeat;
+        width: 310px;
+    }
+
+    #cart-checkout-btn {
+        background: #56b2dd url('../images/cart-checkout-btn.png') center center no-repeat;
+        width: 170px;
+    }

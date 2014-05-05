@@ -1,0 +1,63 @@
+<?php           
+  /**
+  * Magento
+  *
+  * NOTICE OF LICENSE
+  *
+  * This source file is subject to the Academic Free License (AFL 3.0)
+  * that is bundled with this package in the file LICENSE_AFL.txt.
+  * It is also available through the world-wide-web at this URL:
+  * http://opensource.org/licenses/afl-3.0.php
+  * If you did not receive a copy of the license and are unable to
+  * obtain it through the world-wide-web, please send an email
+  * to license@magentocommerce.com so we can send you a copy immediately.
+  *
+  * DISCLAIMER
+  *
+  * Do not edit or add to this file if you wish to upgrade Magento to newer
+  * versions in the future. If you wish to customize Magento for your
+  * needs please refer to http://www.magentocommerce.com for more information.
+  *
+  * @category    design
+  * @package     base_default
+  * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+  */
+  $current_product = Mage::registry('current_product');
+?>
+
+<?php if(count($this->_itemCollection->getData())>0): ?>
+  <div class="block block-related">
+    <div class="block-title">
+      <strong><span><?php echo $this->__('Related Category') ?></span></strong>
+    </div>
+    <div class="block-content">      
+      <ol class="mini-products-list" id="block-related">
+        <?php foreach($this->_itemCollection as $_item): ?>
+          <li class="item">                        
+            <a style="cursor: pointer;" onclick="getListProduct('<?php echo $current_product->getId();?>','<?php echo $_item->getId();?>')" title=""><?php echo $_item->getName();?></a> 
+            <span style="margin-left: 5px; display:none;" id='ajax_loading_page_<?php echo $_item->getId();?>'><img src='<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif')?>'/></span>     
+          </li>
+          <?php endforeach ?>
+      </ol>    
+    </div>
+  </div>
+  <script>
+    function backForm(){
+      window.location.reload();
+    }   
+    $('product_addtocart_form').up(2).setAttribute('id', 'product_view');      
+    function getListProduct(pid,cid){            
+      $('ajax_loading_page_'+cid).show();
+
+      var ajaxurl = "<?php echo Mage::getBaseUrl() . 'relatedcategory/index/getlistproduct?pid='?>"+pid+'&cid='+cid;
+      new Ajax.Request(ajaxurl, {
+        method: 'post',       
+        onSuccess: function(html_success_give) {
+          $('product_view').innerHTML= html_success_give.responseText;    
+          $('ajax_loading_page_'+cid).hide();
+        }
+      });
+    }
+  </script>
+  <?php endif ?>

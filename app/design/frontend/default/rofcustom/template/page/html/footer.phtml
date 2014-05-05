@@ -1,0 +1,36 @@
+
+<div id="page-footer-banner" class="sixteen columns">
+    <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('footer-banner')->toHtml(); ?>
+</div>
+
+<footer id="page-footer">
+    <hr class="footer-rule sixteen columns"/>
+    <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('footer-blocks')->toHtml(); ?>
+    <aside class="footer-box four columns">
+        <div class="footer-box-inner">
+            <h5>Join our Newsletter</h5>
+            <form id="footer-newsletter" method="post" action="">
+                <input type="email" placeholder="Email Address" id="footer-newsletter-input" />
+                <input type="submit" id="footer-newsletter-submit" value="Send" />
+            </form>
+            <div id="footer-social">
+                <span id="footer-social-label">Follow Us On:</span>
+                <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('social-footer')->toHtml(); ?>
+            </div>
+        </div>
+    </aside>
+    <aside class="footer-box three columns">
+        <div class="footer-box-inner last">
+            <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('footer-logo')->toHtml(); ?>
+        </div>
+    </aside>
+    <div class="clear"></div>
+    <hr class="footer-rule sixteen columns"/>
+    <div id="footer-sub">
+        <div id="footer-sub-copyright" class="eight columns"><?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('footer-copyright')->toHtml(); ?></div>
+        <div id="footer-sub-icons" class="eight columns">
+            <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('footer-badges')->toHtml(); ?>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</footer>
