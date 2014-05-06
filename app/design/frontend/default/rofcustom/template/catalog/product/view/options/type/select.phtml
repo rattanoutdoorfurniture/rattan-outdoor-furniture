@@ -27,7 +27,20 @@
 
 <?php /* @var $this Mage_Catalog_Block_Product_View_Options_Type_Select */ ?>
 <?php $_option = $this->getOption() ?>
-<?php $title = $this->escapeHtml($_option->getTitle()) ?>
+<dt><label<?php if ($_option->getIsRequire()) echo ' class="required"' ?>><?php if ($_option->getIsRequire()) echo '<em>*</em>' ?><?php echo  $this->escapeHtml($_option->getTitle()) ?></label></dt>
+<dd<?php if ($_option->decoratedIsLast){?> class="last"<?php }?>>
+    <div class="input-box">
+        <?php echo $this->getValuesHtml() ?>
+        <?php if ($_option->getIsRequire()): ?>
+            <?php if ($_option->getType() == Mage_Catalog_Model_Product_Option::OPTION_TYPE_RADIO || $_option->getType() == Mage_Catalog_Model_Product_Option::OPTION_TYPE_CHECKBOX): ?>
+                <span id="options-<?php echo $_option->getId() ?>-container"></span>
+            <?php endif; ?>
+        <?php endif;?>
+    </div>
+</dd>
+<?php /* ?>
+<?php $title   = $this->escapeHtml($_option->getTitle()) ?>
+<?php $opt_id  = $_option->getId() ?>
 <?php
 $swatches = $this->getValues();
 //  die(dumper::auto($swatches));
@@ -37,7 +50,7 @@ $default = current($swatchKeys);
 ?>
 
     <section id="product-details-options-<?=$title?>" class="product-details-options-section">
-        <input id="product-details-options-<?=$title?>-value" type="hidden" name="options[<?=$title?>]" value="<?php echo $default; ?>" />
+        <input id="product-details-options-<?=$title?>-value" type="hidden" name="options[<?=$opt_id?>]" value="<?php echo $default; ?>" />
         <span id="product-details-options-<?=$title?>-label" class="product-details-options-label">Choose <?php echo ucwords($title) ?>:</span>
             <span id="product-details-options-<?=$title?>-swatches">
                 <?php foreach($swatches as $sid=>$swatch): ?>
@@ -47,3 +60,4 @@ $default = current($swatchKeys);
                 <?php endforeach; ?>
             </span>
     </section>
+<?php */ ?>

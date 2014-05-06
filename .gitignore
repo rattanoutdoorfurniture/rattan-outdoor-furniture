@@ -7,3 +7,5 @@ var/locks/*
 var/report/*
 *error_log
 *DEV_NOTES
+*_snapshot_*
+

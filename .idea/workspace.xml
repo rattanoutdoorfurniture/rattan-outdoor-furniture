@@ -2,7 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac3d19b1-e482-4ca0-a0dd-b066c436ba87" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\image\265x265\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\image\265x265\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1169_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\image\265x\9df78eab33525d08d6e5fb8d27136e95\images\catalog\product\placeholder\image.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\image\380x270\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\image\380x270\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1169_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\image\380x287\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\image\380x287\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\image\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\image\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1169_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\image\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1182.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\image\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1182_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\image\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1232.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\image\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1232_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\small_image\200x142\9df78eab33525d08d6e5fb8d27136e95\images\catalog\product\placeholder\small_image.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\small_image\200x142\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\small_image\200x142\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1169_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\small_image\9df78eab33525d08d6e5fb8d27136e95\images\catalog\product\placeholder\small_image.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x77\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x77\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1182.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x77\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1232.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x82\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x82\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1182.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x82\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1232.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x82\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x82\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1182.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x82\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1232.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x88\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x88\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1182.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x88\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1232.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x88\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x88\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1182.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x88\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1232.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1182.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\125x\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1232.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\135x77\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\135x77\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1182.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\135x77\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1232.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\135x77\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\135x77\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1182.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\135x77\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1232.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\135x92\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\135x92\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1182.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\135x92\602f0fa2c1f0d1ba5e241f914e856ff9\p\h\photos.ap_1232.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\57x57\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\57x57\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1169_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\57x57\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1182.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\57x57\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1182_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\57x57\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1232.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\57x57\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1232_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\rof\code\dev\media\catalog\product\cache\1\thumbnail\75x\9df78eab33525d08d6e5fb8d27136e95\p\h\photos.ap_1169.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/catalog/product/cache/1/image/380x270/602f0fa2c1f0d1ba5e241f914e856ff9/p/h/photos.ap-1172_1.jpg" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/image/380x270/602f0fa2c1f0d1ba5e241f914e856ff9/p/h/photos.ap-1172_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/catalog/product/cache/1/image/500x377/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap-1172_1.jpg" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/image/500x377/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap-1172_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/catalog/product/cache/1/small_image/200x142/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap-1172_1.jpg" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/small_image/200x142/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap-1172_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/catalog/product/cache/1/image/380x270/602f0fa2c1f0d1ba5e241f914e856ff9/p/h/photos.ap-1172_1_1.jpg" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/image/380x270/602f0fa2c1f0d1ba5e241f914e856ff9/p/h/photos.ap-1172_1_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/catalog/product/cache/1/image/500x377/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap-1172_1_1.jpg" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/image/500x377/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap-1172_1_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/catalog/product/cache/1/image/500x377/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap_1169_1.jpg" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/image/500x377/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap_1169_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/catalog/product/cache/1/thumbnail/135x77/170ec19af00183b5e0368529fc2daa2f/p/h/photos.ap_1169_1.jpg" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/thumbnail/135x77/170ec19af00183b5e0368529fc2daa2f/p/h/photos.ap_1169_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/catalog/product/cache/1/image/500x377/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap_1182_1.jpg" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/image/500x377/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap_1182_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/catalog/product/cache/1/thumbnail/135x77/170ec19af00183b5e0368529fc2daa2f/p/h/photos.ap_1182_1.jpg" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/thumbnail/135x77/170ec19af00183b5e0368529fc2daa2f/p/h/photos.ap_1182_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/catalog/product/cache/1/image/500x377/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap_1232_1.jpg" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/image/500x377/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap_1232_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/catalog/product/cache/1/thumbnail/135x77/170ec19af00183b5e0368529fc2daa2f/p/h/photos.ap_1232_1.jpg" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/thumbnail/135x77/170ec19af00183b5e0368529fc2daa2f/p/h/photos.ap_1232_1.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/addtocart.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/addtocart.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/log/exception.log" afterPath="$PROJECT_DIR$/var/log/exception.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/etc/local.xml" afterPath="$PROJECT_DIR$/app/etc/local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/options.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/options.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/type/select.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/type/select.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dev.iws" />
@@ -27,13 +96,13 @@
           <leaf>
             <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/README.md">
+                <provider editor-type-id="MarkdownPreviewEditor">
+                  <state />
+                </provider>
                 <provider selected="true" editor-type-id="text-editor">
-                  <state line="45" column="0" selection-start="2963" selection-end="2963" vertical-scroll-proportion="0.5966851" vertical-offset="225" max-vertical-offset="2227">
+                  <state line="33" column="241" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.46961325" vertical-offset="136" max-vertical-offset="2329">
                     <folding />
                   </state>
-                </provider>
-                <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-                  <state />
                 </provider>
               </entry>
             </file>
@@ -48,37 +117,100 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Url.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Catalog/Model/Product/Url.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="5" selection-start="5037" selection-end="5216" vertical-scroll-proportion="0.0" vertical-offset="3264" max-vertical-offset="5372">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="select.phtml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/type/select.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="55" selection-start="1828" selection-end="1828" vertical-scroll-proportion="0.5883424" vertical-offset="0" max-vertical-offset="549">
+            <state line="62" column="7" selection-start="3335" selection-end="3335" vertical-scroll-proportion="0.7883472" vertical-offset="0" max-vertical-offset="841">
+              <folding>
+                <element signature="e#1819#3336#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="local.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/etc/local.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="54" selection-start="1892" selection-end="1892" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Select.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Catalog/Block/Product/View/Options/Type/Select.php">
+      <file leaf-file-name="addtocart.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/addtocart.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="27" selection-start="7439" selection-end="7439" vertical-scroll-proportion="0.0" vertical-offset="2720" max-vertical-offset="2924">
-              <folding />
+            <state line="40" column="0" selection-start="1830" selection-end="1830" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="680">
+              <folding>
+                <marker date="1399392467283" expanded="true" signature="1222:1812" placeholder="..." />
+                <marker date="1399392467283" expanded="true" signature="2331:2996" placeholder="..." />
+                <marker date="1399392467283" expanded="true" signature="2411:2696" placeholder="..." />
+                <marker date="1399392467283" expanded="true" signature="2845:2981" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wrapper.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/wrapper.phtml">
+      <file leaf-file-name="options.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/options.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="6" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="680">
+            <state line="204" column="20" selection-start="9700" selection-end="9700" vertical-scroll-proportion="-27.115385" vertical-offset="2372" max-vertical-offset="3213">
+              <folding>
+                <marker date="1399392295986" expanded="false" signature="1617:1645" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="96" column="46" selection-start="3098" selection-end="3098" vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="2023">
+              <folding>
+                <marker date="1399400911300" expanded="false" signature="1045:1091" placeholder="..." />
+                <marker date="1399400911300" expanded="true" signature="1092:1515" placeholder="..." />
+                <marker date="1399400911300" expanded="false" signature="1106:1154" placeholder="..." />
+                <marker date="1399400911300" expanded="true" signature="1155:1334" placeholder="..." />
+                <marker date="1399400911300" expanded="false" signature="1168:1267" placeholder="..." />
+                <marker date="1399400911300" expanded="true" signature="1268:1328" placeholder="..." />
+                <marker date="1399400911300" expanded="true" signature="1337:1509" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addtocart.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/addtocart.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="0" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="748">
+              <folding>
+                <marker date="1395327657240" expanded="true" signature="1130:1712" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addtocart.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/onlinesale/template/catalog/product/view/addtocart.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
+              <folding>
+                <marker date="1390085606000" expanded="true" signature="1134:2131" placeholder="..." />
+                <marker date="1390085606000" expanded="true" signature="1210:1788" placeholder="..." />
+                <marker date="1390085606000" expanded="true" signature="1248:1765" placeholder="..." />
+                <marker date="1390085606000" expanded="true" signature="1287:1740" placeholder="..." />
+                <marker date="1390085606000" expanded="true" signature="1344:1359" placeholder="..." />
+                <marker date="1390085606000" expanded="true" signature="1397:1632" placeholder="..." />
+                <marker date="1390085606000" expanded="true" signature="1688:1703" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/type/text.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="306" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -88,16 +220,9 @@
         <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/wrapper/bottom.phtml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addtocart.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/addtocart.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="22" selection-start="2209" selection-end="2209" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="850">
-              <folding />
+              <folding>
+                <marker date="1399051063803" expanded="true" signature="1002:1063" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,16 +230,7 @@
       <file leaf-file-name="view.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="8" selection-start="2779" selection-end="2779" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="6885">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/list.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="55" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1666">
+            <state line="135" column="41" selection-start="5943" selection-end="5943" vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="6885">
               <folding />
             </state>
           </provider>
@@ -172,9 +288,13 @@
         <option value="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/category.css" />
         <option value="$PROJECT_DIR$/lib/Zend/Controller/Request/Http.php" />
         <option value="$PROJECT_DIR$/app/code/core/Mage/Catalog/Block/Product/View/Options/Type/Select.php" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/type/select.phtml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view.phtml" />
         <option value="$PROJECT_DIR$/app/code/core/Mage/Catalog/Model/Product/Url.php" />
+        <option value="$PROJECT_DIR$/app/etc/local.xml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/options.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/addtocart.phtml" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/type/select.phtml" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -218,7 +338,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,7 +366,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
+              <option name="myItemId" value="var" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="var" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="log" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -262,48 +399,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rofcustom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rofcustom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -344,6 +439,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adminhtml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -358,6 +479,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="etc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,40 +515,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rofcustom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -444,10 +549,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -576,16 +677,34 @@
               <option name="myItemId" value="catalog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="options" />
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rofcustom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -615,7 +734,383 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rofcustom" />
+              <option name="myItemId" value="onlinesale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlinesale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlinesale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlinesale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlinesale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -635,11 +1130,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="options" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wrapper" />
+              <option name="myItemId" value="type" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -662,105 +1153,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rofcustom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rofcustom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -775,7 +1181,7 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="LayoutCode.rearrangeEntries&lt;Generic&gt;" value="false" />
     <property name="SearchEverywhereHistory" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../beta" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../retro" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -865,23 +1271,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33764833" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33764833" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25825346" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26357827" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33764833" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32748538" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32686085" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -907,50 +1313,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="8" selection-start="2822" selection-end="2822" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="6596">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/list.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="55" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/default/template/slider/slider1.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.28896672" vertical-offset="165" max-vertical-offset="1860" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/default/template/slider/slider3.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/default/template/slider/view.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="3" selection-start="1064" selection-end="1064" vertical-scroll-proportion="-0.85858583" vertical-offset="615" max-vertical-offset="1515" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/community/BusinessDecision/Interaktingslider/Model/Slide.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.25252524" vertical-offset="150" max-vertical-offset="1395" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/default/layout/slider.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="24" selection-start="46" selection-end="461" vertical-scroll-proportion="0.024271844" vertical-offset="0" max-vertical-offset="618" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/community/BusinessDecision/Interaktingslider/controllers/Admin/SlideController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="5" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.79379565" vertical-offset="120" max-vertical-offset="4035" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/code/community/BusinessDecision/Interaktingslider/Block/Interaktingslider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="5" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.262697" vertical-offset="0" max-vertical-offset="1725" />
@@ -1061,11 +1423,6 @@
         <state line="83" column="30" selection-start="3869" selection-end="3869" vertical-scroll-proportion="0.54198474" vertical-offset="1032" max-vertical-offset="1425" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/var/log/exception.log">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="4" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3315" />
@@ -1096,13 +1453,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/addtocart.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="22" selection-start="2209" selection-end="2209" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="850">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/description.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396" />
@@ -1118,25 +1468,14 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.5564516" vertical-offset="1323" max-vertical-offset="1695" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/wrapper/bottom.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="633">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/wrapper.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="6" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="680">
-          <folding />
-        </state>
+        <state line="32" column="6" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="680" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/list.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="55" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1666">
-          <folding />
-        </state>
+        <state line="36" column="55" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1666" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Zend/View/Stream.php">
@@ -1149,42 +1488,141 @@
         <state line="592" column="17" selection-start="18007" selection-end="18007" vertical-scroll-proportion="0.33333334" vertical-offset="8486" max-vertical-offset="15780" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="8" selection-start="2779" selection-end="2779" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="6885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Catalog/Model/Product/Url.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="5" selection-start="5037" selection-end="5216" vertical-scroll-proportion="0.0" vertical-offset="3264" max-vertical-offset="5372">
-          <folding />
-        </state>
+        <state line="192" column="5" selection-start="5037" selection-end="5216" vertical-scroll-proportion="0.0" vertical-offset="3264" max-vertical-offset="5372" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Catalog/Block/Product/View/Options/Type/Select.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="27" selection-start="7439" selection-end="7439" vertical-scroll-proportion="0.0" vertical-offset="2720" max-vertical-offset="2924">
+        <state line="160" column="27" selection-start="7439" selection-end="7439" vertical-scroll-proportion="0.0" vertical-offset="2720" max-vertical-offset="2924" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/log/exception.log">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Bundle/Block/Catalog/Product/Price.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="25" selection-start="3042" selection-end="3042" vertical-scroll-proportion="-7.8076925" vertical-offset="817" max-vertical-offset="1394" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/crosssell.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="152" selection-start="2087" selection-end="2087" vertical-scroll-proportion="-7.3076925" vertical-offset="82" max-vertical-offset="646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/wrapper/bottom.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="633">
+          <folding>
+            <marker date="1399051063803" expanded="true" signature="1002:1063" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="41" selection-start="5943" selection-end="5943" vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="6885">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/type/text.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="306" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/onlinesale/template/catalog/product/view/addtocart.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <folding>
+            <marker date="1390085606000" expanded="true" signature="1134:2131" placeholder="..." />
+            <marker date="1390085606000" expanded="true" signature="1210:1788" placeholder="..." />
+            <marker date="1390085606000" expanded="true" signature="1248:1765" placeholder="..." />
+            <marker date="1390085606000" expanded="true" signature="1287:1740" placeholder="..." />
+            <marker date="1390085606000" expanded="true" signature="1344:1359" placeholder="..." />
+            <marker date="1390085606000" expanded="true" signature="1397:1632" placeholder="..." />
+            <marker date="1390085606000" expanded="true" signature="1688:1703" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/addtocart.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="748">
+          <folding>
+            <marker date="1395327657240" expanded="true" signature="1130:1712" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="46" selection-start="3098" selection-end="3098" vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="2023">
+          <folding>
+            <marker date="1399400911300" expanded="false" signature="1045:1091" placeholder="..." />
+            <marker date="1399400911300" expanded="true" signature="1092:1515" placeholder="..." />
+            <marker date="1399400911300" expanded="false" signature="1106:1154" placeholder="..." />
+            <marker date="1399400911300" expanded="true" signature="1155:1334" placeholder="..." />
+            <marker date="1399400911300" expanded="false" signature="1168:1267" placeholder="..." />
+            <marker date="1399400911300" expanded="true" signature="1268:1328" placeholder="..." />
+            <marker date="1399400911300" expanded="true" signature="1337:1509" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/etc/local.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="54" selection-start="1892" selection-end="1892" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/addtocart.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="1830" selection-end="1830" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="680">
+          <folding>
+            <marker date="1399392467283" expanded="true" signature="1222:1812" placeholder="..." />
+            <marker date="1399392467283" expanded="true" signature="2331:2996" placeholder="..." />
+            <marker date="1399392467283" expanded="true" signature="2411:2696" placeholder="..." />
+            <marker date="1399392467283" expanded="true" signature="2845:2981" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/options.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="204" column="20" selection-start="9700" selection-end="9700" vertical-scroll-proportion="-27.115385" vertical-offset="2372" max-vertical-offset="3213">
+          <folding>
+            <marker date="1399392295986" expanded="false" signature="1617:1645" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/type/select.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="55" selection-start="1828" selection-end="1828" vertical-scroll-proportion="0.5883424" vertical-offset="0" max-vertical-offset="549">
-          <folding />
+        <state line="62" column="7" selection-start="3335" selection-end="3335" vertical-scroll-proportion="0.7883472" vertical-offset="0" max-vertical-offset="841">
+          <folding>
+            <element signature="e#1819#3336#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="2963" selection-end="2963" vertical-scroll-proportion="0.5966851" vertical-offset="225" max-vertical-offset="2227">
-          <folding />
-        </state>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="241" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.46961325" vertical-offset="136" max-vertical-offset="2329">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

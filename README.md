@@ -1,14 +1,11 @@
-Rattan Outdoor Furniture
-========================
+#Rattan Outdoor Furniture#
 
-Overview
---------
+##Overview##
 This file will contain daily update information, along with general todos and
 should generally cover the progress made and to be made on the Rattan Outdoor
 Furniture web site project.
 
-Notes:
-------
+##Notes:##
 I wanted to start a more general notes section of this file.
 Here I will append this section with little notes relative to what I'm working on.
 More detailed than in the TODO section, but more general than the change log.
@@ -17,11 +14,11 @@ More detailed than in the TODO section, but more general than the change log.
 * Each product will have 4 images, not 3. The main image should not be re-used in the thumbnail section. (Really weird when cycling through the photos to see the same one twice.)
 * Collections section. Like Products, but a top-level category that is called collections, and each collection is a sub-category of that, and all products of a collection (the site [skinny] viewable ones anyway). This does not have to be added to the main menu, but could be. It could also replace the "related" products on the cateogry page (cause that's kind of what a category page is already), so have a "Collections" section below the lounger results, where it would list 4 collections, going to that collection page.
 
-Global TODO:
--------------
+##Global TODO:##
+* TONIGHT: Think over other options as to why this is not working. Perhaps a little break from the code will give me a fresh view on the issue. This often helps.
+
 * MUST DO: When you fix something COMMIT IT BEFORE DOING __ANYTHING__ ELSE!
 * MUST DO: A Magento DATABASE BACKUP BEFORE __EVERY__ COMMIT!
-
 
 * Global search functionality
 * Add functionality to footer newsletter form
@@ -34,7 +31,7 @@ Global TODO:
 * Create all products for all sub-category pages. Attach images, details, price, color, and inventory.
 * 4 Images per product
 * If we're making collections pages, which we should, a link to the collection page for each product should be on the product page. like "View Collection" or something.
-
+* Merge retro branch (working add-to-cart code) with the develop branch (who's add-to-cart code is broken). The develop branch has further work of styling, but this is the purpose of GIT, so that different work can be done, and synced later.
 
 * [DONE]Create Main Category Pages (As they are noted on the design)
 * [FIXED] Finalize and Normalize canonicalization of category / product links (also fixed canonical link (html element), which is readable by google, so the lineage of the site should be good now. (SEO Win)
@@ -42,10 +39,19 @@ Global TODO:
 * [KEYWORDS] Decide Product Categories and create pages/categories
 
 
-Change Log:
-------------
-###2014-05-06###
+##Change Log:##
 
+###2014-05-06###
+* I FIXED IT!!!! It's not the prettiest, but as far as functionality goes, that's FAR more important. I can change the styles later. It just needs to work now. But the product is adding to the cart, with the color-swatch option, quantity, and price. Now, This is on a seperate branch, so i didn't break anything worse. I will merge these two tomorrow, but for today, I want to make sure the working version is accurately backed up, and so that no matter what, we can always revert back to this point where it works, and has the majority of the Theme installed.
+* That didn't affect it. I'm going to clear the magento cache and sessions, as suggested  to do on the magento forum, and I'll re-index. Magento is just not pointing something to the right place, and at this point i'm honestly not sure what it is. If this does not work, I am going to go back to leafing through that hugh change set, and adding back in working elements. This had proved to be incredibly slow and tedious, so if i could have fixed it without having to do that, it would be better, but at this point, i am just not certain which method will come up with a solution in the least amount of time.
+* Try to fix the issue from the suggestions on Magento's forum. This seems to suggest that the redirect may be caused by the "flat" category.
+* Change the magento configuration to not redirect to the cart after adding a product. I've been meaning to do this, and I feel that now it will help figure out where the issue is (trying to remove any unneeded re-directs, so I can pin-point the place where it is failing.)
+* I'm running two parallel instances of the magento store, where one has the code from where the add-to-cart worked, and the current (develop) which has the new template, but not working when add to cart.
+* I was under the impression that the email was of priority number 1. I cannot afford to waste any more time on it, and need to get back into fixing this magento bug. So I am jumping back into that now.
+* I just talked to Larry, I was working on setting up the info@nauticaldepot.com email on his laptop. Corey did not leave very much info on where everything is. After very much poking around, NauticalDeopt.com is registered with goDaddy, not sure where email is pointing to, if it's handled by goDaddy, or if by Network Solutions, which is who the domain seems to point to. He has this set up very oddly.
+* The line below is referencing where the options are compiled (a sub-call) but the quantity controll element is defined here. Make sure EVERYTHING points where it should!
+* See this: /* @var $this Mage_Catalog_Block_Product_View_Options */, search for it, app/design/frontend/base/default/template/catalog/product/view/options.phtml
+* Progressing though the data in the exception. It is looking like I have a lock on the place where the bug is beginning.
 * After the quick sync of data. Jump right into working on that bug. I am making another branch that will revert back to when i had the cart working, and I wil see what Magento changed. I am hoping this will work pretty easily. I also have the option of bypassing the Internal Integrity check, but this will more than likely cause security flaws, and is something I would like to avoid if at all possible. I will make another note in about an hour with progress.
 * Back in the office today. Get everything synced up from development at home yesterday.
 
