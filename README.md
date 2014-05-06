@@ -19,7 +19,6 @@ More detailed than in the TODO section, but more general than the change log.
 * I think i might have just figured out what is wrong with the cart and i want to jot it down before i forget. I want to try to add each attribute to the form submit URL, delineated by forward slashes, key-value pairs. Do this with javascript. capture the button press. parse the current URL. add the color and quantity options. Mark product internal ID. and send to [root]/checkout/cart/add/[prop-pairs(product/1/qty/2/color/blue)...
 * Okay, I have to have it this time. The bug seems to be with the name of the control element. This should be an array of "options" values, with the option (i.e. 'color'), as the array key, and the passed value should be the option actually chosen by the customer.
 * take advantage of git to figure this out. i made a commit when i got it to work, minus the layout of the buttons and qty. i'm going to make a new directory that reverts to when this worked, and then i will re-add back in the newer patches. This should be a more time-efficient way to fix this problem.
-* ___Stop working for today___. Just scared the HELL out of myself. (thought I lost all of the work i did today. nothing before today, but all of today wasted would have SUCKED!!!) There's no problem. But the database NEEDS TO BE BACKED UP WITH EVERY COMMIT! they are state related, and overlaps are not good! This is HIGHLY IMPORTANT for the future security, up-time and reliabilty of service.
 
 Global TODO:
 -------------
@@ -50,7 +49,7 @@ Change Log:
 ------------
 
 ###2014-05-05##
-
+* ___Stop working for today___. Just scared the HELL out of myself. (thought I lost all of the work i did today. nothing before today, but all of today wasted would have SUCKED!!!) There's no problem. But the database NEEDS TO BE BACKED UP WITH EVERY COMMIT! they are state related, and overlaps are not good! This is HIGHLY IMPORTANT for the future security, up-time and reliabilty of service.
 * In the mix of fixing the add-to-cart issue, i ran into a bug with the images. For it to work the way we want, we will need 4 images per product. http://dev.rattanoutdoorfurniture.com/products/loungers/brighton-sling-chaise-lounger-beta has the corrected images (but no coushoin colors, so you can't purchase it. the last note.)
 * Fixed a partial issue... Related to the color and quantity selection. This also made me aware that if there is no color to be offered, Magento thinks the item is not for sale. How should we handle that?
 * I was able to get internet on my laptop thru my phone. Got last weeks code updates and resources updates as well. Beginning working on the bug.
