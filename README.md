@@ -16,9 +16,6 @@ More detailed than in the TODO section, but more general than the change log.
 * When there are no color optoins left for a product, magento assumes you will not sell it without a color option to choose. This is something we will have to decice what we want to do. I am thinking that we make a kind of "default" color, so people can still order the product.
 * Each product will have 4 images, not 3. The main image should not be re-used in the thumbnail section. (Really weird when cycling through the photos to see the same one twice.)
 * Collections section. Like Products, but a top-level category that is called collections, and each collection is a sub-category of that, and all products of a collection (the site [skinny] viewable ones anyway). This does not have to be added to the main menu, but could be. It could also replace the "related" products on the cateogry page (cause that's kind of what a category page is already), so have a "Collections" section below the lounger results, where it would list 4 collections, going to that collection page.
-* I think i might have just figured out what is wrong with the cart and i want to jot it down before i forget. I want to try to add each attribute to the form submit URL, delineated by forward slashes, key-value pairs. Do this with javascript. capture the button press. parse the current URL. add the color and quantity options. Mark product internal ID. and send to [root]/checkout/cart/add/[prop-pairs(product/1/qty/2/color/blue)...
-* Okay, I have to have it this time. The bug seems to be with the name of the control element. This should be an array of "options" values, with the option (i.e. 'color'), as the array key, and the passed value should be the option actually chosen by the customer.
-* take advantage of git to figure this out. i made a commit when i got it to work, minus the layout of the buttons and qty. i'm going to make a new directory that reverts to when this worked, and then i will re-add back in the newer patches. This should be a more time-efficient way to fix this problem.
 
 Global TODO:
 -------------
@@ -47,8 +44,16 @@ Global TODO:
 
 Change Log:
 ------------
+###2014-05-06###
+
+* After the quick sync of data. Jump right into working on that bug. I am making another branch that will revert back to when i had the cart working, and I wil see what Magento changed. I am hoping this will work pretty easily. I also have the option of bypassing the Internal Integrity check, but this will more than likely cause security flaws, and is something I would like to avoid if at all possible. I will make another note in about an hour with progress.
+* Back in the office today. Get everything synced up from development at home yesterday.
 
 ###2014-05-05##
+
+* take advantage of git to figure this out. i made a commit when i got it to work, minus the layout of the buttons and qty. i'm going to make a new directory that reverts to when this worked, and then i will re-add back in the newer patches. This should be a more time-efficient way to fix this problem.
+* Okay, I have to have it this time. The bug seems to be with the name of the control element. This should be an array of "options" values, with the option (i.e. 'color'), as the array key, and the passed value should be the option actually chosen by the customer.
+* I think i might have just figured out what is wrong with the cart and i want to jot it down before i forget. I want to try to add each attribute to the form submit URL, delineated by forward slashes, key-value pairs. Do this with javascript. capture the button press. parse the current URL. add the color and quantity options. Mark product internal ID. and send to [root]/checkout/cart/add/[prop-pairs(product/1/qty/2/color/blue)...
 * ___Stop working for today___. Just scared the HELL out of myself. (thought I lost all of the work i did today. nothing before today, but all of today wasted would have SUCKED!!!) There's no problem. But the database NEEDS TO BE BACKED UP WITH EVERY COMMIT! they are state related, and overlaps are not good! This is HIGHLY IMPORTANT for the future security, up-time and reliabilty of service.
 * In the mix of fixing the add-to-cart issue, i ran into a bug with the images. For it to work the way we want, we will need 4 images per product. http://dev.rattanoutdoorfurniture.com/products/loungers/brighton-sling-chaise-lounger-beta has the corrected images (but no coushoin colors, so you can't purchase it. the last note.)
 * Fixed a partial issue... Related to the color and quantity selection. This also made me aware that if there is no color to be offered, Magento thinks the item is not for sale. How should we handle that?
