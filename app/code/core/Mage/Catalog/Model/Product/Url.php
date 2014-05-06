@@ -176,6 +176,13 @@ class Mage_Catalog_Model_Product_Url extends Varien_Object
 
         if (is_null($category)) {
             /** @todo get default category */
+            /**
+             * Get product category path based on the product, duh. stupid magento, why wouldn't you do this by default?
+             */
+            $categories = $product->getCategoryIds();
+            $categoryid = end($categories);
+            $category   = Mage::getModel('catalog/category')->load($categoryid);
+            $path       = $category->getUrlPath().basename($_product->getProductUrl());
             return $path;
         } elseif (!$category instanceof Mage_Catalog_Model_Category) {
             Mage::throwException('Invalid category object supplied');

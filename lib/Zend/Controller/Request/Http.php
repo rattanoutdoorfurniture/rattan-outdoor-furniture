@@ -541,7 +541,7 @@ class Zend_Controller_Request_Http extends Zend_Controller_Request_Abstract
 
     /**
      * Everything in REQUEST_URI before PATH_INFO
-     * <form action="<?=$baseUrl?>/news/submit" method="POST"/>
+     * <form action="<?php echo$baseUrl?>/news/submit" method="POST"/>
      *
      * @return string
      */

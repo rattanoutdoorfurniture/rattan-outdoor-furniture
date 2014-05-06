@@ -77,9 +77,9 @@
 //    }
 ?>
 <?php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
-<form id="product_addtocart_form" action="<?php echo $this->getSubmitUrl($_product,array("Location"=>urlencode($actual_link))) ?>" method="post"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+<form id="product_addtocart_form" action="<?php echo $this->getSubmitUrl($_product) ?>" method="post"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
 
-<?php echo $this->getBlockHtml('formkey') ?>
+<?php //echo $this->getBlockHtml('formkey') ?>
 
 <div class="no-display">
     <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
@@ -148,7 +148,7 @@
         <a class="product-details-social-btn tw">Twitter</a>
         <a class="product-details-social-btn gp">Google Plus</a>
         <a class="product-details-social-btn pn">Pinterest</a>
-        <a class="product-details-social-btn em">Email</a>
+        <a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>" class="product-details-social-btn em">Email</a>
         <a class="product-details-social-btn hz">Houzz</a>
         <a class="product-details-social-btn ig">Instagram</a>
     </div>
@@ -167,17 +167,22 @@
         <section id="product-tabs-<?php echo $alias;?>" class="product-tab<?php echo ($html==$detailedInfoFirst) ? $this->__(" active") : ''; ?>">
             <h2 class="product-tab-title"><a href="#product-tabs-<?php echo $alias;?>"><?php echo strlen($title = $this->getChildData($alias, 'title')) ? $this->escapeHtml($title) : $this->__("Overview"); ?></a></h2>
             <div class="product-tab-body">
-                <?php /*
-                    $html = '<div id="product-tab-body-'.$alias.'">'.PHP_EOL.$html.PHP_EOL.'</div>'.PHP_EOL;
-                    $dom = new DOMDocument('1.0', 'iso-8859-1');
-                    $dom->xmlStandalone = false;
-                    $dom->loadHTML($html);
-                    $xml = simplexml_load_string($dom->saveXML());
-                    $arr = $xml->xpath('//div[@class="std"]');
-                    foreach($arr as $elem) {
-                        echo $elem->asXML();
-                    }
-                */?>
+                <?php
+                /**
+                 * Not sure which of these methods will be most efficient. We can do speed tests.
+                 */
+                /*
+                $html = '<div id="product-tab-body-'.$alias.'">'.PHP_EOL.$html.PHP_EOL.'</div>'.PHP_EOL;
+                $dom = new DOMDocument('1.0', 'iso-8859-1');
+                $dom->xmlStandalone = false;
+                $dom->loadHTML($html);
+                $xml = simplexml_load_string($dom->saveXML());
+                $arr = $xml->xpath('//div[@class="std"]');
+                foreach($arr as $elem) {
+                    echo $elem->asXML();
+                }
+            */
+                ?>
                 <?php $_description = $this->getProduct()->getDescription(); ?>
                 <?php echo $this->helper('catalog/output')->productAttribute($this->getProduct(), $_description, 'description') ?>
             </div>
@@ -228,6 +233,12 @@
         </div>
     </section>
 </article>
+
+<!-- print this stuff to see what it is -->
+<?php echo $this->getChildHtml('alert_urls') ?>
+<?php echo $this->getChildHtml('product_type_data') ?>
+<?php echo $this->getTierPriceHtml() ?>
+<?php echo $this->getChildHtml('extrahint') ?>
 
 <!--
 ------------------------------------------------------------------------------
@@ -333,7 +344,13 @@
                 var form = this.form;
                 var oldUrl = form.action;
 
-                if (url) {
+                if(!url) {
+//                    url = "/checkout/cart/add/product/"
+//                        + jQuery("[name=product]").val()
+//                        + "/qty/"
+//                        + jQuery("[name=qty]").val()
+//                        + "/color/"
+//                        + jQuery("[name=color").val();
                    form.action = url;
                 }
                 var e = null;

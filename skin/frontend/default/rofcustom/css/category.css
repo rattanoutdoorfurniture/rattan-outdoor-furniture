@@ -118,6 +118,7 @@
     background: #FFF;
     display: block;
     text-decoration: none;
+    min-height: 285px;
 }
 
 .category-product-img {
@@ -135,19 +136,19 @@
     margin-bottom: 10px;
 }
 
-.category-product-collection,
-.category-product-title {
+.category-product-title,
+.category-product-collection {
     margin: 0 5px;
     font-family: 'FuturaStd-Medium';
     text-align: center;
 }
 
-.category-product-collection {
+.category-product-title {
     font-size: 13px;
     margin-bottom: 2px;
 }
 
-.category-product-title {
+.category-product-collection {
     font-size: 11px;
     margin-bottom: 10px;
 }

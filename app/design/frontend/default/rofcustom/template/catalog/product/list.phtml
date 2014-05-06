@@ -35,10 +35,10 @@
         <a id="category-product-inner-<?php echo $_product->getId()?>" href="<?php echo $url ?>" class="category-product-inner clearfix"  title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>">
             <img class="category-product-img" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($imageWidth,$imageHeight); ?>" alt="The Willis Wheat Collection - 5pc. Power Reclining Sectional" width="<?php echo $imageWidth;?>"<!-- 200 --> height="<?php echo $imageHeight; ?>"<!-- 142 --> />
             <div class="category-product-img-underline"></div>
-            <section class="category-product-collection" title="<?php echo $_productNameStripped; ?>">
+            <section class="category-product-title" title="<?php echo $_productNameStripped; ?>">
                 <?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>
             </section>
-            <section class="category-product-title"><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></section>
+            <section class="category-product-collection"><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></section>
             <?php echo $this->getPriceHtml($_product, true) ?>
             <button class="category-product-add" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><?php echo $this->__("Add to Cart")?></button>
         </a>
@@ -75,10 +75,10 @@
         <a data-position="<?php echo $_product->getPosition(); ?>" id="category-product-inner-<?php echo $_product->getId()?>" href="<?php echo $url; ?>" class="category-product-inner clearfix"  title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>">
             <img class="category-product-img" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($imageWidth,$imageHeight); ?>" alt="The Willis Wheat Collection - 5pc. Power Reclining Sectional" width="<?php echo $imageWidth;?>" height="<?php echo $imageHeight; ?>" /><!-- 200x142 -->
             <div class="category-product-img-underline"></div>
-            <section class="category-product-collection" title="<?php echo $_productNameStripped; ?>">
+            <section class="category-product-title" title="<?php echo $_productNameStripped; ?>">
                 <?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>
             </section>
-            <section class="category-product-title"><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></section>
+            <section class="category-product-collection"><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></section>
             <?php echo $this->getPriceHtml($_product, true) ?>
             <!--            <aside class="category-product-price">$1,899</aside>-->
             <button class="category-product-add" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><?php echo $this->__("Add to Cart")?></button>

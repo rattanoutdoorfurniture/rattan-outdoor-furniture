@@ -157,8 +157,8 @@ class Mage_Catalog_Block_Product_View_Options_Type_Select
     public function getValues() {
         $_option = $this->getOption();
         $retVals = array();
-        foreach($_option->getValues() as $optVal) {
-            $retVals[] = $optVal->getData();
+        foreach($_option->getValues() as $optId=>$optVal) {
+            $retVals[$optId] = $optVal->getData();
         }
         return $retVals;
     }
