@@ -24,13 +24,91 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div class="page-title">
-    <h1><?php echo $this->__('Shopping Cart is Empty') ?></h1>
+<div class="page-title sixteen columns">
+    <h1 id="cart-heading"><?php echo $this->__('Your Cart') ?></h1>
 </div>
-<div class="cart-empty">
+<div class="cart-empty displaynone">
     <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
     <?php echo $this->getChildHtml('checkout_cart_empty_widget'); ?>
     <p><?php echo $this->__('You have no items in your shopping cart.') ?></p>
     <p><?php echo $this->__('Click <a href="%s">here</a> to continue shopping.', $this->getContinueShoppingUrl()) ?></p>
     <?php echo $this->getChildHtml('shopping.cart.table.after'); ?>
 </div>
+
+<div id="cart-cartbox" class="ten columns cart-box add-bottom">
+    <div class="cart-box-border"></div>
+    <div class="cart-box-inner">
+        <table id="cart-cartbox-table">
+            <tr id="cart-cartbox-table-header">
+                <th class="cart-cartbox-table-header-label"><?php echo $this->__("Product"); ?></th>
+                <th class="cart-cartbox-table-header-label"><?php echo $this->__("Price"); ?></th>
+                <th class="cart-cartbox-table-header-label"><?php echo $this->__("Quantity"); ?></th>
+                <th class="cart-cartbox-table-header-label"><?php echo $this->__("Total"); ?></th>
+                <th id="cart-cartbox-table-edit">
+                    <a href="#" id="cart-cartbox-table-edit-btn" onclick="return false;" class="displaynone">
+                        <img id="cart-cartbox-table-edit-btn-img" src="/skin/frontend/default/rofcustom/images/cart-cartbox-table-edit-icon.png" alt="Edit Cart" />
+                    </a>&nbsp;
+                </th>
+            </tr>
+            <tr class="cart-cartbox-table-product">
+                <td class="cart-cartbox-table-product-detail" colspan="5">
+                    <p></p>
+                    <p><?php echo $this->__('You have no items in your shopping cart.') ?></p>
+                </td>
+            </tr>
+<!--            <tr class="cart-cartbox-table-product">-->
+<!--                <td class="cart-cartbox-table-product-detail">-->
+<!--                    <div class="cart-cartbox-table-product-detail-img-wrap">-->
+<!--                        <img class="cart-cartbox-table-product-detail-img" src="/skin/frontend/default/rofcustom/images/product_01_thumb.jpg" alt="Brighton Sling Chaise Lounge"/>-->
+<!--                    </div>-->
+<!--                    <h3 class="cart-cartbox-table-product-detail-title">Brighton Sling Chaise Lounge</h3>-->
+<!--                    <section  class="cart-cartbox-table-product-detail-item">Item #: 325498</section>-->
+<!--                    <section  class="cart-cartbox-table-product-detail-model">Model #: 019283</section>-->
+<!--                </td>-->
+<!--                <td class="cart-cartbox-table-product-price">$849</td>-->
+<!--                <td class="cart-cartbox-table-product-qty">1</td>-->
+<!--                <td class="cart-cartbox-table-product-total">$849</td>-->
+<!--                <td class="cart-cartbox-table-product-checkmark"><input type="checkbox" /></td>-->
+<!--            </tr>-->
+        </table>
+        <section id="cart-cartbox-toggle">
+            <span id="cart-cartbox-toggle-text">Show Items In Your Cart (2)</span>
+            <div id="cart-cartbox-toggle-btn" title="Show / Hide Cart Items">Show / Hide Cart Items</div>
+        </section>
+    </div>
+    <div class="cart-box-border"></div>
+</div>
+
+<section id="cart-btns" class="six columns hideCheckout">
+    <div id="cart-subtotal" class="cart-box">
+        <div class="cart-box-border"></div>
+        <div class="cart-box-inner">
+            <h3 id="cart-subtotal-header"><?php echo $this->__("Order Subtotal - Cart Empty"); ?></h3>
+            <section id="cart-subtotal-sub"><?php echo $this->__("Free Shipping on All Orders"); ?></section>
+<!--            <table id="cart-subtotal-table">-->
+<!--                <tr id="cart-subtotal-table-title">-->
+<!--                    <th colspan="2">Subtotal:</th>-->
+<!--                </tr>-->
+<!--                <tr id="cart-subtotal-table-items" class="cart-subtotal-table-row clearfix">-->
+<!--                    <th class="cart-subtotal-table-left">Items Total:</th>-->
+<!--                    <td class="cart-subtotal-table-right">$1,834.00</td>-->
+<!--                </tr>-->
+<!--                <tr id="cart-subtotal-table-shipping" class="cart-subtotal-table-row clearfix">-->
+<!--                    <th class="cart-subtotal-table-left">Shipping:</th>-->
+<!--                    <td class="cart-subtotal-table-right">FREE</td>-->
+<!--                </tr>-->
+<!--                <tr id="cart-subtotal-table-shipping" class="cart-subtotal-table-row clearfix">-->
+<!--                    <th class="cart-subtotal-table-left">Order Total:</th>-->
+<!--                    <td class="cart-subtotal-table-right">$1,834.00</td>-->
+<!--                </tr>-->
+<!--            </table>-->
+        </div>
+        <div class="cart-box-border"></div>
+    </div>
+    <section id="cart-continue" class="cart-btn-wrap clearfix">
+        <button id="cart-continue-btn" class="cart-btn" onclick="setLocation('<?php echo $this->getUrl("products");?>');">Back to Store</button>
+    </section>
+    <section id="cart-checkout" class="cart-btn-wrap clearfix">
+        <button id="cart-checkout-btn" class="cart-btn">Checkout</button>
+    </section>
+</section>

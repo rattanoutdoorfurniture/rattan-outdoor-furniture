@@ -35,14 +35,23 @@
 <?php if ($this->canApplyMsrp()): ?>
     <div class="cart-msrp-totals"><?php echo $this->__('ORDER TOTAL WILL BE DISPLAYED BEFORE YOU SUBMIT THE ORDER'); ?></div>
 <?php else: ?>
-    <table id="shopping-cart-totals-table">
-        <col />
-        <col width="1" />
-        <tfoot>
-            <?php echo $this->renderTotals('footer'); ?>
-        </tfoot>
-        <tbody>
-            <?php echo $this->renderTotals(); ?>
-        </tbody>
+    <table id="cart-subtotal-table">
+        <tr id="cart-subtotal-table-title">
+            <th colspan="2">Subtotal:</th>
+        </tr>
+        <?php echo $this->renderTotals(); ?>
+        <tr id="cart-subtotal-table-items" class="cart-subtotal-table-row clearfix">
+            <th class="cart-subtotal-table-left">Items Total:</th>
+            <td class="cart-subtotal-table-right">$1,834.00</td>
+        </tr>
+        <tr id="cart-subtotal-table-shipping" class="cart-subtotal-table-row clearfix">
+            <th class="cart-subtotal-table-left">Shipping:</th>
+            <td class="cart-subtotal-table-right">FREE</td>
+        </tr>
+        <?php echo $this->renderTotals('footer'); ?>
+        <tr id="cart-subtotal-table-shipping" class="cart-subtotal-table-row clearfix">
+            <th class="cart-subtotal-table-left">Order Total:</th>
+            <td class="cart-subtotal-table-right">$1,834.00</td>
+        </tr>
     </table>
 <?php endif; ?>

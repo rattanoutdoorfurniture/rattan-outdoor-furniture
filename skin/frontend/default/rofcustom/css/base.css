@@ -280,5 +280,5 @@
     .hashborder-border._05 {
         height: 5px !important;
     }
-
+    .displaynone { display: none !important; }
 

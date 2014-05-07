@@ -10,13 +10,13 @@
     color: #895c9a;
     font-family: "Tahoma";
     text-transform: uppercase;
-    margin: 10px 10px 20px;
+    margin: 10px 0px 20px;
     font-size: 22px;
     line-height: 22px;
     padding-bottom: 10px;
 }
 
-img, button {
+img, button, input {
     outline: 0 none;
 }
 
@@ -141,23 +141,43 @@ img, button {
         width: 100%;
         height: auto;
         margin: 7px 5px 4px;
+        text-decoration: none;
     }
 
-    .cart-cartbox-table-product-detail-title {
+    .cart-cartbox-table-product-detail-title,
+    .cart-cartbox-table-product-detail-title > a {
         font: normal 14px/14px "Tahoma";
         color: #8a6399;
         display: block;
         text-align: left;
-        margin: 15px 0 5px;
+        margin: 10px 0 5px;
+        text-decoration: none;
     }
 
     .cart-cartbox-table-product-detail-item,
-    .cart-cartbox-table-product-detail-model {
+    .cart-cartbox-table-product-detail-model,
+    .cart-cartbox-table-product-detail-color {
         font: normal 12px/12px "Tahoma";
         color: #555;
         display: block;
         text-align: left;
         margin-bottom: 5px;
+    }
+
+    .cart-cartbox-table-product-qty {
+        text-align: center;
+    }
+
+    .cart-cartbox-table-product-qty input {
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        border-collapse: collapse;
+        border: 2px inset transparent;
+        color: rgb(0, 0, 0);
+    }
+
+    .cart-cartbox-table-product-qty input:focus {
+        border: 2px inset rgb(238, 238, 238);
     }
 
     #cart-cartbox-toggle {
@@ -521,11 +541,13 @@ img, button {
         width: 45%;
     }
 
-    #cart-cartbox.hide-items ~ #cart-btns #cart-continue {
+    #cart-cartbox.hide-items ~ #cart-btns #cart-continue,
+    #cart-btns.hideCheckout #cart-continue {
         width: 100%;
     }
 
-    #cart-cartbox.hide-items ~ #cart-btns #cart-checkout {
+    #cart-cartbox.hide-items ~ #cart-btns #cart-checkout,
+    #cart-btns.hideCheckout #cart-checkout {
         display: none;
     }
 
@@ -546,7 +568,8 @@ img, button {
         width: 130px;
     }
 
-    #cart-cartbox.hide-items ~ #cart-btns #cart-continue-btn {
+    #cart-cartbox.hide-items ~ #cart-btns #cart-continue-btn,
+    #cart-btns.hideCheckout #cart-continue-btn {
         background: #8a6399 url('../images/cart-continue-btn-hide-items.png') center center no-repeat;
         width: 310px;
     }
