@@ -77,9 +77,9 @@
 //    }
 ?>
 <?php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
-<form id="product_addtocart_form" action="<?php echo $this->getSubmitUrl($_product) ?>" method="post"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+<form class="clearfix" action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
 
-<?php //echo $this->getBlockHtml('formkey') ?>
+<?php echo $this->getBlockHtml('formkey') ?>
 
 <div class="no-display">
     <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
@@ -127,19 +127,43 @@
 
     <div id="product-details-special">
         <span id="product-details-special-label">Special Offers:</span>
-        <span id="product-details-special-text">Spend $ 2,000 and save an extra <mark class="purpText">20%</mark></span>
+        <span id="product-details-special-text">Spend $ 2,000 and save an extra <mark class="purpText">10%</mark></span>
     </div>
 
     <!-- Color and Quantity Section --------------------------------------------------->
 
-
+    <div id="product-details-options" class="clearfix">
     <?php if ($_product->isSaleable()):// && $this->hasOptions()):?>
         <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
     <?php endif;?>
+    </div>
 
     <!-- Call to Action buttons --------------------------------------------------------->
 
-
+    <?php if (!$this->hasOptions()):?>
+        <div class="add-to-box">
+            <?php if($_product->isSaleable()): ?>
+                <?php echo $this->getChildHtml('addtocart') ?>
+                <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                    <span class="or"><?php echo $this->__('OR') ?></span>
+                <?php endif; ?>
+            <?php endif; ?>
+            <?php echo $this->getChildHtml('addto') ?>
+        </div>
+        <?php echo $this->getChildHtml('extra_buttons') ?>
+    <?php elseif (!$_product->isSaleable()): ?>
+        <div class="add-to-box">
+            <?php echo $this->getChildHtml('addto') ?>
+        </div>
+    <?php endif; ?>
+    <div id="product-details-btns">
+        <section id="product-details-btns-add" class="product-details-btn">
+            <button id="product-details-btns-add-btn" class="product-details-btn-img" onclick="productAddToCartForm.submit(this)">Add To Cart</button>
+        </section>
+        <section id="product-details-btns-checkout" class="product-details-btn">
+            <button id="product-details-btns-checkout-btn" class="product-details-btn-img">Checkout</button>
+        </section>
+    </div>
 
     <!-- Social Media Buttons Area -------------------------------------------------------->
 
@@ -235,10 +259,10 @@
 </article>
 
 <!-- print this stuff to see what it is -->
-<?php echo $this->getChildHtml('alert_urls') ?>
-<?php echo $this->getChildHtml('product_type_data') ?>
-<?php echo $this->getTierPriceHtml() ?>
-<?php echo $this->getChildHtml('extrahint') ?>
+<?php //echo $this->getChildHtml('alert_urls') ?>
+<?php //echo $this->getChildHtml('product_type_data') ?>
+<?php //echo $this->getTierPriceHtml() ?>
+<?php //echo $this->getChildHtml('extrahint') ?>
 
 <!--
 ------------------------------------------------------------------------------
@@ -344,7 +368,7 @@
                 var form = this.form;
                 var oldUrl = form.action;
 
-                if(!url) {
+                if(url) {
 //                    url = "/checkout/cart/add/product/"
 //                        + jQuery("[name=product]").val()
 //                        + "/qty/"

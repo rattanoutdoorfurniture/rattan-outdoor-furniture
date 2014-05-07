@@ -31,15 +31,19 @@ More detailed than in the TODO section, but more general than the change log.
 * Create all products for all sub-category pages. Attach images, details, price, color, and inventory.
 * 4 Images per product
 * If we're making collections pages, which we should, a link to the collection page for each product should be on the product page. like "View Collection" or something.
-* Merge retro branch (working add-to-cart code) with the develop branch (who's add-to-cart code is broken). The develop branch has further work of styling, but this is the purpose of GIT, so that different work can be done, and synced later.
 
-* [DONE]Create Main Category Pages (As they are noted on the design)
-* [FIXED] Finalize and Normalize canonicalization of category / product links (also fixed canonical link (html element), which is readable by google, so the lineage of the site should be good now. (SEO Win)
-* [FIXED]Add color options to the Product in the Magento Backend. This way we can remove a color if it's out of stock. (begin working on this now)
+* [DONE]     Merge retro branch (working add-to-cart code) with the develop branch (who's add-to-cart code is broken). The develop branch has further work of styling, but this is the purpose of GIT, so that different work can be done, and synced later.
+* [DONE]     Create Main Category Pages (As they are noted on the design)
+* [FIXED]    Finalize and Normalize canonicalization of category / product links (also fixed canonical link (html element), which is readable by google, so the lineage of the site should be good now. (SEO Win)
+* [FIXED]    Add color options to the Product in the Magento Backend. This way we can remove a color if it's out of stock. (begin working on this now)
 * [KEYWORDS] Decide Product Categories and create pages/categories
 
 
 ##Change Log:##
+
+###2014-05-07###
+* Finished re-basing (which is the industry term for this process) the code into the development branch, fixing the mal-edited Magento-core files. And Fix the Add-To-Cart bug. Removed the styling for the color and qty, but as noted below, this will be fixed soon, with the process I described. For now, I would like to just move on to the cart so I feel like I'm making significant progress, and I will come back to making the product page prettier.
+* Last night I figured out how I am going to handle the product page color issue. I am going to let Magento handle it Magento's way, and I will display the colors swatches the way we want them to display. I will hide Magento's drop-down from user's view, and when they select the color swatch option, I will use javascript to set the Magento drop-down (hidden), so that passing values will not be an issue. And I can begin styling the cart. I am going to beign working on this, this is my initial morning note. So I will begin here, and update with another note on progress in an hour or so.
 
 ###2014-05-06###
 * I FIXED IT!!!! It's not the prettiest, but as far as functionality goes, that's FAR more important. I can change the styles later. It just needs to work now. But the product is adding to the cart, with the color-swatch option, quantity, and price. Now, This is on a seperate branch, so i didn't break anything worse. I will merge these two tomorrow, but for today, I want to make sure the working version is accurately backed up, and so that no matter what, we can always revert back to this point where it works, and has the majority of the Theme installed.

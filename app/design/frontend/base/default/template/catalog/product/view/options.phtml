@@ -186,9 +186,11 @@
     //]]>
     </script>
     <!-- Options ----------------------------------->
+    <dl>
     <?php foreach($_options as $_option): ?>
         <?php echo $this->getOptionHtml($_option) ?>
     <?php endforeach; ?>
+    </dl>
     <!-- Quantity ---------------------------------->
     <?php /* $_product = $this->getProduct(); ?>
     <section id="product-details-options-qty" class="product-details-options-section">

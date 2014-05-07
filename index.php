@@ -68,7 +68,7 @@ if (file_exists($maintenanceFile)) {
 
 require_once $mageFilename;
 
-#set URL based on hostname
+//#set URL based on hostname
 //$dnsWhite    = array(
 //    "www.rattanoutdoorfurniture.com"    => array(
 //        "environment"   => "www"
@@ -91,8 +91,8 @@ require_once $mageFilename;
 //    MAGE::app()->reinitStores();
 //}
 //define('SERVER_ENV', $environment);
-
-#Varien_Profiler::enable();
+//
+//#Varien_Profiler::enable();
 
 if (isset($_SERVER['MAGE_IS_DEVELOPER_MODE'])){//||SERVER_ENV!="www") {
     Mage::setIsDeveloperMode(true);
