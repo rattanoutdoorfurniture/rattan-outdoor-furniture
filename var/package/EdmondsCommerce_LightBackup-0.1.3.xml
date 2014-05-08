@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package>
+    <name>EdmondsCommerce_LightBackup</name>
+    <version>0.1.3</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Modify the admin backup behaviour to not backup the data on logging tables etc to minimise backup size.</summary>
+    <description>Modify the admin backup behaviour to not backup the data for logging tables.&#xD;
+&#xD;
+Often these tables are very large and can make the backup filesize excessively large.&#xD;
+&#xD;
+Ideally these tables should be periodically cleared out, however it is unlikely that you will ever actually want to backup this data. By removing it we keep backup filesizes to the minimum.&#xD;
+&#xD;
+The tables for which data is not backed up are:&#xD;
+&#xD;
+        dataflow_batch_export,&#xD;
+        dataflow_batch_import,&#xD;
+        log_customer,&#xD;
+        log_quote,&#xD;
+        log_summary,&#xD;
+        log_summary_type,&#xD;
+        log_url,&#xD;
+        log_url_info,&#xD;
+        log_visitor,&#xD;
+        log_visitor_info,&#xD;
+        log_visitor_online,&#xD;
+        report_event</description>
+    <notes>Modify the admin backup behaviour to not backup the data on logging tables etc to minimise backup size.</notes>
+    <authors><author><name>Joseph Edmonds</name><user>auto-converted</user><email>info@edmondscommerce.co.ul</email></author></authors>
+    <date>2011-05-27</date>
+    <time>10:31:13</time>
+    <contents><target name="magecommunity"><dir name="EdmondsCommerce"><dir name="LightBackup"><dir name="etc"><file name="config.xml" hash="2bd66ffe9768569af1807684dd5fb9d6"/></dir><dir name="Model"><file name="Db.php" hash="95528279ab5f98e1aa9eb44a95996473"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="EC_Lightbackup.xml" hash="155610072c5b2cd9feda7685617e7624"/></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

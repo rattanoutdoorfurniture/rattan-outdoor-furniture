@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac3d19b1-e482-4ca0-a0dd-b066c436ba87" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/downloader/cache.cfg" afterPath="$PROJECT_DIR$/downloader/cache.cfg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/package/tmp/package.xml" afterPath="$PROJECT_DIR$/var/package/tmp/package.xml" />
     </list>
     <ignored path="dev.iws" />
     <ignored path=".idea/workspace.xml" />
