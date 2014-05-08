@@ -15,11 +15,10 @@ More detailed than in the TODO section, but more general than the change log.
 * Collections section. Like Products, but a top-level category that is called collections, and each collection is a sub-category of that, and all products of a collection (the site [skinny] viewable ones anyway). This does not have to be added to the main menu, but could be. It could also replace the "related" products on the cateogry page (cause that's kind of what a category page is already), so have a "Collections" section below the lounger results, where it would list 4 collections, going to that collection page.
 
 ##Global TODO:##
-* TONIGHT: Think over other options as to why this is not working. Perhaps a little break from the code will give me a fresh view on the issue. This often helps.
-
 * MUST DO: When you fix something COMMIT IT BEFORE DOING __ANYTHING__ ELSE!
 * MUST DO: A Magento DATABASE BACKUP BEFORE __EVERY__ COMMIT!
 
+* Update Item Quantity in cart. (Same section as clear cart. Don't waste time on this, as I have a feature development planned for this section.)
 * Global search functionality
 * Add functionality to footer newsletter form
 * Fix "Selected" main menu style
@@ -32,6 +31,7 @@ More detailed than in the TODO section, but more general than the change log.
 * 4 Images per product
 * If we're making collections pages, which we should, a link to the collection page for each product should be on the product page. like "View Collection" or something.
 
+* [DONE]     TONIGHT(2014-05-06): Think over other options as to why this is not working. Perhaps a little break from the code will give me a fresh view on the issue. This often helps.
 * [DONE]     Merge retro branch (working add-to-cart code) with the develop branch (who's add-to-cart code is broken). The develop branch has further work of styling, but this is the purpose of GIT, so that different work can be done, and synced later.
 * [DONE]     Create Main Category Pages (As they are noted on the design)
 * [FIXED]    Finalize and Normalize canonicalization of category / product links (also fixed canonical link (html element), which is readable by google, so the lineage of the site should be good now. (SEO Win)
@@ -42,6 +42,10 @@ More detailed than in the TODO section, but more general than the change log.
 ##Change Log:##
 
 ###2014-05-08###
+* The cart update/clear functions still need some work. They expose at the bottom of the cart when you try to edit the quantity. I would like to develop the __edit cart__ method I suggested before (and I have a note, probably in here, and I know I do on my desk and in KEEP). So I may save this for later until I have time to do that. I will decide this after looking into it more. If it will be worth my time to fix it now, i will just do so, but if it's going to be something I want to spend more time on, I will come back to it. I want to start getting into the checkout process.
+* I just finished re-styling the product page for the custom options section. I did this in the method as I had suggested before. Magento handles it how it likes, and I handle it how i want. I pass the values to magento, and everything is happy. Both products (with  or without color options) add to the cart. with a quantity that is limited by the inventory in magento.
+* Finished up the right column on the cart page (Order Subtotal). This is pretty basic for now. It does try to account for tax and such, but I'm mostly leaving that alone for now. I'm mostly concerned about summing the additive total of each item's quantity with's it's unit price, added across all items in the cart. There is a small issue with updating the quantity once already in the cart. this is obviously a javascript issue, which I will come back to. I will make a note of it in the TODO section, and I am going to begin fixing the product page color options styles now. I am about 45 minutes ahead of where I thought I would be, So I am going to smoke, and then jump right back into the product page, so I can wrap that up and move on to the checkout. Been a very productive morning.
+* I've got the new plugin installed. Everythign backed up, and I have synced the necessary files. Now I am going to begin working on the cart and checkout. I would like to wrap up the cart page by about noon, and I am going to just move right into the one-page checkout. This will be a huge part of the site that needs to be __EXTREMELY__ well tended to, and needs to be as smooth as possible. I believe this will take 2 or 3 days to get finalized, but it should also be very worth it. I will update progress around noon.
 * After I get the code and database backed up and synced, I will jump right into styling the rest of the cart Order Subtotal (right column), and then move back into the product page, where I will style the color and quantity options (I am going to spend an appropriate amount of time with this, I want to be very careful, and make sure this works without any hiccups , so the add-to-cart and checkout process will be as smooth as possible.) From there I will be moving on to the checkout section, But I will make a note before I begin that.
 * I just made those last 2 notes on yesterday. As mentioned, I am going to do my backup, saving, and uploading of work, so I have a clean start this morning, with everything saved and backed up as it should be according to the development process I've been using. (which directly saved us countless time already, and will continue to, so I am making sure this is done properly.)
 

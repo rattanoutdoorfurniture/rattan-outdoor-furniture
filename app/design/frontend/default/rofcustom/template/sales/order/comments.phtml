@@ -26,24 +26,18 @@
 ?>
 <?php
 /**
- * Shopping cart totals template
- *
- * @see Mage_Checkout_Block_Cart_Totals
- * @var $this Mage_Checkout_Block_Cart_Totals
+ * @var $this Mage_Sales_Block_Order_Comments
+ * @see Mage_Sales_Block_Order_Comments
  */
 ?>
-<?php if ($this->canApplyMsrp()): ?>
-    <div class="cart-msrp-totals"><?php echo $this->__('ORDER TOTAL WILL BE DISPLAYED BEFORE YOU SUBMIT THE ORDER'); ?></div>
-<?php else: ?>
-    <table id="cart-subtotal-table">
-        <tr id="cart-subtotal-table-title">
-            <th colspan="2">Subtotal:</th>
-        </tr>
-        <?php echo $this->renderTotals(); ?>
-        <tr id="cart-subtotal-table-shipping" class="cart-subtotal-table-row clearfix">
-            <th class="cart-subtotal-table-left">Shipping:</th>
-            <td class="cart-subtotal-table-right">FREE</td>
-        </tr>
-        <?php echo $this->renderTotals('footer'); ?>
-    </table>
-<?php endif; ?>
+<?php if ($this->hasComments()):?>
+    <div class="order-additional order-comments">
+        <h2 class="sub-title"><?php echo $this->getTitle() ?></h2>
+        <dl class="order-about">
+            <?php foreach ($this->getComments() as $_commentItem): ?>
+                <dt><?php echo $this->formatDate($_commentItem->getCreatedAtStoreDate(), 'medium', true) ?></dt>
+                <dd><?php echo $this->escapeHtml($_commentItem->getComment()) ?></dd>
+            <?php endforeach; ?>
+        </dl>
+    </div>
+<?php endif;?>

@@ -23,27 +23,3 @@
  * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
-?>
-<?php
-/**
- * Shopping cart totals template
- *
- * @see Mage_Checkout_Block_Cart_Totals
- * @var $this Mage_Checkout_Block_Cart_Totals
- */
-?>
-<?php if ($this->canApplyMsrp()): ?>
-    <div class="cart-msrp-totals"><?php echo $this->__('ORDER TOTAL WILL BE DISPLAYED BEFORE YOU SUBMIT THE ORDER'); ?></div>
-<?php else: ?>
-    <table id="cart-subtotal-table">
-        <tr id="cart-subtotal-table-title">
-            <th colspan="2">Subtotal:</th>
-        </tr>
-        <?php echo $this->renderTotals(); ?>
-        <tr id="cart-subtotal-table-shipping" class="cart-subtotal-table-row clearfix">
-            <th class="cart-subtotal-table-left">Shipping:</th>
-            <td class="cart-subtotal-table-right">FREE</td>
-        </tr>
-        <?php echo $this->renderTotals('footer'); ?>
-    </table>
-<?php endif; ?>

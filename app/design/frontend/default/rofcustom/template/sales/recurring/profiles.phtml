@@ -24,26 +24,18 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<?php
-/**
- * Shopping cart totals template
- *
- * @see Mage_Checkout_Block_Cart_Totals
- * @var $this Mage_Checkout_Block_Cart_Totals
- */
-?>
-<?php if ($this->canApplyMsrp()): ?>
-    <div class="cart-msrp-totals"><?php echo $this->__('ORDER TOTAL WILL BE DISPLAYED BEFORE YOU SUBMIT THE ORDER'); ?></div>
-<?php else: ?>
-    <table id="cart-subtotal-table">
-        <tr id="cart-subtotal-table-title">
-            <th colspan="2">Subtotal:</th>
-        </tr>
-        <?php echo $this->renderTotals(); ?>
-        <tr id="cart-subtotal-table-shipping" class="cart-subtotal-table-row clearfix">
-            <th class="cart-subtotal-table-left">Shipping:</th>
-            <td class="cart-subtotal-table-right">FREE</td>
-        </tr>
-        <?php echo $this->renderTotals('footer'); ?>
-    </table>
-<?php endif; ?>
+<?php /* @var $this Mage_Sales_Block_Recurring_Profiles */ ?>
+<div class="page-title">
+    <h1><?php echo $this->__('Recurring Profiles') ?></h1>
+</div>
+
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+
+<div class="recurring-profiles">
+
+    <?php echo $this->getChildHtml('grid')?>
+
+    <div class="buttons-set">
+        <p class="back-link"><a href="<?php echo $this->escapeHtml($this->getBackUrl()) ?>"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
+    </div>
+</div>

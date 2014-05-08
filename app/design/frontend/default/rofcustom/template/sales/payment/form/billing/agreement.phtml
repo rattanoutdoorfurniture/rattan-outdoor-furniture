@@ -24,26 +24,18 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<?php
-/**
- * Shopping cart totals template
- *
- * @see Mage_Checkout_Block_Cart_Totals
- * @var $this Mage_Checkout_Block_Cart_Totals
- */
-?>
-<?php if ($this->canApplyMsrp()): ?>
-    <div class="cart-msrp-totals"><?php echo $this->__('ORDER TOTAL WILL BE DISPLAYED BEFORE YOU SUBMIT THE ORDER'); ?></div>
-<?php else: ?>
-    <table id="cart-subtotal-table">
-        <tr id="cart-subtotal-table-title">
-            <th colspan="2">Subtotal:</th>
-        </tr>
-        <?php echo $this->renderTotals(); ?>
-        <tr id="cart-subtotal-table-shipping" class="cart-subtotal-table-row clearfix">
-            <th class="cart-subtotal-table-left">Shipping:</th>
-            <td class="cart-subtotal-table-right">FREE</td>
-        </tr>
-        <?php echo $this->renderTotals('footer'); ?>
-    </table>
-<?php endif; ?>
+<?php /* @var $this Mage_Sales_Block_Payment_Form_Billing_Agreement */?>
+<?php $_code=$this->getMethodCode() ?>
+<ul class="form-list" id="payment_form_<?php echo $_code ?>" style="display:none;">
+    <li>
+        <label for="<?php echo $_code ?>_ba_agreement_id" class="required"><em>*</em><?php echo $this->__('Billing Agreement') ?></label>
+        <div class="input-box">
+            <select id="<?php echo $_code ?>_ba_agreement_id" name="payment[<?php echo $this->getTransportName(); ?>]" class="required-entry">
+                <option value=""><?php echo $this->__('-- Please Select Billing Agreement--') ?></option>
+            <?php foreach ($this->getBillingAgreements() as $id => $referenceId): ?>
+                <option value="<?php echo $id ?>"><?php echo $this->escapeHtml($referenceId) ?></option>
+            <?php endforeach ?>
+            </select>
+        </div>
+    </li>
+</ul>
