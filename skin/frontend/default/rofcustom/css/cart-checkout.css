@@ -184,7 +184,8 @@ img, button, input {
         display: none;
     }
 
-    #cart-cartbox.hide-items #cart-cartbox-toggle {
+    #cart-cartbox.hide-items #cart-cartbox-toggle,
+    #cart-cartbox.collapse #cart-cartbox-toggle {
         display: block;
         height: 20px;
         padding: 10px 20px;
@@ -196,7 +197,8 @@ img, button, input {
         text-transform: uppercase;
     }
 
-    #cart-cartbox.hide-items #cart-cartbox-toggle-btn {
+    #cart-cartbox.hide-items #cart-cartbox-toggle-btn,
+    #cart-cartbox.collapse #cart-cartbox-toggle-btn {
         float: right;
         width: 20px;
         height: 10px;
@@ -514,6 +516,8 @@ img, button, input {
         border-bottom: 1px solid #e6e6e6;
         width: 130px;
         display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     .cart-subtotal-table-row {

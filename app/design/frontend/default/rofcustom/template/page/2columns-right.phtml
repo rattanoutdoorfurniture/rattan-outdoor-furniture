@@ -51,9 +51,13 @@
         <!-- Breadcrumbs: <?php echo $this->getChildHtml('breadcrumbs') ?> -->
         <!-- GlobalMessages: <?php echo $this->getChildHtml('global_messages') ?> -->
 
-        <?php echo $this->getChildHtml('content') ?>
+        <div class="twelve columns">
+            <?php echo $this->getChildHtml('content') ?>
+        </div>
 
-        <?php echo $this->getChildHtml('right') ?>
+        <div class="four columns">
+            <?php echo $this->getChildHtml('right') ?>
+        </div>
 
         <?php echo $this->getChildHtml('footer') ?>
         <?php echo $this->getChildHtml('before_body_end') ?>
