@@ -27,7 +27,7 @@
     <div class="clear"></div>
     <hr class="footer-rule sixteen columns"/>
     <div id="footer-sub">
-        <div id="footer-sub-copyright" class="eight columns"><?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('footer-copyright')->toHtml(); ?></div>
+        <div id="footer-sub-copyright" class="eight columns"><?php echo Mage::getStoreConfig('design/footer/copyright'); ?></div>
         <div id="footer-sub-icons" class="eight columns">
             <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('footer-badges')->toHtml(); ?>
         </div>

@@ -582,3 +582,40 @@ img, button, input {
         background: #56b2dd url('../images/cart-checkout-btn.png') center center no-repeat;
         width: 170px;
     }
+
+    /* One Page Checkout Custom Styles
+    ********************************************************************/
+
+    .opc-wrapper-opc .fields .field {
+        width: 100% !important;
+    }
+
+    .opc-wrapper-opc .form-list ul {
+        margin-left: 0;
+    }
+
+    .opc-wrapper-opc form span.no-display {
+        float: left;
+        margin-right: 5px;
+    }
+
+    .opc-wrapper-opc .button {
+        display: block;
+        border: none;
+        margin: 0 auto;
+        float: left;
+        background: none;
+        text-indent: -10000px;
+        width: 80px;
+        height: 40px !important;
+    }
+
+    .opc-wrapper-opc .button.apply-coupon {
+        background: #8a6399 url('../images/checkout-apply-coupon-btn.png') center center no-repeat;
+        width: 130px;
+    }
+
+    .opc-wrapper-opc .button.btn-checkout {
+        background: #56b2dd url('../images/cart-checkout-btn-wide.png') center center no-repeat;
+        width: 280px;
+    }
