@@ -586,36 +586,103 @@ img, button, input {
     /* One Page Checkout Custom Styles
     ********************************************************************/
 
-    .opc-wrapper-opc .fields .field {
-        width: 100% !important;
-    }
+        /* One Page Checkout Heading - Move Login Link Here
+        ****************************************************/
+        .opc-wrapper-opc .page-title {
+            display: inline-block;
+            white-space: nowrap;
+        }
 
-    .opc-wrapper-opc .form-list ul {
-        margin-left: 0;
-    }
+        .opc-wrapper-opc .page-title .text-login {
+            display: inline-block;
+            margin: 0;
+            padding-left: 10px;
+        }
 
-    .opc-wrapper-opc form span.no-display {
-        float: left;
-        margin-right: 5px;
-    }
+        /* Column And Field Adjustments for Proper Display
+        ****************************************************/
+        .opc-wrapper-opc .opc-col-left {
+            margin-right: 10px !important;
+            margin-left: 15px !important;
+        }
 
-    .opc-wrapper-opc .button {
-        display: block;
-        border: none;
-        margin: 0 auto;
-        float: left;
-        background: none;
-        text-indent: -10000px;
-        width: 80px;
-        height: 40px !important;
-    }
+        .opc-wrapper-opc .fields .field {
+            width: 100% !important;
+        }
 
-    .opc-wrapper-opc .button.apply-coupon {
-        background: #8a6399 url('../images/checkout-apply-coupon-btn.png') center center no-repeat;
-        width: 130px;
-    }
+        .opc-wrapper-opc .form-list ul {
+            margin-left: 0;
+        }
 
-    .opc-wrapper-opc .button.btn-checkout {
-        background: #56b2dd url('../images/cart-checkout-btn-wide.png') center center no-repeat;
-        width: 280px;
-    }
+        .opc-wrapper-opc .opc-data-table th {
+            padding-left: 0;
+            text-align: left;
+        }
+
+        /* One Page Checkout Review Section
+        ******************************************************/
+        .opc-wrapper-opc .product-name {
+            text-indent: -10px;
+            padding-left: 15px !important;
+        }
+        .opc-wrapper-opc .item-options {
+            padding-left: 10px;
+        }
+
+        .opc-wrapper-opc .item-options dt {
+            float: left;
+            margin-right: 5px;
+            text-transform: capitalize;
+            margin-left: 10px;
+            font-size: 85%;
+        }
+        .opc-wrapper-opc .item-options dt:after {
+            content: " -";
+        }
+
+        .opc-wrapper-opc .item-options dd {
+            font-size: 85%;
+        }
+
+        /* Fix Misc Floats and Element Labels
+        ******************************************************/
+
+        .opc-wrapper-opc form span.no-display,
+        .opc-wrapper-opc .form-list .control input,
+        .opc-wrapper-opc .opc-newsletter .input-box {
+            float: left;
+            margin-right: 5px;
+            width: auto !important;
+        }
+
+        /* One Page Checkout Buttons
+        *********************************************************/
+
+        .opc-wrapper-opc .button {
+            display: block;
+            border: none;
+            margin: 0 auto;
+            float: left;
+            background: none;
+            text-indent: -10000px;
+            width: 80px;
+            height: 40px !important;
+        }
+
+        .opc-wrapper-opc .button.apply-coupon {
+            background: #8a6399 url('../images/checkout-apply-coupon-btn.png') center center no-repeat;
+            width: 130px;
+        }
+
+        .opc-wrapper-opc .button.remove-coupon {
+            text-indent: 0;
+            float: right !important;
+            font-size: 14px;
+            font-weight: 400;
+            margin-right: 20px !important;
+        }
+
+        .opc-wrapper-opc .button.btn-checkout {
+            background: #56b2dd url('../images/cart-checkout-btn-wide.png') center center no-repeat;
+            width: 280px;
+        }

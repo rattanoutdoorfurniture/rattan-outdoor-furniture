@@ -12,3 +12,5 @@
 [5] C:\Projects\rof\code\dev\app\Mage.php:684
 [6] C:\Projects\rof\code\dev\index.php:113
 </pre>
+2014-05-12T20:13:42+00:00 CRIT (2): Not valid template file:frontend\base\default\template\opc/onepage/review/totals.phtml
+2014-05-12T20:13:47+00:00 CRIT (2): Not valid template file:frontend\base\default\template\opc/onepage/review/totals.phtml

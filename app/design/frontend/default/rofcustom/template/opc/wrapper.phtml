@@ -1,14 +1,14 @@
 <script type="text/javascript">countryRegions = <?php echo $this->helper('directory')->getRegionJson() ?></script>
 <div class="opc-wrapper-opc">
     <div class="page-title sixteen columns">
-        <h2 id="cart-heading"><?php echo $this->__('Your Cart') ?></h2>
-        <p><?php echo $this->__('Fill in the Fields below to complete your purchase!')?></p>
+        <h2 id="cart-heading"><?php echo $this->__('Your Cart');
+        if (!Mage::getSingleton('customer/session')->isLoggedIn()):?>
+            <?php echo $this->getChildHtml('login');?>
+        <?php endif;?></h2>
+        <p class="displaynone"><?php echo $this->__('Fill in the Fields below to complete your purchase!')?></p>
     </div>
-	
-	<?php if (!Mage::getSingleton('customer/session')->isLoggedIn()):?>
-		<?php echo $this->getChildHtml('login');?>	
-	<?php endif;?>
-	<div class="clear"></div>
+
+	<div class="clear move-columns displaynone"></div>
 
     <div class="opc-col-left">
 		<form id="opc-address-form-billing" method="post">
