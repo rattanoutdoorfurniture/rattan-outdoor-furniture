@@ -21,11 +21,7 @@ More detailed than in the TODO section, but more general than the change log.
 * Update Item Quantity in cart. (Same section as clear cart. Don't waste time on this, as I have a feature development planned for this section.)
 * Global search functionality
 * Add functionality to footer newsletter form
-* Fix "Selected" main menu style
 * Product reviews (just remove the reviews section for now.)
-* Color swatches on Product page. for now just assign a name for each fake color, and pass that along.
-* Add-To-Cart bug!!!
-* Figure out how we want to handle orders that do not have any available color options (this may be playing a part in why the add-to-cart is broken.)
 * Create all sub-category pages. These are going to be based on keyword lists
 * Create all products for all sub-category pages. Attach images, details, price, color, and inventory.
 * 4 Images per product
@@ -36,6 +32,10 @@ More detailed than in the TODO section, but more general than the change log.
 * Style Credit Card input section to mimic the layout on a credit card. (Worry about this when we settle on the payment processor.)
 * Accounts / Login / Automatic account creation for guest checkout (already generates a temporary password.)
 
+* [DONE]     Figure out how we want to handle orders that do not have any available color options (this may be playing a part in why the add-to-cart is broken.)
+* [DONE]     Color swatches on Product page. for now just assign a name for each fake color, and pass that along.
+* [DONE]     Fix "Selected" main menu style
+* [DONE]     Add-To-Cart bug!!!
 * [DONE]     TONIGHT(2014-05-06): Think over other options as to why this is not working. Perhaps a little break from the code will give me a fresh view on the issue. This often helps.
 * [DONE]     Merge retro branch (working add-to-cart code) with the develop branch (who's add-to-cart code is broken). The develop branch has further work of styling, but this is the purpose of GIT, so that different work can be done, and synced later.
 * [DONE]     Create Main Category Pages (As they are noted on the design)

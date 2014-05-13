@@ -2,6 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac3d19b1-e482-4ca0-a0dd-b066c436ba87" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/backups/1400011883_db_20140513develop1611light.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/image/380x270/602f0fa2c1f0d1ba5e241f914e856ff9/p/h/photos.ap-1172_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/image/500x377/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap-1172_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/thumbnail/80x/040ec09b1e35df139433887a97daa66f/p/h/photos.ap-1172_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/image/500x377/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap_1169_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/thumbnail/135x77/170ec19af00183b5e0368529fc2daa2f/p/h/photos.ap_1169_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/image/500x377/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap_1182_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/thumbnail/135x77/170ec19af00183b5e0368529fc2daa2f/p/h/photos.ap_1182_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/image/500x377/9df78eab33525d08d6e5fb8d27136e95/p/h/photos.ap_1232_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/catalog/product/cache/1/thumbnail/135x77/170ec19af00183b5e0368529fc2daa2f/p/h/photos.ap_1232_1.jpg" />
       <change type="DELETED" beforePath="C:\Projects\rof\code\dev\app\design\frontend\default\rofcustom\template\opc\onepage\review\totals\discount.phtml" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\rof\code\dev\app\design\frontend\default\rofcustom\template\opc\onepage\review\totals\grandtotal.phtml" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\rof\code\dev\app\design\frontend\default\rofcustom\template\opc\onepage\review\totals\shipping.phtml" afterPath="" />
@@ -43,7 +53,7 @@
                   <state />
                 </provider>
                 <provider selected="true" editor-type-id="text-editor">
-                  <state line="36" column="108" selection-start="3224" selection-end="3224" vertical-scroll-proportion="0.3756906" vertical-offset="272" max-vertical-offset="3043">
+                  <state line="45" column="0" selection-start="4211" selection-end="4211" vertical-scroll-proportion="0.4945534" vertical-offset="345" max-vertical-offset="4233">
                     <folding />
                   </state>
                 </provider>
@@ -1686,7 +1696,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="108" selection-start="3224" selection-end="3224" vertical-scroll-proportion="0.3756906" vertical-offset="272" max-vertical-offset="3043">
+        <state line="45" column="0" selection-start="4211" selection-end="4211" vertical-scroll-proportion="0.4945534" vertical-offset="345" max-vertical-offset="4233">
           <folding />
         </state>
       </provider>
