@@ -1,7 +1,24 @@
-<script type="text/javascript">countryRegions = <?php echo $this->helper('directory')->getRegionJson() ?></script>
+<script type="text/javascript">
+    countryRegions = <?php echo $this->helper('directory')->getRegionJson() ?>;
+    jQuery(document).ready(function() {
+        jQuery(".field,.wide").each(function() {
+            jQuery(this).focusin(function() {
+                jQuery(this).addClass("input-focused");
+                jQuery(this).find("input").one("blur",function() {
+                    jQuery(this).parents(".field,.wide").removeClass("input-focused");
+                    Validation.validate(this);
+                });
+            });
+            $fieldInput = jQuery(this).find("input,select");
+            if($fieldInput.val().length > 0 || $fieldInput.get(0).hasAttribute("defaultvalue")) {
+                jQuery(this).addClass("input-filled");
+            }
+        });
+    });
+</script>
 <div class="opc-wrapper-opc">
     <div class="page-title sixteen columns">
-        <h2 id="cart-heading"><?php echo $this->__('Your Cart');
+        <h2 id="cart-heading"><?php echo $this->__('Checkout');
         if (!Mage::getSingleton('customer/session')->isLoggedIn()):?>
             <?php echo $this->getChildHtml('login');?>
         <?php endif;?></h2>
@@ -10,47 +27,59 @@
 
 	<div class="clear move-columns displaynone"></div>
 
-    <div class="opc-col-left">
-		<form id="opc-address-form-billing" method="post">
-        	<?php echo $this->getChildHtml('billing')?>
-        </form>
-        	
-        <form id="opc-address-form-shipping" class="hidden" method="post">
-        <?php echo $this->getChildHtml('shipping')?>
-        </form>
-		
+    <div id="cart-cartbox" class="ten columns cart-box collapse">
+        <div class="cart-box-border"></div>
+        <div class="cart-box-inner">
+            <section id="cart-cartbox-toggle">
+                <span id="cart-cartbox-toggle-text">Show Items In Your Cart (<?php echo Mage::helper("checkout/cart")->getItemsCount(); ?>)</span>
+                <div id="cart-cartbox-toggle-btn" title="Show / Hide Cart Items">Show / Hide Cart Items</div>
+            </section>
+        </div><!-- /.cart-box-inner/ -->
+        <div class="cart-box-border"></div>
     </div>
 
-    <div class="opc-col-center">
-    	<?php if (!$this->getOnepage()->getQuote()->isVirtual()):?>
-    	<div class="shipping-block">
-        	<h3><?php echo $this->__('Shipping Method')?></h3>
-        	<div id="shipping-block-methods">
-				<?php echo $this->getChildHtml('shipping_method');//$this->_getShippingMethodsHtml();?>
-			</div>
-		</div>
-		<?php endif;?>
-		<div class="payment-block <?php if ($this->getOnepage()->getQuote()->isVirtual()):?>clear-margin<?php endif;?>">
-			<h3><?php echo $this->__('Payment Method')?></h3>
-			<?php echo $this->getChildHtml('payment')//$this->_getPaymentMethodsHtml();?>
-		</div>
-		
-		<div class="discount-block">
-			<h3><?php echo $this->__('Discount Codes')?></h3>
-			<?php echo $this->getChildhtml('coupon');?>
-		</div>
+    <?php echo $this->_getReviewHtml()?>
 
-		<?php if(Mage::helper('opc')->isShowComment()):?>
-			<?php echo $this->getChildhtml('customer.comment');?>
-		<?php endif;?>
+    <div id="checkout-box" class="ten columns cart-box">
+        <div class="cart-box-border"></div>
+        <div class="cart-box-inner clearfix">
+            <div class="opc-col-left">
+                <form id="opc-address-form-billing" method="post">
+                    <?php echo $this->getChildHtml('billing')?>
+                </form>
 
-    </div>
+                <form id="opc-address-form-shipping" class="hidden" method="post">
+                <?php echo $this->getChildHtml('shipping')?>
+                </form>
 
-    <div class="opc-col-right">
-        <h3><?php echo $this->__('Review Your Order')?></h3>
-        <div id="opc-review-block">
-		<?php echo $this->_getReviewHtml()?>
-		</div>
+            </div>
+
+            <div class="opc-col-center">
+                <?php if (!$this->getOnepage()->getQuote()->isVirtual()):?>
+                <div class="shipping-block">
+                    <h3><?php echo $this->__('Shipping Method')?></h3>
+                    <div id="shipping-block-methods">
+                        <?php echo $this->getChildHtml('shipping_method');//$this->_getShippingMethodsHtml();?>
+                    </div>
+                </div>
+                <?php endif;?>
+                <div class="payment-block <?php if ($this->getOnepage()->getQuote()->isVirtual()):?>clear-margin<?php endif;?>">
+                    <h3><?php echo $this->__('Payment Method')?></h3>
+                    <?php echo $this->getChildHtml('payment')//$this->_getPaymentMethodsHtml();?>
+                </div>
+
+                <div class="discount-block">
+                    <h3><?php echo $this->__('Discount Codes')?></h3>
+                    <?php echo $this->getChildhtml('coupon');?>
+                </div>
+
+                <?php if(Mage::helper('opc')->isShowComment()):?>
+                    <?php echo $this->getChildhtml('customer.comment');?>
+                <?php endif;?>
+
+            </div>
+        </div><!-- /.cart-box-inner/ -->
+        <div class="cart-box-border"></div>
     </div>
 </div>
 <script>

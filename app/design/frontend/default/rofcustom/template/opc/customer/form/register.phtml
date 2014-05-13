@@ -60,40 +60,40 @@
             <h2 class="legend"><?php echo $this->__('Address Information') ?></h2>
             <ul class="form-list">
                 <li class="fields">
-                    <div class="field">
+                    <div class="field clearfix">
                         <label for="company"><?php echo $this->__('Company') ?></label>
                         <div class="input-box">
                             <input type="text" name="company" id="company" value="<?php echo $this->htmlEscape($this->getFormData()->getCompany()) ?>" title="<?php echo $this->__('Company') ?>" class="input-text" />
                         </div>
                     </div>
-                    <div class="field">
+                    <div class="field clearfix">
                         <label for="telephone" class="required"><em>*</em><?php echo $this->__('Telephone') ?></label>
                         <div class="input-box">
                             <input type="text" name="telephone" id="telephone" value="<?php echo $this->htmlEscape($this->getFormData()->getTelephone()) ?>" title="<?php echo $this->__('Telephone') ?>" class="input-text required-entry" />
                         </div>
                     </div>
                 </li>
-                <li class="wide">
+                <li class="wide clearfix">
                     <label for="street_1" class="required"><em>*</em><?php echo $this->__('Street Address') ?></label>
                     <div class="input-box">
                         <input type="text" name="street[]" value="<?php echo $this->htmlEscape($this->getFormData()->getStreet(1)) ?>" title="<?php echo $this->__('Street Address') ?>" id="street_1" class="input-text required-entry" />
                     </div>
                 </li>
             <?php for ($_i=2, $_n=$this->helper('customer/address')->getStreetLines(); $_i<=$_n; $_i++): ?>
-                <li class="wide">
+                <li class="wide clearfix">
                     <div class="input-box">
                         <input type="text" name="street[]" value="<?php echo $this->htmlEscape($this->getFormData()->getStreet($_i)) ?>" title="<?php echo $this->__('Street Address %s', $_i) ?>" id="street_<?php echo $_i?>" class="input-text" />
                     </div>
                 </li>
             <?php endfor ?>
                 <li class="fields">
-                    <div class="field">
+                    <div class="field clearfix">
                         <label for="city" class="required"><em>*</em><?php echo $this->__('City') ?></label>
                         <div class="input-box">
                             <input type="text" name="city" value="<?php echo $this->htmlEscape($this->getFormData()->getCity()) ?>" title="<?php echo $this->__('City') ?>" class="input-text required-entry" id="city" />
                         </div>
                     </div>
-                    <div class="field">
+                    <div class="field clearfix">
                         <label for="region_id" class="required"><em>*</em><?php echo $this->__('State/Province') ?></label>
                         <div class="input-box">
                             <select id="region_id" name="region_id" title="<?php echo $this->__('State/Province') ?>" class="validate-select" style="display:none;">
@@ -109,13 +109,13 @@
                     </div>
                 </li>
                 <li class="fields">
-                    <div class="field">
+                    <div class="field clearfix">
                         <label for="zip" class="required"><em>*</em><?php echo $this->__('Zip/Postal Code') ?></label>
                         <div class="input-box">
                             <input type="text" name="postcode" value="<?php echo $this->htmlEscape($this->getFormData()->getPostcode()) ?>" title="<?php echo $this->__('Zip/Postal Code') ?>" id="zip" class="input-text validate-zip-international required-entry" />
                         </div>
                     </div>
-                    <div class="field">
+                    <div class="field clearfix">
                         <label for="country" class="required"><em>*</em><?php echo $this->__('Country') ?></label>
                         <div class="input-box">
                             <?php echo $this->getCountryHtmlSelect() ?>
@@ -131,13 +131,13 @@
             <h2 class="legend"><?php echo $this->__('Login Information') ?></h2>
             <ul class="form-list">
                 <li class="fields">
-                    <div class="field">
+                    <div class="field clearfix">
                         <label for="password" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
                         <div class="input-box">
                             <input type="password" name="password" id="password" title="<?php echo $this->__('Password') ?>" class="input-text required-entry validate-password" />
                         </div>
                     </div>
-                    <div class="field">
+                    <div class="field clearfix">
                         <label for="confirmation" class="required"><em>*</em><?php echo $this->__('Confirm Password') ?></label>
                         <div class="input-box">
                             <input type="password" name="confirmation" title="<?php echo $this->__('Confirm Password') ?>" id="confirmation" class="input-text required-entry validate-cpassword" />

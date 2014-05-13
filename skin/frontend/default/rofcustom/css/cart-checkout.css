@@ -586,6 +586,31 @@ img, button, input {
     /* One Page Checkout Custom Styles
     ********************************************************************/
 
+        /* General One Page Checkout Text Styles
+        *****************************************************/
+        .opc-wrapper-opc * {
+            font-family: 'Open Sans', Arial, Helvetica;
+            color: #393939;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        /* Cart Toggle Link
+        *****************************************************/
+        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle,
+        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle,
+        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle span,
+        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle span,
+        .opc-wrapper-opc #cart-subtotal-header {
+            color: #8a6399 !important;
+            font: normal 16px/16px "Tahoma" !important;
+        }
+
+        .opc-wrapper-opc #cart-subtotal-header {
+            font-weight: bold !important;
+        }
+
         /* One Page Checkout Heading - Move Login Link Here
         ****************************************************/
         .opc-wrapper-opc .page-title {
@@ -601,13 +626,101 @@ img, button, input {
 
         /* Column And Field Adjustments for Proper Display
         ****************************************************/
-        .opc-wrapper-opc .opc-col-left {
+        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle,
+        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle {
+            height: 40px !important;
+        }
+
+        .opc-wrapper-opc .opc-col-left h3 {
+            margin-bottom: 5px;
+        }
+
+        .opc-wrapper-opc .opc-col-left h3,
+        .opc-wrapper-opc .opc-col-center h3 {
+            margin: 10px auto 5px;
+        }
+
+        .opc-wrapper-opc .opc-col-left,
+        .opc-wrapper-opc .opc-col-center {
             margin-right: 10px !important;
-            margin-left: 15px !important;
+            margin-left: 18px !important;
+            width: 45% !important;
+        }
+        
+        @media print {
+            .opc-wrapper-opc .opc-col-left {
+                float: left !important;
+                max-width: 45%;
+            }
+            .opc-wrapper-opc .opc-col-center {
+                float: right !important;
+                max-width: 45%;
+            }
+        }
+
+        .opc-wrapper-opc .opc-col-right {
+            margin-left: 10px !important;
+            float: right !important;
         }
 
         .opc-wrapper-opc .fields .field {
             width: 100% !important;
+            height: 40px !important;
+        }
+
+        .opc-wrapper-opc .fields .field label {
+            height: 0;
+            padding-top: 5px;
+            margin-left: 15px;
+        }
+
+        .opc-wrapper-opc .fields .field label.required {
+            height: 0;
+            padding-top: 5px;
+            margin-left: 5px;
+        }
+
+        .opc-wrapper-opc .fields .field label.required em {
+            width: 20px;
+            margin-left: 0px;
+            margin-right: 5px;
+        }
+
+        .opc-wrapper-opc .fields .field.input-focused label,
+        .opc-wrapper-opc .fields .field.input-filled label {
+            height: 30px;
+        }
+
+        .opc-wrapper-opc .fields .field.input-focused,
+        .opc-wrapper-opc .fields .field.input-filled {
+            margin-bottom: 20px;
+        }
+
+        .opc-wrapper-opc .fields .field .validation-advice {
+            position: relative;
+            top: -40px;
+            left: 50%;
+            right: auto;
+        }
+
+        .opc-wrapper-opc .fields .field.input-focused .validation-advice,
+        .opc-wrapper-opc .fields .field.input-filled .validation-advice {
+            display: none;
+        }
+
+        .opc-wrapper-opc .fields .field label:before {
+            height: 5px;
+            display: block;
+            content: '';
+        }
+
+        .opc-wrapper-opc label {
+            color: #393939;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 1.25em;
+            margin-bottom: 2px;
+            text-align: left;
         }
 
         .opc-wrapper-opc .form-list ul {
@@ -644,6 +757,19 @@ img, button, input {
             font-size: 85%;
         }
 
+        .opc-wrapper-opc .opc-data-table {
+            width: 90% !important;
+            margin: 10px auto;
+        }
+
+        .opc-wrapper-opc .review-after{
+            background: #FFF;
+            margin-top: -10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            padding-top: 10px;
+        }
+
         /* Fix Misc Floats and Element Labels
         ******************************************************/
 
@@ -651,7 +777,7 @@ img, button, input {
         .opc-wrapper-opc .form-list .control input,
         .opc-wrapper-opc .opc-newsletter .input-box {
             float: left;
-            margin-right: 5px;
+            margin: 2px 5px 0 15px;
             width: auto !important;
         }
 
@@ -684,5 +810,8 @@ img, button, input {
 
         .opc-wrapper-opc .button.btn-checkout {
             background: #56b2dd url('../images/cart-checkout-btn-wide.png') center center no-repeat;
-            width: 280px;
+            width: 330px;
+            margin: 10px auto 20px;
+            float: none;
+            background-size: 100% 40px;
         }

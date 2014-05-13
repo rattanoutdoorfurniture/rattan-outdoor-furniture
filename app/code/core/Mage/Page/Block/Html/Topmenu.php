@@ -120,8 +120,14 @@ class Mage_Page_Block_Html_Topmenu extends Mage_Core_Block_Template
 
             $outermostClassCode = '';
             $outermostClass = $menuTree->getOutermostClass();
+            $targetUrl = $child->getUrl();
+            $targetArr = explode("/",$targetUrl);
+            $targetPage = array_pop($targetArr);
 
             if ($childLevel == 0 && $outermostClass) {
+                if(Mage::app()->getRequest()->getRequestString() == "/".$targetPage){
+                    $outermostClass .= ' selected';
+                }
                 $outermostClassCode = ' class="' . $outermostClass . '" ';
                 $child->setClass($outermostClass);
             }

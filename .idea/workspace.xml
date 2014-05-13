@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac3d19b1-e482-4ca0-a0dd-b066c436ba87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/totals/discount.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/totals/grandtotal.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/item.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/totals/shipping.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/totals/subtotal.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/totals/tax.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/totals.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skin/frontend/default/rofcustom/images/cart-checkout-btn-wide.png" afterPath="$PROJECT_DIR$/skin/frontend/default/rofcustom/images/cart-checkout-btn-wide.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/code/core/Mage/Page/Block/Html/Topmenu.php" afterPath="$PROJECT_DIR$/app/code/core/Mage/Page/Block/Html/Topmenu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/billing.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/billing.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css" afterPath="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/checkout.xml" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/checkout.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/coupon.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/coupon.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/grandtotal.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/grandtotal.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/login.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/login.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/subtotal.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/subtotal.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/log/system.log" afterPath="$PROJECT_DIR$/var/log/system.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/info.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/info.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/customer/form/register.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/customer/form/register.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/wrapper.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/wrapper.phtml" />
     </list>
@@ -40,13 +33,13 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+            <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/README.md">
                 <provider editor-type-id="MarkdownPreviewEditor">
                   <state />
                 </provider>
                 <provider selected="true" editor-type-id="text-editor">
-                  <state line="45" column="28" selection-start="3672" selection-end="3672" vertical-scroll-proportion="0.6508287" vertical-offset="176" max-vertical-offset="2856">
+                  <state line="46" column="0" selection-start="3843" selection-end="3843" vertical-scroll-proportion="0.66961324" vertical-offset="176" max-vertical-offset="2975">
                     <folding />
                   </state>
                 </provider>
@@ -63,60 +56,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="checkout.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/checkout.xml">
+      <file leaf-file-name="cart-checkout.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="457" column="6" selection-start="24759" selection-end="24759" vertical-scroll-proportion="-12.423077" vertical-offset="7446" max-vertical-offset="8551">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="coupon.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/coupon.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="237" selection-start="1071" selection-end="1071" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="357">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shipping_method.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/shipping_method.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="221">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="totals.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/totals.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="510">
+            <state line="812" column="21" selection-start="21089" selection-end="21089" vertical-scroll-proportion="0.0" vertical-offset="13073" max-vertical-offset="13974">
               <folding>
-                <marker date="1395327657269" expanded="true" signature="1061:1657" placeholder="..." />
-                <marker date="1395327657269" expanded="true" signature="1319:1630" placeholder="..." />
-                <marker date="1395327657269" expanded="true" signature="1383:1505" placeholder="..." />
-                <marker date="1395327657269" expanded="true" signature="1534:1620" placeholder="..." />
+                <marker date="1399999769305" expanded="true" signature="16200:16246" placeholder="{...}" />
+                <marker date="1399999769305" expanded="true" signature="16491:16767" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="button.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/button.phtml">
+      <file leaf-file-name="topmenu.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/html/topmenu.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="170">
-              <folding />
+            <state line="53" column="38" selection-start="1470" selection-end="1556" vertical-scroll-proportion="-19.615385" vertical-offset="0" max-vertical-offset="833">
+              <folding>
+                <element signature="e#978#1047#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cart-checkout.css" pinned="false" current="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css">
+      <file leaf-file-name="Topmenu.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Page/Block/Html/Topmenu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="681" column="41" selection-start="17111" selection-end="17111" vertical-scroll-proportion="0.9227273" vertical-offset="10765" max-vertical-offset="11781">
+            <state line="128" column="39" selection-start="4040" selection-end="4040" vertical-scroll-proportion="0.4180328" vertical-offset="1428" max-vertical-offset="4845">
               <folding />
             </state>
           </provider>
@@ -125,34 +91,28 @@
       <file leaf-file-name="wrapper.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/wrapper.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="46" selection-start="576" selection-end="576" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1479">
+            <state line="20" column="60" selection-start="933" selection-end="933" vertical-scroll-proportion="-9.153846" vertical-offset="102" max-vertical-offset="1972">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/login.phtml">
+      <file leaf-file-name="cart.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="37" selection-start="2557" selection-end="2557" vertical-scroll-proportion="-26.461538" vertical-offset="230" max-vertical-offset="1071">
+            <state line="44" column="0" selection-start="1444" selection-end="7655" vertical-scroll-proportion="-9.115385" vertical-offset="52" max-vertical-offset="3179">
               <folding>
-                <marker date="1399928238370" expanded="true" signature="247:2354" placeholder="..." />
-                <marker date="1399928238370" expanded="true" signature="273:2347" placeholder="..." />
-                <marker date="1399928238370" expanded="true" signature="306:434" placeholder="..." />
-                <marker date="1399928238370" expanded="true" signature="471:1569" placeholder="..." />
-                <marker date="1399928238370" expanded="true" signature="561:1498" placeholder="..." />
-                <marker date="1399928238370" expanded="true" signature="634:1425" placeholder="..." />
-                <marker date="1399928238370" expanded="true" signature="663:1409" placeholder="..." />
-                <marker date="1399928238370" expanded="true" signature="675:1063" placeholder="..." />
-                <marker date="1399928238370" expanded="true" signature="810:1050" placeholder="..." />
-                <marker date="1399928238370" expanded="true" signature="1074:1390" placeholder="..." />
-                <marker date="1399928238370" expanded="true" signature="1201:1378" placeholder="..." />
-                <marker date="1399928238370" expanded="true" signature="1602:2339" placeholder="..." />
-                <marker date="1399928238370" expanded="true" signature="1634:1916" placeholder="..." />
-                <marker date="1399928238370" expanded="false" signature="1966:1978" placeholder="..." />
-                <marker date="1399928238370" expanded="true" signature="1979:2329" placeholder="..." />
-                <marker date="1399928238370" expanded="true" signature="2422:2518" placeholder="..." />
+                <element signature="tag#form#0;tag#div#1;tag#div#1" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="onepage.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="0" selection-start="1438" selection-end="1967" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="1496">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,16 +120,38 @@
       <file leaf-file-name="info.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/info.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="51" selection-start="2697" selection-end="2697" vertical-scroll-proportion="-18.307692" vertical-offset="102" max-vertical-offset="1139">
+            <state line="69" column="41" selection-start="3562" selection-end="3562" vertical-scroll-proportion="-12.730769" vertical-offset="451" max-vertical-offset="1326">
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="billing.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/billing.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="148" column="210" selection-start="11416" selection-end="11416" vertical-scroll-proportion="-5.2115383" vertical-offset="2245" max-vertical-offset="3213">
+              <folding>
+                <marker date="1399997707332" expanded="true" signature="268:339" placeholder="Select a bil..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="giftoptionsform.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/adminhtml/default/default/template/giftmessage/giftoptionsform.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="31" selection-start="1321" selection-end="1321" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="867">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="item.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/item.phtml">
+      <file leaf-file-name="register.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/customer/form/register.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="89" selection-start="1100" selection-end="1100" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="3791">
+            <state line="139" column="31" selection-start="9153" selection-end="9153" vertical-scroll-proportion="-10.769231" vertical-offset="2083" max-vertical-offset="2958">
               <folding />
             </state>
           </provider>
@@ -188,11 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/code/local/Rofcustom/Googlecmsimport/controllers/IndexController.php" />
-        <option value="$PROJECT_DIR$/app/code/local/Rofcustom/Googlecmsimport/Block/import.php" />
-        <option value="$PROJECT_DIR$/app/design/adminhtml/default/default/template/googlecmsimport/import.phtml" />
-        <option value="$PROJECT_DIR$/app/code/local/Rofcustom/Googlecmsimport/Model/Googlecmsimport.php" />
-        <option value="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/page-header.css" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/list.phtml" />
         <option value="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/category.css" />
@@ -233,11 +210,16 @@
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/grandtotal.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/subtotal.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/login.phtml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/wrapper.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/item.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/checkout.xml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/coupon.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/customer/form/register.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/shipping.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/info.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/billing.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/wrapper.phtml" />
         <option value="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css" />
+        <option value="$PROJECT_DIR$/app/code/core/Mage/Page/Block/Html/Topmenu.php" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -572,6 +554,86 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rofcustom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rofcustom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1101,10 +1163,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279396" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.35167205" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" weight="0.35167205" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32686085" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1143,33 +1205,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/skin/adminhtml/default/default/images/paypal/logo-paypal.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skin/adminhtml/default/default/images/paypal/pp-allinone.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skin/adminhtml/default/default/images/paypal/pp-alt.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skin/adminhtml/default/default/images/paypal/pp-gateways.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/1column.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/page/html/footer.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="43" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.10107016" vertical-offset="0" max-vertical-offset="841">
@@ -1223,13 +1258,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="3845" selection-end="3845" vertical-scroll-proportion="0.91657144" vertical-offset="286" max-vertical-offset="1496">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/html/footer.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="117" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.5634286" vertical-offset="0" max-vertical-offset="875">
@@ -1279,35 +1307,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="6" selection-start="1051" selection-end="1443" vertical-scroll-proportion="0.31554523" vertical-offset="0" max-vertical-offset="4488">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/billing.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3213">
-          <folding>
-            <marker date="1399910167177" expanded="true" signature="-1:-1" placeholder="Select a bil..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/lipp-js.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/shipping.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2074">
-          <folding>
-            <marker date="1399910167189" expanded="true" signature="-1:-1" placeholder="Select a shi..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1339,13 +1342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/html/header.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/html/home-category.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
@@ -1367,13 +1363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/html/topmenu.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="124" selection-start="1470" selection-end="1556" vertical-scroll-proportion="0.5175644" vertical-offset="0" max-vertical-offset="854">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/tax/checkout/subtotal.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="15" selection-start="1870" selection-end="2220" vertical-scroll-proportion="0.47775176" vertical-offset="0" max-vertical-offset="854">
@@ -1391,13 +1380,7 @@
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/grandtotal.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="2" selection-start="1071" selection-end="1071" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="850">
-          <folding>
-            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#3;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1415,63 +1398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/info.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="51" selection-start="2697" selection-end="2697" vertical-scroll-proportion="-18.307692" vertical-offset="102" max-vertical-offset="1139">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/totals.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
-          <folding>
-            <marker date="1395327657269" expanded="true" signature="1061:1657" placeholder="..." />
-            <marker date="1395327657269" expanded="true" signature="1319:1630" placeholder="..." />
-            <marker date="1395327657269" expanded="true" signature="1383:1505" placeholder="..." />
-            <marker date="1395327657269" expanded="true" signature="1534:1620" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/button.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/login.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="37" selection-start="2557" selection-end="2557" vertical-scroll-proportion="-26.461538" vertical-offset="230" max-vertical-offset="1071">
-          <folding>
-            <marker date="1399928238370" expanded="true" signature="247:2354" placeholder="..." />
-            <marker date="1399928238370" expanded="true" signature="273:2347" placeholder="..." />
-            <marker date="1399928238370" expanded="true" signature="306:434" placeholder="..." />
-            <marker date="1399928238370" expanded="true" signature="471:1569" placeholder="..." />
-            <marker date="1399928238370" expanded="true" signature="561:1498" placeholder="..." />
-            <marker date="1399928238370" expanded="true" signature="634:1425" placeholder="..." />
-            <marker date="1399928238370" expanded="true" signature="663:1409" placeholder="..." />
-            <marker date="1399928238370" expanded="true" signature="675:1063" placeholder="..." />
-            <marker date="1399928238370" expanded="true" signature="810:1050" placeholder="..." />
-            <marker date="1399928238370" expanded="true" signature="1074:1390" placeholder="..." />
-            <marker date="1399928238370" expanded="true" signature="1201:1378" placeholder="..." />
-            <marker date="1399928238370" expanded="true" signature="1602:2339" placeholder="..." />
-            <marker date="1399928238370" expanded="true" signature="1634:1916" placeholder="..." />
-            <marker date="1399928238370" expanded="false" signature="1966:1978" placeholder="..." />
-            <marker date="1399928238370" expanded="true" signature="1979:2329" placeholder="..." />
-            <marker date="1399928238370" expanded="true" signature="2422:2518" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/wrapper.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="46" selection-start="576" selection-end="576" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1479">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/agreements.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
@@ -1482,13 +1408,7 @@
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/subtotal.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="84" selection-start="2817" selection-end="2817" vertical-scroll-proportion="0.7099768" vertical-offset="0" max-vertical-offset="862">
-          <folding>
-            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#0;n#tr#3;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1506,9 +1426,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/shipping_method.phtml">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/coupon.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+        <state line="9" column="25" selection-start="797" selection-end="797" vertical-scroll-proportion="0.18192628" vertical-offset="0" max-vertical-offset="841">
           <folding />
         </state>
       </provider>
@@ -1520,17 +1440,157 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/coupon.phtml">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/shipping_method.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="237" selection-start="1071" selection-end="1071" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="357">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/totals.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
+          <folding>
+            <marker date="1395327657269" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395327657269" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395327657269" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395327657269" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/login.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="37" selection-start="2557" selection-end="2557" vertical-scroll-proportion="-27.26923" vertical-offset="209" max-vertical-offset="1071">
+          <folding>
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1399928238370" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/prototype/validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="251" column="26" selection-start="9719" selection-end="9719" vertical-scroll-proportion="0.33333334" vertical-offset="3512" max-vertical-offset="14756">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/shipping.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="23" selection-start="8754" selection-end="8754" vertical-scroll-proportion="-20.576923" vertical-offset="1233" max-vertical-offset="2074">
+          <folding>
+            <marker date="1399910167189" expanded="true" signature="-1:-1" placeholder="Select a shi..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/button.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/customer/account/asklink.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="19" selection-start="2007" selection-end="2007" vertical-scroll-proportion="0.33293697" vertical-offset="94" max-vertical-offset="1377">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/adminhtml/default/default/template/giftmessage/giftoptionsform.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="31" selection-start="1321" selection-end="1321" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/customer/form/register.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="31" selection-start="9153" selection-end="9153" vertical-scroll-proportion="-10.769231" vertical-offset="2083" max-vertical-offset="2958">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="1438" selection-end="1967" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="1496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1444" selection-end="7655" vertical-scroll-proportion="-9.115385" vertical-offset="52" max-vertical-offset="3179">
+          <folding>
+            <element signature="tag#form#0;tag#div#1;tag#div#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/info.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="41" selection-start="3562" selection-end="3562" vertical-scroll-proportion="-12.730769" vertical-offset="451" max-vertical-offset="1326">
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/billing.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="210" selection-start="11416" selection-end="11416" vertical-scroll-proportion="-5.2115383" vertical-offset="2245" max-vertical-offset="3213">
+          <folding>
+            <marker date="1399997707332" expanded="true" signature="268:339" placeholder="Select a bil..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/wrapper.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="60" selection-start="933" selection-end="933" vertical-scroll-proportion="-9.153846" vertical-offset="102" max-vertical-offset="1972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/html/header.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="681" column="41" selection-start="17111" selection-end="17111" vertical-scroll-proportion="0.9227273" vertical-offset="10765" max-vertical-offset="11781">
-          <folding />
+        <state line="812" column="21" selection-start="21089" selection-end="21089" vertical-scroll-proportion="0.0" vertical-offset="13077" max-vertical-offset="13974">
+          <folding>
+            <marker date="1399999769305" expanded="true" signature="16200:16246" placeholder="{...}" />
+            <marker date="1399999769305" expanded="true" signature="16491:16767" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/html/topmenu.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="38" selection-start="1470" selection-end="1556" vertical-scroll-proportion="-19.615385" vertical-offset="0" max-vertical-offset="833">
+          <folding>
+            <element signature="e#978#1047#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1542,7 +1602,14 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="28" selection-start="3672" selection-end="3672" vertical-scroll-proportion="0.6508287" vertical-offset="176" max-vertical-offset="2856">
+        <state line="46" column="0" selection-start="3843" selection-end="3843" vertical-scroll-proportion="0.66961324" vertical-offset="176" max-vertical-offset="2975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Page/Block/Html/Topmenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="39" selection-start="4040" selection-end="4040" vertical-scroll-proportion="0.4180328" vertical-offset="1428" max-vertical-offset="4845">
           <folding />
         </state>
       </provider>

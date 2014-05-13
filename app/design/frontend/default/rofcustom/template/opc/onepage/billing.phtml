@@ -146,7 +146,7 @@
     <?php echo $this->getChildHtml('checkout.onepage.billing.extra')?>
     <?php if(!$this->isCustomerLoggedIn()): ?>
 	    <li class="control">
-	            <input type="checkbox" name="billing[create_account]" id="billing:create_account" value="1" title="<?php echo  $this->__('Create an account for later use') ?>"  class="checkbox" /><label for="billing:create_account"><?php echo  $this->__('Create an account for later use') ?></label>
+	            <input type="checkbox" name="billing[create_account]" id="billing:create_account" value="1" title="<?php echo  $this->__('Create an account for later use') ?>"  class="checkbox" checked="checked" /><label for="billing:create_account"><?php echo  $this->__('Create an account for later use') ?></label>
 	    </li>
         
 		<li class="fields hidden" id="register-customer-password">
