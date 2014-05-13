@@ -605,6 +605,7 @@ img, button, input {
         .opc-wrapper-opc #cart-subtotal-header {
             color: #8a6399 !important;
             font: normal 16px/16px "Tahoma" !important;
+            text-decoration: none;
         }
 
         .opc-wrapper-opc #cart-subtotal-header {
@@ -732,6 +733,14 @@ img, button, input {
             text-align: left;
         }
 
+        /* One Page Checkout Shipping Methods Section
+        ******************************************************/
+        .sp-methods ul li input {
+            display: inline-block !important;
+            float: left;
+            margin-right: 5px;
+        }
+
         /* One Page Checkout Review Section
         ******************************************************/
         .opc-wrapper-opc .product-name {
@@ -798,6 +807,7 @@ img, button, input {
         .opc-wrapper-opc .button.apply-coupon {
             background: #8a6399 url('../images/checkout-apply-coupon-btn.png') center center no-repeat;
             width: 130px;
+            float: right !important;
         }
 
         .opc-wrapper-opc .button.remove-coupon {

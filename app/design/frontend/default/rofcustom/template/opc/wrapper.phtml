@@ -1,11 +1,41 @@
 <script type="text/javascript">
     countryRegions = <?php echo $this->helper('directory')->getRegionJson() ?>;
     jQuery(document).ready(function() {
+        /*
+         | ----------------------------------------------------------------------------------
+         | Password Generator
+         | ----------------------------------------------------------------------------------
+         */
+        jQuery.password = function (length, special) {
+            var iteration = 0;
+            var password = "";
+            var randomNumber;
+            if(special == undefined){
+                var special = false;
+            }
+            while(iteration < length){
+                randomNumber = (Math.floor((Math.random() * 100)) % 94) + 33;
+                if(!special){
+                    if ((randomNumber >=33) && (randomNumber <=47)) { continue; }
+                    if ((randomNumber >=58) && (randomNumber <=64)) { continue; }
+                    if ((randomNumber >=91) && (randomNumber <=96)) { continue; }
+                    if ((randomNumber >=123) && (randomNumber <=126)) { continue; }
+                }
+                iteration++;
+                password += String.fromCharCode(randomNumber);
+            }
+            return password;
+        };
         jQuery(".field,.wide").each(function() {
             jQuery(this).focusin(function() {
                 jQuery(this).addClass("input-focused");
                 jQuery(this).find("input").one("blur",function() {
-                    jQuery(this).parents(".field,.wide").removeClass("input-focused");
+                    $fieldInput = jQuery(this);
+                    $parent = $fieldInput.parents(".field,.wide");
+                    $parent.removeClass("input-focused");
+                    if($fieldInput.val().length > 0 || $fieldInput.get(0).hasAttribute("defaultvalue")) {
+                        $parent.addClass("input-filled");
+                    }
                     Validation.validate(this);
                 });
             });
@@ -14,6 +44,14 @@
                 jQuery(this).addClass("input-filled");
             }
         });
+        (function($) {
+            tempPassword = jQuery.password(12,false);
+            jQuery("[name*=create_account]").not("[checked]").trigger("click");
+            jQuery("[type=password]").each(function() {
+                jQuery(this).val(tempPassword);
+                jQuery(this).parents(".field").addClass("input-filled");
+            });
+        })(jQuery);
     });
 </script>
 <div class="opc-wrapper-opc">
@@ -30,10 +68,10 @@
     <div id="cart-cartbox" class="ten columns cart-box collapse">
         <div class="cart-box-border"></div>
         <div class="cart-box-inner">
-            <section id="cart-cartbox-toggle">
+            <a id="cart-cartbox-toggle" href="/checkout/cart">
                 <span id="cart-cartbox-toggle-text">Show Items In Your Cart (<?php echo Mage::helper("checkout/cart")->getItemsCount(); ?>)</span>
                 <div id="cart-cartbox-toggle-btn" title="Show / Hide Cart Items">Show / Hide Cart Items</div>
-            </section>
+            </a>
         </div><!-- /.cart-box-inner/ -->
         <div class="cart-box-border"></div>
     </div>
@@ -43,7 +81,7 @@
     <div id="checkout-box" class="ten columns cart-box">
         <div class="cart-box-border"></div>
         <div class="cart-box-inner clearfix">
-            <div class="opc-col-left">
+            <div class="opc-col-left add-bottom">
                 <form id="opc-address-form-billing" method="post">
                     <?php echo $this->getChildHtml('billing')?>
                 </form>

@@ -122,10 +122,11 @@ class Mage_Page_Block_Html_Topmenu extends Mage_Core_Block_Template
             $outermostClass = $menuTree->getOutermostClass();
             $targetUrl = $child->getUrl();
             $targetArr = explode("/",$targetUrl);
-            $targetPage = array_pop($targetArr);
+            $targetPage = "/" . array_pop($targetArr);
+            $requestPage = Mage::app()->getRequest()->getRequestString();
 
             if ($childLevel == 0 && $outermostClass) {
-                if(Mage::app()->getRequest()->getRequestString() == "/".$targetPage){
+                if(substr($requestPage, 0, strlen($targetPage)) == $targetPage){
                     $outermostClass .= ' selected';
                 }
                 $outermostClassCode = ' class="' . $outermostClass . '" ';
