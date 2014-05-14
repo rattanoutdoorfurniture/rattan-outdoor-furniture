@@ -784,10 +784,18 @@ img, button, input {
 
         .opc-wrapper-opc form span.no-display,
         .opc-wrapper-opc .form-list .control input,
+        .opc-wrapper-opc form dt input,
         .opc-wrapper-opc .opc-newsletter .input-box {
             float: left;
             margin: 2px 5px 0 15px;
             width: auto !important;
+        }
+
+        /* Fix PayPal Logo Positioning
+        ********************************************************/
+        .opc-wrapper-opc form dt [for="p_method_paypal_express"] img {
+            vertical-align: text-top;
+            margin-top: -0.5em;
         }
 
         /* One Page Checkout Buttons

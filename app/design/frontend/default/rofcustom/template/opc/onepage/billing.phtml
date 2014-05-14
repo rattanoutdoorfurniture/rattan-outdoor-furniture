@@ -9,6 +9,111 @@
             </div>
         </li>
     <?php endif; ?>
+
+    <?php
+        use GeoIp2\Database\Reader;
+        $maxMindDbPath = realpath(Mage::getBaseDir('lib')."/MaxMind/GeoIp/Data/GeoLite2-City.mmdb");
+        $reader = new Reader($maxMindDbPath);
+        $ipAddress = ($_SERVER['REMOTE_ADDR']=='127.0.0.1'?"108.233.226.254":$_SERVER['REMOTE_ADDR']);
+        $record = $reader->city($ipAddress);
+        $reader->close();
+        // $record->country->isoCode                    = 'US';
+        // $record->country->name                       = 'United States'
+        // $record->country->names['zh-CN']             = '??'
+        // $record->mostSpecificSubdivision->name       = 'Minnesota'
+        // $record->mostSpecificSubdivision->isoCode    = 'MN'
+        // $record->city->name                          = 'Minneapolis'
+        // $record->postal->code                        = '55455'
+        // $record->location->latitude                  = 44.9733
+        // $record->location->longitude                 = -93.2323
+    /**
+     * GeoIp Record Object Breakdown (for ip 108.233.226.254)
+     * $record->city->names             => array(
+     *                                      [en] => 'Willoughby'
+     *                                      [ru] => 'Уиллоуби'
+     *                                     )
+     * $record->location->latitude      => 41.6384
+     * $record->location->longitude     => -81.3787
+     * $record->location->metro_code    => 510
+     * $record->location->time_zone     => 'America/New_York'
+     *
+     * $record->postal->code            => '44094'
+     *
+     * $record->subdivision->iso_code   => 'OH'
+     * $record->subdivision->names      => array(
+     *                                      [en] => 'Ohio'
+     *                                      [es] => 'Ohio'
+     *                                      [ja] => 'オハイオ州'
+     *                                      [ru] => 'Огайо'
+     *                                      [zh-CN] => '俄亥俄州'
+     *                                     )
+     *
+     * $record->country->iso_code       => 'USA'
+     * $record->country->names          => array(
+     *                                      [de] => 'USA'
+     *                                      [en] => 'United States'
+     *                                      [es] => 'Estados Unidos'
+     *                                      [fr] => 'États-Unis'
+     *                                      [ja] => 'アメリカ合衆国'
+     *                                      [pt-BR] => 'Estados Unidos'
+     *                                      [ru] => 'США'
+     *                                      [zh-CN] => '美国'
+     *                                     )
+     *
+     * Full Data: Printed
+     */
+    /** @var $mageAddress Mage_Sales_Model_Quote_Address */
+    $mageAddress = $this->getAddress($record);
+//    $mageAddressCurrent = array();
+//    $mageAddressCurrent['getFirstname']         = $mageAddress->getFirstname();
+//    $mageAddressCurrent['getCompany']           = $mageAddress->getCompany();
+//    $mageAddressCurrent['getEmail']             = $mageAddress->getEmail();
+//    $mageAddressCurrent['getVatId']             = $mageAddress->getVatId();
+//    $mageAddressCurrent['getCity']              = $mageAddress->getCity();
+//    $mageAddressCurrent['getRegionId']          = $mageAddress->getRegionId();
+//    $mageAddressCurrent['getRegion']            = $mageAddress->getRegion();
+//    $mageAddressCurrent['getPostcode']          = $mageAddress->getPostcode();
+//    $mageAddressCurrent['getTelephone']         = $mageAddress->getTelephone();
+//    $mageAddressCurrent['getFax']               = $mageAddress->getFax();
+//    $mageAddressCurrent['getSaveInAddressBook'] = $mageAddress->getSaveInAddressBook();
+
+    /* Pre Load Mage Address Values From GeoIp */
+    //$mageAddress->setFirstname();
+    //$mageAddress->setCompany();
+    //$mageAddress->setEmail();
+    //$mageAddress->setVatId();
+//    $mageAddress->setCity($record->city->names['en']);
+//    $regionCode  = $record->subdivisions[0]->isoCode;
+//    $countryCode = $record->country->isoCode;
+//    $regionModel = Mage::getModel('directory/region')->loadByCode($regionCode, $countryCode);
+//    $regionId    = $regionModel->getId();
+//    $regionName  = $regionModel->getName();
+//    $mageAddress->setRegionId($regionId);
+//    $mageAddress->setRegion($regionName);
+//    $mageAddress->setPostcode($record->postal->code);
+    //$mageAddress->setTelephone();
+    //$mageAddress->setFax();
+    //$mageAddress->setSaveInAddressBook();
+
+//    $mageAddressPreload = array();
+//    $mageAddressPreload['getFirstname']         = $mageAddress->getFirstname();
+//    $mageAddressPreload['getCompany']           = $mageAddress->getCompany();
+//    $mageAddressPreload['getEmail']             = $mageAddress->getEmail();
+//    $mageAddressPreload['getVatId']             = $mageAddress->getVatId();
+//    $mageAddressPreload['getCity']              = $mageAddress->getCity();
+//    $mageAddressPreload['getRegionId']          = $mageAddress->getRegionId();
+//    $mageAddressPreload['getRegion']            = $mageAddress->getRegion();
+//    $mageAddressPreload['getPostcode']          = $mageAddress->getPostcode();
+//    $mageAddressPreload['getTelephone']         = $mageAddress->getTelephone();
+//    $mageAddressPreload['getFax']               = $mageAddress->getFax();
+//    $mageAddressPreload['getSaveInAddressBook'] = $mageAddress->getSaveInAddressBook();
+
+//    echo dumper::auto(array(
+//        "init"  =>  $mageAddressCurrent,
+//        "load"  =>  $mageAddressPreload
+//    ));
+
+    ?>
     <li id="billing-new-address-form"<?php if ($this->customerHasAddresses()): ?> style="display:none;"<?php endif; ?>>
         <fieldset>
             <input type="hidden" name="billing[address_id]" value="<?php echo $this->getAddress()->getId() ?>" id="billing:address_id" />
