@@ -186,3 +186,16 @@ More detailed than in the TODO section, but more general than the change log.
 
 ###2014-04-22###
 * Begin the magento install of the new Design pages. Start with the 1 column layout which everything else will be built off of. Started this process. Layout file is updated, and the 'head' of the page is tentatively in place. Need to continue working on the page header along with the menues.
+
+
+### Feedback
+
+Suggestions/improvements
+[welcome](https://bitbucket.org/rattanoutdoorfurniture/rattan-outdoor-furniture/issues)!
+
+### Author
+
+| [![twitter/brainycouchmike](http://gravatar.com/avatar/de92ca239b11a9859ea945671f820597?s=70)(http://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](http://twitter.com/brainycouchmike "Follow @brainycouchmike on Twitter") |
+|---|
+| [Mike Simoneau](http://brainycouch.com/mike/) |
+
