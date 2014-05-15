@@ -32,6 +32,8 @@ More detailed than in the TODO section, but more general than the change log.
 * Style Credit Card input section to mimic the layout on a credit card. (Worry about this when we settle on the payment processor.)
 * Accounts / Login / Automatic account creation for guest checkout (already generates a temporary password.)
 * Work on the PayPal credentials. (This is bouncing back with an API error).
+* Work on form validation in the checkout. This should not try to validate fields that the user has not yet tried to enter data into.
+* User must select a color option if available, or we need to make this default to the first color, but I would like to alert them that they need to choose.
 
 * [DONE]     Figure out how we want to handle orders that do not have any available color options (this may be playing a part in why the add-to-cart is broken.)
 * [DONE]     Color swatches on Product page. for now just assign a name for each fake color, and pass that along.
@@ -46,6 +48,11 @@ More detailed than in the TODO section, but more general than the change log.
 
 
 ##Change Log:##
+
+###2014-05-15###
+* Back into the PayPal development.
+* Got an email about my internet setup. I am on the phone with them now. They're trying to make sure everything is in place for tomorrow... After speaking with the representitive, he says their system is down this morning. He did offer for his supervisor to give me a call back around Noon, eastern time.
+* Today is going to be a busy day. I am going to start this morning back into the PayPal stuff. We left off yesterday with a response from PayPal with an error with the API credentials. I am going to assume, for now, that the shipping method thing is working well enough (this will need more attention later, but for now, it is working well enough.) Later on today, we will be working with KeywordSpy. I am going to be wrapping up development around 3PM so that we can move into some market research using KeywordSpy. Without much further ado, I'm going to jump right into it. I'll make another note once I have a better idea of what PayPal is doing, and how magento is passing / handling the request / response.
 
 ###2014-05-14###
 * Install PHP GeoIp database. This is setup as mentioned below. This auto-fills the billing information (wherever possible), to enable the checkout to give shipping methods on page load. This should work now. I was in the JavaScript trying to force this to happen. that accounts for the edits to the checkout JS. The billing phtml file has a bunch of info on the GeoIp stuff. All this is commented in that file (see diff on the commit). Not too many style changes. I was working on setting up the PayPal processing, but I am getting bounced back with an API authentication error. As suggested on stackOverflow, I removed the authentication, cleared magento cache, and re-configured. This removed the buttons for a moment, and then re-loaded them. I have not gotten a chance to do another sandbox text, but this is where I left off. Check the pay_pal_error_log for more information. This is where I will need to pick up tomorrow. We moved on to looking into keyword research. We would like to start devoting a couple hours a day to this research. As mentioned, I would like to compare what I know about PrankDial.com to what we see with our competitors. I'm going to have to leave this note pretty much at that. Tomorrow morning, look at the commit, and start to figure out what is up with PayPal. Continue with payment processing, and work on figuring out what is going on with the PayPal credentials in the magento backend.

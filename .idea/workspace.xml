@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac3d19b1-e482-4ca0-a0dd-b066c436ba87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/code/core/Mage/Checkout/Block/Onepage/Billing.php" afterPath="$PROJECT_DIR$/app/code/core/Mage/Checkout/Block/Onepage/Billing.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/billing.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/billing.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css" afterPath="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/iwd/opc/checkout.js" afterPath="$PROJECT_DIR$/js/iwd/opc/checkout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dev.iml" afterPath="$PROJECT_DIR$/.idea/dev.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/log/exception.log" afterPath="$PROJECT_DIR$/var/log/exception.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/log/payment_paypal_direct.log" afterPath="$PROJECT_DIR$/var/log/payment_paypal_direct.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dev.iws" />
@@ -33,13 +27,13 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+            <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/README.md">
                 <provider editor-type-id="MarkdownPreviewEditor">
                   <state />
                 </provider>
                 <provider selected="true" editor-type-id="text-editor">
-                  <state line="33" column="76" selection-start="2994" selection-end="2994" vertical-scroll-proportion="0.3148148" vertical-offset="306" max-vertical-offset="4811">
+                  <state line="35" column="156" selection-start="3285" selection-end="3285" vertical-scroll-proportion="0.2962963" vertical-offset="357" max-vertical-offset="4981">
                     <folding />
                   </state>
                 </provider>
@@ -188,19 +182,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkout.js" pinned="false" current="false" current-in-tab="true">
+      <file leaf-file-name="checkout.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/iwd/opc/checkout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="248" column="52" selection-start="6326" selection-end="6386" vertical-scroll-proportion="0.3246528" vertical-offset="4029" max-vertical-offset="14824">
+            <state line="260" column="10" selection-start="6596" selection-end="6596" vertical-scroll-proportion="0.0" vertical-offset="4029" max-vertical-offset="14824">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="City.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/code/community/IWD/Opc/Helper/City.php">
+      <file leaf-file-name="payment_paypal_direct.log" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/var/log/payment_paypal_direct.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5060" column="27" selection-start="171702" selection-end="171713" vertical-scroll-proportion="-5.2115383" vertical-offset="85749" max-vertical-offset="86768">
+            <state line="125" column="78" selection-start="3956" selection-end="3956" vertical-scroll-proportion="0.22727273" vertical-offset="1925" max-vertical-offset="3009">
               <folding />
             </state>
           </provider>
@@ -342,6 +336,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="var" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="var" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="log" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1404,7 +1416,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279396" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279396" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.35167205" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32686085" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1444,11 +1456,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/html/promo-home.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/tax/checkout/subtotal.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="15" selection-start="1870" selection-end="2220" vertical-scroll-proportion="0.47775176" vertical-offset="0" max-vertical-offset="854" />
@@ -1748,13 +1755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/community/IWD/Opc/Helper/City.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5060" column="27" selection-start="171702" selection-end="171713" vertical-scroll-proportion="-5.2115383" vertical-offset="85749" max-vertical-offset="86768">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/wrapper.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2618">
@@ -1829,9 +1829,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/iwd/opc/checkout.js">
+    <entry file="file://$PROJECT_DIR$/app/code/community/IWD/Opc/Helper/City.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="248" column="52" selection-start="6326" selection-end="6386" vertical-scroll-proportion="0.3246528" vertical-offset="4029" max-vertical-offset="14824">
+        <state line="5060" column="27" selection-start="171702" selection-end="171713" vertical-scroll-proportion="0.33251533" vertical-offset="85749" max-vertical-offset="86768">
           <folding />
         </state>
       </provider>
@@ -1844,7 +1844,21 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="76" selection-start="2994" selection-end="2994" vertical-scroll-proportion="0.3148148" vertical-offset="306" max-vertical-offset="4811">
+        <state line="35" column="156" selection-start="3285" selection-end="3285" vertical-scroll-proportion="0.2962963" vertical-offset="357" max-vertical-offset="4981">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/iwd/opc/checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="260" column="10" selection-start="6596" selection-end="6596" vertical-scroll-proportion="0.0" vertical-offset="4029" max-vertical-offset="14824">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/log/payment_paypal_direct.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="78" selection-start="3956" selection-end="3956" vertical-scroll-proportion="0.22727273" vertical-offset="1925" max-vertical-offset="3009">
           <folding />
         </state>
       </provider>
