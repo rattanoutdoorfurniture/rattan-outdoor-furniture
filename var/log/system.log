@@ -14,3 +14,4 @@
 </pre>
 2014-05-12T20:13:42+00:00 CRIT (2): Not valid template file:frontend\base\default\template\opc/onepage/review/totals.phtml
 2014-05-12T20:13:47+00:00 CRIT (2): Not valid template file:frontend\base\default\template\opc/onepage/review/totals.phtml
+2014-05-15T17:17:07+00:00 DEBUG (7): Unable to make rollback because not all files are writable
