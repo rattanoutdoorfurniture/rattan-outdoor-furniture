@@ -33,11 +33,18 @@
 ?>
 <div class="page-title sixteen columns">
     <h1 id="cart-heading"><?php echo $this->__('Your Cart') ?></h1>
+    <?php if($this->getMessagesBlock()): ?>
+    <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+    <script type="text/javascript">
+        setTimeout(function() {
+            jQuery("ul.messages").slideUp("slow");
+        }, 5000);
+    </script>
+    <?php endif; ?>
 </div>
 <div id="cart-cartbox" class="ten columns cart-box">
     <div class="cart-box-border"></div>
     <div class="cart-box-inner">
-        <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
         <?php echo $this->getChildHtml('form_before') ?>
         <form action="<?php echo $this->getUrl('checkout/cart/updatePost') ?>" method="post" class="remove-bottom">
             <fieldset class="remove-bottom">
@@ -103,7 +110,14 @@
                     <?php endforeach ?>
                     </tbody>
                 </table>
-            <script type="text/javascript">decorateTable('cart-cartbox-table')</script>
+            <script type="text/javascript">
+                decorateTable('cart-cartbox-table');
+                (function($) {
+                    $("[name*=qty]").one("focus", function(e, elem) {
+                        $("tfoot").css("text-align","center").removeClass("displaynone").find("td").prepend("<p/>");
+                    });
+                })(jQuery);
+            </script>
             </fieldset>
             <section id="cart-cartbox-toggle">
                 <span id="cart-cartbox-toggle-text">Show Items In Your Cart (2)</span>

@@ -102,6 +102,10 @@ if (isset($_SERVER['MAGE_IS_DEVELOPER_MODE'])){//||SERVER_ENV!="www") {
 
 #ini_set('display_errors', 1);
 
+if(file_exists('vendor/autoload.php')) {
+    require 'vendor/autoload.php';
+}
+
 umask(0);
 
 /* Store or website code */

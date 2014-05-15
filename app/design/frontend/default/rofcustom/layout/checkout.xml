@@ -41,13 +41,6 @@ Default layout, loads most of the pages
                 <action method="addCheckoutLink"></action>
             </block>
         </reference>
-        <!--<reference name="right">-->
-            <!--<block type="checkout/cart_subtotal" name="cart_subtotal" template="checkout/cart/subtotal.phtml" before="-">-->
-                <!--<block type="core/text_list" name="cart_sidebar.extra_actions" as="extra_actions" translate="label" module="checkout">-->
-                    <!--<label>Shopping Cart Sidebar Extra Actions</label>-->
-                <!--</block>-->
-            <!--</block>-->
-        <!--</reference>-->
     </default>
 
     <checkout_cart_index translate="label">
@@ -55,7 +48,7 @@ Default layout, loads most of the pages
         <remove name="left"/>
         <!-- Mage_Checkout -->
         <reference name="root">
-            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="content">
             <block type="checkout/cart" name="checkout.cart">
@@ -310,7 +303,7 @@ One page checkout main layout
         <remove name="left"/>
 
         <reference name="root">
-            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="right">
             <action method="unsetChildren"></action>
@@ -345,6 +338,8 @@ One page checkout main layout
                     </block>
                 </block>
                 <block type="checkout/onepage_review" name="checkout.onepage.review" as="review" template="checkout/onepage/review.phtml"/>
+
+                <block type="checkout/cart_totals" name="checkout.cart.totals" as="totals" template="checkout/cart/totals.phtml"/>
             </block>
         </reference>
     </checkout_onepage_index>
@@ -461,10 +456,14 @@ One page checkout order review block
         <remove name="left"/>
 
         <block type="checkout/onepage_review_info" name="root" output="toHtml" template="checkout/onepage/review/info.phtml">
-            <action method="addItemRender"><type>default</type><block>checkout/cart_item_renderer</block><template>checkout/onepage/review/item.phtml</template></action>
-            <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/onepage/review/item.phtml</template></action>
-            <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/onepage/review/item.phtml</template></action>
+            <action method="addItemRender"><type>default</type><block>checkout/cart_item_renderer</block><template>opc/onepage/review/item.phtml</template></action>
+            <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>opc/onepage/review/item.phtml</template></action>
+            <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>opc/onepage/review/item.phtml</template></action>
+            <!--<action method="addItemRender"><type>default</type><block>checkout/cart_item_renderer</block><template>checkout/onepage/review/item.phtml</template></action>-->
+            <!--<action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/onepage/review/item.phtml</template></action>-->
+            <!--<action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/onepage/review/item.phtml</template></action>-->
             <block type="checkout/cart_totals" name="checkout.onepage.review.info.totals" as="totals" template="checkout/onepage/review/totals.phtml"/>
+            <!--<block type="checkout/cart_totals" name="checkout.onepage.review.info.totals" as="totals" template="checkout/onepage/review/totals.phtml"/>-->
             <block type="core/text_list" name="checkout.onepage.review.info.items.before" as="items_before" translate="label">
                 <label>Items Before</label>
             </block>

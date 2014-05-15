@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac3d19b1-e482-4ca0-a0dd-b066c436ba87" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/downloader/cache.cfg" afterPath="$PROJECT_DIR$/downloader/cache.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/package/tmp/package.xml" afterPath="$PROJECT_DIR$/var/package/tmp/package.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/code/core/Mage/Checkout/Block/Onepage/Billing.php" afterPath="$PROJECT_DIR$/app/code/core/Mage/Checkout/Block/Onepage/Billing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/billing.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/billing.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css" afterPath="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/iwd/opc/checkout.js" afterPath="$PROJECT_DIR$/js/iwd/opc/checkout.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dev.iml" afterPath="$PROJECT_DIR$/.idea/dev.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/log/exception.log" afterPath="$PROJECT_DIR$/var/log/exception.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,13 +33,13 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="true">
+            <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/README.md">
                 <provider editor-type-id="MarkdownPreviewEditor">
                   <state />
                 </provider>
                 <provider selected="true" editor-type-id="text-editor">
-                  <state line="43" column="16" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.3314917" vertical-offset="431" max-vertical-offset="2533">
+                  <state line="33" column="76" selection-start="2994" selection-end="2994" vertical-scroll-proportion="0.3148148" vertical-offset="306" max-vertical-offset="4811">
                     <folding />
                   </state>
                 </provider>
@@ -48,107 +56,151 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cart.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="40" selection-start="8180" selection-end="8180" vertical-scroll-proportion="-19.423077" vertical-offset="1382" max-vertical-offset="2244">
-              <folding>
-                <element signature="tag#div#3" expanded="false" />
-                <marker date="1399495845418" expanded="true" signature="5126:5161" placeholder="..." />
-                <marker date="1399495845418" expanded="true" signature="13175:13206" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="link.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage/link.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="1557" selection-end="1557" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
-              <folding>
-                <marker date="1399495711659" expanded="true" signature="1083:1541" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="totals.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/totals.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="38" selection-start="1453" selection-end="1465" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="595">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Totals.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Checkout/Block/Cart/Totals.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="20" selection-start="2095" selection-end="2095" vertical-scroll-proportion="0.3321234" vertical-offset="548" max-vertical-offset="2159">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/item/default.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="61" selection-start="2838" selection-end="2838" vertical-scroll-proportion="-12.192307" vertical-offset="720" max-vertical-offset="9469">
-              <folding>
-                <element signature="e#6#968#0" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#span#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#span#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#span#0;n#td#5;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#span#0;n#td#6;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#span#0;n#td#5;n#tr#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#span#0;n#td#6;n#tr#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#span#0;n#td#8;n#tr#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#span#0;n#td#9;n#tr#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Catalog/Helper/Image.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="254" column="33" selection-start="6705" selection-end="6718" vertical-scroll-proportion="-18.576923" vertical-offset="3444" max-vertical-offset="10625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Renderer.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Checkout/Block/Cart/Item/Renderer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="38" selection-start="2957" selection-end="2975" vertical-scroll-proportion="-12.538462" vertical-offset="1136" max-vertical-offset="7361">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="noItems.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/noItems.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="10" selection-start="5886" selection-end="6110" vertical-scroll-proportion="-13.0" vertical-offset="1073" max-vertical-offset="1632">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="cart-checkout.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="18" selection-start="3327" selection-end="3327" vertical-scroll-proportion="0.0" vertical-offset="2279" max-vertical-offset="9945">
+            <state line="797" column="31" selection-start="20703" selection-end="20703" vertical-scroll-proportion="-32.346153" vertical-offset="12708" max-vertical-offset="14280">
+              <folding>
+                <marker date="1400081454895" expanded="true" signature="20348:20456" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shipping.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/shipping.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="147" selection-start="1657" selection-end="1657" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="1054">
+              <folding>
+                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#4;n#!!top" expanded="true" />
+                <marker date="1400009047290" expanded="true" signature="1153:3795" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wrapper.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/wrapper.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2618">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkout.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/checkout.xml">
+      <file leaf-file-name="Wrapper.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/code/community/IWD/Opc/Block/Wrapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="24" selection-start="1390" selection-end="1851" vertical-scroll-proportion="0.0" vertical-offset="591" max-vertical-offset="8568">
+            <state line="52" column="118" selection-start="1470" selection-end="1470" vertical-scroll-proportion="-23.038462" vertical-offset="285" max-vertical-offset="1139">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/page.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="0" selection-start="2876" selection-end="2964" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="3570">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="subtotal.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/subtotal.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="17" selection-start="1539" selection-end="1539" vertical-scroll-proportion="-18.961538" vertical-offset="0" max-vertical-offset="646">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="billing.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/billing.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="102" selection-start="715" selection-end="809" vertical-scroll-proportion="-1.4320987" vertical-offset="156" max-vertical-offset="4998">
+              <folding>
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#li#5;n#ul#0;n#fieldset#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#li#5;n#ul#0;n#fieldset#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1400094362665" expanded="true" signature="268:339" placeholder="Select a bil..." />
+                <marker date="1400094362665" expanded="true" signature="6211:6445" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="6366:6445" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="6763:6878" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="6803:6878" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="6947:7143" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="7403:7503" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="7578:7768" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="8082:8180" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="8245:8317" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="8821:8937" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="8865:8937" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="9351:9421" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="9489:9677" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="9907:10046" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="9947:10046" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="10112:10188" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="10502:10606" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="10682:10796" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="11087:11162" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="11786:11929" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="11826:11929" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="12006:12082" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="12450:12555" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="12624:12692" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="12821:12965" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="12861:12965" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="13036:13215" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="13451:13522" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="13587:13754" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="14335:14567" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="14449:14567" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="14828:14954" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="15359:15481" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="15797:15920" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="16768:16903" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="17146:17261" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="17169:17261" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="17311:17433" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="17550:17641" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="17699:17789" placeholder="..." />
+                <marker date="1400094362665" expanded="true" signature="18691:18753" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Billing.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Checkout/Block/Onepage/Billing.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="138" column="66" selection-start="4923" selection-end="4923" vertical-scroll-proportion="-15.846154" vertical-offset="1543" max-vertical-offset="3706">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="checkout.js" pinned="false" current="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/iwd/opc/checkout.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="248" column="52" selection-start="6326" selection-end="6386" vertical-scroll-proportion="0.3246528" vertical-offset="4029" max-vertical-offset="14824">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="City.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/code/community/IWD/Opc/Helper/City.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5060" column="27" selection-start="171702" selection-end="171713" vertical-scroll-proportion="-5.2115383" vertical-offset="85749" max-vertical-offset="86768">
               <folding />
             </state>
           </provider>
@@ -167,56 +219,56 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/code/local/Rofcustom/Googlecmsimport/Block/Admin/Import.php" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/default/layout/googlecmsimport.xml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/onlinesale/layout/googlecmsimport.xml" />
-        <option value="$PROJECT_DIR$/app/code/local/Rofcustom/Googlecmsimport/Block/Googlecmsimport.php" />
-        <option value="$PROJECT_DIR$/app/code/local/Rofcustom/Googlecmsimport/etc/config.xml" />
-        <option value="$PROJECT_DIR$/app/design/adminhtml/default/default/layout/googlecmsimport.xml" />
-        <option value="$PROJECT_DIR$/app/design/adminhtml/default/default/template/googlecmsimport/index.phtml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/onlinesale/template/googlecmsimport/index.phtml" />
-        <option value="$USER_HOME$/Downloads/cms_page_tree.sql" />
-        <option value="$PROJECT_DIR$/addcities.sql" />
-        <option value="$PROJECT_DIR$/DEV_NOTES" />
-        <option value="$PROJECT_DIR$/lib/Google/Auth/OAuth2.php" />
-        <option value="$PROJECT_DIR$/app/code/local/Rofcustom/Googlecmsimport/controllers/IndexController.php" />
-        <option value="$PROJECT_DIR$/app/code/local/Rofcustom/Googlecmsimport/Block/import.php" />
-        <option value="$PROJECT_DIR$/app/design/adminhtml/default/default/template/googlecmsimport/import.phtml" />
-        <option value="$PROJECT_DIR$/app/code/local/Rofcustom/Googlecmsimport/Model/Googlecmsimport.php" />
-        <option value="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/page-header.css" />
-        <option value="$PROJECT_DIR$/.htaccess" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/list.phtml" />
-        <option value="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/category.css" />
-        <option value="$PROJECT_DIR$/app/code/core/Mage/Catalog/Block/Product/View/Options/Type/Select.php" />
-        <option value="$PROJECT_DIR$/app/etc/local.xml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/options.phtml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view.phtml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/addtocart.phtml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/type/select.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/wrapper.phtml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/wrapper/bottom.phtml" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/lib/Zend/Controller/Request/Http.php" />
         <option value="$PROJECT_DIR$/var/log/system.log" />
-        <option value="$PROJECT_DIR$/var/log/exception.log" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/1column.phtml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/2columns-right.phtml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/catalog.xml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/reports.xml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/customer.xml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/local.xml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/subtotal.phtml" />
         <option value="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/base.css" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/noItems.phtml" />
         <option value="$PROJECT_DIR$/app/code/core/Mage/Catalog/Model/Product/Url.php" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/checkout.xml" />
-        <option value="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/item/default.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/checkout/onepage/link.phtml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage/link.phtml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/sales/order/totals.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/totals.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/item/default.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/options.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/type/select.phtml" />
+        <option value="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/product.css" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/catalog.xml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/wrapper/bottom.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/addtocart.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/2columns-right.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage/link.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/html/footer.phtml" />
+        <option value="$PROJECT_DIR$/var/log/exception.log" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/grandtotal.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/subtotal.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/login.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/item.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/checkout.xml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/customer/form/register.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/shipping.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/info.phtml" />
+        <option value="$PROJECT_DIR$/app/code/core/Mage/Page/Block/Html/Topmenu.php" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/page.xml" />
+        <option value="$PROJECT_DIR$/skin/frontend/default/rofcustom/js/scripts.js" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/totals/shipping.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/shipping.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/coupon.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/noItems.phtml" />
+        <option value="$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/app/code/community/IWD/Opc/Block/Wrapper.php" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/wrapper.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/billing.phtml" />
+        <option value="$PROJECT_DIR$/app/code/core/Mage/Checkout/Block/Onepage/Billing.php" />
+        <option value="$PROJECT_DIR$/js/iwd/opc/checkout.js" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -260,6 +312,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -302,24 +355,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="var" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="log" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="skin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -376,7 +411,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -417,6 +452,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaxMind" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GeoIP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -503,6 +578,86 @@
               <option name="myItemId" value="template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rofcustom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="checkout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rofcustom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -539,6 +694,216 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rofcustom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rofcustom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rofcustom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rofcustom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rofcustom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="review" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -660,7 +1025,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cart" />
+              <option name="myItemId" value="onepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shipping_method" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -702,57 +1071,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cart" />
+              <option name="myItemId" value="onepage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sidebar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rofcustom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="checkout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="render" />
+              <option name="myItemId" value="review" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -794,11 +1117,57 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cart" />
+              <option name="myItemId" value="onepage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="item" />
+              <option name="myItemId" value="progress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rofcustom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="checkout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -891,6 +1260,10 @@
               <option name="myItemId" value="default" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -919,34 +1292,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -961,15 +1311,15 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="LayoutCode.rearrangeEntries&lt;Generic&gt;" value="false" />
     <property name="SearchEverywhereHistory" value="iUuu" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../beta" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/skin/frontend/default/rofcustom/css" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\rof\code\dev\app\design\frontend\default\rofcustom\template\opc\onepage\review\totals" />
+      <recent name="C:\Projects\rof\code\dev\app\design\frontend\default\rofcustom\template\opc\onepage\review" />
+      <recent name="C:\Projects\rof\code\dev\app\design\frontend\default\rofcustom\template" />
       <recent name="C:\Projects\rof\code\dev\app\design\frontend\default\rofcustom\layout" />
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/app/design/adminhtml/default/default/template/googlecmsimport" />
-      <recent name="$PROJECT_DIR$/app/design/frontend/default/onlinesale/template/googlecmsimport" />
-      <recent name="$PROJECT_DIR$/app/code/local/Rofcustom/Googlecmsimport/controllers" />
+      <recent name="C:\Projects\rof\code\dev\skin\frontend\default\rofcustom\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projects\rof\code\dev\app\design\frontend\default\rofcustom\template\checkout\cart" />
@@ -1052,27 +1402,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" weight="0.35167205" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32686085" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279396" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.35167205" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32686085" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33764833" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279396" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2630458" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2657082" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1094,438 +1444,407 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/onlinesale/template/catalog/product/view.phtml">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/html/promo-home.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.769231" vertical-offset="306" max-vertical-offset="3264">
-          <folding>
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085598000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view.phtml">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/tax/checkout/subtotal.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="383" column="17" selection-start="17528" selection-end="17528" vertical-scroll-proportion="-17.692308" vertical-offset="5592" max-vertical-offset="6834">
-          <folding />
-        </state>
+        <state line="47" column="15" selection-start="1870" selection-end="2220" vertical-scroll-proportion="0.47775176" vertical-offset="0" max-vertical-offset="854" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/etc/local.xml">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/tax/checkout/grandtotal.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="54" selection-start="1892" selection-end="1892" vertical-scroll-proportion="0.5682575" vertical-offset="304" max-vertical-offset="1224">
-          <folding />
-        </state>
+        <state line="49" column="0" selection-start="2017" selection-end="2400" vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="697" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/addtocart.phtml">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/grandtotal.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="23" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.41415313" vertical-offset="0" max-vertical-offset="867">
-          <folding />
-        </state>
+        <state line="29" column="2" selection-start="1071" selection-end="1071" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="850" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/wrapper/bottom.phtml">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/iphone/layout/checkout.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="49" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.058285713" vertical-offset="0" max-vertical-offset="875">
-          <folding />
-        </state>
+        <state line="255" column="172" selection-start="13685" selection-end="13685" vertical-scroll-proportion="0.33333334" vertical-offset="4046" max-vertical-offset="7055" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skin/frontend/default/rofcustom/css/page-header.css">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage/review/item.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="1" selection-start="2341" selection-end="2341" vertical-scroll-proportion="0.5116537" vertical-offset="1783" max-vertical-offset="3774">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3791" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skin/frontend/default/rofcustom/css/category.css">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/agreements.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="24" selection-start="2648" selection-end="2648" vertical-scroll-proportion="0.3773585" vertical-offset="1955" max-vertical-offset="4182">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Zend/Controller/Request/Http.php">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/subtotal.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="543" column="33" selection-start="16734" selection-end="16734" vertical-scroll-proportion="0.38171428" vertical-offset="8897" max-vertical-offset="18190">
-          <folding>
-            <element signature="e#6#750#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="59" column="84" selection-start="2817" selection-end="2817" vertical-scroll-proportion="0.7099768" vertical-offset="0" max-vertical-offset="862" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/item.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="2" selection-start="3029" selection-end="3029" vertical-scroll-proportion="0.536" vertical-offset="738" max-vertical-offset="1632">
-          <folding>
-            <marker date="1399472529239" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1399472529239" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399472529239" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1399472529239" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399472529239" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1399472529239" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399472529239" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/wrapper.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="30" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.09714286" vertical-offset="0" max-vertical-offset="875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/catalog/product/view/options/type/select.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="3340" selection-end="3340" vertical-scroll-proportion="0.7888631" vertical-offset="0" max-vertical-offset="862">
-          <folding>
-            <element signature="e#1819#3336#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/log/system.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/quickview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.2264151" vertical-offset="204" max-vertical-offset="1258">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/easytabs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="888">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/page.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="52" selection-start="1810" selection-end="1810" vertical-scroll-proportion="0.3518313" vertical-offset="414" max-vertical-offset="3536">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/checkout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8449">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/template/links.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/template/container.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skin/frontend/default/rofcustom/images/button/arrow.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skin/frontend/default/rofcustom/images/button/cart.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skin/frontend/default/rofcustom/images/button/select.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/1column.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="2" selection-start="1026" selection-end="1043" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="765">
-          <folding>
-            <marker date="1399479734204" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399479734204" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399479734204" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399479734204" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399479734204" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/render/simple.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/sidebar/default.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2176">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/reports.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="8" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.77272725" vertical-offset="0" max-vertical-offset="880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/customer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="225" column="44" selection-start="8390" selection-end="8390" vertical-scroll-proportion="-0.1764706" vertical-offset="3978" max-vertical-offset="5287">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/local.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="46" selection-start="166" selection-end="166" vertical-scroll-proportion="0.13207547" vertical-offset="0" max-vertical-offset="1700">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/catalog.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="34" selection-start="3367" selection-end="3367" vertical-scroll-proportion="0.6891892" vertical-offset="714" max-vertical-offset="7293">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/sidebar.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.9230769" vertical-offset="102" max-vertical-offset="1071">
-          <folding>
-            <marker date="1390085584000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085584000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085584000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085584000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085584000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085584000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1390085584000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/2columns-right.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="50" selection-start="2237" selection-end="2237" vertical-scroll-proportion="-20.923077" vertical-offset="0" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/render/default.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Catalog/Block/Product/Abstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="529" column="48" selection-start="15831" selection-end="15831" vertical-scroll-proportion="0.5335753" vertical-offset="8308" max-vertical-offset="11050">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Catalog/Model/Product/Url.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="86" selection-start="4617" selection-end="4870" vertical-scroll-proportion="0.34845734" vertical-offset="2545" max-vertical-offset="4981">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Bundle/Block/Checkout/Cart/Item/Renderer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="58" selection-start="1177" selection-end="1177" vertical-scroll-proportion="1.3076923" vertical-offset="204" max-vertical-offset="1530">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Sales/Model/Quote/Item/Abstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="15" selection-start="1536" selection-end="1536" vertical-scroll-proportion="-0.94736844" vertical-offset="811" max-vertical-offset="13532">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Sales/Model/Quote/Item.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="61" selection-start="6707" selection-end="6707" vertical-scroll-proportion="-4.576923" vertical-offset="1683" max-vertical-offset="14858">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/log/exception.log">
-      <provider editor-type-id="LargeFileEditor">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="876">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/subtotal.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="10" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.9872958" vertical-offset="0" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Checkout/Block/Cart/Item/Renderer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="38" selection-start="2957" selection-end="2975" vertical-scroll-proportion="-12.538462" vertical-offset="1136" max-vertical-offset="7361">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Catalog/Helper/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="254" column="33" selection-start="6705" selection-end="6718" vertical-scroll-proportion="-18.576923" vertical-offset="3444" max-vertical-offset="10625">
-          <folding />
-        </state>
+        <state line="28" column="89" selection-start="1100" selection-end="1100" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="3791" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/checkout.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="24" selection-start="1390" selection-end="1851" vertical-scroll-proportion="0.0" vertical-offset="591" max-vertical-offset="8568">
+        <state line="457" column="6" selection-start="24759" selection-end="24759" vertical-scroll-proportion="-12.423077" vertical-offset="7446" max-vertical-offset="8551">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skin/frontend/default/rofcustom/css/base.css">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/totals.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="282" column="43" selection-start="9527" selection-end="9527" vertical-scroll-proportion="0.8673587" vertical-offset="4042" max-vertical-offset="4930">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/login.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="37" selection-start="2557" selection-end="2557" vertical-scroll-proportion="-27.26923" vertical-offset="209" max-vertical-offset="1071" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/prototype/validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="251" column="26" selection-start="9719" selection-end="9719" vertical-scroll-proportion="0.33333334" vertical-offset="3512" max-vertical-offset="14756" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/button.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/customer/account/asklink.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="19" selection-start="2007" selection-end="2007" vertical-scroll-proportion="0.33293697" vertical-offset="94" max-vertical-offset="1377" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/customer/form/register.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="31" selection-start="9153" selection-end="9153" vertical-scroll-proportion="0.0" vertical-offset="2083" max-vertical-offset="2958">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="18" selection-start="3327" selection-end="3327" vertical-scroll-proportion="0.0" vertical-offset="2279" max-vertical-offset="9945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/item/default.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="61" selection-start="2838" selection-end="2838" vertical-scroll-proportion="-12.192307" vertical-offset="720" max-vertical-offset="9469">
-          <folding>
-            <element signature="e#6#968#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#span#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#span#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#span#0;n#td#5;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#span#0;n#td#6;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#span#0;n#td#5;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#span#0;n#td#6;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#span#0;n#td#8;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#span#0;n#td#9;n#tr#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage/link.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1557" selection-end="1557" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
-          <folding>
-            <marker date="1399495711659" expanded="true" signature="1083:1541" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/checkout/onepage/link.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="406" selection-start="1427" selection-end="1427" vertical-scroll-proportion="0.12639405" vertical-offset="0" max-vertical-offset="538">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/noItems.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="10" selection-start="5886" selection-end="6110" vertical-scroll-proportion="-13.0" vertical-offset="1073" max-vertical-offset="1632">
+        <state line="35" column="0" selection-start="1438" selection-end="1967" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1887">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="40" selection-start="8180" selection-end="8180" vertical-scroll-proportion="-19.423077" vertical-offset="1382" max-vertical-offset="2244">
-          <folding>
-            <element signature="tag#div#3" expanded="false" />
-            <marker date="1399495845418" expanded="true" signature="5126:5161" placeholder="..." />
-            <marker date="1399495845418" expanded="true" signature="13175:13206" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/totals.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="38" selection-start="1453" selection-end="1465" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="595">
+        <state line="44" column="0" selection-start="1444" selection-end="7655" vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="4947">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Checkout/Block/Cart/Totals.php">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/html/header.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="20" selection-start="2095" selection-end="2095" vertical-scroll-proportion="0.3321234" vertical-offset="548" max-vertical-offset="2159">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Page/Block/Html/Topmenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="80" selection-start="4075" selection-end="4075" vertical-scroll-proportion="0.31850117" vertical-offset="1513" max-vertical-offset="4862">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/html/topmenu.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="38" selection-start="1470" selection-end="1556" vertical-scroll-proportion="0.5175644" vertical-offset="0" max-vertical-offset="854">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/adminhtml/default/default/template/giftmessage/giftoptionsform.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="31" selection-start="1321" selection-end="1321" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/iwd_opc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="78" selection-start="1147" selection-end="1235" vertical-scroll-proportion="0.3137255" vertical-offset="170" max-vertical-offset="2584">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/default/rofcustom/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="20" selection-start="371" selection-end="371" vertical-scroll-proportion="0.18867925" vertical-offset="85" max-vertical-offset="3502">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage/shipping_method/available.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage/progress/shipping_method.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage/progress/shipping.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage/shipping.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2363">
+          <folding>
+            <marker date="1395327657269" expanded="true" signature="-1:-1" placeholder="Select a shi..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/shipping.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="23" selection-start="8754" selection-end="8754" vertical-scroll-proportion="2.051044" vertical-offset="0" max-vertical-offset="2074">
+          <folding>
+            <marker date="1399910167189" expanded="true" signature="-1:-1" placeholder="Select a shi..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/shipping_method.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/review/info.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="41" selection-start="3562" selection-end="3562" vertical-scroll-proportion="-12.230769" vertical-offset="464" max-vertical-offset="1326">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/coupon.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="37" selection-start="554" selection-end="893" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/shipping.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="147" selection-start="1657" selection-end="1657" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="1054">
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#4;n#!!top" expanded="true" />
+            <marker date="1400009047290" expanded="true" signature="1153:3795" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage/payment/methods.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/layout/page.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="0" selection-start="2876" selection-end="2964" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="3570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage/link.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="17" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.08085612" vertical-offset="0" max-vertical-offset="841">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/noItems.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="14" selection-start="5831" selection-end="5831" vertical-scroll-proportion="0.7277051" vertical-offset="765" max-vertical-offset="1632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/cart/subtotal.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="17" selection-start="1539" selection-end="1539" vertical-scroll-proportion="-18.961538" vertical-offset="0" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/default/rofcustom/css/cart-checkout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="797" column="31" selection-start="20703" selection-end="20703" vertical-scroll-proportion="-32.346153" vertical-offset="12708" max-vertical-offset="14280">
+          <folding>
+            <marker date="1400081454895" expanded="true" signature="20348:20456" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/log/payment_paypal_express.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="32" selection-start="51" selection-end="51" vertical-scroll-proportion="0.038857143" vertical-offset="0" max-vertical-offset="875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_5.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="417" column="9" selection-start="11477" selection-end="11477" vertical-scroll-proportion="8.300937" vertical-offset="0" max-vertical-offset="19567">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="1" selection-start="3347" selection-end="3347" vertical-scroll-proportion="0.765808" vertical-offset="757" max-vertical-offset="1700">
+          <folding>
+            <marker date="1400085063911" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1400085063911" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400085063911" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1400085063911" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400085063911" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1400085063911" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400085063911" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Sales/Model/Quote/Address.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="3" selection-start="2654" selection-end="2654" vertical-scroll-proportion="0.34309134" vertical-offset="370" max-vertical-offset="21131">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/IWD/Opc/Helper/City.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5060" column="27" selection-start="171702" selection-end="171713" vertical-scroll-proportion="-5.2115383" vertical-offset="85749" max-vertical-offset="86768">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/wrapper.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2618">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/billing.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="102" selection-start="715" selection-end="809" vertical-scroll-proportion="-1.4320987" vertical-offset="156" max-vertical-offset="4998">
+          <folding>
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#li#5;n#ul#0;n#fieldset#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#li#5;n#ul#0;n#fieldset#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1400094362665" expanded="true" signature="268:339" placeholder="Select a bil..." />
+            <marker date="1400094362665" expanded="true" signature="6211:6445" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="6366:6445" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="6763:6878" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="6803:6878" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="6947:7143" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="7403:7503" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="7578:7768" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="8082:8180" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="8245:8317" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="8821:8937" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="8865:8937" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="9351:9421" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="9489:9677" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="9907:10046" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="9947:10046" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="10112:10188" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="10502:10606" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="10682:10796" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="11087:11162" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="11786:11929" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="11826:11929" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="12006:12082" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="12450:12555" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="12624:12692" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="12821:12965" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="12861:12965" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="13036:13215" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="13451:13522" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="13587:13754" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="14335:14567" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="14449:14567" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="14828:14954" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="15359:15481" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="15797:15920" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="16768:16903" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="17146:17261" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="17169:17261" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="17311:17433" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="17550:17641" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="17699:17789" placeholder="..." />
+            <marker date="1400094362665" expanded="true" signature="18691:18753" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/IWD/Opc/Block/Wrapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="118" selection-start="1470" selection-end="1470" vertical-scroll-proportion="-23.038462" vertical-offset="285" max-vertical-offset="1139">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Checkout/Block/Onepage/Billing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="66" selection-start="4923" selection-end="4923" vertical-scroll-proportion="-15.846154" vertical-offset="1543" max-vertical-offset="3706">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/iwd/opc/checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="248" column="52" selection-start="6326" selection-end="6386" vertical-scroll-proportion="0.3246528" vertical-offset="4029" max-vertical-offset="14824">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="16" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.3314917" vertical-offset="431" max-vertical-offset="2533">
+        <state line="33" column="76" selection-start="2994" selection-end="2994" vertical-scroll-proportion="0.3148148" vertical-offset="306" max-vertical-offset="4811">
           <folding />
         </state>
       </provider>

@@ -29,9 +29,9 @@
 
 
 <?php if($_product->isSaleable()): ?>
-    <div class="add-to-cart">
+    <!--<div class="add-to-cart">-->
         <?php if(!$_product->isGrouped()): ?>
-            <div class="input-qty-box">
+            <div class="input-qty-box displaynone">
                 <div class="input">
                     <ul class="range">
                         <li class="item minus"><a style=" cursor:pointer">-</a></li>
@@ -42,27 +42,19 @@
                     </ul>
                 </div>
             </div>
+        <section id="product-details-options-qty" class="product-details-options-section">
+            <span id="product-details-options-qty-label" class="product-details-options-label">Select Quantity:</span>
+            <aside id="product-details-options-qty-selector">
+                <select id="qty" name="qty"  title="<?php echo $this->__('Qty') ?>" class="input-text qty">
+                    <?php $defQty = $this->getProductDefaultQty() * 1; ?>
+                    <?php for($i=1;$i<=10;$i++):?>
+                        <option class="product-details-options-qty-select-opt" value="<?php echo $i; ?>"<?php echo $i==$defQty ? ' selected="selected"':''; ?>><?php echo $i; ?></option>
+                    <?php endfor; ?>
+                </select>
+            </aside>
+        </section>
         <?php endif; ?>
-        <button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
-        <?php echo $this->getChildHtml('', true, true) ?>
-    </div>
-<?php endif; ?>
-
-
-<?php /* OLD NEW CODE... Fix this later, the above works, but isn't pretty, the beolow doesn't work, but looks good. */ ?>
-<?php if(null&&$_product->isSaleable()): ?>
-
-<!--    <button class="btn-icon btn btn-cart" title="--><?php //echo $buttonTitle ?><!--"  onclick="productAddToCartForm.submit(this)"><i class="icon-shopping-cart"></i> --><?php //echo $buttonTitle ?><!--</button>-->
-        <button class="btn-icon btn btn-cart" title="<?php echo $buttonTitle ?>"  onclick="productAddToCartForm.submit(this)"><i class="icon-shopping-cart"></i> <?php echo $buttonTitle ?></button>
-
-
-        <div id="product-details-btns">
-            <section id="product-details-btns-add" class="product-details-btn">
-                <button id="product-details-btns-add-btn" class="btn-icon btn btn-cart product-details-btn-img" title="<?php echo $buttonTitle ?>"  onclick="productAddToCartForm.submit(this)"><i class="icon-shopping-cart"></i><?php echo $buttonTitle ?></button>
-            </section>
-            <?php //echo $this->getChildHtml('', true, true) ?>
-            <section id="product-details-btns-checkout" class="product-details-btn">
-                <button id="product-details-btns-checkout-btn" class="product-details-btn-img">Checkout</button>
-            </section>
-        </div>
+        <!-- button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button -->
+        <?php //echo $this->getChildHtml('', true, true) ?>
+    <!--</div>-->
 <?php endif; ?>

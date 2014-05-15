@@ -129,41 +129,42 @@
         <span id="product-details-special-label">Special Offers:</span>
         <span id="product-details-special-text">Spend $ 2,000 and save an extra <mark class="purpText">10%</mark></span>
     </div>
+    <?php if ($_product->isSaleable()):?>
 
-    <!-- Color and Quantity Section --------------------------------------------------->
+        <!-- Color and Quantity Section --------------------------------------------------->
 
-    <div id="product-details-options" class="clearfix">
-    <?php if ($_product->isSaleable()):// && $this->hasOptions()):?>
-        <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
-    <?php endif;?>
-    </div>
+        <div class="product-details-options" class="clearfix">
+            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+        </div>
 
-    <!-- Call to Action buttons --------------------------------------------------------->
+        <!-- Call to Action buttons For Products Without Color Options --------------------->
 
-    <?php if (!$this->hasOptions()):?>
-        <div class="add-to-box">
-            <?php if($_product->isSaleable()): ?>
-                <?php echo $this->getChildHtml('addtocart') ?>
-                <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
-                    <span class="or"><?php echo $this->__('OR') ?></span>
+        <?php /*if (!$this->hasOptions()):?>
+            <div class="add-to-box">
+                <?php if($_product->isSaleable()): ?>
+                    <?php echo $this->getChildHtml('addtocart') ?>
+                    <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                        <span class="or"><?php echo $this->__('OR') ?></span>
+                    <?php endif; ?>
                 <?php endif; ?>
-            <?php endif; ?>
-            <?php echo $this->getChildHtml('addto') ?>
+                <?php echo $this->getChildHtml('addto') ?>
+            </div>
+            <?php echo $this->getChildHtml('extra_buttons') ?>
+        <?php elseif (!$_product->isSaleable()): ?>
+            <div class="add-to-box">
+                <?php echo $this->getChildHtml('addto') ?>
+            </div>
+        <?php endif;*/ ?>
+
+        <div id="product-details-btns">
+            <section id="product-details-btns-add" class="product-details-btn">
+                <button id="product-details-btns-add-btn" class="product-details-btn-img" onclick="productAddToCartForm.submit(this)">Add To Cart</button>
+            </section>
+            <section id="product-details-btns-checkout" class="product-details-btn">
+                <button id="product-details-btns-checkout-btn" class="product-details-btn-img">Checkout</button>
+            </section>
         </div>
-        <?php echo $this->getChildHtml('extra_buttons') ?>
-    <?php elseif (!$_product->isSaleable()): ?>
-        <div class="add-to-box">
-            <?php echo $this->getChildHtml('addto') ?>
-        </div>
-    <?php endif; ?>
-    <div id="product-details-btns">
-        <section id="product-details-btns-add" class="product-details-btn">
-            <button id="product-details-btns-add-btn" class="product-details-btn-img" onclick="productAddToCartForm.submit(this)">Add To Cart</button>
-        </section>
-        <section id="product-details-btns-checkout" class="product-details-btn">
-            <button id="product-details-btns-checkout-btn" class="product-details-btn-img">Checkout</button>
-        </section>
-    </div>
+    <?php endif;?>
 
     <!-- Social Media Buttons Area -------------------------------------------------------->
 
