@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac3d19b1-e482-4ca0-a0dd-b066c436ba87" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/log/exception.log" afterPath="$PROJECT_DIR$/var/log/exception.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/log/payment_paypal_direct.log" afterPath="$PROJECT_DIR$/var/log/payment_paypal_direct.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dev.iws" />
@@ -27,7 +25,7 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="true">
+            <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/README.md">
                 <provider editor-type-id="MarkdownPreviewEditor">
                   <state />
@@ -56,27 +54,6 @@
             <state line="797" column="31" selection-start="20703" selection-end="20703" vertical-scroll-proportion="-32.346153" vertical-offset="12708" max-vertical-offset="14280">
               <folding>
                 <marker date="1400081454895" expanded="true" signature="20348:20456" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shipping.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/shipping.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="147" selection-start="1657" selection-end="1657" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="1054">
-              <folding>
-                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#4;n#!!top" expanded="true" />
-                <marker date="1400009047290" expanded="true" signature="1153:3795" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -191,10 +168,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payment_paypal_direct.log" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="payment_paypal_direct.log" pinned="false" current="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/var/log/payment_paypal_direct.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="78" selection-start="3956" selection-end="3956" vertical-scroll-proportion="0.22727273" vertical-offset="1925" max-vertical-offset="3009">
+            <state line="131" column="29" selection-start="4161" selection-end="4161" vertical-scroll-proportion="1.1842397" vertical-offset="1160" max-vertical-offset="3009">
               <folding />
             </state>
           </provider>
@@ -239,7 +216,6 @@
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage/link.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/checkout/onepage.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/page/html/footer.phtml" />
-        <option value="$PROJECT_DIR$/var/log/exception.log" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/grandtotal.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/tax/checkout/subtotal.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/default/rofcustom/template/opc/onepage/login.phtml" />
@@ -264,6 +240,7 @@
         <option value="$PROJECT_DIR$/app/code/core/Mage/Checkout/Block/Onepage/Billing.php" />
         <option value="$PROJECT_DIR$/js/iwd/opc/checkout.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/var/log/exception.log" />
       </list>
     </option>
   </component>
@@ -354,6 +331,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="log" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="var" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backups" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1456,11 +1451,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/tax/checkout/subtotal.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="15" selection-start="1870" selection-end="2220" vertical-scroll-proportion="0.47775176" vertical-offset="0" max-vertical-offset="854" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/tax/checkout/grandtotal.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="0" selection-start="2017" selection-end="2400" vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="697" />
@@ -1663,7 +1653,7 @@
             <element signature="n#style#0;n#td#1;n#tr#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#1;n#tr#4;n#!!top" expanded="true" />
-            <marker date="1400009047290" expanded="true" signature="1153:3795" placeholder="..." />
+            <marker date="1400009047290" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1836,6 +1826,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/iwd/opc/checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="260" column="10" selection-start="6596" selection-end="6596" vertical-scroll-proportion="0.0" vertical-offset="4029" max-vertical-offset="14824">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/log/exception.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/log/payment_paypal_direct.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="29" selection-start="4161" selection-end="4161" vertical-scroll-proportion="1.1842397" vertical-offset="1160" max-vertical-offset="3009">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -1845,20 +1856,6 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="156" selection-start="3285" selection-end="3285" vertical-scroll-proportion="0.2962963" vertical-offset="357" max-vertical-offset="4981">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/iwd/opc/checkout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="260" column="10" selection-start="6596" selection-end="6596" vertical-scroll-proportion="0.0" vertical-offset="4029" max-vertical-offset="14824">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/log/payment_paypal_direct.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="78" selection-start="3956" selection-end="3956" vertical-scroll-proportion="0.22727273" vertical-offset="1925" max-vertical-offset="3009">
           <folding />
         </state>
       </provider>
