@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ac3d19b1-e482-4ca0-a0dd-b066c436ba87" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +30,7 @@
                   <state />
                 </provider>
                 <provider selected="true" editor-type-id="text-editor">
-                  <state line="188" column="0" selection-start="42923" selection-end="42923" vertical-scroll-proportion="0.7407407" vertical-offset="4199" max-vertical-offset="5202">
+                  <state line="52" column="1842" selection-start="6456" selection-end="6456" vertical-scroll-proportion="0.5555556" vertical-offset="527" max-vertical-offset="5338">
                     <folding />
                   </state>
                 </provider>
@@ -53,7 +52,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="797" column="31" selection-start="20703" selection-end="20703" vertical-scroll-proportion="-32.346153" vertical-offset="12708" max-vertical-offset="14280">
               <folding>
-                <marker date="1400081454895" expanded="true" signature="20348:20456" placeholder="{...}" />
+                <marker date="1400181912450" expanded="true" signature="20348:20456" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -283,7 +282,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1304,6 +1302,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1412,7 +1411,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279396" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="1.0" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" weight="1.0" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32686085" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1422,7 +1421,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279396" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2657082" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2657082" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1604,7 +1603,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2363">
           <folding>
-            <marker date="1395327657269" expanded="true" signature="-1:-1" placeholder="Select a shi..." />
+            <marker date="1400181896722" expanded="true" signature="-1:-1" placeholder="Select a shi..." />
           </folding>
         </state>
       </provider>
@@ -1653,7 +1652,7 @@
             <element signature="n#style#0;n#td#1;n#tr#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#1;n#tr#4;n#!!top" expanded="true" />
-            <marker date="1400009047290" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400181896938" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1697,7 +1696,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="797" column="31" selection-start="20703" selection-end="20703" vertical-scroll-proportion="-32.346153" vertical-offset="12708" max-vertical-offset="14280">
           <folding>
-            <marker date="1400081454895" expanded="true" signature="20348:20456" placeholder="{...}" />
+            <marker date="1400181912450" expanded="true" signature="20348:20456" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1727,13 +1726,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="106" column="1" selection-start="3347" selection-end="3347" vertical-scroll-proportion="0.765808" vertical-offset="757" max-vertical-offset="1700">
           <folding>
-            <marker date="1400085063911" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1400085063911" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400085063911" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1400085063911" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400085063911" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1400085063911" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400085063911" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400181897520" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1400181897520" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400181897520" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1400181897520" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400181897520" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1400181897520" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400181897520" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1855,7 +1854,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="0" selection-start="42923" selection-end="42923" vertical-scroll-proportion="0.7407407" vertical-offset="4199" max-vertical-offset="5202">
+        <state line="52" column="1842" selection-start="6456" selection-end="6456" vertical-scroll-proportion="0.5555556" vertical-offset="527" max-vertical-offset="5338">
           <folding />
         </state>
       </provider>
