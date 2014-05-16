@@ -13,6 +13,11 @@
     <?php
         use GeoIp2\Database\Reader;
         $maxMindDbPath = realpath(Mage::getBaseDir('lib')."/MaxMind/GeoIp/Data/GeoLite2-City.mmdb");
+        die(dumper::auto(array(
+            "maxMindDbPath"                 =>  $maxMindDbPath,
+            "Mage::getBaseDir('lib')"       =>  Mage::getBaseDir('lib'),
+            "Mage::getBaseDir('lib')+path"  =>  Mage::getBaseDir('lib')."/MaxMind/GeoIp/Data/GeoLite2-City.mmdb"
+        )));
         $reader = new Reader($maxMindDbPath);
         $ipAddress = ($_SERVER['REMOTE_ADDR']=='127.0.0.1'?"108.233.226.254":$_SERVER['REMOTE_ADDR']);
         $record = $reader->city($ipAddress);
