@@ -351,3 +351,67 @@
 [5] /home/rof/public_html/dev/app/Mage.php:684
 [6] /home/rof/public_html/dev/index.php:117
 </pre>
+2014-05-16T16:59:23+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:52
+[1] /home/rof/public_html/dev/lib/Zend/Controller/Response/Abstract.php:766
+[2] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:83
+[3] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php:354
+[5] /home/rof/public_html/dev/app/Mage.php:684
+[6] /home/rof/public_html/dev/index.php:117
+</pre>
+2014-05-16T16:59:31+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:52
+[1] /home/rof/public_html/dev/lib/Zend/Controller/Response/Abstract.php:766
+[2] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:83
+[3] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php:354
+[5] /home/rof/public_html/dev/app/Mage.php:684
+[6] /home/rof/public_html/dev/index.php:117
+</pre>
+2014-05-16T17:46:56+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:52
+[1] /home/rof/public_html/dev/lib/Zend/Controller/Response/Abstract.php:766
+[2] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:83
+[3] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php:354
+[5] /home/rof/public_html/dev/app/Mage.php:684
+[6] /home/rof/public_html/dev/index.php:117
+</pre>
+2014-05-16T17:47:03+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:52
+[1] /home/rof/public_html/dev/lib/Zend/Controller/Response/Abstract.php:766
+[2] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:83
+[3] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php:354
+[5] /home/rof/public_html/dev/app/Mage.php:684
+[6] /home/rof/public_html/dev/index.php:117
+</pre>
+2014-05-16T18:18:19+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:52
+[1] /home/rof/public_html/dev/lib/Zend/Controller/Response/Abstract.php:766
+[2] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:83
+[3] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php:354
+[5] /home/rof/public_html/dev/app/Mage.php:684
+[6] /home/rof/public_html/dev/index.php:117
+</pre>
+2014-05-16T18:23:33+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:52
+[1] /home/rof/public_html/dev/lib/Zend/Controller/Response/Abstract.php:766
+[2] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:83
+[3] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php:354
+[5] /home/rof/public_html/dev/app/Mage.php:684
+[6] /home/rof/public_html/dev/index.php:117
+</pre>
+2014-05-16T18:26:35+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:52
+[1] /home/rof/public_html/dev/lib/Zend/Controller/Response/Abstract.php:766
+[2] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:83
+[3] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php:354
+[5] /home/rof/public_html/dev/app/Mage.php:684
+[6] /home/rof/public_html/dev/index.php:117
+</pre>
+2014-05-16T18:26:39+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:52
+[1] /home/rof/public_html/dev/lib/Zend/Controller/Response/Abstract.php:766
+[2] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:83
+[3] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php:354
+[5] /home/rof/public_html/dev/app/Mage.php:684
+[6] /home/rof/public_html/dev/index.php:117
+</pre>

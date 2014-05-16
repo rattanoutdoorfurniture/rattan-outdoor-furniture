@@ -169,3 +169,336 @@
     [__pid] => 11364
 )
 
+2014-05-16T16:58:14+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [DoDirectPayment] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [IPADDRESS] => 108.233.226.254
+            [RETURNFMFDETAILS] => 1
+            [AMT] => 2547.00
+            [CURRENCYCODE] => USD
+            [INVNUM] => 100000004
+            [NOTIFYURL] => http://dev.rattanoutdoorfurniture.com/paypal/ipn/
+            [EMAIL] => dev@rattanoutdoorfurniture.com
+            [CREDITCARDTYPE] => ****
+            [ACCT] => ****
+            [EXPDATE] => ****
+            [CVV2] => ****
+            [ISSUENUMBER] => 
+            [ITEMAMT] => 2547.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [BUSINESS] => Nautical Depot, LLC
+            [FIRSTNAME] => Michael
+            [LASTNAME] => Simoneau
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => OH
+            [CITY] => Willoughby
+            [STREET] => 5900 Som Center Road
+            [ZIP] => 44094
+            [PHONENUM] => 4406066306
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => OH
+            [SHIPTOCITY] => Willoughby
+            [SHIPTOSTREET] => 5900 Som Center Road
+            [SHIPTOZIP] => 44094
+            [SHIPTOPHONENUM] => 4406066306
+            [SHIPTOSTREET2] => Suite 12
+            [STREET2] => Suite 12
+            [SHIPTONAME] => Michael Simoneau
+            [METHOD] => DoDirectPayment
+            [VERSION] => 94.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => IWD_SI_MagentoCE_WPS
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2014-05-16T16:58:15Z
+            [CORRELATIONID] => dddb657e6d6a9
+            [ACK] => Failure
+            [VERSION] => 94.0
+            [BUILD] => 10958405
+            [L_ERRORCODE0] => 10002
+            [L_SHORTMESSAGE0] => Security error
+            [L_LONGMESSAGE0] => Security header is not valid
+            [L_SEVERITYCODE0] => Error
+        )
+
+    [__pid] => 16196
+)
+
+2014-05-16T18:17:17+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [DoDirectPayment] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [IPADDRESS] => 108.233.226.254
+            [RETURNFMFDETAILS] => 1
+            [AMT] => 849.00
+            [CURRENCYCODE] => USD
+            [INVNUM] => 100000005
+            [NOTIFYURL] => http://dev.rattanoutdoorfurniture.com/paypal/ipn/
+            [EMAIL] => dev@rattanoutdoorfurniture.com
+            [CREDITCARDTYPE] => ****
+            [ACCT] => ****
+            [EXPDATE] => ****
+            [CVV2] => ****
+            [ISSUENUMBER] => 
+            [ITEMAMT] => 849.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [BUSINESS] => Nautical Depot, LLC
+            [FIRSTNAME] => Michael
+            [LASTNAME] => Simoneau
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => OH
+            [CITY] => Willoughby
+            [STREET] => 5900 Som Center Road
+            [ZIP] => 44094
+            [PHONENUM] => 4406066306
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => OH
+            [SHIPTOCITY] => Willoughby
+            [SHIPTOSTREET] => 5900 Som Center Road
+            [SHIPTOZIP] => 44094
+            [SHIPTOPHONENUM] => 4406066306
+            [SHIPTOSTREET2] => Suite 12
+            [STREET2] => Suite 12
+            [SHIPTONAME] => Michael Simoneau
+            [METHOD] => DoDirectPayment
+            [VERSION] => 94.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => IWD_SI_MagentoCE_WPS
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2014-05-16T18:17:18Z
+            [CORRELATIONID] => 53f78210824b5
+            [ACK] => Failure
+            [VERSION] => 94.0
+            [BUILD] => 10958405
+            [L_ERRORCODE0] => 10002
+            [L_SHORTMESSAGE0] => Security error
+            [L_LONGMESSAGE0] => Security header is not valid
+            [L_SEVERITYCODE0] => Error
+        )
+
+    [__pid] => 21675
+)
+
+2014-05-16T18:23:06+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [DoDirectPayment] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [IPADDRESS] => 108.233.226.254
+            [RETURNFMFDETAILS] => 1
+            [AMT] => 849.00
+            [CURRENCYCODE] => USD
+            [INVNUM] => 100000005
+            [NOTIFYURL] => http://dev.rattanoutdoorfurniture.com/paypal/ipn/
+            [EMAIL] => dev@rattanoutdoorfurniture.com
+            [CREDITCARDTYPE] => ****
+            [ACCT] => ****
+            [EXPDATE] => ****
+            [CVV2] => ****
+            [ISSUENUMBER] => 
+            [ITEMAMT] => 849.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [BUSINESS] => Nautical Depot, LLC
+            [FIRSTNAME] => Michael
+            [LASTNAME] => Simoneau
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => OH
+            [CITY] => Willoughby
+            [STREET] => 5900 Som Center Road
+            [ZIP] => 44094
+            [PHONENUM] => 4406066306
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => OH
+            [SHIPTOCITY] => Willoughby
+            [SHIPTOSTREET] => 5900 Som Center Road
+            [SHIPTOZIP] => 44094
+            [SHIPTOPHONENUM] => 4406066306
+            [SHIPTOSTREET2] => Suite 12
+            [STREET2] => Suite 12
+            [SHIPTONAME] => Michael Simoneau
+            [METHOD] => DoDirectPayment
+            [VERSION] => 94.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => IWD_SI_MagentoCE_WPS
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2014-05-16T18:23:07Z
+            [CORRELATIONID] => 81843f2215f3
+            [ACK] => Failure
+            [VERSION] => 94.0
+            [BUILD] => 10958405
+            [L_ERRORCODE0] => 10501
+            [L_SHORTMESSAGE0] => Invalid Configuration
+            [L_LONGMESSAGE0] => This transaction cannot be processed due to an invalid merchant configuration.
+            [L_SEVERITYCODE0] => Error
+            [AMT] => 849.00
+            [CURRENCYCODE] => USD
+        )
+
+    [__pid] => 21850
+)
+
+2014-05-16T18:26:35+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [DoDirectPayment] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [IPADDRESS] => 108.233.226.254
+            [RETURNFMFDETAILS] => 1
+            [AMT] => 849.00
+            [CURRENCYCODE] => USD
+            [INVNUM] => 100000005
+            [NOTIFYURL] => http://dev.rattanoutdoorfurniture.com/paypal/ipn/
+            [EMAIL] => dev@rattanoutdoorfurniture.com
+            [CREDITCARDTYPE] => ****
+            [ACCT] => ****
+            [EXPDATE] => ****
+            [CVV2] => ****
+            [ISSUENUMBER] => 
+            [ITEMAMT] => 849.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [BUSINESS] => Nautical Depot, LLC
+            [FIRSTNAME] => Michael
+            [LASTNAME] => Simoneau
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => OH
+            [CITY] => Willoughby
+            [STREET] => 5900 Som Center Road
+            [ZIP] => 44094
+            [PHONENUM] => 4406066306
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => OH
+            [SHIPTOCITY] => Willoughby
+            [SHIPTOSTREET] => 5900 Som Center Road
+            [SHIPTOZIP] => 44094
+            [SHIPTOPHONENUM] => 4406066306
+            [SHIPTOSTREET2] => Suite 12
+            [STREET2] => Suite 12
+            [SHIPTONAME] => Michael Simoneau
+            [METHOD] => DoDirectPayment
+            [VERSION] => 94.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => IWD_SI_MagentoCE_WPS
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2014-05-16T18:26:36Z
+            [CORRELATIONID] => 9c543fbb91efb
+            [ACK] => Success
+            [VERSION] => 94.0
+            [BUILD] => 10958405
+            [AMT] => 849.00
+            [CURRENCYCODE] => USD
+            [AVSCODE] => X
+            [CVV2MATCH] => M
+            [TRANSACTIONID] => 8NW66612CY6601058
+        )
+
+    [__pid] => 22093
+)
+
+2014-05-16T18:26:36+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [GetTransactionDetails] => Array
+        (
+            [TRANSACTIONID] => 8NW66612CY6601058
+            [METHOD] => GetTransactionDetails
+            [VERSION] => 94.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => IWD_SI_MagentoCE_WPS
+        )
+
+    [response] => Array
+        (
+            [RECEIVERBUSINESS] => larry-facilitator@rattanoutdoorfurniture.com
+            [RECEIVEREMAIL] => larry-facilitator@rattanoutdoorfurniture.com
+            [RECEIVERID] => 5Z9FC7KPLZUTN
+            [EMAIL] => dev@rattanoutdoorfurniture.com
+            [PAYERID] => E662ZCMX4Z8BU
+            [PAYERSTATUS] => unverified
+            [COUNTRYCODE] => US
+            [SHIPTONAME] => Michael Simoneau
+            [SHIPTOSTREET] => 5900 Som Center Road
+            [SHIPTOSTREET2] => Suite 12
+            [SHIPTOCITY] => Willoughby
+            [SHIPTOSTATE] => OH
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOCOUNTRYNAME] => United States
+            [SHIPTOZIP] => 44094
+            [ADDRESSOWNER] => PayPal
+            [ADDRESSSTATUS] => Unconfirmed
+            [INVNUM] => 100000005
+            [SALESTAX] => 0.00
+            [SHIPAMOUNT] => 0.00
+            [SHIPHANDLEAMOUNT] => 0.00
+            [TIMESTAMP] => 2014-05-16T18:26:37Z
+            [CORRELATIONID] => 66a8efb9212d3
+            [ACK] => Success
+            [VERSION] => 94.0
+            [BUILD] => 10958405
+            [FIRSTNAME] => Michael
+            [LASTNAME] => Simoneau
+            [TRANSACTIONID] => 8NW66612CY6601058
+            [RECEIPTID] => 0211-6143-8555-4962
+            [TRANSACTIONTYPE] => webaccept
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2014-05-16T18:26:36Z
+            [AMT] => 849.00
+            [TAXAMT] => 0.00
+            [CURRENCYCODE] => USD
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [PROTECTIONELIGIBILITYTYPE] => None
+            [L_QTY0] => 1
+            [L_TAXAMT0] => 0.00
+            [L_CURRENCYCODE0] => USD
+            [L_TAXABLE0] => false
+        )
+
+    [__pid] => 22093
+)
+
