@@ -15,8 +15,16 @@
          * @TODO: Come up with a better fallback if the MaxMind database is not found, currently it just ignores the attempt.
          */
         use GeoIp2\Database\Reader;
-        $maxMindDbPath = Mage::getBaseDir('lib')."/MaxMind/GeoIp/Data/GeoLite2-City.mmdb";
+        $maxMindDbPath = Mage::getBaseDir('lib')."/MaxMind/GeoIP/Data/GeoLite2-City.mmdb";
         $record = null;
+        $maxMindDbRealPath = realpath(Mage::getBaseDir('lib')."/MaxMind/GeoIP/Data/GeoLite2-City.mmdb");
+        die(dumper::auto(array(
+            "Mage::getBaseDir('lib')+path"  =>  Mage::getBaseDir('lib')."/MaxMind/GeoIP/Data/GeoLite2-City.mmdb",
+            "maxMindDbPath"                 =>  $maxMindDbPath,
+            "maxMindDbRealPath"             =>  $maxMindDbRealPath,
+            "file_exists(path)"             =>  file_exists($maxMindDbPath),
+            "file_exists(realpath)"         =>  file_exists($maxMindDbRealPath)
+        )));
         if(file_exists($maxMindDbPath)) {
             $reader = new Reader($maxMindDbPath);
             $ipAddress = ($_SERVER['REMOTE_ADDR']=='127.0.0.1'?"108.233.226.254":$_SERVER['REMOTE_ADDR']);
