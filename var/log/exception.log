@@ -1,1 +1,23 @@
 ECHO is on.
+2014-05-16T16:26:46+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'User authentication failed' in /home/rof/public_html/dev/app/Mage.php:595
+Stack trace:
+#0 /home/rof/public_html/dev/app/code/core/Mage/Paypal/Model/Payflowlink.php(514): Mage::throwException('User authentica...')
+#1 /home/rof/public_html/dev/app/code/core/Mage/Paypal/Model/Payflowlink.php(163): Mage_Paypal_Model_Payflowlink->_processTokenErrors(Object(Varien_Object), Object(Mage_Sales_Model_Order_Payment))
+#2 /home/rof/public_html/dev/app/code/core/Mage/Sales/Model/Order/Payment.php(334): Mage_Paypal_Model_Payflowlink->initialize('Authorization', Object(Varien_Object))
+#3 /home/rof/public_html/dev/app/code/core/Mage/Sales/Model/Order.php(886): Mage_Sales_Model_Order_Payment->place()
+#4 /home/rof/public_html/dev/app/code/core/Mage/Sales/Model/Order.php(1104): Mage_Sales_Model_Order->_placePayment()
+#5 [internal function]: Mage_Sales_Model_Order->place()
+#6 /home/rof/public_html/dev/app/code/core/Mage/Core/Model/Resource/Transaction.php(105): call_user_func(Array)
+#7 /home/rof/public_html/dev/app/code/core/Mage/Core/Model/Resource/Transaction.php(159): Mage_Core_Model_Resource_Transaction->_runCallbacks()
+#8 /home/rof/public_html/dev/app/code/core/Mage/Sales/Model/Service/Quote.php(189): Mage_Core_Model_Resource_Transaction->save()
+#9 /home/rof/public_html/dev/app/code/core/Mage/Sales/Model/Service/Quote.php(249): Mage_Sales_Model_Service_Quote->submitOrder()
+#10 /home/rof/public_html/dev/app/code/core/Mage/Checkout/Model/Type/Onepage.php(785): Mage_Sales_Model_Service_Quote->submitAll()
+#11 /home/rof/public_html/dev/app/code/community/IWD/Opc/controllers/JsonController.php(420): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#12 /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Action.php(418): IWD_Opc_JsonController->saveOrderAction()
+#13 /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#14 /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#15 /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#16 /home/rof/public_html/dev/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#17 /home/rof/public_html/dev/index.php(117): Mage::run('', 'store')
+#18 {main}
