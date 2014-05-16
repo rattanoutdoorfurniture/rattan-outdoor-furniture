@@ -15,8 +15,9 @@ More detailed than in the TODO section, but more general than the change log.
 * Collections section. Like Products, but a top-level category that is called collections, and each collection is a sub-category of that, and all products of a collection (the site [skinny] viewable ones anyway). This does not have to be added to the main menu, but could be. It could also replace the "related" products on the cateogry page (cause that's kind of what a category page is already), so have a "Collections" section below the lounger results, where it would list 4 collections, going to that collection page.
 
 ##Global TODO:##
-* MUST DO: When you fix something COMMIT IT BEFORE DOING __ANYTHING__ ELSE!
 * MUST DO: A Magento DATABASE BACKUP BEFORE __EVERY__ COMMIT!
+* MUST DO: When you fix something COMMIT IT BEFORE DOING __ANYTHING__ ELSE!
+* MUST DO: Remember to update project-develop repo. This will house all project related files (workspace XML and such, cleaning out the develop branch).
 
 * Update Item Quantity in cart. (Same section as clear cart. Don't waste time on this, as I have a feature development planned for this section.)
 * Global search functionality
@@ -124,7 +125,7 @@ More detailed than in the TODO section, but more general than the change log.
 * Okay, I have to have it this time. The bug seems to be with the name of the control element. This should be an array of "options" values, with the option (i.e. 'color'), as the array key, and the passed value should be the option actually chosen by the customer.
 * I think i might have just figured out what is wrong with the cart and i want to jot it down before i forget. I want to try to add each attribute to the form submit URL, delineated by forward slashes, key-value pairs. Do this with javascript. capture the button press. parse the current URL. add the color and quantity options. Mark product internal ID. and send to [root]/checkout/cart/add/[prop-pairs(product/1/qty/2/color/blue)...
 * ___Stop working for today___. Just scared the HELL out of myself. (thought I lost all of the work i did today. nothing before today, but all of today wasted would have SUCKED!!!) There's no problem. But the database NEEDS TO BE BACKED UP WITH EVERY COMMIT! they are state related, and overlaps are not good! This is HIGHLY IMPORTANT for the future security, up-time and reliabilty of service.
-* In the mix of fixing the add-to-cart issue, i ran into a bug with the images. For it to work the way we want, we will need 4 images per product. http://dev.rattanoutdoorfurniture.com/products/loungers/brighton-sling-chaise-lounger-beta has the corrected images (but no coushoin colors, so you can't purchase it. the last note.)
+* In the mix of fixing the add-to-cart issue, i ran into a bug with the images. For it to work the way we want, we will need 4 images per product. http://dev.rattanoutdoorfurniture.com/products/loungers/brighton-sling-chaise-lounge-beta has the corrected images (but no coushoin colors, so you can't purchase it. the last note.)
 * Fixed a partial issue... Related to the color and quantity selection. This also made me aware that if there is no color to be offered, Magento thinks the item is not for sale. How should we handle that?
 * I was able to get internet on my laptop thru my phone. Got last weeks code updates and resources updates as well. Beginning working on the bug.
 * Today Larry says we have the day off. That sounds great and all, but I can't afford to lose a day's work. So, with that said, I'm continuing to fix the add-to-cart bug. This can't be broken for another whole day. Progress must be made on the checkout, so this has to be completed as soon as possilble.
@@ -194,13 +195,12 @@ More detailed than in the TODO section, but more general than the change log.
 * Begin the magento install of the new Design pages. Start with the 1 column layout which everything else will be built off of. Started this process. Layout file is updated, and the 'head' of the page is tentatively in place. Need to continue working on the page header along with the menues.
 
 
-### Feedback
+## Feedback
 
-Suggestions/improvements
-[welcome](https://bitbucket.org/rattanoutdoorfurniture/rattan-outdoor-furniture/issues)!
+File an issue on
+[our Issue Tracker](https://bitbucket.org/rattanoutdoorfurniture/rattan-outdoor-furniture/issues)!
 
-### Author
-
+## Author
 | [![twitter/brainycouchmike](http://gravatar.com/avatar/de92ca239b11a9859ea945671f820597?s=96)](http://twitter.com/brainycouchmike "Follow @brainycouchmike on Twitter") |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |                                                              [Mike Simoneau](http://brainycouch.com/mike/)                                                              |
