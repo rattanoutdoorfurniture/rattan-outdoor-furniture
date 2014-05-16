@@ -15,11 +15,11 @@
          * @TODO: Come up with a better fallback if the MaxMind database is not found, currently it just ignores the attempt.
          */
         use GeoIp2\Database\Reader;
-        $maxMindDbPath = Mage::getBaseDir('lib')."/MaxMind/GeoIp/Data/GeoLite2-City.mmdb";
+        $maxMindDbPath = Mage::getBaseDir('lib')."/MaxMind/GeoIP/Data/GeoLite2-City.mmdb";
         $record = null;
-        $maxMindDbRealPath = realpath(Mage::getBaseDir('lib')."/MaxMind/GeoIp/Data/GeoLite2-City.mmdb");
+        $maxMindDbRealPath = realpath(Mage::getBaseDir('lib')."/MaxMind/GeoIP/Data/GeoLite2-City.mmdb");
         die(dumper::auto(array(
-            "Mage::getBaseDir('lib')+path"  =>  Mage::getBaseDir('lib')."/MaxMind/GeoIp/Data/GeoLite2-City.mmdb",
+            "Mage::getBaseDir('lib')+path"  =>  Mage::getBaseDir('lib')."/MaxMind/GeoIP/Data/GeoLite2-City.mmdb",
             "maxMindDbPath"                 =>  $maxMindDbPath,
             "maxMindDbRealPath"             =>  $maxMindDbRealPath,
             "file_exists(path)"             =>  file_exists($maxMindDbPath),
