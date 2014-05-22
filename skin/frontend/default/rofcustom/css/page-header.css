@@ -23,6 +23,7 @@ nav a {
 
 #nav-top-list {
     /*padding: 3px 0;*/
+    min-width: 210px;
 }
 
 .nav-top-item {
