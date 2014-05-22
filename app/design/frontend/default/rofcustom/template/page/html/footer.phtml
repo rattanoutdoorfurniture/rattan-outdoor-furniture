@@ -5,7 +5,34 @@
 
 <footer id="page-footer">
     <hr class="footer-rule sixteen columns"/>
-    <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('footer-blocks')->toHtml(); ?>
+    <aside class="footer-box three columns">
+        <div class="footer-box-inner">
+            <h5>Customer Services</h5>
+            <ul class="footer-box-list">
+                <li><a href="#">Specials</a></li>
+                <li><a href="#">New Products</a></li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">Our Stores</a></li>
+            </ul>
+        </div>
+    </aside>
+    <aside class="footer-box three columns">
+        <div class="footer-box-inner footer-links-wrap">
+            <h5 class="footer-links-heading">Information</h5>
+            <?php echo $this->getChildHtml(); ?>
+        </div>
+    </aside>
+    <aside class="footer-box three columns">
+        <div class="footer-box-inner">
+            <h5>My Account</h5>
+            <ul class="footer-box-list">
+                <li><a href="#">My Orders</a></li>
+                <li><a href="#">Order Invoices</a></li>
+                <li><a href="#">Personal Info</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+    </aside>
     <aside class="footer-box four columns">
         <div class="footer-box-inner">
             <h5>Join our Newsletter</h5>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rofcustom_Rofcustom>
+            <version>1.0.0</version>
+        </Rofcustom_Rofcustom>
+    </modules>
+    <global>
+        <blocks>
+            <catalog>
+                <product>
+                    <view>
+                        <rewrite>
+                            <options_type_select>Rofcustom_Rofcustom_Block_Catalog_Product_View_Options_Type_Select</options_type_select>
+                        </rewrite>
+                    </view>
+                </product>
+            </catalog>
+        </blocks>
+    </global>
+</config>

@@ -56,8 +56,9 @@ class Mage_Catalog_Block_Product_View_Options_Type_Select
                     'class' => $require.' product-custom-option'
                 ));
             if ($_option->getType() == Mage_Catalog_Model_Product_Option::OPTION_TYPE_DROP_DOWN) {
-                $select->setName('options['.$_option->getid().']')
-                    ->addOption('', $this->__('-- Please Select --'));
+                $select->setName('options['.$_option->getid().']');
+                // ------- Remove the 'Please Select' Default option so it falls back to defaulting to first option ----------------
+                //        ->addOption('', $this->__('-- Please Select --'));
             } else {
                 $select->setName('options['.$_option->getid().'][]');
                 $select->setClass('multiselect'.$require.' product-custom-option');

@@ -198,7 +198,10 @@ $this->overrideProductUrl($itemUrl);
 <!--    <td class="cart-cartbox-table-product-price">$849</td>-->
 
     <td class="cart-cartbox-table-product-qty">
-        <input name="cart[<?php echo $_item->getId() ?>][qty]" value="<?php echo $this->getQty() ?>" size="4" title="<?php echo $this->__('Qty') ?>" class="input-text qty" maxlength="12" />
+        <label class="cart-cartbox-table-product-qty-edit">
+            <div>edit</div>
+            <input name="cart[<?php echo $_item->getId() ?>][qty]" value="<?php echo $this->getQty() ?>" size="4" title="<?php echo $this->__('Qty') ?>" class="input-text qty" maxlength="12" />
+        </label>
     </td>
 
 <!--    <td class="cart-cartbox-table-product-total">$849</td>-->
