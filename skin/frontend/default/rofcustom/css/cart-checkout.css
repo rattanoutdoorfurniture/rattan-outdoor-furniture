@@ -772,6 +772,12 @@ img, button, input {
             margin-right: 5px;
         }
 
+        /* One Page Checkout Payment Methods Section
+        ******************************************************/
+        .opc-wrapper-opc #co-payment-form {
+            padding-top: 20px;
+        }
+
         /* One Page Checkout Review Section
         ******************************************************/
         .opc-wrapper-opc .product-name {
