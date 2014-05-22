@@ -70,54 +70,6 @@
      */
     /** @var $mageAddress Mage_Sales_Model_Quote_Address */
     $mageAddress = $this->getAddress($record);
-//    $mageAddressCurrent = array();
-//    $mageAddressCurrent['getFirstname']         = $mageAddress->getFirstname();
-//    $mageAddressCurrent['getCompany']           = $mageAddress->getCompany();
-//    $mageAddressCurrent['getEmail']             = $mageAddress->getEmail();
-//    $mageAddressCurrent['getVatId']             = $mageAddress->getVatId();
-//    $mageAddressCurrent['getCity']              = $mageAddress->getCity();
-//    $mageAddressCurrent['getRegionId']          = $mageAddress->getRegionId();
-//    $mageAddressCurrent['getRegion']            = $mageAddress->getRegion();
-//    $mageAddressCurrent['getPostcode']          = $mageAddress->getPostcode();
-//    $mageAddressCurrent['getTelephone']         = $mageAddress->getTelephone();
-//    $mageAddressCurrent['getFax']               = $mageAddress->getFax();
-//    $mageAddressCurrent['getSaveInAddressBook'] = $mageAddress->getSaveInAddressBook();
-
-    /* Pre Load Mage Address Values From GeoIp */
-    //$mageAddress->setFirstname();
-    //$mageAddress->setCompany();
-    //$mageAddress->setEmail();
-    //$mageAddress->setVatId();
-//    $mageAddress->setCity($record->city->names['en']);
-//    $regionCode  = $record->subdivisions[0]->isoCode;
-//    $countryCode = $record->country->isoCode;
-//    $regionModel = Mage::getModel('directory/region')->loadByCode($regionCode, $countryCode);
-//    $regionId    = $regionModel->getId();
-//    $regionName  = $regionModel->getName();
-//    $mageAddress->setRegionId($regionId);
-//    $mageAddress->setRegion($regionName);
-//    $mageAddress->setPostcode($record->postal->code);
-    //$mageAddress->setTelephone();
-    //$mageAddress->setFax();
-    //$mageAddress->setSaveInAddressBook();
-
-//    $mageAddressPreload = array();
-//    $mageAddressPreload['getFirstname']         = $mageAddress->getFirstname();
-//    $mageAddressPreload['getCompany']           = $mageAddress->getCompany();
-//    $mageAddressPreload['getEmail']             = $mageAddress->getEmail();
-//    $mageAddressPreload['getVatId']             = $mageAddress->getVatId();
-//    $mageAddressPreload['getCity']              = $mageAddress->getCity();
-//    $mageAddressPreload['getRegionId']          = $mageAddress->getRegionId();
-//    $mageAddressPreload['getRegion']            = $mageAddress->getRegion();
-//    $mageAddressPreload['getPostcode']          = $mageAddress->getPostcode();
-//    $mageAddressPreload['getTelephone']         = $mageAddress->getTelephone();
-//    $mageAddressPreload['getFax']               = $mageAddress->getFax();
-//    $mageAddressPreload['getSaveInAddressBook'] = $mageAddress->getSaveInAddressBook();
-
-//    echo dumper::auto(array(
-//        "init"  =>  $mageAddressCurrent,
-//        "load"  =>  $mageAddressPreload
-//    ));
 
     ?>
     <li id="billing-new-address-form"<?php if ($this->customerHasAddresses()): ?> style="display:none;"<?php endif; ?>>

@@ -43,10 +43,13 @@
     <?php endif; ?>
 </div>
 <div id="cart-cartbox" class="ten columns cart-box">
-    <div class="cart-box-border"></div>
-    <div class="cart-box-inner">
-        <?php echo $this->getChildHtml('form_before') ?>
-        <form action="<?php echo $this->getUrl('checkout/cart/updatePost') ?>" method="post" class="remove-bottom">
+    <?php echo $this->getChildHtml('form_before') ?>
+    <form action="<?php echo $this->getUrl('checkout/cart/updatePost') ?>" method="post" class="remove-bottom">
+        <div class="cart-box-border"></div>
+        <div class="cart-box-inner">
+
+            <?php echo $this->getBlockHtml('formkey') ?>
+
             <fieldset class="remove-bottom">
                 <table id="cart-cartbox-table" class="data-table cart-table">
                     <?php $mergedCells = ($this->helper('tax')->displayCartBothPrices() ? 2 : 1); ?>
@@ -73,12 +76,12 @@
                     </thead>
                     <tfoot class="displaynone">
                     <tr>
-                        <td colspan="50" class="a-right">
-                            <?php if($this->getContinueShoppingUrl()): ?>
+                        <td colspan="50" class="a-right"">
+                            <?php if(false&&$this->getContinueShoppingUrl()): ?>
                                 <button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><span><span><i class="icon-shopping-cart"></i><?php echo $this->__('Continue Shopping') ?></span></span></button>
+                                <button type="submit" name="update_cart_action" value="update_qty" title="<?php echo $this->__('Update Shopping Cart'); ?>" class="button btn-update"><span><span><i class="icon-refresh"></i><?php echo $this->__('Update Shopping Cart'); ?></span></span></button>
+                                <button type="submit" name="update_cart_action" value="empty_cart" title="<?php echo $this->__('Clear Shopping Cart'); ?>" class="button btn-empty" id="empty_cart_button"><span><span><i class="icon-trash"></i><?php echo $this->__('Clear Shopping Cart'); ?></span></span></button>
                             <?php endif; ?>
-                            <button type="submit" name="update_cart_action" value="update_qty" title="<?php echo $this->__('Update Shopping Cart'); ?>" class="button btn-update"><span><span><i class="icon-refresh"></i><?php echo $this->__('Update Shopping Cart'); ?></span></span></button>
-                            <button type="submit" name="update_cart_action" value="empty_cart" title="<?php echo $this->__('Clear Shopping Cart'); ?>" class="button btn-empty" id="empty_cart_button"><span><span><i class="icon-trash"></i><?php echo $this->__('Clear Shopping Cart'); ?></span></span></button>
                             <!--[if lt IE 8]>
                             <input type="hidden" id="update_cart_action_container" />
                             <script type="text/javascript">
@@ -112,20 +115,17 @@
                 </table>
             <script type="text/javascript">
                 decorateTable('cart-cartbox-table');
-                (function($) {
-                    $("[name*=qty]").one("focus", function(e, elem) {
-                        $("tfoot").css("text-align","center").removeClass("displaynone").find("td").prepend("<p/>");
-                    });
-                })(jQuery);
             </script>
             </fieldset>
             <section id="cart-cartbox-toggle">
                 <span id="cart-cartbox-toggle-text">Show Items In Your Cart (2)</span>
                 <div id="cart-cartbox-toggle-btn" title="Show / Hide Cart Items">Show / Hide Cart Items</div>
             </section>
-        </form>
-    </div><!-- /.cart-box-inner/ -->
-    <div class="cart-box-border"></div>
+        </div><!-- /.cart-box-inner/ -->
+        <div class="cart-box-border clear-margin"></div>
+        <button type="submit" name="update_cart_action" value="update_qty" title="<?php echo $this->__('Update Shopping Cart'); ?>" class="button btn-update"><span><span><i class="icon-refresh"></i><?php echo $this->__('Update Shopping Cart'); ?></span></span></button>
+
+    </form>
 </div>
 
 <section id="cart-btns" class="six columns">
