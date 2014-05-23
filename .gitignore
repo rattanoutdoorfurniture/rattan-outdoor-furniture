@@ -9,4 +9,5 @@ var/report/*
 *DEV_NOTES
 *_snapshot_*
 var/backups/archive
+var/backups
 
