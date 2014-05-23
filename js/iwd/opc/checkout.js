@@ -202,7 +202,7 @@ IWD.OPC = {
 			}
 			
 			IWD.OPC.Plugin.dispatch('responseSaveOrder', response);
-		}
+		},
 		
 		
 };
@@ -247,12 +247,10 @@ IWD.OPC.Checkout = {
 				}else{
 					//FIX FOR MAGENTO 1.8 - NEED LOAD PAYTMENT METHOD BY AJAX
 					IWD.OPC.Checkout.pullPayments();
-                    IWD.OPC.Checkout.pullShippingMethods();
 				}
 			}else{
 				//FIX FOR MAGENTO 1.8 - NEED LOAD PAYTMENT METHOD BY AJAX
 				IWD.OPC.Checkout.pullPayments();
-				IWD.OPC.Checkout.pullShippingMethods();
 			}
 			
 			
@@ -431,13 +429,7 @@ IWD.OPC.Checkout = {
 				IWD.OPC.Checkout.pullReview();
 				
 			},'json');
-		},
-
-        /** PULL REVIEW **/
-        pullShippingMethods: function(){
-            var form = $j('#opc-address-form-billing').serializeArray();
-            IWD.OPC.Checkout.applyShippingMethod(form);
-        }
+		}
 	
 };
 
