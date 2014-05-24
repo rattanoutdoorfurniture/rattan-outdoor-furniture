@@ -780,10 +780,23 @@ img, button, input {
 
         /* One Page Checkout Review Section
         ******************************************************/
+        .opc-wrapper-opc #checkout-review-table .a-right,
+        .opc-wrapper-opc #checkout-review-table .a-center,
+        .opc-wrapper-opc #checkout-review-table .a-left {
+            vertical-align: middle !important;
+        }
+
         .opc-wrapper-opc .product-name {
             text-indent: -10px;
             padding-left: 15px !important;
         }
+
+        .cart-cartbox-table-product-detail-img-wrap {
+            margin-bottom: 2px !important;
+            background-color: transparent;
+        }
+
+
         .opc-wrapper-opc .item-options {
             padding-left: 10px;
         }
@@ -815,6 +828,18 @@ img, button, input {
             margin-left: 10px;
             padding-top: 10px;
         }
+
+            /* Product Color Swatch Values (For Use as Border Color around Product Image) **************
+            ********************************************************************************************/
+            .cart-cartbox-table-product-detail-img-wrap.peach {
+                background-color: #EDDFCC;
+            }
+            .cart-cartbox-table-product-detail-img-wrap.pink {
+                background-color: #DD95BC;
+            }
+            .cart-cartbox-table-product-detail-img-wrap.blue {
+                background-color: #56B2DD;
+            }
 
         /* Fix Misc Floats and Element Labels
         ******************************************************/

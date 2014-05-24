@@ -26,7 +26,23 @@
 ?>
 <?php $_item = $this->getItem()?>
 <tr>
-    <td><h3 class="product-name"><?php echo $this->escapeHtml($this->getProductName()) ?></h3>
+    <td>
+        <?php if ($this->hasProductUrl()): ?>
+        <a href="<?php echo $this->getProductUrl() ?>"
+           title="<?php echo $this->escapeHtml($this->getProductName()) ?>"
+           class="cart-cartbox-table-product-detail-img-wrap">
+            <?php else: ?>
+            <div class="cart-cartbox-table-product-detail-img-wrap">
+                <?php endif; ?>
+                <img class="cart-cartbox-table-product-detail-img"
+                     src="<?php echo $this->getProductThumbnail()->constrainOnly(TRUE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(80,null); ?>" width="80"
+                     alt="<?php echo $this->escapeHtml($this->getProductName()) ?>"/>
+                <!--<img class="cart-cartbox-table-product-detail-img" src="skin/frontend/default/rofcustom/images/product_01_thumb.jpg" alt="Brighton Sling Chaise Lounge"/>-->
+                <?php if ($this->hasProductUrl()): ?>
+        </a>
+        <?php else: ?>
+            </div>
+        <?php endif; ?>
         <?php if ($_options = $this->getOptionList()):?>
         <dl class="item-options">
             <?php foreach ($_options as $_option) : ?>
