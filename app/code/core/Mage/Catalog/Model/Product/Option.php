@@ -309,6 +309,7 @@ class Mage_Catalog_Model_Product_Option extends Mage_Core_Model_Abstract
      *
      * @param string $type Option type
      * @return Mage_Catalog_Model_Product_Option_Group_Abstract
+     * @return Mage_Catalog_Model_Product_Option_Type_Select
      */
     public function groupFactory($type)
     {

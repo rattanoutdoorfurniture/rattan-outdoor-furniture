@@ -126,7 +126,7 @@ IWD.OPC = {
 			
 			if (typeof(response.review)!= "undefined" && IWD.OPC.saveOrderStatus===false){					
 				$j('#opc-review-block').html(response.review);
-				IWD.OPC.Checkout.removePrice();
+				//IWD.OPC.Checkout.removePrice();
 			}
 			
 			if (typeof(response.error) != "undefined"){
@@ -229,7 +229,7 @@ IWD.OPC.Checkout = {
 			
 			//DECORATE
 			this.clearOnChange();
-			this.removePrice();
+			// this.removePrice();
 			
 			
 			
@@ -325,7 +325,7 @@ IWD.OPC.Checkout = {
 			
 			if (typeof(response.review)!="undefined" && IWD.OPC.saveOrderStatus===false){
 				$j('#opc-review-block').html(response.review);
-				IWD.OPC.Checkout.removePrice();
+				// IWD.OPC.Checkout.removePrice();
 			}
 			
 			
@@ -402,7 +402,7 @@ IWD.OPC.Checkout = {
 				IWD.OPC.Checkout.hideLoader();
 				if (typeof(response.review)!="undefined"){
 					$j('#opc-review-block').html(response.review);
-					IWD.OPC.Checkout.removePrice();
+					// IWD.OPC.Checkout.removePrice();
 				}
 			});
 		},

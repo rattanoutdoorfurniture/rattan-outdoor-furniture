@@ -78,7 +78,8 @@ class Mage_Catalog_Helper_Product_Configuration extends Mage_Core_Helper_Abstrac
                         'print_value' => $group->getPrintableOptionValue($itemOption->getValue()),
                         'option_id' => $option->getId(),
                         'option_type' => $option->getType(),
-                        'custom_view' => $group->isCustomizedView()
+                        'custom_view' => $group->isCustomizedView(),
+                        'dump_group'  => dumper::dump($group)
                     );
                 }
             }
