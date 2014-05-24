@@ -23,6 +23,7 @@ nav a {
 
 #nav-top-list {
     /*padding: 3px 0;*/
+    min-width: 220px;
 }
 
 .nav-top-item {
@@ -185,7 +186,7 @@ nav a {
 
 #glob-search-input{
     height: 28px;
-    width: 205px;
+    width: 180px;
     margin: 0;
     padding: 0 0 0 30px;
     border: none;
@@ -193,6 +194,12 @@ nav a {
     font-family: 'FuturaStd-MediumOblique';
     color: #888;
     position:relative;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #glob-search-input{
+        width: 205px !important;
+    }
 }
 
 #glob-search-input::-webkit-search-cancel-button {

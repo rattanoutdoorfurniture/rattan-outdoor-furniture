@@ -32,6 +32,7 @@
     margin: 0 5px;
     width: 125px;
     display: block;
+    height: 87px;
 }
 
 .product-img-view.first,
@@ -207,11 +208,16 @@
 /* Product Options (Color and Quantity)
 ******************************************************************************/
 
-#product-details-options {
+.product-details-options {
     border: 1px solid #e6e6e6;
     border-right: none;
     border-left: none;
     margin-bottom: 15px;
+}
+
+.product-details-options-mdd {
+    position: absolute;
+    left: -10000px;
 }
 
 .product-details-options-section {

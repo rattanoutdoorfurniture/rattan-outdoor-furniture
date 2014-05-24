@@ -10,13 +10,13 @@
     color: #895c9a;
     font-family: "Tahoma";
     text-transform: uppercase;
-    margin: 10px 10px 20px;
+    margin: 10px 0px 20px;
     font-size: 22px;
     line-height: 22px;
     padding-bottom: 10px;
 }
 
-img, button {
+img, button, input {
     outline: 0 none;
 }
 
@@ -66,6 +66,17 @@ img, button {
     #cart-cartbox.hide-items ~ #cart-btns {
         margin-top: -60px;
 
+    }
+
+    /*#cart-cartbox-table*/
+    .button.btn-update {
+        text-indent: -10000px;
+        width: 90px;
+        height: 30px;
+        background: #8a6399 url('../images/cart-cartbox-table-update-btn.png') center center no-repeat;
+        position: absolute;
+        bottom: -60px;
+        right: 10px;
     }
 
     #cart-cartbox-table-header {
@@ -121,6 +132,26 @@ img, button {
         padding: 0 8px 0 12px;
     }
 
+    .cart-cartbox-table-product-qty-edit {
+        margin-top: -14px;
+    }
+
+    .cart-cartbox-table-product-qty-edit div {
+        color: #AAA;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .cart-cartbox-table-product .btn-remove {
+        display: inline-block;
+        text-indent: -10000px;
+        width: 12px;
+        height: 16px;
+        background: transparent url('../images/cart-cartbox-table-remove-icon.png') center center no-repeat;
+    }
+
     .cart-cartbox-table-product-detail {
 
     }
@@ -141,18 +172,22 @@ img, button {
         width: 100%;
         height: auto;
         margin: 7px 5px 4px;
+        text-decoration: none;
     }
 
-    .cart-cartbox-table-product-detail-title {
+    .cart-cartbox-table-product-detail-title,
+    .cart-cartbox-table-product-detail-title > a {
         font: normal 14px/14px "Tahoma";
         color: #8a6399;
         display: block;
         text-align: left;
-        margin: 15px 0 5px;
+        margin: 10px 0 5px;
+        text-decoration: none;
     }
 
     .cart-cartbox-table-product-detail-item,
-    .cart-cartbox-table-product-detail-model {
+    .cart-cartbox-table-product-detail-model,
+    .cart-cartbox-table-product-detail-color {
         font: normal 12px/12px "Tahoma";
         color: #555;
         display: block;
@@ -160,11 +195,28 @@ img, button {
         margin-bottom: 5px;
     }
 
+    .cart-cartbox-table-product-qty {
+        text-align: center;
+    }
+
+    .cart-cartbox-table-product-qty input {
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        border-collapse: collapse;
+        border: 2px inset transparent;
+        color: rgb(0, 0, 0);
+    }
+
+    .cart-cartbox-table-product-qty input:focus {
+        border: 2px inset rgb(238, 238, 238);
+    }
+
     #cart-cartbox-toggle {
         display: none;
     }
 
-    #cart-cartbox.hide-items #cart-cartbox-toggle {
+    #cart-cartbox.hide-items #cart-cartbox-toggle,
+    #cart-cartbox.collapse #cart-cartbox-toggle {
         display: block;
         height: 20px;
         padding: 10px 20px;
@@ -176,7 +228,8 @@ img, button {
         text-transform: uppercase;
     }
 
-    #cart-cartbox.hide-items #cart-cartbox-toggle-btn {
+    #cart-cartbox.hide-items #cart-cartbox-toggle-btn,
+    #cart-cartbox.collapse #cart-cartbox-toggle-btn {
         float: right;
         width: 20px;
         height: 10px;
@@ -494,6 +547,8 @@ img, button {
         border-bottom: 1px solid #e6e6e6;
         width: 130px;
         display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     .cart-subtotal-table-row {
@@ -521,11 +576,13 @@ img, button {
         width: 45%;
     }
 
-    #cart-cartbox.hide-items ~ #cart-btns #cart-continue {
+    #cart-cartbox.hide-items ~ #cart-btns #cart-continue,
+    #cart-btns.hideCheckout #cart-continue {
         width: 100%;
     }
 
-    #cart-cartbox.hide-items ~ #cart-btns #cart-checkout {
+    #cart-cartbox.hide-items ~ #cart-btns #cart-checkout,
+    #cart-btns.hideCheckout #cart-checkout {
         display: none;
     }
 
@@ -546,7 +603,8 @@ img, button {
         width: 130px;
     }
 
-    #cart-cartbox.hide-items ~ #cart-btns #cart-continue-btn {
+    #cart-cartbox.hide-items ~ #cart-btns #cart-continue-btn,
+    #cart-btns.hideCheckout #cart-continue-btn {
         background: #8a6399 url('../images/cart-continue-btn-hide-items.png') center center no-repeat;
         width: 310px;
     }
@@ -555,3 +613,285 @@ img, button {
         background: #56b2dd url('../images/cart-checkout-btn.png') center center no-repeat;
         width: 170px;
     }
+
+    /* One Page Checkout Custom Styles
+    ********************************************************************/
+
+        /* General One Page Checkout Text Styles
+        *****************************************************/
+        .opc-wrapper-opc * {
+            font-family: 'Open Sans', Arial, Helvetica;
+            color: #393939;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        /* Cart Toggle Link
+        *****************************************************/
+        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle,
+        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle,
+        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle span,
+        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle span,
+        .opc-wrapper-opc #cart-subtotal-header {
+            color: #8a6399 !important;
+            font: normal 16px/16px "Tahoma" !important;
+            text-decoration: none;
+        }
+
+        .opc-wrapper-opc #cart-subtotal-header {
+            font-weight: bold !important;
+        }
+
+        /* One Page Checkout Heading - Move Login Link Here
+        ****************************************************/
+        .opc-wrapper-opc .page-title {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .opc-wrapper-opc .page-title .text-login {
+            display: inline-block;
+            margin: 0;
+            padding-left: 10px;
+        }
+
+        /* Column And Field Adjustments for Proper Display
+        ****************************************************/
+        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle,
+        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle {
+            height: 40px !important;
+        }
+
+        .opc-wrapper-opc .opc-col-left h3 {
+            margin-bottom: 5px;
+        }
+
+        .opc-wrapper-opc .opc-col-left h3,
+        .opc-wrapper-opc .opc-col-center h3 {
+            margin: 10px auto 5px;
+        }
+
+        .opc-wrapper-opc .opc-col-left,
+        .opc-wrapper-opc .opc-col-center {
+            margin-right: 10px !important;
+            margin-left: 18px !important;
+            width: 45% !important;
+        }
+        
+        @media print {
+            .opc-wrapper-opc .opc-col-left {
+                float: left !important;
+                max-width: 45%;
+            }
+            .opc-wrapper-opc .opc-col-center {
+                float: right !important;
+                max-width: 45%;
+            }
+        }
+
+        .opc-wrapper-opc .opc-col-right {
+            margin-left: 10px !important;
+            float: right !important;
+        }
+
+        .opc-wrapper-opc .fields .field {
+            width: 100% !important;
+            height: 40px !important;
+        }
+
+        .opc-wrapper-opc .fields .field label {
+            height: 0;
+            padding-top: 5px;
+            margin-left: 15px;
+        }
+
+        .opc-wrapper-opc .fields .field label.required {
+            height: 0;
+            padding-top: 5px;
+            margin-left: 5px;
+        }
+
+        .opc-wrapper-opc .fields .field label.required em {
+            width: 20px;
+            margin-left: 0px;
+            margin-right: 5px;
+        }
+
+        .opc-wrapper-opc .fields .field.input-focused label,
+        .opc-wrapper-opc .fields .field.input-filled label {
+            height: 30px;
+        }
+
+        .opc-wrapper-opc .fields .field.input-focused,
+        .opc-wrapper-opc .fields .field.input-filled {
+            margin-bottom: 20px;
+        }
+
+        .opc-wrapper-opc .fields .field .validation-advice {
+            position: relative;
+            top: -40px;
+            left: 50%;
+            right: auto;
+        }
+
+        .opc-wrapper-opc .fields .field.input-focused .validation-advice,
+        .opc-wrapper-opc .fields .field.input-filled .validation-advice {
+            display: none;
+        }
+
+        .opc-wrapper-opc .fields .field label:before {
+            height: 5px;
+            display: block;
+            content: '';
+        }
+
+        .opc-wrapper-opc label {
+            color: #393939;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 1.25em;
+            margin-bottom: 2px;
+            text-align: left;
+        }
+
+        .opc-wrapper-opc .form-list ul {
+            margin-left: 0;
+        }
+
+        .opc-wrapper-opc .opc-data-table th {
+            padding-left: 0;
+            text-align: left;
+        }
+
+        /* One Page Checkout Shipping Methods Section
+        ******************************************************/
+        .sp-methods ul li input {
+            display: inline-block !important;
+            float: left;
+            margin-right: 5px;
+        }
+
+        /* One Page Checkout Payment Methods Section
+        ******************************************************/
+        .opc-wrapper-opc #co-payment-form {
+            padding-top: 20px;
+        }
+
+        /* One Page Checkout Review Section
+        ******************************************************/
+        .opc-wrapper-opc #checkout-review-table .a-right,
+        .opc-wrapper-opc #checkout-review-table .a-center,
+        .opc-wrapper-opc #checkout-review-table .a-left {
+            vertical-align: middle !important;
+        }
+
+        .opc-wrapper-opc .product-name {
+            text-indent: -10px;
+            padding-left: 15px !important;
+        }
+
+        .cart-cartbox-table-product-detail-img-wrap {
+            margin-bottom: 2px !important;
+            background-color: transparent;
+        }
+
+
+        .opc-wrapper-opc .item-options {
+            padding-left: 10px;
+        }
+
+        .opc-wrapper-opc .item-options dt {
+            float: left;
+            margin-right: 5px;
+            text-transform: capitalize;
+            margin-left: 10px;
+            font-size: 85%;
+        }
+        .opc-wrapper-opc .item-options dt:after {
+            content: " -";
+        }
+
+        .opc-wrapper-opc .item-options dd {
+            font-size: 85%;
+        }
+
+        .opc-wrapper-opc .opc-data-table {
+            width: 90% !important;
+            margin: 10px auto;
+        }
+
+        .opc-wrapper-opc .review-after{
+            background: #FFF;
+            margin-top: -10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            padding-top: 10px;
+        }
+
+            /* Product Color Swatch Values (For Use as Border Color around Product Image) **************
+            ********************************************************************************************/
+            .cart-cartbox-table-product-detail-img-wrap.peach {
+                background-color: #EDDFCC;
+            }
+            .cart-cartbox-table-product-detail-img-wrap.pink {
+                background-color: #DD95BC;
+            }
+            .cart-cartbox-table-product-detail-img-wrap.blue {
+                background-color: #56B2DD;
+            }
+
+        /* Fix Misc Floats and Element Labels
+        ******************************************************/
+
+        .opc-wrapper-opc form span.no-display,
+        .opc-wrapper-opc .form-list .control input,
+        .opc-wrapper-opc form dt input,
+        .opc-wrapper-opc .opc-newsletter .input-box {
+            float: left;
+            margin: 2px 5px 0 15px;
+            width: auto !important;
+        }
+
+        /* Fix PayPal Logo Positioning
+        ********************************************************/
+        .opc-wrapper-opc form dt [for="p_method_paypal_express"] img {
+            vertical-align: text-top;
+            margin-top: -0.5em;
+        }
+
+        /* One Page Checkout Buttons
+        *********************************************************/
+
+        .opc-wrapper-opc .button {
+            display: block;
+            border: none;
+            margin: 0 auto;
+            float: left;
+            background: none;
+            text-indent: -10000px;
+            width: 80px;
+            height: 40px !important;
+        }
+
+        .opc-wrapper-opc .button.apply-coupon {
+            background: #8a6399 url('../images/checkout-apply-coupon-btn.png') center center no-repeat;
+            width: 130px;
+            float: right !important;
+        }
+
+        .opc-wrapper-opc .button.remove-coupon {
+            text-indent: 0;
+            float: right !important;
+            font-size: 14px;
+            font-weight: 400;
+            margin-right: 20px !important;
+        }
+
+        .opc-wrapper-opc .button.btn-checkout {
+            background: #56b2dd url('../images/cart-checkout-btn-wide.png') center center no-repeat;
+            width: 330px;
+            margin: 10px auto 20px;
+            float: none;
+            background-size: 100% 40px;
+        }

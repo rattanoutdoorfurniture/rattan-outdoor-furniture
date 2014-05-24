@@ -4,8 +4,8 @@
 <default>
 
 <remove name="block-banner"/>
-  <!-- <remove name="right.poll" />
-     <remove name="catalog.compare.sidebar" />-->
+  <remove name="right.poll" />
+     <remove name="catalog.compare.sidebar" />
 	 <remove name="paypal.partner.right.logo" />
 	 	 <remove name="left.newsletter" />
 	  <remove name="catalog.leftnav" />

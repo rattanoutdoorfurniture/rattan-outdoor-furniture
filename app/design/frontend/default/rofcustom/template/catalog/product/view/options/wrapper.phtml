@@ -25,10 +25,10 @@
  */
 ?>
 <!-- ********** Remove Wrapper. We don't want it. But this file must call the next **************-->
-<div id="product-details-options" class="product-options clearfix">
+<!--<div id="product-details-options" class="product-options clearfix">-->
     <?php echo $this->getChildHtml('', true, true);?>
     <?php if (false&&$this->hasRequiredOptions()):?>
         <p class="required"><?php echo $this->__('* Required Fields') ?></p>
     <?php endif;?>
-</div>
+<!--</div>-->
 <!--<script type="text/javascript">decorateGeneric($$('#product-options-wrapper dl'), ['last']);</script>-->

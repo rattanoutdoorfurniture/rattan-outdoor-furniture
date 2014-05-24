@@ -1,0 +1,149 @@
+<script type="text/javascript">
+    countryRegions = <?php echo $this->helper('directory')->getRegionJson() ?>;
+    jQuery(document).ready(function() {
+        /*
+         | ----------------------------------------------------------------------------------
+         | Password Generator
+         | ----------------------------------------------------------------------------------
+         */
+        jQuery.password = function (length, special) {
+            var iteration = 0;
+            var password = "";
+            var randomNumber;
+            if(special == undefined){
+                var special = false;
+            }
+            while(iteration < length){
+                randomNumber = (Math.floor((Math.random() * 100)) % 94) + 33;
+                if(!special){
+                    if ((randomNumber >=33) && (randomNumber <=47)) { continue; }
+                    if ((randomNumber >=58) && (randomNumber <=64)) { continue; }
+                    if ((randomNumber >=91) && (randomNumber <=96)) { continue; }
+                    if ((randomNumber >=123) && (randomNumber <=126)) { continue; }
+                }
+                iteration++;
+                password += String.fromCharCode(randomNumber);
+            }
+            return password;
+        };
+        jQuery(".field,.wide").each(function() {
+            jQuery(this).focusin(function() {
+                jQuery(this).addClass("input-focused");
+                jQuery(this).find("input").one("blur",function() {
+                    $fieldInput = jQuery(this);
+                    $parent = $fieldInput.parents(".field,.wide");
+                    $parent.removeClass("input-focused");
+                    if($fieldInput.val().length > 0 || $fieldInput.get(0).hasAttribute("defaultvalue")) {
+                        $parent.addClass("input-filled");
+                    }
+                    Validation.validate(this);
+                });
+            });
+            $fieldInput = jQuery(this).find("input,select");
+            if($fieldInput.val().length > 0 || $fieldInput.get(0).hasAttribute("defaultvalue")) {
+                jQuery(this).addClass("input-filled");
+            }
+        });
+        (function($) {
+            tempPassword = jQuery.password(12,false);
+            jQuery("[name*=create_account]").not("[checked]").trigger("click");
+            jQuery("[type=password]").each(function() {
+                jQuery(this).val(tempPassword);
+                jQuery(this).parents(".field").addClass("input-filled");
+            });
+        })(jQuery);
+    });
+</script>
+<div class="opc-wrapper-opc">
+    <div class="page-title sixteen columns">
+        <h2 id="cart-heading"><?php echo $this->__('Checkout');
+        if (!Mage::getSingleton('customer/session')->isLoggedIn()):?>
+            <?php echo $this->getChildHtml('login');?>
+        <?php endif;?></h2>
+        <p class="displaynone"><?php echo $this->__('Fill in the Fields below to complete your purchase!')?></p>
+    </div>
+
+	<div class="clear move-columns displaynone"></div>
+
+    <div id="cart-cartbox" class="ten columns cart-box collapse">
+        <div class="cart-box-border"></div>
+        <div class="cart-box-inner">
+            <a id="cart-cartbox-toggle" href="/checkout/cart">
+                <span id="cart-cartbox-toggle-text">Show Items In Your Cart (<?php echo Mage::helper("checkout/cart")->getItemsCount(); ?>)</span>
+                <div id="cart-cartbox-toggle-btn" title="Show / Hide Cart Items">Show / Hide Cart Items</div>
+            </a>
+        </div><!-- /.cart-box-inner/ -->
+        <div class="cart-box-border"></div>
+    </div>
+
+    <?php echo $this->_getReviewHtml()?>
+
+    <div id="checkout-box" class="ten columns cart-box">
+        <div class="cart-box-border"></div>
+        <div class="cart-box-inner clearfix">
+            <div class="opc-col-left add-bottom">
+                <form id="opc-address-form-billing" method="post">
+                    <?php echo $this->getChildHtml('billing')?>
+                </form>
+
+                <form id="opc-address-form-shipping" class="hidden" method="post">
+                <?php echo $this->getChildHtml('shipping')?>
+                </form>
+
+            </div>
+
+            <div class="opc-col-center">
+                <?php if (!$this->getOnepage()->getQuote()->isVirtual()):?>
+                <div class="shipping-block">
+                    <h3><?php echo $this->__('Shipping Method')?></h3>
+                    <div id="shipping-block-methods">
+                        <?php echo $this->getChildHtml('shipping_method');//$this->_getShippingMethodsHtml();?>
+                    </div>
+                </div>
+                <?php endif;?>
+                <div class="payment-block <?php if ($this->getOnepage()->getQuote()->isVirtual()):?>clear-margin<?php endif;?>">
+                    <h3><?php echo $this->__('Payment Method')?></h3>
+                    <?php echo $this->getChildHtml('payment')//$this->_getPaymentMethodsHtml();?>
+                </div>
+
+                <div class="discount-block">
+                    <h3><?php echo $this->__('Discount Codes')?></h3>
+                    <?php echo $this->getChildhtml('coupon');?>
+                </div>
+
+                <?php if(Mage::helper('opc')->isShowComment()):?>
+                    <?php echo $this->getChildhtml('customer.comment');?>
+                <?php endif;?>
+
+            </div>
+        </div><!-- /.cart-box-inner/ -->
+        <div class="cart-box-border"></div>
+    </div>
+</div>
+<script>
+	IWD.OPC.Checkout.config = '<?php echo $this->getJsonConfig()?>';
+	<?php if ($this->getOnepage()->getQuote()->isVirtual()):?>
+	IWD.OPC.Checkout.isVirtual = true;
+	<?php endif;?>	 
+</script>
+
+<div class="opc-ajax-loader">
+	<div id="floatingCirclesG">
+		<div class="f_circleG" id="frotateG_01"></div>
+		<div class="f_circleG" id="frotateG_02"></div>
+		<div class="f_circleG" id="frotateG_03"></div>
+		<div class="f_circleG" id="frotateG_04"></div>
+		<div class="f_circleG" id="frotateG_05"></div>
+		<div class="f_circleG" id="frotateG_06"></div>
+		<div class="f_circleG" id="frotateG_07"></div>
+		<div class="f_circleG" id="frotateG_08"></div>
+	</div>
+</div>
+<div class="opc-message-wrapper">
+	
+	<div class="opc-messages">
+		<a class="close-message-wrapper"></a>
+		<div class="opc-message-container"></div>
+		<div class="opc-messages-action"><button class="button"><span><span><?php echo $this->__('Close')?></span></span></button></div>
+	</div>
+</div>

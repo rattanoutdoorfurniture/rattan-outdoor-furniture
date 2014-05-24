@@ -28,9 +28,9 @@
  * @see Mage_Page_Block_Html
  */
 ?>
+<!DOCTYPE html>
 <html>
 
-<!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
@@ -39,30 +39,30 @@
     <?php echo $this->getChildHtml('head') ?>
 </head>
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
-<div class="container">
-    <?php echo $this->getChildHtml('after_body_start') ?>
-    <?php echo $this->getChildHtml('global_notices') ?>
-    <?php echo $this->getChildHtml('header') ?>
+    <div class="container">
+        <?php echo $this->getChildHtml('after_body_start') ?>
+        <?php echo $this->getChildHtml('global_notices') ?>
+        <?php echo $this->getChildHtml('header') ?>
 
-    <!-- getRequestString: <?php echo Mage::app()->getRequest()->getRequestString(); ?> -->
+        <!-- getRequestString: <?php echo Mage::app()->getRequest()->getRequestString(); ?> -->
 
-    <!-- getTitleBgBlock: <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('title-bg')->toHtml(); ?> -->
-    <!-- getTitle: <?php echo $this->getLayout()->getBlock('head')->getTitle(); ?> -->
-    <!-- Breadcrumbs: <?php echo $this->getChildHtml('breadcrumbs') ?> -->
-    <!-- GlobalMessages: <?php echo $this->getChildHtml('global_messages') ?> -->
+        <!-- getTitleBgBlock: <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('title-bg')->toHtml(); ?> -->
+        <!-- getTitle: <?php echo $this->getLayout()->getBlock('head')->getTitle(); ?> -->
+        <!-- Breadcrumbs: <?php echo $this->getChildHtml('breadcrumbs') ?> -->
+        <!-- GlobalMessages: <?php echo $this->getChildHtml('global_messages') ?> -->
 
-    <div class="two-thirds columns">
-    <?php echo $this->getChildHtml('content') ?>
-    </div>
+        <div class="twelve columns">
+            <?php echo $this->getChildHtml('content') ?>
+        </div>
 
-    <div class="one-third column">
-    <?php echo $this->getChildHtml('right') ?>
-    </div>
+        <div class="four columns">
+            <?php echo $this->getChildHtml('right') ?>
+        </div>
 
-    <?php echo $this->getChildHtml('footer') ?>
-    <?php echo $this->getChildHtml('before_body_end') ?>
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
 
-    <!-- getAbsoluteFooter: <?php echo $this->getAbsoluteFooter() ?> -->
+        <!-- getAbsoluteFooter: <?php echo $this->getAbsoluteFooter() ?> -->
 </div>
 </body>
 </html>

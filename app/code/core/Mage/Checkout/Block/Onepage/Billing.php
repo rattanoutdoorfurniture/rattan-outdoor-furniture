@@ -99,7 +99,7 @@ class Mage_Checkout_Block_Onepage_Billing extends Mage_Checkout_Block_Onepage_Ab
      *
      * @return Mage_Sales_Model_Quote_Address
      */
-    public function getAddress()
+    public function getAddress($geoIpRecord = null)
     {
         if (is_null($this->_address)) {
             if ($this->isCustomerLoggedIn()) {
@@ -110,8 +110,46 @@ class Mage_Checkout_Block_Onepage_Billing extends Mage_Checkout_Block_Onepage_Ab
                 if(!$this->_address->getLastname()) {
                     $this->_address->setLastname($this->getQuote()->getCustomer()->getLastname());
                 }
+                if($geoIpRecord && !$this->_address->getCity()) {
+                    $this->_address->setCity($geoIpRecord->city->names['en']);
+                }
+                if($geoIpRecord && (!$this->_address->getRegionId() || !$this->_address->getRegion())) {
+                    $regionCode  = $geoIpRecord->subdivisions[0]->isoCode;
+                    $countryCode = $geoIpRecord->country->isoCode;
+                    $regionModel = Mage::getModel('directory/region')->loadByCode($regionCode, $countryCode);
+                    $regionId    = $regionModel->getId();
+                    $regionName  = $regionModel->getName();
+                }
+                if($geoIpRecord && !$this->_address->getRegionId()) {
+                    $this->_address->setRegionId($regionId);
+                }
+                if($geoIpRecord && !$this->_address->getRegion()) {
+                    $this->_address->setRegion($regionName);
+                }
+                if($geoIpRecord && !$this->_address->getPostcode()) {
+                    $this->_address->setPostcode($geoIpRecord->postal->code);
+                }
             } else {
                 $this->_address = Mage::getModel('sales/quote_address');
+                if($geoIpRecord && !$this->_address->getCity()) {
+                    $this->_address->setCity($geoIpRecord->city->names['en']);
+                }
+                if($geoIpRecord && (!$this->_address->getRegionId() || !$this->_address->getRegion())) {
+                    $regionCode  = $geoIpRecord->subdivisions[0]->isoCode;
+                    $countryCode = $geoIpRecord->country->isoCode;
+                    $regionModel = Mage::getModel('directory/region')->loadByCode($regionCode, $countryCode);
+                    $regionId    = $regionModel->getId();
+                    $regionName  = $regionModel->getName();
+                }
+                if($geoIpRecord && !$this->_address->getRegionId()) {
+                    $this->_address->setRegionId($regionId);
+                }
+                if($geoIpRecord && !$this->_address->getRegion()) {
+                    $this->_address->setRegion($regionName);
+                }
+                if($geoIpRecord && !$this->_address->getPostcode()) {
+                    $this->_address->setPostcode($geoIpRecord->postal->code);
+                }
             }
         }
 

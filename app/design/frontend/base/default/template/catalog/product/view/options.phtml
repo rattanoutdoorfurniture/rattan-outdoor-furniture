@@ -186,21 +186,9 @@
     //]]>
     </script>
     <!-- Options ----------------------------------->
+    <dl>
     <?php foreach($_options as $_option): ?>
         <?php echo $this->getOptionHtml($_option) ?>
     <?php endforeach; ?>
-    <!-- Quantity ---------------------------------->
-    <?php $_product = $this->getProduct(); ?>
-    <section id="product-details-options-qty" class="product-details-options-section">
-        <span id="product-details-options-qty-label" class="product-details-options-label"><?php echo $this->__("Select Quantity:"); ?></span>
-        <aside id="product-details-options-qty-selector">
-            <?php $qtyMax = floor(Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getQty()); ?>
-            <?php $qtyPad = strlen($qtyMax); ?>
-            <select id="qty" class="input-text qty" name="qty" title="<?php echo $this->__('Qty') ?>">
-                <?php for($i=1;$i<=$qtyMax;$i++):?>
-                    <option class="product-details-options-qty-select-opt" value="<?php echo $i; ?>"<?php echo $i==(($this->getProductDefaultQty())?$this->getProductDefaultQty():1)?' selected="selected"':''; ?>><?php echo sprintf("%0".$qtyPad."s",$i); ?></option>
-                <?php endfor; ?>
-            </select>
-        </aside>
-    </section>
+    </dl>
 <?php endif; ?>

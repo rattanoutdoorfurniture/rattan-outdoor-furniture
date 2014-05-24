@@ -1,9 +1,13 @@
 .DS_Store
-
-
+.idea
+.idea/*
 var/session/*
 var/cache/*
 var/locks/*
 var/report/*
 *error_log
 *DEV_NOTES
+*_snapshot_*
+var/backups/archive
+var/backups
+

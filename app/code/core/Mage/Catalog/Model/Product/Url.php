@@ -182,7 +182,7 @@ class Mage_Catalog_Model_Product_Url extends Varien_Object
             $categories = $product->getCategoryIds();
             $categoryid = end($categories);
             $category   = Mage::getModel('catalog/category')->load($categoryid);
-            $path       = $category->getUrlPath().basename($_product->getProductUrl());
+            $path       = $category->getUrlPath().basename($product->getProductUrl());
             return $path;
         } elseif (!$category instanceof Mage_Catalog_Model_Category) {
             Mage::throwException('Invalid category object supplied');
