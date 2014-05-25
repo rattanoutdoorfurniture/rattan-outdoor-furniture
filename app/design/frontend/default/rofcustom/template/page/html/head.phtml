@@ -74,23 +74,34 @@
             location.hash = this.hash;
             $(document).scrollTop(scrollTop);
         });
-        $(".checkout-step-next-step").on("click", function(e) {
-            e.preventDefault();
-            if(this.id=="checkout-step3-submit-order") {
-                formdata = $("#checkout-box-form").serializeArray();
-                htmldata = $("<div/>");
-                $(formdata).each(function(){
-                    row = $("<div/>");
-                    row.append(
-                            $("<strong/>").text(this.name)
-                        ).append(
-                            $("<span/>").text(this.value)
-                        );
-                    htmldata.append(row);
-                });
-                $("#checkout-box-step-4").append(htmldata);
-            }
-            nextCheckoutStep();
+        //$(".checkout-step-next-step").on("click", function(e) {
+        //    e.preventDefault();
+        //    if(this.id=="checkout-step3-submit-order") {
+        //        formdata = $("#checkout-box-form").serializeArray();
+        //        htmldata = $("<div/>");
+        //        $(formdata).each(function(){
+        //            row = $("<div/>");
+        //            row.append(
+        //                    $("<strong/>").text(this.name)
+        //                ).append(
+        //                    $("<span/>").text(this.value)
+        //                );
+        //            htmldata.append(row);
+        //        });
+        //        $("#checkout-box-step-4").append(htmldata);
+        //    }
+        //    nextCheckoutStep();
+        //});
+        jQuery(".product-details-options-color-swatch").on("click", function(e) {
+            var $this       = jQuery(this);
+            $this.siblings(".selected").removeClass("selected");
+            var selection   = $this.data('color');
+            var parent      = $this.addClass("selected");
+            jQuery("#select_1 option").filter(function() {
+                $opt = jQuery(this);
+                toSel = !!($opt.val()==selection);
+                return toSel;
+            }).prop('selected', true);
         });
     });
     //<![CDATA[

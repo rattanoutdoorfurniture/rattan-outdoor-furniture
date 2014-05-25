@@ -47,9 +47,11 @@
     <adminhtml>
         <layout>
             <updates>
-                <index>
-                    <file>openstream/geoip.xml</file>
-                </index>
+                <índex>
+                    <geoip>
+                        <file>openstream/geoip.xml</file>
+                    </geoip>
+                </índex>
             </updates>
         </layout>
     </adminhtml>

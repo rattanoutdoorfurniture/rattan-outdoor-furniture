@@ -243,3 +243,35 @@ Stack trace:
 #14 /home/rof/public_html/dev/app/Mage.php(684): Mage_Core_Model_App->run(Array)
 #15 /home/rof/public_html/dev/index.php(117): Mage::run('', 'store')
 #16 {main}
+2014-05-24T23:20:58+00:00 ERR (3): 
+exception 'Varien_Exception' with message 'Invalid method Mage_Catalog_Block_Product_View_Media::addItem(Array
+(
+    [0] => remote_js
+    [1] => https://code.jquery.com/jquery-migrate-1.2.1.js
+    [2] => Mage_Core_Model_Layout_Element Object
+        (
+        )
+
+    [3] => Mage_Core_Model_Layout_Element Object
+        (
+        )
+
+)
+)' in /Users/mike/Projects/RattanOutdoorFurniture/code/dev/lib/Varien/Object.php:653
+Stack trace:
+#0 [internal function]: Varien_Object->__call('addItem', Array)
+#1 [internal function]: Mage_Catalog_Block_Product_View_Media->addItem('remote_js', 'https://code.jq...', Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#2 /Users/mike/Projects/RattanOutdoorFurniture/code/dev/app/code/core/Mage/Core/Model/Layout.php(348): call_user_func_array(Array, Array)
+#3 /Users/mike/Projects/RattanOutdoorFurniture/code/dev/app/code/core/Mage/Core/Model/Layout.php(214): Mage_Core_Model_Layout->_generateAction(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#4 /Users/mike/Projects/RattanOutdoorFurniture/code/dev/app/code/core/Mage/Core/Model/Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#5 /Users/mike/Projects/RattanOutdoorFurniture/code/dev/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#6 /Users/mike/Projects/RattanOutdoorFurniture/code/dev/app/code/core/Mage/Catalog/Helper/Product/View.php(73): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#7 /Users/mike/Projects/RattanOutdoorFurniture/code/dev/app/code/core/Mage/Catalog/Helper/Product/View.php(144): Mage_Catalog_Helper_Product_View->initProductLayout(Object(Mage_Catalog_Model_Product), Object(Mage_Catalog_ProductController))
+#8 /Users/mike/Projects/RattanOutdoorFurniture/code/dev/app/code/core/Mage/Catalog/controllers/ProductController.php(132): Mage_Catalog_Helper_Product_View->prepareAndRender(1, Object(Mage_Catalog_ProductController), Object(Varien_Object))
+#9 /Users/mike/Projects/RattanOutdoorFurniture/code/dev/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Catalog_ProductController->viewAction()
+#10 /Users/mike/Projects/RattanOutdoorFurniture/code/dev/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /Users/mike/Projects/RattanOutdoorFurniture/code/dev/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /Users/mike/Projects/RattanOutdoorFurniture/code/dev/app/code/core/Mage/Core/Model/App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /Users/mike/Projects/RattanOutdoorFurniture/code/dev/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#14 /Users/mike/Projects/RattanOutdoorFurniture/code/dev/index.php(117): Mage::run('', 'store')
+#15 {main}

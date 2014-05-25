@@ -26,24 +26,25 @@
             }
             return password;
         };
-        jQuery(".field,.wide").each(function() {
-            jQuery(this).focusin(function() {
-                jQuery(this).addClass("input-focused");
-                jQuery(this).find("input").one("blur",function() {
-                    $fieldInput = jQuery(this);
-                    $parent = $fieldInput.parents(".field,.wide");
-                    $parent.removeClass("input-focused");
-                    if($fieldInput.val().length > 0 || $fieldInput.get(0).hasAttribute("defaultvalue")) {
-                        $parent.addClass("input-filled");
-                    }
-                    Validation.validate(this);
-                });
-            });
-            $fieldInput = jQuery(this).find("input,select");
-            if($fieldInput.val().length > 0 || $fieldInput.get(0).hasAttribute("defaultvalue")) {
-                jQuery(this).addClass("input-filled");
-            }
-        });
+        //jQuery(".field,.wide").each(function() {
+        //    jQuery(this).focusin(function() {
+        //        jQuery(this).addClass("input-focused");
+        //        jQuery(this).find("input").one("blur",function() {
+        //            $fieldInput = jQuery(this);
+        //            $parent = $fieldInput.parents(".field,.wide");
+        //            $parent.removeClass("input-focused");
+        //            if($fieldInput.val().length > 0 || $fieldInput.get(0).hasAttribute("defaultvalue")) {
+        //                $parent.addClass("input-filled");
+        //            }
+        //            Validation.validate(this);
+        //        });
+        //    });
+        //    $fieldInput = jQuery(this).find("input,select");
+        //    if($fieldInput.val().length > 0 || $fieldInput.get(0).hasAttribute("defaultvalue")) {
+        //        jQuery(this).addClass("input-filled");
+        //    }
+        //});
+
         (function($) {
             tempPassword = jQuery.password(12,false);
             jQuery("[name*=create_account]").not("[checked]").trigger("click");
