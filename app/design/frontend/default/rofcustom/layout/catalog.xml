@@ -182,6 +182,7 @@ Product view
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="head">
+            <action method="addItem"><type>remote_js</type><name>https://code.jquery.com/jquery-migrate-1.2.1.js</name><params/><if/></action>
             <action method="addJs"><script>varien/product.js</script></action>
             <action method="addJs"><script>varien/configurable.js</script></action>
             <action method="addJs"><script>varien/configurable.js</script></action>

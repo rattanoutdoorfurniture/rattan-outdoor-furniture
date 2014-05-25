@@ -49,12 +49,12 @@ $default = current($swatchKeys);
 ?>
 
     <section id="product-details-options-<?=$title?>" class="product-details-options-section">
-        <input id="product-details-options-<?=$title?>-value" type="hidden" name="options[<?=$opt_id?>]" value="<?php echo $default; ?>" />
+<!--        <input id="product-details-options---><?//=$title?><!---value" type="hidden" name="options[--><?//=$opt_id?><!--]" value="--><?php //echo $default; ?><!--" />-->
         <span id="product-details-options-<?=$title?>-label" class="product-details-options-label">Choose <?php echo ucwords($title) ?>:</span>
             <span id="product-details-options-<?=$title?>-swatches">
                 <?php foreach($swatches as $sid=>$swatch): ?>
                     <aside class="product-details-options-<?=$title?>-swatch<?php echo $swatch==$dSwatch ? ' selected':''; ?>" data-color="<?php echo $sid; ?>">
-                        <div class="product-details-options-<?=$title?>-swatch-color" style="background-color: <?php echo $swatch['sku']; ?>;" onclick="var sel=document.querySelectorAll('.product-details-options-color-swatch.selected');sel.length?sel[0].classList.remove('selected'):'';this.parentElement.classList.add('selected');document.getElementById('select_1').value=this.parentElement.getAttribute('data-color');"></div>
+                        <div class="product-details-options-<?=$title?>-swatch-color" style="background-color: <?php echo $swatch['sku']; ?>;"></div>
                     </aside>
                 <?php endforeach; ?>
             </span>
