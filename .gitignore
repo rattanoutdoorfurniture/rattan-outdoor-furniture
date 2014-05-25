@@ -8,5 +8,8 @@ var/report/*
 *error_log
 *DEV_NOTES
 *_snapshot_*
+var/backups/archive
 var/backups/archive/*
+var/backups
 var/backups/*
+
