@@ -112,6 +112,7 @@
                     case '5': return 'MC';
                     case '3': return 'AMEX';
                     case '6': return 'DISCOVER';
+                    default: return 'NN';
                 };
 
                 return undefined;
@@ -146,6 +147,10 @@
                             background_position = '0 -92px';
                             card_code = "DI";
                             break;
+                        case 'NN':
+                        default:
+                            background_position = '0 0';
+                            card_code = "NN";
                     };
                     if(card_code!=="") {
                         jQuery(".active",settings.target).removeClass("active");

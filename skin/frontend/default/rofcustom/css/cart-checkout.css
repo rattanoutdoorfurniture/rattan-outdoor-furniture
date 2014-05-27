@@ -766,8 +766,21 @@ img, button, input {
 
         /* One Page Checkout Payment Methods Section
         ******************************************************/
+        .opc-wrapper-opc .payment-block {
+            margin-top: 10px !important;
+        }
         .opc-wrapper-opc #co-payment-form {
             padding-top: 20px;
+            margin-bottom: 0px;
+        }
+
+        .opc-wrapper-opc #co-payment-form fieldset {
+            margin-bottom: 0px;
+        }
+
+        .has-credit-card-logos {
+            height: 32px;
+            overflow: hidden;
         }
 
             /* Credit Cart Type Auto-Select Styles
@@ -776,9 +789,20 @@ img, button, input {
                 height: 0;
                 margin-left: -10000px;
             }
-            #credit-card-type {width:228px;}
+            #credit-card-type {
+                position: relative;
+                width: 52px;
+                top: -40px;
+                right: -2px;
+                z-index: 99;
+                left: auto;
+                margin-left: -50px;
+                overflow: hidden;
+                height: 38px;
+                float: right;
+            }
             #credit-card-type li {
-                display: block;
+                display: none;
                 width: 51px;
                 height: 32px;
                 background: url('../images/credit-card-icons.jpg') 0 -32px no-repeat;
@@ -791,6 +815,20 @@ img, button, input {
                 -ms-transition: all .2s;
                 -o-transition: all .2s;
                 transition: all .2s;
+                position: absolute;
+                z-index: 9;
+            }
+            #credit-card-type li.active {
+                display: block;
+                top: 0;
+            }
+            #credit-card-type .NN {
+                display: none;
+            }
+            #credit-card-type .NN.active {
+                display: block;
+                background: none;
+                background-color: transparent;
             }
             #credit-card-type .VI {background-position: 0px -32px;}
             #credit-card-type .MC {background-position: -51px -32px;}
@@ -827,6 +865,29 @@ img, button, input {
                 width: 40%;
                 float: right;
             }
+            .opc-wrapper-opc .payment-block .tool-tip {
+                top: 0 !important;
+                position: absolute;
+                background: #FFF;
+                padding: 20px;
+                margin: -20px;
+                border: 1px solid black;
+                border-radius: 10px;
+                box-shadow: 2px 2px 16px 4px black;
+            }
+            #payment-tool-tip-close {
+                display: block;
+                width: 100%;
+                margin-bottom: 15px;
+                text-align: right;
+            }
+
+        /* Discount Coupon Form
+        ************************************************/
+        .opc-wrapper-opc .discount-block,
+        .opc-wrapper-opc .discount-block form {
+            margin: 0px auto !important;
+        }
 
 
 /* One Page Checkout Review Section
