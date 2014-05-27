@@ -695,62 +695,43 @@ img, button, input {
             float: right !important;
         }
 
-        .opc-wrapper-opc .fields .field {
-            clear: none;
-            float: left;
-            width: 46%;
-            height: 60px !important;
-        }
-
+        .opc-wrapper-opc .wide .field,
         .opc-wrapper-opc .fields .field {
             width: 100% !important;
-            height: 40px !important;
+            height: 45px !important;
         }
 
+
+        .opc-wrapper-opc .fields:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+        .opc-wrapper-opc .fields .field:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+        .opc-wrapper-opc .wide:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+        .opc-wrapper-opc .wide .field label,
+        .opc-wrapper-opc .wide label,
         .opc-wrapper-opc .fields .field label {
-            height: 28px;
+            height: 22px;
             padding-top: 5px;
-            margin-left: 15px;
+            margin-left: 5px;
         }
 
-        .opc-wrapper-opc .fields .field label.required {
-            /* height: 0; */
-            /* padding-top: 5px; */
-            /* margin-left: 5px; */
-        }
-
+        .opc-wrapper-opc .wide .field label.required em,
+        .opc-wrapper-opc .wide label.required em,
         .opc-wrapper-opc .fields .field label.required em {
             width: 20px;
             margin-left: 0px;
             margin-right: 5px;
         }
-
-        .opc-wrapper-opc .fields .field.input-focused label,
-        .opc-wrapper-opc .fields .field.input-filled label {
-            height: 30px;
+        .opc-wrapper-opc .wide label:not(.required),
+        .opc-wrapper-opc .fields label:not(.required) {
+            margin-left: 18px;
         }
 
-        .opc-wrapper-opc .fields .field.input-focused,
-        .opc-wrapper-opc .fields .field.input-filled {
-            margin-bottom: 20px;
+        .opc-wrapper-opc .wide .input-box input:last-child {
+            margin-bottom: 0px;
         }
-
-        .opc-wrapper-opc .fields .field .validation-advice {
-            position: relative;
-            top: -40px;
-            left: 50%;
-            right: auto;
-        }
-
-        .opc-wrapper-opc .fields .field.input-focused .validation-advice,
-        .opc-wrapper-opc .fields .field.input-filled .validation-advice {
-            display: none;
-        }
-
-        .opc-wrapper-opc .fields .field label:before {
-            /* height: 5px; */
-            /* display: block; */
-            /* content: ''; */
+        
+        .opc-wrapper-opc .wide > .input-box {
+            height: 22px;
         }
 
         .opc-wrapper-opc label {
