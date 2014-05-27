@@ -69,6 +69,7 @@
      * Full Data: Printed
      */
     /** @var $mageAddress Mage_Sales_Model_Quote_Address */
+    Mage::register("geoip_record", $record);
     $mageAddress = $this->getAddress($record);
 
     ?>

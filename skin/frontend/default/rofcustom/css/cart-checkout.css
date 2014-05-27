@@ -98,6 +98,7 @@ img, button, input {
 
     #cart-cartbox-table-edit {
         padding: 0 !important;
+        width: 20px !important;
     }
 
     #cart-cartbox-table-edit-btn {
@@ -129,7 +130,7 @@ img, button, input {
     }
 
     .cart-cartbox-table-product td:last-child {
-        padding: 0 8px 0 12px;
+        padding: 0 10px 0 0;
     }
 
     .cart-cartbox-table-product-qty-edit {
@@ -153,7 +154,7 @@ img, button, input {
     }
 
     .cart-cartbox-table-product-detail {
-
+        padding: 10px 20px 10px 0px !important;
     }
 
     .cart-cartbox-table-product-detail td {
@@ -163,7 +164,7 @@ img, button, input {
     .cart-cartbox-table-product-detail-img-wrap {
         width: 80px;
         float: left;
-        margin: 10px 20px 10px 10px;
+        margin: 10px;
         border: 1px solid #e6e6e6;
         padding: 0 10px 0 0;
     }
@@ -181,8 +182,9 @@ img, button, input {
         color: #8a6399;
         display: block;
         text-align: left;
-        margin: 10px 0 5px;
+        margin: 20px 0 5px;
         text-decoration: none;
+        white-space: nowrap;
     }
 
     .cart-cartbox-table-product-detail-item,
@@ -193,10 +195,12 @@ img, button, input {
         display: block;
         text-align: left;
         margin-bottom: 5px;
+        white-space: nowrap;
     }
 
     .cart-cartbox-table-product-qty {
         text-align: center;
+        width: 60px;
     }
 
     .cart-cartbox-table-product-qty input {
@@ -796,6 +800,33 @@ img, button, input {
             #credit-card-type .MC.active  {background-position: -51px 0px;}
             #credit-card-type .AE.active  {background-position: -102px 0px;}
             #credit-card-type .DI.active  {background-position: -153px 0px;}
+
+            /* Credit Card Expiration Date Styles
+            ***********************************************************/
+            #paypal_direct_expiration,
+            #paypal_direct_expiration_yr {
+                width: 49%;
+                display: inline-block;
+            }
+
+            .opc-wrapper-opc .required-entry + .validation-advice {
+                display: none;
+            }
+
+            .opc-wrapper-opc .validation-failed {
+                background-color: rgb(255, 69, 69);
+                background-color: rgba(255, 69, 69, 0.3);
+            }
+
+            /* Credit Card Verification Code Styles
+            ****************************************************/
+            #paypal_direct_cc_type_cvv_div label {
+                text-indent: 60%;
+            }
+            #paypal_direct_cc_cid {
+                width: 40%;
+                float: right;
+            }
 
 
 /* One Page Checkout Review Section

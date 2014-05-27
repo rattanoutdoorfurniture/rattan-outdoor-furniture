@@ -147,9 +147,9 @@
                             card_code = "DI";
                             break;
                     };
-                    jQuery(".active",settings.target).removeClass("active");
-                    jQuery(settings.target+" ."+card_code).addClass("active");
                     if(card_code!=="") {
+                        jQuery(".active",settings.target).removeClass("active");
+                        jQuery(settings.target+" ."+card_code).addClass("active");
                         jQuery("select#paypal_direct_cc_type option").filter(function() {
                             return (jQuery(this).val() == card_code);
                         }).prop("selected", true);
