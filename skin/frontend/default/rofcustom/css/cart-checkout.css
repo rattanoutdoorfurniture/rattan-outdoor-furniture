@@ -171,7 +171,7 @@ img, button, input {
     .cart-cartbox-table-product-detail-img {
         width: 100%;
         height: auto;
-        margin: 7px 5px 4px;
+        margin: 7px 5px 2px;
         text-decoration: none;
     }
 
@@ -766,8 +766,40 @@ img, button, input {
             padding-top: 20px;
         }
 
-        /* One Page Checkout Review Section
-        ******************************************************/
+            /* Credit Cart Type Auto-Select Styles
+            ******************************************************/
+            #credit-cart-type-wrap {
+                height: 0;
+                margin-left: -10000px;
+            }
+            #credit-card-type {width:228px;}
+            #credit-card-type li {
+                display: block;
+                width: 51px;
+                height: 32px;
+                background: url('../images/credit-card-icons.jpg') 0 -32px no-repeat;
+                margin: 5px 6px 0 0;
+                overflow: hidden;
+                text-indent: -500em;
+                float: left;
+                -webkit-transition: all .2s;
+                -moz-transition: all .2s;
+                -ms-transition: all .2s;
+                -o-transition: all .2s;
+                transition: all .2s;
+            }
+            #credit-card-type .VI {background-position: 0px -32px;}
+            #credit-card-type .MC {background-position: -51px -32px;}
+            #credit-card-type .AE {background-position: -102px -32px;}
+            #credit-card-type .DI {background-position: -153px -32px;}
+            #credit-card-type .VI.active {background-position: 0px 0px;}
+            #credit-card-type .MC.active  {background-position: -51px 0px;}
+            #credit-card-type .AE.active  {background-position: -102px 0px;}
+            #credit-card-type .DI.active  {background-position: -153px 0px;}
+
+
+/* One Page Checkout Review Section
+******************************************************/
         .opc-wrapper-opc #checkout-review-table .a-right,
         .opc-wrapper-opc #checkout-review-table .a-center,
         .opc-wrapper-opc #checkout-review-table .a-left {

@@ -103,6 +103,65 @@
                 return toSel;
             }).prop('selected', true);
         });
+        if(location.href.match(/onepage/)) {
+            jQuery.getCreditCardType = function(val) {
+                if(!val || !val.length) return undefined;
+
+                switch(val.charAt(0)) {
+                    case '4': return 'VISA';
+                    case '5': return 'MC';
+                    case '3': return 'AMEX';
+                    case '6': return 'DISCOVER';
+                };
+
+                return undefined;
+            };
+
+            jQuery.fn.creditCardType = function(options) {
+                var settings = {
+                    target: '#credit-card-type'
+                };
+
+                if(options) {
+                    jQuery.extend(settings, options);
+                };
+
+                var keyupHandler = function() {
+                    var background_position = '0 0';
+                    var card_code = "";
+                    switch(jQuery.getCreditCardType($(this).val())) {
+                        case 'VISA':
+                            background_position = '0 -23px';
+                            card_code = "VI";
+                            break;
+                        case 'MC':
+                            background_position = '0 -46px';
+                            card_code = "MC";
+                            break;
+                        case 'AMEX':
+                            background_position = '0 -69px';
+                            card_code = "AE";
+                            break;
+                        case 'DISCOVER':
+                            background_position = '0 -92px';
+                            card_code = "DI";
+                            break;
+                    };
+                    jQuery(".active",settings.target).removeClass("active");
+                    jQuery(settings.target+" ."+card_code).addClass("active");
+                    if(card_code!=="") {
+                        jQuery("select#paypal_direct_cc_type option").filter(function() {
+                            return (jQuery(this).val() == card_code);
+                        }).prop("selected", true);
+                    }
+                };
+
+                return this.each(function() {
+                    jQuery(this).parent().on('keyup', "input",keyupHandler).trigger('keyup');
+                });
+            };
+            jQuery('#paypal_direct_cc_number').creditCardType();
+        }
     });
     //<![CDATA[
     var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
