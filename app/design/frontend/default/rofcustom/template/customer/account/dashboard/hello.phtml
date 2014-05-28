@@ -24,7 +24,14 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div class="welcome-msg">
-    <p class="hello"><strong><?php echo $this->__('Hello, %s!', $this->escapeHtml($this->getCustomerName())) ?></strong></p>
-    <p><?php echo $this->__('From your My Account Dashboard you have the ability to view a snapshot of your recent account activity and update your account information. Select a link below to view or edit information.') ?></p>
+<div class="cart-box twelve columns offset-by-two by-margin add-bottom">
+    <div class="cart-box-border"></div>
+    <div class="cart-box-inner">
+        <div class="clear"></div>
+        <div class="box-head"><?php /* Make it break the name if need be on mobile, but not in the middle, after hello (thought this was clever */ ?>
+            <h2><?php echo $this->__('Hello, '); ?><span style="white-space: nowrap"><?php echo $this->__('%s!', $this->escapeHtml($this->getCustomerName())) ?></span></h2>
+        </div>
+        <p class="box-blurb ten columns offset-by-one by-margin"><?php echo $this->__('From your My Account Dashboard you have the ability to view a snapshot of your recent account activity and update your account information. Select a link below to view or edit information.') ?></p>
+    </div>
+    <div class="cart-box-border"></div>
 </div>

@@ -25,7 +25,7 @@
  */
 ?>
 <div class="dashboard">
-    <div class="page-title sixteen columns">
+    <div class="page-title fourteen columns offset-by-one">
         <h1 id="cart-heading"><?php echo $this->__('My Dashboard') ?></h1>
         <?php if($this->getMessagesBlock()): ?>
             <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
@@ -36,17 +36,44 @@
             </script>
         <?php endif; ?>
     </div>
+
+    <!-- Welcome Message -->
     <?php echo $this->getChildHtml('hello') ?>
+    <!-- /Welcome Message/ -->
+
+    <!-- Recent Orders (somehow) -->
     <?php echo $this->getChildHtml('top') ?>
-    <div class="box-account box-info">
-        <div class="box-head">
-            <h2><?php echo $this->__('Account Information') ?></h2>
+    <!-- /Recent Orders/ -->
+
+    <div class="account-box box-info cart-box twelve columns offset-by-two by-margin add-bottom">
+        <div class="account-box-border"></div>
+        <div class="account-box-inner has-columns">
+            <div class="box-head">
+                <h2><?php echo $this->__('Account Information') ?></h2>
+            </div>
+            <?php /* Extensions placeholder */ ?>
+            <?php /* echo $this->getChildHtml('customer.account.dashboard.extra') */ ?>
+            <?php echo $this->getChildHtml('info') ?>
         </div>
-        <?php /* Extensions placeholder */ ?>
-        <?php echo $this->getChildHtml('customer.account.dashboard.extra') ?>
-        <?php echo $this->getChildHtml('info') ?>
-        <?php echo $this->getChildHtml('address') ?>
+        <div class="account-box-border"></div>
     </div>
-    <?php echo $this->getChildHtml('info1') ?>
-    <?php echo $this->getChildHtml('info2') ?>
+    <?php echo $this->getChildHtml('address') ?>
+    <?php if($info1 = $this->getChildHtml('info1') !== ''): ?>
+    <div class="box-account box-info1 cart-box twelve columns offset-by-two by-margin add-bottom">
+        <div class="cart-box-border"></div>
+        <div class="cart-box-inner">
+            <?php echo $info1 ?>
+        </div>
+        <div class="cart-box-border"></div>
+    </div>
+    <?php endif; ?>
+    <?php if($info2 = $this->getChildHtml('info2') !== ''): ?>
+    <div class="box-account box-info2 cart-box twelve columns offset-by-two by-margin add-bottom">
+        <div class="cart-box-border"></div>
+        <div class="cart-box-inner">
+            <?php echo $info2 ?>
+        </div>
+        <div class="cart-box-border"></div>
+    </div>
+    <?php endif; ?>
 </div>

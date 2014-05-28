@@ -22,7 +22,7 @@ img, button, input {
 
 /* Cart Box class styles (boxes for cart content are styled similarly)
 *************************************************************************/
-
+.account-box,
 .cart-box {
     min-height: 40px;
     position: relative;
@@ -30,19 +30,24 @@ img, button, input {
     height: auto;
 }
 
+.account-box-border,
 .cart-box-border {
     width: 100%;
     height: 10px !important;
     display: block;
 }
 
+.account-box .account-box-inner,
 .cart-box  .cart-box-inner {
     background:#FFF;
     display: block;
     margin: auto 10px;
 }
 
-.cart-box .cart-box-inner:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+.account-box .account-box-inner:before,
+.account-box .account-box-inner:after,
+.cart-box .cart-box-inner:before,
+.cart-box .cart-box-inner:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; width: 0; overflow: hidden; }
 
 .cart-btn-wrap {
     text-align: center;
@@ -302,7 +307,7 @@ img, button, input {
         padding: 0 20px;
     }
 
-    .checkout-box-step:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+    .checkout-box-step:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
 
 
     #checkout-box.step1 .checkout-box-step,
@@ -356,7 +361,7 @@ img, button, input {
         padding: 20px 10px 10px;
     }
 
-    .checkout-box-login-box-inner:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+    .checkout-box-login-box-inner:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
 
     .checkout-box-login-box-heading {
         color: #8a6399;
@@ -709,9 +714,9 @@ img, button, input {
         }
 
 
-        .opc-wrapper-opc .fields:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
-        .opc-wrapper-opc .fields .field:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
-        .opc-wrapper-opc .wide:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+        .opc-wrapper-opc .fields:after,
+        .opc-wrapper-opc .fields .field:after,
+        .opc-wrapper-opc .wide:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
 
         .opc-wrapper-opc .wide .field label,
         .opc-wrapper-opc .wide label,
@@ -1014,8 +1019,47 @@ img, button, input {
 /* Account Pages Styles ***************************************************************************************
 **************************************************************************************************************/
 
+    .account-box.col-1,
+    .account-box.col-2 {
+        width: 320px;
+        margin: 10px 10px;
+        float: left;
+    }
+
+    .account-box.col-1 {
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+
+    .account-box.col-2 {
+        margin-left: 5px;
+        margin-right: 15px;
+    }
+
+    .account-box-inner .col2-set {
+        float: left;
+    }
+
+    .account-box-inner .col2-set .account-box {
+        height: 100%;
+    }
+
     /* Login / Register Page Styles
     **************************************************************/
+
+    .account-login #account-box {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .account-login #account-box .account-box-inner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .account-login #account-box .account-box-inner > p {
+        text-align: justify;
+    }
 
    #login-heading {
        margin: 0px;
@@ -1025,3 +1069,69 @@ img, button, input {
        font-size: 32px;
        line-height: 32px;
    }
+
+   /* Account Dashboard Styles
+   *****************************************************************/
+
+    .box-head {
+        border-bottom: 1px solid #e6e6e6;
+        margin: 10px;
+        padding-left: 20px;
+    }
+
+    .box-head h2 {
+        color: #444;
+        font-family: "Tahoma";
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .box-blurb {
+        padding: 10px;
+    }
+
+    #my-orders-table-wrap {
+        margin: 20px 35px 0px;
+    }
+
+    #my-orders-table {
+        width: 600px;
+        margin: 5px;
+        background: #FFF;
+    }
+
+    #my-orders-table tr th {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    #my-orders-table tr th,
+    #my-orders-table tr td {
+        padding: 10px;
+        vertical-align: middle;
+        text-align: center;
+        border-bottom: 1px solid #e6e6e6;
+        border-right: 1px solid #e6e6e6;
+    }
+
+    #my-orders-table tr th:last-child,
+    #my-orders-table tr td:last-child {
+        border-right: none;
+    }
+
+    #my-orders-table td a {
+        text-decoration: none;
+    }
+
+    #my-orders-table td a:hover {
+        text-decoration: underline;
+    }
+
+    #recent-orders-view-all {
+        float: right;
+        margin: 10px 20px;
+        background: #8a6499 url('../images/account-dashboard-recent-orders-view-all.png') center center no-repeat;
+        text-indent: -10000px;
+        width: 70px;
+        height: 30px;
+    }

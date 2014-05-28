@@ -24,11 +24,11 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div class="col2-set">
-    <div class="box">
-        <div class="box-title">
-            <h3><?php echo $this->__('Address Book') ?></h3>
-            <a href="<?php echo $this->getAddressBookUrl() ?>"><?php echo $this->__('Manage Addresses') ?></a>
+<div class="account-box twelve columns offset-by-two by-margin add-bottom">
+    <div class="account-box-border"></div>
+    <div class="account-box-inner">
+        <div class="box-head">
+            <h2><?php echo $this->__('Address Book') ?></h2>
         </div>
         <div class="box-content">
             <div class="col-1">
@@ -46,5 +46,7 @@
                 </address>
             </div>
         </div>
+        <a href="<?php echo $this->getAddressBookUrl() ?>"><?php echo $this->__('Manage Addresses') ?></a>
     </div>
+    <div class="account-box-border"></div>
 </div>
