@@ -42,6 +42,8 @@ img, button, input {
     margin: auto 10px;
 }
 
+.cart-box .cart-box-inner:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
 .cart-btn-wrap {
     text-align: center;
     float: left;
@@ -290,6 +292,7 @@ img, button, input {
         height: 100%;
     }
 
+    #login-form,
     #checkout-box-form {
         margin: 0;
         padding: 10px 0 20px;
@@ -368,7 +371,7 @@ img, button, input {
         margin-bottom: 5px !important;
         padding: 6px 9px !important;
         height: 26px !important;
-        width: 200px !important;
+        width: 240px !important;
     }
 
     .checkout-step1-spacer {
@@ -383,7 +386,7 @@ img, button, input {
     }
 
     #checkout-step1-facebook {
-        width: 220px;
+        width: 260px;
         height: 40px;
         background: transparent url('../images/connect-with-facebook.png') 0 0 no-repeat;
         text-indent: -10000px;
@@ -1007,3 +1010,18 @@ img, button, input {
             float: none;
             background-size: 100% 40px;
         }
+
+/* Account Pages Styles ***************************************************************************************
+**************************************************************************************************************/
+
+    /* Login / Register Page Styles
+    **************************************************************/
+
+   #login-heading {
+       margin: 0px;
+       color: #895c9a;
+       font-family: "Tahoma";
+       font-variant: small-caps;
+       font-size: 32px;
+       line-height: 32px;
+   }

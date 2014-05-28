@@ -266,6 +266,13 @@
 	.remove-bottom { margin-bottom: 0 !important; }
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
+    .offset-by-half { padding-left: 30px; }
+
+    .offset-by-two.by-margin {
+        padding-left: 0px !important;
+        margin-left: 120px !important;
+    }
+
     .hashborder {
         min-height: 40px;
         position: relative;
