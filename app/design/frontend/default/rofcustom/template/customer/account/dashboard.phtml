@@ -45,7 +45,7 @@
     <?php echo $this->getChildHtml('top') ?>
     <!-- /Recent Orders/ -->
 
-    <div class="account-box box-info cart-box twelve columns offset-by-two by-margin add-bottom">
+    <div class="account-box box-info twelve columns offset-by-two by-margin add-bottom">
         <div class="account-box-border"></div>
         <div class="account-box-inner has-columns">
             <div class="box-head">
@@ -59,21 +59,21 @@
     </div>
     <?php echo $this->getChildHtml('address') ?>
     <?php if($info1 = $this->getChildHtml('info1') !== ''): ?>
-    <div class="box-account box-info1 cart-box twelve columns offset-by-two by-margin add-bottom">
-        <div class="cart-box-border"></div>
-        <div class="cart-box-inner">
+    <div class="account-box box-info1 twelve columns offset-by-two by-margin add-bottom">
+        <div class="account-box-border"></div>
+        <div class="account-box-inner">
             <?php echo $info1 ?>
         </div>
-        <div class="cart-box-border"></div>
+        <div class="account-box-border"></div>
     </div>
     <?php endif; ?>
     <?php if($info2 = $this->getChildHtml('info2') !== ''): ?>
-    <div class="box-account box-info2 cart-box twelve columns offset-by-two by-margin add-bottom">
-        <div class="cart-box-border"></div>
-        <div class="cart-box-inner">
+    <div class="account-box box-info2 twelve columns offset-by-two by-margin add-bottom">
+        <div class="account-box-border"></div>
+        <div class="account-box-inner">
             <?php echo $info2 ?>
         </div>
-        <div class="cart-box-border"></div>
+        <div class="account-box-border"></div>
     </div>
     <?php endif; ?>
 </div>

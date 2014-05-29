@@ -9,6 +9,12 @@ Furniture web site project.
 
 
 ##Global TODO:##
+- Commit Message Protocol:
+    - develop: Title on top line, description of tasks completed below, will be added to README, so try to be descriptive and to the point
+    - project-develop: Update Project YY-MM-DD:HHMM; State: DEVELOP_COMMIT_HASH_7_CHARS
+    - database-backup: Backup Database YYYY-MM-DD:HHMM; State: DEVELOP_COMMIT_HASH_7_CHARS
+    - database-archive: Archive Database YY-MM-DD:HHMM; (of newly archived database)
+
 - MUST DO: A Magento DATABASE BACKUP BEFORE __EVERY__ COMMIT!
 - MUST DO: When you fix something COMMIT IT BEFORE DOING __ANYTHING__ ELSE!
 - MUST DO: Remember to update project-develop repo. This will house all project related files (workspace XML and such, cleaning out the develop branch).
@@ -55,6 +61,15 @@ Furniture web site project.
 
 
 ##Change Log:##
+
+
+###2014-05-29###
+- Finish Dashboard, Style Account Elements Finish off the Account Dashboard. Add sharable styles for account elements, they should take a similar visual form. I have tried to account for this, so we can re-use these as much as possible. I have CSS parent filters for possibly shared elements on a seperate line, so they can easily be removed if needed. The next commit will show how this turns out. I am going to now continue into the more internals of the account pages. These are more or less detailed versions of the dashboard elements, mainly being account info (contact details, password, newsletter), order history, and addresses. Beyond that there are some additional things, like forgot password. and the stuff like that. There will also need to be styles for the successful payment and errored payment pages. As I get into this more, I will find more of these pages, for now I am focusing on the main ones, but we will need to address the styles of all pages that are linkd to on the site.
+- I am going to continue this morning on the account pages. I'm going to finish up the dashboard, which I will expect to take most the morning, but by afternoon I'm hoping to have that pretty nice, and have that committed. I'll post the commit message here.
+- Commit: Allow server to do Fast-Forwards This should prevent against unnecessary merges. This seems to be continually an issue. this should fix. (too many merges just for the purpose of syncing.)
+- Starting with my initial comment here. I have started this morning by finishing up the sync from yesterday. Completed backup and the sync. I actually fixed it so the server isn't requiring a merge, which is just annoying. I've committed the project files, archive, and backup. Also, I wanted to note that yesterday I did take care of the re-order thing. nicely this was just a configurable option in the magento backend.
+
+###2014-05-28###
 - Huge Update. Tons of CSS fixes. Working mainly on Dashboard. I have done a bunch of different things all over the place. Mainly, the work has been on towards the account dashboard. currently left off on the two column layout of the inner boxes on that p
   age. I'm trying to rush to finish up, time got away from me. I want to commit all this here, but really most of the work is in the many facets of the account section. There have been a ton of edits to the css. a few major fixes that go across the board. also i
   added some small mobile fixes, to prevent errors in the future. oh, and i made a custom button. i think these will look nice in each box of the account page.
