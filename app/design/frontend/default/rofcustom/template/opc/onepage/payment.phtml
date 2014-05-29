@@ -24,6 +24,11 @@
                 //left: (Event.pointerX(event)+100)+'px'
             })
             $('payment-tool-tip').toggle();
+            if(jQuery("#payment-tool-tip").is(":visible")) {
+                jQuery(document).one("click",":not(#payment-tool-tip)", toggleToolTip);
+            } else {
+                jQuery(document).unbind("click");
+            }
         }
         Event.stop(event);
     }

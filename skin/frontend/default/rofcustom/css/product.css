@@ -12,7 +12,7 @@
     display: block;
 }
 
-#product-img-main img:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+#product-img-main img:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
 
 #product-img-main-img {
     width: 380px;

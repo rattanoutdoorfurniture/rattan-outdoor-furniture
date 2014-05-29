@@ -22,7 +22,7 @@ img, button, input {
 
 /* Cart Box class styles (boxes for cart content are styled similarly)
 *************************************************************************/
-
+.account-box,
 .cart-box {
     min-height: 40px;
     position: relative;
@@ -30,17 +30,24 @@ img, button, input {
     height: auto;
 }
 
+.account-box-border,
 .cart-box-border {
     width: 100%;
     height: 10px !important;
     display: block;
 }
 
+.account-box .account-box-inner,
 .cart-box  .cart-box-inner {
     background:#FFF;
     display: block;
     margin: auto 10px;
 }
+
+.account-box .account-box-inner:before,
+.account-box .account-box-inner:after,
+.cart-box .cart-box-inner:before,
+.cart-box .cart-box-inner:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; width: 0; overflow: hidden; }
 
 .cart-btn-wrap {
     text-align: center;
@@ -98,6 +105,7 @@ img, button, input {
 
     #cart-cartbox-table-edit {
         padding: 0 !important;
+        width: 20px !important;
     }
 
     #cart-cartbox-table-edit-btn {
@@ -129,7 +137,7 @@ img, button, input {
     }
 
     .cart-cartbox-table-product td:last-child {
-        padding: 0 8px 0 12px;
+        padding: 0 10px 0 0;
     }
 
     .cart-cartbox-table-product-qty-edit {
@@ -153,7 +161,7 @@ img, button, input {
     }
 
     .cart-cartbox-table-product-detail {
-
+        padding: 10px 20px 10px 0px !important;
     }
 
     .cart-cartbox-table-product-detail td {
@@ -163,7 +171,7 @@ img, button, input {
     .cart-cartbox-table-product-detail-img-wrap {
         width: 80px;
         float: left;
-        margin: 10px 20px 10px 10px;
+        margin: 10px;
         border: 1px solid #e6e6e6;
         padding: 0 10px 0 0;
     }
@@ -171,7 +179,7 @@ img, button, input {
     .cart-cartbox-table-product-detail-img {
         width: 100%;
         height: auto;
-        margin: 7px 5px 4px;
+        margin: 7px 5px 2px;
         text-decoration: none;
     }
 
@@ -181,8 +189,9 @@ img, button, input {
         color: #8a6399;
         display: block;
         text-align: left;
-        margin: 10px 0 5px;
+        margin: 20px 0 5px;
         text-decoration: none;
+        white-space: nowrap;
     }
 
     .cart-cartbox-table-product-detail-item,
@@ -193,10 +202,12 @@ img, button, input {
         display: block;
         text-align: left;
         margin-bottom: 5px;
+        white-space: nowrap;
     }
 
     .cart-cartbox-table-product-qty {
         text-align: center;
+        width: 60px;
     }
 
     .cart-cartbox-table-product-qty input {
@@ -286,6 +297,7 @@ img, button, input {
         height: 100%;
     }
 
+    #login-form,
     #checkout-box-form {
         margin: 0;
         padding: 10px 0 20px;
@@ -295,7 +307,7 @@ img, button, input {
         padding: 0 20px;
     }
 
-    .checkout-box-step:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+    .checkout-box-step:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
 
 
     #checkout-box.step1 .checkout-box-step,
@@ -349,7 +361,7 @@ img, button, input {
         padding: 20px 10px 10px;
     }
 
-    .checkout-box-login-box-inner:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+    .checkout-box-login-box-inner:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
 
     .checkout-box-login-box-heading {
         color: #8a6399;
@@ -364,7 +376,7 @@ img, button, input {
         margin-bottom: 5px !important;
         padding: 6px 9px !important;
         height: 26px !important;
-        width: 200px !important;
+        width: 240px !important;
     }
 
     .checkout-step1-spacer {
@@ -379,7 +391,7 @@ img, button, input {
     }
 
     #checkout-step1-facebook {
-        width: 220px;
+        width: 260px;
         height: 40px;
         background: transparent url('../images/connect-with-facebook.png') 0 0 no-repeat;
         text-indent: -10000px;
@@ -695,62 +707,43 @@ img, button, input {
             float: right !important;
         }
 
-        .opc-wrapper-opc .fields .field {
-            clear: none;
-            float: left;
-            width: 46%;
-            height: 60px !important;
-        }
-
+        .opc-wrapper-opc .wide .field,
         .opc-wrapper-opc .fields .field {
             width: 100% !important;
-            height: 40px !important;
+            height: 45px !important;
         }
 
+
+        .opc-wrapper-opc .fields:after,
+        .opc-wrapper-opc .fields .field:after,
+        .opc-wrapper-opc .wide:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
+
+        .opc-wrapper-opc .wide .field label,
+        .opc-wrapper-opc .wide label,
         .opc-wrapper-opc .fields .field label {
-            height: 28px;
+            height: 22px;
             padding-top: 5px;
-            margin-left: 15px;
+            margin-left: 5px;
         }
 
-        .opc-wrapper-opc .fields .field label.required {
-            /* height: 0; */
-            /* padding-top: 5px; */
-            /* margin-left: 5px; */
-        }
-
+        .opc-wrapper-opc .wide .field label.required em,
+        .opc-wrapper-opc .wide label.required em,
         .opc-wrapper-opc .fields .field label.required em {
             width: 20px;
             margin-left: 0px;
             margin-right: 5px;
         }
-
-        .opc-wrapper-opc .fields .field.input-focused label,
-        .opc-wrapper-opc .fields .field.input-filled label {
-            height: 30px;
+        .opc-wrapper-opc .wide label:not(.required),
+        .opc-wrapper-opc .fields label:not(.required) {
+            margin-left: 18px;
         }
 
-        .opc-wrapper-opc .fields .field.input-focused,
-        .opc-wrapper-opc .fields .field.input-filled {
-            margin-bottom: 20px;
+        .opc-wrapper-opc .wide .input-box input:last-child {
+            margin-bottom: 0px;
         }
-
-        .opc-wrapper-opc .fields .field .validation-advice {
-            position: relative;
-            top: -40px;
-            left: 50%;
-            right: auto;
-        }
-
-        .opc-wrapper-opc .fields .field.input-focused .validation-advice,
-        .opc-wrapper-opc .fields .field.input-filled .validation-advice {
-            display: none;
-        }
-
-        .opc-wrapper-opc .fields .field label:before {
-            /* height: 5px; */
-            /* display: block; */
-            /* content: ''; */
+        
+        .opc-wrapper-opc .wide > .input-box {
+            height: 22px;
         }
 
         .opc-wrapper-opc label {
@@ -781,12 +774,132 @@ img, button, input {
 
         /* One Page Checkout Payment Methods Section
         ******************************************************/
+        .opc-wrapper-opc .payment-block {
+            margin-top: 10px !important;
+        }
         .opc-wrapper-opc #co-payment-form {
             padding-top: 20px;
+            margin-bottom: 0px;
         }
 
-        /* One Page Checkout Review Section
-        ******************************************************/
+        .opc-wrapper-opc #co-payment-form fieldset {
+            margin-bottom: 0px;
+        }
+
+        .has-credit-card-logos {
+            height: 32px;
+            overflow: hidden;
+        }
+
+            /* Credit Cart Type Auto-Select Styles
+            ******************************************************/
+            #credit-cart-type-wrap {
+                height: 0;
+                margin-left: -10000px;
+            }
+            #credit-card-type {
+                position: relative;
+                width: 52px;
+                top: -40px;
+                right: -2px;
+                z-index: 99;
+                left: auto;
+                margin-left: -50px;
+                overflow: hidden;
+                height: 38px;
+                float: right;
+            }
+            #credit-card-type li {
+                display: none;
+                width: 51px;
+                height: 32px;
+                background: url('../images/credit-card-icons.jpg') 0 -32px no-repeat;
+                margin: 5px 6px 0 0;
+                overflow: hidden;
+                text-indent: -500em;
+                float: left;
+                -webkit-transition: all .2s;
+                -moz-transition: all .2s;
+                -ms-transition: all .2s;
+                -o-transition: all .2s;
+                transition: all .2s;
+                position: absolute;
+                z-index: 9;
+            }
+            #credit-card-type li.active {
+                display: block;
+                top: 0;
+            }
+            #credit-card-type .NN {
+                display: none;
+            }
+            #credit-card-type .NN.active {
+                display: block;
+                background: none;
+                background-color: transparent;
+            }
+            #credit-card-type .VI {background-position: 0px -32px;}
+            #credit-card-type .MC {background-position: -51px -32px;}
+            #credit-card-type .AE {background-position: -102px -32px;}
+            #credit-card-type .DI {background-position: -153px -32px;}
+            #credit-card-type .VI.active {background-position: 0px 0px;}
+            #credit-card-type .MC.active  {background-position: -51px 0px;}
+            #credit-card-type .AE.active  {background-position: -102px 0px;}
+            #credit-card-type .DI.active  {background-position: -153px 0px;}
+
+            /* Credit Card Expiration Date Styles
+            ***********************************************************/
+            #paypal_direct_expiration,
+            #paypal_direct_expiration_yr {
+                width: 49%;
+                display: inline-block;
+            }
+
+            .opc-wrapper-opc .required-entry + .validation-advice {
+                display: none;
+            }
+
+            .opc-wrapper-opc .validation-failed {
+                background-color: rgb(255, 69, 69);
+                background-color: rgba(255, 69, 69, 0.3);
+            }
+
+            /* Credit Card Verification Code Styles
+            ****************************************************/
+            #paypal_direct_cc_type_cvv_div label {
+                text-indent: 60%;
+            }
+            #paypal_direct_cc_cid {
+                width: 40%;
+                float: right;
+            }
+            .opc-wrapper-opc .payment-block .tool-tip {
+                top: 0 !important;
+                position: absolute;
+                background: #FFF;
+                padding: 20px;
+                margin: -20px;
+                border: 1px solid black;
+                border-radius: 10px;
+                box-shadow: 2px 2px 16px 4px black;
+            }
+            #payment-tool-tip-close {
+                display: block;
+                width: 100%;
+                margin-bottom: 15px;
+                text-align: right;
+            }
+
+        /* Discount Coupon Form
+        ************************************************/
+        .opc-wrapper-opc .discount-block,
+        .opc-wrapper-opc .discount-block form {
+            margin: 0px auto !important;
+        }
+
+
+/* One Page Checkout Review Section
+******************************************************/
         .opc-wrapper-opc #checkout-review-table .a-right,
         .opc-wrapper-opc #checkout-review-table .a-center,
         .opc-wrapper-opc #checkout-review-table .a-left {
@@ -902,3 +1015,123 @@ img, button, input {
             float: none;
             background-size: 100% 40px;
         }
+
+/* Account Pages Styles ***************************************************************************************
+**************************************************************************************************************/
+
+    .account-box.col-1,
+    .account-box.col-2 {
+        width: 320px;
+        margin: 10px 10px;
+        float: left;
+    }
+
+    .account-box.col-1 {
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+
+    .account-box.col-2 {
+        margin-left: 5px;
+        margin-right: 15px;
+    }
+
+    .account-box-inner .col2-set {
+        float: left;
+    }
+
+    .account-box-inner .col2-set .account-box {
+        height: 100%;
+    }
+
+    /* Login / Register Page Styles
+    **************************************************************/
+
+    .account-login #account-box {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .account-login #account-box .account-box-inner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .account-login #account-box .account-box-inner > p {
+        text-align: justify;
+    }
+
+   #login-heading {
+       margin: 0px;
+       color: #895c9a;
+       font-family: "Tahoma";
+       font-variant: small-caps;
+       font-size: 32px;
+       line-height: 32px;
+   }
+
+   /* Account Dashboard Styles
+   *****************************************************************/
+
+    .box-head {
+        border-bottom: 1px solid #e6e6e6;
+        margin: 10px;
+        padding-left: 20px;
+    }
+
+    .box-head h2 {
+        color: #444;
+        font-family: "Tahoma";
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .box-blurb {
+        padding: 10px;
+    }
+
+    #my-orders-table-wrap {
+        margin: 20px 35px 0px;
+    }
+
+    #my-orders-table {
+        width: 600px;
+        margin: 5px;
+        background: #FFF;
+    }
+
+    #my-orders-table tr th {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    #my-orders-table tr th,
+    #my-orders-table tr td {
+        padding: 10px;
+        vertical-align: middle;
+        text-align: center;
+        border-bottom: 1px solid #e6e6e6;
+        border-right: 1px solid #e6e6e6;
+    }
+
+    #my-orders-table tr th:last-child,
+    #my-orders-table tr td:last-child {
+        border-right: none;
+    }
+
+    #my-orders-table td a {
+        text-decoration: none;
+    }
+
+    #my-orders-table td a:hover {
+        text-decoration: underline;
+    }
+
+    #recent-orders-view-all {
+        float: right;
+        margin: 10px 20px;
+        background: #8a6499 url('../images/account-dashboard-recent-orders-view-all.png') center center no-repeat;
+        text-indent: -10000px;
+        width: 70px;
+        height: 30px;
+    }
