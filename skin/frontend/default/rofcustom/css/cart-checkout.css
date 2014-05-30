@@ -1277,11 +1277,38 @@ img, button, input {
 
     /* Account Edit Info Page
     *****************************************************/
-    .my-account .account-box.col-2 {
+    .my-account .edit-info .account-box.col-2 {
         float: right;
     }
 
-    .my-account .account-box.col-2.displaynone +
-    .account-box.col-1 {
-        width: 96% !important;
+    .my-account .edit-info .account-box.col-2 {
+        margin-right: 25px;
+        margin-left: 15px;
     }
+
+    .my-account .edit-info .account-box.col-2 +
+    .account-box.col-1 {
+        margin-right: 15px;
+        margin-left: 25px;
+    }
+
+    .my-account .edit-info .account-box.col-2.displaynone +
+    .account-box.col-1 {
+        width: 770px !important;
+        margin: 0 5px 0 15px;
+        min-height: 350px;
+    }
+
+    .my-account .edit-info .account-box.col-2,
+    .my-account .edit-info .account-box.col-2 +
+    .account-box.col-1 {
+        width: 360px !important;
+        min-height: 350px;
+    }
+
+    .my-account .edit-info .account-box.col-2 .account-box-inner,
+    .my-account .edit-info .account-box.col-2 +
+    .account-box.col-1 .account-box-inner {
+        min-height: 350px;
+    }
+
