@@ -41,7 +41,7 @@ BLOCKQUOTE {
 .std TABLE TR:nth-child(2n+1) TD, .postContent TABLE TR:nth-child(2n+1) TD {
 	background: none repeat scroll 0 0 #FFFFFF;
 }
-.std TABLE TR:nth-child(2n) TD,, .postContent TABLE TR:nth-child(2n) TD {
+.std TABLE TR:nth-child(2n) TD, .postContent TABLE TR:nth-child(2n) TD {
  background: none repeat scroll 0 0 #F4F5F6;
 }
 /* Form Elements */
@@ -563,7 +563,7 @@ p.required {
 	font-size:15px;
 	font-weight:600;
 	margin:0 0 6px;
- color:;
+    color: inherit;
 }
 /* Pager */
 .pager, .toolbar-bottom .toolbar {
@@ -996,7 +996,6 @@ tr.summary-details-excluded {
 	line-height: 1.333;
 	overflow: hidden;
 	text-align: center;
-	text-indent: inherit;
 	width: 100%;
 }
 .btn-edit {
@@ -3638,12 +3637,12 @@ html .bxslider2 li.item img:hover {
 	margin:0 0 8px;
 }
 .product-view .box-up-sell .products-grid {
-	border: 1px solid #D6D6D6CCC;
+	border: 1px solid #D6D6D6;
 	width: 100%;
 }
 .product-view .box-up-sell .products-grid td {
-	border-bottom: 1px solid #D6D6D6CCC;
-	border-right: 1px solid #D6D6D6CCC;
+	border-bottom: 1px solid #D6D6D6;
+	border-right: 1px solid #D6D6D6;
 	line-height: 1.6em;
 	padding: 15px 10px 12px;
 	width: 184px;
@@ -3653,7 +3652,7 @@ html .bxslider2 li.item img:hover {
 .product-view .box-up-sell .products-grid td.last {
 }
 .product-view .box-up-sell .products-grid td img {
-	border:1px solid #D6D6D6CCC;
+	border:1px solid #D6D6D6;
 }
 .product-view .box-up-sell .products-grid .product-image {
 	text-align:center;
@@ -3706,8 +3705,8 @@ html .bxslider2 li.item img:hover {
 	width: 299px;
 }
 .product-view .box-tags .form-add button.button span {
- border-color:;
- background:;
+ border-color: transparent;
+ background: none;
 }
 .product-view .box-tags .note {
 	margin:3px 0 0;
@@ -5779,7 +5778,7 @@ transform:rotate(-360deg);
 }
 .best-selling h3 {
 	margin:12px 0 6px 0;
- color:;
+    color: inherit;
 	font-size:1.2em;
 }
 .best-selling table {

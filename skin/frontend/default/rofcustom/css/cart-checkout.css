@@ -1067,12 +1067,15 @@ img, button, input {
         padding: 10px 0 0;
     }
 
+    .account-box .buttons-set,
     .my-account .buttons-set {
         clear: left;
         float: right;
         margin: 10px 20px;
     }
 
+    .account-box .back-link,
+    .account-box .account-sub-button,
     .my-account .back-link,
     .my-account .account-sub-button {
         margin: 0;
@@ -1081,12 +1084,19 @@ img, button, input {
         height: 30px;
     }
 
+    .account-box .back-link,
     .my-account .back-link {
         background: #8a6499 url('../images/account-buttons-back-link.png') center center no-repeat;
     }
 
+    .account-box .save-button,
     .my-account .save-button {
         background: #8a6499 url('../images/account-buttons-save-button.png') center center no-repeat;
+    }
+
+    .account-box .submit-button,
+    .my-account .submit-button {
+        background: #8a6499 url('../images/account-buttons-submit-button.png') center center no-repeat;
     }
 
     /* Login / Register Page Styles

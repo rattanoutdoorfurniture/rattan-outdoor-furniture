@@ -61,31 +61,32 @@
     <div id="account-box" class="twelve columns account-box offset-by-two by-margin">
         <div class="account-box-border"></div>
         <div class="account-box-inner">
-            <p class="ten columns offset-by-half"><?php echo $this->__('By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.') ?></p>
+            <p class="ten columns offset-by-half self-clear">
+                <?php echo $this->__('By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more. ') ?>
+                <a href="<?php echo $this->getForgotPasswordUrl() ?>" title="<?php echo $this->__("Forgot Password?"); ?>"><?php echo $this->__("Forgot Password?"); ?></a>
+            </p>
             <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form">
                 <?php echo $this->getBlockHtml('formkey'); ?>
-                <section id="checkout-box-step-1" class="checkout-box-step col2-set">
-                    <div id="checkout-box-login-guest" class="checkout-box-login-box col-1 new-users five columns">
-                        <div class="checkout-box-login-box-inner content">
-                            <h2 class="checkout-box-login-box-heading"><?php echo $this->__('Create Account') ?></h2>
-                            <input id="checkout-step1-input-guest" class="checkout-step1-input" name="login[email]" type="email" placeholder="Email">
-                            <div class="checkout-step1-spacer" id="checkout-step1-or"><?php echo $this->__("----------------- or -----------------"); ?></div>
-                            <button id="checkout-step1-facebook"><?php echo $this->__("Connect with Facebook"); ?></button>
-                            <button id="checkout-step1-next-step-guest" class="checkout-step1-next-step checkout-step-next-step button" title="<?php echo $this->__('Create an Account') ?>" onclick="window.location='<?php echo $accountUrl ?>';"><?php echo $this->__("Continue"); ?></button>
-                        </div>
+                <div id="checkout-box-login-guest" class="checkout-box-login-box col-1 new-users five columns">
+                    <div class="checkout-box-login-box-inner content">
+                        <h2 class="checkout-box-login-box-heading"><?php echo $this->__('Create Account') ?></h2>
+                        <input id="checkout-step1-input-guest" class="checkout-step1-input" name="login[email]" type="email" placeholder="Email">
+                        <div class="checkout-step1-spacer" id="checkout-step1-or"><?php echo $this->__("----------------- or -----------------"); ?></div>
+                        <button id="checkout-step1-facebook"><?php echo $this->__("Connect with Facebook"); ?></button>
+                        <button id="checkout-step1-next-step-guest" class="checkout-step1-next-step checkout-step-next-step button" title="<?php echo $this->__('Create an Account') ?>" onclick="window.location='<?php echo $accountUrl ?>';"><?php echo $this->__("Continue"); ?></button>
                     </div>
-                    <div id="checkout-box-login-account" class="checkout-box-login-box col-2 registered-users five columns">
-                        <div class="checkout-box-login-box-inner content">
-                            <h2 class="checkout-box-login-box-heading"><?php echo $this->__("Member Access"); ?></h2>
-                            <input id="email" class="checkout-step1-input input-text required-entry validate-email" value="<?php echo $this->htmlEscape($this->getUsername()) ?>" name="login[username]" type="email" placeholder="Email" title="<?php echo $this->__('Email Address') ?>" />
-                            <div class="checkout-step1-spacer" id="checkout-step1-account-spacer">&nbsp;</div>
-                            <input id="pass" class="checkout-step1-input input-text required-entry validate-password" name="login[password]" type="password" placeholder="Password" title="<?php echo $this->__('Password') ?>" />
-                            <?php echo $this->getChildHtml('persistent.remember.me'); ?>
-                            <button id="checkout-step1-next-step-account" class="checkout-step1-next-step checkout-step-next-step"><?php echo $this->__("Login"); ?></button>
-                        </div>
-                        <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
+                </div>
+                <div id="checkout-box-login-account" class="checkout-box-login-box col-2 registered-users five columns">
+                    <div class="checkout-box-login-box-inner content">
+                        <h2 class="checkout-box-login-box-heading"><?php echo $this->__("Member Access"); ?></h2>
+                        <input id="email" class="checkout-step1-input input-text required-entry validate-email" value="<?php echo $this->htmlEscape($this->getUsername()) ?>" name="login[username]" type="email" placeholder="Email" title="<?php echo $this->__('Email Address') ?>" />
+                        <div class="checkout-step1-spacer" id="checkout-step1-account-spacer">&nbsp;</div>
+                        <input id="pass" class="checkout-step1-input input-text required-entry validate-password" name="login[password]" type="password" placeholder="Password" title="<?php echo $this->__('Password') ?>" />
+                        <?php echo $this->getChildHtml('persistent.remember.me'); ?>
+                        <button id="checkout-step1-next-step-account" class="checkout-step1-next-step checkout-step-next-step"><?php echo $this->__("Login"); ?></button>
                     </div>
-                </section>
+                    <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
+                </div>
                 <?php if ($isContextCheckout): ?>
                     <input name="context" type="hidden" value="checkout" />
                 <?php endif; ?>
