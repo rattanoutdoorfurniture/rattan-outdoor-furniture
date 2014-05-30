@@ -11,9 +11,9 @@ Furniture web site project.
 ##Global TODO:##
 - Commit Message Protocol:
     - develop: Title on top line, description of tasks completed below, will be added to README, so try to be descriptive and to the point
-    - project-develop: Update Project YY-MM-DD:HHMM; State: DEVELOP_COMMIT_HASH_7_CHARS
+    - project-develop: Update Project YYYY-MM-DD:HHMM; State: DEVELOP_COMMIT_HASH_7_CHARS
     - database-backup: Backup Database YYYY-MM-DD:HHMM; State: DEVELOP_COMMIT_HASH_7_CHARS
-    - database-archive: Archive Database YY-MM-DD:HHMM; (of newly archived database)
+    - database-archive: Archive Database YYYY-MM-DD:HHMM; (of newly archived database)
 
 - MUST DO: A Magento DATABASE BACKUP BEFORE __EVERY__ COMMIT!
 - MUST DO: When you fix something COMMIT IT BEFORE DOING __ANYTHING__ ELSE!
@@ -24,8 +24,7 @@ Furniture web site project.
 
 - Abstract Product_View_Options_Type_Select logic from the Magento core. This should extend the core, which I could not get to work today.
 
-
-- Fix continue button on the Login/Register page in the Register section. (Currently submits the form, aka, tries to log you in.)
+- Fix issue where the forms (login and register) try to validate inputs on non-submit buttons. like back and continue on login/register.
 - Look into Facebook connect. The Connect-with-Facebook button on the login page doesn't do anything for now. This would be an excellent feature.
 - Global search functionality
 - Add functionality to footer newsletter form
@@ -37,12 +36,13 @@ Furniture web site project.
 - Reset secure URL for checkout when going live (this obviously fails on an unseccured, local connection.)
 - Add To Cart button on the category page. We'll have to decide how we're gonna handle the colors for this. I think it may be best to redirect them to the product page, with attention on the color.
 - Shipping Methods waiting for destination address before displaying options (which should not be dependant on this).
-- Accounts / Login / Automatic account creation for guest checkout (already generates a temporary password.)
 - Work on form validation in the checkout. This should not try to validate fields that the user has not yet tried to enter data into.
 - Each product will have 4 images, not 3. The main image should not be re-used in the thumbnail section. (Really weird when cycling through the photos to see the same one twice.)
 - Collections section. Like Products, but a top-level category that is called collections, and each collection is a sub-category of that, and all products of a collection (the site [skinny] viewable ones anyway). This does not have to be added to the main menu, but could be. It could also replace the "related" products on the category page (cause that's kind of what a category page is already), so have a "Collections" section below the lounger results, where it would list 4 collections, going to that collection page.
 
 
+- [DONE]     Fix continue button on the Login/Register page in the Register section. (Currently submits the form, aka, tries to log you in.)
+- [DONE]     Accounts / Login / Automatic account creation for guest checkout (already generates a temporary password.)
 - [DONE]     User must select a color option if available, or we need to make this default to the first color, but I would like to alert them that they need to choose.
 - [DONE]     Style Credit Card input section to mimic the layout on a credit card. (Worry about this when we settle on the payment processor.)
 - [DONE]     Update Item Quantity in cart. (Same section as clear cart. Don't waste time on this, as I have a feature development planned for this section.)
@@ -64,6 +64,7 @@ Furniture web site project.
 ##Change Log:##
 
 ###2014-05-30###
+- Finish Registration, Fix Login email issue. I styled the registration page. I skipped the reset password form for now, as i figure that won't be much of an issue. I'm going to do that next to get it out of the way. but the registration was a far large issue to me. But that's looking good now, and the value of the email address does pass from the login screen to the register (which magento did not really account for, so I wrote my own little processing of that, and it seems to work well.) I also did a little customizing where I made it so the signup for newsletter box is pre-checked, which i think is a good idea. Other than that. I updated the README todos with a couple fixes. I have a note to add there about the forms validating on non-submit buttons (small issue, but is just kind of weird.) I'll add that before this commit. But aside from that, just moving ahead on those smaller pages; as i said, i'll be fixing up the reset password form next. so I will commit after that.
 - Style Forgot Password Page. I added the styles for the Forgot Password request Page. I believe there is another related page, where you get re-directed from the email to reset your password. I think I will be going there next. This is actually going far more smoothly than I had thought. I am pretty much to the little misc pages that require a small amount of styling. (I believe, I'm sure there is one or 2 larger style requirement pages that I haven't gotten into yet, but most of this is looking pretty good.) I also made a couple small fixes in the login page. And added the "Forgot Password?" link to the blurb at the top. There wasn't a great place to put it in the actual login box, but I think it looks fine there. I do need to make a note that the continue button for the register section of the login page logs you in (when it should just re-direct you to the registration form.) Oh, the registration form is a page I have yet to style. I knew there were a couple bigger ones. That's one of them. I think there's a second or third bigger one that I'm not thinking of right now, but I'm mostly going through this by actual links on the site, so i'll find them when i land on an unstyled page. I figure this is the best method, because the most important pages to style are the ones we currently have links to on the site. (that just seems to make sense.) So I'll look into the password reset page, and then the registration page. I will do a commit after the password reset is done, but I don't expect this to be too much trouble. Then I will begin on the registration page. Oh, also, I quickly took care of the logout page. this page simply shows you a little message that you've been logged out and then re-directs to the home page after 5 seconds. super simple, but required none-the-less. And I also fixed some errors in the "global.css" page, which sets some defaults and such, but I was getting error messages about it, and that's never a good thing, so i took care of that too.
 - Complete Edit Address page. I added styles to the Edit Address page. This page is pretty basic, so I tried to keep with that. just adding the shared styles to make it theme'd and move on. I also added the "My Account" link in the header for all logged-in pages. I found a link back to the dashboard to be missing, or a couple times i would have liked to click on it. There is a back button at the bottom of the page, but that's state-relevant. like, goes back to addresses page from the edit page. this was something i took out before due to the fact that it showed when logged out, and was just unnecessary.
 - Style Address Book Page I've finished styling the address book page. This is quite similar to the part on the dashboard, but just a little more involved. (which is pretty much what the rest of these internal pages will be.) I've added some additional addresses to see how this part of the page looks. This will also help testing in the future. and we need to look at how saved addresses function in the checkout. Next, I would like to sync to the server (which i made quite a bit easier yesterday). so that shouldn't take long. Next will be the edit address page. There you can update the values that show up on the address book page. This is why this is so tedious, there are a lot of little pages that need styling. But that's next, and moving right ahead. I actually may sync the server next time, I'm not sure which order is going to work out best.

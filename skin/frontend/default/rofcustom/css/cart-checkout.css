@@ -1038,15 +1038,14 @@ img, button, input {
         margin: 0 10px !important;
         height: 100%;
     }
-
-    .my-account .twelve .account-box.col-1,
-    .my-account .twelve .account-box.col-2 {
+    .account-box.twelve .account-box.col-1,
+    .account-box.twelve .account-box.col-2 {
         width: 320px;
         float: left;
     }
 
-    .my-account .fourteen .account-box.col-1,
-    .my-account .fourteen .account-box.col-2 {
+    .account-box.fourteen .account-box.col-1,
+    .account-box.fourteen .account-box.col-2 {
         width: 380px;
         float: left;
         margin-bottom: 20px;
@@ -1359,6 +1358,15 @@ img, button, input {
     .account-box.box-edit-address
     .account-box.column .account-box-inner {
         min-height: 520px;
+    }
+
+    /* Account Registration Page Styles
+    ****************************************************************************/
+    .account-box.box-create-account
+    .account-box.column,
+    .account-box.box-create-account
+    .account-box.column .account-box-inner {
+        min-height: 320px;
     }
 
 

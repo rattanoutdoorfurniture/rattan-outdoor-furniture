@@ -73,7 +73,7 @@
                         <input id="checkout-step1-input-guest" class="checkout-step1-input" name="login[email]" type="email" placeholder="Email">
                         <div class="checkout-step1-spacer" id="checkout-step1-or"><?php echo $this->__("----------------- or -----------------"); ?></div>
                         <button id="checkout-step1-facebook"><?php echo $this->__("Connect with Facebook"); ?></button>
-                        <button id="checkout-step1-next-step-guest" class="checkout-step1-next-step checkout-step-next-step button" title="<?php echo $this->__('Create an Account') ?>" onclick="window.location='<?php echo $accountUrl ?>';"><?php echo $this->__("Continue"); ?></button>
+                        <button id="checkout-step1-next-step-guest" class="checkout-step1-next-step checkout-step-next-step button" title="<?php echo $this->__('Create an Account') ?>" onclick="guest_email=jQuery('#checkout-step1-input-guest').val();window.location=((!guest_email.length)?'<?php echo $accountUrl ?>':'<?php echo $accountUrl ?>email/'+encodeURIComponent(guest_email));return false;"><?php echo $this->__("Continue"); ?></button>
                     </div>
                 </div>
                 <div id="checkout-box-login-account" class="checkout-box-login-box col-2 registered-users five columns">
