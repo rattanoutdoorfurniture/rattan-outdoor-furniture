@@ -1039,10 +1039,17 @@ img, button, input {
         height: 100%;
     }
 
-    .account-box.col-1,
-    .account-box.col-2 {
+    .my-account .twelve .account-box.col-1,
+    .my-account .twelve .account-box.col-2 {
         width: 320px;
         float: left;
+    }
+
+    .my-account .fourteen .account-box.col-1,
+    .my-account .fourteen .account-box.col-2 {
+        width: 380px;
+        float: left;
+        margin-bottom: 20px;
     }
 
     .account-box.col-1 {
@@ -1066,6 +1073,7 @@ img, button, input {
         margin: 10px 20px;
     }
 
+    .my-account .back-link,
     .my-account .account-sub-button {
         margin: 0;
         text-indent: -10000px;
@@ -1144,7 +1152,8 @@ img, button, input {
     }
 
     /*.my-account .dashboard*/
-    .account-box .box-title > *:first-child + a {
+    .account-box .box-title > *:first-child + a,
+    .account-box .box-title > *:first-child + a + a {
         float: right;
         color: #888;
         font-size: 16px;
@@ -1159,7 +1168,8 @@ img, button, input {
     }
 
     /*.my-account .dashboard*/
-    .account-box .box-title > *:first-child + a:hover {
+    .account-box .box-title > *:first-child + a:hover,
+    .account-box .box-title > *:first-child + a + a:hover {
         text-decoration: underline;
     }
 
@@ -1171,6 +1181,7 @@ img, button, input {
         text-indent: -10000px;
         width: 70px;
         height: 30px;
+        clear: both;
     }
 
         /* Account Dashboard Recent Orders Section
@@ -1310,5 +1321,10 @@ img, button, input {
     .my-account .edit-info .account-box.col-2 +
     .account-box.col-1 .account-box-inner {
         min-height: 350px;
+    }
+
+    #account-addresses-add-address {
+        width: 140px;
+        background-image: url('../images/account-buttons-add-address-button.png');
     }
 
