@@ -356,6 +356,16 @@ img, button, input {
         float: left;
     }
 
+    .checkout-box-login-box.col-1 {
+        margin-left: 30px;
+        margin-right: 15px
+    }
+
+    .checkout-box-login-box.col-2 {
+        margin-left: 15px;
+        margin-right: 30px;
+    }
+
     .checkout-box-login-box-inner {
         background: #FFF;
         padding: 20px 10px 10px;
@@ -780,6 +790,7 @@ img, button, input {
         .opc-wrapper-opc #co-payment-form {
             padding-top: 20px;
             margin-bottom: 0px;
+            display: block;
         }
 
         .opc-wrapper-opc #co-payment-form fieldset {
@@ -1019,11 +1030,25 @@ img, button, input {
 /* Account Pages Styles ***************************************************************************************
 **************************************************************************************************************/
 
-    .account-box.col-1,
-    .account-box.col-2 {
+    .account-box.no-border {
+        padding: 10px 0 !important;
+    }
+
+    .account-box.no-border .account-box-inner {
+        margin: 0 10px !important;
+        height: 100%;
+    }
+    .account-box.twelve .account-box.col-1,
+    .account-box.twelve .account-box.col-2 {
         width: 320px;
-        margin: 10px 10px;
         float: left;
+    }
+
+    .account-box.fourteen .account-box.col-1,
+    .account-box.fourteen .account-box.col-2 {
+        width: 380px;
+        float: left;
+        margin-bottom: 20px;
     }
 
     .account-box.col-1 {
@@ -1037,11 +1062,40 @@ img, button, input {
     }
 
     .account-box-inner .col2-set {
-        float: left;
+        position: relative;
+        padding: 10px 0 0;
     }
 
-    .account-box-inner .col2-set .account-box {
-        height: 100%;
+    .account-box .buttons-set,
+    .my-account .buttons-set {
+        clear: left;
+        float: right;
+        margin: 10px 20px;
+    }
+
+    .account-box .back-link,
+    .account-box .account-sub-button,
+    .my-account .back-link,
+    .my-account .account-sub-button {
+        margin: 0;
+        text-indent: -10000px;
+        width: 70px;
+        height: 30px;
+    }
+
+    .account-box .back-link,
+    .my-account .back-link {
+        background: #8a6499 url('../images/account-buttons-back-link.png') center center no-repeat;
+    }
+
+    .account-box .save-button,
+    .my-account .save-button {
+        background: #8a6499 url('../images/account-buttons-save-button.png') center center no-repeat;
+    }
+
+    .account-box .submit-button,
+    .my-account .submit-button {
+        background: #8a6499 url('../images/account-buttons-submit-button.png') center center no-repeat;
     }
 
     /* Login / Register Page Styles
@@ -1074,64 +1128,245 @@ img, button, input {
    *****************************************************************/
 
     .box-head {
+        position: relative;
         border-bottom: 1px solid #e6e6e6;
         margin: 10px;
         padding-left: 20px;
     }
 
-    .box-head h2 {
+    .box-head > * {
         color: #444;
         font-family: "Tahoma";
         font-size: 22px;
         line-height: 22px;
     }
 
+    .box-head > * + .required {
+        position: absolute;
+        top: 3px;
+        right: 20px;
+        font: normal 14px/22px "Tahoma";
+        color: #888;
+        letter-spacing: 0.0125em;
+        font-variant: small-caps;
+        text-transform: lowercase;
+    }
+
     .box-blurb {
         padding: 10px;
     }
 
-    #my-orders-table-wrap {
-        margin: 20px 35px 0px;
-    }
-
-    #my-orders-table {
-        width: 600px;
-        margin: 5px;
-        background: #FFF;
-    }
-
-    #my-orders-table tr th {
-        font-weight: bold;
-        margin: 0;
-    }
-
-    #my-orders-table tr th,
-    #my-orders-table tr td {
-        padding: 10px;
-        vertical-align: middle;
-        text-align: center;
+    /*.my-account .dashboard*/
+    .account-box .box-title {
         border-bottom: 1px solid #e6e6e6;
-        border-right: 1px solid #e6e6e6;
+        margin: 10px;
+        padding-left: 20px;
     }
 
-    #my-orders-table tr th:last-child,
-    #my-orders-table tr td:last-child {
-        border-right: none;
+    /*.my-account .dashboard */
+    .account-box .box-title > *:first-child {
+        color: #444;
+        font-family: "Tahoma";
+        font-size: 18px;
+        line-height: 18px;
+        display: inline-block;
     }
 
-    #my-orders-table td a {
+    /*.my-account .dashboard*/
+    .account-box .box-title > *:first-child + a,
+    .account-box .box-title > *:first-child + a + a {
+        float: right;
+        color: #888;
+        font-size: 16px;
+        line-height: 18px;
+        font-family: 'Tahoma-Light';
+        /*text-transform: lowercase;*/
+        font-variant: small-caps;
+        vertical-align: middle;
         text-decoration: none;
+        margin-right: 10px;
+        letter-spacing: 0.0125em;
     }
 
-    #my-orders-table td a:hover {
+    /*.my-account .dashboard*/
+    .account-box .box-title > *:first-child + a:hover,
+    .account-box .box-title > *:first-child + a + a:hover {
         text-decoration: underline;
     }
 
-    #recent-orders-view-all {
+    /*.my-account .dashboard*/
+    .account-box .account-box-button {
         float: right;
         margin: 10px 20px;
-        background: #8a6499 url('../images/account-dashboard-recent-orders-view-all.png') center center no-repeat;
+        background: #8a6499 none center center no-repeat;
         text-indent: -10000px;
         width: 70px;
         height: 30px;
+        clear: both;
     }
+
+        /* Account Dashboard Recent Orders Section
+        *********************************************************/
+
+        #my-orders-table-wrap {
+            margin: 20px 35px 0px;
+        }
+
+        #my-orders-table {
+            width: 600px;
+            margin: 5px;
+            background: #FFF;
+        }
+
+        #my-orders-table tr th {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        #my-orders-table tr th,
+        #my-orders-table tr td {
+            padding: 10px;
+            vertical-align: middle;
+            text-align: center;
+            border-bottom: 1px solid #e6e6e6;
+            border-right: 1px solid #e6e6e6;
+        }
+
+        #my-orders-table tr th:last-child,
+        #my-orders-table tr td:last-child {
+            border-right: none;
+        }
+
+        #my-orders-table td a {
+            text-decoration: none;
+        }
+
+        #my-orders-table td a:hover {
+            text-decoration: underline;
+        }
+
+        #recent-orders-view-all {
+            background-image: url('../images/account-dashboard-recent-orders-view-all.png');
+            width: 70px;
+            margin-right: 40px;
+        }
+
+        /* Dashboard Account Information Section
+        *******************************************************************/
+        .my-account .dashboard .account-box.box-info
+            .account-box.column,
+        .my-account .dashboard .account-box.box-info
+            .account-box.column .account-box-inner {
+            min-height: 130px;
+        }
+
+        #account-info-edit-password {
+            width: 140px;
+            background-image: url('../images/account-dashboard-button-edit-password.png');
+        }
+
+        /* Dashboard Account Addresses Section
+        *********************************************************************/
+        .my-account .dashboard .account-box.box-address
+        .account-box.column,
+        .my-account .dashboard .account-box.box-address
+        .account-box.column .account-box-inner {
+            min-height: 235px;
+        }
+
+        #account-info-edit-addresses {
+            width: 140px;
+            background-image: url('../images/account-dashboard-button-edit-addresses.png');
+        }
+
+    /* Account Order History Page
+    ***************************************************************************************/
+    .orders-history #my-orders-table {
+        width: 870px;
+        margin: 0;
+    }
+
+    .orders-history .pager {
+        margin-right: 10px;
+    }
+
+    .orders-history .pager:before,
+    .orders-history .pager:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; width: 0; overflow: hidden; }
+
+    .orders-history .pager * {
+        display: inline-block;
+        margin: 0;
+    }
+
+    .orders-history .pager > *{
+        float: right;
+        margin-right: 10px;
+    }
+
+    .orders-history .pager select {
+        width: auto;
+    }
+
+    /* Account Edit Info Page
+    *****************************************************/
+    .my-account .edit-info .account-box.col-2 {
+        float: right;
+    }
+
+    .my-account .edit-info .account-box.col-2 {
+        margin-right: 25px;
+        margin-left: 15px;
+    }
+
+    .my-account .edit-info .account-box.col-2 +
+    .account-box.col-1 {
+        margin-right: 15px;
+        margin-left: 25px;
+    }
+
+    .my-account .edit-info .account-box.col-2.displaynone +
+    .account-box.col-1 {
+        width: 770px !important;
+        margin: 0 5px 0 15px;
+        min-height: 350px;
+    }
+
+    .my-account .edit-info .account-box.col-2,
+    .my-account .edit-info .account-box.col-2 +
+    .account-box.col-1 {
+        width: 360px !important;
+        min-height: 350px;
+    }
+
+    .my-account .edit-info .account-box.col-2 .account-box-inner,
+    .my-account .edit-info .account-box.col-2 +
+    .account-box.col-1 .account-box-inner {
+        min-height: 350px;
+    }
+
+    /* Account Address Book Page Styles
+    ***************************************************************************/
+    #account-addresses-add-address {
+        width: 140px;
+        background-image: url('../images/account-buttons-add-address-button.png');
+    }
+
+    /* Account Edit Address Page Styles
+    ****************************************************************************/
+    .account-box.box-edit-address
+    .account-box.column,
+    .account-box.box-edit-address
+    .account-box.column .account-box-inner {
+        min-height: 520px;
+    }
+
+    /* Account Registration Page Styles
+    ****************************************************************************/
+    .account-box.box-create-account
+    .account-box.column,
+    .account-box.box-create-account
+    .account-box.column .account-box-inner {
+        min-height: 320px;
+    }
+
+

@@ -78,7 +78,7 @@
         <p><?php echo $this->__('You have placed no orders.'); ?></p>
         <?php endif; ?>
         <?php if( sizeof($_orders->getItems()) > 0 ): ?>
-        <button id="recent-orders-view-all" class="button" title="<?php echo $this->__('View All') ?>" onclick="window.location='<?php echo $this->getUrl('sales/order/history') ?>';"><?php echo $this->__("View All"); ?></button>
+        <button id="recent-orders-view-all" class="account-box-button button" title="<?php echo $this->__('View All') ?>" onclick="window.location='<?php echo $this->getUrl('sales/order/history') ?>';"><?php echo $this->__("View All"); ?></button>
         <?php endif; ?>
     </div>
     <div class="account-box-border"></div>

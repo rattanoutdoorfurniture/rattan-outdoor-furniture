@@ -24,29 +24,37 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div class="account-box twelve columns offset-by-two by-margin add-bottom">
+<div class="account-box box-addresses twelve columns offset-by-two by-margin add-bottom">
     <div class="account-box-border"></div>
     <div class="account-box-inner">
         <div class="box-head">
             <h2><?php echo $this->__('Address Book') ?></h2>
         </div>
-        <div class="box-content">
-            <div class="col-1">
-                <h4><?php echo $this->__('Default Billing Address') ?></h4>
-                <address>
-                    <?php echo $this->getPrimaryBillingAddressHtml() ?><br />
-                    <a href="<?php echo $this->getPrimaryBillingAddressEditUrl() ?>"><?php echo $this->__('Edit Address') ?></a>
-                </address>
+        <div class="col2-set">
+            <div class="account-box column col-1 no-border">
+                <div class="account-box-inner">
+                    <div class="box-title">
+                        <h3><?php echo $this->__('Default Billing Address') ?></h3>
+                        <a href="<?php echo $this->getPrimaryBillingAddressEditUrl() ?>"><?php echo $this->__('Edit') ?></a>
+                    </div>
+                    <address class="box-blurb">
+                        <?php echo $this->getPrimaryBillingAddressHtml() ?>
+                    </address>
+                </div>
             </div>
-            <div class="col-2">
-                <h4><?php echo $this->__('Default Shipping Address') ?></h4>
-                <address>
-                    <?php echo $this->getPrimaryShippingAddressHtml() ?><br />
-                    <a href="<?php echo $this->getPrimaryShippingAddressEditUrl() ?>"><?php echo $this->__('Edit Address') ?></a>
-                </address>
+            <div class="account-box column col-2 no-border">
+                <div class="account-box-inner">
+                    <div class="box-title">
+                        <h3><?php echo $this->__('Default Shipping Address') ?></h3>
+                        <a href="<?php echo $this->getPrimaryShippingAddressEditUrl() ?>"><?php echo $this->__('Edit') ?></a>
+                    </div>
+                    <address class="box-blurb">
+                        <?php echo $this->getPrimaryShippingAddressHtml() ?>
+                    </address>
+                </div>
             </div>
         </div>
-        <a href="<?php echo $this->getAddressBookUrl() ?>"><?php echo $this->__('Manage Addresses') ?></a>
+        <button id="account-info-edit-addresses" class="account-box-button button" title="<?php echo $this->__('Manage Addresses') ?>" onclick="window.location='<?php echo $this->getAddressBookUrl() ?>';"><?php echo $this->__("Manage Addresses"); ?></button>
     </div>
     <div class="account-box-border"></div>
 </div>
