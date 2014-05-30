@@ -1119,6 +1119,7 @@ img, button, input {
    *****************************************************************/
 
     .box-head {
+        position: relative;
         border-bottom: 1px solid #e6e6e6;
         margin: 10px;
         padding-left: 20px;
@@ -1129,6 +1130,17 @@ img, button, input {
         font-family: "Tahoma";
         font-size: 22px;
         line-height: 22px;
+    }
+
+    .box-head > * + .required {
+        position: absolute;
+        top: 3px;
+        right: 20px;
+        font: normal 14px/22px "Tahoma";
+        color: #888;
+        letter-spacing: 0.0125em;
+        font-variant: small-caps;
+        text-transform: lowercase;
     }
 
     .box-blurb {
@@ -1323,8 +1335,20 @@ img, button, input {
         min-height: 350px;
     }
 
+    /* Account Address Book Page Styles
+    ***************************************************************************/
     #account-addresses-add-address {
         width: 140px;
         background-image: url('../images/account-buttons-add-address-button.png');
     }
+
+    /* Account Edit Address Page Styles
+    ****************************************************************************/
+    .account-box.box-edit-address
+    .account-box.column,
+    .account-box.box-edit-address
+    .account-box.column .account-box-inner {
+        min-height: 520px;
+    }
+
 
