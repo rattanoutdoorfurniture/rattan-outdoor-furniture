@@ -49,10 +49,15 @@ class Mage_Core_Controller_Response_Http extends Zend_Controller_Response_Http
     public function sendHeaders()
     {
         if (!$this->canSendHeaders()) {
+            try {
+                require_once(Mage::getBaseDir('lib').DIRECTORY_SEPARATOR."Dumper.php");
+            } catch(Exception $ex) {
+                Mage::log("Failed on the Mage::getBaseDir method");
+            }
             Mage::log(
                 'HEADERS ALREADY SENT: ' . PHP_EOL .
                 'RequestPath: ' . $_SERVER['PHP_SELF'] . PHP_EOL .
-                var_export(headers_list(), true) . PHP_EOL .
+                dumper::dump(headers_list(), true) . PHP_EOL .
                 mageDebugBacktrace(true, true, true)
             );
             return $this;
