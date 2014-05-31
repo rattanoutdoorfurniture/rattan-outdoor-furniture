@@ -1369,4 +1369,10 @@ img, button, input {
         min-height: 320px;
     }
 
-
+    /* Order Success Confirmation page
+    ***************************************************************************/
+    #order-success-button {
+        width: 130px;
+        height: 40px;
+        background-image: url('../images/cart-continue-btn.png');
+    }
