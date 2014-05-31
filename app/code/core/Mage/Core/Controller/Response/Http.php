@@ -49,7 +49,12 @@ class Mage_Core_Controller_Response_Http extends Zend_Controller_Response_Http
     public function sendHeaders()
     {
         if (!$this->canSendHeaders()) {
-            Mage::log('HEADERS ALREADY SENT: '.mageDebugBacktrace(true, true, true));
+            Mage::log(
+                'HEADERS ALREADY SENT: ' . PHP_EOL .
+                'RequestPath: ' . $_SERVER['PHP_SELF'] . PHP_EOL .
+                var_export(headers_list(), true) . PHP_EOL .
+                mageDebugBacktrace(true, true, true)
+            );
             return $this;
         }
 
