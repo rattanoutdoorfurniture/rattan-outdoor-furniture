@@ -909,8 +909,8 @@ img, button, input {
         }
 
 
-/* One Page Checkout Review Section
-******************************************************/
+        /* One Page Checkout Review Section
+        ******************************************************/
         .opc-wrapper-opc #checkout-review-table .a-right,
         .opc-wrapper-opc #checkout-review-table .a-center,
         .opc-wrapper-opc #checkout-review-table .a-left {
@@ -958,6 +958,11 @@ img, button, input {
             margin-right: 10px;
             margin-left: 10px;
             padding-top: 10px;
+        }
+
+        .opc-wrapper-opc .review-after #iframe-warning {
+            height: 0px !important;
+            text-indent: -10000px;
         }
 
             /* Product Color Swatch Values (For Use as Border Color around Product Image) **************
