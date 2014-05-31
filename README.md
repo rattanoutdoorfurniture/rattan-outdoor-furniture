@@ -25,6 +25,7 @@ Furniture web site project.
 
 - Abstract Product_View_Options_Type_Select logic from the Magento core. This should extend the core, which I could not get to work today.
 
+- Setup email sending from scripts on the server (for password reset, account confirm, and a whole bunch of other stuff).
 - Fix issue where the forms (login and register) try to validate inputs on non-submit buttons. like back and continue on login/register.
 - Look into Facebook connect. The Connect-with-Facebook button on the login page doesn't do anything for now. This would be an excellent feature.
 - Global search functionality
@@ -65,6 +66,8 @@ Furniture web site project.
 ##Change Log:##
 
 ###2014-05-31###
+- I am going to make a little final note here, I am going to try that new (ish) method of the database backup. this should aleviate any potential issues like the one I had this morning. This may take me a little bit as I'm still getting this method down, but I know what I have to do, so I'm allotting myself 15 minutes to get it situated. I'll also do the reset of my standard syncing, but i just wanted to note here that i'm using the new syncing method on the database backup (so it's logged, and i can go back to here if i break it.)
+- Complete Reset Password Page. Small fix. I ended up just editing the logic (temporarily) in the reset password page so that it did not require the reset token, just so i could see the page without actually resetting my password. This requires the email to send, which, as mentioned previously, is not currently set up. I was going to do that earlier, but I ran into that PayPal issue. I will add a note in the TODO section of the README to setup the email sending on the server. I'll have to take care of this at a later point. For now, I got the reset password page to load locally, I took out the old code, and the styles look good. so, quick fix, reset the logic to the required state to get the password reset token (which is the unique code that makes it so they don't have to login to reset thier password, but relies on the email.) So everything is back in place, and it should be good to go.
 - Update the README to test Larry's Account I just made a little note in the README so I could do a commit real quick. I just set Larry up with an account on bitbucket, and have him following the repo. We set up some stuff with google, and set up his phone, linked the account. I just wanted to test the email notifications for BitBucket so Larry can track code progress while he's in China.
 - Set up Larry with a BitBucket account. (And some other stuff, accounts, hook up his phone).
 - Make a few fixes after testing on server I made just a few fixes, there was the right column showing, which i kind of like, but we have no forethought into that, so i'm just removing it for now. also, i had previously updated the wrong file. I need to remove extraneous files that are not in use, because (especially in the checkout and account section) there are a lot of duplicates due to the odd routing, and me just covering all my bases. But now it's getting annoying, not a huge deal, but it would just be nice to clean up.
