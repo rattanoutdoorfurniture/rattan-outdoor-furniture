@@ -1,0 +1,1398 @@
+/*********************************\
+|* Cart and Checkout Page Styles *|
+\*********************************/
+
+/* Page Heading
+*************************************************************************/
+
+#cart-heading {
+    border-bottom: 1px solid #e6e6e6;
+    color: #895c9a;
+    font-family: "Tahoma";
+    text-transform: uppercase;
+    margin: 10px 0px 20px;
+    font-size: 22px;
+    line-height: 22px;
+    padding-bottom: 10px;
+}
+
+img, button, input {
+    outline: 0 none;
+}
+
+/* Cart Box class styles (boxes for cart content are styled similarly)
+*************************************************************************/
+.account-box,
+.cart-box {
+    min-height: 40px;
+    position: relative;
+    background: transparent url('../images/hash-border.png') 0 0 repeat;
+    height: auto;
+}
+
+.account-box-border,
+.cart-box-border {
+    width: 100%;
+    height: 10px !important;
+    display: block;
+}
+
+.account-box .account-box-inner,
+.cart-box  .cart-box-inner {
+    background:#FFF;
+    display: block;
+    margin: auto 10px;
+}
+
+.account-box .account-box-inner:before,
+.account-box .account-box-inner:after,
+.cart-box .cart-box-inner:before,
+.cart-box .cart-box-inner:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; width: 0; overflow: hidden; }
+
+.cart-btn-wrap {
+    text-align: center;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Left Column
+******************************************************************/
+
+    /* Cart Row
+    **********************************************************/
+
+    #cart-cartbox-table {
+        width: 100%;
+    }
+
+    #cart-cartbox.hide-items #cart-cartbox-table {
+        display: none;
+    }
+
+    #cart-cartbox.hide-items ~ #cart-btns {
+        margin-top: -60px;
+
+    }
+
+    /*#cart-cartbox-table*/
+    .button.btn-update {
+        text-indent: -10000px;
+        width: 90px;
+        height: 30px;
+        background: #8a6399 url('../images/cart-cartbox-table-update-btn.png') center center no-repeat;
+        position: absolute;
+        bottom: -60px;
+        right: 10px;
+    }
+
+    #cart-cartbox-table-header {
+        background-color: #ebebeb;
+    }
+
+    .cart-cartbox-table-header-label {
+        padding: 10px 0 15px;
+        font: normal 14px/14px "Tahoma";
+        color: #8a6399;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    #cart-cartbox-table-header th:nth-child(1) {
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    #cart-cartbox-table-edit {
+        padding: 0 !important;
+        width: 20px !important;
+    }
+
+    #cart-cartbox-table-edit-btn {
+        display: inline-block;
+    }
+
+    #cart-cartbox-table-edit-btn-img {
+        height: 20px;
+        width: auto;
+        margin-bottom: -5px;
+        margin-right: -5px;
+    }
+
+    .cart-cartbox-table-product {
+        border-bottom: 1px solid #e6e6e6;
+        padding: 0 20px;
+    }
+
+    .cart-cartbox-table-product td {
+        text-align:center;
+        /*border: 1px solid black;*/
+        vertical-align: middle;
+        margin-top: -20px;
+        padding: 10px 0 10px;/* 20px;*/
+    }
+
+    .cart-cartbox-table-product td:first-child {
+        padding-left: 20px;
+    }
+
+    .cart-cartbox-table-product td:last-child {
+        padding: 0 10px 0 0;
+    }
+
+    .cart-cartbox-table-product-qty-edit {
+        margin-top: -14px;
+    }
+
+    .cart-cartbox-table-product-qty-edit div {
+        color: #AAA;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .cart-cartbox-table-product .btn-remove {
+        display: inline-block;
+        text-indent: -10000px;
+        width: 12px;
+        height: 16px;
+        background: transparent url('../images/cart-cartbox-table-remove-icon.png') center center no-repeat;
+    }
+
+    .cart-cartbox-table-product-detail {
+        padding: 10px 20px 10px 0px !important;
+    }
+
+    .cart-cartbox-table-product-detail td {
+        vertical-align: middle;
+    }
+
+    .cart-cartbox-table-product-detail-img-wrap {
+        width: 80px;
+        float: left;
+        margin: 10px;
+        border: 1px solid #e6e6e6;
+        padding: 0 10px 0 0;
+    }
+
+    .cart-cartbox-table-product-detail-img {
+        width: 100%;
+        height: auto;
+        margin: 7px 5px 2px;
+        text-decoration: none;
+    }
+
+    .cart-cartbox-table-product-detail-title,
+    .cart-cartbox-table-product-detail-title > a {
+        font: normal 14px/14px "Tahoma";
+        color: #8a6399;
+        display: block;
+        text-align: left;
+        margin: 20px 0 5px;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .cart-cartbox-table-product-detail-item,
+    .cart-cartbox-table-product-detail-model,
+    .cart-cartbox-table-product-detail-color {
+        font: normal 12px/12px "Tahoma";
+        color: #555;
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+        white-space: nowrap;
+    }
+
+    .cart-cartbox-table-product-qty {
+        text-align: center;
+        width: 60px;
+    }
+
+    .cart-cartbox-table-product-qty input {
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        border-collapse: collapse;
+        border: 2px inset transparent;
+        color: rgb(0, 0, 0);
+    }
+
+    .cart-cartbox-table-product-qty input:focus {
+        border: 2px inset rgb(238, 238, 238);
+    }
+
+    #cart-cartbox-toggle {
+        display: none;
+    }
+
+    #cart-cartbox.hide-items #cart-cartbox-toggle,
+    #cart-cartbox.collapse #cart-cartbox-toggle {
+        display: block;
+        height: 20px;
+        padding: 10px 20px;
+        color: #8a6399;
+        font: normal 16px/16px "Tahoma";
+        text-align: left;
+        background: #ededed;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    #cart-cartbox.hide-items #cart-cartbox-toggle-btn,
+    #cart-cartbox.collapse #cart-cartbox-toggle-btn {
+        float: right;
+        width: 20px;
+        height: 10px;
+        height: 100%;
+        margin: 0 5px;
+        text-indent: -10000px;
+        background: transparent url('../images/cart-cartbox-toggle.png') center center no-repeat;
+    }
+
+    /*#cart-cartbox-table-edit-row {*/
+
+    /*}*/
+
+    /*#cart-cartbox-table-edit {*/
+        /*text-align: right;*/
+    /*}*/
+
+    /*#cart-cartbox-table-edit-btn {*/
+        /*background: #ebebeb url('../images/cart-cartbox-table-edit-btn.png') center center no-repeat;*/
+        /*margin: 10px;*/
+        /*text-indent: -10000px;*/
+        /*width: 80px;*/
+        /*height: 25px;*/
+        /*background-size: 80px 25px;*/
+    /*}*/
+
+    /* Checkout Row
+    **********************************************************/
+
+    #checkout-box {
+        margin: 20px 10px;
+    }
+
+    #checkout-box-progress {
+        width: 540px;
+        padding: 20px 0px 10px;
+        margin: auto 10px 10px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    #checkout-box-progress-inner {
+        width: 540px;
+        height: 74px;
+        background: #FFF url('../images/checkout-steps-progress.png') 0px 0px no-repeat;
+    }
+
+    #checkout-box.step1 #checkout-box-progress-inner { background-position: 0px 0px; }
+    #checkout-box.step2 #checkout-box-progress-inner { background-position: 0px -75px; }
+    #checkout-box.step3 #checkout-box-progress-inner { background-position: 0px -150px; }
+
+    .checkout-box-progress-step {
+        display: inline-block;
+        width: 177px;
+        height: 100%;
+    }
+
+    #login-form,
+    #checkout-box-form {
+        margin: 0;
+        padding: 10px 0 20px;
+    }
+
+    .checkout-box-step {
+        padding: 0 20px;
+    }
+
+    .checkout-box-step:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
+
+
+    #checkout-box.step1 .checkout-box-step,
+    #checkout-box.step2 .checkout-box-step,
+    #checkout-box.step3 .checkout-box-step,
+    #checkout-box.step4 .checkout-box-step {
+        display: none;
+    }
+
+    #checkout-box.step1 #checkout-box-step-1,
+    #checkout-box.step2 #checkout-box-step-2,
+    #checkout-box.step3 #checkout-box-step-3,
+    #checkout-box.step4 #checkout-box-step-4 {
+        display: block;
+    }
+
+    .checkout-item-100,
+    .checkout-item-100 > input {
+        width: 510px !important;
+    }
+
+    .checkout-item-50 {
+        width: 250px;
+        margin: 0 10px 0 0;
+        float: left;
+    }
+
+    .checkout-item-50 + .checkout-item-50 {
+        margin: 0 0 0 10px;
+        clear: right;
+    }
+
+    .checkout-item-50 > input,
+    .checkout-item-50 > select {
+        width: 240px !important;
+    }
+
+    /* Checkout Step 1 - Login - Account / Guest - Continue
+    *******************************************************************************/
+
+    .checkout-box-login-box {
+        width: 240px;
+        background: transparent url('../images/hash-border.png') 0 0 repeat;
+        margin: 0 5px 10px;
+        padding: 5px;
+        float: left;
+    }
+
+    .checkout-box-login-box.col-1 {
+        margin-left: 30px;
+        margin-right: 15px
+    }
+
+    .checkout-box-login-box.col-2 {
+        margin-left: 15px;
+        margin-right: 30px;
+    }
+
+    .checkout-box-login-box-inner {
+        background: #FFF;
+        padding: 20px 10px 10px;
+    }
+
+    .checkout-box-login-box-inner:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    .checkout-box-login-box-heading {
+        color: #8a6399;
+        font: normal 16px/16px "Tahoma";
+        text-transform: uppercase;
+        padding: 0 0 10px 5px;
+        border-bottom: 1px solid #e6e6e6;
+        margin-bottom: 15px;
+    }
+
+    .checkout-step1-input {
+        margin-bottom: 5px !important;
+        padding: 6px 9px !important;
+        height: 26px !important;
+        width: 240px !important;
+    }
+
+    .checkout-step1-spacer {
+        text-align: center;
+        color: #555;
+        text-transform: uppercase;
+        font-variant: small-caps;
+        margin: 5px auto;
+        font-size: 10px;
+        font-weight: bold;
+        font-family: "Tahoma";
+    }
+
+    #checkout-step1-facebook {
+        width: 260px;
+        height: 40px;
+        background: transparent url('../images/connect-with-facebook.png') 0 0 no-repeat;
+        text-indent: -10000px;
+        border: none;
+        margin-bottom: 5px;
+    }
+
+    .checkout-step1-next-step {
+        margin: 20px auto 5px auto;
+        float: right;
+        border: none;
+        border-radius: 0;
+        background-color: #8a6399;
+        background-image: none;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-indent: -10000px;
+        height: 30px;
+    }
+
+    #checkout-step1-next-step-guest {
+        background-image: url('../images/checkout-step1-next-step-guest.png');
+        width: 90px;
+    }
+
+    #checkout-step1-next-step-account {
+        background-image: url('../images/checkout-step1-next-step-account.png');
+        width: 90px;
+    }
+
+    /* Checkout Step 2 - Payment Information - Continue
+    *************************************************************************************************/
+
+    #checkout-box-step-2-heading {
+        font: normal 14px/14px "Tahoma";
+        color: #8a6399;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    .checkout-step2-label {
+        color: #555;
+        text-transform: uppercase;
+        font: normal 12px/12px "Tahoma";
+    }
+
+    #checkout-step2-card-expire,
+    #checkout-step2-card-cvv {
+        width: 170px;
+        float: left;
+    }
+
+    #checkout-step2-card-expire select {
+        margin: 15px 5px 0 0;
+        width: 50px;
+        float: left;
+        height: 30px;
+    }
+
+    #checkout-step2-card-cvv-input {
+        margin: 15px 0 0 0;
+        width: 100px;
+        height: 16px;
+    }
+
+    #checkout-step2-next-step {
+        width: 170px;
+        height: 40px;
+        background: transparent url('../images/checkout-step2-next-step.png') center center no-repeat;
+        float: right;
+        text-indent: -10000px;
+        margin: 20px 0 0 0;
+    }
+
+    /* Checkout Step 3 - Shipping Information - Complete
+    *************************************************************************************/
+
+    #checkout-box-step-3-heading {
+        font: normal 14px/14px "Tahoma";
+        color: #8a6399;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    #checkout-step3-country {
+        height: 30px;
+        width: 250px !important;
+    }
+
+    #checkout-step3-submit-order {
+        width: 170px;
+        height: 40px;
+        background: transparent url('../images/checkout-step3-submit-order.png') center center no-repeat;
+        float: right;
+        text-indent: -10000px;
+        margin: 0;
+    }
+
+
+
+/* Right Column
+*******************************************************************/
+
+    /* Subtotal Box area
+    **********************************************************/
+
+    #cart-subtotal-header {
+        color: #8a6399;
+        font-family: "Tahoma";
+        font-size: 18px;
+        line-height: 18px;
+        padding: 10px 20px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    #cart-subtotal-sub {
+        color: #555;
+        font-family: "Tahoma";
+        font-size: 16px;
+        line-height: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        text-align: center;
+        font-variant: small-caps;
+        text-transform: lowercase;
+    }
+
+    #cart-subtotal-table {
+        width: 100%;
+    }
+
+    #cart-subtotal-table:before,
+    #cart-subtotal-table:after {
+        content: '';
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    #cart-subtotal-table-title th {
+        color: #555;
+        font-family: "Tahoma";
+        font-weight: bold;
+        padding: 10px 20px 10px;
+        text-align: left;
+    }
+
+    .cart-subtotal-table-left {
+        text-align: left;
+        padding-left: 10px;
+        float: left;
+    }
+
+    .cart-subtotal-table-right {
+        text-align: right;
+        padding-right: 10px;
+        float: right;
+    }
+
+    .cart-subtotal-table-left,
+    .cart-subtotal-table-right {
+        border-bottom: 1px solid #e6e6e6;
+        width: 130px;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .cart-subtotal-table-row {
+        padding: 5px 20px 10px;
+        display: block;
+        /*width: 100%;*/
+    }
+
+    #cart-subtotal-table-items {
+
+    }
+
+    #cart-subtotal-table-shipping {
+
+    }
+
+    #cart-subtotal-table-shipping {
+
+    }
+
+    /* Cart / Checkout Buttons
+    **********************************************************/
+
+    #cart-continue {
+        width: 45%;
+    }
+
+    #cart-cartbox.hide-items ~ #cart-btns #cart-continue,
+    #cart-btns.hideCheckout #cart-continue {
+        width: 100%;
+    }
+
+    #cart-cartbox.hide-items ~ #cart-btns #cart-checkout,
+    #cart-btns.hideCheckout #cart-checkout {
+        display: none;
+    }
+
+    #cart-checkout {
+        width: 55%;
+    }
+
+    .cart-btn {
+        height: 40px;
+        text-indent: -10000px;
+        width: 100%;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    #cart-continue-btn {
+        background: #8a6399 url('../images/cart-continue-btn.png') center center no-repeat;
+        width: 130px;
+    }
+
+    #cart-cartbox.hide-items ~ #cart-btns #cart-continue-btn,
+    #cart-btns.hideCheckout #cart-continue-btn {
+        background: #8a6399 url('../images/cart-continue-btn-hide-items.png') center center no-repeat;
+        width: 310px;
+    }
+
+    #cart-checkout-btn {
+        background: #56b2dd url('../images/cart-checkout-btn.png') center center no-repeat;
+        width: 170px;
+    }
+
+    /* One Page Checkout Custom Styles
+    ********************************************************************/
+
+        /* General One Page Checkout Text Styles
+        *****************************************************/
+        .opc-wrapper-opc * {
+            font-family: 'Open Sans', Arial, Helvetica;
+            color: #393939;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        /* Cart Toggle Link
+        *****************************************************/
+        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle,
+        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle,
+        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle span,
+        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle span,
+        .opc-wrapper-opc #cart-subtotal-header {
+            color: #8a6399 !important;
+            font: normal 16px/16px "Tahoma" !important;
+            text-decoration: none;
+        }
+
+        .opc-wrapper-opc #cart-subtotal-header {
+            font-weight: bold !important;
+        }
+
+        /* One Page Checkout Heading - Move Login Link Here
+        ****************************************************/
+        .opc-wrapper-opc .page-title {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .opc-wrapper-opc .page-title .text-login {
+            display: inline-block;
+            margin: 0;
+            padding-left: 10px;
+        }
+
+        /* Column And Field Adjustments for Proper Display
+        ****************************************************/
+        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle,
+        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle {
+            height: 40px !important;
+        }
+
+        .opc-wrapper-opc .opc-col-left h3 {
+            margin-bottom: 5px;
+        }
+
+        .opc-wrapper-opc .opc-col-left h3,
+        .opc-wrapper-opc .opc-col-center h3 {
+            margin: 10px auto 5px;
+        }
+
+        .opc-wrapper-opc .opc-col-left,
+        .opc-wrapper-opc .opc-col-center {
+            margin-right: 10px !important;
+            margin-left: 18px !important;
+            width: 45% !important;
+        }
+        
+        @media print {
+            .opc-wrapper-opc .opc-col-left {
+                float: left !important;
+                max-width: 45%;
+            }
+            .opc-wrapper-opc .opc-col-center {
+                float: right !important;
+                max-width: 45%;
+            }
+        }
+
+        .opc-wrapper-opc .opc-col-right {
+            margin-left: 10px !important;
+            float: right !important;
+        }
+
+        .opc-wrapper-opc .wide .field,
+        .opc-wrapper-opc .fields .field {
+            width: 100% !important;
+            height: 45px !important;
+        }
+
+
+        .opc-wrapper-opc .fields:after,
+        .opc-wrapper-opc .fields .field:after,
+        .opc-wrapper-opc .wide:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
+
+        .opc-wrapper-opc .wide .field label,
+        .opc-wrapper-opc .wide label,
+        .opc-wrapper-opc .fields .field label {
+            height: 22px;
+            padding-top: 5px;
+            margin-left: 5px;
+        }
+
+        .opc-wrapper-opc .wide .field label.required em,
+        .opc-wrapper-opc .wide label.required em,
+        .opc-wrapper-opc .fields .field label.required em {
+            width: 20px;
+            margin-left: 0px;
+            margin-right: 5px;
+        }
+        .opc-wrapper-opc .wide label:not(.required),
+        .opc-wrapper-opc .fields label:not(.required) {
+            margin-left: 18px;
+        }
+
+        .opc-wrapper-opc .wide .input-box input:last-child {
+            margin-bottom: 0px;
+        }
+        
+        .opc-wrapper-opc .wide > .input-box {
+            height: 22px;
+        }
+
+        .opc-wrapper-opc label {
+            color: #393939;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 1.25em;
+            margin-bottom: 2px;
+            text-align: left;
+        }
+
+        .opc-wrapper-opc .form-list ul {
+            margin-left: 0;
+        }
+
+        .opc-wrapper-opc .opc-data-table th {
+            padding-left: 0;
+            text-align: left;
+        }
+
+        /* One Page Checkout Shipping Methods Section
+        ******************************************************/
+        .sp-methods ul li input {
+            display: inline-block !important;
+            float: left;
+            margin-right: 5px;
+        }
+
+        /* One Page Checkout Payment Methods Section
+        ******************************************************/
+        .opc-wrapper-opc .payment-block {
+            margin-top: 10px !important;
+        }
+        .opc-wrapper-opc #co-payment-form {
+            padding-top: 20px;
+            margin-bottom: 0px;
+            display: block;
+        }
+
+        .opc-wrapper-opc #co-payment-form fieldset {
+            margin-bottom: 0px;
+        }
+
+        .has-credit-card-logos {
+            height: 32px;
+            overflow: hidden;
+        }
+
+            /* Credit Cart Type Auto-Select Styles
+            ******************************************************/
+            #credit-cart-type-wrap {
+                height: 0;
+                margin-left: -10000px;
+            }
+            #credit-card-type {
+                position: relative;
+                width: 52px;
+                top: -40px;
+                right: -2px;
+                z-index: 99;
+                left: auto;
+                margin-left: -50px;
+                overflow: hidden;
+                height: 38px;
+                float: right;
+            }
+            #credit-card-type li {
+                display: none;
+                width: 51px;
+                height: 32px;
+                background: url('../images/credit-card-icons.jpg') 0 -32px no-repeat;
+                margin: 5px 6px 0 0;
+                overflow: hidden;
+                text-indent: -500em;
+                float: left;
+                -webkit-transition: all .2s;
+                -moz-transition: all .2s;
+                -ms-transition: all .2s;
+                -o-transition: all .2s;
+                transition: all .2s;
+                position: absolute;
+                z-index: 9;
+            }
+            #credit-card-type li.active {
+                display: block;
+                top: 0;
+            }
+            #credit-card-type .NN {
+                display: none;
+            }
+            #credit-card-type .NN.active {
+                display: block;
+                background: none;
+                background-color: transparent;
+            }
+            #credit-card-type .VI {background-position: 0px -32px;}
+            #credit-card-type .MC {background-position: -51px -32px;}
+            #credit-card-type .AE {background-position: -102px -32px;}
+            #credit-card-type .DI {background-position: -153px -32px;}
+            #credit-card-type .VI.active {background-position: 0px 0px;}
+            #credit-card-type .MC.active  {background-position: -51px 0px;}
+            #credit-card-type .AE.active  {background-position: -102px 0px;}
+            #credit-card-type .DI.active  {background-position: -153px 0px;}
+
+            /* Credit Card Expiration Date Styles
+            ***********************************************************/
+            #paypal_direct_expiration,
+            #paypal_direct_expiration_yr {
+                width: 49%;
+                display: inline-block;
+            }
+
+            .opc-wrapper-opc .required-entry + .validation-advice {
+                display: none;
+            }
+
+            .opc-wrapper-opc .validation-failed {
+                background-color: rgb(255, 69, 69);
+                background-color: rgba(255, 69, 69, 0.3);
+            }
+
+            /* Credit Card Verification Code Styles
+            ****************************************************/
+            #paypal_direct_cc_type_cvv_div label {
+                text-indent: 60%;
+            }
+            #paypal_direct_cc_cid {
+                width: 40%;
+                float: right;
+            }
+            .opc-wrapper-opc .payment-block .tool-tip {
+                top: 0 !important;
+                position: absolute;
+                background: #FFF;
+                padding: 20px;
+                margin: -20px;
+                border: 1px solid black;
+                border-radius: 10px;
+                box-shadow: 2px 2px 16px 4px black;
+            }
+            #payment-tool-tip-close {
+                display: block;
+                width: 100%;
+                margin-bottom: 15px;
+                text-align: right;
+            }
+
+        /* Discount Coupon Form
+        ************************************************/
+        .opc-wrapper-opc .discount-block,
+        .opc-wrapper-opc .discount-block form {
+            margin: 0px auto !important;
+        }
+
+
+        /* One Page Checkout Review Section
+        ******************************************************/
+        .opc-wrapper-opc #checkout-review-table .a-right,
+        .opc-wrapper-opc #checkout-review-table .a-center,
+        .opc-wrapper-opc #checkout-review-table .a-left {
+            vertical-align: middle !important;
+        }
+
+        .opc-wrapper-opc .product-name {
+            text-indent: -10px;
+            padding-left: 15px !important;
+        }
+
+        .cart-cartbox-table-product-detail-img-wrap {
+            margin-bottom: 2px !important;
+            background-color: transparent;
+        }
+
+
+        .opc-wrapper-opc .item-options {
+            padding-left: 10px;
+        }
+
+        .opc-wrapper-opc .item-options dt {
+            float: left;
+            margin-right: 5px;
+            text-transform: capitalize;
+            margin-left: 10px;
+            font-size: 85%;
+        }
+        .opc-wrapper-opc .item-options dt:after {
+            content: " -";
+        }
+
+        .opc-wrapper-opc .item-options dd {
+            font-size: 85%;
+        }
+
+        .opc-wrapper-opc .opc-data-table {
+            width: 90% !important;
+            margin: 10px auto;
+        }
+
+        .opc-wrapper-opc .review-after{
+            background: #FFF;
+            margin-top: -10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            padding-top: 10px;
+        }
+
+        .opc-wrapper-opc .review-after #iframe-warning {
+            height: 0px !important;
+            text-indent: -10000px;
+        }
+
+            /* Product Color Swatch Values (For Use as Border Color around Product Image) **************
+            ********************************************************************************************/
+            .cart-cartbox-table-product-detail-img-wrap.peach {
+                background-color: #EDDFCC;
+            }
+            .cart-cartbox-table-product-detail-img-wrap.pink {
+                background-color: #DD95BC;
+            }
+            .cart-cartbox-table-product-detail-img-wrap.blue {
+                background-color: #56B2DD;
+            }
+
+        /* Fix Misc Floats and Element Labels
+        ******************************************************/
+
+        .opc-wrapper-opc form span.no-display,
+        .opc-wrapper-opc .form-list .control input,
+        .opc-wrapper-opc form dt input,
+        .opc-wrapper-opc .opc-newsletter .input-box {
+            float: left;
+            margin: 2px 5px 0 15px;
+            width: auto !important;
+        }
+
+        /* Fix PayPal Logo Positioning
+        ********************************************************/
+        .opc-wrapper-opc form dt [for="p_method_paypal_express"] img {
+            vertical-align: text-top;
+            margin-top: -0.5em;
+        }
+
+        /* One Page Checkout Buttons
+        *********************************************************/
+
+        .opc-wrapper-opc .button {
+            display: block;
+            border: none;
+            margin: 0 auto;
+            float: left;
+            background: none;
+            text-indent: -10000px;
+            width: 80px;
+            height: 40px !important;
+        }
+
+        .opc-wrapper-opc .button.apply-coupon {
+            background: #8a6399 url('../images/checkout-apply-coupon-btn.png') center center no-repeat;
+            width: 130px;
+            float: right !important;
+        }
+
+        .opc-wrapper-opc .button.remove-coupon {
+            text-indent: 0;
+            float: right !important;
+            font-size: 14px;
+            font-weight: 400;
+            margin-right: 20px !important;
+        }
+
+        .opc-wrapper-opc .button.btn-checkout {
+            background: #56b2dd url('../images/cart-checkout-btn-wide.png') center center no-repeat;
+            width: 330px;
+            margin: 10px auto 20px;
+            float: none;
+            background-size: 100% 40px;
+        }
+
+/* Account Pages Styles ***************************************************************************************
+**************************************************************************************************************/
+
+    .account-box.no-border {
+        padding: 10px 0 !important;
+        max-width: 90%;
+    }
+
+	@media only screen and (max-width: 767px) {
+		.account-box.no-border {
+        	clear: both;
+        	margin: 10px 5% !important;
+		}
+	}
+
+    .account-box.no-border .account-box-inner {
+        margin: 0 10px !important;
+        height: 100%;
+    }
+    .account-box.twelve .account-box.col-1,
+    .account-box.twelve .account-box.col-2 {
+        width: 320px;
+        float: left;
+    }
+
+    .account-box.fourteen .account-box.col-1,
+    .account-box.fourteen .account-box.col-2 {
+        width: 380px;
+        float: left;
+        margin-bottom: 20px;
+    }
+
+    .account-box.col-1 {
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+
+    .account-box.col-2 {
+        margin-left: 5px;
+        margin-right: 15px;
+    }
+
+    .account-box-inner .col2-set {
+        position: relative;
+        padding: 10px 0 0;
+    }
+
+    .account-box .buttons-set,
+    .my-account .buttons-set {
+        clear: left;
+        float: right;
+        margin: 10px 20px;
+    }
+
+    .account-box .back-link,
+    .account-box .account-sub-button,
+    .my-account .back-link,
+    .my-account .account-sub-button {
+        margin: 0;
+        text-indent: -10000px;
+        width: 70px;
+        height: 30px;
+    }
+
+    .account-box .back-link,
+    .my-account .back-link {
+        background: #8a6499 url('../images/account-buttons-back-link.png') center center no-repeat;
+    }
+
+    .account-box .save-button,
+    .my-account .save-button {
+        background: #8a6499 url('../images/account-buttons-save-button.png') center center no-repeat;
+    }
+
+    .account-box .submit-button,
+    .my-account .submit-button {
+        background: #8a6499 url('../images/account-buttons-submit-button.png') center center no-repeat;
+    }
+
+    /* Login / Register Page Styles
+    **************************************************************/
+
+    .account-login #account-box {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .account-login #account-box .account-box-inner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .account-login #account-box .account-box-inner > p {
+        text-align: justify;
+    }
+
+   #login-heading {
+       margin: 0px;
+       color: #895c9a;
+       font-family: "Tahoma";
+       font-variant: small-caps;
+       font-size: 32px;
+       line-height: 32px;
+   }
+
+   /* Account Dashboard Styles
+   *****************************************************************/
+
+    .box-head {
+        position: relative;
+        border-bottom: 1px solid #e6e6e6;
+        margin: 10px;
+        padding-left: 20px;
+    }
+
+    .box-head > * {
+        color: #444;
+        font-family: "Tahoma";
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .box-head > * + .required {
+        position: absolute;
+        top: 3px;
+        right: 20px;
+        font: normal 14px/22px "Tahoma";
+        color: #888;
+        letter-spacing: 0.0125em;
+        font-variant: small-caps;
+        text-transform: lowercase;
+    }
+
+    .box-blurb {
+        padding: 10px;
+    }
+
+    /*.my-account .dashboard*/
+    .account-box .box-title {
+        border-bottom: 1px solid #e6e6e6;
+        margin: 10px;
+        padding-left: 20px;
+    }
+
+    /*.my-account .dashboard */
+    .account-box .box-title > *:first-child {
+        color: #444;
+        font-family: "Tahoma";
+        font-size: 18px;
+        line-height: 18px;
+        display: inline-block;
+    }
+
+    /*.my-account .dashboard*/
+    .account-box .box-title > *:first-child + a,
+    .account-box .box-title > *:first-child + a + a {
+        float: right;
+        color: #888;
+        font-size: 16px;
+        line-height: 18px;
+        font-family: 'Tahoma-Light';
+        /*text-transform: lowercase;*/
+        font-variant: small-caps;
+        vertical-align: middle;
+        text-decoration: none;
+        margin-right: 10px;
+        letter-spacing: 0.0125em;
+    }
+
+    /*.my-account .dashboard*/
+    .account-box .box-title > *:first-child + a:hover,
+    .account-box .box-title > *:first-child + a + a:hover {
+        text-decoration: underline;
+    }
+
+    /*.my-account .dashboard*/
+    .account-box .account-box-button {
+        float: right;
+        margin: 10px 20px;
+        background: #8a6499 none center center no-repeat;
+        text-indent: -10000px;
+        width: 70px;
+        height: 30px;
+        clear: both;
+    }
+
+        /* Account Dashboard Recent Orders Section
+        *********************************************************/
+
+        #my-orders-table-wrap {
+            margin: 20px 35px 0px;
+        }
+
+        #my-orders-table {
+            width: 600px;
+            margin: 5px;
+            background: #FFF;
+        }
+
+		@media only screen and (max-width: 767px) {
+			#my-orders-table {
+				width: 90% !important;
+				margin: 10px 5% !important;
+			}
+		}
+
+        #my-orders-table tr th {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        #my-orders-table tr th,
+        #my-orders-table tr td {
+            padding: 10px;
+            vertical-align: middle;
+            text-align: center;
+            border-bottom: 1px solid #e6e6e6;
+            border-right: 1px solid #e6e6e6;
+        }
+
+        #my-orders-table tr th:last-child,
+        #my-orders-table tr td:last-child {
+            border-right: none;
+        }
+
+        #my-orders-table td a {
+            text-decoration: none;
+        }
+
+        #my-orders-table td a:hover {
+            text-decoration: underline;
+        }
+
+        #recent-orders-view-all {
+            background-image: url('../images/account-dashboard-recent-orders-view-all.png');
+            width: 70px;
+            margin-right: 40px;
+        }
+
+        /* Dashboard Account Information Section
+        *******************************************************************/
+        .my-account .dashboard .account-box.box-info
+            .account-box.column,
+        .my-account .dashboard .account-box.box-info
+            .account-box.column .account-box-inner {
+            min-height: 130px;
+        }
+
+        #account-info-edit-password {
+            width: 140px;
+            background-image: url('../images/account-dashboard-button-edit-password.png');
+        }
+
+        /* Dashboard Account Addresses Section
+        *********************************************************************/
+        .my-account .dashboard .account-box.box-address
+        .account-box.column,
+        .my-account .dashboard .account-box.box-address
+        .account-box.column .account-box-inner {
+            min-height: 235px;
+        }
+
+        #account-info-edit-addresses {
+            width: 140px;
+            background-image: url('../images/account-dashboard-button-edit-addresses.png');
+        }
+
+    /* Account Order History Page
+    ***************************************************************************************/
+    .orders-history #my-orders-table {
+        width: 870px;
+        margin: 0;
+    }
+
+    .orders-history .pager {
+        margin-right: 10px;
+    }
+
+    .orders-history .pager:before,
+    .orders-history .pager:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; width: 0; overflow: hidden; }
+
+    .orders-history .pager * {
+        display: inline-block;
+        margin: 0;
+    }
+
+    .orders-history .pager > *{
+        float: right;
+        margin-right: 10px;
+    }
+
+    .orders-history .pager select {
+        width: auto;
+    }
+
+    /* Account Edit Info Page
+    *****************************************************/
+    .my-account .edit-info .account-box.col-2 {
+        float: right;
+    }
+
+    .my-account .edit-info .account-box.col-2 {
+        margin-right: 25px;
+        margin-left: 15px;
+    }
+
+    .my-account .edit-info .account-box.col-2 +
+    .account-box.col-1 {
+        margin-right: 15px;
+        margin-left: 25px;
+    }
+
+    .my-account .edit-info .account-box.col-2.displaynone +
+    .account-box.col-1 {
+        width: 770px !important;
+        margin: 0 5px 0 15px;
+        min-height: 350px;
+    }
+
+    .my-account .edit-info .account-box.col-2,
+    .my-account .edit-info .account-box.col-2 +
+    .account-box.col-1 {
+        width: 360px !important;
+        min-height: 350px;
+    }
+
+    .my-account .edit-info .account-box.col-2 .account-box-inner,
+    .my-account .edit-info .account-box.col-2 +
+    .account-box.col-1 .account-box-inner {
+        min-height: 350px;
+    }
+
+    /* Account Address Book Page Styles
+    ***************************************************************************/
+    #account-addresses-add-address {
+        width: 140px;
+        background-image: url('../images/account-buttons-add-address-button.png');
+    }
+
+    /* Account Edit Address Page Styles
+    ****************************************************************************/
+    .account-box.box-edit-address
+    .account-box.column,
+    .account-box.box-edit-address
+    .account-box.column .account-box-inner {
+        min-height: 520px;
+    }
+
+    /* Account Registration Page Styles
+    ****************************************************************************/
+    .account-box.box-create-account
+    .account-box.column,
+    .account-box.box-create-account
+    .account-box.column .account-box-inner {
+        min-height: 320px;
+    }
+
+    /* Order Success Confirmation page
+    ***************************************************************************/
+    #order-success-button {
+        width: 130px;
+        height: 40px;
+        background-image: url('../images/cart-continue-btn.png');
+    }

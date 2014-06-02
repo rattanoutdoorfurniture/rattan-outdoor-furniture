@@ -5,6 +5,9 @@
 /* Page Heading
 *************************************************************************/
 
+#page-heading,
+#search-heading,
+#account-heading,
 #cart-heading {
     border-bottom: 1px solid #e6e6e6;
     color: #895c9a;
@@ -28,6 +31,8 @@ img, button, input {
     position: relative;
     background: transparent url('../images/hash-border.png') 0 0 repeat;
     height: auto;
+    page-break-after: always;
+    page-break-inside: avoid;
 }
 
 .account-box-border,
@@ -1037,7 +1042,15 @@ img, button, input {
 
     .account-box.no-border {
         padding: 10px 0 !important;
+        max-width: 90%;
     }
+
+	@media only screen and (max-width: 767px) {
+		.account-box.no-border {
+        	clear: both;
+        	margin: 10px 5% !important;
+		}
+	}
 
     .account-box.no-border .account-box-inner {
         margin: 0 10px !important;
@@ -1147,7 +1160,7 @@ img, button, input {
     }
 
     .box-head > * + .required {
-        position: absolute;
+        position: relative;
         top: 3px;
         right: 20px;
         font: normal 14px/22px "Tahoma";
@@ -1155,6 +1168,8 @@ img, button, input {
         letter-spacing: 0.0125em;
         font-variant: small-caps;
         text-transform: lowercase;
+        float: right;
+        margin-top: -35px;
     }
 
     .box-blurb {
@@ -1191,6 +1206,7 @@ img, button, input {
         text-decoration: none;
         margin-right: 10px;
         letter-spacing: 0.0125em;
+        padding-top: 5px;
     }
 
     /*.my-account .dashboard*/
@@ -1222,6 +1238,25 @@ img, button, input {
             margin: 5px;
             background: #FFF;
         }
+
+		@media only screen and (max-width: 767px) {
+            .account-box .box-head + .box-blurb,
+            .cart-box .box-head + .box-blurb,
+            .checkout-box .box-head + .box-blurb,
+			#my-orders-table {
+				width: 90% !important;
+				margin: 10px 5% !important;
+			}
+			#my-orders-table tr td,
+			#my-orders-table tr th {
+			    display: none;
+			}
+			table th.show-mobile,
+			table td.show-mobile {
+			    display: table-cell !important;
+			    width: 50% !important;
+			}
+		}
 
         #my-orders-table tr th {
             font-weight: bold;
@@ -1380,4 +1415,35 @@ img, button, input {
         width: 130px;
         height: 40px;
         background-image: url('../images/cart-continue-btn.png');
+    }
+
+/* Search Pages ************************************************************************************
+***************************************************************************************************/
+
+    /* Advanced Search Form Page
+    ************************************************************/
+    .input-range input {
+        float: left;
+        width: 75px;
+        margin-right: 10px;
+    }
+    .input-range input + * {
+        float: left;
+        margin-right: 10px;
+        width: 30px;
+        text-align: center;
+        height: 18px;
+        padding: 6px 0;
+    }
+
+    label .label-wrap {
+        border-bottom: 1px solid #e6e6e6;
+        padding-bottom: 3px;
+        margin-bottom: 10px;
+        max-width: 220px;
+    }
+
+    .account-sub-button.search-button {
+        width: 100px;
+        background-image: url('../images/glob-search-submit.png');
     }

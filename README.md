@@ -67,6 +67,9 @@ Furniture web site project.
 
 ##Change Log:##
 
+###2014-06-02###
+- Since I was on the remote desktop via my phone this morning. I was fixing some of the mobile styles. I had fixed up a few things on the account pages. And had started to do a little work on fixing up the header. I just finished up fixing the menu, and adding a (pretty standard looking) mobile menu button, for more options. I am not going to spend any more time on this now, but it is kind of nice to see that in there, and will be something we want to attend to before too long. Now, I believe there are still just a few little account pages that need a little styling. The I think i will begin looking at the todos and try to get some of those off my list. I am kind of tentatively planning on looking into the footer newsletter thing. But I would like to wrap up the account pages first, so that's my game plan.
+
 ###2014-06-01###
 - I've done a little work to make sure the database syncing is going to be all good and ready to go for when I come into work tomorrow. I left the server file labeled as is. I'll clean that up tomorrow, but for now it's fine. But the method that is going to best here is to dump the database with PhpMyAdmin. Use "REPLACE" instead of insert. And make each value insert in its own statement. (So file can be versioned, this was the major issue before.) Ideally, You should just be able to overwrite the dbcurrent.sql file, and the REPLACE statements should get versioned. merged to create a synced version of the database that is state related from the develop code. This is my goal. I am going to tentatively put this into action. and by this, i mean, i will keep an individual backup of the local and server database. then I will keep a current version (unmerged) of each, and the merged file. eventually, I would like to not have to do those first 2 steps, and just overwrite the one merged sync file.
 

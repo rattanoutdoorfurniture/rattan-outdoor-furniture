@@ -24,15 +24,32 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div class="page-title">
-    <h1><?php echo $this->__('Popular Search Terms') ?></h1>
+<div class="page-title sixteen columns">
+    <h1 id="account-heading"><?php echo $this->__('Search Terms') ?></h1>
+    <?php if($this->getMessagesBlock()): ?>
+        <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+        <script type="text/javascript">
+            setTimeout(function() {
+                jQuery("ul.messages").slideUp("slow");
+            }, 5000);
+        </script>
+    <?php endif; ?>
 </div>
-<?php if( sizeof($this->getTerms()) > 0 ): ?>
-    <ul class="tags-list">
-        <?php foreach ($this->getTerms() as $_term): ?>
-            <li><a href="<?php echo $this->getSearchUrl($_term) ?>" style="font-size:<?php echo $_term->getRatio()*70+75 ?>%;"><?php echo $this->htmlEscape($_term->getName()) ?></a></li>
-        <?php endforeach; ?>
-    </ul>
-<?php else: ?>
-    <p class="note-msg"><?php echo $this->__('There are no search terms available.'); ?></p>
-<?php endif; ?>
+<div class="account-box box-search-terms fourteen columns offset-by-one by-margin add-bottom">
+    <div class="account-box-border"></div>
+    <div class="account-box-inner">
+        <div class="box-head">
+            <h2><?php echo $this->__('Popular Search Terms') ?></h2>
+        </div>
+        <?php if( sizeof($this->getTerms()) > 0 ): ?>
+            <ul class="tags-list box-blurb">
+                <?php foreach ($this->getTerms() as $_term): ?>
+                    <li><a href="<?php echo $this->getSearchUrl($_term) ?>" style="font-size:<?php echo $_term->getRatio()*70+75 ?>%;"><?php echo $this->htmlEscape($_term->getName()) ?></a></li>
+                <?php endforeach; ?>
+            </ul>
+        <?php else: ?>
+            <p class="note-msg box-blurb"><?php echo $this->__('There are no search terms available.'); ?></p>
+        <?php endif; ?>
+    </div>
+    <div class="account-box-border"></div>
+</div>
