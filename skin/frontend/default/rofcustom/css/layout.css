@@ -75,7 +75,23 @@ hr {
         .offset-by-one.by-margin,
         .offset-by-two.by-margin,
         .by-margin {
-            margin-left: 0;
+            margin-left: 0 !important;
+        }
+        .hide-mobile {
+            display: none !important;
+        }
+        .show-mobile {
+            display: block !important;
+        }
+        .show-mobile-inline {
+            display: inline-block !important;
+        }
+        .nav-main-item {
+            position: relative;
+            top: -14px;
+        }
+        .nav-main-item:last-child {
+            border: none;
         }
     }
 

@@ -48,16 +48,22 @@
 
 <nav id="nav-main" class="nav-main">
     <ul id="nav-main-list" class="nav-main-list">
-        <li class="nav-main-item last search">
+        <li class="nav-main-item last search hide-mobile">
             <?php echo $this->getChildHtml("topSearch"); ?>
         </li>
-        <li class="nav-main-item first<?php echo (Mage::app()->getRequest()->getRequestString() == "/") ? ' selected':''; ?>">
+        <li class="nav-main-item first hide-mobile<?php echo (Mage::app()->getRequest()->getRequestString() == "/") ? ' selected':''; ?>">
             <a href="/" title="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"><?php echo $this->__("Home"); ?></a>
         </li>
         <?php echo $_menu; ?>
         <?php if($helper->isEnabled()): ?>
         <li class="nav-main-item"><a href="<?php echo $this->getUrl('').$route ?>"> <?php echo $route ?></a></li>
         <?php endif; ?>
+        <li class="nav-main-item no-display show-mobile-inline">
+            <a href="#" style="float:right;clear:both;position: absolute;padding: 0 !important;height: 0px;width: auto;border: none;"><div style="border: 3px solid #555;border-left:none;border-right:none;margin:5px 0;padding: 5px 0px; display: inline-block;position: absolute;top: 20px;left: 12px;">
+                    <hr style="height: 0px;border:none;border-top: 3px solid #555; width: 20px;margin:0 auto;">
+                </div></a>
+
+        </li>
     </ul>
 </nav>
 

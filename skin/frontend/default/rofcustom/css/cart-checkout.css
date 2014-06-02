@@ -1037,7 +1037,15 @@ img, button, input {
 
     .account-box.no-border {
         padding: 10px 0 !important;
+        max-width: 90%;
     }
+
+	@media only screen and (max-width: 767px) {
+		.account-box.no-border {
+        	clear: both;
+        	margin: 10px 5% !important;
+		}
+	}
 
     .account-box.no-border .account-box-inner {
         margin: 0 10px !important;
@@ -1222,6 +1230,22 @@ img, button, input {
             margin: 5px;
             background: #FFF;
         }
+
+		@media only screen and (max-width: 767px) {
+			#my-orders-table {
+				width: 90% !important;
+				margin: 10px 5% !important;
+			}
+			#my-orders-table tr td,
+			#my-orders-table tr th {
+			    display: none;
+			}
+			table th.show-mobile,
+			table td.show-mobile {
+			    display: table-cell !important;
+			    width: 50% !important;
+			}
+		}
 
         #my-orders-table tr th {
             font-weight: bold;
