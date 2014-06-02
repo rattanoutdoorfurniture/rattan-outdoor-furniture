@@ -12,7 +12,9 @@ Furniture web site project.
 - Commit Message Protocol:
     - develop: Title on top line, description of tasks completed below, will be added to README, so try to be descriptive and to the point
     - project-develop: Update Project YYYY-MM-DD:HHMM; State: DEVELOP_COMMIT_HASH_7_CHARS
-    - database-backup: Backup Database YYYY-MM-DD:HHMM; State: DEVELOP_COMMIT_HASH_7_CHARS
+    - Use PMA REPLACE. Version each for now. Merge by overwrite and sync. see message below (2014-06-01).
+    - database-backup: Backup Local YYYY-MM-DD:HHMM; State: DEVELOP_COMMIT_HASH_7_CHARS
+    - database-backup: Backup Server YYYY-MM-DD:HHMM; State: DEVELOP_COMMIT_HASH_7_CHARS
     - database-archive: Archive Database YYYY-MM-DD:HHMM; (of newly archived database)
 
 - MUST DO: When syncing the db, local, server, merge, import. [See Detailed Post](#database-sync-help)
@@ -64,6 +66,9 @@ Furniture web site project.
 
 
 ##Change Log:##
+
+###2014-06-01###
+- I've done a little work to make sure the database syncing is going to be all good and ready to go for when I come into work tomorrow. I left the server file labeled as is. I'll clean that up tomorrow, but for now it's fine. But the method that is going to best here is to dump the database with PhpMyAdmin. Use "REPLACE" instead of insert. And make each value insert in its own statement. (So file can be versioned, this was the major issue before.) Ideally, You should just be able to overwrite the dbcurrent.sql file, and the REPLACE statements should get versioned. merged to create a synced version of the database that is state related from the develop code. This is my goal. I am going to tentatively put this into action. and by this, i mean, i will keep an individual backup of the local and server database. then I will keep a current version (unmerged) of each, and the merged file. eventually, I would like to not have to do those first 2 steps, and just overwrite the one merged sync file.
 
 ###2014-05-31###
 - I am going to make a little final note here, I am going to try that new (ish) method of the database backup. this should aleviate any potential issues like the one I had this morning. This may take me a little bit as I'm still getting this method down, but I know what I have to do, so I'm allotting myself 15 minutes to get it situated. I'll also do the reset of my standard syncing, but i just wanted to note here that i'm using the new syncing method on the database backup (so it's logged, and i can go back to here if i break it.)
