@@ -65,6 +65,8 @@ a[href="javascript:void(0)"],
 }
 .displaynone { display: none !important; }
 
+.inlineblock { display: inline-block !important; }
+
 .show-mobile.no-display,
 .show-mobile-inline.no-display {
     display: none;
