@@ -19,7 +19,7 @@
     <aside class="footer-box three columns">
         <div class="footer-box-inner footer-links-wrap">
             <h5 class="footer-links-heading">Information</h5>
-            <?php echo $this->getChildHtml(); ?>
+            <?php echo $this->getChildHtml("footer_links"); ?>
         </div>
     </aside>
     <aside class="footer-box three columns">
@@ -35,11 +35,7 @@
     </aside>
     <aside class="footer-box four columns">
         <div class="footer-box-inner">
-            <h5>Join our Newsletter</h5>
-            <form id="footer-newsletter" method="post" action="">
-                <input type="email" placeholder="Email Address" id="footer-newsletter-input" />
-                <input type="submit" id="footer-newsletter-submit" value="Send" />
-            </form>
+            <?php echo $this->getChildHtml("newsletter_subscribe"); ?>
             <div id="footer-social">
                 <span id="footer-social-label">Follow Us On:</span>
                 <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('social-footer')->toHtml(); ?>
