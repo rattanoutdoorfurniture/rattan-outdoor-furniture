@@ -81,14 +81,20 @@ $dnsWhite    = array(
     )
 );
 $curHost     = $_SERVER['HTTP_HOST'];
+$cacheHost   = array(
+    'uns' => '',
+    's'   => '',
+);
 $environment = "www";
 if(array_key_exists($curHost,$dnsWhite)) {
-    $environment = $dnsWhite[$curHost]['environment'];
-    $config      = MAGE::app()->getConfig();
+    $environment      = $dnsWhite[$curHost]['environment'];
+    $config           = MAGE::app()->getConfig();
+    $cacheHost['uns'] = MAGE::getStoreConfig("web/unsecure/base_url");
+    $cacheHost['s']   = MAGE::getStoreConfig("web/secure/base_url");
     $config->saveConfig("web/unsecure/base_url","http://".$curHost."/");
     $config->saveConfig("web/secure/base_url","https://".$curHost."/");
     $config->reinit();
-    //MAGE::app()->reinitStores();
+    MAGE::app()->reinitStores();
 }
 define('SERVER_ENV', $environment);
 
@@ -115,3 +121,7 @@ $mageRunCode = isset($_SERVER['MAGE_RUN_CODE']) ? $_SERVER['MAGE_RUN_CODE'] : ''
 $mageRunType = isset($_SERVER['MAGE_RUN_TYPE']) ? $_SERVER['MAGE_RUN_TYPE'] : 'store';
 
 Mage::run($mageRunCode, $mageRunType);
+
+$config = MAGE::app()->getConfig();
+$config->saveConfig("web/unsecure/base_url",$cacheHost['uns']);
+$config->saveConfig("web/secure/base_url",$cacheHost['s']);
