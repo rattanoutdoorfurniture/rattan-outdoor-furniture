@@ -38,6 +38,13 @@ class Mage_Newsletter_SubscriberController extends Mage_Core_Controller_Front_Ac
       */
     public function newAction()
     {
+        /* Dump to find out what's up
+        die(dumper::auto(array(
+            "isPost"    => $this->getRequest()->isPost(),
+            "email"     => $this->getRequest()->getPost("email")
+        )));
+        */
+
         if ($this->getRequest()->isPost() && $this->getRequest()->getPost('email')) {
             $session            = Mage::getSingleton('core/session');
             $customerSession    = Mage::getSingleton('customer/session');
@@ -75,6 +82,7 @@ class Mage_Newsletter_SubscriberController extends Mage_Core_Controller_Front_Ac
             catch (Exception $e) {
                 $session->addException($e, $this->__('There was a problem with the subscription.'));
             }
+            // die(get_class_methods(get_class($session)));
         }
         $this->_redirectReferer();
     }

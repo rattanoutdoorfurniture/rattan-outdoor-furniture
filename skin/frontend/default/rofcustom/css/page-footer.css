@@ -89,6 +89,7 @@
     margin: 20px 0 5px;
 }
 
+#footer-newsletter #newsletter,
 #footer-newsletter-input {
     float: left;
     /*width: 110px;*/
