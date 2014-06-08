@@ -1376,14 +1376,18 @@ class Mage_ImportExport_Model_Import_Entity_Product extends Mage_ImportExport_Mo
                         $rowData[$imageCol] = $uploadedGalleryFiles[$rowData[$imageCol]];
                     }
                 }
-                if (!empty($rowData['_media_image'])) {
-                    $mediaGallery[$rowSku][] = array(
-                        'attribute_id'      => $rowData['_media_attribute_id'],
-                        'label'             => $rowData['_media_lable'],
-                        'position'          => $rowData['_media_position'],
-                        'disabled'          => $rowData['_media_is_disabled'],
-                        'value'             => $rowData['_media_image']
-                    );
+                try {
+                    if (!empty($rowData['_media_image'])) {
+                        $mediaGallery[$rowSku][] = array(
+                            'attribute_id'      => $rowData['_media_attribute_id'],
+                            'label'             => $rowData['_media_lable'],
+                            'position'          => $rowData['_media_position'],
+                            'disabled'          => $rowData['_media_is_disabled'],
+                            'value'             => $rowData['_media_image']
+                        );
+                    }
+                } catch(Exception $e) {
+                    Mage::log($e->getMessage());
                 }
                 // 6. Attributes phase
                 $rowStore     = self::SCOPE_STORE == $rowScope ? $this->_storeCodeToId[$rowData[self::COL_STORE]] : 0;
@@ -1391,8 +1395,13 @@ class Mage_ImportExport_Model_Import_Entity_Product extends Mage_ImportExport_Mo
                 if (!is_null($productType)) {
                     $previousType = $productType;
                 }
-                if (!is_null($rowData[self::COL_ATTR_SET])) {
-                    $previousAttributeSet = $rowData[Mage_ImportExport_Model_Import_Entity_Product::COL_ATTR_SET];
+                try {
+                    $TMP_COL_ATTR_SET = self::COL_ATTR_SET;
+                    if (isset($TMP_COL_ATTR_SET) && !is_null($rowData[self::COL_ATTR_SET])) {
+                        $previousAttributeSet = $rowData[Mage_ImportExport_Model_Import_Entity_Product::COL_ATTR_SET];
+                    }
+                } catch(Exception $e) {
+                    Mage::log($e->getMessage());
                 }
                 if (self::SCOPE_NULL == $rowScope) {
                     // for multiselect attributes only

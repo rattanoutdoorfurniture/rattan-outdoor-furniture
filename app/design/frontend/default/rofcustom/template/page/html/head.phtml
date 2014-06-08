@@ -92,12 +92,12 @@
         //    }
         //    nextCheckoutStep();
         //});
-        jQuery(".product-details-options-color-swatch").on("click", function(e) {
+        jQuery(".product-details-options-color-swatch").bind("click", function(e) {
             var $this       = jQuery(this);
             $this.siblings(".selected").removeClass("selected");
             var selection   = $this.data('color');
             var parent      = $this.addClass("selected");
-            jQuery("#select_1 option").filter(function() {
+            jQuery("select[name^=options] option").filter(function() {
                 $opt = jQuery(this);
                 toSel = !!($opt.val()==selection);
                 return toSel;
