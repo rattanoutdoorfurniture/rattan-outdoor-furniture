@@ -47,6 +47,8 @@ img, button, input {
     background:#FFF;
     display: block;
     margin: auto 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .account-box .account-box-inner:before,

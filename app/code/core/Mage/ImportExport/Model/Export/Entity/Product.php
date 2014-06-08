@@ -866,13 +866,17 @@ class Mage_ImportExport_Model_Export_Entity_Product extends Mage_ImportExport_Mo
 
             foreach ($dataRows as $productId => &$productData) {
                 foreach ($productData as $storeId => &$dataRow) {
-                    if ($defaultStoreId != $storeId) {
-                        $dataRow[self::COL_SKU]      = null;
-                        $dataRow[self::COL_ATTR_SET] = null;
-                        $dataRow[self::COL_TYPE]     = null;
-                    } else {
-                        $dataRow[self::COL_STORE] = null;
-                        $dataRow += $stockItemRows[$productId];
+                    try {
+                        if ($defaultStoreId != $storeId) {
+                            $dataRow[self::COL_SKU]      = null;
+                            $dataRow[self::COL_ATTR_SET] = null;
+                            $dataRow[self::COL_TYPE]     = null;
+                        } else {
+                            $dataRow[self::COL_STORE] = null;
+                            $dataRow += $stockItemRows[$productId];
+                        }
+                    } catch(Exception $e) {
+                        Mage::log($e->getMessage());
                     }
 
                     $this->_updateDataWithCategoryColumns($dataRow, $rowCategories, $productId);
