@@ -86,7 +86,7 @@
     </section>
   <?php endforeach ?>
   <?php endif; ?>
-  <?php echo $this->getPagerHtml() ?>
+    <?php echo $this->getToolbarBlock()->setTemplate('catalog/product/list/pager.phtml')->toHtml(); ?>
 </div>
 
 <?php endif; ?>

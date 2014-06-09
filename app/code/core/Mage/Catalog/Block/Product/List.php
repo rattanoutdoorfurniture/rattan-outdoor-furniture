@@ -204,6 +204,10 @@ class Mage_Catalog_Block_Product_List extends Mage_Catalog_Block_Product_Abstrac
         return $this->getChildHtml('toolbar');
     }
 
+    public function getPagerHtml() {
+        return $this->getChildHtml('pager');
+    }
+
     public function setCollection($collection)
     {
         $this->_productCollection = $collection;

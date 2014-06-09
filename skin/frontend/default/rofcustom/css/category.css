@@ -199,10 +199,6 @@
     color: #555;
 }
 
-#category-pagi li:hover {
-    text-decoration: underline;
-}
-
 #category-pagi-info {
     float: left;
     margin-left: 5px;
@@ -214,9 +210,26 @@
 }
 
 .category-pagi-nav,
-#category-pagi-page {
+.category-pagi-page {
     padding: 0 5px;
     margin: 0;
+}
+
+.category-pagi-nav a,
+.category-pagi-page a {
+    text-decoration: none;
+    color: #444;
+}
+
+.category-pagi-nav.active a,
+.category-pagi-nav:hover a,
+.category-pagi-nav:hover a:hover,
+.category-pagi-page.active a,
+.category-pagi-page:hover a,
+.category-pagi-page:hover a:hover {
+    text-decoration: none !important;
+    color: #444 !important;
+    border-bottom: 1px solid #444 !important;
 }
 
 #category-pagi-prev {
