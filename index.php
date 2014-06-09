@@ -92,7 +92,7 @@ if(array_key_exists($curHost,$dnsWhite)) {
     $cacheHost['uns'] = MAGE::getStoreConfig("web/unsecure/base_url");
     $cacheHost['s']   = MAGE::getStoreConfig("web/secure/base_url");
     $config->saveConfig("web/unsecure/base_url","http://".$curHost."/");
-    $config->saveConfig("web/secure/base_url","https://".$curHost."/");
+    $config->saveConfig("web/secure/base_url","http://".$curHost."/");
     $config->reinit();
     MAGE::app()->reinitStores();
 }
