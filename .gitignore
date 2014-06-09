@@ -2,7 +2,7 @@
 .idea
 .idea/*
 var/session/*
-var/cache/*
+*cache*
 var/locks/*
 var/report/*
 *error_log
@@ -10,4 +10,5 @@ var/report/*
 *_snapshot_*
 var/backups/archive
 var/backups
+media/catalog/product/cache/*
 

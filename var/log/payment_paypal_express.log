@@ -1,0 +1,142 @@
+2014-06-09T00:46:07+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [AMT] => 858.00
+            [CURRENCYCODE] => USD
+            [RETURNURL] => http://dev.rattanoutdoorfurniture.com/onepage/express/return
+            [CANCELURL] => http://dev.rattanoutdoorfurniture.com/onepage/express/cancel
+            [INVNUM] => 1201405322
+            [SOLUTIONTYPE] => Sole
+            [GIROPAYCANCELURL] => http://dev.rattanoutdoorfurniture.com/
+            [GIROPAYSUCCESSURL] => http://dev.rattanoutdoorfurniture.com/checkout/onepage/success
+            [BANKTXNPENDINGURL] => http://dev.rattanoutdoorfurniture.com/checkout/onepage/success
+            [LOCALECODE] => en_US
+            [ITEMAMT] => 853.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 5.00
+            [L_NUMBER0] => R74B77-024-#56B2DD
+            [L_NAME0] => 4 Piece Sofa Set
+            [L_QTY0] => 1
+            [L_AMT0] => 853.00
+            [BUSINESS] => Bullshit Ltd.
+            [NOTETEXT] => 
+            [EMAIL] => mike@rattanoutdoorfurniture.com
+            [FIRSTNAME] => Michael
+            [LASTNAME] => Simoneau
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => OH
+            [CITY] => Bullshittion
+            [STREET] => 221 Shit Bull Lane
+            [ZIP] => 44999
+            [PHONENUM] => 1800BULSHIT
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => OH
+            [SHIPTOCITY] => Bullshittion
+            [SHIPTOSTREET] => 221 Shit Bull Lane
+            [SHIPTOZIP] => 44999
+            [SHIPTOPHONENUM] => 1800BULSHIT
+            [SHIPTOSTREET2] => 
+            [STREET2] => 
+            [SHIPTONAME] => Michael Simoneau
+            [ADDROVERRIDE] => 1
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 94.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => IWD_SI_MagentoCE_WPS
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2014-06-09T00:46:07Z
+            [CORRELATIONID] => 3fb6f66c260e
+            [ACK] => Failure
+            [VERSION] => 94.0
+            [BUILD] => 11307182
+            [L_ERRORCODE0] => 10736
+            [L_SHORTMESSAGE0] => Shipping Address Invalid City State Postal Code
+            [L_LONGMESSAGE0] => A match of the Shipping Address City, State, and Postal Code failed.
+            [L_SEVERITYCODE0] => Error
+        )
+
+    [__pid] => 28751
+)
+
+2014-06-09T00:47:03+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [AMT] => 858.00
+            [CURRENCYCODE] => USD
+            [RETURNURL] => http://dev.rattanoutdoorfurniture.com/onepage/express/return
+            [CANCELURL] => http://dev.rattanoutdoorfurniture.com/onepage/express/cancel
+            [INVNUM] => 1201405322
+            [SOLUTIONTYPE] => Sole
+            [GIROPAYCANCELURL] => http://dev.rattanoutdoorfurniture.com/
+            [GIROPAYSUCCESSURL] => http://dev.rattanoutdoorfurniture.com/checkout/onepage/success
+            [BANKTXNPENDINGURL] => http://dev.rattanoutdoorfurniture.com/checkout/onepage/success
+            [LOCALECODE] => en_US
+            [ITEMAMT] => 853.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 5.00
+            [L_NUMBER0] => R74B77-024-#56B2DD
+            [L_NAME0] => 4 Piece Sofa Set
+            [L_QTY0] => 1
+            [L_AMT0] => 853.00
+            [BUSINESS] => Nautical Depot, LLC
+            [NOTETEXT] => 
+            [EMAIL] => mike@rattanoutdoorfurniture.com
+            [FIRSTNAME] => Michael
+            [LASTNAME] => Simoneau
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => OH
+            [CITY] => Eastlake
+            [STREET] => 5900 Som Center Road
+            [ZIP] => 44094
+            [PHONENUM] => 4406066306
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => OH
+            [SHIPTOCITY] => Eastlake
+            [SHIPTOSTREET] => 5900 Som Center Road
+            [SHIPTOZIP] => 44094
+            [SHIPTOPHONENUM] => 4406066306
+            [SHIPTOSTREET2] => Suite 12
+            [STREET2] => Suite 12
+            [SHIPTONAME] => Michael Simoneau
+            [ADDROVERRIDE] => 1
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 94.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => IWD_SI_MagentoCE_WPS
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2014-06-09T00:47:04Z
+            [CORRELATIONID] => bba4f42d79145
+            [ACK] => Failure
+            [VERSION] => 94.0
+            [BUILD] => 11307182
+            [L_ERRORCODE0] => 10736
+            [L_SHORTMESSAGE0] => Shipping Address Invalid City State Postal Code
+            [L_LONGMESSAGE0] => A match of the Shipping Address City, State, and Postal Code failed.
+            [L_SEVERITYCODE0] => Error
+        )
+
+    [__pid] => 28804
+)
+
