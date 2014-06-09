@@ -1397,7 +1397,7 @@ class Mage_ImportExport_Model_Import_Entity_Product extends Mage_ImportExport_Mo
                 }
                 try {
                     $TMP_COL_ATTR_SET = self::COL_ATTR_SET;
-                    if (isset($TMP_COL_ATTR_SET) && !is_null($rowData[self::COL_ATTR_SET])) {
+                    if (isset($TMP_COL_ATTR_SET) && !is_null(@$rowData[self::COL_ATTR_SET])) {
                         $previousAttributeSet = $rowData[Mage_ImportExport_Model_Import_Entity_Product::COL_ATTR_SET];
                     }
                 } catch(Exception $e) {
