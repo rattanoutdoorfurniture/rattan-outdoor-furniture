@@ -43,10 +43,10 @@
         <div class="box-head">
             <h2><?php echo $this->__('Thank You for Your Purchase!') ?></h2>
         </div>
-        <p class="box-blurb remove-bottom">
+        <div class="box-blurb remove-bottom">
             <?php if ($this->getOrderId()):?>
             <?php if ($this->getCanViewOrder()) :?>
-            <p><?php echo $this->__('Your order # is: %s.', sprintf('<a href="%s">%s</a>', $this->escapeHtml($this->getViewOrderUrl()), $this->escapeHtml($this->getOrderId()))) ?></p>
+                <p><?php echo $this->__('Your order # is: %s.', sprintf('<a href="%s">%s</a>', $this->escapeHtml($this->getViewOrderUrl()), $this->escapeHtml($this->getOrderId()))) ?></p>
             <?php  else :?>
                 <p><?php echo $this->__('Your order # is: %s.', $this->escapeHtml($this->getOrderId())) ?></p>
             <?php endif;?>
@@ -72,7 +72,7 @@
                     <?php endforeach;?>
                 </ul>
             <?php endif;?>
-        </p>
+        </div>
         <div class="buttons-set">
             <button id="order-success-button" type="button" class="account-box-button button" title="<?php echo $this->__('Continue Shopping') ?>" onclick="window.location='<?php echo $this->getUrl()."products/"; ?>'"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
         </div>

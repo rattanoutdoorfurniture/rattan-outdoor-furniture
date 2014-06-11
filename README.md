@@ -27,18 +27,14 @@ Furniture web site project.
 
 - Abstract Product_View_Options_Type_Select logic from the Magento core. This should extend the core, which I could not get to work today.
 
-- Global Search bug (forum suggest might be a magento 1.8 bug, look more into solutions, might be something simple).
 - Handle global messages. Standardize?
 - Create new logo image. The current one is visually off-center due to the (TM) mark. (Just generate a new one with padding on the left).
 - Setup email sending from scripts on the server (for password reset, account confirm, and a whole bunch of other stuff).
 - Fix issue where the forms (login and register) try to validate inputs on non-submit buttons. like back and continue on login/register.
 - Look into Facebook connect. The Connect-with-Facebook button on the login page doesn't do anything for now. This would be an excellent feature.
-- Global search functionality
-- Add functionality to footer newsletter form
 - Product reviews (just remove the reviews section for now.)
 - Create all sub-category pages. These are going to be based on keyword lists
 - Create all products for all sub-category pages. Attach images, details, price, color, and inventory.
-- 4 Images per product
 - If we're making collections pages, which we should, a link to the collection page for each product should be on the product page. like "View Collection" or something.
 - Reset secure URL for checkout when going live (this obviously fails on an unseccured, local connection.)
 - Add To Cart button on the category page. We'll have to decide how we're gonna handle the colors for this. I think it may be best to redirect them to the product page, with attention on the color.
@@ -48,6 +44,10 @@ Furniture web site project.
 - Collections section. Like Products, but a top-level category that is called collections, and each collection is a sub-category of that, and all products of a collection (the site [skinny] viewable ones anyway). This does not have to be added to the main menu, but could be. It could also replace the "related" products on the category page (cause that's kind of what a category page is already), so have a "Collections" section below the lounger results, where it would list 4 collections, going to that collection page.
 
 
+- [DONE]     Home Slider Functionality
+- [DONE]     Global search functionality
+- [DONE]     Global Search bug (forum suggest might be a magento 1.8 bug, look more into solutions, might be something simple).
+- [DONE]     Add functionality to footer newsletter form
 - [DONE]     Fix continue button on the Login/Register page in the Register section. (Currently submits the form, aka, tries to log you in.)
 - [DONE]     Accounts / Login / Automatic account creation for guest checkout (already generates a temporary password.)
 - [DONE]     User must select a color option if available, or we need to make this default to the first color, but I would like to alert them that they need to choose.
@@ -71,6 +71,7 @@ Furniture web site project.
 ##Change Log:##
 
 ###2014-06-11###
+- General Bug Fixes (while waiting for linkage). While I'm waiting for the linkage of the categories and products to be figured out, I have been spending my time fixing bugs around the site. Things that need to be fixed before launch. Earlier I fixed the navigation bar search, and after the last commit, I made a few more fixes. The relevance filter is just the default filtering, there's no most or least option, so i just changed it to show "Most Relevant", which i think makes sense (tho they aren't really very w ell organized by most relevant, but this is a setting in the backend. I changed it to prioritize name, which makes it seem a little more logical.) Also the results show 8, but the search is 3 columns, so i forced it to show 9. Oh, I mimicked these changes for the advanced search (which is separated a bit, but not too much trouble). There was also a lingering right column on the advanced search page. which i removed. we may get into 2 column layouts later, but for now our site is quite purely based on 1 column layout. (except for the checkout, of course). I removed the "Item #" from the product page, as it was wrapping, and I kinda just filled it with bullshit data anyway. it was in the design, but doesn't really make sense, we have a SKU as well. I fixed the 'be the first to review' link. There was a bug where it would go to the tab, but the content of the tab would not change to the review section. this is fixed. I fixed the category slider (the thing at the bottom of the home page), so that it uses just regular links with images in them. This will get crawled better by google (per the suggestion of that SEO linkage article.) Also in this category, i made the login button on the login page a true "submit" button, which isn't a huge thing, but back to semantics, (as that article discussed a lot), it's the proper thing to do, therefor it's prioritized code. (small fix, but those add up.) I also removed some unnecessary fonts from the font resources. downloading unneeded files just slows down the site. We'll be doing a lot more cleaning up after lau nch. And the bigger project of the day, I fixed the home slider. It is currently set to interval at 5 seconds. This can be easily edited. It's actually very well written and self contained. (shouldn't break easily.) We'll have to figure out how to handle this on mobile, and the other 2 promos are just filler for now, but it works well. We'll get images and copy for it here soon. But that about wraps up my day. I'm gonna paste this in the README and do a full sync (including database and project files; a good a point as any).
 - Category Import, Bug Fixes, Search, Pagination; This update will include the category import code, and the bug fixes on the search. This also has the notes I made in the README to update my progress over the last couple days, something I've been neglecting given the fact that I haven't done too much with the code, I've been more focused on the data. But i wanted to get back on track with this. This morning I finished up the search fix, and the other stuff form the last day or so. I'll add this commit message to the README, but I'm basically just syncing things up.
 - I haven't updated ths in a couple days, as I have been working on the Import, and very little code change. After yesterday's escapades, I started working on some bug fixes, So I'll push those up when I have this ready. But I just wanted to make some notes first. And of course my internet is not working. So making some notes, then I'm going to restart the computer.
 

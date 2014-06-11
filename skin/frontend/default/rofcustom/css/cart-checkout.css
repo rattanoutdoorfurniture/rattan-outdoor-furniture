@@ -419,14 +419,16 @@ img, button, input {
     .checkout-step1-next-step {
         margin: 20px auto 5px auto;
         float: right;
-        border: none;
-        border-radius: 0;
+        border: none !important;
+        -webkit-border-radius: 0 !important;
+        border-radius: 0 !important;
         background-color: #8a6399;
         background-image: none;
         background-position: center;
         background-repeat: no-repeat;
         text-indent: -10000px;
         height: 30px;
+        text-shadow: none !important;
     }
 
     #checkout-step1-next-step-guest {

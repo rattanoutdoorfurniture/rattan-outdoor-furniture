@@ -45,6 +45,7 @@
         return typeof(key)==typeof(undefined) ? Params : ( typeof(Params[key])==typeof(undefined) ? Params : Params[key] );
     }
 
+    /*
     function nextCheckoutStepUrl(step) {
         params = getUrlParams();
         params.step = (typeof(step)==typeof(undefined)) ? params.step+1 : step;
@@ -58,6 +59,7 @@
         $("#checkout-box").removeClass('step'+(step)).addClass('step'+(++step));
         history.pushState(null, "Step " + step, (location.href.slice(0,-1)+step));
     }
+    */
 
     jQuery(document).ready(function($){
         if($(".product-tab").length) {
@@ -92,17 +94,69 @@
         //    }
         //    nextCheckoutStep();
         //});
-        jQuery(".product-details-options-color-swatch").bind("click", function(e) {
-            var $this       = jQuery(this);
-            $this.siblings(".selected").removeClass("selected");
-            var selection   = $this.data('color');
-            var parent      = $this.addClass("selected");
-            jQuery("select[name^=options] option").filter(function() {
-                $opt = jQuery(this);
-                toSel = !!($opt.val()==selection);
-                return toSel;
-            }).prop('selected', true);
-        });
+        if(location.pathname.match(/^\/$/)) {
+            if(jQuery(".home-slide").length>=3) {
+                jQuery.homeSlider = function() {
+                    jQuery.homeSlider.slide = function() {
+                        this.deferred   = jQuery.Deferred();
+                        var $_def_current   = jQuery.Deferred();
+                        var $_def_next      = jQuery.Deferred();
+                        var $_slides        = jQuery('.home-slide');
+                        var $_slide_current = $_slides.filter(".current");
+                        var $_slide_next    = $_slides.filter(".next");
+                        var $_new_next      = $_slide_next.next();
+                            $_new_next      = !!$_new_next.length ? $_new_next : $_slides.first();
+                        var $_slide_prev    = $_slides.filter(".prev");
+                        $_slide_current.fadeOut(
+                            "slow",
+                            function() {
+                                jQuery(this).
+                                    addClass("prev").
+                                    removeClass("current");
+                                $_def_current.resolve();
+                            }
+                        );
+                        $_slide_next.fadeIn(
+                            "slow",
+                            function(){
+                                jQuery(this).
+                                    addClass("current").
+                                    removeClass("next");
+                                $_def_next.resolve();
+                            }
+                        );
+                        $_slide_prev.removeClass("prev");
+                        $_new_next.addClass("next").removeClass("prev current");
+                        jQuery.when($_def_current, $_def_next).done(this.deferred.resolve);
+
+                    };
+                    jQuery.homeSlider.deferred  = null;
+                    jQuery.homeSlider.timeout   = 5000;
+                    jQuery.homeSlider.ToFunc    = function() {
+                        jQuery.homeSlider.slide();
+                        jQuery.when(jQuery.homeSlider.deferred).done(function() {
+                            clearTimeout(jQuery.homeSlider.To);
+                            jQuery.homeSlider.To = setTimeout(jQuery.homeSlider.ToFunc,jQuery.homeSlider.timeout);
+                        });
+                    };
+                    jQuery.homeSlider.To = setTimeout(jQuery.homeSlider.ToFunc,jQuery.homeSlider.timeout);
+                };
+                jQuery.homeSlider();
+            }
+        }
+        if(location.href.match(/products/)) {
+            jQuery(".product-details-options-color-swatch").bind("click", function(e) {
+                var $this       = jQuery(this);
+                $this.siblings(".selected").removeClass("selected");
+                var selection   = $this.data('color');
+                var parent      = $this.addClass("selected");
+                jQuery("select[name^=options] option").filter(function() {
+                    $opt = jQuery(this);
+                    toSel = !!($opt.val()==selection);
+                    return toSel;
+                }).prop('selected', true);
+            });
+        }
         if(location.href.match(/onepage/)) {
             jQuery.getCreditCardType = function(val) {
                 if(!val || !val.length) return undefined;

@@ -101,11 +101,12 @@
             <?php //echo $this->getReviewsSummaryHtml($_product, false, true)?>
             <span id="product-details-sub-review-stars" class="review-stars _00"></span>
             <span id="product-details-sub-review-text">
-                Be the first to <a href="#product-tabs-reviews" title="Write a Review"> write a review</a>
+                Be the first to <a href="#product-tabs-reviews" title="Write a Review" onclick="jQuery('#product-tabs-reviews').find('a').trigger('click');"> write a review</a>
             </span>
         </span>
-        <span class="product-details-sub-pipe">|</span>
-        <span id="product-details-sub-item"><?php echo $this->__("Item #: "); ?><?php echo $proItemNumber; ?></span>
+        <!-- REMOVE ITEM NUMBER -->
+        <!--<span class="product-details-sub-pipe">|</span>-->
+        <!--<span id="product-details-sub-item"><?php /*echo $this->__("Item #: "); */?><?php /*echo $proItemNumber; */?></span>-->
         <span class="product-details-sub-pipe">|</span>
         <span id="product-details-sub-model"><?php echo $this->__("Model #: "); ?><?php echo $_helper->productAttribute($_product, $_product->getSKU(), 'sku') ?></span>
     </div>
@@ -272,94 +273,6 @@
 
 <?php //echo $this->getChildHtml("related_products"); ?>
 
-<?php
-/**
- * Old Product Markup Section
- *//*
-?>
-
-<div class="product-commander">
-    <?php if (isset($customPro[$index-1])&&$customPro[$index-1]):?>
-    <span class="prev"> <a  href="<?php echo $customPro[$index-1]->getUrlPath()?>"> &lt;&lt; </a> </span>
-    <?php endif;?>
-    <?php if (isset($customPro[$index+1])&&$customPro[$index+1]):?>
-    <span class="next"> <a  href="<?php echo $customPro[$index+1]->getUrlPath()?>"> &gt;&gt; </a>
-    <?php endif;?>
-    </span>
-  </div>
-
-
-
-
-<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
-<div class="product-view">
-    <div class="product-essential">
-    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
-        <div class="no-display">
-            <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
-            <input type="hidden" name="related_product" id="related-products-field" value="" />
-        </div>
-
-        <div class="product-shop">
-
-                <div class="product-shop-wrap">
-            <div class="product-name">
-                <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
-            </div>
-
-            <?php if ($this->canEmailToFriend()): ?>
-                <p class="email-friend"><i class="icon-envelope" style="margin-right:5px;"></i><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
-            <?php endif; ?>
-
-            <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
-            <?php echo $this->getChildHtml('alert_urls') ?>
-            <?php echo $this->getChildHtml('product_type_data') ?>
-            <?php echo $this->getTierPriceHtml() ?>
-            <?php echo $this->getChildHtml('extrahint') ?>
-
-
-
-            <?php if ($_product->getShortDescription()):?>
-                <div class="short-description">
-
-                    <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
-                </div>
-            <?php endif;?>
-
-            <?php echo $this->getChildHtml('other');?>
-
-            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-            <?php endif;?>
-
-             </div>
-                      <?php if (!$this->hasOptions()):?>
-                <div class="add-to-box">
-                    <?php if($_product->isSaleable()): ?>
-                        <?php echo $this->getChildHtml('addtocart') ?>
-                        <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
-                            <span class="or"><?php echo $this->__('OR') ?></span>
-                        <?php endif; ?>
-                    <?php endif; ?>
-                    <?php echo $this->getChildHtml('addto') ?>
-                </div>
-                <?php echo $this->getChildHtml('extra_buttons') ?>
-            <?php elseif (!$_product->isSaleable()): ?>
-                <div class="add-to-box">
-                    <?php echo $this->getChildHtml('addto') ?>
-                </div>
-            <?php endif; ?>
-        </div>
-
-        <div class="product-img-box">
-            <?php echo $this->getChildHtml('media') ?>
-        </div>
-
-        <div class="clearer"></div>
-        <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
-        <?php endif;?>
-*/?>
 </form>
     <script type="text/javascript">
     //<![CDATA[
