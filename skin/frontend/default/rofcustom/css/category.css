@@ -67,6 +67,11 @@
     font-family: 'Tahoma';
 }
 
+.catalogsearch-result-index
+#text-filters {
+    max-width: 95%;
+}
+
 #text-filters-label,
 #text-filters-link {
     font-family: inherit;
@@ -110,6 +115,11 @@
     background: transparent url('../images/hash-border.png') center center repeat;
     margin-bottom: 20px;
     cursor: pointer;
+}
+
+.catalogsearch-result-index
+.category-product:nth-child(3n-1) {
+    margin-left: 50px !important;
 }
 
 .category-product-inner {
@@ -190,6 +200,11 @@
     font-size: 12px;
     color: #555;
     font-family: 'Tahoma';
+}
+
+.catalogsearch-result-index
+#category-pagi {
+    max-width: 98%;
 }
 
 #category-pagi li {

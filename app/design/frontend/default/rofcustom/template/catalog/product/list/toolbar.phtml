@@ -35,6 +35,10 @@
 
 <?php
     $textFilterLabels = array(
+        "relevance" => array(
+            "asc"   => $this->__("Most Relevant"),
+            "desc"  => $this->__("Least Relevant")
+        ),
         "position"  => array(
             "asc"   => $this->__("Newest First"),
             "desc"  => $this->__("Oldest First")
@@ -56,6 +60,7 @@
 <ul id="text-filters" class="sixteen columns">
     <span id="text-filters-label"><?php echo $this->__("View by:")?></span>
     <?php foreach($textFilters as  $_key=>$_order): ?>
+        <?php if(!isset($textFilterLabels[strtolower($_order)])) continue; ?>
         <?php foreach($textFilterLabels[strtolower($_order)] as $_dir=>$textFilterLabel): ?>
         <li class="text-filters-option<?php if($this->isOrderCurrent($_key)): ?> selected<?php endif ?>">
             <a href="<?php echo $this->getOrderUrl($_key, $_dir) ?>" class="text-filters-link" title="<?php echo $textFilterLabel; ?>"><?php echo $textFilterLabel; ?></a>
