@@ -83,7 +83,7 @@
                         <div class="checkout-step1-spacer" id="checkout-step1-account-spacer">&nbsp;</div>
                         <input id="pass" class="checkout-step1-input input-text required-entry validate-password" name="login[password]" type="password" placeholder="Password" title="<?php echo $this->__('Password') ?>" />
                         <?php echo $this->getChildHtml('persistent.remember.me'); ?>
-                        <button id="checkout-step1-next-step-account" class="checkout-step1-next-step checkout-step-next-step"><?php echo $this->__("Login"); ?></button>
+                        <input type="submit" id="checkout-step1-next-step-account" class="checkout-step1-next-step checkout-step-next-step" value="<?php echo $this->__("Login"); ?>" />
                     </div>
                     <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
                 </div>

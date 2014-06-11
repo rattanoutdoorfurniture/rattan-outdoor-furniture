@@ -3,6 +3,7 @@
 *******************************************/
 
 #home-slider {
+    position: relative;
     background: transparent url('../images/hash-border.png');
     width: 940px;
     height: 380px;
@@ -15,7 +16,7 @@
 /*}*/
 
 .home-slide {
-    position: relative;
+    position: absolute;
     margin: 10px;
     display: none;
     top: 0;
