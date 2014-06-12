@@ -4,7 +4,7 @@
 
 #home-slider {
     position: relative;
-    background: transparent url('../images/hash-border.png');
+    background: transparent url('../images/hash-border-darker.png?noCache');
     width: 940px;
     height: 380px;
     margin-bottom: 20px;
@@ -87,7 +87,7 @@
 *******************************************/
 
 .home-cat {
-    background: transparent url('../images/hash-border.png') left top repeat;
+    background: transparent url('../images/hash-border-darker.png?noCache') left top repeat;
     height: 170px;
     position: relative;
     margin-bottom: 20px;

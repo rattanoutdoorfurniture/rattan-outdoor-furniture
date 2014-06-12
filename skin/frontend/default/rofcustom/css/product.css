@@ -6,7 +6,7 @@
 /* Product Image Styles
 *********************************************************************************/
 #product-img-main {
-    background: transparent url('../images/hash-border.png') center center repeat;
+    background: transparent url('../images/hash-border-darker.png?noCache') center center repeat;
     margin-bottom: 20px;
     margin-top: 10px;
     display: block;
@@ -28,7 +28,7 @@
 
 .product-img-view {
     float: left;
-    background: transparent url('../images/hash-border.png') center center repeat;
+    background: transparent url('../images/hash-border-darker.png?noCache') center center repeat;
     margin: 0 5px;
     width: 125px;
     display: block;
@@ -139,7 +139,7 @@
     margin: 10px auto;
     clear: right;
     padding: 5px;
-    background: transparent url('../images/hash-border.png') center center repeat;
+    background: transparent url('../images/hash-border-darker.png?noCache') center center repeat;
 }
 
 .product-details-price-section {
@@ -381,7 +381,7 @@
     margin: 20px auto;
     padding: 10px;
     padding-top: 0;
-    background: transparent url('../images/hash-border.png') 0 0 repeat;
+    background: transparent url('../images/hash-border-darker.png?noCache') 0 0 repeat;
 }
 
 .product-tab {
@@ -479,7 +479,7 @@
     border-width: 0 20px 30px 0;
     border-style: solid;
     border-color: #FFF transparent;
-    background-image: url('../images/hash-border.png');
+    background-image: url('../images/hash-border-darker.png?noCache');
 }
 
 .product-tab,

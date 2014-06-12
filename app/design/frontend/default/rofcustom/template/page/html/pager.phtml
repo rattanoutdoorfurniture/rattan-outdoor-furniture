@@ -65,7 +65,7 @@
             <li id="category-pagi-next" class="category-pagi-nav">
                 <a class="next<?php if(!$this->getAnchorTextForNext()): ?> i-next<?php endif; ?>" href="<?php echo $this->getNextPageUrl() ?>" title="<?php echo $this->__('Next') ?>">
                     <?php if(!$this->getAnchorTextForNext()): ?>
-                        Next&nbsp;»
+                        <span class="hide-mobile">Next&nbsp;</span>»
                     <?php else: ?>
                         <?php echo $this->getAnchorTextForNext() ?>
                     <?php endif;?>
@@ -116,7 +116,7 @@
             <li id="category-pagi-prev" class="category-pagi-nav">
                 <a class="previous<?php if(!$this->getAnchorTextForPrevious()): ?> i-previous<?php endif;?>" href="<?php echo $this->getPreviousPageUrl() ?>" title="<?php echo $this->__('Previous') ?>">
                     <?php if(!$this->getAnchorTextForPrevious()): ?>
-                        «&nbsp;Prev
+                        «<span class="hide-mobile">&nbsp;Prev</span>
                     <?php else: ?>
                         <?php echo $this->getAnchorTextForPrevious() ?>
                     <?php endif;?>
