@@ -53,7 +53,10 @@
 .category-slider-slide-img {
     height: 64px;
     width: 91px;
-    background: transparent url('../images/categories-icon-sprite.png') 0px 0px no-repeat;
+    /**
+     * Use Darker Color for Icons
+     */
+    background: transparent url('../images/categories-icon-sprite-darker.png') 0px 0px no-repeat;
     margin: 0 auto;
 
 }

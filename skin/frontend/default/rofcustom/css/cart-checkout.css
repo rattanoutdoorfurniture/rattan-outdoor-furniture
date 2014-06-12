@@ -29,7 +29,7 @@ img, button, input {
 .cart-box {
     min-height: 40px;
     position: relative;
-    background: transparent url('../images/hash-border.png') 0 0 repeat;
+    background: transparent url('../images/hash-border-darker.png?noCache') 0 0 repeat;
     height: auto;
     page-break-after: always;
     page-break-inside: avoid;
@@ -357,7 +357,7 @@ img, button, input {
 
     .checkout-box-login-box {
         width: 240px;
-        background: transparent url('../images/hash-border.png') 0 0 repeat;
+        background: transparent url('../images/hash-border-darker.png?noCache') 0 0 repeat;
         margin: 0 5px 10px;
         padding: 5px;
         float: left;

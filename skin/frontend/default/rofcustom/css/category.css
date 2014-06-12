@@ -1,7 +1,7 @@
 
 #category-banner {
     position: relative;
-    background: transparent url('../images/hash-border.png') left top repeat;
+    background: transparent url('../images/hash-border-darker.png?noCache') left top repeat;
 }
 
 #category-banner-img {
@@ -115,7 +115,7 @@
 ********************************************************/
 
 .category-product {
-    background: transparent url('../images/hash-border.png') center center repeat;
+    background: transparent url('../images/hash-border-darker.png?noCache') center center repeat;
     margin-bottom: 20px;
     cursor: pointer;
 }

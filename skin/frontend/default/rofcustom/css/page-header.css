@@ -2,6 +2,10 @@
 * Styles for Global Page Header *
 \*******************************/
 
+#logo-main-mobile {
+    margin: 0 auto;
+}
+
 #page-header {
     position: relative;
     margin: 10px 0;

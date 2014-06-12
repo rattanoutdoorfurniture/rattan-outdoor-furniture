@@ -54,7 +54,9 @@
 <!-- Category Banner ---------------------------------------------------------------------------------->
 
 <div id="category-banner" class="sixteen columns">
-    <img id="category-banner-img" src="<?php echo $_imgUrl; ?>" alt="<?php echo $this->htmlEscape($_category->getPageTitle()); ?>" />
+    <div id="category-banner-img-wrap">
+        <img id="category-banner-img" src="<?php echo $_imgUrl; ?>" alt="<?php echo $this->htmlEscape($_category->getPageTitle()); ?>" />
+    </div>
     <aside id="category-banner-blurb">
         <h2 id="category-banner-blurb-title"><?php echo $_title; ?></h2>
         <div id="category-banner-blurb-sub" class="clearfix">
