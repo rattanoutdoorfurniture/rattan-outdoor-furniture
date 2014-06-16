@@ -1,114 +1,234 @@
-store,categories
-default,Products/Accessories 
-default,Products/Adirondack Furniture
-default,Products/Affordable Furniture
-default,Products/Affordable Outdoor Furniture
-default,Products/Affordable Patio Furniture
-default,Products/All-Weather
-default,Products/All-Weather Fabrics
-default,Products/All-Weather Furniture
-default,Products/All-Weather Outdoor Fabrics
-default,Products/All-Weather Outdoor Patio Furniture
-default,Products/All-Weather Resin
-default,Products/Balcony Furniture
-default,Products/Bar Furniture
-default,Products/Buy Furniture Online
-default,Products/Cabin Furniture
-default,Products/Cheap Furniture
-default,Products/Cheap Outdoor Furniture
-default,Products/Cheap Patio Furniture
-default,Products/Cheap Patio Furniture Sets
-default,Products/Circular Seating
-default,Products/Coastal Furniture
-default,Products/Coastal Living Furniture
-default,Products/Contemporary Furniture
-default,Products/Cottage Furniture
-default,Products/Deck Chairs
-default,Products/Deck Furniture
-default,Products/Deep Seating
-default,Products/Discount Furniture
-default,Products/Discount Outdoor Furniture
-default,Products/Discount Patio Furniture
-default,Products/Discount Sofas
-default,Products/Essentials
-default,Products/Faux Rattan
-default,Products/Faux Wicker
-default,Products/Fine Furniture
-default,Products/Furniture
-default,Products/Furniture Clearance
-default,Products/Furniture Collections
-default,Products/Furniture Covers
-default,Products/Furniture Direct
-default,Products/Furniture for Sale
-default,Products/Furniture Manufacturers
-default,Products/Furniture Online
-default,Products/Furniture Outlet
-default,Products/Furniture Retailers
-default,Products/Furniture Sales
-default,Products/Furniture Set of 4
-default,Products/Furniture Set of 6
-default,Products/Furniture Set of 8
-default,Products/Furniture Sets
-default,Products/Furniture Store
-default,Products/Furniture Warehouse
-default,Products/Furniture World
-default,Products/Garden Furniture
-default,Products/Inexpensive Furniture
-default,Products/Lawn & Garden
-default,Products/Lawn Furniture
-default,Products/Lounge Furniture
-default,Products/Luxury Outdoor Furniture
-default,Products/Modern Furniture
-default,Products/Modern Outdoor Furniture
-default,Products/Modern Patio Furniture
-default,Products/Modern Sofas
-default,Products/Modular Furniture
-default,Products/Modular Seating
-default,Products/Nautical Furniture
-default,Products/Occasional
-default,Products/Outdoor Balcony Furniture
-default,Products/Outdoor Balcony Patio Sets
-default,Products/Outdoor Essentials
-default,Products/Outdoor Furniture
-default,Products/Outdoor Furniture Clearance
-default,Products/Outdoor Furniture Collections
-default,Products/Outdoor Furniture Retailers
-default,Products/Outdoor Living
-default,Products/Outdoor Modular Furniture
-default,Products/Outdoor Patio Furniture
-default,Products/Outdoor Patio Furniture Collections
-default,Products/Outdoor Patio Furniture Covers
-default,Products/Outdoor Patio Furniture for Sale
-default,Products/Outdoor Patio Furniture Manufacturers
-default,Products/Outdoor Patio Furniture Sets
-default,Products/Outdoor Patio Storage
-default,Products/Outdoor Patio Wholesale Furniture
-default,Products/Outdoor Patio Woven Furniture
-default,Products/Outdoor Seating
-default,Products/Outdoor Tables and Bases
-default,Products/Outdoor Two Seater
-default,Products/Outside Furniture
-default,Products/Outside Patio Furniture
-default,Products/Patio Furniture
-default,Products/Patio Furniture Clearance
-default,Products/Patio Sets
-default,Products/Pool Furniture
-default,Products/Porch Furniture
-default,Products/Ratan Outdoor Furniture
-default,Products/Rattan Sunroom
-default,Products/Recycled Plastic
-default,Products/Resin Rattan
-default,Products/Resort Collections
-default,Products/Seating
-default,Products/Shabby Chic Furniture
-default,Products/Sunroom Furniture
-default,Products/Synthetic Rattan Outdoor Furniture
-default,Products/Tables and Bases
-default,Products/Traditional Outdoor Furniture
-default,Products/Transitional Outdoor Furntiure
-default,Products/Two Seater
-default,Products/Wholesale Furniture
-default,Products/Woven Furniture
-default,Products/Woven Rattan
-default,Products/Woven Vinyl
-default,Products/Woven Wicker
+store,categories,page_title
+default,Products/Accessories ,Accessories 
+default,Products/Adirondack Furniture,Adirondack Furniture
+default,Products/Affordable Furniture,Affordable Furniture
+default,Products/Affordable Outdoor Furniture,Affordable Outdoor Furniture
+default,Products/Affordable Patio Furniture,Affordable Patio Furniture
+default,Products/Affordable Wicker Furniture,Affordable Wicker Furniture
+default,Products/All-Weather,All-Weather
+default,Products/All-Weather Fabrics,All-Weather Fabrics
+default,Products/All-Weather Furniture,All-Weather Furniture
+default,Products/All-Weather Outdoor Fabrics,All-Weather Outdoor Fabrics
+default,Products/All-Weather Outdoor Patio Furniture,All-Weather Outdoor Patio Furniture
+default,Products/All-Weather Resin,All-Weather Resin
+default,Products/All-Weather Wicker,All-Weather Wicker
+default,Products/All-Weather Wicker Furniture,All-Weather Wicker Furniture
+default,Products/Balcony Furniture,Balcony Furniture
+default,Products/Balcony Patio Sets,Balcony Patio Sets
+default,Products/Balcony Sets,Balcony Sets
+default,Products/Bar Furniture,Bar Furniture
+default,Products/Beach Chairs,Beach Chairs
+default,Products/Benches,Benches
+default,Products/Bistro Sets,Bistro Sets
+default,Products/Buy Furniture Online,Buy Furniture Online
+default,Products/Buy Wicker Furniture Online,Buy Wicker Furniture Online
+default,Products/Cabin Furniture,Cabin Furniture
+default,Products/Cafe Sets,Cafe Sets
+default,Products/Chairs,Chairs
+default,Products/Chaise,Chaise
+default,Products/Cheap Furniture,Cheap Furniture
+default,Products/Cheap Outdoor Furniture,Cheap Outdoor Furniture
+default,Products/Cheap Outdoor Wicker Furniture,Cheap Outdoor Wicker Furniture
+default,Products/Cheap Patio Furniture,Cheap Patio Furniture
+default,Products/Cheap Patio Furniture Sets,Cheap Patio Furniture Sets
+default,Products/Cheap Wicker Furniture,Cheap Wicker Furniture
+default,Products/Cheap Wicker Patio Furniture,Cheap Wicker Patio Furniture
+default,Products/Cheap Wicker Patio Furniture Sets,Cheap Wicker Patio Furniture Sets
+default,Products/Circular Seating,Circular Seating
+default,Products/Coastal Furniture,Coastal Furniture
+default,Products/Coastal Living Furniture,Coastal Living Furniture
+default,Products/Coastal Living Wicker Furniture,Coastal Living Wicker Furniture
+default,Products/Coastal Wicker Furniture,Coastal Wicker Furniture
+default,Products/Contemporary Furniture,Contemporary Furniture
+default,Products/Contemporary Wicker Furniture,Contemporary Wicker Furniture
+default,Products/Cottage Furniture,Cottage Furniture
+default,Products/Couches,Couches
+default,Products/Counters,Counters
+default,Products/Daybeds,Daybeds
+default,Products/Deck Chairs,Deck Chairs
+default,Products/Deck Furniture,Deck Furniture
+default,Products/Deep Seating,Deep Seating
+default,Products/Dining Set,Dining Set
+default,Products/Discount Furniture,Discount Furniture
+default,Products/Discount Outdoor Furniture,Discount Outdoor Furniture
+default,Products/Discount Patio Furniture,Discount Patio Furniture
+default,Products/Discount Sofas,Discount Sofas
+default,Products/Discount Wicker Furniture,Discount Wicker Furniture
+default,Products/Discount Wicker Patio Furniture,Discount Wicker Patio Furniture
+default,Products/Discount Wicker Sofas,Discount Wicker Sofas
+default,Products/End Tables,End Tables
+default,Products/Essentials,Essentials
+default,Products/Faux Rattan,Faux Rattan
+default,Products/Faux Wicker,Faux Wicker
+default,Products/Faux Wicker,Faux Wicker
+default,Products/Fine Furniture,Fine Furniture
+default,Products/Fine Wicker Furniture,Fine Wicker Furniture
+default,Products/Footrests,Footrests
+default,Products/Furniture,Furniture
+default,Products/Furniture Clearance,Furniture Clearance
+default,Products/Furniture Collections,Furniture Collections
+default,Products/Furniture Covers,Furniture Covers
+default,Products/Furniture Direct,Furniture Direct
+default,Products/Furniture for Sale,Furniture for Sale
+default,Products/Furniture Manufacturers,Furniture Manufacturers
+default,Products/Furniture Online,Furniture Online
+default,Products/Furniture Outlet,Furniture Outlet
+default,Products/Furniture Retailers,Furniture Retailers
+default,Products/Furniture Sales,Furniture Sales
+default,Products/Furniture Set of 4,Furniture Set of 4
+default,Products/Furniture Set of 6,Furniture Set of 6
+default,Products/Furniture Set of 8,Furniture Set of 8
+default,Products/Furniture Sets,Furniture Sets
+default,Products/Furniture Store,Furniture Store
+default,Products/Furniture Warehouse,Furniture Warehouse
+default,Products/Furniture World,Furniture World
+default,Products/Garden Furniture,Garden Furniture
+default,Products/Gazebos,Gazebos
+default,Products/Inexpensive Furniture,Inexpensive Furniture
+default,Products/Inexpensive Wicker Furniture,Inexpensive Wicker Furniture
+default,Products/Lawn & Garden,Lawn & Garden
+default,Products/Lawn Furniture,Lawn Furniture
+default,Products/Lounge Furniture,Lounge Furniture
+default,Products/Luxury Outdoor Furniture,Luxury Outdoor Furniture
+default,Products/Luxury Wicker Outdoor Furniture,Luxury Wicker Outdoor Furniture
+default,Products/Modern Furniture,Modern Furniture
+default,Products/Modern Outdoor Furniture,Modern Outdoor Furniture
+default,Products/Modern Patio Furniture,Modern Patio Furniture
+default,Products/Modern Sofas,Modern Sofas
+default,Products/Modern Wicker Furniture,Modern Wicker Furniture
+default,Products/Modern Wicker Patio Furniture,Modern Wicker Patio Furniture
+default,Products/Modular Furniture,Modular Furniture
+default,Products/Modular Seating,Modular Seating
+default,Products/Nautical Furniture,Nautical Furniture
+default,Products/Nautical Wicker Furniture,Nautical Wicker Furniture
+default,Products/Occasionals,Occasionals
+default,Products/Outdoor Balcony Furniture,Outdoor Balcony Furniture
+default,Products/Outdoor Balcony Patio Sets,Outdoor Balcony Patio Sets
+default,Products/Outdoor Chairs,Outdoor Chairs
+default,Products/Outdoor End Tables,Outdoor End Tables
+default,Products/Outdoor Essentials,Outdoor Essentials
+default,Products/Outdoor Furniture,Outdoor Furniture
+default,Products/Outdoor Furniture Clearance,Outdoor Furniture Clearance
+default,Products/Outdoor Furniture Collections,Outdoor Furniture Collections
+default,Products/Outdoor Furniture Retailers,Outdoor Furniture Retailers
+default,Products/Outdoor Living,Outdoor Living
+default,Products/Outdoor Modular Furniture,Outdoor Modular Furniture
+default,Products/Outdoor Patio Furniture,Outdoor Patio Furniture
+default,Products/Outdoor Patio Furniture Collections,Outdoor Patio Furniture Collections
+default,Products/Outdoor Patio Furniture Covers,Outdoor Patio Furniture Covers
+default,Products/Outdoor Patio Furniture for Sale,Outdoor Patio Furniture for Sale
+default,Products/Outdoor Patio Furniture Manufacturers,Outdoor Patio Furniture Manufacturers
+default,Products/Outdoor Patio Furniture Sets,Outdoor Patio Furniture Sets
+default,Products/Outdoor Patio Storage,Outdoor Patio Storage
+default,Products/Outdoor Patio Wholesale Furniture,Outdoor Patio Wholesale Furniture
+default,Products/Outdoor Patio Woven Furniture,Outdoor Patio Woven Furniture
+default,Products/Outdoor Screens,Outdoor Screens
+default,Products/Outdoor Seating,Outdoor Seating
+default,Products/Outdoor Tables and Bases,Outdoor Tables and Bases
+default,Products/Outdoor Two Seater,Outdoor Two Seater
+default,Products/Outdoor Wicker Essentials,Outdoor Wicker Essentials
+default,Products/Outside Furniture,Outside Furniture
+default,Products/Outside Patio Furniture,Outside Patio Furniture
+default,Products/Patio Chairs,Patio Chairs
+default,Products/Patio Furniture,Patio Furniture
+default,Products/Patio Furniture Clearance,Patio Furniture Clearance
+default,Products/Patio Sets,Patio Sets
+default,Products/Patio Wicker Furniture,Patio Wicker Furniture
+default,Products/Pool Furniture,Pool Furniture
+default,Products/Porch Furniture,Porch Furniture
+default,Products/Ratan Outdoor Furniture,Ratan Outdoor Furniture
+default,Products/Rattan Sunroom,Rattan Sunroom
+default,Products/Recycled Plastic,Recycled Plastic
+default,Products/Recycled Plastic Wicker,Recycled Plastic Wicker
+default,Products/Resin Rattan,Resin Rattan
+default,Products/Resin Wicker,Resin Wicker
+default,Products/Resort Collections,Resort Collections
+default,Products/Rocking Chairs,Rocking Chairs
+default,Products/Seating,Seating
+default,Products/Sectionals,Sectionals
+default,Products/Shabby Chic Furniture,Shabby Chic Furniture
+default,Products/Sleepers,Sleepers
+default,Products/Sofas,Sofas
+default,Products/Sun beds,Sun beds
+default,Products/Sunroom Furniture,Sunroom Furniture
+default,Products/Synthetic Rattan Outdoor Furniture,Synthetic Rattan Outdoor Furniture
+default,Products/Tables and Bases,Tables and Bases
+default,Products/Traditional Outdoor Furniture,Traditional Outdoor Furniture
+default,Products/Transitional Outdoor Furntiure,Transitional Outdoor Furntiure
+default,Products/Two Seater,Two Seater
+default,Products/Wholesale Furniture,Wholesale Furniture
+default,Products/Wholesale Wicker Furniture,Wholesale Wicker Furniture
+default,Products/Wicker Affordable Patio Furniture,Wicker Affordable Patio Furniture
+default,Products/Wicker All-Weather Fabrics,Wicker All-Weather Fabrics
+default,Products/Wicker Balcony Furniture,Wicker Balcony Furniture
+default,Products/Wicker Balcony Patio Sets,Wicker Balcony Patio Sets
+default,Products/Wicker Balcony Sets,Wicker Balcony Sets
+default,Products/Wicker Bar Furniture,Wicker Bar Furniture
+default,Products/Wicker Beach Chairs,Wicker Beach Chairs
+default,Products/Wicker Bistro Sets,Wicker Bistro Sets
+default,Products/Wicker Cabin Furniture,Wicker Cabin Furniture
+default,Products/Wicker Café Sets,Wicker Café Sets
+default,Products/Wicker Chairs ,Wicker Chairs 
+default,Products/Wicker Chaise,Wicker Chaise
+default,Products/Wicker Cottage Furniture,Wicker Cottage Furniture
+default,Products/Wicker Couches,Wicker Couches
+default,Products/Wicker Counters,Wicker Counters
+default,Products/Wicker Daybeds,Wicker Daybeds
+default,Products/Wicker Deck Furniture,Wicker Deck Furniture
+default,Products/Wicker Dining Sets,Wicker Dining Sets
+default,Products/Wicker Discount Outdoor Furniture,Wicker Discount Outdoor Furniture
+default,Products/Wicker End Tables,Wicker End Tables
+default,Products/Wicker Furniture,Wicker Furniture
+default,Products/Wicker Furniture Collections,Wicker Furniture Collections
+default,Products/Wicker Furniture Covers,Wicker Furniture Covers
+default,Products/Wicker Furniture for Sale,Wicker Furniture for Sale
+default,Products/Wicker Furniture Manufacturers,Wicker Furniture Manufacturers
+default,Products/Wicker Furniture Online,Wicker Furniture Online
+default,Products/Wicker Furniture Outlet,Wicker Furniture Outlet
+default,Products/Wicker Furniture Sales,Wicker Furniture Sales
+default,Products/Wicker Furniture Set of 3,Wicker Furniture Set of 3
+default,Products/Wicker Furniture Set of 5,Wicker Furniture Set of 5
+default,Products/Wicker Furniture Set of 7,Wicker Furniture Set of 7
+default,Products/Wicker Furniture Sets,Wicker Furniture Sets
+default,Products/Wicker Furniture Store,Wicker Furniture Store
+default,Products/Wicker Furniture Warehouse,Wicker Furniture Warehouse
+default,Products/Wicker Furniture World,Wicker Furniture World
+default,Products/Wicker Garden Furniture,Wicker Garden Furniture
+default,Products/Wicker Glider Seating,Wicker Glider Seating
+default,Products/Wicker Gliders,Wicker Gliders
+default,Products/Wicker Lawn and Garden,Wicker Lawn and Garden
+default,Products/Wicker Lawn Furniture,Wicker Lawn Furniture
+default,Products/Wicker Lounge Furniture,Wicker Lounge Furniture
+default,Products/Wicker Occasional Chairs,Wicker Occasional Chairs
+default,Products/Wicker Outdoor Chairs,Wicker Outdoor Chairs
+default,Products/Wicker Outdoor Furniture,Wicker Outdoor Furniture
+default,Products/Wicker Outdoor Furniture Clearance,Wicker Outdoor Furniture Clearance
+default,Products/Wicker Outdoor Furniture Collections,Wicker Outdoor Furniture Collections
+default,Products/Wicker Outdoor Furniture Retailers,Wicker Outdoor Furniture Retailers
+default,Products/Wicker Outdoor Living,Wicker Outdoor Living
+default,Products/Wicker Outdoor Patio Furniture,Wicker Outdoor Patio Furniture
+default,Products/Wicker Outdoor Seating,Wicker Outdoor Seating
+default,Products/Wicker Outside Furniture,Wicker Outside Furniture
+default,Products/Wicker Paito Furniture Sale,Wicker Paito Furniture Sale
+default,Products/Wicker Patio Chairs,Wicker Patio Chairs
+default,Products/Wicker Pool Furniture,Wicker Pool Furniture
+default,Products/Wicker Porch Furniture,Wicker Porch Furniture
+default,Products/Wicker Porch Swings,Wicker Porch Swings
+default,Products/Wicker Resort Collections,Wicker Resort Collections
+default,Products/Wicker Rocking Chairs,Wicker Rocking Chairs
+default,Products/Wicker Seating,Wicker Seating
+default,Products/Wicker Sectionals,Wicker Sectionals
+default,Products/Wicker Sleepers,Wicker Sleepers
+default,Products/Wicker Sofas,Wicker Sofas
+default,Products/Wicker Sun Beds,Wicker Sun Beds
+default,Products/Wicker Sunroom Furniture,Wicker Sunroom Furniture
+default,Products/Wicker Swivel Seating,Wicker Swivel Seating
+default,Products/Wicker Tables and Bases,Wicker Tables and Bases
+default,Products/Wicker Two Seaters,Wicker Two Seaters
+default,Products/Wicker Wholesalers,Wicker Wholesalers
+default,Products/Woven Furniture,Woven Furniture
+default,Products/Woven Rattan,Woven Rattan
+default,Products/Woven Vinyl,Woven Vinyl
+default,Products/Woven Wicker,Woven Wicker
+default,Products/Woven Wicker Furniture,Woven Wicker Furniture
+default,Products/Woven Wicker Vinyl,Woven Wicker Vinyl

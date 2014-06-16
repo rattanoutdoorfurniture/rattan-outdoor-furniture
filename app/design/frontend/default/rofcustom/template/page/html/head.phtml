@@ -132,6 +132,9 @@
                     };
                     jQuery.homeSlider.deferred  = null;
                     jQuery.homeSlider.timeout   = 5000;
+                    jQuery.homeSlider.stop      = function() {
+                        clearTimeout(jQuery.homeSlider.To);
+                    };
                     jQuery.homeSlider.ToFunc    = function() {
                         jQuery.homeSlider.slide();
                         jQuery.when(jQuery.homeSlider.deferred).done(function() {
