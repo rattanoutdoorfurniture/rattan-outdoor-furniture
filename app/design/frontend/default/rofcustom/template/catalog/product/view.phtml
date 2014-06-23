@@ -88,7 +88,11 @@
 
 <?php echo $this->getChildHtml('media') ?>
 
+<?php if(preg_match("/\<img.*\>/",$this->getChildHtml('media'))): ?>
 <section id="product-details" class="nine columns">
+<?php else: ?>
+<section id="product-details" class="nine columns offset-by-three-important offset-by-half by-margin">
+<?php endif; ?>
 
     <!-- Product Title ----------------------------------------------------------------->
 
@@ -221,7 +225,7 @@
         </div>
     </section>
     <section id="product-tabs-special" class="product-tab">
-        <h2 class="product-tab-title"><a href="#product-tabs-special">Special</a></h2>
+        <h2 class="product-tab-title"><a href="#product-tabs-special">Shipping & Returns</a></h2>
         <div class="product-tab-body">
             <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('product-special')->toHtml(); ?>
         </div>

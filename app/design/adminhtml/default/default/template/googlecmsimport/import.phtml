@@ -75,16 +75,125 @@
 //            }
 //        }
 
+
+        /**
+         * Parse Word Documents (WORKING, currently docx)
+         */
+        /*
         $dir = Mage::getBaseDir("media") . "/MagentoImport";
-        $files = glob($dir."/locations/*/*.docx");
-        //echo var_export($files, true);
+        */
+        //$files = glob($dir."/locations/*/*.docx");
+        /*
+        echo var_export($files, true);
         $wordx = array();
         $wordx[$files[0]] = $this->getModel()->parseWordX($files[0]);
         echo "<pre>";
         echo var_export($wordx,true);
         echo "</pre>";
-
+        */
         ?>
     </div>
 <?php endif; ?>
+    <div>
+    <?php
+
+    /**
+     * Parse .txt from .doc to .csv
+     *
+     * Parse Word Docs downloaded as txt files (from google docs, done manually for now,
+     * but everything is in place to get the files directly from google drive), and write
+     * their contents to a single csv file. This parsing should work just the same on cms pages.
+     * There have been paragraph tags with the class 'box-blurb' wrapped around each paragraph of
+     * content. Also, commas have be encoded as &comma; which should work, but may be an issue.
+     */
+
+    $textFiles = glob(Mage::getBaseDir("var")."/MagentoImport/Products/Descriptions/RattanOutdoorFurniture*.txt");
+    $descsStr  = '';
+    foreach($textFiles as $textFile) {
+        $descsStr .= file_get_contents($textFile) .PHP_EOL . "________________".PHP_EOL;
+    }
+    $descs     = preg_split("/_+[\n\r]/",$descsStr);
+    $descArr   = array();
+    $props     = array();
+    $title     = '';
+    $unaccent  = array("á"=>"a","Á"=>"A","à"=>"a","À"=>"A","ă"=>"a","Ă"=>"A","â"=>"a","Â"=>"A","å"=>"a","Å"=>"A","ã"=>"a","Ã"=>"A","ą"=>"a","Ą"=>"A","ā"=>"a","Ā"=>"A","ä"=>"ae","Ä"=>"AE","æ"=>"ae","Æ"=>"AE","ḃ"=>"b","Ḃ"=>"B","ć"=>"c","Ć"=>"C","ĉ"=>"c","Ĉ"=>"C","č"=>"c","Č"=>"C","ċ"=>"c","Ċ"=>"C","ç"=>"c","Ç"=>"C","ď"=>"d","Ď"=>"D","ḋ"=>"d","Ḋ"=>"D","đ"=>"d","Đ"=>"D","ð"=>"dh","Ð"=>"Dh","é"=>"e","É"=>"E","è"=>"e","È"=>"E","ĕ"=>"e","Ĕ"=>"E","ê"=>"e","Ê"=>"E","ě"=>"e","Ě"=>"E","ë"=>"e","Ë"=>"E","ė"=>"e","Ė"=>"E","ę"=>"e","Ę"=>"E","ē"=>"e","Ē"=>"E","ḟ"=>"f","Ḟ"=>"F","ƒ"=>"f","Ƒ"=>"F","ğ"=>"g","Ğ"=>"G","ĝ"=>"g","Ĝ"=>"G","ġ"=>"g","Ġ"=>"G","ģ"=>"g","Ģ"=>"G","ĥ"=>"h","Ĥ"=>"H","ħ"=>"h","Ħ"=>"H","í"=>"i","Í"=>"I","ì"=>"i","Ì"=>"I","î"=>"i","Î"=>"I","ï"=>"i","Ï"=>"I","ĩ"=>"i","Ĩ"=>"I","į"=>"i","Į"=>"I","ī"=>"i","Ī"=>"I","ĵ"=>"j","Ĵ"=>"J","ķ"=>"k","Ķ"=>"K","ĺ"=>"l","Ĺ"=>"L","ľ"=>"l","Ľ"=>"L","ļ"=>"l","Ļ"=>"L","ł"=>"l","Ł"=>"L","ṁ"=>"m","Ṁ"=>"M","ń"=>"n","Ń"=>"N","ň"=>"n","Ň"=>"N","ñ"=>"n","Ñ"=>"N","ņ"=>"n","Ņ"=>"N","ó"=>"o","Ó"=>"O","ò"=>"o","Ò"=>"O","ô"=>"o","Ô"=>"O","ő"=>"o","Ő"=>"O","õ"=>"o","Õ"=>"O","ø"=>"oe","Ø"=>"OE","ō"=>"o","Ō"=>"O","ơ"=>"o","Ơ"=>"O","ö"=>"oe","Ö"=>"OE","ṗ"=>"p","Ṗ"=>"P","ŕ"=>"r","Ŕ"=>"R","ř"=>"r","Ř"=>"R","ŗ"=>"r","Ŗ"=>"R","ś"=>"s","Ś"=>"S","ŝ"=>"s","Ŝ"=>"S","š"=>"s","Š"=>"S","ṡ"=>"s","Ṡ"=>"S","ş"=>"s","Ş"=>"S","ș"=>"s","Ș"=>"S","ß"=>"SS","ť"=>"t","Ť"=>"T","ṫ"=>"t","Ṫ"=>"T","ţ"=>"t","Ţ"=>"T","ț"=>"t","Ț"=>"T","ŧ"=>"t","Ŧ"=>"T","ú"=>"u","Ú"=>"U","ù"=>"u","Ù"=>"U","ŭ"=>"u","Ŭ"=>"U","û"=>"u","Û"=>"U","ů"=>"u","Ů"=>"U","ű"=>"u","Ű"=>"U","ũ"=>"u","Ũ"=>"U","ų"=>"u","Ų"=>"U","ū"=>"u","Ū"=>"U","ư"=>"u","Ư"=>"U","ü"=>"ue","Ü"=>"UE","ẃ"=>"w","Ẃ"=>"W","ẁ"=>"w","Ẁ"=>"W","ŵ"=>"w","Ŵ"=>"W","ẅ"=>"w","Ẅ"=>"W","ý"=>"y","Ý"=>"Y","ỳ"=>"y","Ỳ"=>"Y","ŷ"=>"y","Ŷ"=>"Y","ÿ"=>"y","Ÿ"=>"Y","ź"=>"z","Ź"=>"Z","ž"=>"z","Ž"=>"Z","ż"=>"z","Ż"=>"Z","þ"=>"th","Þ"=>"Th","µ"=>"u","а"=>"a","А"=>"a","б"=>"b","Б"=>"b","в"=>"v","В"=>"v","г"=>"g","Г"=>"g","д"=>"d","Д"=>"d","е"=>"e","Е"=>"e","ё"=>"e","Ё"=>"e","ж"=>"zh","Ж"=>"zh","з"=>"z","З"=>"z","и"=>"i","И"=>"i","й"=>"j","Й"=>"j","к"=>"k","К"=>"k","л"=>"l","Л"=>"l","м"=>"m","М"=>"m","н"=>"n","Н"=>"n","о"=>"o","О"=>"o","п"=>"p","П"=>"p","р"=>"r","Р"=>"r","с"=>"s","С"=>"s","т"=>"t","Т"=>"t","у"=>"u","У"=>"u","ф"=>"f","Ф"=>"f","х"=>"h","Х"=>"h","ц"=>"c","Ц"=>"c","ч"=>"ch","Ч"=>"ch","ш"=>"sh","Ш"=>"sh",'щ' => 'sch', 'Щ' => 'sch', 'ъ' => '', 'Ъ' => '', "ы"=>"y","Ы"=>"y",'ь' => '', 'Ь' => '', "э"=>"e","Э"=>"e","ю"=>"ju","Ю"=>"ju","я"=>"ja",'Я' => 'ja');
+    function cleanCsvValue(&$lval,$lkey, $unaccent) {
+        $lval = str_replace(array_keys($unaccent), array_values($unaccent), $lval);
+        $lval = preg_replace('/^([^\d]*)(\d)\-/',"$1$2 ",$lval);
+        return filter_var($lval, FILTER_SANITIZE_SPECIAL_CHARS, array(FILTER_FLAG_ENCODE_LOW,FILTER_FLAG_ENCODE_HIGH));
+    }
+    foreach($descs as $key=>$desc) {
+        $descArr[$key] = array(
+            'full'  => $desc,
+            'lines' => preg_split(
+                '/[\n\r]+/',
+                $desc
+            )
+        );
+        $lines = array_filter($descArr[$key]['lines']);
+        array_walk($lines,"cleanCsvValue",$unaccent);
+        $title = filter_var(array_shift($lines),FILTER_SANITIZE_SPECIAL_CHARS,FILTER_FLAG_STRIP_HIGH);
+        $props[$key]              = array();
+        $props[$key]["title"]     = $title;
+        $props[$key]["content"]   = array();
+        $props[$key]["keywords"]  = array();
+        $contentComplete = false;
+        foreach($lines as $prop) {
+            if($contentComplete) {
+                $keyword = preg_filter('/^([^\:]+)\:.*$/', '$1',$prop);
+                if(!is_null($keyword)) {
+                    $props[$key]['keywords'][] = $keyword;
+                }
+            } else {
+                if(preg_match('/^\(\d+\)$/',trim($prop))) {
+                    $contentComplete = true;
+                    continue;
+                }
+                if(!preg_match('/\'*^\s*\'*$/',trim($prop))) {
+                    $props[$key]['content'][] = trim($prop);
+                }
+            }
+        }
+    }
+    $props = array_filter($props);
+    usort($props, function($a,$b) {
+        return strcasecmp($a['title'],$b['title']);
+    });
+    $csv = 'title,content,keywords'.PHP_EOL;
+    foreach($props as $page) {
+        if(!(strlen($page['title'])>0&&count($page['content'])>0&&count($page['keywords'])>0)) continue;
+        $csv .= "\"".$page['title']."\",";
+        $csv .= "\"";
+        foreach($page['content'] as $paragraph) {
+            $csv .= "<p>"
+                 .  htmlentities($paragraph,ENT_QUOTES) // str_replace(",","&comma;",htmlentities($paragraph,ENT_QUOTES))
+                 .  "</p>";
+        }
+        $csv .= "\",";
+        $csv .= "\"" . implode(", ",explode(" ",implode(" ",$page['keywords']))) . "\"";
+        $csv .= PHP_EOL;
+    }
+    $result    = false;
+    $resultMsg = '';
+    try {
+        $result = file_put_contents(
+            Mage::getBaseDir('var')."/MagentoImport/Products/Descriptions/Descriptions.csv",
+            $csv
+        );
+    } catch(Exception $e) {
+        $resultMsg = $e->getMessage();
+    }
+    ?>
+        <div>Files Read: <?php echo count($textFiles); ?><br>
+            <?php foreach($textFiles as $textFile){
+                echo $textFile . "<br/>";
+            }
+            ?>
+        </div>
+        <div>Records Recorded: <?php echo count($props); ?></div>
+        <div>File Contents Written: <?php echo $result ?
+                'Successfully':
+                'Unsuccessfully<br>Message: '.$resultMsg;
+        ?></div>
+    </div>
 </div>

@@ -49,6 +49,10 @@ a[href="javascript:void(0)"],
     margin-left: 120px !important;
 }
 
+.offset-by-three-important.by-margin {
+    padding-left: 180px !important;
+}
+
 .hashborder {
     min-height: 40px;
     position: relative;
