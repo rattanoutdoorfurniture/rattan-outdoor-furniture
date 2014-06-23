@@ -40,7 +40,8 @@ class Rofcustom_Catalog_Model_Convert_Adapter_Category
     {
         if (empty($importData['store'])) {
             if (!is_null($this->getBatchParams('store'))) {
-                $store = $this->getStoreById($this->getBatchParams('store'));
+                //$store = $this->getStoreById($this->getBatchParams('store'));
+								$store = $this->getStoreByCode("default"); //$importData['store']);
             } else {
                 $message = Mage::helper('catalog')->__('Skip import row, required field "%s" not defined', 'store');
                 Mage::throwException($message);
