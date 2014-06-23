@@ -92,6 +92,8 @@ class Rofcustom_Catalog_Model_Convert_Adapter_Category
         $path = $rootPath;
         $namePath = '';
 
+        $description = isset($importData['description']) ? trim($importData['description']) : '';
+
         $i = 1;
         $categories = explode('/', $importData['categories']);
         foreach ($categories as $catName) {
@@ -108,6 +110,7 @@ class Rofcustom_Catalog_Model_Convert_Adapter_Category
                     ->setIsAnchor(1)
                     ->setDisplayMode($dispMode)
                     ->save();
+                $cat->getResource()->saveAttribute($cat, $description);
                 $cache[$namePath] = $cat;
             }
             $catId = $cache[$namePath]->getId();
