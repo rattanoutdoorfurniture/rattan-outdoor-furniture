@@ -40,11 +40,44 @@
     font-family: 'FuturaStd-BookOblique';
 }
 
+#category-banner-blurb-text.expanded {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+#category-banner-blurb-text p {
+    display: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0;
+    width: 335px;
+    height: 22px;
+    max-height: 22px;
+}
+
+#category-banner-blurb-text p:first-child {
+    display: block;
+}
+
+#category-banner-blurb-text.expanded p {
+    display: block;
+    white-space: normal;
+    overflow: visible;
+    height: auto;
+    width: 300px;
+    max-height: none;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
 #category-banner-blurb-btn {
-    float: left;
+    position: absolute;
+    margin: 0;
+    bottom: 10px;
+    right: 15px;
     width: 101px;
     height: 30px;
-    margin: 0 auto;
     padding-right: 3%;
     border: none;
     border-radius: 0;

@@ -58,10 +58,10 @@
         <img id="category-banner-img" src="<?php echo $_imgUrl; ?>" alt="<?php echo $this->htmlEscape($_category->getPageTitle()); ?>" />
     </div>
     <aside id="category-banner-blurb">
-        <h2 id="category-banner-blurb-title"><?php echo $_title; ?></h2>
+        <h2 id="category-banner-blurb-title"><?php echo $_helper->categoryAttribute($_category, $_category->getName(), 'name'); ?></h2>
         <div id="category-banner-blurb-sub" class="clearfix">
             <span id="category-banner-blurb-text"><?php echo $_helper->categoryAttribute($_category, $this->getCurrentCategory()->getDescription(), 'description') ?></span>
-            <button id="category-banner-blurb-btn">Buy Now</button>
+            <button id="category-banner-blurb-btn" onclick="jQuery(this).prev().toggleClass('expanded');">Read More</button>
         </div>
     </aside>
 </div>

@@ -122,6 +122,14 @@
         $lval = preg_replace('/^([^\d]*)(\d)\-/',"$1$2 ",$lval);
         return filter_var($lval, FILTER_SANITIZE_SPECIAL_CHARS, array(FILTER_FLAG_ENCODE_LOW,FILTER_FLAG_ENCODE_HIGH));
     }
+    function multi_unique($array) {
+        foreach ($array as $k=>$na)
+            $new[$k] = serialize($na);
+        $uniq = array_unique($new);
+        foreach($uniq as $k=>$ser)
+            $new1[$k] = unserialize($ser);
+        return ($new1);
+    }
     foreach($descs as $key=>$desc) {
         $descArr[$key] = array(
             'full'  => $desc,
@@ -159,6 +167,7 @@
     usort($props, function($a,$b) {
         return strcasecmp($a['title'],$b['title']);
     });
+    $props = multi_unique($props);
     $csv = 'title,content,keywords'.PHP_EOL;
     foreach($props as $page) {
         if(!(strlen($page['title'])>0&&count($page['content'])>0&&count($page['keywords'])>0)) continue;
