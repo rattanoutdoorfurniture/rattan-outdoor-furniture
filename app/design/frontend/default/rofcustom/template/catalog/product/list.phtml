@@ -40,7 +40,7 @@
             </section>
             <section class="category-product-collection"><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></section>
             <?php echo $this->getPriceHtml($_product, true) ?>
-            <button class="category-product-add" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><?php echo $this->__("Add to Cart")?></button>
+            <button class="category-product-add" onclick="setLocation('<?php echo $this->helper('checkout/cart')->getAddUrl($_product) ?>')"><?php echo $this->__("Add to Cart")?></button>
         </a>
     </section>
     <?php endforeach; ?>
@@ -81,7 +81,7 @@
             <section class="category-product-collection"><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></section>
             <?php echo $this->getPriceHtml($_product, true) ?>
             <!--            <aside class="category-product-price">$1,899</aside>-->
-            <button class="category-product-add" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><?php echo $this->__("Add to Cart")?></button>
+            <button class="category-product-add" onclick="setLocation('<?php echo $this->helper('checkout/cart')->getAddUrl($_product) ?>')"><?php echo $this->__("Add to Cart")?></button>
         </a>
     </section>
   <?php endforeach ?>

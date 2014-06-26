@@ -70,7 +70,15 @@ Furniture web site project.
 
 ##Change Log:##
 
+###2014-06-26###
+- Got the rest of the info pages into the site. I set up the about us page. set footer links, to piont to all the info apges. made a "More Info" page for the links I didn't know where else to put, so the footer didn't get too huge, I added pages linked in the footer to this list too. I also added those few more descriptions Sadie gave me. All products have descriptions now. I did a little more work on the locations, but mostly I worked on setting up all those info pages. I'll commit the new code and that will fix a lot of style issues currently on dev.
+
+###2014-06-25###
+- wrapped up descriptions stuff. Styled out the Blog. Began styling on locations, needs more work.
+
 ###2014-06-24###
+- due to the fact that the color has to be selected, you cannot directly add the product to the cart from the category page. so i've switched the Add To Cart button on the category pages to a View More button.
+- Lot more edits finishing up descriptions and keywords. This is a rather large update. It includes the advanced (upgraded) category import. Also it fixes the descriptions on the category pages. Fixes to the meta keywords. more importantly, the page titles, which uses the meta keywords, or as many as i could. the meta descriptions are in place, and this will fix the category import from using the default one for all categories. This also includes the "Read More" button, and the toggle functionality to show the full category text. with the page heading above it, great SEO setup. After sync, run full import (category and products) from the server. Category included in upload "Catalog_Import - Categories (13).csv", products can be run from upload. Other notes have been added to the README. I'll add this note before pushing, I'm trying to be better about taking notes.
 - keywords on both products and categories have the keywords, separated one word each by a comma. duplicates removed. includes all categories in the product. also, the titles have been set, there they're all prefixed by Rattan Outdoor Furniture. The products have their main category appended to the title, which looked best, while including those keywords.
 - added description to blurb, truncated, with "Read More" button that shows full description.
 - In google drive, the one that does the import is Catalog_Import, with a separate sheet for linkage, stats, products, categories, and descriptions; there's a copy of descriptions, stats and linkage in a Category Product Linkage spreadsheet, for others to edit.

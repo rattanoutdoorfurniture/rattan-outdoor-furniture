@@ -26,6 +26,20 @@ a[href="javascript:void(0)"],
     display: none !important;
 }
 
+.std {
+    position: relative;
+    clear: both;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.box-content p {
+    text-align: justify;
+    padding: 0 1.2em;
+}
+
 /* #Page Styles
 ================================================== */
 

@@ -120,6 +120,7 @@
     height: 16px;
     display: inline-block;
     background: transparent url('../images/footer-social-icon.png') 0 0 no-repeat;
+    text-indent: -10000px;
 }
 .footer-social-icon.fb {
     background-position: 0px 0px;

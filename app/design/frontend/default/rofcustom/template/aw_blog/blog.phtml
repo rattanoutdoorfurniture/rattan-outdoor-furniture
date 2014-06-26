@@ -1,30 +1,41 @@
-<?php $posts = $this->getPosts(); ?>
-
-<div id="messages_product_view">
-  <?php Mage::app()->getLayout()->getMessagesBlock()->setMessages(Mage::getSingleton('customer/session')->getMessages(true)); ?>
-  <?php echo Mage::app()->getLayout()->getMessagesBlock()->getGroupedHtml(); ?> </div>
+<div class="page-title sixteen columns">
+    <h1 id="page-heading"><?php echo $this->__('Blog - Rattan Outdoor Furniture') ?></h1>
+    <?php if(Mage::app()->getLayout()->getMessagesBlock()): ?>
+        <?php Mage::app()->getLayout()->getMessagesBlock()->setMessages(Mage::getSingleton('customer/session')->getMessages(true)); ?>
+        <?php echo Mage::app()->getLayout()->getMessagesBlock()->getGroupedHtml(); ?>
+        <script type="text/javascript">
+            setTimeout(function() {
+                jQuery("ul.messages").slideUp("slow");
+            }, 5000);
+        </script>
+    <?php endif; ?>
+</div>
 <?php /*?> <?php echo $this->getChildHtml('aw_blog_comments_toolbar'); ?><?php */?>
+<?php $posts = $this->getPosts(); ?>
 <?php foreach ($posts as $post): ?>
-<div class="postWrapper">
-  <div class="postTitle">
-    <h2><a href="<?php echo $post->getAddress(); ?>" ><?php echo $post->getTitle(); ?></a></h2>
-    <h3><?php echo $post->getCreatedTime(); ?></h3>
-  </div>
-  <div class="postContent"><?php echo $post->getPostContent(); ?></div>
-  <?php echo $this->getBookmarkHtml($post) ?>
-<?php /*?>  <div class="tags"><?php echo $this->getTagsHtml($post) ?></div><?php */?>
-  <div class="post-details">
-    <table>
-      <tr>
-        <td><?php if ($this->getCommentsEnabled()): ?>
-        <i class="icon-comment"></i>  <?php echo $post->getCommentCount(); ?> <a href="<?php echo $post->getAddress(); ?>#commentBox" ><?php echo $this->__("Comments"); ?> </a></td>
-        <td>
-          <?php endif; ?>
-<i class="icon-user" style="margin-right:7px;"></i><?php echo $post->getUser(); ?></td>
-        <td class="first-bg"><a href="<?php echo $post->getAddress(); ?>" style="color:#fff; font-style:italic;"><?php echo $this->__("Read more"); ?></a></td>
-      </tr>
-    </table>
-  </div>
+<div class="account-box box-blog-post fourteen columns offset-by-one by-margin add-bottom">
+    <div class="account-box-border"></div>
+    <div class="account-box-inner">
+        <div class="box-head">
+            <h2><a href="<?php echo $post->getAddress(); ?>" ><?php echo $post->getTitle(); ?></a></h2>
+            <h3 class="box-head-timestamp"><?php echo $post->getCreatedTime(); ?></h3>
+        </div>
+        <div class="postContent">
+            <?php echo $post->getPostContent(); ?></div>
+            <?php echo $this->getBookmarkHtml($post) ?>
+            <?php /*?>  <div class="tags"><?php echo $this->getTagsHtml($post) ?></div><?php */?>
+        <div class="post-details row">
+            <?php if($this->getCommentsEnabled()): ?>
+            <i class="icon-comment"></i>
+            <?php echo $post->getCommentCount(); ?>
+            <a href="<?php echo $post->getAddress(); ?>#commentBox" ><?php echo $this->__("Comments"); ?></a>
+            <?php endif; ?>
+            <!-- -------------------------------- REMOVE USER (POST AUTHOR) --------------------------------- -->
+            <!-- <i class="icon-user" style="margin-right:7px;"></i><?php echo $post->getUser(); ?> --------- -->
+            <a class="read-more btn" href="<?php echo $post->getAddress(); ?>"><?php echo $this->__("Read more"); ?></a>
+        </div>
+    </div>
+    <div class="account-box-border"></div>
 </div>
 <?php endforeach; ?>
 <?php /*?> <?php echo $this->getChildHtml('aw_blog_comments_toolbar'); ?><?php */?>

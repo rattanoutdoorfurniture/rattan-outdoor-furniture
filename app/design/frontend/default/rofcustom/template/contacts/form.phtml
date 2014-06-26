@@ -44,7 +44,8 @@
             <p class="required"><?php echo $this->__('* Required Fields') ?></p>
         </div>
         <form action="<?php echo $this->getFormAction(); ?>" id="contactForm" method="post" class="remove-bottom self-clear">
-            <ul class="form-list box-blurb">
+            <div id="content-contact-us"><?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('contact-us-blurb')->toHtml(); ?></div>
+            <ul id="form-list-contact-us" class="form-list">
                 <li class="fields">
                     <div class="field">
                         <div class="input-box">
