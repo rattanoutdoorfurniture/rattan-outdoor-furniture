@@ -5,8 +5,8 @@
         <div class="box-head">
             <h2 class="cms-widget-state-list-title">
             <?php if(stristr($_SERVER["REQUEST_URI"],$this->getState())===false): ?>
-                <a href="/locations/<?php echo $this->getState(); ?>"><?php echo $this->getTitle(); ?></a>
-            <?php else: echo $this->getTitle(); endif; ?>
+                <a href="/locations/<?php echo $this->getState(); ?>"><?php echo ucwords(str_replace("-"," ",$this->getTitle())); ?></a>
+            <?php else: echo ucwords(str_replace("-"," ",$this->getTitle())); endif; ?>
             </h2>
         </div>
         <div class="box-content">

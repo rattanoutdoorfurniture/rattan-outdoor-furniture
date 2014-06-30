@@ -40,6 +40,43 @@ a[href="javascript:void(0)"],
     padding: 0 1.2em;
 }
 
+@-webkit-keyframes ease-blink {
+    0% {-webkit-opacity: 1.0;}
+    40% {-webkit-opacity: 0.5;}
+    50% {-webkit-opacity: 0.0;}
+    60% {-webkit-opacity: 0.5;}
+}
+@-moz-keyframes ease-blink {
+    0% {-moz-opacity: 1.0;}
+    40% {-moz-opacity: 0.5;}
+    50% {-moz-opacity: 0.0;}
+    60% {-moz-opacity: 0.5;}
+}
+@-o-keyframes ease-blink {
+    0% {-o-opacity: 1.0;}
+    40% {-o-opacity: 0.5;}
+    50% {-o-opacity: 0.0;}
+    60% {-o-opacity: 0.5;}
+}
+@keyframes ease-blink {
+     0% {opacity: 1.0;}
+    40% {opacity: 0.5;}
+    50% {opacity: 0.0;}
+    60% {opacity: 0.5;}
+}
+.ease-loading {
+    -webkit-animation: ease-blink 3s linear 2s infinite alternate;
+    -moz-animation: ease-blink 3s linear 2s infinite alternate;
+    -o-animation: ease-blink 3s linear 2s infinite alternate;
+    animation: ease-blink 3s linear 2s infinite alternate;
+    text-align: center !important;
+    text-transform: lowercase;
+    font-family: "Tahoma", Helvetica;
+    color: #888;
+    font-size: 22px;
+    font-variant: small-caps;
+}
+
 /* #Page Styles
 ================================================== */
 

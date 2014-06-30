@@ -221,13 +221,15 @@
     <section id="product-tabs-faq" class="product-tab">
         <h2 class="product-tab-title"><a href="#product-tabs-faq">FAQ & Help</a></h2>
         <div class="product-tab-body">
-            <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('product-faq')->toHtml(); ?>
+            <p class="ease-loading">Loading...</p>
+            <?php // echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('product-faq')->toHtml(); ?>
         </div>
     </section>
     <section id="product-tabs-special" class="product-tab">
         <h2 class="product-tab-title"><a href="#product-tabs-special">Shipping & Returns</a></h2>
         <div class="product-tab-body">
-            <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('product-special')->toHtml(); ?>
+            <p class="ease-loading">Loading...</p>
+            <?php // echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('product-special')->toHtml(); ?>
         </div>
     </section>
     <section id="product-tabs-reviews" class="product-tab">
@@ -237,28 +239,6 @@
             <p></p>
             <p><strong>Reviews are curretly unavailable.</strong></p>
             <p>This feature will be available in the near future, so check back soon for reviews.</p>
-            <script type="text/javascript">
-            <!-- // Hide script from older browsers
-                if(location.hash) {
-                    (function($) {
-                        $(location.hash).parents("#product-tabs").find(".product-tab").removeClass("active").end().addClass("active");
-                    })(jQuery);
-                }
-                function addToFavorites() {
-                    url = "<?php echo $url; ?>";
-                    title = document.title.toString();
-                    if(window.sidebar){
-                        window.sidebar.addPanel(title, url, "");
-                    } else if(document.all){
-                        window.external.AddFavorite(url, title);
-                    } else if(window.opera && window.print){
-                        alert('Press ctrl+D to bookmark (Command+D for macs) after you click Ok');
-                    } else if(window.chrome){
-                        alert('Press ctrl+D to bookmark (Command+D for macs) after you click Ok');
-                    }
-                }
-            // -->
-            </script>
             <p>You can <a href="javascript:addToFavorites();">bookmark</a> this page and be brought right back to this reviews section.</p>
         </div>
     </section>

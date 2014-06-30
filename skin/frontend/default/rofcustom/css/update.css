@@ -271,6 +271,21 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
 
     /* State / City Widget Styles */
 
+    .account-box.fourteen.columns + p + .cms-widget-state-list {
+        width: 85.416666666666666666666666666667%;
+        margin-left: 6.25%;
+    }
+
+    .cms-widget-state-list {
+        clear: left;
+    }
+
+    .cms-widget-state-list .box-head > * {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     .cms-widget-state-list .account-box-inner {
         overflow: hidden !important;
     }

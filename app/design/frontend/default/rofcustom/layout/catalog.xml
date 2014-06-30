@@ -187,11 +187,14 @@ Product view
             <action method="removeItem"><type>remote_js</type><name>https://code.jquery.com/jquery-2.1.0.js</name><params/><if/></action>
             <action method="removeItem"><type>js</type><name>jquery/noconflict.js</name><params/><if/></action>
             <action method="removeItem"><type>js</type><name>jquery/modernizr.js</name><params/><if/></action>
+            <action method="addJs"><script>lightboxes/jQuery/1.7.1/jquery.min.js</script></action>
+            <action method="addJs"><script>lightboxes/no-conflict.js</script></action>
             <action method="addItem"><type>js</type><name>jquery/modernizr.js</name><params/><if/></action>
             <action method="addJs"><script>varien/product.js</script></action>
             <action method="addJs"><script>varien/configurable.js</script></action>
             <action method="addJs"><script>varien/configurable.js</script></action>
             <!--<action method="addItem"><type>skin_js</type><name>js/default-options.js</name><params/><if/></action>-->
+            <action method="addItem"><type>skin_js</type><name>js/products.js</name><params/><if/></action>
 
             <action method="addItem"><type>js_css</type><name>calendar/calendar-win2k-1.css</name><params/><!--<if/><condition>can_load_calendar_js</condition>--></action>
             <action method="addItem"><type>js</type><name>calendar/calendar.js</name><!--<params/><if/><condition>can_load_calendar_js</condition>--></action>

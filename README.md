@@ -28,22 +28,22 @@ Furniture web site project.
 - Abstract Product_View_Options_Type_Select logic from the Magento core. This should extend the core, which I could not get to work today.
 
 - Handle global messages. Standardize?
-- Create new logo image. The current one is visually off-center due to the (TM) mark. (Just generate a new one with padding on the left).
 - Setup email sending from scripts on the server (for password reset, account confirm, and a whole bunch of other stuff).
 - Fix issue where the forms (login and register) try to validate inputs on non-submit buttons. like back and continue on login/register.
 - Look into Facebook connect. The Connect-with-Facebook button on the login page doesn't do anything for now. This would be an excellent feature.
 - Product reviews (just remove the reviews section for now.)
-- Create all sub-category pages. These are going to be based on keyword lists
-- Create all products for all sub-category pages. Attach images, details, price, color, and inventory.
 - If we're making collections pages, which we should, a link to the collection page for each product should be on the product page. like "View Collection" or something.
 - Reset secure URL for checkout when going live (this obviously fails on an unseccured, local connection.)
-- Add To Cart button on the category page. We'll have to decide how we're gonna handle the colors for this. I think it may be best to redirect them to the product page, with attention on the color.
-- Shipping Methods waiting for destination address before displaying options (which should not be dependant on this).
 - Work on form validation in the checkout. This should not try to validate fields that the user has not yet tried to enter data into.
 - Each product will have 4 images, not 3. The main image should not be re-used in the thumbnail section. (Really weird when cycling through the photos to see the same one twice.)
 - Collections section. Like Products, but a top-level category that is called collections, and each collection is a sub-category of that, and all products of a collection (the site [skinny] viewable ones anyway). This does not have to be added to the main menu, but could be. It could also replace the "related" products on the category page (cause that's kind of what a category page is already), so have a "Collections" section below the lounger results, where it would list 4 collections, going to that collection page.
 
 
+- [DONE]     Add To Cart button on the category page. We'll have to decide how we're gonna handle the colors for this. I think it may be best to redirect them to the product page, with attention on the color.
+- [DONE]     Create all sub-category pages. These are going to be based on keyword lists
+- [DONE]     Create all products for all sub-category pages. Attach images, details, price, color, and inventory.
+- [DONE]     Create new logo image. The current one is visually off-center due to the (TM) mark. (Just generate a new one with padding on the left).
+- [DONE]     Shipping Methods waiting for destination address before displaying options (which should not be dependant on this).
 - [DONE]     Home Slider Functionality
 - [DONE]     Global search functionality
 - [DONE]     Global Search bug (forum suggest might be a magento 1.8 bug, look more into solutions, might be something simple).
@@ -69,6 +69,12 @@ Furniture web site project.
 
 
 ##Change Log:##
+
+###2014-06-30###
+- Fix Info Pages. Add States. Fix some styles. I had to fix those info pages as mentioned in the last note, as they were overwritten by the location import. I took a little while yesterday (sunday) and entered about half, and started early this morning and finished entering the rest. I moved on to the State pages. Which i did not include in the location import cause i didn't have them from sadie to start with, and it would have complicated things a little. So I decided instead of adding a parser for the states, for now I will just enter them there's only 50. So that's what I've done. Adding a parser for it won't be too difficult, but isn't worth getting hung up on at this point if i don't have to. So I added those. I had to fix a few styles around the site, mostly for the state pages.
+
+###2014-06-27###
+- Work on importing and updating the location pages. Lots of work done with this. Very progressive, uses some technologies from the google import script to download the content right from google to run the import script. This ended up being the most efficient system, but getting it set, and figuring out how to make it work best, took a while to figure out. There are multiple positives here, it is effectively using the end routine for the google import. It successfully updated all the location pages with correct style (as in paragraph separation, which reading from the Word doc was giving errors). And this process is easily repeatable to update content in the future, and doesn't have to start from the beginning each time. Unfortunately, I had not taken into account the new info pages, and therefor the location pages over-wrote those pages. Which just sucks. So I have to enter those back in there.
 
 ###2014-06-26###
 - Got the rest of the info pages into the site. I set up the about us page. set footer links, to piont to all the info apges. made a "More Info" page for the links I didn't know where else to put, so the footer didn't get too huge, I added pages linked in the footer to this list too. I also added those few more descriptions Sadie gave me. All products have descriptions now. I did a little more work on the locations, but mostly I worked on setting up all those info pages. I'll commit the new code and that will fix a lot of style issues currently on dev.
