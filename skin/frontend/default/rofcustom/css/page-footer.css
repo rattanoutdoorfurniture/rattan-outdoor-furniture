@@ -122,6 +122,21 @@
     background: transparent url('../images/footer-social-icon.png') 0 0 no-repeat;
     text-indent: -10000px;
 }
+.footer-social-icon.fb.fb-follow {
+    background-position: 0px 0px;
+    text-indent: 0;
+    overflow: hidden;
+    position: relative;
+    left: 1px;
+    top: 1px;
+}
+.footer-social-icon.fb.fb-follow > *:first-child {
+    position: relative;
+    top: -3px;
+    left: -3px;
+    -webkit-filter: grayscale(1) brightness(1.7);
+    filter: grayscale(1) brightness(1.7);
+}
 .footer-social-icon.fb {
     background-position: 0px 0px;
 }

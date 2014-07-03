@@ -340,6 +340,25 @@
     width: 55px;
 }
 
+#product-details-social
+.fb-share-button {
+    display: inline-block;
+    padding: 0 8px;
+    border: none;
+    background: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px 1px #DDD;
+    position: relative;
+    top: 1px;
+    height: 23px;
+}
+
+#product-details-social
+.fb-share-button > *:first-child {
+    position: relative;
+    top: -2px;
+}
+
 .product-details-social-btn.tw {
     background-position: -63px -3px;
     width: 65px;

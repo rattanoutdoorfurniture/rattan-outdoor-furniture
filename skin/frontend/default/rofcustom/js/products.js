@@ -17,13 +17,13 @@ jQuery(document).ready(function() {
         jQuery(location.hash).parents("#product-tabs").find(".product-tab").removeClass("active").end().addClass("active");
     }
     if(document.getElementById("product-tabs")) {
-        console.log("Ajax Loading Product Tab Content");
+        //console.log("Ajax Loading Product Tab Content");
         var $faqLoad = jQuery.Deferred();
         var $sarLoad = jQuery.Deferred();
-        jQuery("#product-tabs-faq .product-tab-body").load("/faq .account-box-inner",function(){$faqLoad.resolve();});
-        jQuery("#product-tabs-special .product-tab-body").load("/more-info/shipping-and-returns .account-box-inner",function(){$sarLoad.resolve();});
+        jQuery(".product-tab-body", "#product-tabs-faq").load("/faq .account-box-inner",function(){$faqLoad.resolve();});
+        jQuery(".product-tab-body", "#product-tabs-special").load("/shipping-and-returns .account-box-inner",function(){$sarLoad.resolve();});
         jQuery.when($faqLoad,$sarLoad).done(function() {
-            console.log("FAQ and Shipping-and-Returns Loaded!");
+            console.log("Done Loading Product Tab Content");
         });
     }
 

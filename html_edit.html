@@ -306,3 +306,21 @@
     </div>
     <div class="account-box-border"></div>
 </div>
+
+----------------------------------------------------------------------
+
+<script>
+    $.ajax({
+        url: "https://www.facebook.com/v2.0/plugins/follow.php?app_id=1505110679700997&channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FDhmkJ2TR0QN.js%3Fversion%3D41%23cb%3Df2f0e4879%26domain%3Dlocal.rattanoutdoorfurniture.com%26origin%3Dhttp%253A%252F%252Flocal.rattanoutdoorfurniture.com%252Fff88d397%26relation%3Dparent.parent&color_scheme=light&height=16&href=https%3A%2F%2Fwww.facebook.com%2Frattanoutdoorfurniture&layout=button&locale=en_US&sdk=joey&show_faces=false&width=16",
+        type: "POST",
+        crossDomain: true,
+        data: JSON.stringify([]),
+        dataType: "html",
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (xhr, status) {
+            console.log("error");
+        }
+    });
+</script>

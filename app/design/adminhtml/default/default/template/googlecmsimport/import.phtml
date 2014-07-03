@@ -319,7 +319,18 @@
             } ***********************************************/
             $lcState    = strtolower($state);
             $dashState  = str_replace(" ", "-", $lcState);
-            $cont       = implode("",$page["content"]);
+            $cont       = '<div class="account-box fourteen columns offset-by-one by-margin add-bottom">'
+                        . '<div class="account-box-border">&nbsp;</div>'
+                        . '<div class="account-box-inner">'
+                        . '<div class="box-head">'
+                        . '<h2>'.$city.', '.$state.' Outdoor Patio Furniture</h2>'
+                        . '</div>'
+                        . '<div class="box-content box-blurb">'
+                        . implode("",$page["content"])
+                        . '</div>'
+                        . '</div>'
+                        . '<div class="account-box-border">&nbsp;</div>'
+                        . '</div>';
             $keywords   = htmlentities(implode(", ",array_unique(explode(" ",implode(" ", $page["keywords"])))),ENT_QUOTES);
             $parentId   = $statePageId[$state];
             $citiesNum  = $cityCount[$state];

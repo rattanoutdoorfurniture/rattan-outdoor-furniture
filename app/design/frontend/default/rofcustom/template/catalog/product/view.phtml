@@ -96,7 +96,7 @@
 
     <!-- Product Title ----------------------------------------------------------------->
 
-    <h1 id="product-details-title"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+    <h1 id="product-details-title"><?php echo $productName = $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
 
     <!-- Text Below Title Section ------------------------------------------------------->
 
@@ -161,6 +161,45 @@
             </div>
         <?php endif;*/ ?>
 
+    <div id="product-details-social">
+        <div class="fb-share-button" data-href="<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" data-type="icon_link"></div>
+        <!-- Remove Facebook Old-School Share Link in exchange for the above javascript share button -----------
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>"
+           target="_blank"
+           class="product-details-social-btn fb">Facebook</a>
+        ------------------------------------------------------------------------------------------------------- -->
+        <a href="https://twitter.com/home?status=<?php echo urlencode("Look at this $productName by @Rattanof at http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>"
+           target="_blank"
+           class="product-details-social-btn tw">Twitter</a>
+        <a href="https://plus.google.com/share?url=<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>"
+           target="_blank"
+           class="product-details-social-btn gp">Google Plus</a>
+        <a href="<?php echo
+        "https://pinterest.com/pin/create/button/?url=".urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]") .
+        "&media=".urlencode($this->helper('catalog/image')->init($_product, 'image')) .
+        "&description=". urlencode($this->getMetaDescription()); ?>"
+           target="_blank"
+           class="product-details-social-btn pn">Pinterest</a>
+        <a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"
+           target="_blank"
+           class="product-details-social-btn em">Email</a>
+        <a href="<?php echo
+        "http://www.houzz.com/buttonWidget/1" .
+        "?url=". urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]") .
+        "&img=". urlencode($this->helper('catalog/image')->init($_product, 'image')) .
+        "&title=". $productName .
+        "&hzid=21826".
+        "&ref=".urlencode("http://$_SERVER[HTTP_HOST]"); ?>"
+           target="_blank"
+           class="product-details-social-btn hz">Houzz</a>
+        <a href=""
+           target="_blank"
+           class="product-details-social-btn ig displaynone">Instagram</a>
+    </div>
+    <?php endif;?>
+
+    <!-- Social Media Buttons Area -------------------------------------------------------->
+
         <div id="product-details-btns">
             <section id="product-details-btns-add" class="product-details-btn">
                 <button id="product-details-btns-add-btn" class="product-details-btn-img" onclick="productAddToCartForm.submit(this)">Add To Cart</button>
@@ -169,19 +208,6 @@
                 <button id="product-details-btns-checkout-btn" class="product-details-btn-img">Checkout</button>
             </section>
         </div>
-    <?php endif;?>
-
-    <!-- Social Media Buttons Area -------------------------------------------------------->
-
-    <div id="product-details-social">
-        <a class="product-details-social-btn fb">Facebook</a>
-        <a class="product-details-social-btn tw">Twitter</a>
-        <a class="product-details-social-btn gp">Google Plus</a>
-        <a class="product-details-social-btn pn">Pinterest</a>
-        <a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>" class="product-details-social-btn em">Email</a>
-        <a class="product-details-social-btn hz">Houzz</a>
-        <a class="product-details-social-btn ig">Instagram</a>
-    </div>
 
 </section>
 
