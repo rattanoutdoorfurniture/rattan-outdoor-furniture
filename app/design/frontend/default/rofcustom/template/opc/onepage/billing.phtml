@@ -1,9 +1,9 @@
 <div id="co-billing-form">
-    <h3><?php echo $this->__('Name & Address')?></h3>
+    <h3><?php echo $this->__('Billing Name &amp; Address')?></h3>
     <ul class="form-list">
     <?php if ($this->customerHasAddresses()): ?>
         <li class="wide">
-            <label for="billing-address-select" class="notice"><?php echo $this->__('Select or Add an Address:') ?></label>
+            <label for="billing-address-select" class="notice"><?php echo $this->__('Select or Add Billing Address:') ?></label>
             <div class="input-box">
                 <?php echo $this->getAddressesHtmlSelect('billing') ?>
             </div>

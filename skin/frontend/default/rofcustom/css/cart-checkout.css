@@ -437,6 +437,7 @@ img, button, input {
         text-indent: -10000px;
         border: none;
         margin-bottom: 5px;
+        display: block;
     }
 
     .checkout-step1-next-step {

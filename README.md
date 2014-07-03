@@ -27,6 +27,7 @@ Furniture web site project.
 
 - Abstract Product_View_Options_Type_Select logic from the Magento core. This should extend the core, which I could not get to work today.
 
+- Give checkout modal a parent per process, so it only blocks out shipping when loading shipping, and only blocks payments when loading payments, and the cart review when loading the cart review. Having the whole page in accessible is really annoying.
 - Handle global messages. Standardize?
 - Setup email sending from scripts on the server (for password reset, account confirm, and a whole bunch of other stuff).
 - Fix issue where the forms (login and register) try to validate inputs on non-submit buttons. like back and continue on login/register.
@@ -71,12 +72,14 @@ Furniture web site project.
 ##Change Log:##
 
 ###2014-07-03###
+- Facebook Connect Trial, Fix Share. I got the initial code needed to connect a new account thru facebook. I have to test if this works on the server. There will be some customization once that is working. I had to make a fix for the share too, so that will be updated here.
 - Facebook Integration, Update Code, Sync Server, begin Connect.I'm going to update the code and sync the server. I want to test the unique like using the javascript sdk which the facebook spider has to crawl. and update so i can begin work on the connect code and have a restore point.
 
 ###2014-07-02###
 - Facebook Integration Round 1. The more i look at this, I'm thinking we should integrate facebook from launch. There's a lot entailed with that, but for our purposes I want to link a facebook app, which is required for the Facebook Connect, and have people be able to login via that. Also, all our shares and likes will be reported thru this app, giving us those greater analytics i was talking about before. Today I've begun setting this up. I have created the app, and have the javsscript SDK loading, And have stylized the facebook share button to look like our original image button, except this once uses the full javascript SDK, which makes a nice little login if you're not signed in and such. I've also transformed the footer "facebook follow" icon into a real functioning follow toggle, which shows the facebook icon, and if you click it, it has a check mark over it, and actually follows FB/rattanoutdoorfurniture for the logged in user without leaving the page.) Tomorrow I will begin with the Facebook Connect.
 
 ###2014-07-01###
+- Forgot to mention. I added the different shipping address on checkout. By default it uses the billing address as the shipping address and has a "use this address for shipping" box, which if you un-check it, an additional address form shows up. Logged ini users have a similar format, but have their saved addresses in a drop down, with the option to enter a new one.
 - Finish fixing styles on location pages. Fix linking to info pages on product page. The location pages needed some formatting, it didn't look very clean, so I added boxes and double titles (which i imagine can only help SEO, and looks appropriate). Also this made the text width thinner, which we discussed as helps the reader stay interested or focused. The product pages use the info from the FAQ and Shipping And Returns page to load into the tab boxes. Since these had gotten over-written previously, i had to re-point these. With that I'm finished for now with the import. I moved to the share buttons. I got all the basic links in and worked on fixing some of them. Instagram can't post from a page like the others. we'll have to figure something out, but we don't even have an instagram account yet. I'm going to integrate the facebook button I think.
 
 ###2014-06-30###

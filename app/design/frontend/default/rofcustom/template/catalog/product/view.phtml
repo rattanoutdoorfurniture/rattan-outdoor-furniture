@@ -162,7 +162,7 @@
         <?php endif;*/ ?>
 
     <div id="product-details-social">
-        <div class="fb-share-button" data-href="<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" data-type="icon_link"></div>
+        <div class="fb-share-button" data-href="<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" data-type="icon_link"></div>
         <!-- Remove Facebook Old-School Share Link in exchange for the above javascript share button -----------
         <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>"
            target="_blank"
