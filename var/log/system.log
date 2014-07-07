@@ -2258,3 +2258,15 @@ array
 [5] /home/rof/public_html/dev/app/Mage.php:684
 [6] /home/rof/public_html/dev/index.php:123
 </pre>
+2014-07-03T19:39:36+00:00 DEBUG (7): 200 - access_token=CAAVY4ZBNpRgUBAOmuTBmX93tCjRa5cGviTSZCsiAnzAFcJZC52i1AymqBnhJbpO68toyO4Wyg1k3phrwMyjFcqxJ4p5bnCiTE6xc9pwSUChC0GpFRmlOlCeLYCbzsywGOOUHeyLAz5v0xNQLbqfkmLvd47O0vVEty4jhPGfuX9ufrWb5diLPT4ra7STNCgZD&expires=5183999
+2014-07-03T19:39:37+00:00 DEBUG (7): 200 - {"id":"10202398602752420","birthday":"09\/14\/1989","email":"mike\u0040brainycouch.com","first_name":"Mike","gender":"male","last_name":"Simoneau","link":"https:\/\/www.facebook.com\/app_scoped_user_id\/10202398602752420\/","locale":"en_US","name":"Mike Simoneau","timezone":-4,"updated_time":"2014-05-21T11:41:44+0000","verified":true}
+2014-07-07T16:58:55+00:00 DEBUG (7): Incorrect IP format: 75.93::1
+2014-07-07T16:58:56+00:00 DEBUG (7): Incorrect IP format: 75.93::1
+2014-07-07T16:58:58+00:00 DEBUG (7): Incorrect IP format: 75.93::1
+2014-07-07T16:58:59+00:00 DEBUG (7): Incorrect IP format: 75.93::1
+2014-07-07T17:01:32+00:00 DEBUG (7): Incorrect IP format: 75.93::1
+2014-07-07T17:01:33+00:00 DEBUG (7): Incorrect IP format: 75.93::1
+2014-07-07T17:30:48+00:00 DEBUG (7): Incorrect IP format: 75.93::1
+2014-07-07T17:30:49+00:00 DEBUG (7): Incorrect IP format: 75.93::1
+2014-07-07T17:30:49+00:00 DEBUG (7): Incorrect IP format: 75.93::1
+2014-07-07T17:30:51+00:00 DEBUG (7): Incorrect IP format: 75.93::1
