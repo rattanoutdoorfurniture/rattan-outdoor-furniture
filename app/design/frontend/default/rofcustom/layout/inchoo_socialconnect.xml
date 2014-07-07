@@ -79,14 +79,14 @@
             </action>
         </reference>
         <reference name="customer_form_register">
-            <action method="setTemplate" >
-                <template>inchoo/socialconnect/customer/form/register.phtml</template>
-            </action>
-            <block type="inchoo_socialconnect/register" name="inchoo_socialconnect_register">
-                <block type="inchoo_socialconnect/google_button" name="inchoo_socialconnect_checkout_google_button" />
+            <!--<action method="setTemplate" >-->
+                <!--<template>inchoo/socialconnect/customer/form/register.phtml</template>-->
+            <!--</action>-->
+            <!--<block type="inchoo_socialconnect/register" name="inchoo_socialconnect_register">-->
+                <!--<block type="inchoo_socialconnect/google_button" name="inchoo_socialconnect_checkout_google_button" />-->
                 <block type="inchoo_socialconnect/facebook_button" name="inchoo_socialconnect_checkout_facebook_button" />
-                <block type="inchoo_socialconnect/twitter_button" name="inchoo_socialconnect_checkout_twitter_button" />
-            </block>
+                <!--<block type="inchoo_socialconnect/twitter_button" name="inchoo_socialconnect_checkout_twitter_button" />-->
+            <!--</block>-->
         </reference>        
     </customer_account_create>    
 

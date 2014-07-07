@@ -28,10 +28,11 @@
     */
    ?>
 <header id="page-header">
-    <div id="page-header-logo" class="five columns">
-        <a id="link-logo-main" href="/" title="Rattan Outdoor Furniture">
+    <div itemscope itemtype="http://schema.org/Organization" id="page-header-logo" class="five columns">
+        <a itemprop="url" id="link-logo-main" href="<?php echo "http://$_SERVER[HTTP_HOST]/"; ?>/" title="Rattan Outdoor Furniture">
+            <span itemprop="name" id="logo-main-name" class="clear">Rattan Outdoor Furniture</span>
             <img id="logo-main" class="hide-mobile" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" />
-            <img id="logo-main-mobile" class="no-display show-mobile" src="/skin/frontend/default/rofcustom/images/logo-270x150-centered-vector.png" alt="<?php echo $this->getLogoAlt() ?>" />
+            <img itemprop="logo" id="logo-main-mobile" class="no-display show-mobile" src="/skin/frontend/default/rofcustom/images/logo-270x150-centered-vector.png" alt="<?php echo $this->getLogoAlt() ?>" />
         </a>
     </div>
     <div id="page-header-right" class="eleven columns">

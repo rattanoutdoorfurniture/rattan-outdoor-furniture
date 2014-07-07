@@ -100,9 +100,27 @@
                                         </div>
                                     </div>
                                 </li>
-                                <?php echo $this->getChildHtml('persistent.remember.me'); ?>
+                                <?php $_dob = $this->getLayout()->createBlock('customer/widget_dob') ?>
+                                <?php if ($_dob->isEnabled()): ?>
+                                    <li><?php echo $_dob->setDate($this->getFormData()->getDob())->toHtml() ?></li>
+                                <?php endif ?>
+                                <?php $_taxvat = $this->getLayout()->createBlock('customer/widget_taxvat') ?>
+                                <?php if ($_taxvat->isEnabled()): ?>
+                                    <li><?php echo $_taxvat->setTaxvat($this->getFormData()->getTaxvat())->toHtml() ?></li>
+                                <?php endif ?>
+                                <?php $_gender = $this->getLayout()->createBlock('customer/widget_gender') ?>
+                                <?php if ($_gender->isEnabled()): ?>
+                                    <li><?php echo $_gender->setGender($this->getFormData()->getGender())->toHtml() ?></li>
+                                <?php endif ?>
+                                <?php if($fb_button = $this->getChildHtml('inchoo_socialconnect_checkout_facebook_button')): ?>
+                                <div class="checkout-step1-spacer add-bottom" id="checkout-step1-or">----------------- or -----------------</div>
+                                <div style="margin:0 auto;width: 260px;">
+                                    <?php echo $fb_button; ?>
+                                </div>
+                                <?php endif; ?>
+                                <?php //echo $this->getChildHtml('persistent.remember.me'); ?>
                             </ul>
-                            <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
+                            <?php //echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
                         </div>
                     </div>
                 </div>

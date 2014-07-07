@@ -13,7 +13,7 @@
 ================================================== -->
 <?php if (Mage::registry('current_product')) : ?>
     <!-- Facebook product meta -->
-    <meta property="og:title" content="<?php echo $this->getTitle; ?>" />
+    <meta property="og:title" content="<?php echo Mage::registry('current_product')->getShortDescription()." ".Mage::registry('current_product')->getName() .'\n'."by Rattan Outdoor Furniture" ?>" />
     <meta property="og:description" content="<?php echo strip_tags(Mage::registry('current_product')->getMetaDescription()); ?>" />
     <meta property="og:image" content="<?php echo Mage::helper('catalog/image')->init(Mage::registry('current_product'), 'image')->resize(200,200);?>" />
     <meta property="og:site_name" content="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"/>

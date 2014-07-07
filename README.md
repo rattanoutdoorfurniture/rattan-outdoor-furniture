@@ -71,6 +71,9 @@ Furniture web site project.
 
 ##Change Log:##
 
+###2014-07-07###
+- Sync changes; Fix registration; Start Rich Snippets. I fixed the registration, and have made some modifications to some of the meta data. I am starting with the rich snippets, and still working with some facebook meta data. I will most likely have at least 1 other push today, possibly more. I am going to do a database back up now, as I am going to upgrade the database server.
+
 ###2014-07-03###
 - Facebook Connect Trial, Fix Share. I got the initial code needed to connect a new account thru facebook. I have to test if this works on the server. There will be some customization once that is working. I had to make a fix for the share too, so that will be updated here.
 - Facebook Integration, Update Code, Sync Server, begin Connect.I'm going to update the code and sync the server. I want to test the unique like using the javascript sdk which the facebook spider has to crawl. and update so i can begin work on the connect code and have a restore point.
