@@ -27,13 +27,20 @@
     * @var Mage_Page_Block_Html_Header $this
     */
    ?>
-<header id="page-header">
-    <div itemscope itemtype="http://schema.org/Organization" id="page-header-logo" class="five columns">
-        <a itemprop="url" id="link-logo-main" href="<?php echo "http://$_SERVER[HTTP_HOST]/"; ?>/" title="Rattan Outdoor Furniture">
-            <span itemprop="name" id="logo-main-name" class="clear">Rattan Outdoor Furniture</span>
-            <img id="logo-main" class="hide-mobile" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" />
-            <img itemprop="logo" id="logo-main-mobile" class="no-display show-mobile" src="/skin/frontend/default/rofcustom/images/logo-270x150-centered-vector.png" alt="<?php echo $this->getLogoAlt() ?>" />
+<header id="page-header" itemscope itemtype="http://schema.org/Organization">
+    <span itemprop="email" id="organization-email" content="<?php echo Mage::getStoreConfig('trans_email/ident_general/email'); ?>"></span>
+    <span itemprop="legalName" id="organization-legal-name" content="RattanOutdoorFurniture.com"></span>
+    <span itemprop="logo" id="organization-logo" content="<?php echo $this->getLogoSrc() ?>"></span>
+    <span itemprop="sameAs" id="organization-same-as" content="https://www.facebook.com/rattanoutdoorfurniture"></span>
+    <div itemprop="brand" itemscope itemType="http://schema.org/Brand" id="page-header-logo" class="five columns">
+        <a itemprop="url" id="link-logo-main" href="<?php echo "http://$_SERVER[HTTP_HOST]/"; ?>" title="Rattan Outdoor Furniture">
+            <img itemprop="logo" id="logo-main" class="hide-mobile" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" />
+            <img id="logo-main-mobile" class="no-display show-mobile" src="<?php echo "http://$_SERVER[HTTP_HOST]"; ?>/skin/frontend/default/rofcustom/images/logo-270x150-centered-vector.png" alt="<?php echo $this->getLogoAlt() ?>" />
         </a>
+        <span itemprop="name" id="logo-main-name" content="Rattan Outdoor Furniture"></span>
+        <span itemprop="alternateName" id="logo-main-alternate-name" content="RattanOutdoorFurniture.com"></span>
+        <span itemprop="description" id="logo-main-description" content="We offer high-end rattan/wicker outdoor patio furniture. Quality, luxury, and incredible designing go into our meticulously woven furnishings."></span>
+        <span itemprop="sameAs" id="logo-main-same-as" content="https://www.facebook.com/rattanoutdoorfurniture"></span>
     </div>
     <div id="page-header-right" class="eleven columns">
         <?php echo $this->getChildHtml('topLinks') ?>
