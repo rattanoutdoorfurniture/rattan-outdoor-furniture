@@ -11,13 +11,21 @@
 
 <!-- Facebook Open Graph Metas
 ================================================== -->
+    <!-- Facebook global meta  -->
+    <meta property="og:site_name" content="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"/>
 <?php if (Mage::registry('current_product')) : ?>
     <!-- Facebook product meta -->
     <meta property="og:title" content="<?php echo Mage::registry('current_product')->getShortDescription()." ".Mage::registry('current_product')->getName() ." by Rattan Outdoor Furniture" ?>" />
     <meta property="og:description" content="<?php echo strip_tags(Mage::registry('current_product')->getMetaDescription()); ?>" />
     <meta property="og:image" content="<?php echo Mage::helper('catalog/image')->init(Mage::registry('current_product'), 'image')->resize(200,200);?>" />
-    <meta property="og:site_name" content="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"/>
     <meta property="og:url" content="<?php echo Mage::registry('current_product')->getProductUrl(); ?>" />
+<?php else: ?>
+    <!-- Facebook general meta -->
+    <meta property="og:title" content="<?php echo $this->getTitle(); ?>" />
+    <meta property="og:url" content="<?php echo $this->getUrl(); ?>" />
+    <meta property="og:image" content="<?php echo str_replace("-left-","-centered-",$this->getLayout()->getBlock('header')->getLogoSrc()); ?>" />
+    <meta property="og:description" content="<?php echo $this->getDescription(); ?>" />
+
 <?php endif; ?>
 
 <!-- Mobile Specific Metas
