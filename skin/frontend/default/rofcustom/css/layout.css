@@ -154,7 +154,7 @@ a[href="javascript:void(0)"],
             display: inline-block !important;
         }
 
-        #page-header-logo {
+        .page-header-logo {
             text-align: center;
             margin-bottom: 20px;
         }
