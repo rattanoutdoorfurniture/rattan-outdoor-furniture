@@ -75,7 +75,19 @@ class Mage_Checkout_CartController extends Mage_Core_Controller_Front_Action
     protected function _goBack()
     {
         $returnUrl = $this->getRequest()->getParam('return_url');
-        if ($returnUrl) {
+        $proceedTo = $this->getRequest()->getParam('proceedTo');
+        if($proceedTo) {
+            if (($this->getRequest()->getActionName() == 'add') && !$this->getRequest()->getParam('in_cart')) {
+                $this->_getSession()->setContinueShoppingUrl($this->_getRefererUrl());
+            }
+            if(strcasecmp($proceedTo,"checkout")===0) {
+//                $this->getResponse()->setRedirect(Mage::getUrl('onepage'));
+//                Mage::getSingleton('checkout/session')->setNoCartRedirect(true);
+                $this->_redirect("onepage");
+            } else {
+                $this->getResponse()->setRedirect($proceedTo);
+            }
+        } elseif ($returnUrl) {
 
             if (!$this->_isUrlInternal($returnUrl)) {
                 throw new Mage_Exception('External urls redirect to "' . $returnUrl . '" denied!');

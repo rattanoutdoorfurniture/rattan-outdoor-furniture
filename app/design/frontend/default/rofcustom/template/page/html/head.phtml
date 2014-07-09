@@ -34,13 +34,16 @@
 
 <!-- Favicons
 ================================================== -->
-<link rel="shortcut icon" href="skin/frontend/default/rofcustom/images/favicon.ico">
-<link rel="apple-touch-icon" href="skin/frontend/default/rofcustom/images/apple/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="skin/frontend/default/rofcustom/images/apple/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="skin/frontend/default/rofcustom/images/apple/apple-touch-icon-114x114.png">
-
 <link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<?php if($this->getFaviconFile()): ?>
 <link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<?php else: ?>
+<link rel="shortcut icon" href="/skin/frontend/default/rofcustom/images/favicon.ico">
+<?php endif; ?>
+<link rel="apple-touch-icon" href="/skin/frontend/default/rofcustom/images/apple/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/skin/frontend/default/rofcustom/images/apple/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/skin/frontend/default/rofcustom/images/apple/apple-touch-icon-114x114.png">
+
 
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

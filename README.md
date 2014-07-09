@@ -27,6 +27,7 @@ Furniture web site project.
 
 - Abstract Product_View_Options_Type_Select logic from the Magento core. This should extend the core, which I could not get to work today.
 
+- Add to Cart and Checkout: move code from core to local add-on.
 - Change Page titles to use the Prefix defined in the Magento admin.
 - Give checkout modal a parent per process, so it only blocks out shipping when loading shipping, and only blocks payments when loading payments, and the cart review when loading the cart review. Having the whole page in accessible is really annoying.
 - Handle global messages. Standardize?
@@ -71,6 +72,11 @@ Furniture web site project.
 
 
 ##Change Log:##
+
+###2014-07-09###
+- Add to Cart and Checkout; Add Favicon; I fixed the "Checkout" button on the product page. This turned out to be a little more troublesome than I had hoped, but eventually I got it working. It adds the product to the cart and directs right to checkout. I'm going to do a push now, so this will include the favicon. noted in the README. I have to sync from the server as well.
+- The first thing from the list I looked into was the favicon. I made a quick one, we'll have to look into this more, but i made a couple fixes, and this shouldn't be much trouble. I have to sync with the server. But i'll be doing a push later anyway.
+- I started today by creating a list of requirements for when we go live. I have included two sections, one for fixes, and one for configurations. Much of the configurations will need to be done on staging, but like facebook for example, some of that can be done now; I quickly added a facebook app icon after making this list. But the fixes are things I need to work on before launch. So After the list, I started with that.
 
 ###2014-07-08###
 - Added General Facebook Meta; Include Rich Snippets; So I've added the facebook meta for general pages (not just products), as discussed below, we will re-visit rich snippets after launch. I'll just include the previous note in the message. But I am going to do a database backup as well, as things have changed on the database and I would like to do once since the upgrade.

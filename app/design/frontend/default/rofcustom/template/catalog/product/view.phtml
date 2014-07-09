@@ -205,7 +205,7 @@
                 <button id="product-details-btns-add-btn" class="product-details-btn-img" onclick="productAddToCartForm.submit(this)">Add To Cart</button>
             </section>
             <section id="product-details-btns-checkout" class="product-details-btn">
-                <button id="product-details-btns-checkout-btn" class="product-details-btn-img">Checkout</button>
+                <button id="product-details-btns-checkout-btn" class="product-details-btn-img" onclick="productAddToCartForm.submit(this)">Checkout</button>
             </section>
         </div>
 
@@ -281,7 +281,9 @@
 ------------------------ Related Product Listings ----------------------------
 ----------------------------------------------------------------------------->
 
-<?php //echo $this->getChildHtml("related_products"); ?>
+<?php // echo $this->getChildHtml("related_products"); ?>
+
+<input type="hidden" name="proceedTo" value=""/>
 
 </form>
     <script type="text/javascript">
@@ -300,13 +302,19 @@
 //                        + "/color/"
 //                        + jQuery("[name=color").val();
                    form.action = url;
+                } else {
+                    if(button.id=="product-details-btns-checkout-btn") {
+                        form.elements.proceedTo.value += "checkout";
+                    }
                 }
+
                 var e = null;
                 try {
                     this.form.submit();
-                } catch (e) {
-                }
+                } catch (e) {}
+
                 this.form.action = oldUrl;
+
                 if (e) {
                     throw e;
                 }
