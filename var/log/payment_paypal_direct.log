@@ -1,0 +1,186 @@
+2014-07-09T13:53:30+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [DoDirectPayment] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [IPADDRESS] => 66.61.51.2
+            [RETURNFMFDETAILS] => 1
+            [AMT] => 854.00
+            [CURRENCYCODE] => USD
+            [INVNUM] => 1201405324
+            [NOTIFYURL] => http://dev.rattanoutdoorfurniture.com/paypal/ipn/
+            [EMAIL] => dev5@rattanoutdoorfurniture.com
+            [CREDITCARDTYPE] => ****
+            [ACCT] => ****
+            [EXPDATE] => ****
+            [CVV2] => ****
+            [ISSUENUMBER] => 
+            [ITEMAMT] => 849.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 5.00
+            [BUSINESS] => Nautical Depot, LLC
+            [FIRSTNAME] => Michael
+            [LASTNAME] => Simoneau
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => OH
+            [CITY] => Painesville
+            [STREET] => 2800 Nowhere Way
+            [ZIP] => 44077
+            [PHONENUM] => 4406066306
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => OH
+            [SHIPTOCITY] => Painesville
+            [SHIPTOSTREET] => 2800 Nowhere Way
+            [SHIPTOZIP] => 44077
+            [SHIPTOPHONENUM] => 4406066306
+            [SHIPTOSTREET2] => 
+            [STREET2] => 
+            [SHIPTONAME] => Michael Simoneau
+            [METHOD] => DoDirectPayment
+            [VERSION] => 94.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => IWD_SI_MagentoCE_WPS
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2014-07-09T13:53:30Z
+            [CORRELATIONID] => 6a81121f2b711
+            [ACK] => Success
+            [VERSION] => 94.0
+            [BUILD] => 11811513
+            [AMT] => 854.00
+            [CURRENCYCODE] => USD
+            [AVSCODE] => X
+            [CVV2MATCH] => M
+            [TRANSACTIONID] => 5AT24238Y3487814A
+        )
+
+    [__pid] => 28389
+)
+
+2014-07-09T13:53:31+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [GetTransactionDetails] => Array
+        (
+            [TRANSACTIONID] => 5AT24238Y3487814A
+            [METHOD] => GetTransactionDetails
+            [VERSION] => 94.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => IWD_SI_MagentoCE_WPS
+        )
+
+    [response] => Array
+        (
+            [RECEIVERBUSINESS] => larry-facilitator@rattanoutdoorfurniture.com
+            [RECEIVEREMAIL] => larry-facilitator@rattanoutdoorfurniture.com
+            [RECEIVERID] => 5Z9FC7KPLZUTN
+            [EMAIL] => dev5@rattanoutdoorfurniture.com
+            [PAYERID] => E662ZCMX4Z8BU
+            [PAYERSTATUS] => unverified
+            [COUNTRYCODE] => US
+            [SHIPTONAME] => Michael Simoneau
+            [SHIPTOSTREET] => 2800 Nowhere Way
+            [SHIPTOCITY] => Painesville
+            [SHIPTOSTATE] => OH
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOCOUNTRYNAME] => United States
+            [SHIPTOZIP] => 44077
+            [ADDRESSOWNER] => PayPal
+            [ADDRESSSTATUS] => Unconfirmed
+            [INVNUM] => 1201405324
+            [SALESTAX] => 0.00
+            [SHIPAMOUNT] => 5.00
+            [SHIPHANDLEAMOUNT] => 0.00
+            [TIMESTAMP] => 2014-07-09T13:53:31Z
+            [CORRELATIONID] => af76096b4eb4c
+            [ACK] => Success
+            [VERSION] => 94.0
+            [BUILD] => 11562053
+            [FIRSTNAME] => Michael
+            [LASTNAME] => Simoneau
+            [TRANSACTIONID] => 5AT24238Y3487814A
+            [RECEIPTID] => 3892-1630-4897-7574
+            [TRANSACTIONTYPE] => webaccept
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2014-07-09T13:53:30Z
+            [AMT] => 854.00
+            [FEEAMT] => 25.07
+            [TAXAMT] => 0.00
+            [CURRENCYCODE] => USD
+            [PAYMENTSTATUS] => Completed
+            [PENDINGREASON] => None
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [PROTECTIONELIGIBILITYTYPE] => None
+            [L_QTY0] => 1
+            [L_TAXAMT0] => 0.00
+            [L_CURRENCYCODE0] => USD
+            [L_TAXABLE0] => false
+        )
+
+    [__pid] => 28389
+)
+
+2014-07-09T13:53:36+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [address_city] => Painesville
+            [address_country] => United States
+            [address_country_code] => US
+            [address_name] => Michael Simoneau
+            [address_state] => OH
+            [address_status] => unconfirmed
+            [address_street] => 2800 Nowhere Way
+            [address_zip] => 44077
+            [business] => larry-facilitator@rattanoutdoorfurniture.com
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Michael
+            [handling_amount] => 0.00
+            [invoice] => 1201405324
+            [ipn_track_id] => 6a81121f2b711
+            [item_name] => 
+            [item_number] => 
+            [last_name] => Simoneau
+            [mc_currency] => USD
+            [mc_fee] => 25.07
+            [mc_gross] => 854.00
+            [notify_version] => 3.8
+            [payer_email] => dev5@rattanoutdoorfurniture.com
+            [payer_id] => E662ZCMX4Z8BU
+            [payer_status] => unverified
+            [payment_date] => 06:53:30 Jul 09, 2014 PDT
+            [payment_fee] => 25.07
+            [payment_gross] => 854.00
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity] => 1
+            [receipt_id] => 3892-1630-4897-7574
+            [receiver_email] => larry-facilitator@rattanoutdoorfurniture.com
+            [receiver_id] => 5Z9FC7KPLZUTN
+            [residence_country] => US
+            [shipping] => 5.00
+            [tax] => 0.00
+            [test_ipn] => 1
+            [transaction_subject] => 
+            [txn_id] => 5AT24238Y3487814A
+            [txn_type] => web_accept
+            [verify_sign] => ARHPijWmCCSUguBRmsQZVk1xNcMRAqrKgZx4maF0TdjtyU8mdaUcvxbV
+        )
+
+    [postback_to] => https://www.sandbox.paypal.com/cgi-bin/webscr
+    [__pid] => 28408
+)
+
