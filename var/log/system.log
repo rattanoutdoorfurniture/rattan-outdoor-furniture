@@ -2545,3 +2545,5 @@ array
 [5] /home/rof/public_html/dev/app/Mage.php:684
 [6] /home/rof/public_html/dev/index.php:123
 </pre>
+2014-07-12T15:16:32+00:00 DEBUG (7): 200 - access_token=CAAVY4ZBNpRgUBANEojmZCJXZA789OYCHZBS0MtHgZAqkOmYv9N4dQYDbXvi1IThCwANjWdUyQiZACJmMhRRHuZBzzjLD1fNZAyesVDO59BpNnSRka11wRKwgtAtW9dPS52GTg5Eu6hVmIZCuqNDjadDWDMHdEPLIjVbJHvebDlkKB2ysXQDXKXhqZBGD05lQeznEwZD&expires=5183998
+2014-07-12T15:16:32+00:00 DEBUG (7): 200 - {"id":"10202398602752420","birthday":"09\/14\/1989","email":"mike\u0040brainycouch.com","first_name":"Mike","gender":"male","last_name":"Simoneau","link":"https:\/\/www.facebook.com\/app_scoped_user_id\/10202398602752420\/","locale":"en_US","name":"Mike Simoneau","timezone":-4,"updated_time":"2014-05-21T11:41:44+0000","verified":true}
