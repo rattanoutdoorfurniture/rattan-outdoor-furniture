@@ -6,7 +6,7 @@
 <meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
 <meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
 <meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
-<meta name="author" content="">
+<meta name="author" content="https://plus.google.com/105588355789811411119">
 <meta name="google-site-verification" content="FZDC31mGIrSoBbOqM8oSp6RrVMZA5IgzITFazM8x3xE" />
 
 <!-- Facebook Open Graph Metas
@@ -23,7 +23,7 @@
     <!-- Facebook general meta -->
     <meta property="og:title" content="<?php echo $this->getTitle(); ?>" />
     <meta property="og:url" content="<?php echo $this->getUrl(); ?>" />
-    <meta property="og:image" content="<?php echo str_replace("-left-","-centered-",$this->getLayout()->getBlock('header')->getLogoSrc()); ?>" />
+    <meta property="og:image" content="<?php echo str_replace("-left-","-centered-",$this->getSkinUrl(Mage::getStoreConfig('design/header/logo_src'))); ?>" />
     <meta property="og:description" content="<?php echo $this->getDescription(); ?>" />
 
 <?php endif; ?>

@@ -28,6 +28,7 @@
     */
    ?>
 <header id="page-header" itemscope itemtype="http://schema.org/FurnitureStore">
+    <a href="https://plus.google.com/105588355789811411119" rel="publisher"></a>
     <span itemprop="email" id="organization-email" content="<?php echo Mage::getStoreConfig('trans_email/ident_general/email'); ?>"></span>
     <span itemprop="legalName" id="organization-legal-name" content="RattanOutdoorFurniture.com"></span>
     <span itemprop="logo" id="organization-logo" content="<?php echo str_replace("-left-","-centered-",$this->getLogoSrc()); ?>"></span>
@@ -47,5 +48,4 @@
         <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('header-phone')->toHtml(); ?>
         <?php echo $this->getChildHtml('topMenu') ?>
     </div>
-    <a href="https://plus.google.com/106813664762651765798" rel="publisher"></a>
 </header>
