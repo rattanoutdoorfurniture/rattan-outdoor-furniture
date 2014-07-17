@@ -73,6 +73,10 @@ Furniture web site project.
 
 ##Change Log:##
 
+###2014-07-17###
+- Initial Changes for Soft Launch. After our meeting with Corey today, we've come up with a tentative plan on how we want to go about this quick launch. We're going to do a 'soft launch', which means more-or-less that we are launching the site, a very light version, without products for sale, but with a coming soon notice. To just start getting indexed, and have our site up. For this effect, we are going to start by hiding all of the additional categories, and associated products. We will also be removing the city/state pages for now. The city/state pages need some work, so those will be released after some more of those edits, and we will come up with a priority release. For now, I'm updating, and backing up so I can make the changes to the categories and products. (also, removing the search terms link).
+- I haven't updated this in a while. Today we met with Corey, and went over some SEO stuff. He is revising the keyword list, and I am making some edits for a "soft launch".
+
 ###2014-07-09###
 - Add to Cart and Checkout; Add Favicon; I fixed the "Checkout" button on the product page. This turned out to be a little more troublesome than I had hoped, but eventually I got it working. It adds the product to the cart and directs right to checkout. I'm going to do a push now, so this will include the favicon. noted in the README. I have to sync from the server as well.
 - The first thing from the list I looked into was the favicon. I made a quick one, we'll have to look into this more, but i made a couple fixes, and this shouldn't be much trouble. I have to sync with the server. But i'll be doing a push later anyway.
