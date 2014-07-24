@@ -2589,3 +2589,126 @@ array
 [5] /home/rof/public_html/dev/app/Mage.php:684
 [6] /home/rof/public_html/dev/index.php:123
 </pre>
+2014-07-23T16:56:30+00:00 DEBUG (7): HEADERS ALREADY SENT: 
+RequestPath: /index.php/admin/import/category/type/categories/
+array
+(
+    [0] => 'X-Powered-By: PHP/5.4.30'
+    [1] => 'Expires: Thu, 19 Nov 1981 08:52:00 GMT'
+    [2] => 'Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0'
+    [3] => 'Pragma: no-cache'
+    [4] => 'Set-Cookie: adminhtml=a854c58b6f05344fde9abf9ced8e9180; expires=Wed, 23-Jul-2014 23:16:29 GMT; path=/; domain=dev.rattanoutdoorfurniture.com; httponly'
+    [5] => 'Content-type: text/html'
+)
+<pre>[0] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:61
+[1] /home/rof/public_html/dev/lib/Zend/Controller/Response/Abstract.php:766
+[2] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:93
+[3] /home/rof/public_html/dev/app/code/local/Mageworks/Import/controllers/Adminhtml/ImportController.php:19
+[4] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Action.php:418
+[5] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php:250
+[6] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php:172
+[7] /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php:354
+[8] /home/rof/public_html/dev/app/Mage.php:684
+[9] /home/rof/public_html/dev/index.php:123
+</pre>
+2014-07-23T16:56:30+00:00 DEBUG (7): HEADERS ALREADY SENT: 
+RequestPath: /index.php/admin/import/category/type/categories/
+array
+(
+    [0] => 'X-Powered-By: PHP/5.4.30'
+    [1] => 'Expires: Thu, 19 Nov 1981 08:52:00 GMT'
+    [2] => 'Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0'
+    [3] => 'Pragma: no-cache'
+    [4] => 'Set-Cookie: adminhtml=a854c58b6f05344fde9abf9ced8e9180; expires=Wed, 23-Jul-2014 23:16:29 GMT; path=/; domain=dev.rattanoutdoorfurniture.com; httponly'
+    [5] => 'Content-type: text/html'
+)
+<pre>[0] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:61
+[1] /home/rof/public_html/dev/lib/Zend/Controller/Response/Abstract.php:766
+[2] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:93
+[3] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php:354
+[5] /home/rof/public_html/dev/app/Mage.php:684
+[6] /home/rof/public_html/dev/index.php:123
+</pre>
+2014-07-23T17:26:46+00:00 DEBUG (7): HEADERS ALREADY SENT: 
+RequestPath: /index.php/admin/import/category/type/categories/
+array
+(
+    [0] => 'X-Powered-By: PHP/5.4.30'
+    [1] => 'Expires: Thu, 19 Nov 1981 08:52:00 GMT'
+    [2] => 'Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0'
+    [3] => 'Pragma: no-cache'
+    [4] => 'Set-Cookie: adminhtml=a854c58b6f05344fde9abf9ced8e9180; expires=Wed, 23-Jul-2014 23:46:45 GMT; path=/; domain=dev.rattanoutdoorfurniture.com; httponly'
+    [5] => 'Content-type: text/html'
+)
+<pre>[0] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:61
+[1] /home/rof/public_html/dev/lib/Zend/Controller/Response/Abstract.php:766
+[2] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:93
+[3] /home/rof/public_html/dev/app/code/local/Mageworks/Import/controllers/Adminhtml/ImportController.php:19
+[4] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Action.php:418
+[5] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php:250
+[6] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php:172
+[7] /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php:354
+[8] /home/rof/public_html/dev/app/Mage.php:684
+[9] /home/rof/public_html/dev/index.php:123
+</pre>
+2014-07-23T17:26:46+00:00 DEBUG (7): HEADERS ALREADY SENT: 
+RequestPath: /index.php/admin/import/category/type/categories/
+array
+(
+    [0] => 'X-Powered-By: PHP/5.4.30'
+    [1] => 'Expires: Thu, 19 Nov 1981 08:52:00 GMT'
+    [2] => 'Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0'
+    [3] => 'Pragma: no-cache'
+    [4] => 'Set-Cookie: adminhtml=a854c58b6f05344fde9abf9ced8e9180; expires=Wed, 23-Jul-2014 23:46:45 GMT; path=/; domain=dev.rattanoutdoorfurniture.com; httponly'
+    [5] => 'Content-type: text/html'
+)
+<pre>[0] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:61
+[1] /home/rof/public_html/dev/lib/Zend/Controller/Response/Abstract.php:766
+[2] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:93
+[3] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php:354
+[5] /home/rof/public_html/dev/app/Mage.php:684
+[6] /home/rof/public_html/dev/index.php:123
+</pre>
+2014-07-23T18:54:24+00:00 DEBUG (7): HEADERS ALREADY SENT: 
+RequestPath: /index.php/admin/import/category/type/categories/
+array
+(
+    [0] => 'X-Powered-By: PHP/5.4.30'
+    [1] => 'Expires: Thu, 19 Nov 1981 08:52:00 GMT'
+    [2] => 'Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0'
+    [3] => 'Pragma: no-cache'
+    [4] => 'Set-Cookie: adminhtml=fa3349d8881d7d642bd4e0b7dc21c2a1; expires=Thu, 24-Jul-2014 01:14:23 GMT; path=/; domain=dev.rattanoutdoorfurniture.com; httponly'
+    [5] => 'Content-type: text/html'
+)
+<pre>[0] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:61
+[1] /home/rof/public_html/dev/lib/Zend/Controller/Response/Abstract.php:766
+[2] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:93
+[3] /home/rof/public_html/dev/app/code/local/Mageworks/Import/controllers/Adminhtml/ImportController.php:19
+[4] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Action.php:418
+[5] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php:250
+[6] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php:172
+[7] /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php:354
+[8] /home/rof/public_html/dev/app/Mage.php:684
+[9] /home/rof/public_html/dev/index.php:123
+</pre>
+2014-07-23T18:54:24+00:00 DEBUG (7): HEADERS ALREADY SENT: 
+RequestPath: /index.php/admin/import/category/type/categories/
+array
+(
+    [0] => 'X-Powered-By: PHP/5.4.30'
+    [1] => 'Expires: Thu, 19 Nov 1981 08:52:00 GMT'
+    [2] => 'Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0'
+    [3] => 'Pragma: no-cache'
+    [4] => 'Set-Cookie: adminhtml=fa3349d8881d7d642bd4e0b7dc21c2a1; expires=Thu, 24-Jul-2014 01:14:23 GMT; path=/; domain=dev.rattanoutdoorfurniture.com; httponly'
+    [5] => 'Content-type: text/html'
+)
+<pre>[0] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:61
+[1] /home/rof/public_html/dev/lib/Zend/Controller/Response/Abstract.php:766
+[2] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Response/Http.php:93
+[3] /home/rof/public_html/dev/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /home/rof/public_html/dev/app/code/core/Mage/Core/Model/App.php:354
+[5] /home/rof/public_html/dev/app/Mage.php:684
+[6] /home/rof/public_html/dev/index.php:123
+</pre>
