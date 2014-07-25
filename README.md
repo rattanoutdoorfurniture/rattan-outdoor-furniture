@@ -74,6 +74,7 @@ Furniture web site project.
 ##Change Log:##
 
 ###2014-07-25###
+- Update FavIcon; Update Home Page Slides; So I have to sync one more time here, I made some edits. I updated the favicon, and update the home page slides. Upload these images, and pull to the server, pretty simple update here.
 - Fix URL Issue; Sync Files and Database; I got the issue with the preferred parent fixed. I have it now so it sets the parent URL based on the preference set in the import. If there is an issue with this value being read, it defaults to whichever the current category is, the default magento way. This will be important for having our 'good urls' and that way it sets the good internal linking we want. Also, I will be able to replicate this process (which now the value is set, should be easy) for the related products, and the linkage involved there.
 
 ###2014-07-24###
