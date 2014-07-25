@@ -2712,3 +2712,4 @@ array
 [5] /home/rof/public_html/dev/app/Mage.php:684
 [6] /home/rof/public_html/dev/index.php:123
 </pre>
+2014-07-24T14:49:19+00:00 DEBUG (7): Warning: PDOStatement::execute(): MySQL server has gone away  in C:\Projects\rof\code\dev\lib\Zend\Db\Statement\Pdo.php on line 228
