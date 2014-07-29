@@ -86,7 +86,13 @@
 /* Newsletter Footer Box
 **********************************************************/
 #footer-newsletter {
-    margin: 20px 0 5px;
+    margin: 10px 0 5px;
+    height: 40px;
+    display: block;
+}
+
+#footer-newsletter-heading {
+    padding-left: 20px;
 }
 
 #footer-newsletter #newsletter,
@@ -100,12 +106,17 @@
 
 #footer-newsletter-submit {
     /*width: 90px;*/
-    width: 55px;
+    width: 75px;
     height: 30px;
     border: none;
-    background: #895c9a url('../images/footer-newsletter-submit-2.png') center center no-repeat;
+    background: transparent url('../images/footer-newsletter-submit.png') center center no-repeat;
     margin-left: -10px;
     text-indent: -10000px;
+}
+
+#footer-social {
+    display: inline-block;
+    margin-left: 20px;
 }
 
 #footer-social-label {
