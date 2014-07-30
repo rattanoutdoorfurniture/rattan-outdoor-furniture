@@ -53,9 +53,10 @@
 <form id="footer-newsletter" method="post" action="<?php echo $this->getFormActionUrl() ?>">
     <input type="email" name="email" placeholder="Email Address" id="footer-newsletter-input" title="<?php echo $this->__('Join our Newsletter') ?>" class="input-text required-entry validate-email"  />
     <input type="submit" id="footer-newsletter-submit" value="Send" title="<?php echo $this->__('Subscribe') ?>" class="button" />
+    <div id="footer-newsletter-msg"></div>
 </form>
 <script type="text/javascript">
     //<![CDATA[
-    var newsletterSubscriberFormDetail = new VarienForm('footer-newsletter');
+    // var newsletterSubscriberFormDetail = new VarienForm('footer-newsletter');
     //]]>
 </script>

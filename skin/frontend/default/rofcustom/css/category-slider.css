@@ -20,21 +20,41 @@
     display: block;
     height: 90px;
     width: 30px;
+    background-color: transparent;
+    background-image: url('../images/controls.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.category-slider-nav.disabled {
+    cursor: default;
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
+    -o-opacity: 0.5;
+    opacity: 0.5;
 }
 
 #category-slider-prev {
-
+    background-position: right 30px;
 }
 
 #category-slider-next {
-
+    background-position: left -68px;
 }
 
 #category-slider-inner {
+    position: relative;
     float: left;
     display: block;
     height: 90px;
     width: 880px;
+    overflow: hidden;
+}
+
+#category-slider-inner table {
+    position: absolute;
+    top: 0;
+    left: 0px;
 }
 
 .category-slider-slide {
@@ -46,7 +66,6 @@
 }
 
 .category-slider-slide-link {
-    display: block;
     text-decoration: none;
 }
 
