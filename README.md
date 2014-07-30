@@ -73,6 +73,9 @@ Furniture web site project.
 
 ##Change Log:##
 
+###2014-07-30###
+- Style Fixes, Newsletter, View Order; I started this morning by fixing some styles noted yesterday. I started with the newsletter management page in the account section. this just needed to be cleaned up. I also noticed the blog buttons had some style issues, so i fixed that. Then I moved on to the View Order Page. This gives you details about an order. I didn't go too crazy with this, I just wanted it to look styled, but it could use a little more work. But it looks much better than it did, and I'd like to move on. I am going to fix the logo on the print page. But this just has to be set in the admin side. So, as this will edit the database, I am going to just sync these changes, and once I make that change, and fix the phone number and email in the writing, I'll do a full sync and backup the changes to the database.
+
 ###2014-07-29###
 - Pill style Buttons; Start Site Fixes; Today we started making tweeks on the site. We started with changing all the buttons to 'pill' style buttons. All buttons on the site should mimic this 'pill' style now. I also fixed the product twitter button to say 'tweet' instead of 'follow', as that's the correct action verb for the call-to-action.
 

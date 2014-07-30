@@ -42,6 +42,9 @@
 .page-title aside.back-aside:hover {border-bottom: 1px solid #888;}
 .page-title aside.back-aside a:hover {text-decoration:none;}
 
+.page-title aside.back-aside.normal-hover:hover {border-bottom: none}
+.page-title aside.back-aside.normal-hover a:hover {text-decoration: underline;}
+
 img, button, input {
     outline: 0 none;
 }
@@ -1130,6 +1133,11 @@ img, button, input {
         margin: 10px 20px;
     }
 
+    .my-account .buttons-set.fleft-pad > * {
+        float: left;
+        margin-left: 10px !important;
+    }
+
     .account-box .back-link,
     .account-box .account-sub-button,
     .my-account .back-link,
@@ -1139,6 +1147,7 @@ img, button, input {
         width: 70px;
         height: 30px;
         border: none;
+        display: inline-block;
     }
 
     .account-box .back-link,
@@ -1396,6 +1405,35 @@ img, button, input {
     .orders-history .pager select {
         width: auto;
     }
+
+    /* Account View Order Page
+    ********************************************************/
+    .my-account .order-details #my-orders-table {
+        width: 100%;
+    }
+
+    .my-account .order-details #my-orders-table .product-name {
+        font-size: 20px;
+        color: #8a6399;
+        text-align: left;
+    }
+
+    .my-account .order-details #my-orders-table .item-options,
+    .my-account .order-details #my-orders-table .item-options dt,
+    .my-account .order-details #my-orders-table .item-options dd {
+        float: left;
+    }
+
+    .my-account .order-details #my-orders-table .item-options dt:after {
+        content: " - ";
+    }
+
+    .my-account .order-details #my-orders-table .item-options dd {
+        clear: right;
+        padding-left: 10px;
+    }
+
+
 
     /* Account Edit Info Page
     *****************************************************/
