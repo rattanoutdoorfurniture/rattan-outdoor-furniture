@@ -28,10 +28,7 @@
 
 .category-slider-nav.disabled {
     cursor: default;
-    -webkit-opacity: 0.5;
-    -moz-opacity: 0.5;
-    -o-opacity: 0.5;
-    opacity: 0.5;
+    visibility: hidden;
 }
 
 #category-slider-prev {
@@ -107,6 +104,10 @@
 
 .cat-barsets .category-slider-slide-img {
     background-position: -707px center;
+}
+
+.cat-accessories .category-slider-slide-img {
+    background-position: -795px center;
 }
 
 

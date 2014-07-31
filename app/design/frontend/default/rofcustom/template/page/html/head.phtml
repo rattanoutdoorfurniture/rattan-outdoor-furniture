@@ -137,10 +137,32 @@
         if($("#category-slider").length) {
             $(".category-slider-nav").on("click", function(e) {
                 var $btn = $(this);
-                if($btn.hasClass('disabled')) return false;
+                if($btn.hasClass('disabled')) return console.log("disabled")&&false;
+                var $oBtn  = $btn.siblings(".category-slider-nav");
                 var dir    = $btn.attr("id") == "category-slider-prev" ? 1 : -1;
-                var $table = $("#category-slider-inner table");
+                var $wrap  = $("#category-slider-inner");
+                var $table = $("table", $wrap);
+                if(!$table.length) return console.log("no table")&&false;
+                var tableW = $table.width();
                 var curOff = $table.position().left;
+                var dist   = $table.find("td").width();
+                if(dir>0) {
+                    if((curOff*-1)<dist) return console.log("offset less than dist")&&false;
+                } else {
+                    if(tableW-$wrap.width()-(curOff*dir) < 0) return false;
+                }
+                var newLeft = "+=" + (dir*dist);
+                $table.animate({
+                    left: newLeft
+                },{
+                    duration: 400
+                });
+                if((curOff<dist)||(tableW-$wrap.width()-(curOff*dir) < 0)) {
+                    $btn.addClass("disabled");
+                    $oBtn.removeClass("disabled");
+                } else {
+                    $btn.removeClass("disabled");
+                }
             });
         }
 
