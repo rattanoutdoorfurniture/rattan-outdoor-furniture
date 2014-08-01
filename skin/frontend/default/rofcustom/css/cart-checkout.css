@@ -108,6 +108,11 @@ img, button, input {
 
     }
 
+    .cart-box-sub {
+        background: #FFF;
+        text-align: right;
+    }
+
     /*#cart-cartbox-table*/
     .button.btn-update {
         text-indent: -10000px;
@@ -115,9 +120,10 @@ img, button, input {
         height: 30px;
         border: none;
         background: transparent url('../images/cart-cartbox-table-update-btn.png') center center no-repeat;
-        position: absolute;
-        bottom: -60px;
-        right: 10px;
+        /*position: absolute;*/
+        /*bottom: -60px;*/
+        /*right: 10px;*/
+        margin-top: 10px;
     }
 
     #cart-cartbox-table-header {

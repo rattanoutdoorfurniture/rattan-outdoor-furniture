@@ -331,23 +331,69 @@
                         . '</div>'
                         . '<div class="account-box-border">&nbsp;</div>'
                         . '</div>';
-            $keywords   = htmlentities(implode(", ",array_unique(explode(" ",implode(" ", $page["keywords"])))),ENT_QUOTES);
+            reset($page["content"]);
+            $metaDesc   = current($page["content"]);
+            $metaDesc   = strip_tags($metaDesc);
+            strpos($metaDesc,"$city, $state");
+
+            $keywords   = str_replace("/"," ",$page["keywords"]);
+            $keywords   = htmlentities(implode(", ",array_unique(explode(" ",implode(" ", $keywords)))),ENT_QUOTES);
             $parentId   = $statePageId[$state];
             $citiesNum  = $cityCount[$state];
             $query = <<<QUERY
 REPLACE INTO cms_page_tree
-VALUES (
+(
+`page_id`,
+`title`,
+`root_template`,
+`meta_keywords`,
+`meta_description`,
+`identifier`,
+`content_heading`,
+`content`,
+`creation_time`,
+`update_time`,
+`is_active`,
+`sort_order`,
+`layout_update_xml`,
+`custom_theme`,
+`custom_root_template`,
+`custom_layout_update_xml`,
+`custom_theme_from`,
+`custom_theme_to`,
+`store_id`,
+`parent_id`,
+`path`,
+`position`,
+`level`,
+`children_count`,
+`include_in_menu`
+) VALUES (
 {$cityId},
 '{$city}, {$state}',
 'one_column',
 '{$city}, {$state}, {$keywords}',
-'{$cont}',
+'{$metaDesc}',
 'locations/{$dashState}/{$dashCity}',
 '{$city}, {$state} Outdoor Patio Furniture',
 '{$cont}',
 NOW(),
 NOW(),
-1, 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, {$parentId}, '2/22/{$parentId}/{$cityId}', {$citiesNum}, 0, 0, 1
+1,
+0,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+1,
+{$parentId},
+'2/22/{$parentId}/{$cityId}',
+{$citiesNum},
+0,
+0,
+1
 );
 QUERY;
             $queries[]= $query;

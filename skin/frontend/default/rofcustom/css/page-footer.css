@@ -85,6 +85,11 @@
     font-family: 'Tahoma';
 }
 
+.footer-links-wrap ul li a:hover,
+.footer-box a:hover {
+    color: #8a6399;
+}
+
 /* Newsletter Footer Box
 **********************************************************/
 #footer-newsletter {

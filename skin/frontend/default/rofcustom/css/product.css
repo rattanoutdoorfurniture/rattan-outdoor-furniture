@@ -314,9 +314,15 @@
 #product-details-btns-add-btn {
     background: transparent url('../images/product-details-btns-add.png') center center no-repeat;
 }
+#product-details-btns-add-btn:hover {
+    box-shadow: 0 0 10px #8a3699;
+}
 
 #product-details-btns-checkout-btn {
     background: transparent url('../images/product-details-btns-checkout.png') center center no-repeat;
+}
+#product-details-btns-checkout-btn:hover {
+    box-shadow: 0 0 10px #56b2dd;
 }
 
 /* Social Media Buttons

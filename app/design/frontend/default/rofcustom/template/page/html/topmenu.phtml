@@ -48,11 +48,11 @@
             <a href="<?php echo $this->getUrl(''); ?>" title="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"><?php echo $this->__("Home"); ?></a>
         </li>
         <?php echo $_menu; ?>
-        <li class="nav-main-item<?php echo preg_match('/^\/about-us\/?$/',Mage::app()->getRequest()->getRequestString())===1 ? ' selected':''; ?>">
+        <li class="nav-main-item<?php echo preg_match('/^\/about-us\/?.*$/',Mage::app()->getRequest()->getRequestString())===1 ? ' selected':''; ?>">
             <a href="<?php echo $this->getUrl('about-us') ?>"><?php echo $this->__("About Us"); ?></a>
         </li>
         <?php if($helper->isEnabled()): ?>
-        <li class="nav-main-item<?php echo preg_match("/^\\/{$route}\\/?$/",Mage::app()->getRequest()->getRequestString())===1 ? ' selected':''; ?>">
+        <li class="nav-main-item<?php echo preg_match("/^\\/{$route}\\/?.*$/",Mage::app()->getRequest()->getRequestString())===1 ? ' selected':''; ?>">
             <a href="<?php echo $this->getUrl('').$route ?>"> <?php echo $route ?></a>
         </li>
         <?php endif; ?>

@@ -91,7 +91,10 @@ color: #161616;
 }
 .postContent {
     padding: 10px 50px 0px;
-    text-align: justify
+    text-align: justify;
+    border-bottom: 5px solid #EEE;
+    margin-bottom: 20px;
+    border-image: url('../../images/hash-border-darker.png') 5 repeat;
 }
 
 .post-details.row {

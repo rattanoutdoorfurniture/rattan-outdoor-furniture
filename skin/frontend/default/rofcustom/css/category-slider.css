@@ -54,6 +54,13 @@
     left: 0px;
 }
 
+.category-slider-slide-link:hover .category-slider-slide-label {
+    /*text-decoration: underline;*/
+}
+.category-slider-slide-link {
+    text-decoration: none;
+}
+
 .category-slider-slide {
     float: left;
     display: block;
@@ -62,8 +69,9 @@
     margin: 0 8px;
 }
 
-.category-slider-slide-link {
-    text-decoration: none;
+.category-slider-slide:hover {
+    box-shadow: 0 0 5px 0px rgba(138, 99, 153, 1);
+    border-radius: 15px;
 }
 
 .category-slider-slide-img {
@@ -116,8 +124,4 @@
     text-decoration: none;
     color: #888;
     font-family: "Tahoma";
-}
-
-.category-slider-slide-link:hover .category-slider-slide-label {
-    text-decoration: underline;
 }
