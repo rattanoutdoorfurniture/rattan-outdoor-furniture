@@ -147,7 +147,7 @@ nav a {
     background-image: url('../images/nav-main-selected.png') !important;
 }
 
-.nav-main-item.last {
+.nav-main-item.last.search {
     float: right;
     position: relative;
     padding: 0 5px 0 0;
