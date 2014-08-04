@@ -26,6 +26,7 @@ Furniture web site project.
 
 
 - Abstract Product_View_Options_Type_Select logic from the Magento core. This should extend the core, which I could not get to work today.
+- Additions to the Mage_Core_Sitemap Product model. (this should be defined elsewhere).
 
 - Add to Cart and Checkout: move code from core to local add-on.
 - Change Page titles to use the Prefix defined in the Magento admin.
@@ -72,6 +73,9 @@ Furniture web site project.
 
 
 ##Change Log:##
+
+###2014-08-04###
+- Prepare For Live; Configure; Copy for Production; We're going to get this thing live, so today I've made some changes to this purpose, and have copied over the database for staging, with the appropriate products enabled and things of that sort. One of the biggest things I did today was get the Google XML Sitemap to generate properly. This sitemap lands us at 256 pages, which is right were we want to be. So Tomorrow, I have to finish setting up the staging (which is just going to be a matter of cloning the repo, set the database and start the "for-live" configurations.
 
 ###2014-07-31###
 - Category Slider; Footer Fixes; Today I started out with finishing up the Category Slider. Added the Accessories button. Made an Icon for that. Then fixed up the footer. We put the Social Media follow widgets in the footer. Fixed up some spacing. Changed the Logo to have the Registered Trademark.
