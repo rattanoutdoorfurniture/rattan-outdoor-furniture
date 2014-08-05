@@ -26,6 +26,7 @@ Furniture web site project.
 
 
 - Abstract Product_View_Options_Type_Select logic from the Magento core. This should extend the core, which I could not get to work today.
+- Additions to the Mage_Core_Sitemap Product model. (this should be defined elsewhere).
 
 - Add to Cart and Checkout: move code from core to local add-on.
 - Change Page titles to use the Prefix defined in the Magento admin.
@@ -72,6 +73,26 @@ Furniture web site project.
 
 
 ##Change Log:##
+
+###2014-08-04###
+- Prepare For Live; Configure; Copy for Production; We're going to get this thing live, so today I've made some changes to this purpose, and have copied over the database for staging, with the appropriate products enabled and things of that sort. One of the biggest things I did today was get the Google XML Sitemap to generate properly. This sitemap lands us at 256 pages, which is right were we want to be. So Tomorrow, I have to finish setting up the staging (which is just going to be a matter of cloning the repo, set the database and start the "for-live" configurations.
+
+###2014-07-31###
+- Category Slider; Footer Fixes; Today I started out with finishing up the Category Slider. Added the Accessories button. Made an Icon for that. Then fixed up the footer. We put the Social Media follow widgets in the footer. Fixed up some spacing. Changed the Logo to have the Registered Trademark.
+
+###2014-07-30###
+- Print Logo; Phone, Email; Newsletter; About Us; As mentioned in my previous note, I have made edits on the server, so I've synced from there. I fixed the phone numbers and email addresses in all the writing by re-importing with the updated descriptions. I also set the print logo. These will update the database. I've also started on the Category Slider, which has some elements in the database. I am going to pick up with this in the morning, but I wanted to do a sync before I left. I also fixed the About Us page. I hard-coded the link in the menu, so there's no awkward redirect (which was slow). I did a little improvement on the menu while I was in there, making so it shows the purple if you're on blog or about-us. I also am adding in the footer newsletter ajax submit. This nicely adds you to the newsletter without leaving the page, and just gives you a little Thanks For Joining message over the input box.
+- Style Fixes, Newsletter, View Order; I started this morning by fixing some styles noted yesterday. I started with the newsletter management page in the account section. this just needed to be cleaned up. I also noticed the blog buttons had some style issues, so i fixed that. Then I moved on to the View Order Page. This gives you details about an order. I didn't go too crazy with this, I just wanted it to look styled, but it could use a little more work. But it looks much better than it did, and I'd like to move on. I am going to fix the logo on the print page. But this just has to be set in the admin side. So, as this will edit the database, I am going to just sync these changes, and once I make that change, and fix the phone number and email in the writing, I'll do a full sync and backup the changes to the database.
+
+###2014-07-29###
+- Pill style Buttons; Start Site Fixes; Today we started making tweeks on the site. We started with changing all the buttons to 'pill' style buttons. All buttons on the site should mimic this 'pill' style now. I also fixed the product twitter button to say 'tweet' instead of 'follow', as that's the correct action verb for the call-to-action.
+
+###2014-07-25###
+- Update FavIcon; Update Home Page Slides; So I have to sync one more time here, I made some edits. I updated the favicon, and update the home page slides. Upload these images, and pull to the server, pretty simple update here.
+- Fix URL Issue; Sync Files and Database; I got the issue with the preferred parent fixed. I have it now so it sets the parent URL based on the preference set in the import. If there is an issue with this value being read, it defaults to whichever the current category is, the default magento way. This will be important for having our 'good urls' and that way it sets the good internal linking we want. Also, I will be able to replicate this process (which now the value is set, should be easy) for the related products, and the linkage involved there.
+
+###2014-07-24###
+- Update After Import; Full Backup; Begin URL Key Fix; I am doing a full sync. I have synced the new files from the import from the server. I am also going to do a full database backup. I will sync this locally, and begin working on fixing the url key issue. I just want everything backed up and synced before I get into this too much.
 
 ###2014-07-17###
 - Run Import Update. Backup, Copy for Staging/Live. I have ran the imports to update the categories and products. This has made all but the main categories hidden, along with any products not associated with the main categories. I am going to do a database backup, and I want to import it into the future live database, which will be used for staging now. At this point we will start to have a live/dev divergence, where I will need to develop the location changes we discussed, but this will not be in the launched version. I am going to make our live database, and add our to-live changes to that database, which will be used on staging. I am going to have to come up with a good method of keeping this organized and separated. Git does not do a very good job with databases, and this divergence will start the need for different versions of the database. For now I am setting this up.

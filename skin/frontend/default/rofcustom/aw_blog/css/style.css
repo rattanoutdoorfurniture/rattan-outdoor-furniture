@@ -91,7 +91,10 @@ color: #161616;
 }
 .postContent {
     padding: 10px 50px 0px;
-    text-align: justify
+    text-align: justify;
+    border-bottom: 5px solid #EEE;
+    margin-bottom: 20px;
+    border-image: url('../../images/hash-border-darker.png') 5 repeat;
 }
 
 .post-details.row {
@@ -114,9 +117,13 @@ color: #161616;
     width: 101px;
     height: 30px;
     border: none;
-    border-radius: 0;
-    background: #8a6399 url('../../images/category-banner-blurb-btn.png') center center no-repeat;
+    border-radius: 15px;
+    background: transparent url('../../images/category-banner-blurb-btn.png') center center no-repeat;
     text-indent: -10000px;
+}
+
+.post-details.row .read-more.btn:hover {
+    box-shadow: 0px 0px 5px 0px #8a6399;
 }
 
 .postBookmarks {

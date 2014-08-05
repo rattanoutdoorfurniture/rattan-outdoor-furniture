@@ -19,7 +19,7 @@ nav a {
 
 .nav-top {
     position: absolute;
-    top: 0px;
+    top: 7px;
     right: 12px;
     height: 29px;
     z-index: 998;
@@ -45,12 +45,14 @@ nav a {
 }
 
 .nav-top-item.first {
-    border-radius: 7px 0 0 7px / 9px 0 0 9px;
+    /*border-radius: 7px 0 0 7px / 9px 0 0 9px;*/
+    border-radius: 15px 0 0 15px;
 }
 
 .nav-top-item.last {
     border-right: 1px solid #ccc;
-    border-radius: 0 7px 7px 0 / 0 9px 9px 0;
+    /*border-radius: 0 7px 7px 0 / 0 9px 9px 0;*/
+    border-radius: 0 15px 15px 0;
 }
 
 .nav-top-item a {
@@ -103,6 +105,8 @@ nav a {
 }
 
 
+
+
 /* MAIN NAV
 ***********************/
 .nav-main {
@@ -143,7 +147,7 @@ nav a {
     background-image: url('../images/nav-main-selected.png') !important;
 }
 
-.nav-main-item.last {
+.nav-main-item.last.search {
     float: right;
     position: relative;
     padding: 0 5px 0 0;
@@ -195,9 +199,11 @@ nav a {
     padding: 0 0 0 30px;
     border: none;
     background: white url('../images/glob-search-bg.png') 7px center no-repeat;
-    font-family: 'FuturaStd-MediumOblique';
+    font-family: 'Tahoma';
+    font-weight: bold;
     color: #888;
     position:relative;
+    z-index: 9;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -217,12 +223,13 @@ nav a {
 }
 
 #glob-search-submit {
-    width: 98px;
-    height: 28px;
-    margin: 0 5px 0 0;
+    width: 100px;
+    height: 30px;
+    margin: -1px 5px 0 0;
     padding: 0;
     border: none;
     border-radius: 0;
     background: transparent url('../images/glob-search-submit.png') center center no-repeat;
     text-indent: -10000px;
+    z-index: 99;
 }

@@ -306,14 +306,23 @@
 
 .product-details-btn-img {
     text-indent: -10000px;
+    border: none !important;
+    border-radius: 25px;
+
 }
 
 #product-details-btns-add-btn {
-    background: #8f6a9d url('../images/product-details-btns-add.png') center center no-repeat;
+    background: transparent url('../images/product-details-btns-add.png') center center no-repeat;
+}
+#product-details-btns-add-btn:hover {
+    box-shadow: 0 0 10px #8a3699;
 }
 
 #product-details-btns-checkout-btn {
-    background: #56b2dd url('../images/product-details-btns-checkout.png') center center no-repeat;
+    background: transparent url('../images/product-details-btns-checkout.png') center center no-repeat;
+}
+#product-details-btns-checkout-btn:hover {
+    box-shadow: 0 0 10px #56b2dd;
 }
 
 /* Social Media Buttons
@@ -329,7 +338,7 @@
     margin: 0 3px;
     height: 31px;
     display: inline-block;
-    background-image: url('../images/product-details-social-sprite.png');
+    background-image: url('../images/product-details-social.png');
     background-color: transparent;
     background-position: 0px -3px;
     text-indent: -10000px;

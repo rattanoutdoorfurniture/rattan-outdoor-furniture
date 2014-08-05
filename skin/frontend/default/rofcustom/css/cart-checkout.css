@@ -42,6 +42,9 @@
 .page-title aside.back-aside:hover {border-bottom: 1px solid #888;}
 .page-title aside.back-aside a:hover {text-decoration:none;}
 
+.page-title aside.back-aside.normal-hover:hover {border-bottom: none}
+.page-title aside.back-aside.normal-hover a:hover {text-decoration: underline;}
+
 img, button, input {
     outline: 0 none;
 }
@@ -105,15 +108,22 @@ img, button, input {
 
     }
 
+    .cart-box-sub {
+        background: #FFF;
+        text-align: right;
+    }
+
     /*#cart-cartbox-table*/
     .button.btn-update {
         text-indent: -10000px;
-        width: 90px;
+        width: 100px;
         height: 30px;
-        background: #8a6399 url('../images/cart-cartbox-table-update-btn.png') center center no-repeat;
-        position: absolute;
-        bottom: -60px;
-        right: 10px;
+        border: none;
+        background: transparent url('../images/cart-cartbox-table-update-btn.png') center center no-repeat;
+        /*position: absolute;*/
+        /*bottom: -60px;*/
+        /*right: 10px;*/
+        margin-top: 10px;
     }
 
     #cart-cartbox-table-header {
@@ -441,12 +451,12 @@ img, button, input {
     }
 
     .checkout-step1-next-step {
-        margin: 20px auto 5px auto;
+        margin: 20px auto 5px auto !important;
         float: right;
         border: none !important;
         -webkit-border-radius: 0 !important;
         border-radius: 0 !important;
-        background-color: #8a6399;
+        background-color: transparent !important;
         background-image: none;
         background-position: center;
         background-repeat: no-repeat;
@@ -502,14 +512,14 @@ img, button, input {
         height: 16px;
     }
 
-    #checkout-step2-next-step {
-        width: 170px;
-        height: 40px;
-        background: transparent url('../images/checkout-step2-next-step.png') center center no-repeat;
-        float: right;
-        text-indent: -10000px;
-        margin: 20px 0 0 0;
-    }
+    /*#checkout-step2-next-step {*/
+        /*width: 170px;*/
+        /*height: 40px;*/
+        /*background: transparent url('../images/checkout-step2-next-step.png') center center no-repeat;*/
+        /*float: right;*/
+        /*text-indent: -10000px;*/
+        /*margin: 20px 0 0 0;*/
+    /*}*/
 
     /* Checkout Step 3 - Shipping Information - Complete
     *************************************************************************************/
@@ -528,14 +538,14 @@ img, button, input {
         width: 250px !important;
     }
 
-    #checkout-step3-submit-order {
-        width: 170px;
-        height: 40px;
-        background: transparent url('../images/checkout-step3-submit-order.png') center center no-repeat;
-        float: right;
-        text-indent: -10000px;
-        margin: 0;
-    }
+    /*#checkout-step3-submit-order {*/
+        /*width: 170px;*/
+        /*height: 40px;*/
+        /*background: transparent url('../images/checkout-step3-submit-order.png') center center no-repeat;*/
+        /*float: right;*/
+        /*text-indent: -10000px;*/
+        /*margin: 0;*/
+    /*}*/
 
 
 
@@ -651,21 +661,22 @@ img, button, input {
         width: 100%;
         display: inline-block;
         margin: 0 auto;
+        border: none !important;
     }
 
     #cart-continue-btn {
-        background: #8a6399 url('../images/cart-continue-btn.png') center center no-repeat;
+        background: transparent url('../images/cart-continue-btn.png') center center no-repeat;
         width: 130px;
     }
 
     #cart-cartbox.hide-items ~ #cart-btns #cart-continue-btn,
     #cart-btns.hideCheckout #cart-continue-btn {
-        background: #8a6399 url('../images/cart-continue-btn-hide-items.png') center center no-repeat;
+        background: transparent url('../images/cart-continue-btn-hide-items.png') center center no-repeat;
         width: 310px;
     }
 
     #cart-checkout-btn {
-        background: #56b2dd url('../images/cart-checkout-btn.png') center center no-repeat;
+        background: transparent url('../images/cart-checkout-btn.png') center center no-repeat;
         width: 170px;
     }
 
@@ -1043,9 +1054,18 @@ img, button, input {
             height: 40px !important;
         }
 
+        .opc-wrapper-opc .discount-block .input-box input {
+            margin-bottom: 10px !important;
+        }
+
+        .opc-wrapper-opc .discount-block .buttons-set {
+            margin-top: 10px !important;
+        }
+
         .opc-wrapper-opc .button.apply-coupon {
-            background: #8a6399 url('../images/checkout-apply-coupon-btn.png') center center no-repeat;
+            background: transparent url('../images/checkout-apply-coupon-btn.png') center center no-repeat;
             width: 130px;
+            height: 30px !important;
             float: right !important;
         }
 
@@ -1058,7 +1078,7 @@ img, button, input {
         }
 
         .opc-wrapper-opc .button.btn-checkout {
-            background: #56b2dd url('../images/cart-checkout-btn-wide.png') center center no-repeat;
+            background: transparent url('../images/cart-checkout-btn-wide.png') center center no-repeat;
             width: 330px;
             margin: 10px auto 20px;
             float: none;
@@ -1119,6 +1139,11 @@ img, button, input {
         margin: 10px 20px;
     }
 
+    .my-account .buttons-set.fleft-pad > * {
+        float: left;
+        margin-left: 10px !important;
+    }
+
     .account-box .back-link,
     .account-box .account-sub-button,
     .my-account .back-link,
@@ -1127,21 +1152,23 @@ img, button, input {
         text-indent: -10000px;
         width: 70px;
         height: 30px;
+        border: none;
+        display: inline-block;
     }
 
     .account-box .back-link,
     .my-account .back-link {
-        background: #8a6499 url('../images/account-buttons-back-link.png') center center no-repeat;
+        background: transparent url('../images/account-buttons-back-link.png') center center no-repeat;
     }
 
     .account-box .save-button,
     .my-account .save-button {
-        background: #8a6499 url('../images/account-buttons-save-button.png') center center no-repeat;
+        background: transparent url('../images/account-buttons-save-button.png') center center no-repeat;
     }
 
     .account-box .submit-button,
     .my-account .submit-button {
-        background: #8a6499 url('../images/account-buttons-submit-button.png') center center no-repeat;
+        background: transparent url('../images/account-buttons-submit-button.png') center center no-repeat;
     }
 
     /* Login / Register Page Styles
@@ -1256,9 +1283,10 @@ img, button, input {
     .account-box .account-box-button {
         float: right;
         margin: 10px 20px;
-        background: #8a6499 none center center no-repeat;
+        background: transparent none center center no-repeat;
+        border: none;
         text-indent: -10000px;
-        width: 70px;
+        width: 90px;
         height: 30px;
         clear: both;
     }
@@ -1324,7 +1352,7 @@ img, button, input {
 
         #recent-orders-view-all {
             background-image: url('../images/account-dashboard-recent-orders-view-all.png');
-            width: 70px;
+            width: 90px;
             margin-right: 40px;
         }
 
@@ -1338,7 +1366,7 @@ img, button, input {
         }
 
         #account-info-edit-password {
-            width: 140px;
+            width: 150px;
             background-image: url('../images/account-dashboard-button-edit-password.png');
         }
 
@@ -1352,7 +1380,7 @@ img, button, input {
         }
 
         #account-info-edit-addresses {
-            width: 140px;
+            width: 150px;
             background-image: url('../images/account-dashboard-button-edit-addresses.png');
         }
 
@@ -1384,6 +1412,35 @@ img, button, input {
         width: auto;
     }
 
+    /* Account View Order Page
+    ********************************************************/
+    .my-account .order-details #my-orders-table {
+        width: 100%;
+    }
+
+    .my-account .order-details #my-orders-table .product-name {
+        font-size: 20px;
+        color: #8a6399;
+        text-align: left;
+    }
+
+    .my-account .order-details #my-orders-table .item-options,
+    .my-account .order-details #my-orders-table .item-options dt,
+    .my-account .order-details #my-orders-table .item-options dd {
+        float: left;
+    }
+
+    .my-account .order-details #my-orders-table .item-options dt:after {
+        content: " - ";
+    }
+
+    .my-account .order-details #my-orders-table .item-options dd {
+        clear: right;
+        padding-left: 10px;
+    }
+
+
+
     /* Account Edit Info Page
     *****************************************************/
     .my-account .edit-info .account-box.col-2 {
@@ -1404,7 +1461,7 @@ img, button, input {
     .my-account .edit-info .account-box.col-2.displaynone +
     .account-box.col-1 {
         width: 770px !important;
-        margin: 0 5px 0 15px;
+        margin: 0 5px 0 35px;
         min-height: 350px;
     }
 

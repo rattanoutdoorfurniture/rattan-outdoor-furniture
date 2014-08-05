@@ -57,65 +57,115 @@
 
 <script type="text/javascript">
 
-    function getUrlParams(key) {
-        var Params = {};
-        var params = decodeURIComponent(location.search.slice(1)).split("&");
-        for(i=0;i<params.length;i++){
-            keyval=params[i].split("=");
-            Params[keyval[0]]=keyval[1];
-        }
-        return typeof(key)==typeof(undefined) ? Params : ( typeof(Params[key])==typeof(undefined) ? Params : Params[key] );
-    }
-
-    /*
-    function nextCheckoutStepUrl(step) {
-        params = getUrlParams();
-        params.step = (typeof(step)==typeof(undefined)) ? params.step+1 : step;
-        newParams = jQuery.param(params);
-        base = location.href.slice(0,location.href.indexOf('?'));
-        return base + "?" + newParams;
-    }
-
-    function nextCheckoutStep(step) {
-        step = typeof(step)==typeof(undefined) ? getUrlParams('step') : step;
-        $("#checkout-box").removeClass('step'+(step)).addClass('step'+(++step));
-        history.pushState(null, "Step " + step, (location.href.slice(0,-1)+step));
-    }
-    */
-
     jQuery(document).ready(function($){
+
+        $("#footer-newsletter").on("submit",function(e) {
+            var $form    = $(this);
+            var postUrl  = $form.prop("action");
+            var email    = $form.find("#footer-newsletter-input").val();
+            var $msgs    = $form.find("#footer-newsletter-msg").text('&nbsp;').removeClass("error overlay").stop(true,true);
+
+            // Test for Valid Email Address
+            if(!(/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z]{1,4}$/.test(email))) {
+                $msgs.
+                    fadeOut(0).
+                    text("Invalid Email Address").
+                    addClass("error").
+                    fadeIn(500, function() {
+                        var $this = $(this);
+                        setTimeout(function() {
+                            $this.fadeOut(500, function() {
+                                $this.removeClass("error");
+                            });
+                        }, 1500);
+                    });
+                return false;
+            }
+
+            $msgs.
+                fadeOut(0).
+                text("Joining Newsletter...").
+                addClass("overlay").
+                fadeIn(200);
+
+            var formData = {
+                "email": email
+            };
+
+            $.ajax({
+                url: postUrl,
+                method: "POST",
+                data: formData,
+                success: function() {
+                    $msgs.text("Thanks for Joining!");
+                },
+                error: function() {
+                    $msgs.stop().removeClass("overlay").
+                        fadeOut(0).
+                        text("Error: Try Again").
+                        addClass("error").
+                        fadeIn(500, function() {
+                            var $this = $(this);
+                            setTimeout(function() {
+                                $this.fadeOut(500, function() {
+                                    $this.removeClass("error");
+                                });
+                            }, 1500);
+                        });
+                }
+            });
+
+            return false;
+
+        });
+
         if($(".product-tab").length) {
             if($(location.hash).length) {
                 $(".product-tab.active").removeClass("active");
                 $(location.hash).addClass("active");
             }
+            $(".product-tab-title a").on("click", function(ev){
+                ev.preventDefault();
+                $("#product-tabs").find(".product-tab.active").removeClass("active");
+                $(this.hash).addClass("active");
+                scrollTop = $(document).scrollTop();
+                location.hash = this.hash;
+                $(document).scrollTop(scrollTop);
+            });
         }
-        $(".product-tab-title a").on("click", function(ev){
-            ev.preventDefault();
-            $("#product-tabs").find(".product-tab.active").removeClass("active");
-            $(this.hash).addClass("active");
-            scrollTop = $(document).scrollTop();
-            location.hash = this.hash;
-            $(document).scrollTop(scrollTop);
-        });
-        //$(".checkout-step-next-step").on("click", function(e) {
-        //    e.preventDefault();
-        //    if(this.id=="checkout-step3-submit-order") {
-        //        formdata = $("#checkout-box-form").serializeArray();
-        //        htmldata = $("<div/>");
-        //        $(formdata).each(function(){
-        //            row = $("<div/>");
-        //            row.append(
-        //                    $("<strong/>").text(this.name)
-        //                ).append(
-        //                    $("<span/>").text(this.value)
-        //                );
-        //            htmldata.append(row);
-        //        });
-        //        $("#checkout-box-step-4").append(htmldata);
-        //    }
-        //    nextCheckoutStep();
-        //});
+
+        if($("#category-slider").length) {
+            $(".category-slider-nav").on("click", function(e) {
+                var $btn = $(this);
+                if($btn.hasClass('disabled')) return console.log("disabled")&&false;
+                var $oBtn  = $btn.siblings(".category-slider-nav");
+                var dir    = $btn.attr("id") == "category-slider-prev" ? 1 : -1;
+                var $wrap  = $("#category-slider-inner");
+                var $table = $("table", $wrap);
+                if(!$table.length) return console.log("no table")&&false;
+                var tableW = $table.width();
+                var curOff = $table.position().left;
+                var dist   = $table.find("td").width();
+                if(dir>0) {
+                    if((curOff*-1)<dist) return console.log("offset less than dist")&&false;
+                } else {
+                    if(tableW-$wrap.width()-(curOff*dir) < 0) return false;
+                }
+                var newLeft = "+=" + (dir*dist);
+                $table.animate({
+                    left: newLeft
+                },{
+                    duration: 400
+                });
+                if((curOff<dist)||(tableW-$wrap.width()-(curOff*dir) < 0)) {
+                    $btn.addClass("disabled");
+                    $oBtn.removeClass("disabled");
+                } else {
+                    $btn.removeClass("disabled");
+                }
+            });
+        }
+
         if(location.pathname.match(/^\/$/)) {
             if(jQuery(".home-slide").length>=3) {
                 jQuery.homeSlider = function() {

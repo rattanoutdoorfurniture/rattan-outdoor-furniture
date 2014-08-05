@@ -50,6 +50,11 @@
         <?php if ($_item->getParentItem()) continue; ?>
         <tbody>
             <?php echo $this->getItemHtml($_item) ?>
+            <?php
+            /**
+             * Explicitly Hide Gift Message Section
+             *
+            ?>
             <?php if($this->helper('giftmessage/message')->getIsMessagesAvailable('order_item', $_item) && $_item->getGiftMessageId()): ?>
             <tr class="border<?php echo ($_index++ > $_count ?' last':'') ?>" id="order-item-gift-message-<?php echo $_item->getId() ?>" style="display:none;">
                 <?php $_giftMessage=$this->helper('giftmessage/message')->getGiftMessageForEntity($_item); ?>
@@ -63,6 +68,10 @@
                 </td>
             </tr>
             <?php endif ?>
+            <?php
+             *
+             */
+            ?>
         </tbody>
         <?php endforeach; ?>
 </table>
