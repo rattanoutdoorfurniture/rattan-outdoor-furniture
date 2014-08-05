@@ -68,6 +68,8 @@ if (file_exists($maintenanceFile)) {
 
 require_once $mageFilename;
 
+/*
+
 #set URL based on hostname
 $dnsWhite    = array(
     "www.rattanoutdoorfurniture.com"    => array(
@@ -111,6 +113,8 @@ if (isset($_SERVER['MAGE_IS_DEVELOPER_MODE'])){//||SERVER_ENV!="www") {
 
 #ini_set('display_errors', 1);
 
+*/
+
 if(file_exists('vendor/autoload.php')) {
     require 'vendor/autoload.php';
 }
@@ -125,6 +129,8 @@ $mageRunType = isset($_SERVER['MAGE_RUN_TYPE']) ? $_SERVER['MAGE_RUN_TYPE'] : 's
 
 Mage::run($mageRunCode, $mageRunType);
 
+/*
 $config = MAGE::app()->getConfig();
 $config->saveConfig("web/unsecure/base_url",$cacheHost['uns']);
 $config->saveConfig("web/secure/base_url",$cacheHost['s']);
+*/
