@@ -2,7 +2,7 @@
 ## Default to Developer Mode for the Dev Branch
 ##
 
-    SetEnv MAGE_IS_DEVELOPER_MODE 1
+    SetEnv MAGE_IS_DEVELOPER_MODE 0
 
 ############################################
 ## uncomment these lines for CGI mode
