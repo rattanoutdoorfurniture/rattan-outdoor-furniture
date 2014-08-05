@@ -69,7 +69,7 @@ if (file_exists($maintenanceFile)) {
 require_once $mageFilename;
 
 #set URL based on hostname
-$dnsWhite    = array(
+/*$dnsWhite    = array(
     "www.rattanoutdoorfurniture.com"    => array(
         "environment"   => "www"
     ),
@@ -104,7 +104,7 @@ if (isset($_SERVER['MAGE_IS_DEVELOPER_MODE'])){//||SERVER_ENV!="www") {
     Mage::setIsDeveloperMode(true);
     include_once("Dumper.php");
     //include_once("ChromePHP.php");
-}
+}*/
 
 #ini_set('display_errors', 1);
 

@@ -42,9 +42,9 @@
                 <connection>
                     <!--<host><![CDATA[64.251.10.133]]></host>-->
                     <host><![CDATA[localhost]]></host>
-                    <username><![CDATA[rof_magento]]></username>
-                    <password><![CDATA[ezkGPw9Y5MsY]]></password>
-                    <dbname><![CDATA[rof_magento]]></dbname>
+                    <username><![CDATA[rof_staging]]></username>
+                    <password><![CDATA[zxtaDf5xE6F7]]></password>
+                    <dbname><![CDATA[rof_staging]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
