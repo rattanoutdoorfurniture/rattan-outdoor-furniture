@@ -74,6 +74,9 @@ Furniture web site project.
 
 ##Change Log:##
 
+###2014-08-05###
+- (From Staging) Update Database Connection; Remove Index Dev Code; I'm setting up the initial release on the staging server. I have updated the database connection, and updated the index to take out the development logic. I am no going to try syncing to the server and testing. Assuming all goes well, I will set the live configuration values. And once this looks good, I'll unlock the staging site for SiteLiner. After looking at the results of this, and if everything looks pretty good, we'll move to www (aka live). I want to update the products visiblility, as some should just show up via search, and not on the all products page. I would like to do this import on each the development and staging server, as replicating database changes will be the way to handle database changes. Each version has its own database now, to avoid confusion and copy overwritting errors. But this means that the changes will have to be replicated accross all the databases. Development for initial testing. Staging for live-like tests. And once everything looks good, we will replicate on live.
+
 ###2014-08-04###
 - Prepare For Live; Configure; Copy for Production; We're going to get this thing live, so today I've made some changes to this purpose, and have copied over the database for staging, with the appropriate products enabled and things of that sort. One of the biggest things I did today was get the Google XML Sitemap to generate properly. This sitemap lands us at 256 pages, which is right were we want to be. So Tomorrow, I have to finish setting up the staging (which is just going to be a matter of cloning the repo, set the database and start the "for-live" configurations.
 
