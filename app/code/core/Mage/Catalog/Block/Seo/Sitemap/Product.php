@@ -66,17 +66,7 @@ class Mage_Catalog_Block_Seo_Sitemap_Product extends Mage_Catalog_Block_Seo_Site
     {
         $helper = Mage::helper('catalog/product');
         /* @var $helper Mage_Catalog_Helper_Product */
-        //return $helper->getProductUrl($product);
-
-        $url = $this->getProductUrl($product);
-        if($categoryParent = $product->getResource()->getAttribute('parent_url_key')) {
-            $categoryParent = $categoryParent->getFrontend()->getValue($product);
-            if($categoryParent) {
-                $categoryParent = "products/" . $categoryParent;
-                $url = $this->getUrl($categoryParent).basename($url);
-            }
-        }
-        return $url;
+        return $helper->getProductUrl($product);
     }
 
 }
