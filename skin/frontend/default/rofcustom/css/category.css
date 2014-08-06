@@ -256,6 +256,15 @@
     max-width: 98%;
 }
 
+.page-sitemap .pager {
+    height: 50px;
+}
+
+.page-sitemap .pager .amount {
+    float: left;
+}
+
+.page-sitemap .pager li,
 #category-pagi li {
     display: inline-block;
     float: right;
