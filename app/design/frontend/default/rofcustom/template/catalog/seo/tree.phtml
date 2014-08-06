@@ -33,17 +33,7 @@
 <?php if($_items->getSize()): ?>
     <ul class="sitemap">
         <?php foreach ($_items as $_item): ?>
-            <?php
-            $url = $this->getItemUrl($_item);
-            if($categoryParent = $_item->getResource()->getAttribute('parent_url_key')) {
-                $categoryParent = $categoryParent->getFrontend()->getValue($_item);
-                if($categoryParent) {
-                    $categoryParent = "products/" . $categoryParent;
-                    $url = $this->getUrl($categoryParent).basename($url);
-                }
-            }
-            ?>
-            <li class="level-<?php echo $this->getLevel($_item) ?>" <?php echo $this->getLevel($_item)?'style="padding-left:' . $this->getLevel($_item, 2) . '0px;"':'' ?>><a href="<?php echo $url ?>"><?php echo $_item->name ?></a></li>
+            <li class="level-<?php echo $this->getLevel($_item) ?>" <?php echo $this->getLevel($_item)?'style="padding-left:' . $this->getLevel($_item, 2) . '0px;"':'' ?>><a href="<?php echo $this->getItemUrl($_item); ?>"><?php echo $_item->name ?></a></li>
         <?php endforeach; ?>
     </ul>
 <?php else: ?>
