@@ -407,8 +407,8 @@
     display: block;
     height: 500px;
     /*height: auto;*/
-    margin: 20px auto;
-    padding: 10px;
+    margin: 20px 10px;
+    padding-bottom: 10px;
     padding-top: 0;
     background: transparent url('../images/hash-border-darker.png?noCache') 0 0 repeat;
 }
