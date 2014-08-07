@@ -5,18 +5,10 @@
 		<reference name="top.links">
 			<remove name="checkout_cart_link" />
 			<block type="checkout/links" name="checkout_cart_link_custom">
-                <action method="addCartLink">
-                    <aParams>
-                        <rel>nofollow</rel>
-                    </aParams>
-			    </action>
+                <action method="addCartLink"></action>
             </block>
             <block type="opc/links" name="checkout_cart_link_custom">
-                <action method="addCheckoutLink">
-                    <aParams>
-                        <rel>nofollow</rel>
-                    </aParams>
-                </action>
+                <action method="addCheckoutLink"></action>
             </block>
         </reference>
         
