@@ -74,6 +74,9 @@ Furniture web site project.
 
 ##Change Log:##
 
+###2014-08-07###
+- No-Follow Filters and Top Links; Style fixes; I have switched the category pages to use a previous and next link in the head instead of forcing a canonical URL for those. This should help the spidering of the page instead of skipping over additional entries. Also, I've added no-follow rels to the filters on the cateogry page (spiders do not need to specifically crawl those pages with different ordered list), and I've also added no-follows to the top links, because the login, cart and checkout are getting far too much in-linking, and these pages don't really need to be indexed, or at least do not need to be a priority page.
+
 ###2014-08-06###
 - Fix SEO Issues; Update Descriptions; After our preliminary run through SiteLiner, We had some issues, some duplicate content issues, along with some linking fixes. I've removed the "Brighton Collection" from the category pages. and added a no-follow on the email link. I removed the additional categories from the main nav, and fixed the linking in the site map, giving us a better relevency on our main categories.
 
