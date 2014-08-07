@@ -85,9 +85,6 @@ Load this update on every page when customer is logged out
                 <liParams>
                     <class>nav-top-item</class>
                 </liParams>
-                <aParams>
-                    <rel>nofollow</rel>
-                </aParams>
             </action>
         </reference>
         <remove name="reorder"></remove>

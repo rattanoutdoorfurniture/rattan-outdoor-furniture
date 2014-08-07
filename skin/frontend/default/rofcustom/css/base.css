@@ -51,8 +51,6 @@
 /* #Basic Styles
 ================================================== */
 	body {
-        position: relative;
-        top: -10px;
 		background: #fff url('../images/grey-speckle-mesh-lighter.jpg') left top repeat;
 		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		color: #444;
@@ -62,7 +60,8 @@
 
     .container {
         background: #FFF;
-        padding-top: 15px;
+        padding-top: 15px !important;
+        box-shadow: 0 0 20px #AAA;
     }
 
     .container > div:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
