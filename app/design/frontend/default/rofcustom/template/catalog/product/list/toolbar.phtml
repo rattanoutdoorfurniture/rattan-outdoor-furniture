@@ -67,7 +67,7 @@
         <?php if(!isset($textFilterLabels[strtolower($_order)])) continue; ?>
         <?php foreach($textFilterLabels[strtolower($_order)] as $_dir=>$textFilterLabel): ?>
         <li class="text-filters-option<?php if($this->isOrderCurrent($_key)): ?> selected<?php endif ?>">
-            <a href="<?php echo $this->getOrderUrl($_key, $_dir) ?>" class="text-filters-link" title="<?php echo $textFilterLabel; ?>"><?php echo $textFilterLabel; ?></a>
+            <a href="<?php echo $this->getOrderUrl($_key, $_dir) ?>" class="text-filters-link" title="<?php echo $textFilterLabel; ?>" rel="nofollow"><?php echo $textFilterLabel; ?></a>
         </li>
         <?php endforeach; ?>
     <?php endforeach; ?>

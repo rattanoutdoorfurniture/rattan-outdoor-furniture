@@ -74,6 +74,12 @@ Furniture web site project.
 
 ##Change Log:##
 
+###2014-08-07###
+- No-Follow Filters and Top Links; Style fixes; I have switched the category pages to use a previous and next link in the head instead of forcing a canonical URL for those. This should help the spidering of the page instead of skipping over additional entries. Also, I've added no-follow rels to the filters on the cateogry page (spiders do not need to specifically crawl those pages with different ordered list), and I've also added no-follows to the top links, because the login, cart and checkout are getting far too much in-linking, and these pages don't really need to be indexed, or at least do not need to be a priority page.
+
+###2014-08-06###
+- Fix SEO Issues; Update Descriptions; After our preliminary run through SiteLiner, We had some issues, some duplicate content issues, along with some linking fixes. I've removed the "Brighton Collection" from the category pages. and added a no-follow on the email link. I removed the additional categories from the main nav, and fixed the linking in the site map, giving us a better relevency on our main categories.
+
 ###2014-08-05###
 - (From Staging) Update Database Connection; Remove Index Dev Code; I'm setting up the initial release on the staging server. I have updated the database connection, and updated the index to take out the development logic. I am no going to try syncing to the server and testing. Assuming all goes well, I will set the live configuration values. And once this looks good, I'll unlock the staging site for SiteLiner. After looking at the results of this, and if everything looks pretty good, we'll move to www (aka live). I want to update the products visiblility, as some should just show up via search, and not on the all products page. I would like to do this import on each the development and staging server, as replicating database changes will be the way to handle database changes. Each version has its own database now, to avoid confusion and copy overwritting errors. But this means that the changes will have to be replicated accross all the databases. Development for initial testing. Staging for live-like tests. And once everything looks good, we will replicate on live.
 

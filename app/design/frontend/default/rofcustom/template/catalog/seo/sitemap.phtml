@@ -29,11 +29,24 @@
  * @see Mage_Catalog_Block_Seo_Sitemap_
  */
 ?>
-<?php $_items = $this->getCollection(); ?>
+<?php $_items = $this->getCollection();
+$catalog_product = Mage::getSingleton('catalog/product');
+$productParentUrlAttr = $catalog_product->getResource()->getAttribute("parent_url_key");
+?>
 <?php if($_items->getSize()): ?>
     <ul class="sitemap">
         <?php foreach ($_items as $_item): ?>
-            <li><a href="<?php echo $this->getItemUrl($_item) ?>"><?php echo $this->escapeHtml($_item->name) ?></a></li>
+            <?php
+            $url = $this->getItemUrl($_item);
+            if($productParentUrlAttr) {
+                $parentUrl = $productParentUrlAttr->getFrontend()->getValue($catalog_product->load($_item->getId()));
+                if($parentUrl) {
+                    $categoryParent = "products/" . $parentUrl;
+                    $url = $this->getUrl($categoryParent).basename($url);
+                }
+            }
+            ?>
+            <li><a href="<?php echo $url ?>"><?php echo $this->escapeHtml($_item->name) ?></a></li>
         <?php endforeach; ?>
     </ul>
 <?php else: ?>
