@@ -13,4 +13,5 @@ var/backups
 media/catalog/product/cache/*
 app/etc/local.xml
 robots.txt
+sitemap.xml
 
