@@ -2,6 +2,11 @@
 * Styles for Global Page Header *
 \*******************************/
 
+#logo-main {
+    float: right;
+    margin-right: -5px;
+}
+
 #logo-main-mobile {
     margin: 0 auto;
 }

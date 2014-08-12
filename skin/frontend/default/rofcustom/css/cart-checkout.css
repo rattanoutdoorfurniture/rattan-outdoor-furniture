@@ -1131,7 +1131,6 @@ img, button, input {
         position: relative;
         padding: 10px 0 0;
     }
-
     .account-box .buttons-set,
     .my-account .buttons-set {
         clear: left;
@@ -1144,7 +1143,23 @@ img, button, input {
         margin-left: 10px !important;
     }
 
-    .account-box .back-link,
+    /* Fixes for Contact Page
+    *******************************************/
+    .contacts-index-index .buttons-set {
+        clear: none;
+        margin-right: 85px;
+        margin-top: 5px;
+    }
+    .contacts-index-index #comment {
+        height: 230px;
+        margin-bottom: 0 !important;
+    }
+    #form-list-contact-us,
+    #content-contact-us p:last-child {
+        margin-bottom: 0 !important;
+    }
+
+.account-box .back-link,
     .account-box .account-sub-button,
     .my-account .back-link,
     .my-account .account-sub-button {
