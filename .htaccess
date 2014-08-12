@@ -123,6 +123,20 @@
     RewriteEngine on
 
 ############################################
+## Rewrite to the www sub-domain
+
+		RewriteCond %{HTTP_HOST} !^www\.rattanoutdoorfurniture\.com$ [NC]
+		RewriteRule ^(.*)$ http://www.rattanoutdoorfurniture.com/$1 [R=301,L]
+
+############################################
+## Rewrite the checkout to secure
+
+		RewriteCond %{REQUEST_URI} onepage
+		RewriteCond %{HTTPS} off
+		RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+
+############################################
 ## you can put here your magento root folder
 ## path relative to web root
 
