@@ -182,6 +182,69 @@
             $new1[$k] = unserialize($ser);
         return ($new1);
     }
+    function truncate($string,$length=100,$append="&hellip;") {
+        $string = trim($string);
+
+        if(strlen($string) > $length) {
+            $string = wordwrap($string, $length);
+            $string = explode("\n",$string);
+            $string = array_shift($string) . $append;
+        }
+
+        return $string;
+    }
+
+    function phoneLink($phone) {
+        $phoneStrip = preg_filter('/[^0-9A-Za-z]+/','',$phone);
+
+        $phoneTable = array(
+            2   => array("a","b","c"),
+            3   => array("d","e","f"),
+            4   => array("g","h","i"),
+            5   => array("j","k","l"),
+            6   => array("m","n","o"),
+            7   => array("p","q","r","s"),
+            8   => array("t","u","v"),
+            9   => array("w","x","y","z")
+        );
+        $phoneDigits = str_split($phoneStrip);
+        $phoneNumber = '';
+        foreach($phoneDigits as $phoneDigit) {
+            if(is_numeric($phoneDigit)) {
+                $phoneNumber.= $phoneDigit;
+                continue;
+            }
+            foreach($phoneTable as $phoneBtn=>$btnValues) {
+                if(in_array(strtolower($phoneDigit),$btnValues)) {
+                    $phoneNumber .= $phoneBtn;
+                    break;
+                }
+            }
+        }
+        if($phoneNumber[0]!=="1") {
+            $phoneNumber = "1" . $phoneNumber;
+        }
+
+        return '<a href="tel:'.$phoneNumber.'">'.$phone.'</a>';
+    }
+
+    function getPhoneLinkNumber($phone = NULL) {
+        if(is_null($phone)) $phone = Mage::getStoreConfig('general/store_information/phone');
+        return phoneLink($phone);
+    }
+
+    $phoneReplace = getPhoneLinkNumber();
+
+    function linkPhone($prop) {
+        global $phoneReplace;
+        // $prop = preg_replace('/(\(\d{3}\)\s?\d{3}\-\d{4})/', "<a href='tel:18442728826'>(844) 2-RATTAN</a>", $prop);
+        // $phoneReplace = "<a href='tel:18442728826'>(844) 2-RATTAN</a>"
+        $phoneReplace = $phoneReplace == "" ? getPhoneLinkNumber() : $phoneReplace;
+        return preg_replace('/(\(888\)\s?555\-5555)/', $phoneReplace, $prop);
+    }
+    function linkEmail($prop) {
+        return preg_replace('/([A-z0-9_-]+\@[A-z0-9_-]+\.)([A-z0-9\_\-\.]{1,}[A-z])/', '<a href="mailto:$1$2">$1$2</a>', $prop);
+    }
     foreach($descs as $key=>$desc) {
         $descArr[$key] = array(
             'full'  => $desc,
@@ -210,7 +273,10 @@
                     continue;
                 }
                 if(!preg_match('/\'*^\s*\'*$/',trim($prop))) {
-                    $props[$key]['content'][] = "<p>".htmlentities(trim($prop),ENT_QUOTES)."</p>";
+                    $prop = htmlentities(trim($prop),ENT_QUOTES);
+                    $prop = linkPhone($prop);
+                    $prop = linkEmail($prop);
+                    $props[$key]['content'][] = "<p>".$prop."</p>";
                 }
             }
         }
@@ -334,45 +400,20 @@
             reset($page["content"]);
             $metaDesc   = current($page["content"]);
             $metaDesc   = strip_tags($metaDesc);
-            strpos($metaDesc,"$city, $state");
+            $metaDesc   = truncate($metaDesc,250,"...");
 
             $keywords   = str_replace("/"," ",$page["keywords"]);
-            $keywords   = htmlentities(implode(", ",array_unique(explode(" ",implode(" ", $keywords)))),ENT_QUOTES);
+            $keywords   = htmlentities(implode(", ",array_unique(explode(" ",$city." ".$state." ".implode(" ", $keywords)))),ENT_QUOTES);
             $parentId   = $statePageId[$state];
             $citiesNum  = $cityCount[$state];
             $query = <<<QUERY
-REPLACE INTO cms_page_tree
-(
-`page_id`,
-`title`,
-`root_template`,
-`meta_keywords`,
-`meta_description`,
-`identifier`,
-`content_heading`,
-`content`,
-`creation_time`,
-`update_time`,
-`is_active`,
-`sort_order`,
-`layout_update_xml`,
-`custom_theme`,
-`custom_root_template`,
-`custom_layout_update_xml`,
-`custom_theme_from`,
-`custom_theme_to`,
-`store_id`,
-`parent_id`,
-`path`,
-`position`,
-`level`,
-`children_count`,
-`include_in_menu`
+REPLACE INTO cms_page_tree (
+`page_id`, `title`, `root_template`, `meta_keywords`, `meta_description`, `identifier`, `content_heading`, `content`, `creation_time`, `update_time`, `is_active`, `sort_order`, `layout_update_xml`, `custom_theme`, `custom_root_template`, `custom_layout_update_xml`, `custom_theme_from`, `custom_theme_to`, `store_id`, `parent_id`, `path`, `position`, `level`, `children_count`, `include_in_menu`
 ) VALUES (
 {$cityId},
 '{$city}, {$state}',
 'one_column',
-'{$city}, {$state}, {$keywords}',
+'{$keywords}',
 '{$metaDesc}',
 'locations/{$dashState}/{$dashCity}',
 '{$city}, {$state} Outdoor Patio Furniture',

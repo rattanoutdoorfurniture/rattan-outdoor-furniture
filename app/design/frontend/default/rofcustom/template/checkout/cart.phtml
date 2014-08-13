@@ -133,8 +133,8 @@
     <div id="cart-subtotal" class="cart-box">
         <div class="cart-box-border"></div>
         <div class="cart-box-inner">
-            <h3 id="cart-subtotal-header">Order Subtotal</h3>
-            <section id="cart-subtotal-sub">Free Shipping on All Orders</section>
+            <h3 id="cart-subtotal-header"><?php echo $this->__("Order Subtotal"); ?></h3>
+            <section id="cart-subtotal-sub"><?php echo $this->__("Free Shipping May Be Available"); ?><br><?php echo $this->__("Checkout To See If You Are Eligible"); ?></section>
             <?php echo $this->getChildHtml('totals'); ?>
         </div>
         <div class="cart-box-border"></div>
@@ -150,6 +150,9 @@
             <?php endforeach; ?>
     <?php endif; ?>
 </section>
+
+
+<?php /** DONT LOAD THIS INTO THE PAGE... BUT KEEP IN FILE FOR REFERENCE **************************/ if(false): ?>
 
 <div class="cart-collaterals displaynone">
     <div class="col2-set">
@@ -284,3 +287,4 @@
         </div>
     </div>
 </div>
+<?php /** ************************************************************************************** */ endif; ?>

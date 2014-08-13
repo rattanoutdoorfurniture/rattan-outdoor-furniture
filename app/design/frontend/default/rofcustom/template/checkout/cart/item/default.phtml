@@ -29,11 +29,20 @@ $_item = $this->getItem();
 $_product = $_item->getProduct();
 $isVisibleProduct = $_product->isVisibleInSiteVisibility();
 $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_product, Mage_Catalog_Model_Product_Attribute_Source_Msrp_Type::TYPE_BEFORE_ORDER_CONFIRM);
-$categories = $_product->getCategoryIds();
-$categoryid = end($categories);
-$category   = Mage::getModel('catalog/category')->load($categoryid);
-$itemPath   = "/".$category->getUrlPath()."/".basename($_product->getProductUrl());
-$itemUrl    = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}" . $itemPath;
+$catalog_product = Mage::getSingleton('catalog/product');
+$productParentUrlAttr = $catalog_product->getResource()->getAttribute("parent_url_key");
+if($productParentUrlAttr && ($parentUrl = $productParentUrlAttr->getFrontend()->getValue($catalog_product->load($_product->getId())))) {
+    $categoryParent = "products/" . $parentUrl;
+    $itemPath = $this->getUrl($categoryParent).basename($_product->getProductUrl());
+    $itemUrl  = $itemPath;
+} else {
+    $categories = $_product->getCategoryIds();
+    $categoryid = end($categories);
+    $category   = Mage::getModel('catalog/category')->load($categoryid);
+    $itemPath   = "/".$category->getUrlPath()."/".basename($_product->getProductUrl());
+    $itemUrl    = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}" . $itemPath;
+}
+
 $this->overrideProductUrl($itemUrl);
 ?>
 
@@ -57,14 +66,13 @@ $this->overrideProductUrl($itemUrl);
         <a href="<?php echo $this->getProductUrl() ?>"
            title="<?php echo $this->escapeHtml($this->getProductName()) ?>"
            class="cart-cartbox-table-product-detail-img-wrap<?php echo(!!$colorOption)?" $colorName":'';?>"<?php if($colorOption):?> data-colorsku="<?php echo $colorSku; ?>"<?php endif;?>>
-            <?php else: ?>
-            <div class="cart-cartbox-table-product-detail-img-wrap"<?php if($color):?> data-colorsku="<?php echo $color; ?>"<?php endif;?>>
-                <?php endif; ?>
-                <img class="cart-cartbox-table-product-detail-img"
-                     src="<?php echo $this->getProductThumbnail()->constrainOnly(TRUE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(80,null); ?>" width="80"
-                     alt="<?php echo $this->escapeHtml($this->getProductName()) ?>"/>
-                <!--<img class="cart-cartbox-table-product-detail-img" src="skin/frontend/default/rofcustom/images/product_01_thumb.jpg" alt="Brighton Sling Chaise Lounge"/>-->
-                <?php if ($this->hasProductUrl()): ?>
+        <?php else: ?>
+        <div class="cart-cartbox-table-product-detail-img-wrap"<?php if($color):?> data-colorsku="<?php echo $color; ?>"<?php endif;?>>
+        <?php endif; ?>
+            <img class="cart-cartbox-table-product-detail-img"
+                 src="<?php echo $this->getProductThumbnail()->constrainOnly(TRUE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(80,null); ?>" width="80"
+                 alt="<?php echo $this->escapeHtml($this->getProductName()) ?>"/>
+        <?php if ($this->hasProductUrl()): ?>
         </a>
         <?php else: ?>
             </div>

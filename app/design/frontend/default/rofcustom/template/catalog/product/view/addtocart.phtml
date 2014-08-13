@@ -31,6 +31,7 @@
 <?php if($_product->isSaleable()): ?>
     <!--<div class="add-to-cart">-->
         <?php if(!$_product->isGrouped()): ?>
+            <?php /* OLD QUANTITY CODE - REMOVE ****************************
             <div class="input-qty-box displaynone">
                 <div class="input">
                     <ul class="range">
@@ -42,6 +43,7 @@
                     </ul>
                 </div>
             </div>
+            ****************************************************************/ ?>
         <section id="product-details-options-qty" class="product-details-options-section">
             <span id="product-details-options-qty-label" class="product-details-options-label">Select Quantity:</span>
             <aside id="product-details-options-qty-selector">
@@ -54,7 +56,9 @@
             </aside>
         </section>
         <?php endif; ?>
-        <!-- button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button -->
-        <?php //echo $this->getChildHtml('', true, true) ?>
+        <?php /** Remove Old Button *************************
+        <button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
+        ****************************************************/ ?>
+        <?php echo $this->getChildHtml('', true, true) ?>
     <!--</div>-->
 <?php endif; ?>

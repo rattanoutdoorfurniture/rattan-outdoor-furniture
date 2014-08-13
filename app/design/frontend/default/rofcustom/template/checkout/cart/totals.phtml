@@ -39,11 +39,13 @@
         <tr id="cart-subtotal-table-title">
             <th colspan="2">Subtotal:</th>
         </tr>
-        <?php echo $this->renderTotals(); ?>
+        <?php echo ($totals = $this->renderTotals()); ?>
+        <?php if(strpos($totals,"shipping")===false): ?>
         <tr id="cart-subtotal-table-shipping" class="cart-subtotal-table-row clearfix">
             <th class="cart-subtotal-table-left">Shipping:</th>
-            <td class="cart-subtotal-table-right">FREE</td>
+            <td class="cart-subtotal-table-right" title="<?php echo $this->__("*Only some orders will qualify for free shipping, proceed to checkout to find out more!"); ?>"><?php echo $this->__("FREE*"); ?></td>
         </tr>
+        <?php endif; ?>
         <?php echo $this->renderTotals('footer'); ?>
     </table>
 <?php endif; ?>
