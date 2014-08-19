@@ -15,4 +15,5 @@ media/catalog/*
 app/etc/local.xml
 robots.txt
 sitemap.xml
+var/importexport/*
 
