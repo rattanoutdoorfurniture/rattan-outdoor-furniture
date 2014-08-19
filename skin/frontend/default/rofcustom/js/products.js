@@ -1,6 +1,6 @@
 function addToFavorites() {
-    url = "<?php echo $url; ?>";
-    title = document.title.toString();
+    var url = locatoin.href;
+    var title = document.title.toString();
     if(window.sidebar){
         window.sidebar.addPanel(title, url, "");
     } else if(document.all){
@@ -13,8 +13,9 @@ function addToFavorites() {
 }
 
 jQuery(document).ready(function() {
-    if(location.hash) {
-        jQuery(location.hash).parents("#product-tabs").find(".product-tab").removeClass("active").end().addClass("active");
+    if(jQuery(location.hash).length) {
+        jQuery(".product-tab.active").removeClass("active");
+        jQuery(location.hash).addClass("active");
     }
     if(document.getElementById("product-tabs")) {
         //console.log("Ajax Loading Product Tab Content");
@@ -26,5 +27,12 @@ jQuery(document).ready(function() {
             console.log("Done Loading Product Tab Content");
         });
     }
-
+    jQuery(".product-tab-title a").on("click", function(ev){
+        ev.preventDefault();
+        jQuery("#product-tabs").find(".product-tab.active").removeClass("active");
+        jQuery(this.hash).addClass("active");
+        var scrollTop = jQuery(document).scrollTop();
+        location.hash = this.hash;
+        jQuery(document).scrollTop(scrollTop);
+    });
 });
