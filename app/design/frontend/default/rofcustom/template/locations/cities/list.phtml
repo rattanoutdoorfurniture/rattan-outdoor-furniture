@@ -1,0 +1,56 @@
+<?php if(count($this->getCities())>0): ?>
+    <?php
+    $state = $this->getState();
+    $stateName = ucwords(str_replace("-"," ",$state));
+    $stateTitle = strlen($this->getTitle()) ? $this->getTitle() : $stateName;
+    ?>
+<div class="cms-widget-state-list account-box add-bottom">
+    <div class="account-box-border"></div>
+    <div class="account-box-inner">
+        <div class="box-head">
+            <h3 class="cms-widget-state-list-title">
+            <?php if(!$this->isState()) { ?>
+                <a href="<?php echo $this->getUrl("locations/".$this->getState()); ?>"><?php echo ucwords(str_replace("-"," ",$this->getTitle())); ?></a>
+            <?php } else { echo ucwords(str_replace("-"," ",$this->getTitle())); } ?>
+            <?php echo "<small> - " . (!$this->isState() ? "More " : "") . "Cities</small>"; ?>
+            </h3>
+        </div>
+        <div class="box-content">
+            <?php
+            $citiesList   = $this->getCities();
+            if(!$this->isState()) {
+                $citiesList = array_filter($citiesList, function($city) {
+                    $pageIdentifier = Mage::getSingleton("cms/page")->getIdentifier();
+                    return ($city['identifier'] !== $pageIdentifier);
+                });
+            }
+            $lists        = 0;
+            $i            = 0;
+            foreach($citiesList as $stateLink): ?>
+                <?php if(($i%5)==0): ?>
+                <ul class="cms-widget-state-list-link-list">
+                <?php endif; ?>
+                    <?php //$stateLink = $citiesList[$i]; ?>
+                    <li class="cms-widget-state-list-link">
+                        <a href="<?php echo $this->getUrl($stateLink['identifier']) ?>"><?php echo $this->escapeHtml(stristr($stateLink['title'],",",true)) ?></a>
+                    </li>
+                <?php if((($i%5)==4) || ($i==(count($citiesList)-1))): ?>
+                </ul><?php $lists++; ?>
+                <?php endif; ?>
+                <?php $i++; ?>
+            <?php endforeach; ?>
+
+            <?php if($this->showViewMoreLink()): ?>
+            <div class="cms-widget-state-list-more" data-lists="<?php echo $lists; ?>">
+                <?php if($lists>1): ?>
+                <a class="cms-widget-state-list-more-link" href="#">view more</a>
+                <?php else: ?>
+                &nbsp;
+                <?php endif; ?>
+            </div>
+            <?php endif; ?>
+        </div>
+    </div>
+    <div class="account-box-border"></div>
+</div>
+<?php endif; ?>

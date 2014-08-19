@@ -2,6 +2,34 @@
 //dummy
 Billing =  Class.create();
 Shipping =  Class.create();
+
+
+/*
+ | ----------------------------------------------------------------------------------
+ | Password Generator
+ | ----------------------------------------------------------------------------------
+ */
+jQuery.password = function (length, special) {
+    var iteration = 0;
+    var password = "";
+    var randomNumber;
+    if(special == undefined){
+        var special = false;
+    }
+    while(iteration < length){
+        randomNumber = (Math.floor((Math.random() * 100)) % 94) + 33;
+        if(!special){
+            if ((randomNumber >=33) && (randomNumber <=47)) { continue; }
+            if ((randomNumber >=58) && (randomNumber <=64)) { continue; }
+            if ((randomNumber >=91) && (randomNumber <=96)) { continue; }
+            if ((randomNumber >=123) && (randomNumber <=126)) { continue; }
+        }
+        iteration++;
+        password += String.fromCharCode(randomNumber);
+    }
+    return password;
+};
+
 $j = jQuery;
 var IWD=IWD||{};
 
@@ -462,6 +490,49 @@ IWD.OPC.Billing = {
 					$j('#register-customer-password input').val('');
 				}
 			});
+
+
+            //jQuery("[name*=create_account]").not("[checked]").trigger("click");
+            //jQuery("[type=password]").each(function() {
+            //    jQuery(this).val(tempPassword);
+            //    jQuery(this).parents(".field").addClass("input-filled");
+            //});
+
+            $j(document).ready(function() {
+                var tempPassword = jQuery.password(12,false);
+                $j("input[name*='_password']").each(function() {
+                    $j(this).val(tempPassword);
+                });
+            });
+
+
+            $j('#toggle-custom-password-fields').on("click",
+                function() {
+                    var $form = $j("#opc-account-form-password");
+                    var $togl = $j(this);
+                    if($form.is(":animated")) return false;
+                    if($form.css("display")=="none") {
+                        $form.slideDown("fast", function() {
+                            $togl.text("Hide Fields");
+                        });
+                    } else {
+
+                        $form.slideUp("fast",function() {
+                            $togl.text("Show Fields");
+                        });
+                    }
+                    return false;
+                }
+            );
+
+            $j("input[name^='additional']").keyup(function() {
+                var $this = $j(this);
+                var _name = this.name || $this.attr('name');
+                var hName = _name.replace("additional","billing");
+                var _val  = $this.val();
+                var hThis = $j("input[name='"+hName+"']");
+                hThis.val(_val);
+            });
 			
 			this.initChangeAddress();
 			this.initChangeSelectAddress();

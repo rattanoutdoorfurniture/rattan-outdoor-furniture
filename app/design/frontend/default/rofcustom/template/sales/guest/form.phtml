@@ -1,69 +1,84 @@
-<div class="page-title">
-   <h1><?php echo Mage::helper('sales')->__('Orders and Returns') ?></h1>
+<?php
+    $help = Mage::helper("sales");
+?>
+<div class="page-title sixteen columns">
+    <h1 id="page-heading"><?php echo $help->__('Orders and Returns') ?></h1>
 </div>
 
-
-<form id="oar_widget_orders_and_returns_form" action="<?php echo $this->getActionUrl() ?>" method="post" class="search-form" name="guest_post">
-    <div class="fieldset">
-        <h2 class="legend"><?php echo Mage::helper('sales')->__('Order Information') ?></h2>
-
-        <ul class="form-list">
-           <li>
-               <div class="input-box">
-                   <label for="oar_order_id" class="required"><?php echo Mage::helper('sales')->__('Order ID') ?> <em>*</em></label>
-               </div>
-               <div class="input-box">
-                   <input type="text" class="input-text required-entry" id="oar_order_id" name="oar_order_id" style="width:300px;"/>
-               </div>
-           </li>
-           <li class="wide">
-               <div class="input-box">
-                   <?php echo Mage::helper('sales')->__('Enter the billing last name and email/ZIP as in the order billing address') ?>.
+<div class="account-box box-contact fourteen columns offset-by-one by-margin add-bottom">
+    <div class="account-box-border"></div>
+    <div class="account-box-inner">
+        <div class="box-head">
+            <h2><?php echo $help->__('Order Information') ?></h2>
+            <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+        </div>
+        <div class="box-content box-blurb">
+            <?php $golb = Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('guest-order-lookup-blurb')->toHtml(); ?>
+            <?php if($golb): ?>
+            <div style="width: 45%; float: left;margin: 0 2.5%;"><?php echo $golb; ?></div>
+            <?php endif; ?>
+            <form id="oar_widget_orders_and_returns_form" action="<?php echo $this->getActionUrl() ?>" method="post" class="search-form" name="guest_post" style="width:45%;margin:10px 2% 20px;float:<?php echo($golb?'right':'left');?>;">
+                <div class="fieldset">
+                    <ul class="form-list">
+                       <li>
+                           <div class="input-box">
+                               <label for="oar_order_id" class="required"><?php echo $help->__('Order ID') ?> <em>*</em></label>
+                           </div>
+                           <div class="input-box">
+                               <input type="text" class="input-text required-entry" id="oar_order_id" name="oar_order_id" style="width:300px;"/>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="input-box">
+                               <label for="oar_billing_lastname" class="required"><?php echo $help->__('Billing Last Name') ?> <em>*</em></label>
+                           </div>
+                           <div class="input-box">
+                               <input type="text" class="input-text required-entry" id="oar_billing_lastname" name="oar_billing_lastname"  style="width:300px;"/>
+                           </div>
+                       </li>
+                        <li class="wide">
+                            <div class="input-box">
+                                <strong><?php echo $help->__('As an additional measure of security:');?></strong><br/>
+                                <small><?php echo $help->__('Please select either the order email address or zip code to verify') ?>.</small>
+                            </div>
+                        </li>
+                       <li>
+                           <div class="input-box">
+                               <label class="required"><?php echo $help->__('Find Order By:') ?></label>
+                           </div>
+                           <div class="input-box">
+                               <select name="oar_type" id="quick_search_type_id" class="select guest-select" title="" onchange="showIdentifyBlock(this.value);" style="width: 310px;padding:6px 4px;">
+                                   <option value="email">Email Address</option>
+                                   <option value="zip">ZIP Code</option>
+                               </select>
+                           </div>
+                       </li>
+                       <li id="oar-email">
+                           <div class="input-box">
+                               <label for="oar_email" class="required"><?php echo $help->__('Email Address') ?> <em>*</em></label>
+                           </div>
+                           <div class="input-box">
+                               <input type="text" class="input-text validate-email required-entry" id="oar_email" name="oar_email"  style="width:300px;"/>
+                           </div>
+                       </li>
+                       <li id="oar-zip" style="display:none;">
+                           <div class="input-box">
+                               <label for="oar_zip" class="required"><?php echo $help->__('Billing ZIP Code') ?> <em>*</em></label>
+                           </div>
+                           <div class="input-box">
+                               <input type="text" class="input-text required-entry" id="oar_zip" name="oar_zip" style="width:300px;"/>
+                           </div>
+                       </li>
+                   </ul>
                 </div>
-           </li>
-           <li>
-               <div class="input-box">
-                   <label for="oar_billing_lastname" class="required"><?php echo Mage::helper('sales')->__('Billing Last Name') ?> <em>*</em></label>
-               </div>
-               <div class="input-box">
-                   <input type="text" class="input-text required-entry" id="oar_billing_lastname" name="oar_billing_lastname"  style="width:300px;"/>
-               </div>
-           </li>
-           <li>
-               <div class="input-box">
-                   <label class="required"><?php echo Mage::helper('sales')->__('Find Order By:') ?></label>
-               </div>
-               <div class="input-box">
-                   <select name="oar_type" id="quick_search_type_id" class="select guest-select" title="" onchange="showIdentifyBlock(this.value);">
-                       <option value="email">Email Address</option>
-                       <option value="zip">ZIP Code</option>
-                   </select>
-               </div>
-           </li>
-           <li id="oar-email">
-               <div class="input-box">
-                   <label for="oar_email" class="required"><?php echo Mage::helper('sales')->__('Email Address') ?> <em>*</em></label>
-               </div>
-               <div class="input-box">
-                   <input type="text" class="input-text validate-email required-entry" id="oar_email" name="oar_email"  style="width:300px;"/>
-               </div>
-           </li>
-           <li id="oar-zip" style="display:none;">
-               <div class="input-box">
-                   <label for="oar_zip" class="required"><?php echo Mage::helper('sales')->__('Billing ZIP Code') ?> <em>*</em></label>
-               </div>
-               <div class="input-box">
-                   <input type="text" class="input-text required-entry" id="oar_zip" name="oar_zip" style="width:300px;"/>
-               </div>
-           </li>
-       </ul>
+                <div class="buttons-set">
+                    <button type="submit" title="<?php echo $help->__('Continue') ?>" class="account-sub-button submit-button button"><span><span><?php echo $help->__('Continue') ?></span></span></button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="buttons-set">
-        <p class="required"><?php echo Mage::helper('sales')->__('* Required Fields') ?></p>
-        <button type="submit" title="<?php echo Mage::helper('sales')->__('Continue') ?>" class="button"><span><span><?php echo Mage::helper('sales')->__('Continue') ?></span></span></button>
-    </div>
-</form>
-
+    <div class="account-box-border"></div>
+</div>
 <script type="text/javascript">
 //<![CDATA[
     if ($('quick_search_type_id').value == 'zip') {

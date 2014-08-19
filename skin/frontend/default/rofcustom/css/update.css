@@ -271,25 +271,30 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
 
     /* State / City Widget Styles */
 
-    .account-box.fourteen.columns + p + .cms-widget-state-list {
+    .account-box.fourteen.columns ~ .cms-widget-children-list,
+    .account-box.fourteen.columns ~ .cms-widget-state-list {
         width: 85.416666666666666666666666666667%;
         margin-left: 6.25%;
     }
 
+    .cms-widget-children-list,
     .cms-widget-state-list {
         clear: left;
     }
 
+    .cms-widget-children-list .box-head > *,
     .cms-widget-state-list .box-head > * {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
+    .cms-widget-children-list .account-box-inner,
     .cms-widget-state-list .account-box-inner {
         overflow: hidden !important;
     }
 
+    .cms-widget-children-list-link-list,
     .cms-widget-state-list-link-list {
         background: #FFF;
         /* transitions *********************/
@@ -298,28 +303,37 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
         -ms-transition: all 500ms ease;
         -o-transition: all 500ms ease;
         transition: all 500ms ease;
+        float: left;
+        width: 22%;
+        margin-left: 2.5%;
     }
 
-    .cms-widget-state-list.collapsed .cms-widget-state-list-link-list {
-        height: 0px;
-        overflow:hidden;
-        margin: 0px;
-    }
+    /*.cms-widget-children-list.collapsed .cms-widget-children-list-link-list,*/
+    /*.cms-widget-state-list.collapsed .cms-widget-state-list-link-list {*/
+        /*height: 0px;*/
+        /*overflow:hidden;*/
+        /*margin: 0px;*/
+    /*}*/
 
-    .cms-widget-state-list.collapsed .cms-widget-state-list-link-list:first-child {
-        height: 210px !important;
-    }
+    /*.cms-widget-children-list.collapsed .cms-widget-children-list-link-list:first-child,*/
+    /*.cms-widget-state-list.collapsed .cms-widget-state-list-link-list:first-child {*/
+        /*height: 210px !important;*/
+    /*}*/
 
-    .cms-widget-state-list.collapsed .cms-widget-state-list-link-list:first-child,
-    .cms-widget-state-list.expanded .cms-widget-state-list-link-list {
-        height: 200px;
-    }
+    /*.cms-widget-children-list.collapsed .cms-widget-children-list-link-list:first-child,*/
+    /*.cms-widget-state-list.collapsed .cms-widget-state-list-link-list:first-child,*/
+    /*.cms-widget-children-list.expanded .cms-widget-children-list-link-list,*/
+    /*.cms-widget-state-list.expanded .cms-widget-state-list-link-list {*/
+        /*height: 200px;*/
+    /*}*/
 
+    .cms-widget-children-list-link,
     .cms-widget-state-list-link {
         padding: 2px 5px;
         font-weight: 600;
     }
 
+    .cms-widget-children-list-more,
     .cms-widget-state-list-more {
         padding: 0 20px 10px;
         text-align: right;

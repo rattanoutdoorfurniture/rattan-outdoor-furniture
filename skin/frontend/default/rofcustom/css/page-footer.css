@@ -106,19 +106,21 @@
 #footer-newsletter #newsletter,
 #footer-newsletter-input {
     float: left;
-    width: 110px;
     color: #888;
     font-family: 'Tahoma';
-    padding-right: 20px;
     margin-bottom: 0;
+    width: 110px;
+    height: 1.2em;
+    padding: 0.45em 20px 0.45em 0.3em;
+    border: 0.1em solid #AAA;
 }
 
 #footer-newsletter-submit {
-    /*width: 90px;*/
-    width: 75px;
-    height: 30px;
+    width: 6.6em;
+    height: 2.6em;
     border: none;
     background: transparent url('../images/footer-newsletter-submit.png') center center no-repeat;
+    background-size: 100% 100%;
     margin-left: -10px;
     text-indent: -10000px;
     margin-bottom: 0;
@@ -251,8 +253,21 @@
     text-align: center;
 }
 
-#footer-logo-img {
+#footer-logo-wrap img:last-child {
+    display: none;
+}
+
+#footer-logo-wrap:hover img:first-child {
+    display: none;
+}
+#footer-logo-wrap:hover img:last-child {
+    display: inline;
+}
+
+.footer-logo-img {
     margin: 5px auto;
+    width: 78px;
+    height: 140px;
 }
 
 #footer-logo-email {
@@ -268,12 +283,17 @@
     margin-left: -4px;
 }
 
-#footer-logo-phone {
+#footer-logo-phone,
+#footer-logo-phone a {
     text-align: center;
     font-size: 16px;
     color: #895c9a;
     font-weight: 400;
     font-family: 'Tahoma';
+}
+
+#footer-logo-phone a:hover {
+    color: #888;
 }
 
 /* Footer Sub Info (Copyright and CC icons)

@@ -25,3 +25,6 @@ SELECT *, (SELECT COUNT(*) FROM cms_page_tree WHERE identifier LIKE CONCAT(c1.id
 
 -- Replace phone and email with links in CMS Pages --
 UPDATE `cms_page_tree` SET `content` = REPLACE(REPLACE(`content`, "(888) 555-5555", "<a href='tel:18442728826'>(844) 2-RATTAN</a>"),"sales@rattanoutdoorfurniture.com","<a href='mailto:sales@rattanoutdoorfurniture.com'>sales@rattanoutdoorfurniture.com</a>")
+
+-- Remove Widget from location state pages --
+UPDATE `cms_page_tree` SET `content` = CONCAT(SUBSTR(content, 1, LOCATE('{{', content)-1),SUBSTR(content, LOCATE('}}', content)+2)) WHERE content LIKE '%{{widget type="states/list" state="%"}}%'

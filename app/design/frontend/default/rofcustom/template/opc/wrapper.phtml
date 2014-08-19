@@ -1,59 +1,5 @@
 <script type="text/javascript">
-    countryRegions = <?php echo $this->helper('directory')->getRegionJson() ?>;
-    jQuery(document).ready(function() {
-        /*
-         | ----------------------------------------------------------------------------------
-         | Password Generator
-         | ----------------------------------------------------------------------------------
-         */
-        jQuery.password = function (length, special) {
-            var iteration = 0;
-            var password = "";
-            var randomNumber;
-            if(special == undefined){
-                var special = false;
-            }
-            while(iteration < length){
-                randomNumber = (Math.floor((Math.random() * 100)) % 94) + 33;
-                if(!special){
-                    if ((randomNumber >=33) && (randomNumber <=47)) { continue; }
-                    if ((randomNumber >=58) && (randomNumber <=64)) { continue; }
-                    if ((randomNumber >=91) && (randomNumber <=96)) { continue; }
-                    if ((randomNumber >=123) && (randomNumber <=126)) { continue; }
-                }
-                iteration++;
-                password += String.fromCharCode(randomNumber);
-            }
-            return password;
-        };
-        //jQuery(".field,.wide").each(function() {
-        //    jQuery(this).focusin(function() {
-        //        jQuery(this).addClass("input-focused");
-        //        jQuery(this).find("input").one("blur",function() {
-        //            $fieldInput = jQuery(this);
-        //            $parent = $fieldInput.parents(".field,.wide");
-        //            $parent.removeClass("input-focused");
-        //            if($fieldInput.val().length > 0 || $fieldInput.get(0).hasAttribute("defaultvalue")) {
-        //                $parent.addClass("input-filled");
-        //            }
-        //            Validation.validate(this);
-        //        });
-        //    });
-        //    $fieldInput = jQuery(this).find("input,select");
-        //    if($fieldInput.val().length > 0 || $fieldInput.get(0).hasAttribute("defaultvalue")) {
-        //        jQuery(this).addClass("input-filled");
-        //    }
-        //});
-
-        (function($) {
-            tempPassword = jQuery.password(12,false);
-            jQuery("[name*=create_account]").not("[checked]").trigger("click");
-            jQuery("[type=password]").each(function() {
-                jQuery(this).val(tempPassword);
-                jQuery(this).parents(".field").addClass("input-filled");
-            });
-        })(jQuery);
-    });
+    //countryRegions = <?php echo $this->helper('directory')->getRegionJson() ?>;
 </script>
 <div class="opc-wrapper-opc">
     <div class="page-title sixteen columns">
@@ -69,9 +15,9 @@
     <div id="cart-cartbox" class="ten columns cart-box collapse">
         <div class="cart-box-border"></div>
         <div class="cart-box-inner">
-            <a id="cart-cartbox-toggle" href="/checkout/cart">
-                <span id="cart-cartbox-toggle-text">Show Items In Your Cart (<?php echo Mage::helper("checkout/cart")->getItemsCount(); ?>)</span>
-                <div id="cart-cartbox-toggle-btn" title="Show / Hide Cart Items">Show / Hide Cart Items</div>
+            <a id="cart-cartbox-toggle" href="<?php echo $this->getUrl("checkout/cart"); ?>">
+                <span id="cart-cartbox-toggle-text"><?php echo $this->__("Edit Your Cart (". Mage::helper("checkout/cart")->getItemsCount().")"); ?></span>
+                <div id="cart-cartbox-toggle-btn" title="Show / Hide Cart Items"><?php echo $this->__("Show / Hide Cart Items"); ?></div>
             </a>
         </div><!-- /.cart-box-inner/ -->
         <div class="cart-box-border"></div>
@@ -105,6 +51,30 @@
                 <div class="payment-block <?php if ($this->getOnepage()->getQuote()->isVirtual()):?>clear-margin<?php endif;?>">
                     <h3><?php echo $this->__('Payment Method')?></h3>
                     <?php echo $this->getChildHtml('payment')//$this->_getPaymentMethodsHtml();?>
+                </div>
+
+                <div class="account-set-password">
+                    <h3>
+                        <?php echo $this->__("Customize Password"); ?>
+                        <a href="#" id="toggle-custom-password-fields"><?php echo $this->__("Show Fields"); ?></a>
+                    </h3>
+                    <small><?php echo $this->__("Set a custom password. - Optional"); ?></small>
+                    <form id="opc-account-form-password" style="display:none;" method="post">
+                        <div class="fields">
+                            <div class="field">
+                                <label for="additional:customer_password" class=""><?php echo $this->__('Password') ?></label>
+                                <div class="input-box">
+                                    <input type="password" name="additional[customer_password]" id="additional:customer_password" title="<?php echo $this->__('Password') ?>" class="input-text validate-password" autocomplete="off"/>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="additional:confirm_password" class=""><?php echo $this->__('Confirm Password') ?></label>
+                                <div class="input-box">
+                                    <input type="password" name="additional[confirm_password]" title="<?php echo $this->__('Confirm Password') ?>" id="additional:confirm_password" class="input-text validate-cpassword" autocomplete="off"/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
 
                 <div class="discount-block">

@@ -115,3 +115,13 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery(".account-box.six").each(function(){
+            window._temp_highest = window._temp_highest || 0;
+            var height = jQuery(this).height();
+            if(height > window._temp_highest) window._temp_highest = height;
+        }).each(function(){jQuery(this).css("height",_temp_highest);})
+    });
+</script>
