@@ -16,4 +16,6 @@ app/etc/local.xml
 robots.txt
 sitemap.xml
 var/importexport/*
+media/js*
+media/css*
 
