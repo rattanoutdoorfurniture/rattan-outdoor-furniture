@@ -97,9 +97,55 @@ if ($actionName == 'catalog_category_view') // Category Page
         echo '<link rel="canonical" href="' . $this->getUrl($category->getUrlPath()) . '" />';
     }
 } elseif($actionName == "catalog_product_view") {
-    // Canonical for product view is handled elsewhere
+    // Canonical Tag Set Elsewhere for product views
 } elseif(strpos($actionName,"catalog_seo_sitemap")!==false) {
-    echo '<link rel="canonical" href="'.$this->getUrl("catalog/seo_sitemap/".array_pop(explode("_",$actionName))).'"/>';
+
+    if(strpos($actionName,'category')!==false) {
+        $collection =  Mage::helper('catalog/category')->getStoreCategories('name', true, false);
+        $limit = 50;
+    } elseif(strpos($actionName,'product')!==false) {
+        $collection = Mage::getResourceModel('catalog/product_collection')
+            ->addAttributeToSelect('*')
+            ->addAttributeToFilter('visibility', array(
+                Mage_Catalog_Model_Product_Visibility::VISIBILITY_BOTH,
+                Mage_Catalog_Model_Product_Visibility::VISIBILITY_IN_CATALOG
+            ))
+            ->addAttributeToFilter('status', array('value'=>1));
+
+        // $limit = $this->getLayout()->createBlock('catalog/product_list')->setCollection($_productCollection)->getLimit();
+        $toolbar = Mage::getBlockSingleton('catalog/product_list')->getToolbarBlock()->setCollection($collection);
+        // $limit = $toolbar->getLimit();
+        $limit = 50;
+    }
+
+    $tool = $this->getLayout()->createBlock('page/html_pager')->setLimit($limit)->setCollection($collection);
+    $linkPrev = false;
+    $linkNext = false;
+    if ($tool->getCollection()->getSelectCountSql()) {
+        if ($tool->getLastPageNum() > 1) {
+            if (!$tool->isFirstPage()) {
+                $linkPrev = true;
+                if ($tool->getCurrentPage() == 2) {
+                    $url = explode('?', $tool->getPreviousPageUrl());
+                    $prevUrl = @$url[0];
+                }
+                else {
+                    $prevUrl = $tool->getPreviousPageUrl();
+                }
+                $prevUrl = str_replace("&amp;","&",$prevUrl);
+            }
+            if (!$tool->isLastPage()) {
+                $linkNext = true;
+                $nextUrl = $tool->getNextPageUrl();
+                $nextUrl = str_replace("&amp;", "&", $nextUrl);
+            }
+        }
+    }
+    if ($linkPrev) echo '<link rel="prev" href="' . $prevUrl . '" />';
+    if ($linkNext) echo '<link rel="next" href="' . $nextUrl . '" />';
+    if (!$linkNext && !$linkPrev && ($curUrl = Mage::helper('core/url')->getCurrentUrl())) {
+        echo '<link rel="canonical" href="' . $curUrl . '" />';
+    }
 } elseif(strpos($actionName,"cms_")!==false) {
     echo '<link rel="canonical" href="'.$this->getUrl(Mage::getSingleton('cms/page')->getIdentifier()).'"/>';
 } elseif(strpos($actionName,"blog_index_list")!==false) {
