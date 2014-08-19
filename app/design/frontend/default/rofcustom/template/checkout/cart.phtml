@@ -134,7 +134,7 @@
         <div class="cart-box-border"></div>
         <div class="cart-box-inner">
             <h3 id="cart-subtotal-header"><?php echo $this->__("Order Subtotal"); ?></h3>
-            <section id="cart-subtotal-sub"><?php echo $this->__("Free Shipping May Be Available"); ?><br><?php echo $this->__("Checkout To See If You Are Eligible"); ?></section>
+            <section id="cart-subtotal-sub"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('cart-subtitle')->toHtml(); ?></section>
             <?php echo $this->getChildHtml('totals'); ?>
         </div>
         <div class="cart-box-border"></div>

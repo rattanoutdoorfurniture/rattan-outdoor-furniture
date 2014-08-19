@@ -1,7 +1,7 @@
 
 #category-banner {
     position: relative;
-    background: transparent url('../images/hash-border-darker.png?noCache') left top repeat;
+    background: transparent url('../images/hash-border-darker.png') left top repeat;
 }
 
 #category-banner-img {
@@ -257,11 +257,13 @@
 }
 
 .page-sitemap .pager {
-    height: 50px;
+    min-height: 30px;
 }
 
 .page-sitemap .pager .amount {
     float: left;
+    display: inline-block;
+    margin-bottom: 0;
 }
 
 .page-sitemap .pager li,

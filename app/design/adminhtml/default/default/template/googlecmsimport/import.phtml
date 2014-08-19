@@ -133,17 +133,20 @@
 <?php endif; ?>
     <div>
     <?php
-    $parseDescriptions = false;
+    global $io;
+    $parseDescriptions = true;
     if($parseDescriptions) {
         $io = array(
             "input"     => Mage::getBaseDir("var")."/MagentoImport/Products/Descriptions/RattanOutdoorFurniture*.txt",
-            "output"    => Mage::getBaseDir('var')."/MagentoImport/Products/Descriptions/Descriptions.csv"
+            "output"    => Mage::getBaseDir('var')."/MagentoImport/Products/Descriptions/Descriptions.csv",
+            "q"         => "'"
         );
     } else {
         $io = array(
             "input"     => Mage::getBaseDir("var")."/MagentoImport/locations-txt/*/*.txt",
             "output"    => Mage::getBaseDir("var")."/MagentoImport/locations-txt/locations.sql",
-            "parent"    => Mage::getBaseDir("var")."/MagentoImport/locations-txt/"
+            "parent"    => Mage::getBaseDir("var")."/MagentoImport/locations-txt/",
+            "q"         => '"'
         );
     }
     $doProcess = true;
@@ -196,7 +199,7 @@
 
     function phoneLink($phone) {
         $phoneStrip = preg_filter('/[^0-9A-Za-z]+/','',$phone);
-
+        global $io;
         $phoneTable = array(
             2   => array("a","b","c"),
             3   => array("d","e","f"),
@@ -225,7 +228,7 @@
             $phoneNumber = "1" . $phoneNumber;
         }
 
-        return '<a href="tel:'.$phoneNumber.'">'.$phone.'</a>';
+        return '<a href='.$io['q'].'tel:'.$phoneNumber.$io['q'].'>'.$phone.'</a>';
     }
 
     function getPhoneLinkNumber($phone = NULL) {
@@ -243,7 +246,8 @@
         return preg_replace('/(\(888\)\s?555\-5555)/', $phoneReplace, $prop);
     }
     function linkEmail($prop) {
-        return preg_replace('/([A-z0-9_-]+\@[A-z0-9_-]+\.)([A-z0-9\_\-\.]{1,}[A-z])/', '<a href="mailto:$1$2">$1$2</a>', $prop);
+        global $io;
+        return preg_replace('/([A-z0-9_-]+\@[A-z0-9_-]+\.)([A-z0-9\_\-\.]{1,}[A-z])/', '<a href='.$io['q'].'mailto:$1$2'.$io['q'].'>$1$2</a>', $prop);
     }
     foreach($descs as $key=>$desc) {
         $descArr[$key] = array(

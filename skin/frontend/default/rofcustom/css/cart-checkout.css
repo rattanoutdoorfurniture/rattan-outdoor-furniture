@@ -576,6 +576,15 @@ img, button, input {
         text-transform: lowercase;
     }
 
+    #cart-subtotal-sub p {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    .opc-wrapper-opc #cart-subtotal-sub p {
+        margin-bottom: 10px;
+    }
+
     #cart-subtotal-table {
         width: 100%;
     }
@@ -691,6 +700,18 @@ img, button, input {
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
+        }
+
+        .opc-wrapper-opc input {
+            margin-bottom: 0 !important;
+        }
+
+        .opc-wrapper-opc input[type="text"],
+        .opc-wrapper-opc input[type="password"] {
+            border: 1px solid #d8d8d8;
+            height: 22px;
+            padding: 0;
+            width: 100%;
         }
 
         /* Cart Toggle Link
@@ -944,6 +965,29 @@ img, button, input {
                 margin-bottom: 15px;
                 text-align: right;
             }
+
+        /* Customize Password Form
+        *************************************************/
+        #opc-account-form-password {
+            width: 100%;
+        }
+        #toggle-custom-password-fields {
+            margin-left: 1em;
+            text-decoration: underline;
+            font-size: 0.7em;
+            font-family: 'Tahoma';
+            font-weight: 200;
+            color: #888;
+            text-transform: capitalize;
+            top: -0.15em;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+        #toggle-custom-password-fields:hover {
+            color: #8a6399;
+            text-decoration: none;
+        }
 
         /* Discount Coupon Form
         ************************************************/
@@ -1429,11 +1473,13 @@ img, button, input {
 
     /* Account View Order Page
     ********************************************************/
-    .my-account .order-details #my-orders-table {
+    .my-account .order-details #my-orders-table,
+    .sales-guest-view .order-details #my-orders-table {
         width: 100%;
     }
 
-    .my-account .order-details #my-orders-table .product-name {
+    .my-account .order-details #my-orders-table .product-name,
+    .sales-guest-view .order-details #my-orders-table .product-name {
         font-size: 20px;
         color: #8a6399;
         text-align: left;
@@ -1441,15 +1487,20 @@ img, button, input {
 
     .my-account .order-details #my-orders-table .item-options,
     .my-account .order-details #my-orders-table .item-options dt,
-    .my-account .order-details #my-orders-table .item-options dd {
+    .my-account .order-details #my-orders-table .item-options dd,
+    .sales-guest-view .order-details #my-orders-table .item-options,
+    .sales-guest-view .order-details #my-orders-table .item-options dt,
+    .sales-guest-view .order-details #my-orders-table .item-options dd {
         float: left;
     }
 
-    .my-account .order-details #my-orders-table .item-options dt:after {
+    .my-account .order-details #my-orders-table .item-options dt:after,
+    .sales-guest-view .order-details #my-orders-table .item-options dt:after {
         content: " - ";
     }
 
-    .my-account .order-details #my-orders-table .item-options dd {
+    .my-account .order-details #my-orders-table .item-options dd,
+    .sales-guest-view .order-details #my-orders-table .item-options dd {
         clear: right;
         padding-left: 10px;
     }

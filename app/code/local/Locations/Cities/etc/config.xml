@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Locations_Cities>
+            <version>0.0.1</version>
+        </Locations_Cities>
+    </modules>
+    <global>
+        <helpers>
+            <cities>
+                <class>Locations_Cities_Helper</class>
+            </cities>
+        </helpers>
+        <blocks>
+            <cities>
+                <class>Locations_Cities_Block</class>
+            </cities>
+        </blocks>
+    </global>
+</config>

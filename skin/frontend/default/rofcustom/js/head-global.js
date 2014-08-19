@@ -66,21 +66,6 @@ jQuery(document).ready(function($){
 
     });
 
-    if($(".product-tab").length) {
-        if($(location.hash).length) {
-            $(".product-tab.active").removeClass("active");
-            $(location.hash).addClass("active");
-        }
-        $(".product-tab-title a").on("click", function(ev){
-            ev.preventDefault();
-            $("#product-tabs").find(".product-tab.active").removeClass("active");
-            $(this.hash).addClass("active");
-            scrollTop = $(document).scrollTop();
-            location.hash = this.hash;
-            $(document).scrollTop(scrollTop);
-        });
-    }
-
     if($("#category-slider").length) {
         $(".category-slider-nav").on("click", function(e) {
             var $btn = $(this);

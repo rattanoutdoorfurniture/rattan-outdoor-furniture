@@ -11,8 +11,9 @@ var/report/*
 *_snapshot_*
 var/backups/archive
 var/backups
-media/catalog/product/cache/*
+media/catalog/*
 app/etc/local.xml
 robots.txt
 sitemap.xml
+var/importexport/*
 

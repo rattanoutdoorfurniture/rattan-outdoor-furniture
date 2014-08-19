@@ -29,7 +29,7 @@
         <div class="cart-box-border"></div>
         <div class="cart-box-inner">
             <h3 id="cart-subtotal-header"><?php echo $this->__('Review Your Order')?></h3>
-            <section id="cart-subtotal-sub">Free Shipping on All Orders</section>
+            <section id="cart-subtotal-sub"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('checkout-subtitle')->toHtml(); ?></section>
             <?php echo $this->getChildHtml('items_before'); ?>
             <div id="checkout-review-table-wrapper">
                 <table class="opc-data-table" id="checkout-review-table">

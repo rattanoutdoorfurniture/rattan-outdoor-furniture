@@ -4,20 +4,34 @@ class Locations_States_Block_List
     implements Mage_Widget_Block_Interface
 {
 
+    protected $_cmsPage;
+
     /**
      * Internal constructor
      *
      */
     protected function _construct()
     {
-        $this->setTemplate('states/state-list.phtml');
+        $this->_cmsPage = Mage::getSingleton("cms/page");
+        if(!$this->getParent()) return false;
+        if(count($this->getChildren())<1) return false;
+        $this->setTemplate('locations/states/list.phtml');
         parent::_construct();
     }
 
     /**
-     * Internal State variable
+     * @var bool $_showViewMoreLink Flag to determine whether to show the 'view more' link or not.
      */
-    protected $_state;
+    protected $_showViewMoreLink = false;
+
+    public function showViewMoreLink() {
+        return $this->_showViewMoreLink;
+    }
+
+    /**
+     * Internal Parent CMS Page variable
+     */
+    protected $_parent;
 
     /**
      * Return the relative State
@@ -25,17 +39,19 @@ class Locations_States_Block_List
      *
      * @return string
      */
-    public function getState() {
-        if (!$this->_state) {
-            $this->_state = '';
-            if ($this->getData('state')) {
-                $this->_state = $this->getData('state');
+    public function getParent() {
+        if (!$this->_parent) {
+            if ($this->getData('parent')) {
+                $this->_parent = $this->getData('parent');
             } else {
-                $this->_state = "Not Available";
+                try {
+                    $this->_parent = $this->_cmsPage->getIdentifier();
+                } catch(Exception $e) {
+                    $this->_parent = false;
+                }
             }
         }
-
-        return $this->_state;
+        return $this->_parent;
     }
 
     /**
@@ -44,8 +60,8 @@ class Locations_States_Block_List
     protected $_title;
 
     /**
-     * Return the relative State
-     * or retrieve such using passed page id.
+     * Return the relative Titile
+     * or retrieve such parent page content heading.
      *
      * @return string
      */
@@ -55,7 +71,11 @@ class Locations_States_Block_List
             if ($this->getData('title')) {
                 $this->_title = $this->getData('title');
             } else {
-                $this->_title = $this->getState();
+                try {
+                    $this->_title = $this->_cmsPage->load($this->_parent,'identifier')->getContentHeading();
+                } catch(Exception $e) {
+                    $this->_title = ucwords(implode(" ",preg_split('/[\/\-]/',$this->_parent)));
+                }
             }
         }
 
@@ -65,27 +85,35 @@ class Locations_States_Block_List
     /**
      * Internal Title variable
      */
-    protected $_cities;
+    protected $_children;
 
     /**
-     * Return an array of city's titles and link
-     * for associated state
+     * Return an array of child title and link
+     * for associated parent
      *
      * @return array
      */
-    public function getCities() {
-        if (!$this->_cities) {
-            $this->_cities = $this->_getLocationPages($this->getState());
+    public function getChildren() {
+        if (!$this->_children) {
+            $this->_children = $this->_getPages($this->_parent);
         }
-
-        return $this->_cities;
+        return $this->_children;
     }
 
-    protected function _getLocationPages($state = null) {
+    protected function _getPages($state = null) {
         // if(is_null($state)) $state = $this->getState(); // was going to make it default to the current state, but all should be an option if null
-        $cmsPages = Mage::getModel('cms/page')->getCollection(); // ->toOptionArray() will give array of values
-        $cmsPages->getSelect()->where("identifier LIKE ?", is_null($state) ? "locations/%" : "locations/$state/%");
-        return $cmsPages->getData();
+        $cmsPages = $this->_cmsPage->getCollection(); // ->toOptionArray() will give array of values
+        $cmsPages->getSelect()
+            ->where("identifier LIKE ?", $this->_parent."/%")
+            ->where("identifier NOT LIKE ?", $this->_parent."/%/%")
+            ->where("is_active = 1");
+        $subPages = $cmsPages->getData();
+        $subPageTitles = array();
+        foreach($subPages as $subPage) {
+            $subPageTitles[] = $subPage['title'];
+        }
+        array_multisort($subPageTitles,SORT_ASC,SORT_STRING,$subPages);
+        return $subPages;
     }
 
 

@@ -7,14 +7,18 @@ class Openstream_GeoIP_Model_Abstract
     public function __construct()
     {
         $this->local_dir = 'geoip';
-        $this->local_file = Mage::getBaseDir('var') . '/' . $this->local_dir . '/GeoIP.dat';
-        $this->local_archive = Mage::getBaseDir('var') . '/' . $this->local_dir . '/GeoIP.dat.gz';
-        $this->remote_archive = 'http://www.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz';
+        $this->local_file = Mage::getBaseDir('var') . '/' . $this->local_dir . '/GeoLite2-City.mmdb';
+        $this->local_archive = Mage::getBaseDir('var') . '/' . $this->local_dir . '/GeoLite2-City.mmdb.gz';
+        $this->remote_archive = 'http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz';
     }
 
     public function getArchivePath()
     {
         return $this->local_archive;
+    }
+
+    public function getFilePath() {
+        return $this->local_file;
     }
 
     public function checkFilePermissions()
@@ -29,9 +33,9 @@ class Openstream_GeoIP_Model_Abstract
             } elseif ((!file_exists($this->local_file) || !file_exists($this->local_archive)) && !is_writable($dir)) {
                 return sprintf($helper->__('%s exists but files are not and directory is not writable.'), 'var/' . $this->local_dir);
             } elseif (file_exists($this->local_file) && !is_writable($this->local_file)) {
-                return sprintf($helper->__('%s is not writable.'), 'var/' . $this->local_dir . '/GeoIP.dat');
+                return sprintf($helper->__('%s is not writable.'), 'var/' . $this->local_dir . '/GeoLite2-City.mmdb');
             } elseif (file_exists($this->local_archive) && !is_writable($this->local_archive)) {
-                return sprintf($helper->__('%s is not writable.'), 'var/' . $this->local_dir . '/GeoIP.dat.gz');
+                return sprintf($helper->__('%s is not writable.'), 'var/' . $this->local_dir . '/GeoLite2-City.mmdb.gz');
             }
         } elseif (!@mkdir($dir)) {
             return  sprintf($helper->__('Can\'t create %s directory.'), 'var/' . $this->local_dir);
