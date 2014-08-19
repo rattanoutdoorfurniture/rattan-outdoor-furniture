@@ -27,14 +27,14 @@ Disallow: /cgi-bin/
 Disallow: /downloader/
 Disallow: /errors/
 Disallow: /includes/
-Disallow: /js/
+#Disallow: /js/
 Disallow: /lib/
 Disallow: /magento/
-Disallow: /media/
+#Disallow: /media/
 Disallow: /pkginfo/
 Disallow: /report/
 Disallow: /shell/
-Disallow: /skin/
+#Disallow: /skin/
 Disallow: /stats/
 Disallow: /var/
  
