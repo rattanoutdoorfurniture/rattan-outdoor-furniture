@@ -825,25 +825,30 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
 
     /* State / City Widget Styles */
 
-    .account-box.fourteen.columns + p + .cms-widget-state-list {
+    .account-box.fourteen.columns ~ .cms-widget-children-list,
+    .account-box.fourteen.columns ~ .cms-widget-state-list {
         width: 85.416666666666666666666666666667%;
         margin-left: 6.25%;
     }
 
+    .cms-widget-children-list,
     .cms-widget-state-list {
         clear: left;
     }
 
+    .cms-widget-children-list .box-head > *,
     .cms-widget-state-list .box-head > * {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
+    .cms-widget-children-list .account-box-inner,
     .cms-widget-state-list .account-box-inner {
         overflow: hidden !important;
     }
 
+    .cms-widget-children-list-link-list,
     .cms-widget-state-list-link-list {
         background: #FFF;
         /* transitions *********************/
@@ -852,28 +857,37 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
         -ms-transition: all 500ms ease;
         -o-transition: all 500ms ease;
         transition: all 500ms ease;
+        float: left;
+        width: 22%;
+        margin-left: 2.5%;
     }
 
-    .cms-widget-state-list.collapsed .cms-widget-state-list-link-list {
-        height: 0px;
-        overflow:hidden;
-        margin: 0px;
-    }
+    /*.cms-widget-children-list.collapsed .cms-widget-children-list-link-list,*/
+    /*.cms-widget-state-list.collapsed .cms-widget-state-list-link-list {*/
+        /*height: 0px;*/
+        /*overflow:hidden;*/
+        /*margin: 0px;*/
+    /*}*/
 
-    .cms-widget-state-list.collapsed .cms-widget-state-list-link-list:first-child {
-        height: 210px !important;
-    }
+    /*.cms-widget-children-list.collapsed .cms-widget-children-list-link-list:first-child,*/
+    /*.cms-widget-state-list.collapsed .cms-widget-state-list-link-list:first-child {*/
+        /*height: 210px !important;*/
+    /*}*/
 
-    .cms-widget-state-list.collapsed .cms-widget-state-list-link-list:first-child,
-    .cms-widget-state-list.expanded .cms-widget-state-list-link-list {
-        height: 200px;
-    }
+    /*.cms-widget-children-list.collapsed .cms-widget-children-list-link-list:first-child,*/
+    /*.cms-widget-state-list.collapsed .cms-widget-state-list-link-list:first-child,*/
+    /*.cms-widget-children-list.expanded .cms-widget-children-list-link-list,*/
+    /*.cms-widget-state-list.expanded .cms-widget-state-list-link-list {*/
+        /*height: 200px;*/
+    /*}*/
 
+    .cms-widget-children-list-link,
     .cms-widget-state-list-link {
         padding: 2px 5px;
         font-weight: 600;
     }
 
+    .cms-widget-children-list-more,
     .cms-widget-state-list-more {
         padding: 0 20px 10px;
         text-align: right;
@@ -2644,19 +2658,21 @@ nav a {
 #footer-newsletter #newsletter,
 #footer-newsletter-input {
     float: left;
-    width: 110px;
     color: #888;
     font-family: 'Tahoma';
-    padding-right: 20px;
     margin-bottom: 0;
+    width: 110px;
+    height: 1.2em;
+    padding: 0.45em 20px 0.45em 0.3em;
+    border: 0.1em solid #AAA;
 }
 
 #footer-newsletter-submit {
-    /*width: 90px;*/
-    width: 75px;
-    height: 30px;
+    width: 6.6em;
+    height: 2.6em;
     border: none;
     background: transparent url('http://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/footer-newsletter-submit.png') center center no-repeat;
+    background-size: 100% 100%;
     margin-left: -10px;
     text-indent: -10000px;
     margin-bottom: 0;
@@ -2789,8 +2805,21 @@ nav a {
     text-align: center;
 }
 
-#footer-logo-img {
+#footer-logo-wrap img:last-child {
+    display: none;
+}
+
+#footer-logo-wrap:hover img:first-child {
+    display: none;
+}
+#footer-logo-wrap:hover img:last-child {
+    display: inline;
+}
+
+.footer-logo-img {
     margin: 5px auto;
+    width: 78px;
+    height: 140px;
 }
 
 #footer-logo-email {
@@ -2806,12 +2835,17 @@ nav a {
     margin-left: -4px;
 }
 
-#footer-logo-phone {
+#footer-logo-phone,
+#footer-logo-phone a {
     text-align: center;
     font-size: 16px;
     color: #895c9a;
     font-weight: 400;
     font-family: 'Tahoma';
+}
+
+#footer-logo-phone a:hover {
+    color: #888;
 }
 
 /* Footer Sub Info (Copyright and CC icons)
@@ -3096,7 +3130,7 @@ nav a {
 
 #category-banner {
     position: relative;
-    background: transparent url('http://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png?noCache') left top repeat;
+    background: transparent url('http://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png') left top repeat;
 }
 
 #category-banner-img {
@@ -3352,11 +3386,13 @@ nav a {
 }
 
 .page-sitemap .pager {
-    height: 50px;
+    min-height: 30px;
 }
 
 .page-sitemap .pager .amount {
     float: left;
+    display: inline-block;
+    margin-bottom: 0;
 }
 
 .page-sitemap .pager li,
@@ -3428,7 +3464,7 @@ nav a {
 /* Product Image Styles
 *********************************************************************************/
 #product-img-main {
-    background: transparent url('http://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png?noCache') center center repeat;
+    background: transparent url('http://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png') center center repeat;
     margin-bottom: 20px;
     margin-top: 10px;
     display: block;
@@ -3450,7 +3486,7 @@ nav a {
 
 .product-img-view {
     float: left;
-    background: transparent url('http://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png?noCache') center center repeat;
+    background: transparent url('http://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png') center center repeat;
     margin: 0 5px;
     width: 125px;
     display: block;
@@ -3857,7 +3893,7 @@ nav a {
     position: absolute;
     font-size: 16px;
     font-weight: normal;
-    width: 235px;
+    width: 225px;
     height: 35px;
     top: -35px;
     left: 0;
@@ -3870,15 +3906,15 @@ nav a {
 }
 
 .product-tab:nth-child(2) .product-tab-title {
-    left: 235px;
+    left: 230px;
 }
 
 .product-tab:nth-child(3) .product-tab-title {
-    left: 470px;
+    left: 465px;
 }
 
 .product-tab:nth-child(4) .product-tab-title {
-    left: 705px;
+    left: 695px;
 }
 
 .product-tab-title a {
@@ -4533,6 +4569,15 @@ img, button, input {
         text-transform: lowercase;
     }
 
+    #cart-subtotal-sub p {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    .opc-wrapper-opc #cart-subtotal-sub p {
+        margin-bottom: 10px;
+    }
+
     #cart-subtotal-table {
         width: 100%;
     }
@@ -4648,6 +4693,18 @@ img, button, input {
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
+        }
+
+        .opc-wrapper-opc input {
+            margin-bottom: 0 !important;
+        }
+
+        .opc-wrapper-opc input[type="text"],
+        .opc-wrapper-opc input[type="password"] {
+            border: 1px solid #d8d8d8;
+            height: 22px;
+            padding: 0;
+            width: 100%;
         }
 
         /* Cart Toggle Link
@@ -4901,6 +4958,29 @@ img, button, input {
                 margin-bottom: 15px;
                 text-align: right;
             }
+
+        /* Customize Password Form
+        *************************************************/
+        #opc-account-form-password {
+            width: 100%;
+        }
+        #toggle-custom-password-fields {
+            margin-left: 1em;
+            text-decoration: underline;
+            font-size: 0.7em;
+            font-family: 'Tahoma';
+            font-weight: 200;
+            color: #888;
+            text-transform: capitalize;
+            top: -0.15em;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+        #toggle-custom-password-fields:hover {
+            color: #8a6399;
+            text-decoration: none;
+        }
 
         /* Discount Coupon Form
         ************************************************/
@@ -5386,11 +5466,13 @@ img, button, input {
 
     /* Account View Order Page
     ********************************************************/
-    .my-account .order-details #my-orders-table {
+    .my-account .order-details #my-orders-table,
+    .sales-guest-view .order-details #my-orders-table {
         width: 100%;
     }
 
-    .my-account .order-details #my-orders-table .product-name {
+    .my-account .order-details #my-orders-table .product-name,
+    .sales-guest-view .order-details #my-orders-table .product-name {
         font-size: 20px;
         color: #8a6399;
         text-align: left;
@@ -5398,15 +5480,20 @@ img, button, input {
 
     .my-account .order-details #my-orders-table .item-options,
     .my-account .order-details #my-orders-table .item-options dt,
-    .my-account .order-details #my-orders-table .item-options dd {
+    .my-account .order-details #my-orders-table .item-options dd,
+    .sales-guest-view .order-details #my-orders-table .item-options,
+    .sales-guest-view .order-details #my-orders-table .item-options dt,
+    .sales-guest-view .order-details #my-orders-table .item-options dd {
         float: left;
     }
 
-    .my-account .order-details #my-orders-table .item-options dt:after {
+    .my-account .order-details #my-orders-table .item-options dt:after,
+    .sales-guest-view .order-details #my-orders-table .item-options dt:after {
         content: " - ";
     }
 
-    .my-account .order-details #my-orders-table .item-options dd {
+    .my-account .order-details #my-orders-table .item-options dd,
+    .sales-guest-view .order-details #my-orders-table .item-options dd {
         clear: right;
         padding-left: 10px;
     }
