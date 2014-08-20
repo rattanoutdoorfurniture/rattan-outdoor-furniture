@@ -28,6 +28,7 @@ Furniture web site project.
 - Abstract Product_View_Options_Type_Select logic from the Magento core. This should extend the core, which I could not get to work today.
 - Additions to the Mage_Core_Sitemap Product model. (this should be defined elsewhere).
 
+- Sales Guest Helper method added. Footer_Links Guest Form link. Create Better Way to set REL.
 - Add to Cart and Checkout: move code from core to local add-on.
 - Change Page titles to use the Prefix defined in the Magento admin.
 - Give checkout modal a parent per process, so it only blocks out shipping when loading shipping, and only blocks payments when loading payments, and the cart review when loading the cart review. Having the whole page in accessible is really annoying.
@@ -75,6 +76,8 @@ Furniture web site project.
 
 ##Change Log:##
 
+###2014-08-20###
+- SEO Improvements; Blog and SiteMap; After running SiteLiner, we have made some improvements to the duplicate content, but some other issues were made visible, mainly the fact that the canonical link on the SEO SiteMap was wrong, and the footer link to the SiteMap had a nofollow added to it. This caused some serious issues with google. I have addressed these issues, and also, the blog was linking too much, so I nofollow'd the tags, and set up an appropriate canonical link for the blog and posts. Beyond that, there is an issue with trailing slashes. Google indexes pages with and without a trailing slash (asdf.com/new vs asdf.com/new/) as different pages, so I've made an attempt to change as many of the links on the site as possible to include the trailing slashes.
 
 ###2014-08-19###
 - Import New Descriptions; Fix SEO Factor; So as I mentioned previously, I started out by including the re-writes that Sadie's been doing into the import. After adding the new text for everything (products and categories) I had to manipulate some of the data in the import file. I also had to go thru and set the category images to be set, previously I had just set them manually from the admin side, so I wanted the import to re-set them for me. This all seems to have gone quite well. The categories are updated and have their pictures attached, and the products all imported without any errors. I did notice that my last update may have made it so google is not crawling the SEO Site Map page, which could be very bad. I have spent a good bit of time today trying to get this fixed. I think this is having some negative effects af far as SEO goes. I have it fixed now (which I thought it would be much easier than it was, but the problem is fixed), and I am going to do a release before I go in an effort to fix this as soon as possible. I want to update the descriptions while I'm at it, cause I want to re-run the SiteLiner tool as well. Once I get the updated descriptions in, and have the code released, I will have google crawl the SEO SiteMap page, and submit it to the index. Then, I would like to re-run SiteLiner on the staging server. So I'm going to get this all updated and synced up now.

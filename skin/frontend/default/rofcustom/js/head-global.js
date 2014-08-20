@@ -6,6 +6,10 @@
  */
 jQuery(document).ready(function($){
 
+    $(".nav-main-item:not(.selected)").on("click", function() {
+        $(this).siblings(".selected").removeClass("selected").end().addClass("selected");
+    });
+
     $("#footer-newsletter").on("submit",function(e) {
         var $form    = $(this);
         var postUrl  = $form.prop("action");

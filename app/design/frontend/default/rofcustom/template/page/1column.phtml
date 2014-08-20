@@ -38,20 +38,19 @@
 <head>
     <?php echo $this->getChildHtml('head') ?>
 </head>
-<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<body itemscope itemtype="http://schema.org/FurnitureStore"<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
     <div id="fb-root"></div>
     <div class="container">
         <?php echo $this->getChildHtml('after_body_start') ?>
         <?php echo $this->getChildHtml('global_notices') ?>
         <?php echo $this->getChildHtml('header') ?>
-
+        <?php /*
         <!-- getRequestString: <?php echo Mage::app()->getRequest()->getRequestString(); ?> -->
 
-        <!-- getTitleBgBlock: <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('title-bg')->toHtml(); ?> -->
         <!-- getTitle: <?php echo $this->getLayout()->getBlock('head')->getTitle(); ?> -->
         <!-- Breadcrumbs: <?php echo $this->getChildHtml('breadcrumbs') ?> -->
         <!-- GlobalMessages: <?php echo $this->getChildHtml('global_messages') ?> -->
-
+        */ ?>
         <?php echo $this->getChildHtml('content') ?>
 
         <?php echo $this->getChildHtml('footer') ?>

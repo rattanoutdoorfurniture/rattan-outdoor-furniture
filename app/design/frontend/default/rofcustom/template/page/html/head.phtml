@@ -149,9 +149,17 @@ if ($actionName == 'catalog_category_view') // Category Page
 } elseif(strpos($actionName,"cms_")!==false) {
     echo '<link rel="canonical" href="'.$this->getUrl(Mage::getSingleton('cms/page')->getIdentifier()).'"/>';
 } elseif(strpos($actionName,"blog_index_list")!==false) {
-    echo '<link rel="canonical" href="'.$this->getUrl("blog").'"/>';
-} elseif(strpos($actionName,"blog_post")!==false) {
-    echo '<link rel="canonical" href="'.$this->getUrl("blog/".Mage::getSingleton('blog/post')->getIdentifier()).'"/>';
+    $reqPath = trim(Mage::app()->getRequest()->getRequestString(),"/");
+    $reqArr  = explode("/",$reqPath);
+    if(count($reqArr)<2) {
+        echo '<link rel="canonical" href="'.$this->getUrl("blog").'"/>';
+    } else {
+        if(isset($reqArr[1]) && $reqArr[1]=="tag") {
+            if(isset($reqArr[2])) {
+                echo '<link rel="canonical" href="'.$this->getUrl("blog/tag/".$reqArr[2]).'"/>';
+            }
+        }
+    }
 } elseif(strpos($actionName,"blog_post")!==false) {
     echo '<link rel="canonical" href="'.$this->getUrl("blog/".Mage::getSingleton('blog/post')->getIdentifier()).'"/>';
 } else {

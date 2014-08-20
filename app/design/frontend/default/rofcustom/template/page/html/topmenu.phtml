@@ -45,7 +45,7 @@
             <?php echo $this->getChildHtml("topSearch"); ?>
         </li>
         <li class="nav-main-item first hide-mobile<?php echo (Mage::app()->getRequest()->getRequestString() == "/") ? ' selected':''; ?>">
-            <a href="<?php echo $this->getUrl(''); ?>" title="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"><?php echo $this->__("Home"); ?></a>
+            <a href="<?php echo $this->getUrl('/'); ?>" title="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"><?php echo $this->__("Home"); ?></a>
         </li>
         <?php echo $_menu; ?>
         <li class="nav-main-item<?php echo preg_match('/^\/about-us\/?.*$/',Mage::app()->getRequest()->getRequestString())===1 ? ' selected':''; ?>">
@@ -53,7 +53,7 @@
         </li>
         <?php if($helper->isEnabled()): ?>
         <li class="nav-main-item<?php echo preg_match("/^\\/{$route}\\/?.*$/",Mage::app()->getRequest()->getRequestString())===1 ? ' selected':''; ?>">
-            <a href="<?php echo $this->getUrl('').$route ?>"> <?php echo $route ?></a>
+            <a href="<?php echo $this->getUrl($route) ?>"> <?php echo $route ?></a>
         </li>
         <?php endif; ?>
         <li class="nav-main-item no-display show-mobile-inline">

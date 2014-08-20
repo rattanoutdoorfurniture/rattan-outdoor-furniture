@@ -16,7 +16,7 @@
  
        
             <?php foreach ($this->getCollection() as $tag): ?>
-               <a class="tag-count-<?php echo $this->getTagWeight($tag) ?>  first-bg" href="<?php echo $this->getTagHref($tag) ?>"><?php echo $tag->getTag() ?></a>
+               <a class="tag-count-<?php echo $this->getTagWeight($tag) ?>  first-bg" href="<?php echo $this->getTagHref($tag) ?>" rel="nofollow"><?php echo $tag->getTag() ?></a>
             <?php endforeach; ?>  
        
     </div>

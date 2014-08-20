@@ -33,7 +33,7 @@ nav a {
 }
 
 #page-header
-#nav-top-list {
+.nav-top-list {
     /*padding: 3px 0;*/
     min-width: 220px;
 }
@@ -136,21 +136,24 @@ nav a {
 }
 
 .nav-main-item {
-    display: inline-block;
+    position: relative;
+    float: left;
+    top: 0;
     height: 40px;
     list-style-type: none;
-    /* padding: 12px 10px 0; */
     border-right: 3px solid #FFF;
     background: #F0F0F0 url('../images/nav-main-unselected.png')  left bottom repeat-x;
     margin-bottom: 0;
 }
 
 .nav-main-item.selected,
+.nav-main-item:active,
 .nav-main-item:hover {
     background: #F0F0F0 url('../images/nav-main-selected.png') left bottom repeat-x;
 }
 
-.nav-main-list:hover .nav-main-item.selected {
+.nav-main-list:hover .nav-main-item.selected,
+.nav-main-item:active ~ .nav-main-item.selected {
     background-image: url('../images/nav-main-unselected.png');
 }
 .nav-main-list:hover .nav-main-item.selected:hover {
