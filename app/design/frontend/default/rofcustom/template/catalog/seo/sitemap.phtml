@@ -42,7 +42,7 @@ $productParentUrlAttr = $catalog_product->getResource()->getAttribute("parent_ur
                 $parentUrl = $productParentUrlAttr->getFrontend()->getValue($catalog_product->load($_item->getId()));
                 if($parentUrl) {
                     $categoryParent = "products/" . $parentUrl;
-                    $url = $this->getUrl($categoryParent).basename($url);
+                    $url = $this->getUrl($categoryParent."/".basename($url));
                 }
             }
             ?>

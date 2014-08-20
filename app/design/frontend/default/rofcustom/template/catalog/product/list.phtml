@@ -31,7 +31,7 @@
               $categoryParent = $categoryParent->getFrontend()->getValue($_product);
               if($categoryParent) {
                   $categoryParent = "products/" . $categoryParent;
-                  $url = $this->getUrl($categoryParent).basename($url);
+                  $url = $this->getUrl($categoryParent."/".basename($url));
               }
           }
           //$proCats = $_product->getCategoryIds();
@@ -86,7 +86,7 @@
                 $categoryParent = $categoryParent->getFrontend()->getValue($_product);
                 if($categoryParent) {
                     $categoryParent = "products/" . $categoryParent;
-                    $url = $this->getUrl($categoryParent).basename($url);
+                    $url = $this->getUrl($categoryParent."/".basename($url));
                 }
             }
             //$proCats = $_product->getCategoryIds();
