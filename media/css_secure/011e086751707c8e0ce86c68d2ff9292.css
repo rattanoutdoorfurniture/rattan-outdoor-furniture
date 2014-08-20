@@ -1,0 +1,5602 @@
+
+
+/* Reset ================================================================================= */
+* { margin:0; padding:0; }
+
+
+
+/* Headings */
+h1,h2,h3,
+h4,h5,h6      { margin:0 0 5px; line-height:1.35;  color: #3E4448; }
+h1            { font-size:20px; font-weight:normal; }
+h2            { font-size:18px; font-weight:normal; }
+h3            { font-size:16px; font-weight:normal; }
+h4            { font-size:14px; font-weight:normal; }
+h5            { font-size:12px; font-weight:normal; }
+h6            { font-size:11px; font-weight:normal; }
+
+/* Forms */
+form          { display:inline; }
+fieldset      { border:0; }
+legend        { display:none; }
+
+/* Table */
+table         { border:0; /*border-collapse:collapse;*/ border-spacing:0; empty-cells:show; font-size:100%; }
+caption,th,td { vertical-align:top; text-align:left; font-weight:normal; }
+
+/* Content */
+p             { margin:0 0 10px; }
+strong        { font-weight:600; }
+address       { font-style:normal; line-height:1.35; }
+cite          { font-style:normal; }
+q,
+blockquote    { quotes:none; }
+q:before,
+q:after       { content:''; }
+small,big     { font-size:1em; }
+/*sup           { font-size:1em; vertical-align:top; }*/
+
+/* Lists */
+ul,ol         { list-style:none; }
+
+/* Tools */
+.hidden       { display:block !important; border:0 !important; margin:0 !important; padding:0 !important; font-size:0 !important; line-height:0 !important; width:0 !important; height:0 !important; overflow:hidden !important; }
+.nobr         { white-space:nowrap !important; }
+.wrap         { white-space:normal !important; }
+.a-left       { text-align:left !important; }
+.a-center     { text-align:center !important; }
+.a-right      { text-align:right !important; }
+.v-top        { vertical-align:top; }
+.v-middle     { vertical-align:middle; }
+.f-left,
+.left         { float:left !important; }
+.f-right,
+.right        { float:right !important; }
+.f-none       { float:none !important; }
+.f-fix        { float:left; width:100%; }
+.no-display   { display:none; }
+.no-margin    { margin:0 !important; }
+.no-padding   { padding:0 !important; }
+.no-bg        { background:none !important; }
+/* ======================================================================================= */
+
+/* Webfont: FuturaStd-Bold */
+@font-face {
+    font-family: 'FuturaStd-Bold';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Bold.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Bold.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Bold.svg#FuturaStd-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-BoldOblique */
+@font-face {
+    font-family: 'FuturaStd-BoldOblique';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-BoldOblique.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-BoldOblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-BoldOblique.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-BoldOblique.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-BoldOblique.svg#FuturaStd-BoldOblique') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-Book */
+@font-face {
+    font-family: 'FuturaStd-Book';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Book.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Book.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Book.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Book.svg#FuturaStd-Book') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-BookOblique */
+@font-face {
+    font-family: 'FuturaStd-BookOblique';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-BookOblique.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-BookOblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-BookOblique.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-BookOblique.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-BookOblique.svg#FuturaStd-BookOblique') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-CondExtraBoldObl */
+@font-face {
+    font-family: 'FuturaStd-CondExtraBoldObl';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondExtraBoldObl.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondExtraBoldObl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondExtraBoldObl.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondExtraBoldObl.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondExtraBoldObl.svg#FuturaStd-CondExtraBoldObl') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-Condensed */
+@font-face {
+    font-family: 'FuturaStd-Condensed';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Condensed.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Condensed.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Condensed.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Condensed.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Condensed.svg#FuturaStd-Condensed') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-CondensedBold */
+@font-face {
+    font-family: 'FuturaStd-CondensedBold';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedBold.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedBold.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedBold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedBold.svg#FuturaStd-CondensedBold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-CondensedBoldObl */
+@font-face {
+    font-family: 'FuturaStd-CondensedBoldObl';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedBoldObl.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedBoldObl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedBoldObl.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedBoldObl.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedBoldObl.svg#FuturaStd-CondensedBoldObl') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-CondensedExtraBd */
+@font-face {
+    font-family: 'FuturaStd-CondensedExtraBd';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedExtraBd.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedExtraBd.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedExtraBd.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedExtraBd.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedExtraBd.svg#FuturaStd-CondensedExtraBd') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-CondensedLight */
+@font-face {
+    font-family: 'FuturaStd-CondensedLight';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedLight.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedLight.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedLight.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedLight.svg#FuturaStd-CondensedLight') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-CondensedLightObl */
+@font-face {
+    font-family: 'FuturaStd-CondensedLightObl';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedLightObl.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedLightObl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedLightObl.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedLightObl.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedLightObl.svg#FuturaStd-CondensedLightObl') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-CondensedOblique */
+@font-face {
+    font-family: 'FuturaStd-CondensedOblique';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedOblique.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedOblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedOblique.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedOblique.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-CondensedOblique.svg#FuturaStd-CondensedOblique') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-ExtraBold */
+@font-face {
+    font-family: 'FuturaStd-ExtraBold';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-ExtraBold.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-ExtraBold.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-ExtraBold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-ExtraBold.svg#FuturaStd-ExtraBold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-ExtraBoldOblique */
+@font-face {
+    font-family: 'FuturaStd-ExtraBoldOblique';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-ExtraBoldOblique.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-ExtraBoldOblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-ExtraBoldOblique.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-ExtraBoldOblique.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-ExtraBoldOblique.svg#FuturaStd-ExtraBoldOblique') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-Heavy */
+@font-face {
+    font-family: 'FuturaStd-Heavy';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Heavy.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Heavy.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Heavy.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Heavy.svg#FuturaStd-Heavy') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-HeavyOblique */
+@font-face {
+    font-family: 'FuturaStd-HeavyOblique';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-HeavyOblique.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-HeavyOblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-HeavyOblique.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-HeavyOblique.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-HeavyOblique.svg#FuturaStd-HeavyOblique') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-Light */
+@font-face {
+    font-family: 'FuturaStd-Light';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Light.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Light.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Light.svg#FuturaStd-Light') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-LightOblique */
+@font-face {
+    font-family: 'FuturaStd-LightOblique';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-LightOblique.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-LightOblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-LightOblique.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-LightOblique.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-LightOblique.svg#FuturaStd-LightOblique') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-Medium */
+@font-face {
+    font-family: 'FuturaStd-Medium';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Medium.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Medium.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-Medium.svg#FuturaStd-Medium') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: FuturaStd-MediumOblique */
+@font-face {
+    font-family: 'FuturaStd-MediumOblique';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-MediumOblique.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-MediumOblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-MediumOblique.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-MediumOblique.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FuturaStd/FuturaStd-MediumOblique.svg#FuturaStd-MediumOblique') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: OpenSans-Bold */
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Bold.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Bold.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Bold.svg#OpenSans-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: OpenSans-BoldItalic */
+@font-face {
+    font-family: 'OpenSans-BoldItalic';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-BoldItalic.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-BoldItalic.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-BoldItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-BoldItalic.svg#OpenSans-BoldItalic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: OpenSans-Extrabold */
+@font-face {
+    font-family: 'OpenSans-Extrabold';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Extrabold.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Extrabold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Extrabold.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Extrabold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Extrabold.svg#OpenSans-Extrabold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: OpenSans-ExtraboldItalic */
+@font-face {
+    font-family: 'OpenSans-ExtraboldItalic';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-ExtraboldItalic.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-ExtraboldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-ExtraboldItalic.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-ExtraboldItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-ExtraboldItalic.svg#OpenSans-ExtraboldItalic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: OpenSans-Italic */
+@font-face {
+    font-family: 'OpenSans-Italic';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Italic.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Italic.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Italic.svg#OpenSans-Italic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: OpenSans-Light */
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Light.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Light.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Light.svg#OpenSans-Light') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: OpenSans-Semibold */
+@font-face {
+    font-family: 'OpenSans-Semibold';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Semibold.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Semibold.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Semibold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-Semibold.svg#OpenSans-Semibold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: OpenSans-SemiboldItalic */
+@font-face {
+    font-family: 'OpenSans-SemiboldItalic';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-SemiboldItalic.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-SemiboldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-SemiboldItalic.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-SemiboldItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans-SemiboldItalic.svg#OpenSans-SemiboldItalic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: OpenSans */
+@font-face {
+    font-family: 'OpenSans';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSans/OpenSans.svg#OpenSans') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: OpenSansLight-Italic */
+@font-face {
+    font-family: 'OpenSansLight-Italic';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSansLight/OpenSansLight-Italic.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSansLight/OpenSansLight-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSansLight/OpenSansLight-Italic.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSansLight/OpenSansLight-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/OpenSansLight/OpenSansLight-Italic.svg#OpenSansLight-Italic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: Tahoma-Bold */
+@font-face {
+    font-family: 'Tahoma-Bold';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/Tahoma/Tahoma-Bold.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/Tahoma/Tahoma-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/Tahoma/Tahoma-Bold.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/Tahoma/Tahoma-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/Tahoma/Tahoma-Bold.svg#Tahoma-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Webfont: Tahoma */
+@font-face {
+    font-family: 'Tahoma';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/Tahoma/Tahoma.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/Tahoma/Tahoma.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/Tahoma/Tahoma.woff') format('woff'), /* Modern Browsers */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/Tahoma/Tahoma.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/Tahoma/Tahoma.svg#Tahoma') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: abeatbyKai */
+@font-face {
+    font-family: 'abeatbyKai';
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/abeatbyKai/abeatbyKai-Regular.eot'); /* IE9 Compat Modes */
+    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/abeatbyKai/abeatbyKai-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/abeatbyKai/abeatbyKai-Regular.woff') format('woff'), /* Modern Browsers */
+    url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/abeatbyKai/abeatbyKai-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/abeatbyKai/abeatbyKai-Regular.svg#abeatbyKai-Regular') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* 11.12.2013  ========================================================================= */
+
+/* Fixed bg title
+
+Edited Files:
+* page/topmenu.tpl
+*/
+
+
+.category-full-image {
+	clear: both;
+	min-height: 42px;
+	width: 100%;
+}
+/* 12.01.2014  ========================================================================= */
+
+/* Fixed compare page
+
+Edited Files:
+* page/topmenu.tpl
+*/
+
+
+
+.page-popup .link-print {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+	color: #3E4448;
+	display: block;
+	font-size: 16px;
+	font-weight: normal !important;
+	padding: 10px;
+	text-transform: none !important;
+}
+.compare-table tbody th {
+	background:none !important;
+}
+.add-to-links {
+	float:none !important;
+}
+html .product-collateral .box-collateral {
+	margin: 30px 0 25px;
+}
+html .product-view .box-up-sell .products-grid td {
+	padding-top:0;
+}
+html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .price-box {
+	display:none;
+}
+
+
+/* 18.01.2014  ========================================================================= */
+
+/* Fixed ie 8 emulation ie11
+*/
+
+
+.ua-ie-8 #iview {
+	display: block;
+	position: relative;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+.ua-ie-8 #iview .iviewSlider {
+	display: block;
+	height: 536px;
+	overflow: hidden;
+
+}
+
+
+
+.ua-ie-8 #iview div.iview-directionNav {
+  bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+}
+
+
+.ua-ie-8 #iview div.iview-directionNav a:hover{
+    height: 50px;	
+}
+
+
+.ua-ie-8 #iview div.iview-directionNav a {
+    background-image: url("https://www.rattanoutdoorfurniture.com/skin/frontend/default/img/theme-control.png");
+    background-position: center 11px !important;
+    background-repeat: no-repeat;
+    bottom: 0 !important;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    position: absolute;
+    text-indent: -9999px;
+    top: auto !important;
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+    transition-property: left, right;
+    transition-timing-function: ease-in-out;
+    width: 167px;
+}
+
+.ua-ie-8 #iview div.iview-directionNav a.iview-nextNav {
+ right: 20% !important;
+    background-position: center 11px !important;
+}
+
+.ua-ie-8 #iview div.iview-directionNav a.iview-prevNav {
+  background-position: center -180px !important;
+    left: 20% !important;
+}
+
+.ua-ie-8 #iview.iview-hover div.iview-directionNav a.iview-nextNav {
+	right: 20px;
+}
+
+.ua-ie-8 #iview.iview-hover div.iview-directionNav a.iview-prevNav {
+	left: 20px;
+}
+
+.ua-ie-8 .iview-caption {
+	background: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/img/caption-bg.png');
+	color: #FFF;
+	border-radius: 3px;
+	padding: 10px 15px;
+	font-family: Verdana;
+	font-size: 12px;
+	text-shadow: #000 1px 1px 0px;
+}
+
+.ua-ie-8 .iview-caption.caption1 {
+	text-shadow: none;
+}
+
+.ua-ie-8 .iview-caption.caption2 {
+	background: #FFF;
+	color: #000;
+	text-shadow: none;
+}
+
+.ua-ie-8 .iview-caption.caption3 {
+	background: #c4302b;
+	box-shadow: rgba(0, 0, 0, 0.7) 10px 10px 15px 0px;
+	text-shadow: none;
+}
+
+.ua-ie-8 #iview-preloader {
+	border: #666 1px solid;
+	width: 150px
+}
+
+.ua-ie-8 #iview-preloader div {
+	background: #666;
+}
+.ua-ie-8 #iview-timer {
+	border-radius: 10px;
+}
+
+.ua-ie-8 #iview-timer div {
+	border-radius: 10px;
+}
+
+
+
+
+.block .block-title {
+	background-image:none !important;
+}
+.block .block-title strong {
+	background-image:none !important;
+}
+.block .block-title strong span {
+	background-image:none !important;
+}
+
+
+
+
+.ua-ie-8 .container_9 {
+	margin: 0 auto;
+	width: 1170px;
+}
+.ua-ie-8 body .grid #product_list li.item {
+	margin: 15px 20px 15px 0 !important;
+}
+.ua-ie-8 #presta-slider .bx-wrapper .bx-caption span {
+	background:#ccc;
+}
+.ua-ie-8 .pagination ul .active a, .ua-ie-8 .sf-menu li a:after {
+	display:none !important;
+}
+.ua-ie-8 .container_9 .grid_2 {
+	width: 260px;
+}
+.ua-ie-8 .container_9 .grid_2 {
+	float: left;
+	width: 270px;
+}
+.ua-ie-8 .quickview-button {
+	display:none !important;
+}
+.ua-ie-8 .breadcrumb {
+	background:  #555555;
+}
+
+
+.ua-ie-8 .quick-access li:hover  .cart-items{
+	display:block;
+}
+
+.ua-ie-8 .cart-items{
+	display:none;
+}
+
+
+.ua-ie-8 .products-list .product-shop {
+    margin-left: 65px;
+}
+
+.ua-ie-8  .products-list .product-image {
+  
+    width: 240px;
+}
+
+
+
+
+
+.ua-ie-8 body .grid #product_list li.item {
+	margin: 15px 20px 15px 0 !important;
+}
+.ua-ie-8 #presta-slider .bx-wrapper .bx-caption span {
+	background:#ccc;
+}
+.ua-ie-8 .prd-line {
+	background:#fff !important;
+}
+.ua-ie-8 .quickview-button {
+	display:none !important;
+}
+
+
+.ua-ie-8  .overlay{
+	display:none !important;
+}
+
+/* 24.03.2014 ========================================================================== */
+
+.logo img {
+    height: 110px;
+    margin-top: -25px;
+    padding-top: 0px;
+}
+
+.quick-access,
+#searchbox {
+    margin-top: 15px !important;
+}
+
+/* 27.03.2014 =========================================================================== */
+
+    #center_column > .page-title {
+        display: block !important;
+        float: none;
+        clear: both;
+    }
+
+/* 06-25-2014 =========================================================================== */
+
+    /* State / City Widget Styles */
+
+    .account-box.fourteen.columns ~ .cms-widget-children-list,
+    .account-box.fourteen.columns ~ .cms-widget-state-list {
+        width: 85.416666666666666666666666666667%;
+        margin-left: 6.25%;
+    }
+
+    .cms-widget-children-list,
+    .cms-widget-state-list {
+        clear: left;
+    }
+
+    .cms-widget-children-list .box-head > *,
+    .cms-widget-state-list .box-head > * {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .cms-widget-children-list .account-box-inner,
+    .cms-widget-state-list .account-box-inner {
+        overflow: hidden !important;
+    }
+
+    .cms-widget-children-list-link-list,
+    .cms-widget-state-list-link-list {
+        background: #FFF;
+        /* transitions *********************/
+        -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+        float: left;
+        width: 22%;
+        margin-left: 2.5%;
+    }
+
+    /*.cms-widget-children-list.collapsed .cms-widget-children-list-link-list,*/
+    /*.cms-widget-state-list.collapsed .cms-widget-state-list-link-list {*/
+        /*height: 0px;*/
+        /*overflow:hidden;*/
+        /*margin: 0px;*/
+    /*}*/
+
+    /*.cms-widget-children-list.collapsed .cms-widget-children-list-link-list:first-child,*/
+    /*.cms-widget-state-list.collapsed .cms-widget-state-list-link-list:first-child {*/
+        /*height: 210px !important;*/
+    /*}*/
+
+    /*.cms-widget-children-list.collapsed .cms-widget-children-list-link-list:first-child,*/
+    /*.cms-widget-state-list.collapsed .cms-widget-state-list-link-list:first-child,*/
+    /*.cms-widget-children-list.expanded .cms-widget-children-list-link-list,*/
+    /*.cms-widget-state-list.expanded .cms-widget-state-list-link-list {*/
+        /*height: 200px;*/
+    /*}*/
+
+    .cms-widget-children-list-link,
+    .cms-widget-state-list-link {
+        padding: 2px 5px;
+        font-weight: 600;
+    }
+
+    .cms-widget-children-list-more,
+    .cms-widget-state-list-more {
+        padding: 0 20px 10px;
+        text-align: right;
+    }
+
+    /* Info Pages Styles *****************************************************/
+
+        #content-contact-us {
+            width: 45%;
+            margin: 20px 10% 20px 5%;
+            float: left;
+            text-align: justify;
+        }
+
+        #form-list-contact-us {
+            float: left;
+            width: 40%;
+            max-width: 40%;
+        }
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/* Widgets =============================================================================== */
+.widget { display:inline; }
+.widget .widget-title { clear:both; padding:15px 0 0; margin:0 0 7px; }
+.widget .widget-title h2 { font-size:15px; font-weight:bold; color:#e25203; }
+
+.widget .mini-products-images-list .product-image { display:block; width:76px; height:76px; border:1px solid #a9a9a9; margin:0 auto; }
+.widget .mini-products-images-list li.item { float:left; width:77px; height:77px; }
+
+/* Widget: Catalog New Proructs List */
+.widget-new-products { display:block; }
+.col-main .widget-new-products { margin:7px 0; }
+.widget-new-products .products-grid .product-image,
+.widget-new-products .products-list .product-image { width:85px; height:85px; }
+.widget-new-products .products-list .product-shop { margin-left:100px; }
+.sidebar .widget-new-products .block { font-size:11px; line-height:1.25; }
+.sidebar .widget-new-products .block-title strong { background:url(https://www.rattanoutdoorfurniture.com/skin/frontend/base/default/images/widgets/i_widget-new.gif) 0 1px no-repeat; padding-left:21px; color:#dc5033; }
+
+/* Widget: Recently Viewed Proructs */
+.widget-viewed { display:block; }
+.col-main .widget-viewed { margin:7px 0; }
+.widget-viewed .products-grid .product-image,
+.widget-viewed .products-list .product-image { width:85px; height:85px; }
+.widget-viewed .products-list .product-shop { margin-left:100px; }
+.sidebar .widget-viewed .block { font-size:11px; line-height:1.25; }
+.sidebar .widget-viewed .block-title strong { background:url(https://www.rattanoutdoorfurniture.com/skin/frontend/base/default/images/widgets/i_block-list.gif) 0 0 no-repeat; padding-left:21px; }
+
+/* Widget: Recently Compared Proructs */
+.widget-compared { display:block;}
+.col-main .widget-compared { margin:7px 0; }
+.widget-compared .products-grid .product-image,
+.widget-compared .products-list .product-image { width:85px; height:85px; }
+.widget-compared .products-list .product-shop { margin-left:100px; }
+.sidebar .widget-compared .block { font-size:11px; line-height:1.25; }
+.sidebar .widget-compared .block-title strong { background:url(https://www.rattanoutdoorfurniture.com/skin/frontend/base/default/images/widgets/i_block-list.gif) 0 0 no-repeat; padding-left:21px; }
+
+/* Widget: CMS Static Block */
+.widget-static-block {}
+.sidebar .widget-static-block { display:block; margin:0 0 15px; }
+
+/* Widgets: Links Common Styles */
+.top-container .widget a { padding:0 0 0 7px; }
+
+.bottom-container .widget a { padding:0 3px; }
+
+/* Widget: Catalog Product Link */
+.widget-product-link-inline { display:inline; }
+
+.col-main .widget-product-link { display:block; text-align:right; margin:7px 0; }
+.col-main .widget-product-link a { background:url(https://www.rattanoutdoorfurniture.com/skin/frontend/base/default/images/widgets/i_widget-link.gif) 100% 4px no-repeat; padding-right:15px; }
+
+.sidebar .widget-product-link { display:block; margin:0 0 15px; padding:0 10px; }
+.sidebar .widget-product-link a { background:url(https://www.rattanoutdoorfurniture.com/skin/frontend/base/default/images/widgets/i_widget-link.gif) 100% 4px no-repeat; padding:0 15px 0 0; }
+
+/* Widget: Catalog Category Link */
+.widget-category-link-inline { display:inline; }
+
+.col-main .widget-category-link { display:block; text-align:right; margin:7px 0; }
+.col-main .widget-category-link a { background:url(https://www.rattanoutdoorfurniture.com/skin/frontend/base/default/images/widgets/i_widget-link.gif) 100% 4px no-repeat; padding-right:15px; }
+
+.sidebar .widget-category-link { display:block; margin:0 0 15px; padding:0 10px; }
+.sidebar .widget-category-link a { background:url(https://www.rattanoutdoorfurniture.com/skin/frontend/base/default/images/widgets/i_widget-link.gif) 100% 4px no-repeat; padding:0 15px 0 0; }
+
+/* Widget: CMS Page Link */
+.widget-cms-link-inline { display:inline; }
+
+.col-main .widget-cms-link { display:block; text-align:right; margin:7px 0; }
+.col-main .widget-cms-link a { background:url(https://www.rattanoutdoorfurniture.com/skin/frontend/base/default/images/widgets/i_widget-link.gif) 100% 4px no-repeat; padding-right:15px; }
+
+.sidebar .widget-cms-link { display:block; margin:0 0 15px; padding:0 10px; }
+.sidebar .widget-cms-link a { background:url(https://www.rattanoutdoorfurniture.com/skin/frontend/base/default/images/widgets/i_widget-link.gif) 100% 4px no-repeat; padding:0 15px 0 0; }
+/* ======================================================================================= */
+
+
+
+
+.blog-title{
+	  background-color: #555555;
+}
+
+
+
+.widget-latest h2{
+
+ color: #FFFFFF;
+    font-family: bebas_neueregular;
+    font-size: 28px;
+    padding: 2px 20px;
+}
+
+.widget-latest .postTitle{
+   color: #161616;
+    font-family: bebas_neueregular;
+    font-size: 22px;	
+}
+
+.widget-latest  .postTitle a{
+  display: block;
+    padding: 0 10px;
+}
+
+
+.widget-latest .postTitle:hover a{
+	color:#fff !important;
+	text-decoration:none !important;
+	padding-left:30px;
+}
+
+
+.widget-latest *{
+	-moz-transition: all 0.2s; -webkit-transition: all 0.2s; -o-transition: all 0.2s;
+}
+
+
+.blog-post-view aside .block,.blog-index-list aside  .block{
+	display:none !important;
+	
+}
+
+.blog-post-view .block.block-news,.blog-index-list .block.block-news{
+	display:block !important;
+	
+}
+
+
+.postWrapper {
+	padding-bottom: 25px;
+	clear:both;
+}
+
+.aw-blog-read-more{
+	display:none;
+}
+
+.postTitle {
+color: #161616;
+    font-family: bebas_neueregular;
+    font-size: 28px;
+}
+
+.postTitle a{
+color: #161616;
+    font-family: bebas_neueregular;
+    font-size: 28px;
+}
+
+
+
+
+.postTitle h2 {
+color: #161616;
+    font-family: bebas_neueregular;
+    font-size: 28px;
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px;
+}
+
+.postTitle h3 {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 0 10px;
+}
+.postContent {
+    padding: 10px 50px 0px;
+    text-align: justify;
+    border-bottom: 5px solid #EEE;
+    margin-bottom: 20px;
+    border-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png') 5 repeat;
+}
+
+.post-details.row {
+    padding: 0 20px;
+}
+
+.post-details.row a {
+    text-decoration: none;
+}
+.post-details.row a:hover {
+    text-decoration: underline;
+}
+
+.post-details.row .read-more {
+    float: right;
+}
+
+.post-details.row .read-more.btn {
+    margin: 0;
+    width: 101px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/category-banner-blurb-btn.png') center center no-repeat;
+    text-indent: -10000px;
+}
+
+.post-details.row .read-more.btn:hover {
+    box-shadow: 0px 0px 5px 0px #8a6399;
+}
+
+.postBookmarks {
+	padding-bottom: 10px;
+}
+.postBookmarks h4 {
+ font-size: 12px;
+    font-weight: normal;
+}
+.commentWrapper {
+	padding-bottom: 15px;
+}
+.commentContent {
+	padding-bottom: 0px;
+}
+.commentDetails  {
+	margin-bottom:5px;
+	padding: 0px;
+}
+.commentDetails  h4.username{
+	display:inline;
+}
+
+.postError {
+	font-size: 16px;
+}
+
+.tags{
+	font-weight:bold;
+	padding-bottom: 10px;
+}
+.tags UL{
+	display:inline-block;
+}
+
+.tags UL LI{
+    font-weight:normal;
+	display:inline-block;
+}
+
+
+.tags UL LI a{
+    background: none repeat scroll 0 0 #868686;
+    border-radius: 5px;
+    color: #FFFFFF !important;
+    display: block;
+    float: left;
+    margin: 2px;
+    padding: 1px 7px;
+    text-decoration: none;
+}
+
+.tags UL LI a:hover {text-decoration: underline;}
+
+
+.tags h4 {
+ font-size: 12px;
+    font-weight: normal;
+}
+
+.menu-tags, .menu-categories, .menu-recent{
+	margin:5px 9px;
+}
+.menu-tags h5, .menu-categories h5, .menu-recent h5{font-size:11px;}
+
+.block-blog .menu-tags UL LI{
+	display:inline;
+	padding:2px;
+	margin-left:10px;
+}
+.block-blog .menu-categories UL LI{
+	margin-left:10px;
+}
+.block-blog .menu-recent UL LI{
+	margin-left:10px;
+}
+.block-blog .menu-recent UL LI a,.block-blog .menu-categories UL LI a,.block-blog .menu-tags UL LI a{font-size:11px;}
+
+
+
+.block-blog .head h4{
+padding-left: 20px;
+}
+
+.block-blog .block-title strong {
+background-image:url(https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/aw_blog/images/icon_blog.png);
+background-repeat:no-repeat;
+padding-left:21px;
+text-align:left;
+}
+
+.postWrapper .poster{
+	display:inline;
+}
+.input-box.aw-blog-comment-area{width:100%;}
+
+.widget-latest li{font-size:12px;padding:5px 10px;}
+.block-blog .menu-categories{margin:0;padding:5px 9px;}
+
+A.awblog_current_comment { text-decoration:none!important; font-weight: bold!important; }
+
+#comment{
+	 background: none repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    color: #555555;
+    font-size: 12px;
+    height: 110px;
+    padding: 10px;
+	
+}
+
+ @media only screen and (max-width: 800px) {
+    .postContent img{
+        width:100%;
+        height:auto;
+    }
+
+    .postWrapper,.post-details,#postComment {
+     clear: both;
+        display: block;
+        padding: 3% !important;
+    }
+
+    #postComment .button-set{
+        display:inline-block;
+        padding-bottom:10px;
+    }
+}
+
+
+.view-more-popab {
+	text-transform:uppercase;
+}
+.main-popup .product-essential {
+   border-bottom: 0 none;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+.quickview-hider {
+	background: none repeat scroll 0 0 #333333;
+	display: block;
+	left: 0;
+ filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 9998;
+}
+html body  #popup {
+	background: none repeat scroll 0 0 #FFFFFF;
+	padding:10px;
+	height: auto !important;
+}
+.quickview-button a {
+	text-decoration:none !important;
+}
+.quickview-loader {
+	background: none repeat scroll 0 0 #FFFFFF;
+	left: 52%;
+	margin-left: -25px;
+	margin-top: -25px;
+	opacity: 0.8;
+	padding: 10px;
+	position: fixed;
+	top: 46%;
+	width: 15px;
+	z-index: 9999;
+}
+.quickview-popup {
+	background: none repeat scroll 0 0 #FFFFFF;
+ -webkit-box-shadow: 0 6-webkit-box-shadow: 0 6px 10px rgba( 0, 0, 0, 0.3 );
+	-moz-box-shadow:    0 6px 10px rgba( 0, 0, 0, 0.3 );
+	box-shadow:         0 6px 10px rgba( 0, 0, 0, 0.3 );
+	left: 50%;
+	margin-left: -275px;
+	margin-top: -170px;
+	padding: 10px;
+	position: absolute;
+	z-index: 9999;
+}
+.quickview-hider {
+	display: block;
+	left: 0;
+	opacity: 0.8;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9997;
+}
+.popup {
+
+    position: relative;
+}
+.popup-header {
+	margin-top: -20px;
+	position: absolute;
+	right: 0;
+	z-index: 9999;
+}
+.popup-header a {
+	background: url("https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/close.png") no-repeat scroll 0 0 transparent;
+	left: 19px;
+	padding: 10px 16px;
+	position: relative;
+}
+.main-popup {
+	padding: 5px 5px 0;
+}
+.main-popup h2 a {
+	text-decoration: none;
+}
+.main-popup .product-shop {
+	float: right;
+	position: relative;
+	width: 335px;
+}
+.main-popup .product-img-box {
+	float: left;
+	text-align: center;
+	width: 250px;
+}
+.main-popup .product-img-box img {
+	border: 1px solid #DDDDDD;
+}
+.product-shop .product-name h1 a {
+	color: #000000;
+	font-size: 20px;
+	font-weight: 700 !important;
+	margin-bottom: 10px;
+	margin-top: 0;
+	padding-bottom: 0;
+}
+.main-popup .product-name h1 a:hover {
+	text-decoration:underline;
+}
+.main-popup .product-shop .product-options-bottom {
+	margin:0;
+}
+.main-popup .ratings, .product-options-bottom .rating-links {
+	padding-left:0;
+}
+.main-popup .add-to-box {
+	margin: 20px;
+}
+.category-products .product-options-bottom {
+	background-color:#fffada;
+	padding:15px 20px;
+	border:1px solid #e4e4e4;
+	height:300px;
+	overflow:auto;
+}
+.qty-popup {
+	padding:8px !important;
+}
+
+/**
+* Inchoo
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Open Software License (OSL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/osl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@magentocommerce.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Please do not edit or add to this file if you wish to upgrade
+* Magento or this extension to newer versions in the future.
+** Inchoo *give their best to conform to
+* "non-obtrusive, best Magento practices" style of coding.
+* However,* Inchoo *guarantee functional accuracy of
+* specific extension behavior. Additionally we take no responsibility
+* for any possible issue(s) resulting from extension usage.
+* We reserve the full right not to provide any kind of support for our free extensions.
+* Thank you for your understanding.
+*
+* @category Inchoo
+* @package SocialConnect
+* @author Marko Martinović <marko.martinovic@inchoo.net>
+* @copyright Copyright (c) Inchoo (http://inchoo.net/)
+* @license http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+*/
+
+div.inchoo-socialconnect-facebook{
+    float: right;
+    height: 30px !important;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/base/default/inchoo_socialconnect/facebook/images/login-button-left.png') no-repeat top left !important;
+}
+
+div.inchoo-socialconnect-facebook-inner{
+    height: 30px !important;
+    float: left !important;
+    margin-left: 30px !important;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/base/default/inchoo_socialconnect/facebook/images/login-button-inner.png') repeat-x top left !important;
+    padding: 0 5px !important;
+    text-shadow: 1px 1px #1c376d;
+}
+
+div.inchoo-socialconnect-facebook-right{
+    float: left !important;
+    height: 30px !important;
+    width: 3px !important;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/base/default/inchoo_socialconnect/facebook/images/login-button-right.png') no-repeat top left !important;
+}
+
+div.inchoo-socialconnect-facebook-inner a{
+    color: #FFFFFF !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-decoration: none !important;
+    line-height: 30px !important;
+}      
+
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+
+/* Table of Content
+==================================================
+	#Reset & Basics
+	#Basic Styles
+	#Site Styles
+	#Typography
+	#Links
+	#Lists
+	#Images
+	#Buttons
+	#Forms
+	#Misc */
+
+
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline; }
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block; }
+	body {
+		line-height: 1; }
+	ol, ul {
+		list-style: none; }
+	blockquote, q {
+		quotes: none; }
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none; }
+	table {
+		border-collapse: collapse;
+		border-spacing: 0; }
+
+
+/* #Basic Styles
+================================================== */
+	body {
+		background: #fff url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/grey-speckle-mesh-lighter.jpg') left top repeat;
+		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #444;
+		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+		-webkit-text-size-adjust: 100%;
+    }
+
+    .container {
+        background: #FFF;
+        padding-top: 15px !important;
+        box-shadow: 0 0 20px #AAA;
+    }
+
+    .container > div:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
+
+/* #Typography
+================================================== */
+	h1, h2, h3, h4, h5, h6 {
+		color: #181818;
+		font-family: "Georgia", "Times New Roman", serif;
+		font-weight: normal; }
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
+	h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
+	h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
+	h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
+	h5 { font-size: 17px; line-height: 24px; }
+	h6 { font-size: 14px; line-height: 21px; }
+	.subheader { color: #777; }
+
+	p { margin: 0 0 20px 0; }
+	p img { margin: 0; }
+	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+
+	em { font-style: italic; }
+	strong { font-weight: bold; color: #333; }
+	small { font-size: 80%; }
+
+/*	Blockquotes  */
+	blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #777; font-style: italic; }
+	blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+	blockquote cite { display: block; font-size: 12px; color: #555; }
+	blockquote cite:before { content: "\2014 \0020"; }
+	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+
+	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+
+
+/* #Links
+================================================== */
+	a, a:visited { color: #333; text-decoration: underline; outline: 0; }
+	a:hover, a:focus { color: #000; }
+	p a, p a:visited { line-height: inherit; }
+
+
+/* #Lists
+================================================== */
+	ul, ol { margin-bottom: 20px; }
+	ul { list-style: none outside; }
+	ol { list-style: decimal; }
+	ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+	ul.square { list-style: square outside; }
+	ul.circle { list-style: circle outside; }
+	ul.disc { list-style: disc outside; }
+	ul ul, ul ol,
+	ol ol, ol ul { margin: 4px 0 5px 30px; font-size: 90%;  }
+	ul ul li, ul ol li,
+	ol ol li, ol ul li { margin-bottom: 6px; }
+	li { line-height: 18px; margin-bottom: 12px; }
+	ul.large li { line-height: 21px; }
+	li p { line-height: 21px; }
+
+/* #Images
+================================================== */
+
+	img.scale-with-grid {
+		max-width: 100%;
+		height: auto; }
+
+
+/* #Buttons
+================================================== */
+
+	.button,
+	button,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"] {
+		background: #eee; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* W3C */
+	  border: 1px solid #aaa;
+	  border-top: 1px solid #ccc;
+	  border-left: 1px solid #ccc;
+	  -moz-border-radius: 3px;
+	  -webkit-border-radius: 3px;
+	  border-radius: 3px;
+	  color: #444;
+	  display: inline-block;
+	  font-size: 11px;
+	  font-weight: bold;
+	  text-decoration: none;
+	  text-shadow: 0 1px rgba(255, 255, 255, .75);
+	  cursor: pointer;
+	  margin-bottom: 20px;
+	  line-height: normal;
+	  padding: 8px 10px;
+	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+	.button:hover,
+	button:hover,
+	input[type="submit"]:hover,
+	input[type="reset"]:hover,
+	input[type="button"]:hover {
+		color: #222;
+		background: #ddd; /* Old browsers */
+		background: #ddd -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
+		background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(0,0,0,.3))); /* Chrome,Safari4+ */
+		background: #ddd -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Chrome10+,Safari5.1+ */
+		background: #ddd -o-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Opera11.10+ */
+		background: #ddd -ms-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* IE10+ */
+		background: #ddd linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* W3C */
+	  border: 1px solid #888;
+	  border-top: 1px solid #aaa;
+	  border-left: 1px solid #aaa; }
+
+	.button:active,
+	button:active,
+	input[type="submit"]:active,
+	input[type="reset"]:active,
+	input[type="button"]:active {
+		border: 1px solid #666;
+		background: #ccc; /* Old browsers */
+		background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
+		background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.35)), color-stop(100%,rgba(10,10,10,.4))); /* Chrome,Safari4+ */
+		background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Chrome10+,Safari5.1+ */
+		background: #ccc -o-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Opera11.10+ */
+		background: #ccc -ms-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* IE10+ */
+		background: #ccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* W3C */ }
+
+	.button.full-width,
+	button.full-width,
+	input[type="submit"].full-width,
+	input[type="reset"].full-width,
+	input[type="button"].full-width {
+		width: 100%;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		text-align: center; }
+
+	/* Fix for odd Mozilla border & padding issues */
+	button::-moz-focus-inner,
+	input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+	}
+
+
+/* #Forms
+================================================== */
+
+	form {
+		margin-bottom: 20px; }
+	fieldset {
+		margin-bottom: 20px; }
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	textarea,
+	select {
+		border: 1px solid #ccc;
+		padding: 6px 4px;
+		outline: none;
+		-moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #777;
+		margin: 0;
+		width: 210px;
+		max-width: 100%;
+		display: block;
+		margin-bottom: 20px;
+		background: #fff; }
+	select {
+		padding: 0; }
+	input[type="text"]:focus,
+	input[type="password"]:focus,
+	input[type="email"]:focus,
+	textarea:focus {
+		border: 1px solid #aaa;
+ 		color: #444;
+ 		-moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		box-shadow:  0 0 3px rgba(0,0,0,.2); }
+	textarea {
+		min-height: 60px; }
+	label,
+	legend {
+		display: block;
+		font-weight: bold;
+		font-size: 13px;  }
+	select {
+		width: 220px; }
+	input[type="checkbox"] {
+		display: inline; }
+	label span,
+	legend span {
+		font-weight: normal;
+		font-size: 13px;
+		color: #444; }
+
+/* #Misc
+================================================== */
+	.remove-bottom { margin-bottom: 0 !important; }
+	.half-bottom { margin-bottom: 10px !important; }
+	.add-bottom { margin-bottom: 20px !important; }
+
+
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+
+/* Table of Contents
+==================================================
+    #Base 960 Grid
+    #Tablet (Portrait)
+    #Mobile (Portrait)
+    #Mobile (Landscape)
+    #Clearing */
+
+
+
+/* #Base 960 Grid
+================================================== */
+
+    .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+    .container .column,
+    .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+    .row                                        { margin-bottom: 20px; }
+
+    /* Nested Column Classes */
+    .column.alpha, .columns.alpha               { margin-left: 0; }
+    .column.omega, .columns.omega               { margin-right: 0; }
+
+    /* Base Grid */
+    .container .one.column,
+    .container .one.columns                     { width: 40px;  }
+    .container .two.columns                     { width: 100px; }
+    .container .three.columns                   { width: 160px; }
+    .container .four.columns                    { width: 220px; }
+    .container .five.columns                    { width: 280px; }
+    .container .six.columns                     { width: 340px; }
+    .container .seven.columns                   { width: 400px; }
+    .container .eight.columns                   { width: 460px; }
+    .container .nine.columns                    { width: 520px; }
+    .container .ten.columns                     { width: 580px; }
+    .container .eleven.columns                  { width: 640px; }
+    .container .twelve.columns                  { width: 700px; }
+    .container .thirteen.columns                { width: 760px; }
+    .container .fourteen.columns                { width: 820px; }
+    .container .fifteen.columns                 { width: 880px; }
+    .container .sixteen.columns                 { width: 940px; }
+
+    .container .one-third.column                { width: 300px; }
+    .container .two-thirds.column               { width: 620px; }
+
+    /* Offsets */
+    .container .offset-by-one                   { padding-left: 60px;  }
+    .container .offset-by-two                   { padding-left: 120px; }
+    .container .offset-by-three                 { padding-left: 180px; }
+    .container .offset-by-four                  { padding-left: 240px; }
+    .container .offset-by-five                  { padding-left: 300px; }
+    .container .offset-by-six                   { padding-left: 360px; }
+    .container .offset-by-seven                 { padding-left: 420px; }
+    .container .offset-by-eight                 { padding-left: 480px; }
+    .container .offset-by-nine                  { padding-left: 540px; }
+    .container .offset-by-ten                   { padding-left: 600px; }
+    .container .offset-by-eleven                { padding-left: 660px; }
+    .container .offset-by-twelve                { padding-left: 720px; }
+    .container .offset-by-thirteen              { padding-left: 780px; }
+    .container .offset-by-fourteen              { padding-left: 840px; }
+    .container .offset-by-fifteen               { padding-left: 900px; }
+
+
+
+/* #Tablet (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 768px */
+
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        .container                                  { width: 768px; }
+        .container .column,
+        .container .columns                         { margin-left: 10px; margin-right: 10px;  }
+        .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
+        .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
+        .alpha.omega                                { margin-left: 0; margin-right: 0; }
+
+        .container .one.column,
+        .container .one.columns                     { width: 28px; }
+        .container .two.columns                     { width: 76px; }
+        .container .three.columns                   { width: 124px; }
+        .container .four.columns                    { width: 172px; }
+        .container .five.columns                    { width: 220px; }
+        .container .six.columns                     { width: 268px; }
+        .container .seven.columns                   { width: 316px; }
+        .container .eight.columns                   { width: 364px; }
+        .container .nine.columns                    { width: 412px; }
+        .container .ten.columns                     { width: 460px; }
+        .container .eleven.columns                  { width: 508px; }
+        .container .twelve.columns                  { width: 556px; }
+        .container .thirteen.columns                { width: 604px; }
+        .container .fourteen.columns                { width: 652px; }
+        .container .fifteen.columns                 { width: 700px; }
+        .container .sixteen.columns                 { width: 748px; }
+
+        .container .one-third.column                { width: 236px; }
+        .container .two-thirds.column               { width: 492px; }
+
+        /* Offsets */
+        .container .offset-by-one                   { padding-left: 48px; }
+        .container .offset-by-two                   { padding-left: 96px; }
+        .container .offset-by-three                 { padding-left: 144px; }
+        .container .offset-by-four                  { padding-left: 192px; }
+        .container .offset-by-five                  { padding-left: 240px; }
+        .container .offset-by-six                   { padding-left: 288px; }
+        .container .offset-by-seven                 { padding-left: 336px; }
+        .container .offset-by-eight                 { padding-left: 384px; }
+        .container .offset-by-nine                  { padding-left: 432px; }
+        .container .offset-by-ten                   { padding-left: 480px; }
+        .container .offset-by-eleven                { padding-left: 528px; }
+        .container .offset-by-twelve                { padding-left: 576px; }
+        .container .offset-by-thirteen              { padding-left: 624px; }
+        .container .offset-by-fourteen              { padding-left: 672px; }
+        .container .offset-by-fifteen               { padding-left: 720px; }
+    }
+
+
+/*  #Mobile (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 320px */
+
+    @media only screen and (max-width: 767px) {
+        .container { width: 300px; }
+        .container .columns,
+        .container .column { margin: 0; }
+
+        .container .one.column,
+        .container .one.columns,
+        .container .two.columns,
+        .container .three.columns,
+        .container .four.columns,
+        .container .five.columns,
+        .container .six.columns,
+        .container .seven.columns,
+        .container .eight.columns,
+        .container .nine.columns,
+        .container .ten.columns,
+        .container .eleven.columns,
+        .container .twelve.columns,
+        .container .thirteen.columns,
+        .container .fourteen.columns,
+        .container .fifteen.columns,
+        .container .sixteen.columns,
+        .container .one-third.column,
+        .container .two-thirds.column  { width: 300px; }
+
+        /* Offsets */
+        .container .offset-by-one,
+        .container .offset-by-two,
+        .container .offset-by-three,
+        .container .offset-by-four,
+        .container .offset-by-five,
+        .container .offset-by-six,
+        .container .offset-by-seven,
+        .container .offset-by-eight,
+        .container .offset-by-nine,
+        .container .offset-by-ten,
+        .container .offset-by-eleven,
+        .container .offset-by-twelve,
+        .container .offset-by-thirteen,
+        .container .offset-by-fourteen,
+        .container .offset-by-fifteen { padding-left: 0; }
+
+    }
+
+
+/* #Mobile (Landscape)
+================================================== */
+
+    /* Note: Design for a width of 480px */
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .container { width: 420px; }
+        .container .columns,
+        .container .column { margin: 0; }
+
+        .container .one.column,
+        .container .one.columns,
+        .container .two.columns,
+        .container .three.columns,
+        .container .four.columns,
+        .container .five.columns,
+        .container .six.columns,
+        .container .seven.columns,
+        .container .eight.columns,
+        .container .nine.columns,
+        .container .ten.columns,
+        .container .eleven.columns,
+        .container .twelve.columns,
+        .container .thirteen.columns,
+        .container .fourteen.columns,
+        .container .fifteen.columns,
+        .container .sixteen.columns,
+        .container .one-third.column,
+        .container .two-thirds.column { width: 420px; }
+    }
+
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .container:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+hr {
+    border-color: #e6e6e6;
+}
+
+a[href="javascript:void(0)"],
+#profiler_section {
+    display: none !important;
+}
+
+.std {
+    position: relative;
+    clear: both;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.box-content p {
+    text-align: justify;
+    padding: 0 1.2em;
+}
+
+label input[type=checkbox] {
+    vertical-align: middle;
+}
+
+input[type=checkbox] label {
+    float: left;
+}
+
+@-webkit-keyframes ease-blink {
+    0% {-webkit-opacity: 1.0;}
+    40% {-webkit-opacity: 0.5;}
+    50% {-webkit-opacity: 0.0;}
+    60% {-webkit-opacity: 0.5;}
+}
+@-moz-keyframes ease-blink {
+    0% {-moz-opacity: 1.0;}
+    40% {-moz-opacity: 0.5;}
+    50% {-moz-opacity: 0.0;}
+    60% {-moz-opacity: 0.5;}
+}
+@-o-keyframes ease-blink {
+    0% {-o-opacity: 1.0;}
+    40% {-o-opacity: 0.5;}
+    50% {-o-opacity: 0.0;}
+    60% {-o-opacity: 0.5;}
+}
+@keyframes ease-blink {
+     0% {opacity: 1.0;}
+    40% {opacity: 0.5;}
+    50% {opacity: 0.0;}
+    60% {opacity: 0.5;}
+}
+.ease-loading {
+    -webkit-animation: ease-blink 3s linear 2s infinite alternate;
+    -moz-animation: ease-blink 3s linear 2s infinite alternate;
+    -o-animation: ease-blink 3s linear 2s infinite alternate;
+    animation: ease-blink 3s linear 2s infinite alternate;
+    text-align: center !important;
+    text-transform: lowercase;
+    font-family: "Tahoma", Helvetica;
+    color: #888;
+    font-size: 22px;
+    font-variant: small-caps;
+}
+
+/* #Page Styles
+================================================== */
+
+.self-clear:before,
+.self-clear:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; width: 0; overflow: hidden; }
+
+.offset-by-half { padding-left: 30px; }
+
+.offset-by-half.by-margin {
+    padding-left: 0px;
+    margin-left: 30px !important;
+}
+
+.offset-by-one.by-margin {
+    padding-left: 0px;
+    margin-left: 60px !important;
+}
+
+.offset-by-two.by-margin {
+    padding-left: 0px;
+    margin-left: 120px !important;
+}
+
+.offset-by-three-important.by-margin {
+    padding-left: 180px !important;
+}
+
+.hashborder {
+    min-height: 40px;
+    position: relative;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png?noCache') 0 0 repeat;
+    height: auto;
+}
+.hashborder-border {
+    width: 100%;
+    height: 10px !important;
+    display: block;
+}
+.hashborder-border._05 {
+    height: 5px !important;
+}
+.displaynone { display: none !important; }
+
+.inlineblock { display: inline-block !important; }
+
+.show-mobile.no-display,
+.show-mobile-inline.no-display {
+    display: none;
+}
+
+.cms-index-index /*home-page*/ .std p {
+    margin: 0;
+}
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+        .offset-by-half.by-margin,
+        .offset-by-one.by-margin,
+        .offset-by-two.by-margin,
+        .by-margin {
+            margin-left: 0 !important;
+        }
+        .hide-mobile {
+            display: none !important;
+        }
+        .show-mobile {
+            display: block !important;
+        }
+        .show-mobile-inline {
+            display: inline-block !important;
+        }
+
+        .page-header-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #page-header-right {
+            height: 130px !important;
+            margin-bottom: 10px !important;
+        }
+        .nav-top {
+            right: 0px !important;
+            width: 100% !important;
+            text-align: center !important;
+        }
+        #page-header-phone {
+            top: 37px !important;
+            right: 0px !important;
+            width: 100% !important;
+            text-align: center !important;
+        }
+
+        .nav-main-item {
+            position: relative;
+            top: -14px;
+        }
+        .nav-main-item:last-child {
+            border: none;
+        }
+
+        #home-slider {
+            width: 300px !important;
+        }
+
+        .home-slide {
+            width: 280px !important;
+            overflow: hidden !important;
+        }
+
+        .home-slide-img {
+            position: relative !important;
+            left: -50% !important;
+        }
+
+        .home-slide-detail-title {
+            line-height: 1.1em !important;
+        }
+
+        .home-slide-detail-sub {
+            top: -6px !important;
+        }
+
+        .home-cat-img-wrap {
+            overflow: hidden !important;
+        }
+
+        .home-cat-img {
+            position: relative !important;
+            left: -50% !important;
+        }
+
+        .box-head > * + .required {
+            margin-top: 0 !important;
+            margin-bottom: -35px !important;
+        }
+
+        #category-slider-inner {
+            width: 240px !important;
+            overflow: hidden !important;
+        }
+
+        .category-slider-slide-link {
+            margin: 0 !important;
+            width: 120px !important;
+        }
+
+        #category-slider-prev {
+            background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/controls.png') center 30px no-repeat;
+        }
+
+        #category-slider-next {
+            background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/controls.png') center -70px no-repeat;
+        }
+
+        .footer-box-inner {
+            text-align: center !important;
+            border-right: none !important;
+            border-bottom: 1px solid #e6e6e6 !important;
+            padding-top: 10px !important;
+        }
+
+        .footer-box .footer-box-inner h5 {
+            margin-bottom: 10px !important;
+        }
+
+        #footer-newsletter-input {
+            width: 230px !important;
+        }
+
+        #category-banner {
+            overflow: hidden !important;
+            padding: 10px !important;
+            width: 280px !important;
+        }
+
+        #category-banner-img-wrap {
+            overflow: hidden !important;
+        }
+
+        #category-banner-img {
+            margin: 0 !important;
+            position: relative !important;
+            left: -50% !important;
+        }
+
+        #category-banner-blurb {
+            width: 260px !important;
+            padding: 10px !important;
+        }
+
+        #category-banner-blurb-text {
+            width: 260px !important;
+            white-space: normal !important;
+            margin-bottom: 10px !important;
+        }
+
+        #category-banner-blurb-btn {
+            float: right !important;
+        }
+
+        #text-filters {
+            height: 50px !important;
+        }
+
+        .category-product.four.columns {
+            margin: 10px 50px !important;
+            width: 220px !important;
+        }
+    }
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FontName.eot');
+	    src: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FontName.eot?iefix') format('eot'),
+	         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FontName.woff') format('woff'),
+	         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FontName.ttf') format('truetype'),
+	         url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+/*******************************\
+* Styles for Global Page Header *
+\*******************************/
+
+#logo-main {
+    float: right;
+    margin-right: -5px;
+}
+
+#logo-main-mobile {
+    margin: 0 auto;
+}
+
+#page-header {
+    position: relative;
+    margin: 10px 0;
+    height: 150px;
+    z-index: 999;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+
+#page-header
+.nav-top {
+    position: absolute;
+    top: 7px;
+    right: 12px;
+    height: 29px;
+    z-index: 998;
+}
+
+#page-header
+#nav-top-list {
+    /*padding: 3px 0;*/
+    min-width: 220px;
+}
+
+#page-header
+.nav-top-item {
+    display: inline;
+    list-style-type: none;
+    color: #666666;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    /*border-radius: 7px/9px;*/
+    border-right: none;
+    margin: -2px;
+    padding: 5px 7px;
+    background: #FFF;
+    font-family: 'Tahoma';
+}
+
+#page-header
+.nav-top-item.first {
+    /*border-radius: 7px 0 0 7px / 9px 0 0 9px;*/
+    border-radius: 15px 0 0 15px;
+}
+
+#page-header
+.nav-top-item.last {
+    border-right: 1px solid #ccc;
+    /*border-radius: 0 7px 7px 0 / 0 9px 9px 0;*/
+    border-radius: 0 15px 15px 0;
+}
+
+#page-header
+.nav-top-item a {
+    text-decoration: none;
+}
+
+#page-header
+.nav-top-item:hover {
+    box-shadow: inset 0 0 2px 2px #EEE;
+}
+
+#page-header-right {
+    position: relative;
+    height: 100%;
+}
+
+#page-header-cart {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    font-size: 13px;
+    z-index: 996;
+}
+
+#page-header-cart a {
+    text-decoration: none;
+}
+
+#header-cart-cart:hover,
+#header-cart-checkout:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#page-header-phone {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    text-align: center;
+}
+
+#header-phone-num,
+#header-phone-num a {
+    font-size: 35px;
+    line-height: 35px;
+    color: #895c9a;
+    font-weight: 400;
+    margin-top: 0;
+    font-family: 'Tahoma';
+    text-decoration: none;
+}
+
+
+
+
+/* MAIN NAV
+***********************/
+.nav-main {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    z-index: 997;
+    background-color: #F0F0F0;
+}
+
+.nav-main-list {
+    height: 40px;
+}
+
+.nav-main-item {
+    display: inline-block;
+    height: 40px;
+    list-style-type: none;
+    /* padding: 12px 10px 0; */
+    border-right: 3px solid #FFF;
+    background: #F0F0F0 url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/nav-main-unselected.png')  left bottom repeat-x;
+    margin-bottom: 0;
+}
+
+.nav-main-item.selected,
+.nav-main-item:hover {
+    background: #F0F0F0 url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/nav-main-selected.png') left bottom repeat-x;
+}
+
+.nav-main-list:hover .nav-main-item.selected {
+    background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/nav-main-unselected.png');
+}
+.nav-main-list:hover .nav-main-item.selected:hover {
+    background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/nav-main-selected.png') !important;
+}
+.nav-main-item.search:hover ~ .nav-main-item.selected {
+    background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/nav-main-selected.png') !important;
+}
+
+.nav-main-item.last.search {
+    float: right;
+    position: relative;
+    padding: 0 5px 0 0;
+    border: none;
+    background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/nav-main-unselected.png') !important;
+}
+
+.nav-main-item a {
+    text-transform: uppercase;
+    color: #555;
+    font-family: 'FuturaStd-Medium';
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding: 12px 10px 0;
+}
+
+.nav-main-item.parent {
+    position: relative;
+}
+
+.nav-main-item.parent ul {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 36px;
+    width: 100%;
+    margin: 0;
+    padding: 10px 10px 10px 15px;
+    background: #e6e6e6 url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/nav-main-unselected.png') left bottom repeat-x;
+    background-size: auto 100%;
+}
+
+#glob-search-form {
+    display: inline-block;
+    padding: 6px 0;
+    float: right;
+}
+
+#glob-search-form input {
+    outline: none;
+    float: left;
+}
+
+#glob-search-input{
+    height: 28px;
+    width: 180px;
+    margin: 0;
+    padding: 0 0 0 30px;
+    border: none;
+    background: white url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/glob-search-bg.png') 7px center no-repeat;
+    font-family: 'Tahoma';
+    font-weight: bold;
+    color: #888;
+    position:relative;
+    z-index: 9;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #glob-search-input{
+        width: 205px !important;
+    }
+}
+
+#glob-search-input::-webkit-search-cancel-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: #555;
+    text-align: center;
+    cursor: pointer;
+}
+
+#glob-search-submit {
+    width: 100px;
+    height: 30px;
+    margin: -1px 5px 0 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/glob-search-submit.png') center center no-repeat;
+    text-indent: -10000px;
+    z-index: 99;
+}
+#page-footer {
+
+}
+
+.footer-rule {
+    margin: 5px 0;
+    border-color: #e6e6e6;
+}
+
+.footer-box {
+    margin-top: 10px;
+}
+
+.footer-links-wrap,
+.footer-box-inner {
+    width: 100%;
+    border-right: 1px solid #e6e6e6;;
+    min-height: 130px;
+}
+
+.footer-box-inner.last {
+    border: none;
+    margin-left: -15px;
+    width: 180px;
+}
+
+.footer-links-heading,
+.footer-box h5 {
+    /*color: #895c9a;*/
+    color: #8a6399;
+    font-size: 15px;
+    font-family: 'FuturaStd-Medium';
+    text-transform: uppercase;
+
+}
+
+.footer-box ul,
+.footer-box nav {
+    position: relative;
+    top: auto;
+    right: auto;
+    height: auto;
+    z-index: auto;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+}
+
+.footer-links-wrap ul li.first,
+.footer-links-wrap ul li.last,
+.footer-links-wrap ul li:hover,
+.footer-links-wrap ul li {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    display: block;
+    list-style-type: none;
+    color: inherit;
+    font-size: inherit;
+    border: inherit;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin: auto;
+    padding: 0;
+    background: #FFF;
+    font-family: auto;
+}
+
+.footer-links-wrap ul li,
+.footer-box ul li {
+    list-style-type: none;
+    margin-bottom: 0;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+}
+
+.footer-links-wrap ul li a,
+.footer-box a {
+    text-decoration: none;
+    font-size: 11px;
+    color: #888;
+    font-family: 'Tahoma';
+}
+
+.footer-links-wrap ul li a:hover,
+.footer-box a:hover {
+    color: #8a6399;
+}
+
+/* Newsletter Footer Box
+**********************************************************/
+#footer-newsletter {
+    margin: 10px 0 5px;
+    height: 45px;
+    display: block;
+    position: relative;
+}
+
+#footer-newsletter-heading {
+    padding-left: 20px;
+}
+
+#footer-newsletter #newsletter,
+#footer-newsletter-input {
+    float: left;
+    color: #888;
+    font-family: 'Tahoma';
+    margin-bottom: 0;
+    width: 110px;
+    height: 1.2em;
+    padding: 0.45em 20px 0.45em 0.3em;
+    border: 0.1em solid #AAA;
+}
+
+#footer-newsletter-submit {
+    width: 6.6em;
+    height: 2.6em;
+    border: none;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/footer-newsletter-submit.png') center center no-repeat;
+    background-size: 100% 100%;
+    margin-left: -10px;
+    text-indent: -10000px;
+    margin-bottom: 0;
+}
+
+#footer-newsletter-msg {
+    width: 200px;
+    text-align: center;
+    padding: 1px 0;
+    color: #888;
+}
+
+#footer-newsletter-msg.error {
+    color: #D99;
+}
+
+#footer-newsletter-msg.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -10px;
+    right: -10px;
+    background: #FFF;
+    width: 100%;
+    padding-top: 5px;
+}
+
+#footer-social {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+#footer-social-label {
+    top: -2px;
+    position: relative;
+    color: #8a6399;
+    font-family: 'Tahoma';
+    margin-right: 5px;
+}
+
+.footer-social-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/footer-social-icon.png') 0 0 no-repeat;
+    text-indent: -10000px;
+    margin-left: 4px;
+    border-radius: 2px;
+}
+
+.footer-social-icon.gp,
+.footer-social-icon.tw,
+.footer-social-icon.fb.fb-follow {
+    /*background-position:  0px 0px;*/
+    text-indent: 0;
+    overflow: hidden;
+    position: relative;
+    left: 1px;
+    top: 1px;
+}
+
+.footer-social-icon.gp > *:first-child {
+    -webkit-opacity: 0;
+    -moz-opaciy: 0;
+    -o-opacity: 0;
+    opacity: 0;
+    position: relative;
+    top: -1px;
+    left: -5px;
+}
+
+.footer-social-icon.tw > *:first-child,
+.footer-social-icon.fb.fb-follow > *:first-child {
+    position: relative;
+    top: 20px;
+    left: -3px;
+}
+
+.footer-social-icon.gp:hover > *:first-child {
+    -webkit-opacity: 1;
+    -moz-opaciy: 1;
+    -o-opacity: 1;
+    opacity: 1;
+}
+
+.footer-social-icon.tw:hover > *:first-child,
+.footer-social-icon.fb.fb-follow:hover > *:first-child {
+    position: relative;
+    top: -3px;
+    left: -3px;
+}
+.footer-social-icon.fb:hover {
+    background-position:  0px -16px;
+}
+.footer-social-icon.fb {
+    background-position:  0px 0px;
+}
+.footer-social-icon.tw:hover {
+    background-position:  -20px -16px;
+}
+.footer-social-icon.tw {
+    background-position:  -20px 0px;
+    margin-left: 5px;
+}
+.footer-social-icon.pn:hover {
+    background-position:  -40px -16px;
+}
+.footer-social-icon.pn {
+    background-position:  -40px 0px;
+}
+.footer-social-icon.gp:hover {
+    background-position:  -60px -16px;
+}
+.footer-social-icon.gp {
+    background-position:  -60px 0px;
+}
+.footer-social-icon.ig:hover {
+    background-position:  -80px -16px;
+}
+.footer-social-icon.ig {
+    background-position:  -80px 0px;
+}
+
+/* Logo Section in Footer
+*************************************************************/
+
+#footer-logo-wrap {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#footer-logo-wrap img:last-child {
+    display: none;
+}
+
+#footer-logo-wrap:hover img:first-child {
+    display: none;
+}
+#footer-logo-wrap:hover img:last-child {
+    display: inline;
+}
+
+.footer-logo-img {
+    margin: 5px auto;
+    width: 78px;
+    height: 140px;
+}
+
+#footer-logo-email {
+    font-size: 10px;
+    font-weight: normal;
+    color: #888;
+    font-family: 'OpenSans';
+    text-align: center;
+    width: 100%;
+}
+
+#footer-logo-email a {
+    margin-left: -4px;
+}
+
+#footer-logo-phone,
+#footer-logo-phone a {
+    text-align: center;
+    font-size: 16px;
+    color: #895c9a;
+    font-weight: 400;
+    font-family: 'Tahoma';
+}
+
+#footer-logo-phone a:hover {
+    color: #888;
+}
+
+/* Footer Sub Info (Copyright and CC icons)
+*************************************************************/
+
+#footer-sub {
+    margin: 2px auto 10px;
+    height: 40px;
+}
+
+#footer-sub-copyright {
+    font-size: 11px;
+    padding-top: 7px;
+    color: #888;
+    font-family: 'Tahoma';
+
+}
+
+#footer-sub-icons #cc-icons {
+    float: right;
+}
+/* Product Category Slider
+*******************************************/
+
+#category-slider {
+    height: 150px;
+    margin-bottom: 20px;
+
+}
+
+#category-slider-title {
+    text-indent: -10000px;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/category-slider-title.png') center center no-repeat;
+    height: 40px;
+    margin-bottom: 20px;
+
+}
+
+.category-slider-nav {
+    float: left;
+    display: block;
+    height: 90px;
+    width: 30px;
+    background-color: transparent;
+    background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/controls.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.category-slider-nav.disabled {
+    cursor: default;
+    visibility: hidden;
+}
+
+#category-slider-prev {
+    background-position: right 30px;
+}
+
+#category-slider-next {
+    background-position: left -68px;
+}
+
+#category-slider-inner {
+    position: relative;
+    float: left;
+    display: block;
+    height: 90px;
+    width: 880px;
+    overflow: hidden;
+}
+
+#category-slider-inner table {
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+
+.category-slider-slide-link:hover .category-slider-slide-label {
+    /*text-decoration: underline;*/
+}
+.category-slider-slide-link {
+    text-decoration: none;
+}
+
+.category-slider-slide {
+    float: left;
+    display: block;
+    height: 90px;
+    width: 130px;
+    margin: 0 8px;
+}
+
+.category-slider-slide:hover {
+    box-shadow: 0 0 5px 0px rgba(138, 99, 153, 1);
+    border-radius: 15px;
+}
+
+.category-slider-slide-img {
+    height: 64px;
+    width: 91px;
+    /**
+     * Use Darker Color for Icons
+     */
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/categories-icon-sprite-darker.png') 0px 0px no-repeat;
+    margin: 0 auto;
+
+}
+
+.cat-sectionals .category-slider-slide-img {
+    background-position: 0px center;
+}
+
+
+.cat-sofas .category-slider-slide-img {
+    background-position: -148px center;
+}
+
+
+.cat-chairs .category-slider-slide-img {
+    background-position: -282px center;
+}
+
+
+.cat-loungers .category-slider-slide-img {
+    background-position: -415px center;
+}
+
+
+.cat-diningtables .category-slider-slide-img {
+    background-position: -567px center;
+}
+
+
+.cat-barsets .category-slider-slide-img {
+    background-position: -707px center;
+}
+
+.cat-accessories .category-slider-slide-img {
+    background-position: -795px center;
+}
+
+
+.category-slider-slide-label {
+    text-align: center;
+    text-decoration: none;
+    color: #888;
+    font-family: "Tahoma";
+}
+
+/* Main Image Slider
+*******************************************/
+
+#home-slider {
+    position: relative;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png?noCache');
+    width: 940px;
+    height: 380px;
+    margin-bottom: 20px;
+}
+
+/*#home-slider-inner {*/
+/*position: relative;*/
+/*width: 100%;*/
+/*}*/
+
+.home-slide {
+    position: absolute;
+    margin: 10px;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.home-slide.current {
+    display: block;
+    z-index: 98;
+}
+
+.home-slide.next {
+    z-index: 99;
+}
+
+.home-slide.prev {
+    z-index: 97;
+}
+
+.home-slide-img {
+    width: 920px;
+    height: 360px;
+    outline: none;
+}
+
+.home-slide-detail {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    display: block;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.home-slide-detail-title {
+    font-size: 2em;
+    clear: both;
+    text-align: center;
+    color: #8a6399;
+    text-shadow: 1px 1px 1px #CCC;
+    padding: 5px 2px;
+    font-family: 'abeatbyKai';
+    margin-bottom: 3px;
+    /*text-transform: uppercase;*/
+}
+
+.home-slide-detail-under {
+    text-align: center;
+}
+
+.home-slide-detail-sub {
+    position: relative;
+    top: 4px;
+    font-size: 16px;
+    display: inline-block;
+    color: #555;
+    font-family: 'FuturaStd-Book';
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.home-slide-detail-btn {
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+/* Sub Main-Image Category Boxes
+*******************************************/
+
+.home-cat {
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png?noCache') left top repeat;
+    height: 170px;
+    position: relative;
+    margin-bottom: 20px;
+    /* padding: 0; */
+    /* padding: 0; */
+    /* width: auto; */
+}
+
+#home-cat-right {
+
+}
+
+#home-cat-left {
+
+}
+
+.home-cat-img-wrap {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.home-cat-img {
+    width: 440px;
+    height: auto;
+}
+
+.home-cat-label {
+    position: absolute;
+    bottom: 13px;
+    right: 10px;
+    background: rgba(255,255,255,0.8);
+    color: #8a6399;
+    font-family: 'abeatbyKai';
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/*@import url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/css/category-slider.css');*/
+
+#category-banner {
+    position: relative;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png') left top repeat;
+}
+
+#category-banner-img {
+    width: 920px;
+    height: 374px;
+    margin: 10px;
+    outline: none;
+}
+
+#category-banner-blurb {
+    position: absolute;
+    left: 10px;
+    bottom: 60px;
+    width: 450px;
+    background-color: rgba(212, 213, 216, 0.8);
+    display: block;
+    padding: 10px 10px 10px 20px;
+}
+
+#category-banner-blurb-title {
+    color: #8a6399;
+    font-size: 2em; /*22px;*/
+    font-family: 'abeatbyKai';
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+#category-banner-blurb-sub {
+
+}
+
+#category-banner-blurb-text {
+    float: left;
+    width: 330px;
+    color: #555;
+    font-family: 'FuturaStd-BookOblique';
+    height: 22px;
+}
+
+#category-banner-blurb-text.expanded {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+#category-banner-blurb-text {
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+#category-banner-blurb-text p {
+    display: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0;
+    width: 335px;
+    height: 22px;
+    max-height: 22px;
+}
+
+#category-banner-blurb-text p:first-child {
+    display: block;
+}
+
+#category-banner-blurb-text.expanded p {
+    display: block;
+    white-space: normal;
+    overflow: visible;
+    height: auto;
+    width: 300px;
+    max-height: none;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+#category-banner-blurb-btn {
+    position: absolute;
+    margin: 0;
+    bottom: 10px;
+    right: 15px;
+    width: 100px;
+    height: 30px;
+    padding-right: 3%;
+    border: none;
+    border-radius: 0;
+    /*background: #8a6399 url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/category-banner-blurb-btn.png') center center no-repeat;*/
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/category-banner-blurb-btn.png') center center no-repeat;
+    text-indent: -10000px;
+}
+
+/*@import url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/css/category-slider.css');*/
+
+/* Text Filters
+********************************************************/
+
+#text-filters {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 5px 10px;
+    height: 20px;
+    font-size: 12px;
+    color: #555;
+    font-family: 'Tahoma';
+    margin: 0 0 20px 0;
+}
+
+.catalogsearch-result-index
+#text-filters,
+.catalogsearch-advanced-result
+#text-filters {
+    max-width: 95%;
+}
+
+#text-filters-label,
+#text-filters-link {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    white-space: nowrap;
+}
+
+#text-filters-label {
+
+}
+
+.text-filters-option {
+    display: inline-block;
+    list-style-type: none;
+    cursor: pointer;
+    /*padding-left: 2px;*/
+}
+
+.text-filters-option:after {
+    content: "|";
+}
+
+.text-filters-option:last-child:after,
+.text-filters-option.last:after {
+    content: "";
+}
+
+.text-filters-option:hover .text-filters-link {
+    text-decoration: underline;
+}
+
+.text-filters-link {
+    text-decoration: none;
+}
+
+/* Product listings resluts
+********************************************************/
+
+.category-product {
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png?noCache') center center repeat;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.catalogsearch-result-index
+.category-product:nth-child(3n-1) {
+    margin-left: 50px !important;
+}
+
+.category-product-inner {
+    width: 200px;
+    margin: 10px;
+    background: #FFF;
+    display: block;
+    text-decoration: none;
+    min-height: 285px;
+}
+
+.category-product-img {
+    width: 190px;
+    height: auto;
+    outline: none;
+    padding: 5px;
+}
+
+.category-product-img-underline {
+    width: 180px;
+    height: 7px;
+    margin: 0 auto;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/category-product-img-underline.png') center center no-repeat;
+    margin-bottom: 10px;
+}
+
+.category-product-title,
+.category-product-collection {
+    margin: 0 5px;
+    font-family: 'FuturaStd-Medium';
+    text-align: center;
+}
+
+.category-product-title {
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.category-product-collection {
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.category-product-price {
+    float: left;
+    margin-left: 15px;
+    color: #8a6399;
+    font-family: 'FuturaStd-Bold';
+    font-size: 18px;
+    position: relative;
+    top: 5px;
+}
+
+.category-product-add {
+    text-indent: -10000px;
+    border: none;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/category-product-add.png') center center no-repeat;
+    width: 80px;
+    height: 30px;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.category-product-add:hover {
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/category-product-add.png') center center no-repeat;
+    box-shadow: 0 0 2px 2px rgba(138, 99, 153, 0.5);
+}
+
+/* Category Page Results Pagination
+*****************************************************************************/
+
+#category-pagi {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 5px 0;
+    height: 20px;
+    font-size: 12px;
+    color: #555;
+    font-family: 'Tahoma';
+}
+
+.catalogsearch-result-index
+#category-pagi,
+.catalogsearch-advanced-result
+#category-pagi {
+    max-width: 98%;
+}
+
+.page-sitemap .pager {
+    min-height: 30px;
+}
+
+.page-sitemap .pager .amount {
+    float: left;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.page-sitemap .pager li,
+#category-pagi li {
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    color: #555;
+}
+
+#category-pagi-info {
+    float: left;
+    margin-left: 5px;
+    color: #555;
+}
+
+#category-pagi-info span {
+    color: #555;
+}
+
+.category-pagi-nav,
+.category-pagi-page {
+    padding: 0 5px;
+    margin: 0;
+}
+
+.category-pagi-nav a,
+.category-pagi-page a {
+    text-decoration: none;
+    color: #444;
+}
+
+.category-pagi-nav.active a,
+.category-pagi-nav:hover a,
+.category-pagi-nav:hover a:hover,
+.category-pagi-page.active a,
+.category-pagi-page:hover a,
+.category-pagi-page:hover a:hover {
+    text-decoration: none !important;
+    color: #444 !important;
+    border-bottom: 1px solid #444 !important;
+}
+
+#category-pagi-prev {
+    margin-right: 5px;
+}
+
+#category-pagi-next {
+    margin-left: 5px;
+}
+
+/* Category Related Products
+*************************************************************************/
+
+#category-related-heading {
+    color: #8a6399;
+    font-family: 'FuturaStd-Medium';
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+/***********************\
+|  Product Page Styles  |
+\***********************/
+
+
+/* Product Image Styles
+*********************************************************************************/
+#product-img-main {
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png') center center repeat;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: block;
+}
+
+#product-img-main img:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
+
+#product-img-main-img {
+    width: 380px;
+    height: auto;
+    /*margin: 10px 10px 5px 10px;*/
+    margin: 0 10px;
+}
+
+#product-img-views {
+    width: 420px;
+    margin: 0px;
+}
+
+.product-img-view {
+    float: left;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png') center center repeat;
+    margin: 0 5px;
+    width: 125px;
+    display: block;
+    height: 87px;
+}
+
+.product-img-view.first,
+.product-img-view.last {
+    margin: 0 7px;
+}
+
+.product-img-view {
+    background-color: rgba(200, 200, 200, 0.3);
+}
+
+.product-img-view.current {
+    background-color: rgba(138, 99, 153, 0.3);
+}
+
+.product-img-view-thumb {
+    width: 115px;
+    height: 77px;
+    /*padding: 5px 5px 0 5px;*/
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+/*****************************************************************************\
+|*************************** Right Column Details ****************************|
+\*****************************************************************************/
+
+#product-details {
+    margin-top: 10px;
+}
+
+/* Product Title
+******************************************************************************/
+#product-details-title {
+    color: #8a6399;
+    font-family: 'abeatbyKai';
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+
+/* Subtext under Title (Review overall, item #, sku #)
+******************************************************************************/
+
+#product-details-sub {
+    color: #555;
+}
+
+#product-details-sub-review {
+
+}
+
+#product-details-sub-review-stars {}
+
+.review-stars {
+    height: 12px;
+    width: 70px;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/stars.png') 0px 0px no-repeat;
+    display: inline-block;
+}
+.review-stars._50{background-position: 0px 0px;}
+.review-stars._45{background-position: 0px -12px;}
+.review-stars._40{background-position: 0px -24px;}
+.review-stars._35{background-position: 0px -36px;}
+.review-stars._30{background-position: 0px -48px;}
+.review-stars._25{background-position: 0px -60px;}
+.review-stars._20{background-position: 0px -72px;}
+.review-stars._15{background-position: 0px -84px;}
+.review-stars._10{background-position: 0px -96px;}
+.review-stars._05{background-position: 0px -108px;}
+.review-stars._00{background-position: 0px -120px;}
+
+#product-details-sub-review-text {
+
+}
+
+#product-details-sub-review-text a {
+    text-decoration: none;
+    color: #0066bb;
+}
+
+#product-details-sub-review-text a:hover {
+    text-decoration: underline;
+}
+
+.product-details-sub-pipe {
+
+}
+
+#product-details-sub-item {
+
+}
+
+#product-details-sub-model {
+
+}
+
+/* Price Boxes
+******************************************************************************/
+
+#product-details-price {
+    margin: 10px auto;
+    clear: right;
+    padding: 5px;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png?noCache') center center repeat;
+}
+
+.product-details-price-section {
+    float:left;
+    width: 240px;
+    padding: 10px 6px;
+    /*height: 100%;*/
+    background: #FFF;
+    font-size: 16px;
+    font-family: 'FuturaStd-Medium';
+}
+
+.product-details-price-label {
+    width: 45%;
+    text-align: right;
+    display: inline-block;
+}
+
+.product-details-price-amount {
+    width: 45%;
+    display: inline-block;
+    text-align: center;
+}
+
+#product-details-price-separator {
+    float: left;
+    width: 5px;
+    height: 41px;
+    background: transparent;
+}
+
+#product-details-price-original-price {
+    text-decoration: line-through;
+}
+
+#product-details-price-sale {
+    color: #8a6399;
+}
+
+#product-details-price-sale-price {
+    font-family: 'FuturaStd-Bold';
+}
+
+/* Special Offers Section
+******************************************************************************/
+
+#product-details-special {
+    margin-bottom: 10px;
+    font-family: 'FuturaStd-Medium';
+}
+
+#product-details-special-label {
+    color: #8a6399;
+    margin: 0 10px 0 5px;
+}
+
+#product-details-special-text {
+    color: #555;
+}
+
+#product-details-special-text .purpText {
+    background: inherit;
+    color: #8a6399;
+}
+
+/* Product Options (Color and Quantity)
+******************************************************************************/
+
+.product-details-options {
+    border: 1px solid #e6e6e6;
+    border-right: none;
+    border-left: none;
+    margin-bottom: 15px;
+}
+
+.product-details-options-mdd {
+    position: absolute;
+    left: -10000px;
+}
+
+.product-details-options-section {
+    width: 239px;
+    float: left;
+    margin: 10px;
+}
+
+#product-details-options-color {
+    border-right: 1px solid #e6e6e6;
+}
+
+.product-details-options-label {
+    float: left;
+    margin-left: 10px;
+}
+
+#product-details-options-color-swatches {
+    padding-left: 30px;
+    width: 86px;
+    height: 21px;
+    float: left;
+    display: inline-block;
+}
+
+.product-details-options-color-swatch {
+    height: 20px;
+    width: 20px;
+    border: 1px solid #e6e6e6;
+    margin: 0 2px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.product-details-options-color-swatch.selected {
+    box-shadow: 0 0 2px 2px #E8E4E3;
+}
+
+#product-details-options-color-swatches:hover .selected {
+    box-shadow: none;
+}
+
+#product-details-options-color-swatches:hover .product-details-options-color-swatch:hover {
+    box-shadow: 0 0 2px 2px #E8E4E3;
+}
+
+.product-details-options-color-swatch-color {
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+}
+
+#product-details-options-qty-selector {
+    float: left;
+}
+
+#qty,
+#product-details-options-qty-select {
+    width: 60px;
+    float: left;
+    text-align: center;
+    padding-left: 12px;
+    margin: 0 0 0 20px;
+}
+
+
+
+/* Call To Action Buttons
+******************************************************************************/
+
+#product-details-btns {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.product-details-btn {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.product-details-btn,
+.product-details-btn-img{
+    width: 190px;
+    height: 50px;
+}
+
+.product-details-btn-img {
+    text-indent: -10000px;
+    border: none !important;
+    border-radius: 25px;
+
+}
+
+#product-details-btns-add-btn {
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/product-details-btns-add.png') center center no-repeat;
+}
+#product-details-btns-add-btn:hover {
+    box-shadow: 0 0 10px #8a3699;
+}
+
+#product-details-btns-checkout-btn {
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/product-details-btns-checkout.png') center center no-repeat;
+}
+#product-details-btns-checkout-btn:hover {
+    box-shadow: 0 0 10px #56b2dd;
+}
+
+/* Social Media Buttons
+*******************************************************************************/
+
+#product-details-social {
+    text-align: center;
+    height: 31px;
+    margin-bottom: 20px;
+}
+
+.product-details-social-btn {
+    margin: 0 3px;
+    height: 31px;
+    display: inline-block;
+    background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/product-details-social.png');
+    background-color: transparent;
+    background-position: 0px -3px;
+    text-indent: -10000px;
+    cursor: pointer;
+}
+
+.product-details-social-btn.fb {
+    background-position: -3px -3px;
+    width: 55px;
+}
+
+#product-details-social
+.fb-share-button {
+    display: inline-block;
+    padding: 0 8px;
+    border: none;
+    background: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px 1px #DDD;
+    position: relative;
+    top: 1px;
+    height: 23px;
+}
+
+#product-details-social
+.fb-share-button > *:first-child {
+    position: relative;
+    top: -2px;
+}
+
+.product-details-social-btn.tw {
+    background-position: -63px -3px;
+    width: 65px;
+}
+
+.product-details-social-btn.gp {
+    background-position: -133px -3px;
+    width: 45px;
+}
+
+.product-details-social-btn.pn {
+    background-position: -183px -3px;
+    width: 60px;
+}
+
+.product-details-social-btn.em {
+    background-position: -248px -3px;
+    width: 60px;
+}
+
+.product-details-social-btn.hz {
+    background-position: -312px -3px;
+    width: 60px;
+}
+
+.product-details-social-btn.ig {
+    background-position: -377px -3px;
+    width: 80px;
+}
+
+/* Product Tab Box Section
+*******************************************************************************/
+
+#product-tabs {
+    position: relative;
+    display: block;
+    height: 500px;
+    /*height: auto;*/
+    margin: 20px 10px;
+    padding-bottom: 10px;
+    padding-top: 0;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png?noCache') 0 0 repeat;
+}
+
+.product-tab {
+    position: absolute;
+    display: block;
+    top: 40px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    /*height: 12em;*/
+    height: auto;
+    /*padding: 10px 20px;*/
+    background-color: #FFF;
+    z-index: 0;
+}
+
+.product-tab:first-child {
+    z-index: 1;
+}
+
+.product-tab-title {
+    position: absolute;
+    font-size: 16px;
+    font-weight: normal;
+    width: 225px;
+    height: 35px;
+    top: -35px;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    color: #AAA;
+    /*background: #FFF url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border.png') 0 0 repeat;*/
+    background: transparent;
+    /*border-top: 1px solid #e6e6e6;*/
+}
+
+.product-tab:nth-child(2) .product-tab-title {
+    left: 230px;
+}
+
+.product-tab:nth-child(3) .product-tab-title {
+    left: 465px;
+}
+
+.product-tab:nth-child(4) .product-tab-title {
+    left: 695px;
+}
+
+.product-tab-title a {
+    display: block;
+    width: 100%;
+    line-height: 35px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    outline: 0 none;
+    text-transform: uppercase;
+}
+
+.product-tab.active {
+    z-index: 2;
+}
+
+.product-tab .product-tab-body {
+    background-color: #FFF;
+    z-index: 1;
+    height: 400px;
+    padding: 40px 80px 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.product-tab.active .product-tab-body {
+    z-index: 2;
+}
+
+.product-tab .product-tab-body p {
+    text-align: justify;
+}
+
+.product-tab:target .product-tab-title,
+.product-tab.active .product-tab-title {
+    color: #8a6399;
+    background-image: none;
+    background-color: #FFF;
+    z-index: 2;
+}
+
+.product-tab:target .product-tab-title a,
+.product-tab.active .product-tab-title a {
+    margin-right: 10px;
+}
+
+.product-tab.active .product-tab-body {
+    z-index: 2;
+}
+
+.product-tab.active .product-tab-title.active {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 20px 30px 0;
+    border-style: solid;
+    border-color: #FFF transparent;
+    background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png?noCache');
+}
+
+.product-tab,
+.product-tab .product-tab-title,
+.product-tab .product-tab-body {
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.product-tab-body ul {
+    list-style: disc;
+    margin-left: 50px;
+}
+/*********************************\
+|* Cart and Checkout Page Styles *|
+\*********************************/
+
+/* Page Heading
+*************************************************************************/
+
+.page-title {
+    position: relative;
+}
+
+.page-title h1,
+#page-heading,
+#search-heading,
+#account-heading,
+#cart-heading {
+    border-bottom: 1px solid #e6e6e6;
+    color: #895c9a;
+    font-family: "Tahoma";
+    text-transform: uppercase;
+    margin: 10px 0px 20px;
+    font-size: 22px;
+    line-height: 22px;
+    padding-bottom: 10px;
+}
+
+.page-title aside {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.page-title aside a:hover {text-decoration: underline;}
+.page-title aside a {
+    text-decoration: none;
+    color: #888;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-size: 1.1em;
+    display: inline-block;
+}
+.page-title aside.back-aside:hover {border-bottom: 1px solid #888;}
+.page-title aside.back-aside a:hover {text-decoration:none;}
+
+.page-title aside.back-aside.normal-hover:hover {border-bottom: none}
+.page-title aside.back-aside.normal-hover a:hover {text-decoration: underline;}
+
+img, button, input {
+    outline: 0 none;
+}
+
+/* Cart Box class styles (boxes for cart content are styled similarly)
+*************************************************************************/
+.account-box,
+.cart-box {
+    min-height: 40px;
+    position: relative;
+    background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png?noCache') 0 0 repeat;
+    height: auto;
+    page-break-after: always;
+    page-break-inside: avoid;
+}
+
+.account-box-border,
+.cart-box-border {
+    width: 100%;
+    height: 10px !important;
+    display: block;
+}
+
+.account-box .account-box-inner,
+.cart-box  .cart-box-inner {
+    background:#FFF;
+    display: block;
+    margin: auto 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.account-box .account-box-inner:before,
+.account-box .account-box-inner:after,
+.cart-box .cart-box-inner:before,
+.cart-box .cart-box-inner:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; width: 0; overflow: hidden; }
+
+.cart-btn-wrap {
+    text-align: center;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Left Column
+******************************************************************/
+
+    /* Cart Row
+    **********************************************************/
+
+    #cart-cartbox-table {
+        width: 100%;
+    }
+
+    #cart-cartbox.hide-items #cart-cartbox-table {
+        display: none;
+    }
+
+    #cart-cartbox.hide-items ~ #cart-btns {
+        margin-top: -60px;
+
+    }
+
+    .cart-box-sub {
+        background: #FFF;
+        text-align: right;
+    }
+
+    /*#cart-cartbox-table*/
+    .button.btn-update {
+        text-indent: -10000px;
+        width: 100px;
+        height: 30px;
+        border: none;
+        background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/cart-cartbox-table-update-btn.png') center center no-repeat;
+        /*position: absolute;*/
+        /*bottom: -60px;*/
+        /*right: 10px;*/
+        margin-top: 10px;
+    }
+
+    #cart-cartbox-table-header {
+        background-color: #ebebeb;
+    }
+
+    .cart-cartbox-table-header-label {
+        padding: 10px 0 15px;
+        font: normal 14px/14px "Tahoma";
+        color: #8a6399;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    #cart-cartbox-table-header th:nth-child(1) {
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    #cart-cartbox-table-edit {
+        padding: 0 !important;
+        width: 20px !important;
+    }
+
+    #cart-cartbox-table-edit-btn {
+        display: inline-block;
+    }
+
+    #cart-cartbox-table-edit-btn-img {
+        height: 20px;
+        width: auto;
+        margin-bottom: -5px;
+        margin-right: -5px;
+    }
+
+    .cart-cartbox-table-product {
+        border-bottom: 1px solid #e6e6e6;
+        padding: 0 20px;
+    }
+
+    .cart-cartbox-table-product td {
+        text-align:center;
+        /*border: 1px solid black;*/
+        vertical-align: middle;
+        margin-top: -20px;
+        padding: 10px 0 10px;/* 20px;*/
+    }
+
+    .cart-cartbox-table-product td:first-child {
+        padding-left: 20px;
+    }
+
+    .cart-cartbox-table-product td:last-child {
+        padding: 0 10px 0 0;
+    }
+
+    .cart-cartbox-table-product-qty-edit {
+        margin-top: -14px;
+    }
+
+    .cart-cartbox-table-product-qty-edit div {
+        color: #AAA;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .cart-cartbox-table-product .btn-remove {
+        display: inline-block;
+        text-indent: -10000px;
+        width: 12px;
+        height: 16px;
+        background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/cart-cartbox-table-remove-icon.png') center center no-repeat;
+    }
+
+    .cart-cartbox-table-product-detail {
+        padding: 10px 20px 10px 0px !important;
+    }
+
+    .cart-cartbox-table-product-detail td {
+        vertical-align: middle;
+    }
+
+    .cart-cartbox-table-product-detail-img-wrap {
+        width: 80px;
+        float: left;
+        margin: 10px;
+        border: 1px solid #e6e6e6;
+        padding: 0 10px 0 0;
+    }
+
+    .cart-cartbox-table-product-detail-img {
+        width: 100%;
+        height: auto;
+        margin: 7px 5px 2px;
+        text-decoration: none;
+    }
+
+    .cart-cartbox-table-product-detail-title,
+    .cart-cartbox-table-product-detail-title > a {
+        font: normal 14px/14px "Tahoma";
+        color: #8a6399;
+        display: block;
+        text-align: left;
+        margin: 20px 0 5px;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .cart-cartbox-table-product-detail-item,
+    .cart-cartbox-table-product-detail-model,
+    .cart-cartbox-table-product-detail-color {
+        font: normal 12px/12px "Tahoma";
+        color: #555;
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+        white-space: nowrap;
+    }
+
+    .cart-cartbox-table-product-qty {
+        text-align: center;
+        width: 60px;
+    }
+
+    .cart-cartbox-table-product-qty input {
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        border-collapse: collapse;
+        border: 2px inset transparent;
+        color: rgb(0, 0, 0);
+    }
+
+    .cart-cartbox-table-product-qty input:focus {
+        border: 2px inset rgb(238, 238, 238);
+    }
+
+    #cart-cartbox-toggle {
+        display: none;
+    }
+
+    #cart-cartbox.hide-items #cart-cartbox-toggle,
+    #cart-cartbox.collapse #cart-cartbox-toggle {
+        display: block;
+        height: 20px;
+        padding: 10px 20px;
+        color: #8a6399;
+        font: normal 16px/16px "Tahoma";
+        text-align: left;
+        background: #ededed;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    #cart-cartbox.hide-items #cart-cartbox-toggle-btn,
+    #cart-cartbox.collapse #cart-cartbox-toggle-btn {
+        float: right;
+        width: 20px;
+        height: 10px;
+        height: 100%;
+        margin: 0 5px;
+        text-indent: -10000px;
+        background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/cart-cartbox-toggle.png') center center no-repeat;
+    }
+
+    /*#cart-cartbox-table-edit-row {*/
+
+    /*}*/
+
+    /*#cart-cartbox-table-edit {*/
+        /*text-align: right;*/
+    /*}*/
+
+    /*#cart-cartbox-table-edit-btn {*/
+        /*background: #ebebeb url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/cart-cartbox-table-edit-btn.png') center center no-repeat;*/
+        /*margin: 10px;*/
+        /*text-indent: -10000px;*/
+        /*width: 80px;*/
+        /*height: 25px;*/
+        /*background-size: 80px 25px;*/
+    /*}*/
+
+    /* Checkout Row
+    **********************************************************/
+
+    #checkout-box {
+        margin: 20px 10px;
+    }
+
+    #checkout-box-progress {
+        width: 540px;
+        padding: 20px 0px 10px;
+        margin: auto 10px 10px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    #checkout-box-progress-inner {
+        width: 540px;
+        height: 74px;
+        background: #FFF url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/checkout-steps-progress.png') 0px 0px no-repeat;
+    }
+
+    #checkout-box.step1 #checkout-box-progress-inner { background-position: 0px 0px; }
+    #checkout-box.step2 #checkout-box-progress-inner { background-position: 0px -75px; }
+    #checkout-box.step3 #checkout-box-progress-inner { background-position: 0px -150px; }
+
+    .checkout-box-progress-step {
+        display: inline-block;
+        width: 177px;
+        height: 100%;
+    }
+
+    #login-form,
+    #checkout-box-form {
+        margin: 0;
+        padding: 10px 0 20px;
+    }
+
+    .checkout-box-step {
+        padding: 0 20px;
+    }
+
+    .checkout-box-step:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
+
+
+    #checkout-box.step1 .checkout-box-step,
+    #checkout-box.step2 .checkout-box-step,
+    #checkout-box.step3 .checkout-box-step,
+    #checkout-box.step4 .checkout-box-step {
+        display: none;
+    }
+
+    #checkout-box.step1 #checkout-box-step-1,
+    #checkout-box.step2 #checkout-box-step-2,
+    #checkout-box.step3 #checkout-box-step-3,
+    #checkout-box.step4 #checkout-box-step-4 {
+        display: block;
+    }
+
+    .checkout-item-100,
+    .checkout-item-100 > input {
+        width: 510px !important;
+    }
+
+    .checkout-item-50 {
+        width: 250px;
+        margin: 0 10px 0 0;
+        float: left;
+    }
+
+    .checkout-item-50 + .checkout-item-50 {
+        margin: 0 0 0 10px;
+        clear: right;
+    }
+
+    .checkout-item-50 > input,
+    .checkout-item-50 > select {
+        width: 240px !important;
+    }
+
+    /* Checkout Step 1 - Login - Account / Guest - Continue
+    *******************************************************************************/
+
+    .checkout-box-login-box {
+        width: 240px;
+        background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border-darker.png?noCache') 0 0 repeat;
+        margin: 0 5px 10px;
+        padding: 5px;
+        float: left;
+    }
+
+    .checkout-box-login-box.col-1 {
+        margin-left: 30px;
+        margin-right: 15px
+    }
+
+    .checkout-box-login-box.col-2 {
+        margin-left: 15px;
+        margin-right: 30px;
+    }
+
+    .checkout-box-login-box-inner {
+        background: #FFF;
+        padding: 20px 10px 10px;
+    }
+
+    .checkout-box-login-box-inner:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    .checkout-box-login-box-heading {
+        color: #8a6399;
+        font: normal 16px/16px "Tahoma";
+        text-transform: uppercase;
+        padding: 0 0 10px 5px;
+        border-bottom: 1px solid #e6e6e6;
+        margin-bottom: 15px;
+    }
+
+    .checkout-step1-input {
+        margin-bottom: 5px !important;
+        padding: 6px 9px !important;
+        height: 26px !important;
+        width: 240px !important;
+    }
+
+    .checkout-step1-spacer {
+        text-align: center;
+        color: #555;
+        text-transform: uppercase;
+        font-variant: small-caps;
+        margin: 5px auto;
+        font-size: 10px;
+        font-weight: bold;
+        font-family: "Tahoma";
+    }
+
+    #checkout-step1-facebook {
+        width: 260px;
+        height: 40px;
+        background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/connect-with-facebook.png') 0 0 no-repeat;
+        text-indent: -10000px;
+        border: none;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .checkout-step1-next-step {
+        margin: 20px auto 5px auto !important;
+        float: right;
+        border: none !important;
+        -webkit-border-radius: 0 !important;
+        border-radius: 0 !important;
+        background-color: transparent !important;
+        background-image: none;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-indent: -10000px;
+        height: 30px;
+        text-shadow: none !important;
+    }
+
+    #checkout-step1-next-step-guest {
+        background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/checkout-step1-next-step-guest.png');
+        width: 90px;
+    }
+
+    #checkout-step1-next-step-account {
+        background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/checkout-step1-next-step-account.png');
+        width: 90px;
+    }
+
+    /* Checkout Step 2 - Payment Information - Continue
+    *************************************************************************************************/
+
+    #checkout-box-step-2-heading {
+        font: normal 14px/14px "Tahoma";
+        color: #8a6399;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    .checkout-step2-label {
+        color: #555;
+        text-transform: uppercase;
+        font: normal 12px/12px "Tahoma";
+    }
+
+    #checkout-step2-card-expire,
+    #checkout-step2-card-cvv {
+        width: 170px;
+        float: left;
+    }
+
+    #checkout-step2-card-expire select {
+        margin: 15px 5px 0 0;
+        width: 50px;
+        float: left;
+        height: 30px;
+    }
+
+    #checkout-step2-card-cvv-input {
+        margin: 15px 0 0 0;
+        width: 100px;
+        height: 16px;
+    }
+
+    /*#checkout-step2-next-step {*/
+        /*width: 170px;*/
+        /*height: 40px;*/
+        /*background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/checkout-step2-next-step.png') center center no-repeat;*/
+        /*float: right;*/
+        /*text-indent: -10000px;*/
+        /*margin: 20px 0 0 0;*/
+    /*}*/
+
+    /* Checkout Step 3 - Shipping Information - Complete
+    *************************************************************************************/
+
+    #checkout-box-step-3-heading {
+        font: normal 14px/14px "Tahoma";
+        color: #8a6399;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    #checkout-step3-country {
+        height: 30px;
+        width: 250px !important;
+    }
+
+    /*#checkout-step3-submit-order {*/
+        /*width: 170px;*/
+        /*height: 40px;*/
+        /*background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/checkout-step3-submit-order.png') center center no-repeat;*/
+        /*float: right;*/
+        /*text-indent: -10000px;*/
+        /*margin: 0;*/
+    /*}*/
+
+
+
+/* Right Column
+*******************************************************************/
+
+    /* Subtotal Box area
+    **********************************************************/
+
+    #cart-subtotal-header {
+        color: #8a6399;
+        font-family: "Tahoma";
+        font-size: 18px;
+        line-height: 18px;
+        padding: 10px 20px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    #cart-subtotal-sub {
+        color: #555;
+        font-family: "Tahoma";
+        font-size: 16px;
+        line-height: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        text-align: center;
+        font-variant: small-caps;
+        text-transform: lowercase;
+    }
+
+    #cart-subtotal-sub p {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    .opc-wrapper-opc #cart-subtotal-sub p {
+        margin-bottom: 10px;
+    }
+
+    #cart-subtotal-table {
+        width: 100%;
+    }
+
+    #cart-subtotal-table:before,
+    #cart-subtotal-table:after {
+        content: '';
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    #cart-subtotal-table-title th {
+        color: #555;
+        font-family: "Tahoma";
+        font-weight: bold;
+        padding: 10px 20px 10px;
+        text-align: left;
+    }
+
+    .cart-subtotal-table-left {
+        text-align: left;
+        padding-left: 10px;
+        float: left;
+    }
+
+    .cart-subtotal-table-right {
+        text-align: right;
+        padding-right: 10px;
+        float: right;
+    }
+
+    .cart-subtotal-table-left,
+    .cart-subtotal-table-right {
+        border-bottom: 1px solid #e6e6e6;
+        width: 130px;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .cart-subtotal-table-row {
+        padding: 5px 20px 10px;
+        display: block;
+        /*width: 100%;*/
+    }
+
+    #cart-subtotal-table-items {
+
+    }
+
+    #cart-subtotal-table-shipping {
+
+    }
+
+    #cart-subtotal-table-shipping {
+
+    }
+
+    /* Cart / Checkout Buttons
+    **********************************************************/
+
+    #cart-continue {
+        width: 45%;
+    }
+
+    #cart-cartbox.hide-items ~ #cart-btns #cart-continue,
+    #cart-btns.hideCheckout #cart-continue {
+        width: 100%;
+    }
+
+    #cart-cartbox.hide-items ~ #cart-btns #cart-checkout,
+    #cart-btns.hideCheckout #cart-checkout {
+        display: none;
+    }
+
+    #cart-checkout {
+        width: 55%;
+    }
+
+    .cart-btn {
+        height: 40px;
+        text-indent: -10000px;
+        width: 100%;
+        display: inline-block;
+        margin: 0 auto;
+        border: none !important;
+    }
+
+    #cart-continue-btn {
+        background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/cart-continue-btn.png') center center no-repeat;
+        width: 130px;
+    }
+
+    #cart-cartbox.hide-items ~ #cart-btns #cart-continue-btn,
+    #cart-btns.hideCheckout #cart-continue-btn {
+        background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/cart-continue-btn-hide-items.png') center center no-repeat;
+        width: 310px;
+    }
+
+    #cart-checkout-btn {
+        background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/cart-checkout-btn.png') center center no-repeat;
+        width: 170px;
+    }
+
+    /* One Page Checkout Custom Styles
+    ********************************************************************/
+
+        /* General One Page Checkout Text Styles
+        *****************************************************/
+        .opc-wrapper-opc * {
+            font-family: 'Open Sans', Arial, Helvetica;
+            color: #393939;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .opc-wrapper-opc input {
+            margin-bottom: 0 !important;
+        }
+
+        .opc-wrapper-opc input[type="text"],
+        .opc-wrapper-opc input[type="password"] {
+            border: 1px solid #d8d8d8;
+            height: 22px;
+            padding: 0;
+            width: 100%;
+        }
+
+        /* Cart Toggle Link
+        *****************************************************/
+        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle,
+        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle,
+        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle span,
+        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle span,
+        .opc-wrapper-opc #cart-subtotal-header {
+            color: #8a6399 !important;
+            font: normal 16px/16px "Tahoma" !important;
+            text-decoration: none;
+        }
+
+        .opc-wrapper-opc #cart-subtotal-header {
+            font-weight: bold !important;
+        }
+
+        /* One Page Checkout Heading - Move Login Link Here
+        ****************************************************/
+        .opc-wrapper-opc .page-title {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .opc-wrapper-opc .page-title .text-login {
+            display: inline-block;
+            margin: 0;
+            padding-left: 10px;
+        }
+
+        /* Column And Field Adjustments for Proper Display
+        ****************************************************/
+        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle,
+        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle {
+            height: 40px !important;
+        }
+
+        .opc-wrapper-opc .opc-col-left h3 {
+            margin-bottom: 5px;
+        }
+
+        .opc-wrapper-opc .opc-col-left h3,
+        .opc-wrapper-opc .opc-col-center h3 {
+            margin: 10px auto 5px;
+        }
+
+        .opc-wrapper-opc .opc-col-left,
+        .opc-wrapper-opc .opc-col-center {
+            margin-right: 10px !important;
+            margin-left: 18px !important;
+            width: 45% !important;
+        }
+        
+        @media print {
+            .opc-wrapper-opc .opc-col-left {
+                float: left !important;
+                max-width: 45%;
+            }
+            .opc-wrapper-opc .opc-col-center {
+                float: right !important;
+                max-width: 45%;
+            }
+        }
+
+        .opc-wrapper-opc .opc-col-right {
+            margin-left: 10px !important;
+            float: right !important;
+        }
+
+        .opc-wrapper-opc .wide .field,
+        .opc-wrapper-opc .fields .field {
+            width: 100% !important;
+            height: 45px !important;
+        }
+
+
+        .opc-wrapper-opc .fields:after,
+        .opc-wrapper-opc .fields .field:after,
+        .opc-wrapper-opc .wide:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
+
+        .opc-wrapper-opc .wide .field label,
+        .opc-wrapper-opc .wide label,
+        .opc-wrapper-opc .fields .field label {
+            height: 22px;
+            padding-top: 5px;
+            margin-left: 5px;
+        }
+
+        .opc-wrapper-opc .wide .field label.required em,
+        .opc-wrapper-opc .wide label.required em,
+        .opc-wrapper-opc .fields .field label.required em {
+            width: 20px;
+            margin-left: 0px;
+            margin-right: 5px;
+        }
+        .opc-wrapper-opc .wide label:not(.required),
+        .opc-wrapper-opc .fields label:not(.required) {
+            margin-left: 18px;
+        }
+
+        .opc-wrapper-opc .wide .input-box input:last-child {
+            margin-bottom: 0px;
+        }
+        
+        .opc-wrapper-opc .wide > .input-box {
+            height: 22px;
+        }
+
+        .opc-wrapper-opc label {
+            color: #393939;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 1.25em;
+            margin-bottom: 2px;
+            text-align: left;
+        }
+
+        .opc-wrapper-opc .form-list ul {
+            margin-left: 0;
+        }
+
+        .opc-wrapper-opc .opc-data-table th {
+            padding-left: 0;
+            text-align: left;
+        }
+
+        /* One Page Checkout Shipping Methods Section
+        ******************************************************/
+        .sp-methods ul li input {
+            display: inline-block !important;
+            float: left;
+            margin-right: 5px;
+        }
+
+        /* One Page Checkout Payment Methods Section
+        ******************************************************/
+        .opc-wrapper-opc .payment-block {
+            margin-top: 10px !important;
+        }
+        .opc-wrapper-opc #co-payment-form {
+            padding-top: 20px;
+            margin-bottom: 0px;
+            display: block;
+        }
+
+        .opc-wrapper-opc #co-payment-form fieldset {
+            margin-bottom: 0px;
+        }
+
+        .has-credit-card-logos {
+            height: 32px;
+            overflow: hidden;
+        }
+
+            /* Credit Cart Type Auto-Select Styles
+            ******************************************************/
+            #credit-cart-type-wrap {
+                height: 0;
+                margin-left: -10000px;
+            }
+            #credit-card-type {
+                position: relative;
+                width: 52px;
+                top: -40px;
+                right: -2px;
+                z-index: 99;
+                left: auto;
+                margin-left: -50px;
+                overflow: hidden;
+                height: 38px;
+                float: right;
+            }
+            #credit-card-type li {
+                display: none;
+                width: 51px;
+                height: 32px;
+                background: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/credit-card-icons.jpg') 0 -32px no-repeat;
+                margin: 5px 6px 0 0;
+                overflow: hidden;
+                text-indent: -500em;
+                float: left;
+                -webkit-transition: all .2s;
+                -moz-transition: all .2s;
+                -ms-transition: all .2s;
+                -o-transition: all .2s;
+                transition: all .2s;
+                position: absolute;
+                z-index: 9;
+            }
+            #credit-card-type li.active {
+                display: block;
+                top: 0;
+            }
+            #credit-card-type .NN {
+                display: none;
+            }
+            #credit-card-type .NN.active {
+                display: block;
+                background: none;
+                background-color: transparent;
+            }
+            #credit-card-type .VI {background-position: 0px -32px;}
+            #credit-card-type .MC {background-position: -51px -32px;}
+            #credit-card-type .AE {background-position: -102px -32px;}
+            #credit-card-type .DI {background-position: -153px -32px;}
+            #credit-card-type .VI.active {background-position: 0px 0px;}
+            #credit-card-type .MC.active  {background-position: -51px 0px;}
+            #credit-card-type .AE.active  {background-position: -102px 0px;}
+            #credit-card-type .DI.active  {background-position: -153px 0px;}
+
+            /* Credit Card Expiration Date Styles
+            ***********************************************************/
+            #paypal_direct_expiration,
+            #paypal_direct_expiration_yr {
+                width: 49%;
+                display: inline-block;
+            }
+
+            .opc-wrapper-opc .required-entry + .validation-advice {
+                display: none;
+            }
+
+            .opc-wrapper-opc .validation-failed {
+                background-color: rgb(255, 69, 69);
+                background-color: rgba(255, 69, 69, 0.3);
+            }
+
+            /* Credit Card Verification Code Styles
+            ****************************************************/
+            #paypal_direct_cc_type_cvv_div label {
+                text-indent: 60%;
+            }
+            #paypal_direct_cc_cid {
+                width: 40%;
+                float: right;
+            }
+            .opc-wrapper-opc .payment-block .tool-tip {
+                top: 0 !important;
+                position: absolute;
+                background: #FFF;
+                padding: 20px;
+                margin: -20px;
+                border: 1px solid black;
+                border-radius: 10px;
+                box-shadow: 2px 2px 16px 4px black;
+            }
+            #payment-tool-tip-close {
+                display: block;
+                width: 100%;
+                margin-bottom: 15px;
+                text-align: right;
+            }
+
+        /* Customize Password Form
+        *************************************************/
+        #opc-account-form-password {
+            width: 100%;
+        }
+        #toggle-custom-password-fields {
+            margin-left: 1em;
+            text-decoration: underline;
+            font-size: 0.7em;
+            font-family: 'Tahoma';
+            font-weight: 200;
+            color: #888;
+            text-transform: capitalize;
+            top: -0.15em;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+        #toggle-custom-password-fields:hover {
+            color: #8a6399;
+            text-decoration: none;
+        }
+
+        /* Discount Coupon Form
+        ************************************************/
+        .opc-wrapper-opc .discount-block,
+        .opc-wrapper-opc .discount-block form {
+            margin: 0px auto !important;
+        }
+
+
+        /* One Page Checkout Review Section
+        ******************************************************/
+        .opc-wrapper-opc #checkout-review-table .a-right,
+        .opc-wrapper-opc #checkout-review-table .a-center,
+        .opc-wrapper-opc #checkout-review-table .a-left {
+            vertical-align: middle !important;
+        }
+
+        .opc-wrapper-opc .product-name {
+            text-indent: -10px;
+            padding-left: 15px !important;
+        }
+
+        .cart-cartbox-table-product-detail-img-wrap {
+            margin-bottom: 2px !important;
+            background-color: transparent;
+        }
+
+
+        .opc-wrapper-opc .item-options {
+            padding-left: 10px;
+        }
+
+        .opc-wrapper-opc .item-options dt {
+            float: left;
+            margin-right: 5px;
+            text-transform: capitalize;
+            margin-left: 10px;
+            font-size: 85%;
+        }
+        .opc-wrapper-opc .item-options dt:after {
+            content: " -";
+        }
+
+        .opc-wrapper-opc .item-options dd {
+            font-size: 85%;
+        }
+
+        .opc-wrapper-opc .opc-data-table {
+            width: 90% !important;
+            margin: 10px auto;
+        }
+
+        .opc-wrapper-opc .review-after{
+            background: #FFF;
+            margin-top: -10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            padding-top: 10px;
+        }
+
+        .opc-wrapper-opc .review-after #iframe-warning {
+            height: 0px !important;
+            text-indent: -10000px;
+        }
+
+            /* Product Color Swatch Values (For Use as Border Color around Product Image) **************
+            ********************************************************************************************/
+            .cart-cartbox-table-product-detail-img-wrap.peach {
+                background-color: #EDDFCC;
+            }
+            .cart-cartbox-table-product-detail-img-wrap.pink {
+                background-color: #DD95BC;
+            }
+            .cart-cartbox-table-product-detail-img-wrap.blue {
+                background-color: #56B2DD;
+            }
+
+        /* Fix Misc Floats and Element Labels
+        ******************************************************/
+
+        .opc-wrapper-opc form span.no-display,
+        .opc-wrapper-opc .form-list .control input,
+        .opc-wrapper-opc form dt input,
+        .opc-wrapper-opc .opc-newsletter .input-box {
+            float: left;
+            margin: 2px 5px 0 15px;
+            width: auto !important;
+        }
+
+        /* Fix PayPal Logo Positioning
+        ********************************************************/
+        .opc-wrapper-opc form dt [for="p_method_paypal_express"] img {
+            vertical-align: text-top;
+            margin-top: -0.5em;
+        }
+
+        /* One Page Checkout Buttons
+        *********************************************************/
+
+        .opc-wrapper-opc .button {
+            display: block;
+            border: none;
+            margin: 0 auto;
+            float: left;
+            background: none;
+            text-indent: -10000px;
+            width: 80px;
+            height: 40px !important;
+        }
+
+        .opc-wrapper-opc .discount-block .input-box input {
+            margin-bottom: 10px !important;
+        }
+
+        .opc-wrapper-opc .discount-block .buttons-set {
+            margin-top: 10px !important;
+        }
+
+        .opc-wrapper-opc .button.apply-coupon {
+            background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/checkout-apply-coupon-btn.png') center center no-repeat;
+            width: 130px;
+            height: 30px !important;
+            float: right !important;
+        }
+
+        .opc-wrapper-opc .button.remove-coupon {
+            text-indent: 0;
+            float: right !important;
+            font-size: 14px;
+            font-weight: 400;
+            margin-right: 20px !important;
+        }
+
+        .opc-wrapper-opc .button.btn-checkout {
+            background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/cart-checkout-btn-wide.png') center center no-repeat;
+            width: 330px;
+            margin: 10px auto 20px;
+            float: none;
+            background-size: 100% 40px;
+        }
+
+/* Account Pages Styles ***************************************************************************************
+**************************************************************************************************************/
+
+    .account-box.no-border {
+        padding: 10px 0 !important;
+        max-width: 90%;
+    }
+
+	@media only screen and (max-width: 767px) {
+		.account-box.no-border {
+        	clear: both;
+        	margin: 10px 5% !important;
+		}
+	}
+
+    .account-box.no-border .account-box-inner {
+        margin: 0 10px !important;
+        height: 100%;
+    }
+    .account-box.twelve .account-box.col-1,
+    .account-box.twelve .account-box.col-2 {
+        width: 320px;
+        float: left;
+    }
+
+    .account-box.fourteen .account-box.col-1,
+    .account-box.fourteen .account-box.col-2 {
+        width: 380px;
+        float: left;
+        margin-bottom: 20px;
+    }
+
+    .account-box.col-1 {
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+
+    .account-box.col-2 {
+        margin-left: 5px;
+        margin-right: 15px;
+    }
+
+    .account-box-inner .col2-set {
+        position: relative;
+        padding: 10px 0 0;
+    }
+    .account-box .buttons-set,
+    .my-account .buttons-set {
+        clear: left;
+        float: right;
+        margin: 10px 20px;
+    }
+
+    .my-account .buttons-set.fleft-pad > * {
+        float: left;
+        margin-left: 10px !important;
+    }
+
+    /* Fixes for Contact Page
+    *******************************************/
+    .contacts-index-index .buttons-set {
+        clear: none;
+        margin-right: 85px;
+        margin-top: 5px;
+    }
+    .contacts-index-index #comment {
+        height: 230px;
+        margin-bottom: 0 !important;
+    }
+    #form-list-contact-us,
+    #content-contact-us p:last-child {
+        margin-bottom: 0 !important;
+    }
+
+.account-box .back-link,
+    .account-box .account-sub-button,
+    .my-account .back-link,
+    .my-account .account-sub-button {
+        margin: 0;
+        text-indent: -10000px;
+        width: 70px;
+        height: 30px;
+        border: none;
+        display: inline-block;
+    }
+
+    .account-box .back-link,
+    .my-account .back-link {
+        background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/account-buttons-back-link.png') center center no-repeat;
+    }
+
+    .account-box .save-button,
+    .my-account .save-button {
+        background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/account-buttons-save-button.png') center center no-repeat;
+    }
+
+    .account-box .submit-button,
+    .my-account .submit-button {
+        background: transparent url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/account-buttons-submit-button.png') center center no-repeat;
+    }
+
+    /* Login / Register Page Styles
+    **************************************************************/
+
+    .account-login #account-box {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .account-login #account-box .account-box-inner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .account-login #account-box .account-box-inner > p {
+        text-align: justify;
+    }
+
+   #login-heading {
+       margin: 0px;
+       color: #895c9a;
+       font-family: "Tahoma";
+       font-variant: small-caps;
+       font-size: 32px;
+       line-height: 32px;
+   }
+
+   /* Account Dashboard Styles
+   *****************************************************************/
+
+    .box-head {
+        position: relative;
+        border-bottom: 1px solid #e6e6e6;
+        margin: 10px;
+        padding-left: 20px;
+    }
+
+    .box-head > * {
+        color: #444;
+        font-family: "Tahoma";
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .box-head > * > a {
+        text-decoration: none;
+    }
+
+    .box-head > * > a:hover {
+        text-decoration: underline;
+    }
+
+    .box-head > .box-head-timestamp,
+    .box-head > * + .required {
+        position: relative;
+        top: 3px;
+        right: 20px;
+        font: normal 14px/22px "Tahoma";
+        color: #888;
+        letter-spacing: 0.0125em;
+        font-variant: small-caps;
+        text-transform: lowercase;
+        float: right;
+        margin-top: -35px;
+    }
+
+    .box-blurb {
+        padding: 10px;
+    }
+
+    /*.my-account .dashboard*/
+    .account-box .box-title {
+        border-bottom: 1px solid #e6e6e6;
+        margin: 10px;
+        padding-left: 20px;
+    }
+
+    /*.my-account .dashboard */
+    .account-box .box-title > *:first-child {
+        color: #444;
+        font-family: "Tahoma";
+        font-size: 18px;
+        line-height: 18px;
+        display: inline-block;
+    }
+
+    /*.my-account .dashboard*/
+    .account-box .box-title > *:first-child + a,
+    .account-box .box-title > *:first-child + a + a {
+        float: right;
+        color: #888;
+        font-size: 16px;
+        line-height: 18px;
+        font-family: 'Tahoma-Light';
+        /*text-transform: lowercase;*/
+        font-variant: small-caps;
+        vertical-align: middle;
+        text-decoration: none;
+        margin-right: 10px;
+        letter-spacing: 0.0125em;
+        padding-top: 5px;
+    }
+
+    /*.my-account .dashboard*/
+    .account-box .box-title > *:first-child + a:hover,
+    .account-box .box-title > *:first-child + a + a:hover {
+        text-decoration: underline;
+    }
+
+    /*.my-account .dashboard*/
+    .account-box .account-box-button {
+        float: right;
+        margin: 10px 20px;
+        background: transparent none center center no-repeat;
+        border: none;
+        text-indent: -10000px;
+        width: 90px;
+        height: 30px;
+        clear: both;
+    }
+
+        /* Account Dashboard Recent Orders Section
+        *********************************************************/
+
+        #my-orders-table-wrap {
+            margin: 20px 35px 0px;
+        }
+
+        #my-orders-table {
+            width: 600px;
+            margin: 5px;
+            background: #FFF;
+        }
+
+		@media only screen and (max-width: 767px) {
+            .account-box .box-head + .box-blurb,
+            .cart-box .box-head + .box-blurb,
+            .checkout-box .box-head + .box-blurb,
+			#my-orders-table {
+				width: 90% !important;
+				margin: 10px 5% !important;
+			}
+			#my-orders-table tr td,
+			#my-orders-table tr th {
+			    display: none;
+			}
+			table th.show-mobile,
+			table td.show-mobile {
+			    display: table-cell !important;
+			    width: 50% !important;
+			}
+		}
+
+        #my-orders-table tr th {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        #my-orders-table tr th,
+        #my-orders-table tr td {
+            padding: 10px;
+            vertical-align: middle;
+            text-align: center;
+            border-bottom: 1px solid #e6e6e6;
+            border-right: 1px solid #e6e6e6;
+        }
+
+        #my-orders-table tr th:last-child,
+        #my-orders-table tr td:last-child {
+            border-right: none;
+        }
+
+        #my-orders-table td a {
+            text-decoration: none;
+        }
+
+        #my-orders-table td a:hover {
+            text-decoration: underline;
+        }
+
+        #recent-orders-view-all {
+            background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/account-dashboard-recent-orders-view-all.png');
+            width: 90px;
+            margin-right: 40px;
+        }
+
+        /* Dashboard Account Information Section
+        *******************************************************************/
+        .my-account .dashboard .account-box.box-info
+            .account-box.column,
+        .my-account .dashboard .account-box.box-info
+            .account-box.column .account-box-inner {
+            min-height: 130px;
+        }
+
+        #account-info-edit-password {
+            width: 150px;
+            background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/account-dashboard-button-edit-password.png');
+        }
+
+        /* Dashboard Account Addresses Section
+        *********************************************************************/
+        .my-account .dashboard .account-box.box-address
+        .account-box.column,
+        .my-account .dashboard .account-box.box-address
+        .account-box.column .account-box-inner {
+            min-height: 235px;
+        }
+
+        #account-info-edit-addresses {
+            width: 150px;
+            background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/account-dashboard-button-edit-addresses.png');
+        }
+
+    /* Account Order History Page
+    ***************************************************************************************/
+    .orders-history #my-orders-table {
+        width: 870px;
+        margin: 0;
+    }
+
+    .orders-history .pager {
+        margin-right: 10px;
+    }
+
+    .orders-history .pager:before,
+    .orders-history .pager:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; width: 0; overflow: hidden; }
+
+    .orders-history .pager * {
+        display: inline-block;
+        margin: 0;
+    }
+
+    .orders-history .pager > *{
+        float: right;
+        margin-right: 10px;
+    }
+
+    .orders-history .pager select {
+        width: auto;
+    }
+
+    /* Account View Order Page
+    ********************************************************/
+    .my-account .order-details #my-orders-table,
+    .sales-guest-view .order-details #my-orders-table {
+        width: 100%;
+    }
+
+    .my-account .order-details #my-orders-table .product-name,
+    .sales-guest-view .order-details #my-orders-table .product-name {
+        font-size: 20px;
+        color: #8a6399;
+        text-align: left;
+    }
+
+    .my-account .order-details #my-orders-table .item-options,
+    .my-account .order-details #my-orders-table .item-options dt,
+    .my-account .order-details #my-orders-table .item-options dd,
+    .sales-guest-view .order-details #my-orders-table .item-options,
+    .sales-guest-view .order-details #my-orders-table .item-options dt,
+    .sales-guest-view .order-details #my-orders-table .item-options dd {
+        float: left;
+    }
+
+    .my-account .order-details #my-orders-table .item-options dt:after,
+    .sales-guest-view .order-details #my-orders-table .item-options dt:after {
+        content: " - ";
+    }
+
+    .my-account .order-details #my-orders-table .item-options dd,
+    .sales-guest-view .order-details #my-orders-table .item-options dd {
+        clear: right;
+        padding-left: 10px;
+    }
+
+
+
+    /* Account Edit Info Page
+    *****************************************************/
+    .my-account .edit-info .account-box.col-2 {
+        float: right;
+    }
+
+    .my-account .edit-info .account-box.col-2 {
+        margin-right: 25px;
+        margin-left: 15px;
+    }
+
+    .my-account .edit-info .account-box.col-2 +
+    .account-box.col-1 {
+        margin-right: 15px;
+        margin-left: 25px;
+    }
+
+    .my-account .edit-info .account-box.col-2.displaynone +
+    .account-box.col-1 {
+        width: 770px !important;
+        margin: 0 5px 0 35px;
+        min-height: 350px;
+    }
+
+    .my-account .edit-info .account-box.col-2,
+    .my-account .edit-info .account-box.col-2 +
+    .account-box.col-1 {
+        width: 360px !important;
+        min-height: 350px;
+    }
+
+    .my-account .edit-info .account-box.col-2 .account-box-inner,
+    .my-account .edit-info .account-box.col-2 +
+    .account-box.col-1 .account-box-inner {
+        min-height: 350px;
+    }
+
+    /* Account Address Book Page Styles
+    ***************************************************************************/
+    #account-addresses-add-address {
+        width: 140px;
+        background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/account-buttons-add-address-button.png');
+    }
+
+    /* Account Edit Address Page Styles
+    ****************************************************************************/
+    .account-box.box-edit-address
+    .account-box.column,
+    .account-box.box-edit-address
+    .account-box.column .account-box-inner {
+        min-height: 520px;
+    }
+
+    /* Account Registration Page Styles
+    ****************************************************************************/
+    .account-box.box-create-account
+    .account-box.column,
+    .account-box.box-create-account
+    .account-box.column .account-box-inner {
+        min-height: 320px;
+    }
+
+    /* Order Success Confirmation page
+    ***************************************************************************/
+    #order-success-button {
+        width: 130px;
+        height: 40px;
+        background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/cart-continue-btn.png');
+    }
+
+/* Search Pages ************************************************************************************
+***************************************************************************************************/
+
+    /* Advanced Search Form Page
+    ************************************************************/
+    .input-range input {
+        float: left;
+        width: 75px;
+        margin-right: 10px;
+    }
+    .input-range input + * {
+        float: left;
+        margin-right: 10px;
+        width: 30px;
+        text-align: center;
+        height: 18px;
+        padding: 6px 0;
+    }
+
+    label .label-wrap {
+        border-bottom: 1px solid #e6e6e6;
+        padding-bottom: 3px;
+        margin-bottom: 10px;
+        max-width: 220px;
+    }
+
+    .account-sub-button.search-button {
+        width: 100px;
+        background-image: url('https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/glob-search-submit.png');
+    }
