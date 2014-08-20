@@ -139,7 +139,7 @@ class Mage_Page_Block_Html_Topmenu extends Mage_Core_Block_Template
             //$child->setPositionClass($itemPositionClassPrefix . $counter);
 
             $html .= '<li' . ($liInternals = $this->_getRenderedMenuItemAttributes($child)) . '>';
-            $html .= '<a href="' . $child->getUrl() . '" ' . !$outermostClassCode . '><span>'
+            $html .= '<a href="' . $child->getUrl() . '/" ' . !$outermostClassCode . '><span>'
                 . $this->escapeHtml($child->getName()) . '</span></a>';
 
             if ($child->hasChildren()) {

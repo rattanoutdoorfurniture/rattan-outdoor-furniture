@@ -55,13 +55,13 @@
 
 <?php $_links = $this->getLinks(); ?>
 <?php if(count($_links)>0): ?>
-<nav id="nav-top" class="nav-top">
-    <ul id="nav-top-list" class="nav-top-list">
+<nav class="nav-top">
+    <ul class="nav-top-list">
     <?php foreach($_links as $_link): ?>
         <?php if ($_link instanceof Mage_Core_Block_Abstract):?>
             <?php echo $_link->toHtml() ?>
         <?php else: ?>
-            <li class="nav-top-item<?php if($this->getName()): ?><?php echo $this->getName() ?><?php endif;?><?php if($_link->getIsFirst()): ?> first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>" <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?><?php if(basename($_link->getUrl())!=='product'):?> rel="nofollow"<?php endif; ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
+            <li class="nav-top-item<?php if($this->getName()): ?><?php echo $this->getName() ?><?php endif;?><?php if($_link->getIsFirst()): ?> first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>" <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?><?php if(!in_array(basename($_link->getUrl()),array("product","category"))):?> rel="nofollow"<?php endif; ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
         <?php endif;?>
     <?php endforeach; ?>
     </ul>

@@ -149,4 +149,8 @@ class Mage_Sales_Helper_Guest extends Mage_Core_Helper_Data
         );
     }
 
+    public function getFormLink() {
+        return Mage::getUrl("sales/guest/form");
+    }
+
 }

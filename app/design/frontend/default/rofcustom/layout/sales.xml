@@ -522,8 +522,9 @@ Guest
 
      <default>
         <reference name="footer_links">
-            <block type="sales/guest_links" name="return_link"/>
-            <action method="addLinkBlock"><blockName>return_link</blockName></action>
+            <!--<block type="sales/guest_links" name="return_link"/>-->
+            <!--<action method="addLinkBlock"><blockName>return_link</blockName></action>-->
+            <action method="addLink" translate="label title" module="sales"><label>Orders &amp; Returns</label><url helper="sales/guest/getFormLink"></url><title>Orders and Returns</title></action>
         </reference>
     </default>
 </layout>

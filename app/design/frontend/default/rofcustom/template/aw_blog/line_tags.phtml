@@ -4,7 +4,7 @@
     $tags = explode(',', $this->getPost()->getTags());
 
     foreach ($tags as $tag): ?>
-        <li><a href="<?php echo Mage::getUrl(Mage::helper('blog')->getRoute() . '/tag/' . urlencode($tag)) ?>"><?php echo $tag ?></a></li>
+        <li><a href="<?php echo Mage::getUrl(Mage::helper('blog')->getRoute() . '/tag/' . urlencode(strtolower($tag))) ?>" rel="nofollow"><?php echo $tag ?></a></li>
     <?php endforeach; ?>	
 </ul>
 
