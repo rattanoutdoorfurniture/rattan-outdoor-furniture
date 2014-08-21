@@ -17,8 +17,7 @@
 #product-img-main-img {
     width: 380px;
     height: auto;
-    /*margin: 10px 10px 5px 10px;*/
-    margin: 0 10px;
+    margin: 0 10px -5px;
 }
 
 #product-img-views {
@@ -35,9 +34,13 @@
     height: 87px;
 }
 
-.product-img-view.first,
-.product-img-view.last {
-    margin: 0 7px;
+.product-img-view:first-child {
+    margin-left: 1px;
+    margin-right: 7px;
+}
+.product-img-view:last-child {
+    margin-right: 1px;
+    margin-left: 7px;
 }
 
 .product-img-view {
