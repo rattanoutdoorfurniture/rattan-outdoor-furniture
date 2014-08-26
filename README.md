@@ -28,6 +28,7 @@ Furniture web site project.
 - Abstract Product_View_Options_Type_Select logic from the Magento core. This should extend the core, which I could not get to work today.
 - Additions to the Mage_Core_Sitemap Product model. (this should be defined elsewhere).
 
+- Contacts Core XML change URL Key. (Should be a module).
 - Sales Guest Helper method added. Footer_Links Guest Form link. Create Better Way to set REL.
 - Add to Cart and Checkout: move code from core to local add-on.
 - Change Page titles to use the Prefix defined in the Magento admin.
@@ -75,6 +76,9 @@ Furniture web site project.
 
 
 ##Change Log:##
+
+###2014-08-25###
+- About/FAQ/Contact/Footer Update; After Larry and Mike went thru the site over the weekend, we have started making some lower level SEO improvements. I have changed the contact page to be on the URL /contact-us/, removed the double heading, and created an accordion to hide the answers until you click on a question. I made the questions H2, and changed the box head to h1. I have similarly removed the double heading on the About Us page and the Contact Us page. These both have a box head with an h1. The About Us has H2s for each of the bullet points. I have also edited the footer a bit. I have added an H6 around the logo area, and also on the "follow us" label. I am going to replicate these changes on dev so I can work on fixing the import to get the images in.
 
 ###2014-08-20###
 - SEO Improvements; Blog and SiteMap; After running SiteLiner, we have made some improvements to the duplicate content, but some other issues were made visible, mainly the fact that the canonical link on the SEO SiteMap was wrong, and the footer link to the SiteMap had a nofollow added to it. This caused some serious issues with google. I have addressed these issues, and also, the blog was linking too much, so I nofollow'd the tags, and set up an appropriate canonical link for the blog and posts. Beyond that, there is an issue with trailing slashes. Google indexes pages with and without a trailing slash (asdf.com/new vs asdf.com/new/) as different pages, so I've made an attempt to change as many of the links on the site as possible to include the trailing slashes.
