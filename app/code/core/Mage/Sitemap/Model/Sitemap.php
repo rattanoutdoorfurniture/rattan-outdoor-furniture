@@ -155,7 +155,7 @@ class Mage_Sitemap_Model_Sitemap extends Mage_Core_Model_Abstract
         foreach ($collection as $item) {
             $xml = sprintf(
                 '<url><loc>%s</loc><lastmod>%s</lastmod><changefreq>%s</changefreq><priority>%.1f</priority></url>',
-                htmlspecialchars($baseUrl . $item->getUrl()),
+                htmlspecialchars($baseUrl . $item->getUrl()."/"),
                 $date,
                 $changefreq,
                 $priority
@@ -173,7 +173,7 @@ class Mage_Sitemap_Model_Sitemap extends Mage_Core_Model_Abstract
         foreach ($collection as $item) {
             $xml = sprintf(
                 '<url><loc>%s</loc><lastmod>%s</lastmod><changefreq>%s</changefreq><priority>%.1f</priority></url>',
-                htmlspecialchars($baseUrl . $item->getUrl()),
+                htmlspecialchars($baseUrl . $item->getUrl()."/"),
                 $date,
                 $changefreq,
                 $priority
@@ -191,7 +191,7 @@ class Mage_Sitemap_Model_Sitemap extends Mage_Core_Model_Abstract
         foreach ($collection as $item) {
             $xml = sprintf(
                 '<url><loc>%s</loc><lastmod>%s</lastmod><changefreq>%s</changefreq><priority>%.1f</priority></url>',
-                htmlspecialchars($baseUrl . $item->getUrl()),
+                htmlspecialchars($baseUrl . $item->getUrl()."/"),
                 $date,
                 $changefreq,
                 $priority
