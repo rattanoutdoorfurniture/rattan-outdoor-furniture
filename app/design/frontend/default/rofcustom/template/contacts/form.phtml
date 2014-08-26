@@ -24,23 +24,11 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div class="page-title sixteen columns">
-    <h1 id="page-heading"><?php echo $this->__('Contact Us') ?></h1>
-    <?php if($this->getMessagesBlock()): ?>
-        <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
-        <script type="text/javascript">
-            setTimeout(function() {
-                jQuery("ul.messages").slideUp("slow");
-            }, 5000);
-        </script>
-    <?php endif; ?>
-</div>
-
 <div class="account-box box-contact fourteen columns offset-by-one by-margin add-bottom">
     <div class="account-box-border"></div>
     <div class="account-box-inner">
         <div class="box-head">
-            <h2><?php echo $this->__('Contact Information') ?></h2>
+            <h1><?php echo $this->__('Contact Us') ?></h1>
             <p class="required"><?php echo $this->__('* Required Fields') ?></p>
         </div>
         <form action="<?php echo $this->getFormAction(); ?>" id="contactForm" method="post" class="remove-bottom self-clear">

@@ -24,7 +24,8 @@ jQuery(document).ready(function() {
         jQuery(".product-tab-body", "#product-tabs-faq").load("/faq .account-box-inner",function(){$faqLoad.resolve();});
         jQuery(".product-tab-body", "#product-tabs-special").load("/shipping-and-returns .account-box-inner",function(){$sarLoad.resolve();});
         jQuery.when($faqLoad,$sarLoad).done(function() {
-            console.log("Done Loading Product Tab Content");
+            // console.log("Done Loading Product Tab Content");
+            jQuery.getScript("/skin/frontend/default/rofcustom/faqs/faqs.js");
         });
     }
     jQuery(".product-tab-title a").on("click", function(ev){

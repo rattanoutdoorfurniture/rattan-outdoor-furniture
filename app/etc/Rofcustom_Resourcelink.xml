@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Rofcustom_Resourcelink>
+			<active>true</active>
+			<codePool>local</codePool>
+			<depends>
+				<Mage_Cms />
+			</depends>
+		</Rofcustom_Resourcelink>
+	</modules>
+</config>

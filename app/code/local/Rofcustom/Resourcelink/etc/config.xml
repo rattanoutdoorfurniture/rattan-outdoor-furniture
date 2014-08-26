@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Rofcustom_Resourcelink>
+			<version>0.0.1</version>
+		</Rofcustom_Resourcelink>
+	</modules>
+	<global>
+		<helpers>
+			<resourcelink>
+				<class>Rofcustom_Resourcelink_Helper</class>
+			</resourcelink>
+		</helpers>
+		<blocks>
+			<resourcelink>
+				<class>Rofcustom_Resourcelink_Block</class>
+			</resourcelink>
+		</blocks>
+	</global>
+</config>

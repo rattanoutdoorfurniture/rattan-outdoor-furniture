@@ -195,6 +195,7 @@ Product view
             <action method="addJs"><script>varien/configurable.js</script></action>
             <!--<action method="addItem"><type>skin_js</type><name>js/default-options.js</name><params/><if/></action>-->
             <action method="addItem"><type>skin_js</type><name>js/products.js</name><params/><if/></action>
+            <action method="addItem"><type>skin_css</type><name>faqs/faqs.css</name><params/><if/></action>
 
             <action method="addItem"><type>js_css</type><name>calendar/calendar-win2k-1.css</name><params/><!--<if/><condition>can_load_calendar_js</condition>--></action>
             <action method="addItem"><type>js</type><name>calendar/calendar.js</name><!--<params/><if/><condition>can_load_calendar_js</condition>--></action>
