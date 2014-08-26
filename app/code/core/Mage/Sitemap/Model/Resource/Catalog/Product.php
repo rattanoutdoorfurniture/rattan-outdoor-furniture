@@ -106,7 +106,7 @@ class Mage_Sitemap_Model_Resource_Catalog_Product extends Mage_Sitemap_Model_Res
         if(!empty($row['request_path'])) {
             $productParentUrlAttr = Mage::getSingleton('catalog/product')->getResource()->getAttribute("parent_url_key");
             $parentUrl = $productParentUrlAttr->getFrontend()->getValue(Mage::getSingleton('catalog/product')->load($entity->getId()));
-            return "products/" . $parentUrl . "/" . $row['request_path'];
+            return "products/" . $parentUrl . "/" . $row['request_path'] . "/";
         }
         return !empty($row['request_path']) ? $row['request_path'] : 'catalog/product/view/id/' . $entity->getId();
     }

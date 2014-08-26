@@ -84,6 +84,9 @@ class Mage_Sitemap_Model_Resource_Cms_Page extends Mage_Core_Model_Resource_Db_A
     {
         $object = new Varien_Object();
         $object->setId($data[$this->getIdFieldName()]);
+        if(strlen($data['url'])>1&&substr($data['url'],-1)!=="/") {
+            $data['url'] = $data['url']."/";
+        }
         $object->setUrl($data['url']);
 
         return $object;
