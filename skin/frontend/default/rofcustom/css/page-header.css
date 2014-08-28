@@ -18,7 +18,7 @@
     z-index: 999;
 }
 
-#page-header + .std + .account-box,
+#page-header + .std > .account-box,
 #page-header + .account-box {
     margin-top: 10px;
 }
@@ -55,7 +55,7 @@ nav a {
     margin: -2px;
     padding: 5px 7px;
     background: #FFF;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 #page-header
@@ -118,7 +118,7 @@ nav a {
     color: #895c9a;
     font-weight: 400;
     margin-top: 0;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
     text-decoration: none;
 }
 
@@ -236,7 +236,7 @@ nav a {
     padding: 0 0 0 30px;
     border: none;
     background: white url('../images/glob-search-bg.png') 7px center no-repeat;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
     font-weight: bold;
     color: #888;
     position:relative;

@@ -16,7 +16,7 @@
 #cart-heading {
     border-bottom: 1px solid #e6e6e6;
     color: #895c9a;
-    font-family: "Tahoma";
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
     text-transform: uppercase;
     margin: 10px 0px 20px;
     font-size: 22px;
@@ -437,7 +437,7 @@ img, button, input {
         margin: 5px auto;
         font-size: 10px;
         font-weight: bold;
-        font-family: "Tahoma";
+        font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
     }
 
     #checkout-step1-facebook {
@@ -557,7 +557,7 @@ img, button, input {
 
     #cart-subtotal-header {
         color: #8a6399;
-        font-family: "Tahoma";
+        font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
         font-size: 18px;
         line-height: 18px;
         padding: 10px 20px;
@@ -566,7 +566,7 @@ img, button, input {
 
     #cart-subtotal-sub {
         color: #555;
-        font-family: "Tahoma";
+        font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
         font-size: 16px;
         line-height: 16px;
         padding-bottom: 10px;
@@ -598,7 +598,7 @@ img, button, input {
 
     #cart-subtotal-table-title th {
         color: #555;
-        font-family: "Tahoma";
+        font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
         font-weight: bold;
         padding: 10px 20px 10px;
         text-align: left;
@@ -975,7 +975,7 @@ img, button, input {
             margin-left: 1em;
             text-decoration: underline;
             font-size: 0.7em;
-            font-family: 'Tahoma';
+            font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
             font-weight: 200;
             color: #888;
             text-transform: capitalize;
@@ -1250,7 +1250,7 @@ img, button, input {
    #login-heading {
        margin: 0px;
        color: #895c9a;
-       font-family: "Tahoma";
+       font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
        font-variant: small-caps;
        font-size: 32px;
        line-height: 32px;
@@ -1268,7 +1268,7 @@ img, button, input {
 
     .box-head > * {
         color: #444;
-        font-family: "Tahoma";
+        font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
         font-size: 22px;
         line-height: 22px;
     }
@@ -1309,7 +1309,7 @@ img, button, input {
     /*.my-account .dashboard */
     .account-box .box-title > *:first-child {
         color: #444;
-        font-family: "Tahoma";
+        font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
         font-size: 18px;
         line-height: 18px;
         display: inline-block;

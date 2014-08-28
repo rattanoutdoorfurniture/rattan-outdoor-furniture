@@ -82,7 +82,7 @@
     text-decoration: none;
     font-size: 11px;
     color: #888;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 .footer-links-wrap ul li a:hover,
@@ -107,7 +107,7 @@
 #footer-newsletter-input {
     float: left;
     color: #888;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
     margin-bottom: 0;
     width: 110px;
     height: 1.2em;
@@ -157,7 +157,7 @@
     top: -2px;
     position: relative;
     color: #8a6399;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
     margin-right: 5px;
     display: inline-block;
 }
@@ -290,7 +290,7 @@
     font-size: 16px;
     color: #895c9a;
     font-weight: 400;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 #footer-logo-phone a:hover {
@@ -309,7 +309,7 @@
     font-size: 11px;
     padding-top: 7px;
     color: #888;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
 
 }
 

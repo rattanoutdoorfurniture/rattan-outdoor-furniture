@@ -1,38 +1,49 @@
-<?php if(count($this->getCities())>0): ?>
+<?php if($this->isState() && count($this->getCities())>0): ?>
     <?php
     $state = $this->getState();
     $stateName = ucwords(str_replace("-"," ",$state));
     $stateTitle = strlen($this->getTitle()) ? $this->getTitle() : $stateName;
+    $citiesList   = $this->getAllCities();
+//    $cityName     = null;
+//    if(!$this->isState()) {
+//        /**
+//         * @todo Set city name... currently, the scope is wrong, so cannot be set. probably better to do in the model anyway.
+//         */
+//        $citiesList = array_filter($citiesList, function($city) {
+//            $pageIdentifier = Mage::getSingleton("cms/page")->getIdentifier();
+//            if($city['identifier'] === $pageIdentifier) $cityName =  ucwords(str_replace("-"," ",$city['identifier']));
+//            return ($city['identifier'] !== $pageIdentifier);
+//        });
+//    }
     ?>
 <div class="cms-widget-state-list account-box add-bottom">
     <div class="account-box-border"></div>
     <div class="account-box-inner">
         <div class="box-head">
-            <h3 class="cms-widget-state-list-title">
-            <?php if(!$this->isState()) { ?>
+            <h2 class="cms-widget-state-list-title">
+                <?php echo $this->getTitle(); //$this->__("Rattan Outdoor Furniture Local Areas in " . $stateName); ?>
+            <?php /* if(!$this->isState()) { ?>
+                <?php echo $this->__("Rattan Outdoor Furniture near by CITYNAME, "); ?>
                 <a href="<?php echo $this->getUrl("locations/".$this->getState()); ?>"><?php echo ucwords(str_replace("-"," ",$this->getTitle())); ?></a>
-            <?php } else { echo ucwords(str_replace("-"," ",$this->getTitle())); } ?>
-            <?php echo "<small> - " . (!$this->isState() ? "More " : "") . "Cities</small>"; ?>
-            </h3>
+            <?php } else { echo $this->__("Rattan Outdoor Furniture in ") . ucwords(str_replace("-"," ",$this->getTitle())); } */ ?>
+            </h2>
+            <?php // echo "<small> - " . (!$this->isState() ? "More " : "") . "Cities</small>"; ?>
         </div>
         <div class="box-content">
             <?php
-            $citiesList   = $this->getCities();
-            if(!$this->isState()) {
-                $citiesList = array_filter($citiesList, function($city) {
-                    $pageIdentifier = Mage::getSingleton("cms/page")->getIdentifier();
-                    return ($city['identifier'] !== $pageIdentifier);
-                });
-            }
             $lists        = 0;
             $i            = 0;
-            foreach($citiesList as $stateLink): ?>
+            foreach($citiesList as $city): ?>
                 <?php if(($i%5)==0): ?>
                 <ul class="cms-widget-state-list-link-list">
                 <?php endif; ?>
                     <?php //$stateLink = $citiesList[$i]; ?>
                     <li class="cms-widget-state-list-link">
-                        <a href="<?php echo $this->getUrl($stateLink['identifier']) ?>"><?php echo $this->escapeHtml(stristr($stateLink['title'],",",true)) ?></a>
+                        <?php if($city['is_active']): ?>
+                        <a href="<?php echo $this->getUrl($city['identifier']) ?>"><?php echo $this->escapeHtml(stristr($city['title'],",",true)) ?></a>
+                        <?php else: ?>
+                        <span><?php echo $this->escapeHtml(stristr($city['title'],",",true)); ?></span>
+                        <?php endif; ?>
                     </li>
                 <?php if((($i%5)==4) || ($i==(count($citiesList)-1))): ?>
                 </ul><?php $lists++; ?>
