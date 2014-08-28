@@ -123,5 +123,5 @@
     text-align: center;
     text-decoration: none;
     color: #888;
-    font-family: "Tahoma";
+    font: normal 14px/22px "Tahoma","Helvetica Neue", Helvetica, Arial, sans-serif;
 }

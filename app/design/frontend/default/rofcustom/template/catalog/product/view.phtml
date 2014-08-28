@@ -222,7 +222,7 @@
         $detailedInfoFirst  = array_shift($detialedInfoCopy);
         foreach ($detailedInfo as $alias => $html):?>
         <section id="product-tabs-<?php echo $alias;?>" class="product-tab<?php echo ($html==$detailedInfoFirst) ? $this->__(" active") : ''; ?>">
-            <h2 class="product-tab-title"><a href="#product-tabs-<?php echo $alias;?>"><?php echo strlen($title = $this->getChildData($alias, 'title')) ? $this->escapeHtml($title) : $this->__("Overview"); ?></a></h2>
+            <label for="product-tabs-<?php echo $alias;?>" class="product-tab-title"><a href="#product-tabs-<?php echo $alias;?>"><?php echo strlen($title = $this->getChildData($alias, 'title')) ? $this->escapeHtml($title) : $this->__("Overview"); ?></a></label>
             <div class="product-tab-body">
                 <?php
                 /**
@@ -246,19 +246,19 @@
         </section>
     <?php endforeach;?>
     <section id="product-tabs-faq" class="product-tab">
-        <h2 class="product-tab-title"><a href="#product-tabs-faq">FAQ & Help</a></h2>
+        <label for="product-tabs-faq" class="product-tab-title"><a href="#product-tabs-faq">FAQ</a></label>
         <div class="product-tab-body">
             <p class="ease-loading">Loading...</p>
         </div>
     </section>
     <section id="product-tabs-special" class="product-tab">
-        <h2 class="product-tab-title"><a href="#product-tabs-special">Shipping & Returns</a></h2>
+        <label for="product-tabs-special" class="product-tab-title"><a href="#product-tabs-special">Shipping & Returns</a></label>
         <div class="product-tab-body">
             <p class="ease-loading">Loading...</p>
         </div>
     </section>
     <section id="product-tabs-reviews" class="product-tab">
-        <h2 class="product-tab-title"><a href="#product-tabs-reviews">Reviews</a></h2>
+        <label for="product-tabs-reviews" class="product-tab-title"><a href="#product-tabs-reviews">Reviews</a></label>
         <div class="product-tab-body">
             <?php //echo $this->getChildHtml('reviews'); ?>
             <p></p>
