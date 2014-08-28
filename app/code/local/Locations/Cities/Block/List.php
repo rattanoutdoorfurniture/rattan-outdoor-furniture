@@ -15,6 +15,43 @@ class Locations_Cities_Block_List
         parent::_construct();
     }
 
+    protected $_titleValue = array(
+        "alabama"	            => "Local Areas in",
+        "alaska"	            => "Servicing Areas in",
+        "arizona"	            => "Regional Cities in",
+        "arkansas"	            => "Local Service Zones in",
+        "california"	        => "Service Destinations in",
+        "colorado"	            => "Cities in",
+        "connecticut"	        => "Areas Serviced in",
+        "delaware"	            => "Service Districts in",
+        "district-of-columbia"	=> "Serving the",
+        "florida"	            => "Regional Cities in",
+        "georgia"	            => "Local Cities in",
+        "hawaii"	            => "Servicing Areas of",
+        "idaho"	                => "Regions Served in",
+        "illinois"	            => "Local Areas of",
+        "indiana"	            => "Destination Districts of",
+        "iowa"	                => "Regions Serviced in",
+        "kansas"	            => "Areas in",
+        "kentucky"	            => "Surrounding Cities in",
+        "louisiana"	            => "Destination Zones in",
+        "maine"	                => "Local Areas in",
+        "maryland"	            => "Areas Served in",
+        "massachusetts"	        => "Cities Served in",
+        "michigan"	            => "Local Cities Served in",
+        "minnesota"	            => "Local Districts of",
+        "mississippi"	        => "Servicing Local Cities in"
+    );
+
+    protected function _getTitleValue() {
+        $state = $this->getState();
+        if(array_key_exists($state,$this->_titleValue)) {
+            return "Rattan Outdoor Furniture " . $this->_titleValue[$state] . " " . ucwords(str_replace("-", " ", $state));
+        } else {
+            return "Rattan Outdoor Furniture Local Areas in $state";
+        }
+    }
+
 
     /**
      * @var bool $_showViewMoreLink Flag to determine whether to show the 'view more' link or not.
@@ -94,10 +131,10 @@ class Locations_Cities_Block_List
     public function getTitle() {
         if (!$this->_title) {
             $this->_title = '';
-            if ($this->getData('title')) {
+            if (strlen($this->getData('title'))) {
                 $this->_title = $this->getData('title');
             } else {
-                $this->_title = $this->getState();
+                $this->_title = $this->_getTitleValue();
             }
         }
 
