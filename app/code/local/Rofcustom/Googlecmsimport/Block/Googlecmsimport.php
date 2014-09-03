@@ -20,7 +20,7 @@ class Rofcustom_Googlecmsimport_Block_GooglecmsImport extends Mage_Core_Block_Te
         $methodName = "get".ucfirst($name);
         if(method_exists($this,$methodName)) return $this->$methodName();
         if(method_exists($this->getModel(), $name)) return $this->getModel()->$name;
-        if(method_exists($this->getModel(), $methodName)) return $this->getModel()->$methodName;
+        if(method_exists($this->getModel(), $methodName)) return $this->getModel()->$methodName();
         throw new Exception("Neither Google Import Block nor Model supports the $methodName() method.");
     }
 

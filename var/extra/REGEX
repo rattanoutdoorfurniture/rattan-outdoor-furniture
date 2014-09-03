@@ -24,3 +24,7 @@ page line:
 
 over paranthesized
 ^(([A-Z][a-z]+\s?)+)([\n\r]+)((.+[\r\n]*){1,3})([\n\r]*)(\(\d+\))([\n\r]*)(((.+)\:\s\d+\.\d+\%[\n\r]*)+)([\n\r]*\_+)$
+
+Line Break SITEMAP XML
+(<url>)(<loc>.*</loc>)(<lastmod>.*</lastmod>)(<changefreq>.*</changefreq>)(<priority>.*</priority>)(</url>)
+\n\t$1\n\t\t$2\n\t\t$3\n\t\t$4\n\t\t$5\n\t$6

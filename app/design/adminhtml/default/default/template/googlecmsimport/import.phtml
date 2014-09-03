@@ -83,37 +83,41 @@
          * Recursively download all files in the 'locations' folder as .txt
          * and save them to the 'locations-txt' directory in /var/MagentoImport
          * /
-        $saveLocation = Mage::getBaseDir("var")."/MagentoImport/locations-txt";
-        if (!file_exists($saveLocation)) {
-            mkdir($saveLocation, 0755, true);
-        }
-        $locationsId  = "0B9_hVhBJdknvaHdtMUk2QWZJdk0";
-        $locations    = $this->getModel()->listFiles($locationsId)->getItems();
-        $titles = array();
-        foreach($locations as $state) {
-            // This $item should be a state folder
-            $stateName = $state->title;
-            // Create this State Directory if it doesn't exist
-            $stateDir  = str_replace(' ',"-",str_replace("'","",$stateName));
-            $statePath = $saveLocation.DIRECTORY_SEPARATOR.$stateDir;
-            if (!file_exists($statePath)) {
-                mkdir($statePath, 0755, true);
+        $download = Mage::app()->getRequest()->getQuery("download");
+        if($download == "locations") {
+            $saveLocation = Mage::getBaseDir("var")."/MagentoImport/locations-txt";
+            if (!file_exists($saveLocation)) {
+                mkdir($saveLocation, 0755, true);
             }
-            // City Files for this state:
-            $cities = $this->listFiles($state->id)->getItems();
-            // echo $item->id ." = ". $item->title." (".count($subItems).")<br/>";
-            foreach($cities as $city) {
-                $cityName = $city->title;
-                $cityFile = str_replace(' ',"-",str_replace("'","",$cityName)) . ".txt";
-                $cityPath = $statePath.DIRECTORY_SEPARATOR.$cityFile;
-                $txtUrl   = $city->exportLinks['text/plain'];
-                $cityTxt  = $this->getModel()->downloadFile($txtUrl);
-                file_put_contents($cityPath,$cityTxt);
+            $locationsId  = "0B9_hVhBJdknvaHdtMUk2QWZJdk0";
+            $locations    = $this->getModel()->listFiles($locationsId)->getItems();
+            $titles = array();
+            foreach($locations as $state) {
+                // This $item should be a state folder
+                $stateName = $state->title;
+                // Create this State Directory if it doesn't exist
+                $stateDir  = str_replace(' ',"-",str_replace("'","",$stateName));
+                $statePath = $saveLocation.DIRECTORY_SEPARATOR.$stateDir;
+                if (!file_exists($statePath)) {
+                    mkdir($statePath, 0755, true);
+                }
+                // City Files for this state:
+                $cities = $this->listFiles($state->id)->getItems();
+                // echo $item->id ." = ". $item->title." (".count($subItems).")<br/>";
+                foreach($cities as $city) {
+                    $cityName = $city->title;
+                    $cityFile = str_replace(' ',"-",str_replace("'","",$cityName)) . ".txt";
+                    $cityPath = $statePath.DIRECTORY_SEPARATOR.$cityFile;
+                    $txtUrl   = $city->exportLinks['text/plain'];
+                    $cityTxt  = $this->getModel()->downloadFile($txtUrl);
+                    file_put_contents($cityPath,$cityTxt);
+                }
             }
         }
         / ***************************************************************************************/
 
         /**
+         * - Update - This is the old way of doing things, now I'm downloading as txt and parsing by line
          * Parse Word Documents (WORKING, currently docx)
          */
         /*
@@ -131,25 +135,37 @@
         ?>
     </div>
 <?php endif; ?>
-    <div>
+    <div class="link-block">
+        <ul>
+            <li><a href="<?php if($this->authed):?>?parse=false&process=false&download=locations<?php else: echo $this->authUrl; endif;?>">Download Locations</a></li>
+            <li><a href="?parse=descriptions&process=true">Parse & Process Descriptions</a></li>
+            <li><a href="?parse=locations&process=true">Parse & Process Locations</a></li>
+        </ul>
+    </div>
+    <div style="white-space: pre;">
     <?php
     global $io;
-    $parseDescriptions = true;
-    if($parseDescriptions) {
+    $parse = Mage::app()->getRequest()->getQuery("parse");
+    if($parse == "descriptions") {
         $io = array(
             "input"     => Mage::getBaseDir("var")."/MagentoImport/Products/Descriptions/RattanOutdoorFurniture*.txt",
             "output"    => Mage::getBaseDir('var')."/MagentoImport/Products/Descriptions/Descriptions.csv",
-            "q"         => "'"
+            "q"         => "'",
+            "usePhrase" => true
         );
-    } else {
+    } else
+    if($parse == "locations") {
         $io = array(
             "input"     => Mage::getBaseDir("var")."/MagentoImport/locations-txt/*/*.txt",
             "output"    => Mage::getBaseDir("var")."/MagentoImport/locations-txt/locations.sql",
             "parent"    => Mage::getBaseDir("var")."/MagentoImport/locations-txt/",
-            "q"         => '"'
+            "q"         => '"',
+            "usePhrase" => true
         );
+    } else {
+        $parse = null;
     }
-    $doProcess = true;
+    $doProcess = is_null($parse) ? false : boolval(Mage::app()->getRequest()->getQuery("process"));
     if($doProcess):
     /**
      * Parse .txt from .doc to .csv
@@ -178,9 +194,11 @@
         return filter_var($lval, FILTER_SANITIZE_SPECIAL_CHARS, array(FILTER_FLAG_ENCODE_LOW,FILTER_FLAG_ENCODE_HIGH));
     }
     function multi_unique($array) {
+        $new = array();
         foreach ($array as $k=>$na)
             $new[$k] = serialize($na);
         $uniq = array_unique($new);
+        $new1 = array();
         foreach($uniq as $k=>$ser)
             $new1[$k] = unserialize($ser);
         return ($new1);
@@ -249,6 +267,36 @@
         global $io;
         return preg_replace('/([A-z0-9_-]+\@[A-z0-9_-]+\.)([A-z0-9\_\-\.]{1,}[A-z])/', '<a href='.$io['q'].'mailto:$1$2'.$io['q'].'>$1$2</a>', $prop);
     }
+    function isEmail($str) {
+        return (preg_match('/([A-z0-9_-]+\@[A-z0-9_-]+\.)([A-z0-9\_\-\.]{1,}[A-z])/',$str)===1);
+    }
+    function isWordcountLine($line) {
+        return preg_match('/^\(\d+\)$/',trim($line));
+    }
+    function hasDescription($lines) {
+        $lines = array_filter($lines,"isWordcountLine");
+        return count($lines) > 1;
+    }
+    function linkify($line) {
+        global $io;
+        $matches = array();
+        // $regex = '/(https?:\/\/)?(www\.)?[-a-zA-Z0-9:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9:%_\+.~#?&//=]*))';
+        $regex = '/((https?:\/\/)?([-\w]+\.[-\w\.]+)+\w(:\d+)?(\/([-\w\/,_\.]*(\?\S+)?)?)*)/';
+        $pregStat = preg_match_all($regex,$line,$matches, PREG_SET_ORDER);
+        if($pregStat===false) return $line;
+        $newLine = $line;
+        if(count($matches)>0) {
+            $lastLink = "";
+            foreach($matches as $pLink) {
+                $link = rtrim($pLink[0], ".");
+                if($link=="rattanoutdoorfurniture.com"): continue; endif;
+                if($link==$lastLink): continue; endif;
+                $lastLink = $link;
+                $newLine = str_replace($link,'<a href='.$io['q'].''.((preg_match('/^https?:\/\//i',$link)!==1)?'http://':'').$link.''.$io['q'].' title='.$io['q'].''.$link.''.$io['q'].' rel='.$io['q'].'external'.$io['q'].' target='.$io['q'].'_default'.$io['q'].'>'.$link.'</a>',$newLine);
+            }
+        }
+        return $newLine;
+    }
     foreach($descs as $key=>$desc) {
         $descArr[$key] = array(
             'full'  => $desc,
@@ -260,27 +308,31 @@
         $lines = array_filter($descArr[$key]['lines']);
         array_walk($lines,"cleanCsvValue",$unaccent);
         $title = filter_var(array_shift($lines),FILTER_SANITIZE_SPECIAL_CHARS,FILTER_FLAG_STRIP_HIGH);
-        $props[$key]              = array();
-        $props[$key]["title"]     = $title;
-        $props[$key]["content"]   = array();
-        $props[$key]["keywords"]  = array();
-        $contentComplete = false;
+        $props[$key]                = array();
+        $props[$key]["title"]       = $title;
+        $props[$key]["content"]     = array();
+        $props[$key]["description"] = array();
+        $props[$key]["keywords"]    = array();
+        $contentComplete            = false;
+        $descriptionComplete        = !hasDescription($lines);
         foreach($lines as $prop) {
-            if($contentComplete) {
+            if($contentComplete && $descriptionComplete) {
                 $keyword = preg_filter('/^([^\:]+)\:.*$/', '$1',$prop);
                 if(!is_null($keyword)) {
                     $props[$key]['keywords'][] = $keyword;
                 }
             } else {
+                $subKey = !$contentComplete ? "content" : "description";
                 if(preg_match('/^\(\d+\)$/',trim($prop))) {
-                    $contentComplete = true;
+                    ${$subKey.'Complete'} = true;
                     continue;
                 }
                 if(!preg_match('/\'*^\s*\'*$/',trim($prop))) {
                     $prop = htmlentities(trim($prop),ENT_QUOTES);
+                    $prop = linkify($prop);
                     $prop = linkPhone($prop);
                     $prop = linkEmail($prop);
-                    $props[$key]['content'][] = "<p>".$prop."</p>";
+                    $props[$key][$subKey][] = $contentComplete ? strip_tags($prop) : "<p>".$prop."</p>";
                 }
             }
         }
@@ -295,70 +347,76 @@
     $outputData = '';
 
     if($parseDescriptions) {
-        $csv = 'title,content,keywords'.PHP_EOL;
+        $csv = 'title,content,keywords,description'.PHP_EOL;
         foreach($props as $page) {
             if(!(strlen($page['title'])>0&&count($page['content'])>0&&count($page['keywords'])>0)) continue;
             $csv .= "\"".$page['title']."\",";
             $csv .= "\"";
             $csv .= implode("",$page['content']);
             $csv .= "\",";
-            $csv .= "\"" . implode(", ",explode(" ",implode(" ",$page['keywords']))) . "\"";
+            $csv .= "\"" . implode(", ",explode(" ",implode(" ",$page['keywords']))) . "\",";
+            if(isset($page['description'])) {
+                $csv .= "\"" . implode(" ", $page['description']) . "\"";
+            } else {
+                $csv .= "\"\"";
+            }
             $csv .= PHP_EOL;
         }
         $outputData = $csv;
     } else {
         // Parsing CMS Pages, Write INSERT statements to sql file.
         $statePageId = array(
-            "Alabama"	=>	"50",
-            "Alaska"	=>	"51",
-            "Arizona"	=>	"32",
-            "Arkansas"	=>	"26",
-            "California"	=>	"92",
-            "Colorado"	=>	"52",
-            "Connecticut"	=>	"53",
-            "Delaware"	=>	"54",
-            "Florida"	=>	"55",
-            "Georgia"	=>	"56",
-            "Hawaii"	=>	"57",
-            "Idaho"	=>	"38",
-            "Illinois"	=>	"58",
-            "Indiana"	=>	"44",
-            "Iowa"	=>	"59",
-            "Kansas"	=>	"60",
-            "Kentucky"	=>	"61",
-            "Louisiana"	=>	"62",
-            "Maine"	=>	"63",
-            "Maryland"	=>	"64",
-            "Massachusetts"	=>	"65",
-            "Michigan"	=>	"66",
-            "Minnesota"	=>	"67",
-            "Mississippi"	=>	"68",
-            "Missouri"	=>	"69",
-            "Montana"	=>	"70",
-            "Nebraska"	=>	"71",
-            "Nevada"	=>	"72",
-            "New Hampshire"	=>	"73",
-            "New Jersey"	=>	"74",
-            "New Mexico"	=>	"75",
-            "New York"	=>	"76",
-            "North Carolina"	=>	"77",
-            "North Dakota"	=>	"78",
-            "Ohio"	=>	"79",
-            "Oklahoma"	=>	"80",
-            "Oregon"	=>	"81",
-            "Pennsylvania"	=>	"23",
-            "Rhode Island"	=>	"82",
-            "South Carolina"	=>	"83",
-            "South Dakota"	=>	"84",
-            "Tennessee"	=>	"85",
-            "Texas"	=>	"86",
-            "Utah"	=>	"87",
-            "Vermont"	=>	"88",
-            "Virginia"	=>	"89",
-            "Washington"	=>	"90",
-            "West Virginia"	=>	"91",
-            "Wisconsin"	=>	"24",
-            "Wyoming"	=>	"25"
+            "Alabama"	        	=> "50",
+            "Alaska"	        	=> "51",
+            "Arizona"	        	=> "32",
+            "Arkansas"	        	=> "26",
+            "California"	    	=> "92",
+            "Colorado"	        	=> "52",
+            "Connecticut"	    	=> "53",
+            "Delaware"	        	=> "54",
+            "District of Columbia"  => "93",
+            "Florida"	        	=> "55",
+            "Georgia"	        	=> "56",
+            "Hawaii"	        	=> "57",
+            "Idaho"	            	=> "38",
+            "Illinois"	        	=> "58",
+            "Indiana"	        	=> "44",
+            "Iowa"	            	=> "59",
+            "Kansas"	        	=> "60",
+            "Kentucky"	        	=> "61",
+            "Louisiana"	        	=> "62",
+            "Maine"	            	=> "63",
+            "Maryland"	        	=> "64",
+            "Massachusetts"	    	=> "65",
+            "Michigan"	        	=> "66",
+            "Minnesota"	        	=> "67",
+            "Mississippi"	    	=> "68",
+            "Missouri"	        	=> "69",
+            "Montana"	        	=> "70",
+            "Nebraska"	        	=> "71",
+            "Nevada"	        	=> "72",
+            "New Hampshire"	    	=> "73",
+            "New Jersey"	    	=> "74",
+            "New Mexico"	    	=> "75",
+            "New York"	        	=> "76",
+            "North Carolina"		=> "77",
+            "North Dakota"	    	=> "78",
+            "Ohio"	            	=> "79",
+            "Oklahoma"	        	=> "80",
+            "Oregon"	        	=> "81",
+            "Pennsylvania"	    	=> "23",
+            "Rhode Island"	    	=> "82",
+            "South Carolina"    	=> "83",
+            "South Dakota"	    	=> "84",
+            "Tennessee"	        	=> "85",
+            "Texas"	            	=> "86",
+            "Utah"	            	=> "87",
+            "Vermont"	        	=> "88",
+            "Virginia"	        	=> "89",
+            "Washington"	    	=> "90",
+            "West Virginia"	    	=> "91",
+            "Wisconsin"	        	=> "24",
+            "Wyoming"	        	=> "25"
         );
         $cityCount = array();
         foreach($statePageId as $state=>$stateId) {
@@ -366,65 +424,100 @@
             $stateFiles = glob($io['parent'].DIRECTORY_SEPARATOR.$dashState.DIRECTORY_SEPARATOR."*.txt");
             $cityCount[$state] = count($stateFiles);
         }
+        // Determine the "Featured" category Id, for now, use static and exchange when importing.
+        $featuredCategoryId = 2290;
         $cityId  = 500;
         $queries = array();
         // Fix Blank Page Issue
         $props   = array_slice($props,1);
         foreach($props as $page) {
-            $titleRegex = '/([^,]+),\s([A-z\'\s]+)\s[Oo]utdoor\s[Pp]atio\s[Ff]urniture.*/';
-            $city       = preg_filter($titleRegex,"$1",$page['title']);
-            $lcCity     = strtolower($city);
-            $dashCity   = str_replace(" ", "-", $lcCity);
-            $state      = preg_filter($titleRegex,"$2",$page['title']);
-            /* Check For Bad State Name ********************
-            if(!$state || stristr($state,"outdoor patio furniture")!==false) {
-                die(dumper::dump(
-                    array(
-                        "title" => $page['title'],
-                        "city"  => $city,
-                        "state" => $state,
-                        "regex" => $titleRegex
-                    )
-                ));
-            } ***********************************************/
-            $lcState    = strtolower($state);
-            $dashState  = str_replace(" ", "-", $lcState);
-            $cont       = '<div class="account-box fourteen columns offset-by-one by-margin add-bottom">'
-                        . '<div class="account-box-border">&nbsp;</div>'
-                        . '<div class="account-box-inner">'
-                        . '<div class="box-head">'
-                        . '<h2>'.$city.', '.$state.' Outdoor Patio Furniture</h2>'
-                        . '</div>'
-                        . '<div class="box-content box-blurb">'
-                        . implode("",$page["content"])
-                        . '</div>'
-                        . '</div>'
-                        . '<div class="account-box-border">&nbsp;</div>'
-                        . '</div>';
-            reset($page["content"]);
-            $metaDesc   = current($page["content"]);
-            $metaDesc   = strip_tags($metaDesc);
-            $metaDesc   = truncate($metaDesc,250,"...");
+            $isState        = array_key_exists(trim(str_replace("Outdoor Patio Furniture",'',$page['title'])), $statePageId);
+            $pageId         = null;
+            $pageTitle      = null;
+            $pageIdentifier = null;
+            $treePath       = null;
+            $pageLevel      = null;
+            if($isState) {
+                $stateName      = trim(str_replace("Outdoor Patio Furniture",'',$page['title']));
+                $pageTitle      = $stateName;
+                $dashState      = str_replace(' ',"-",str_replace("'","",strtolower($stateName)));
+                $pageIdentifier = "locations/$dashState";
+                $parentId       = 22;
+                $pageId         = $statePageId[$stateName];
+                $treePath       = "2/$parentId/$pageId";
+                $pageLevel      = 3;
+                $pageChildren   = $cityCount[$stateName];
+            } else {
+                $titleRegex     = '/([^,]+),\s([A-z\'\s]+)\s[Oo]utdoor\s[Pp]atio\s[Ff]urniture.*/';
+                $city           = preg_filter($titleRegex,"$1",$page['title']);
+                $state          = preg_filter($titleRegex,"$2",$page['title']);
+                $pageTitle      = "$city, $state";
+                /* Check For Bad State Name ********************
+                if(!$state || stristr($state,"outdoor patio furniture")!==false) {
+                    die(dumper::dump(
+                        array(
+                            "title" => $page['title'],
+                            "city"  => $city,
+                            "state" => $state,
+                            "regex" => $titleRegex
+                        )
+                    ));
+                } ***********************************************/
 
-            $keywords   = str_replace("/"," ",$page["keywords"]);
-            $keywords   = htmlentities(implode(", ",array_unique(explode(" ",$city." ".$state." ".implode(" ", $keywords)))),ENT_QUOTES);
-            $parentId   = $statePageId[$state];
-            $citiesNum  = $cityCount[$state];
+                $dashCity       = str_replace(' ',"-",str_replace("'","",strtolower($city)));
+                $dashState      = str_replace(' ',"-",str_replace("'","",strtolower($state)));
+                $pageIdentifier = "locations/$dashState/$dashCity";
+
+                $parentId       = $statePageId[$state];
+                // Set PageId to current CityID, Increment after setting (for next city)
+                $pageId         = $cityId++;
+                $treePath       = "2/22/$parentId/$pageId";
+                $pageLevel      = 4;
+                $pageChildren   = 0;
+            }
+            if(isset($page['description']) && strlen(implode(" ",$page['description']))>1) {
+                $metaDesc   = implode(" ", $page['description']);
+            } else {
+                reset($page["content"]);
+                $metaDesc   = current($page["content"]);
+                $metaDesc   = strip_tags($metaDesc);
+                $metaDesc   = truncate($metaDesc,250,"...");
+            }
+            if($io["usePhrase"]) {
+                $keywords   = str_replace(",","",$pageTitle);
+            } else {
+                $keywords   = str_replace("/"," ",$page["keywords"]);
+                $keywords   = htmlentities(implode(", ",array_unique(explode(" ",str_replace(",",'',$pageTitle)." ".implode(" ", $keywords)))),ENT_QUOTES);
+            }
+            $pageContent    = '<div class="account-box fourteen columns offset-by-one by-margin add-bottom">'
+                            . '<div class="account-box-border">&nbsp;</div>'
+                            . '<div class="account-box-inner">'
+                            . '<div class="box-head">'
+                            . '<h1>'.$pageTitle.' Rattan Outdoor Furniture</h1>'
+                            . '</div>'
+                            . '<div class="box-content box-blurb">'
+                            . implode("",$page["content"])
+                            . '</div>'
+                            . '</div>'
+                            . '<div class="account-box-border">&nbsp;</div>'
+                            . '</div>'
+                            . '<div>{{block type="catalog/product_list" category_id="'.$featuredCategoryId.'" template="catalog/product/featured_list.phtml"}}</div>';
+
             $query = <<<QUERY
 REPLACE INTO cms_page_tree (
 `page_id`, `title`, `root_template`, `meta_keywords`, `meta_description`, `identifier`, `content_heading`, `content`, `creation_time`, `update_time`, `is_active`, `sort_order`, `layout_update_xml`, `custom_theme`, `custom_root_template`, `custom_layout_update_xml`, `custom_theme_from`, `custom_theme_to`, `store_id`, `parent_id`, `path`, `position`, `level`, `children_count`, `include_in_menu`
 ) VALUES (
-{$cityId},
-'{$city}, {$state}',
+{$pageId},
+'{$pageTitle}',
 'one_column',
 '{$keywords}',
 '{$metaDesc}',
-'locations/{$dashState}/{$dashCity}',
-'{$city}, {$state} Outdoor Patio Furniture',
-'{$cont}',
+'{$pageIdentifier}',
+'',
+'{$pageContent}',
 NOW(),
 NOW(),
-1,
+0,
 0,
 NULL,
 NULL,
@@ -434,15 +527,14 @@ NULL,
 NULL,
 1,
 {$parentId},
-'2/22/{$parentId}/{$cityId}',
-{$citiesNum},
-0,
-0,
-1
+'{$treePath}',
+{$pageId},
+{$pageLevel},
+{$pageChildren},
+0
 );
 QUERY;
             $queries[]= $query;
-            $cityId++;
         }
         $outputData = implode(PHP_EOL, $queries);
     }
