@@ -1,0 +1,670 @@
+
+Willoughby, OH 44094
+Aberdeen, SD 57401
+Aberdeen, WA 98520
+Abilene, TX 79601
+Akron, OH 44312
+Albany, GA 31705
+Albany, NY 12203
+Albion, CA 95410
+Albuquerque, NM 87105
+Allentown, PA 18102
+Amarillo, TX 79109
+Fernandina Beach, FL 32034
+Ames, IA 50010
+Anacortes, WA 98221
+Anaheim, CA 92805
+Anchorage, AK 99515
+Ann Arbor, MI 48103
+Annapolis, MD 21401
+Anniston, AL 36201
+Appleton, WI 54911
+Aransas Pass, TX 78336
+Birmingham, AL 35242
+Arlington, TX 76010
+Arlington, VA 22204
+Arroyo Grande, CA 93420
+Asheville, NC 28806
+Ashtabula, OH 44004
+Athens, GA 30606
+Atlanta, GA 30349
+Atlantic Beach, FL 32233
+Atlantic Beach, NC 28512
+Atlantic City, NJ 08401
+Auburn, AL 36830
+Auburn, ME 04210
+Augusta, GA 30906
+Aurora, CO 80013
+Aurora, IL 60505
+Austin, TX 78745
+Avila Beach, CA 93424
+Avon, NC 27915
+Bakersfield, CA 93307
+Southport, NC 28461
+Baltimore, MD 21215
+Bandon, OR 97411
+Bangor, ME 04401
+Barre, VT 05641
+Baton Rouge, LA 70810
+Battle Creek, MI 49015
+Bay City, OR 97107
+Mount Vernon, WA 98273
+Beachwood, OH 44122
+Beaufort, SC 29906
+Belfast, ME 04915
+Bellevue, NE 68123
+Bellevue, WA 98006
+Bellingham, WA 98225
+Bemidji, MN 56601
+Berkeley, CA 94704
+Bethany Beach, DE 19930
+Big Pine Key, FL 33043
+Billings, MT 59102
+Biloxi, MS 39532
+Binghamton, NY 13905
+Blaine, WA 98230
+Bismarck, ND 58501
+Bloomington, IL 61701
+Bloomington, IN 47401
+Minneapolis, MN 55437
+Boca Raton, FL 33428
+Boise, ID 83704
+Bonita Springs, FL 34135
+Boone, NC 28607
+Boston, MA 02128
+Boulder, CO 80302
+Bowie, MD 20721
+Bowling Green, KY 42101
+Boynton Beach, FL 33436
+Bozeman, MT 59715
+Brainerd, MN 56401
+Bridgeport, CT 06606
+Brooklyn, NY 11235
+Broken Bow, OK 74728
+Brookings, OR 97415
+Brookings, SD 57006
+Brownsville, TX 78521
+Brunswick, ME 04011
+Buffalo, NY 14221
+Burlington, VT 05401
+Butte, MT 59701
+Cambria, CA 93428
+Cambridge, MA 02139
+Cannon Beach, OR 97110
+Canton, OH 44708
+Barnstable, MA 02630
+Cape Coral, FL 33914
+Carlsbad, CA 92009
+Carolina Beach, NC 28428
+Carrollton, TX 75007
+Cayucos, CA 93430
+Cedar Rapids, IA 52402
+Urbana, IL 61801
+Chandler, AZ 85225
+Oxnard, CA 93035
+Charleston, IL 61920
+Charleston, SC 29412
+Charleston, WV 25302
+Charlotte, NC 28269
+Charlottesville, VA 22903
+Chattanooga, TN 37421
+Chesapeake, VA 23322
+Chicago, IL 60629
+Chico, CA 95926
+Chillicothe, OH 45601
+Chula Vista, CA 91911
+Cincinnati, OH 45238
+Clarksville, TN 37042
+Clearwater, FL 33755
+Cleveland, OH 44102
+Cocoa Beach, FL 32931
+Colorado Springs, CO 80918
+Columbia, MO 65203
+Columbia, SC 29223
+Columbus, GA 31907
+Columbus, OH 43207
+Concord, NH 03301
+Cookeville, TN 38501
+Coos Bay, OR 97420
+Corolla, NC 27927
+Corona Del Mar, CA 92625
+Corpus Christi, TX 78415
+Costa Mesa, CA 92627
+Covington, KY 41011
+Cranston, RI 02920
+Crescent City, CA 95531
+Dallas, TX 75211
+Dana Point, CA 92629
+Danville, VA 24540
+Davenport, IA 52806
+Dayton, OH 45424
+Daytona Beach, FL 32114
+Decatur, AL 35601
+Decatur, IL 62521
+Del Rio, TX 78840
+Delray Beach, FL 33445
+Dennis, MA 02638
+Denver, CO 80219
+Depoe Bay, OR 97341
+Des Moines, IA 50315
+Seattle, WA 98198
+Detroit, MI 48228
+Dothan, AL 36301
+Dover, DE 19901
+Dover, NH 03820
+Dubuque, IA 52001
+Marathon, FL 33050
+Duluth, MN 55811
+Durham, NC 27713
+Eau Claire, WI 54703
+Edisto Island, SC 29438
+El Paso, TX 79912
+El Segundo, CA 90245
+Elizabeth, NJ 07202
+Elko, NV 89801
+Emerald Isle, NC 28594
+Encinitas, CA 92024
+Erie, PA 16509
+Essex Junction, VT 05452
+Eugene, OR 97402
+Eureka, CA 95503
+Evansville, IN 47711
+Everett, WA 98208
+Fairbanks, AK 99709
+Fargo, ND 58103
+Farmington, NM 87401
+Fayetteville, AR 72701
+Fayetteville, NC 28314
+Wilmington, NC 28411
+Flagler Beach, FL 32136
+Flagstaff, AZ 86001
+Flint, MI 48507
+Florence, AL 35630
+Florence, OR 97439
+Florence, SC 29501
+Folly Beach, SC 29439
+Fontana, CA 92335
+Fort Bragg, CA 95437
+Fort Collins, CO 80525
+Fort Dodge, IA 50501
+Fort Hood, TX 76544
+Fort Lauderdale, FL 33313
+Fort Myers, FL 33908
+Fort Pierce, FL 34982
+Fort Smith, AR 72903
+Fort Walton Beach, FL 32547
+Fort Wayne, IN 46835
+Fort Worth, TX 76137
+Frederick, MD 21702
+Fredericksburg, VA 22407
+Freeport, TX 77541
+Fremont, CA 94536
+Fresno, CA 93722
+Gadsden, AL 35901
+Gainesville, FL 32608
+Gaithersburg, MD 20878
+Galveston, TX 77550
+Garden Grove, CA 92840
+Garibaldi, OR 97118
+Garland, TX 75040
+Gary, IN 46404
+Glendale, AZ 85308
+Glendale, CA 91205
+Gleneden Beach, OR 97388
+Glens Falls, NY 12801
+Gold Beach, OR 97444
+Goleta, CA 93117
+Grand Forks, ND 58201
+Grand Island, NE 68801
+Grand Prairie, TX 75052
+Grand Rapids, MI 49508
+Great Falls, MT 59404
+Green Bay, WI 54313
+Greensboro, NC 27406
+Greenville, SC 29615
+Gresham, OR 97080
+Grover Beach, CA 93433
+Gualala, CA 95445
+Gulfport, MS 39503
+Hamilton, OH 45011
+Hampden, ME 04444
+Hampton, VA 23666
+Hanford, CA 93230
+Harrisburg, PA 17112
+Harrisonburg, VA 22801
+Hartford, CT 06106
+Harwich Port, MA 02646
+Hatteras, NC 27943
+Hattiesburg, MS 39401
+Helena, MT 59601
+Henderson, NV 89052
+Hermosa Beach, CA 90254
+Hialeah, FL 33012
+Hickory, NC 28601
+High Point, NC 27265
+Hillsboro, OR 97124
+Hilo, HI 96720
+Hilton Head Island, SC 29926
+Hinesville, GA 31313
+Hoboken, NJ 07030
+Supply, NC 28462
+Holland, MI 49423
+Hollywood, FL 33024
+Homestead, FL 33033
+Honolulu, HI 96817
+Houma, LA 70364
+Houston, TX 77084
+Humarock, MA 02047
+Blue Lake, CA 95525
+Huntington Beach, CA 92647
+Huntington, WV 25701
+Huntsville, AL 35810
+Hyannis, MA 02601
+Idaho City, ID 83631
+Imperial Beach, CA 91932
+Independence, MO 64055
+Satellite Beach, FL 32937
+Indianapolis, IN 46227
+Riverside, CA 92503
+Iowa City, IA 52240
+Irvine, CA 92620
+Irving, TX 75061
+Islamorada, FL 33036
+Isle of Palms, SC 29451
+Vestal, NY 13850
+Jackson, MI 49201
+Jackson, MS 39209
+Jackson, TN 38305
+Jacksonville Beach, FL 32250
+Jacksonville, FL 32225
+Jacksonville, NC 28540
+Janesville, WI 53546
+Jekyll Island, GA 31527
+Jenner, CA 95450
+Jersey City, NJ 07305
+Joliet, IL 60435
+Jonesboro, AR 72401
+Joplin, MO 64804
+Juneau, AK 99801
+Jupiter, FL 33458
+Kailua, HI 96734
+Kalamazoo, MI 49009
+Kalispell, MT 59901
+Kaneohe, HI 96744
+Kansas City, KS 66102
+Kansas City, MO 64118
+Kearney, NE 68845
+Kennewick, WA 99336
+Kenosha, WI 53142
+Key Largo, FL 33037
+Key West, FL 33040
+Johns Island, SC 29455
+Kirksville, MO 63501
+Kissimmee, FL 34744
+Klamath Falls, OR 97603
+Knoxville, TN 37918
+Kokomo, IN 46901
+La Conner, WA 98257
+La Crosse, WI 54601
+La Jolla, CA 92037
+La Porte, TX 77571
+Lafayette, IN 47909
+Lafayette, LA 70506
+Laguna Beach, CA 92651
+Lake Charles, LA 70601
+Ozark, MO 65721
+Lake Worth, FL 33463
+Lakeland, FL 33810
+Lakeside, OR 97449
+Golden, CO 80401
+Lancaster, PA 17603
+Lansing, MI 48911
+Laredo, TX 78046
+Las Cruces, NM 88001
+Las Vegas, NV 89121
+Las Vegas, NV 89108
+Lawrence, KS 66044
+Lawton, OK 73505
+League City, TX 77573
+Lewiston, ID 83501
+Lewiston, ME 04240
+Lexington, KY 40517
+Lima, OH 45801
+Lincoln City, OR 97367
+Lincoln, NE 68516
+Little River, CA 95456
+Little Rock, AR 72204
+Logan, UT 84321
+Long Beach, CA 90813
+Long Beach, NY 11561
+Long Beach, WA 98631
+Long Branch, NJ 07740
+Long Island City, NY 11101
+Lorain, OH 44052
+Los Angeles, CA 90011
+Los Osos, CA 93402
+Louisville, KY 40299
+Lowell, MA 01852
+Lubbock, TX 79424
+Lummi Island, WA 98262
+Lynchburg, VA 24502
+Macon, GA 31210
+Malibu, CA 90265
+Manchester, CA 95459
+Manchester, NH 03103
+Manhattan Beach, CA 90266
+Manhattan, KS 66502
+Mankato, MN 56001
+Mansfield, OH 44903
+Marco Island, FL 34145
+Marina del Rey, CA 90292
+Marina, CA 93933
+Vineyard Haven, MA 02568
+Mason City, IA 50401
+McAllen, TX 78501
+McKinleyville, CA 95519
+McKinney, TX 75070
+Meadville, PA 16335
+Medford, OR 97504
+Memphis, TN 38109
+Mendocino, CA 95460
+Mentor, OH 44060
+Merced, CA 95340
+Meridian, ID 83646
+Meridian, MS 39301
+Mesa, AZ 85204
+Mesquite, TX 75150
+Miami Beach, FL 33139
+Miami Gardens, FL 33056
+Miami, FL 33157
+Middletown, DE 19709
+Minneapolis, MN 55433
+Minot, ND 58701
+Miramar Beach, FL 32550
+Missoula, MT 59801
+Mobile, AL 36695
+Modesto, CA 95355
+Monroe, LA 71203
+Monroe, MI 48162
+Monterey, CA 93940
+Montgomery, AL 36117
+Moreno Valley, CA 92553
+Morgantown, WV 26505
+Morro Bay, CA 93442
+Moses Lake, WA 98837
+Mount Pleasant, SC 29464
+Sausalito, CA 94965
+Muncie, IN 47304
+Muskegon, MI 49442
+Myrtle Beach, SC 29588
+Nags Head, NC 27959
+Nampa, ID 83686
+Nantucket, MA 02554
+Napa, CA 94558
+Naperville, IL 60540
+Naples, FL 34120
+Nashua, NH 03060
+Nashville, TN 37221
+National City, CA 91950
+Neptune Beach, FL 32266
+New Bedford, MA 02740
+New Gloucester, ME 04260
+New Haven, CT 06511
+New Orleans, LA 70119
+New York, NY 10002
+Newark, DE 19702
+Newark, NJ 07104
+Newport Beach, CA 92660
+Newport, OR 97365
+Newport, RI 02840
+Norfolk, VA 23503
+Norman, OK 73072
+North Bend, OR 97459
+North Charleston, SC 29405
+North Las Vegas, NV 89031
+North Miami Beach, FL 33160
+North Myrtle Beach, SC 29582
+North Platte, NE 69101
+Oak Harbor, WA 98277
+Oak Island, NC 28465
+Oakland, CA 94601
+Ocala, FL 34472
+Ocean City, MD 21842
+Ocean City, NJ 08226
+Ocean Isle Beach, NC 28469
+Ocean Park, WA 98640
+Ocean Shores, WA 98569
+Oceanside, CA 92057
+Odessa, TX 79762
+Oklahoma City, OK 73160
+Olathe, KS 66062
+Omaha, NE 68104
+Ontario, CA 91761
+Orlando, FL 32828
+Overland Park, KS 66212
+Owensboro, KY 42301
+Oxnard, CA 93033
+Pacific City, OR 97135
+Pacific Palisades, CA 90272
+Palm Bay, FL 32907
+Palm Coast, FL 32137
+Palm Springs, CA 92262
+Palos Verdes Peninsula, CA 90274
+Panama City, FL 32404
+Parkersburg, WV 26101
+Cleveland, OH 44134
+Pasadena, TX 77502
+Paterson, NJ 07501
+Pawleys Island, SC 29585
+Pawtucket, RI 02860
+Pembroke Pines, FL 33028
+Pensacola, FL 32526
+Peoria, IL 61604
+Philadelphia, PA 19120
+Phoenix, AZ 85032
+Pierre, SD 57501
+Pismo Beach, CA 93449
+Pittsburgh, PA 15235
+Plano, TX 75025
+Plattsburgh, NY 12901
+Playa del Rey, CA 90293
+Plymouth, MA 02360
+Pocatello, ID 83201
+Point Arena, CA 95468
+San Diego, CA 92106
+Pomona, CA 91766
+Pompano Beach, FL 33064
+Ponte Vedra Beach, FL 32081
+Port Angeles, WA 98362
+Port Aransas, TX 78373
+Port Arthur, TX 77642
+Port Charlotte, FL 33952
+Port Hueneme, CA 93041
+Port Huron, MI 48060
+Port Isabel, TX 78578
+Port Lavaca, TX 77979
+Port Mansfield, TX 78598
+Port St. Lucie, FL 34953
+Portland, ME 04103
+Portland, OR 97229
+Ocracoke, NC 27960
+Portsmouth, NH 03801
+Prescott, AZ 86301
+Providence, RI 02909
+Provincetown, MA 02657
+Provo, UT 84604
+Pueblo, CO 81005
+Pullman, WA 99163
+Davenport, IA 52804
+Raleigh, NC 27603
+Rancho Cucamonga, CA 91730
+Rancho Palos Verdes, CA 90275
+Rapid City, SD 57701
+Raymond, WA 98577
+Reading, PA 19601
+Redding, CA 96003
+Redondo Beach, CA 90278
+Reedsport, OR 97467
+Reno, NV 89509
+Richmond, CA 94804
+Richmond, IN 47374
+Richmond, VA 23223
+Rio Rancho, NM 87124
+West Palm Beach, FL 33404
+Roanoke, VA 24018
+Rochester, MN 55901
+Rochester, NH 03867
+Rochester, NY 14609
+Rockford, IL 61107
+Rockport, TX 78382
+Rockville, MD 20850
+Roseburg, OR 97471
+Roswell, NM 88203
+Rutland, VT 05701
+Sacramento, CA 95828
+Sagamore Beach, MA 02562
+Strong, ME 04983
+Salem, OR 97301
+Salina, KS 67401
+Salt Lake City, UT 84118
+Bow, WA 98232
+San Angelo, TX 76904
+San Bernardino, CA 92404
+San Clemente, CA 92672
+San Diego, CA 92154
+San Francisco, CA 94112
+San Jose, CA 95111
+San Marcos, TX 78666
+San Mateo, CA 94403
+San Pedro, CA 90731
+Sandusky, OH 44870
+Sandwich, MA 02563
+Sandy, UT 84092
+Santa Ana, CA 92704
+Santa Barbara, CA 93105
+Santa Clarita, CA 91350
+Santa Cruz, CA 95060
+Santa Fe, NM 87505
+Santa Maria, CA 93458
+Santa Monica, CA 90405
+Santa Rosa, CA 95407
+Sarasota, FL 34232
+Savannah, GA 31405
+Ponte Vedra Beach, FL 32082
+Scottsbluff, NE 69361
+Sea Island, GA 31561
+Seal Rock, OR 97376
+Kittery Point, ME 03905
+Seaside, OR 97138
+Seattle, WA 98115
+Sedona, AZ 86336
+Shreveport, LA 71106
+Sierra Vista, AZ 85635
+Sioux City, IA 51106
+North Sioux City, SD 57049
+Sitka, AK 99835
+Smyrna, DE 19977
+Sonoma, CA 95476
+South Beach, OR 97366
+South Bend, IN 46614
+South Burlington, VT 05403
+Southampton, NY 11968
+South Hill, VA 23970
+South Padre Island, TX 78597
+South Portland, ME 04106
+Southaven, MS 38671
+Kitty Hawk, NC 27949
+Fleming Island, FL 32003
+Sparks, NV 89436
+Spokane, WA 99208
+Springdale, AR 72764
+Springfield, IL 62704
+Springfield, MA 01109
+Springfield, MO 65807
+Springfield, OH 45503
+St. Augustine, FL 32084
+Saint Cloud, MN 56301
+Eastpoint, FL 32328
+St. George, UT 84770
+St. Louis, MO 63123
+Saint Paul, MN 55124
+St. Petersburg, FL 33707
+St. Petersburg, FL 33710
+Stamford, CT 06902
+State College, PA 16801
+Staten Island, NY 10314
+Statesboro, GA 30458
+Sterling Heights, MI 48310
+Stinson Beach, CA 94970
+Stockton, CA 95206
+Stuart, FL 34997
+Sullivan's Island, SC 29482
+Holly Ridge, NC 28445
+Susanville, CA 96130
+Syracuse, NY 13210
+Tacoma, WA 98444
+Zephyr Cove, NV 89448
+Tallahassee, FL 32312
+Tampa, FL 33647
+Tarpon Springs, FL 34689
+Tavernier, FL 33070
+Terre Haute, IN 47802
+Texarkana, AR 71854
+Texas City, TX 77590
+Titusville, FL 32780
+Toledo, OH 43615
+Topanga, CA 90290
+Topeka, KS 66614
+Sneads Ferry, NC 28460
+Fort Pierce, FL 34945
+Trenton, NJ 08610
+Trinidad, CA 95570
+Tucson, AZ 85705
+Tulsa, OK 74133
+Tuscaloosa, AL 35401
+Twin Falls, ID 83301
+Tybee Island, GA 31328
+Utica, NY 13501
+Valdosta, GA 31602
+Vallejo, CA 94591
+Vancouver, WA 98682
+Playa del Rey, CA 90291
+Venice, FL 34293
+Ventura, CA 93003
+Vero Beach, FL 32962
+Victoria, TX 77901
+Virginia Beach, VA 23464
+Visalia, CA 93291
+Waco, TX 76706
+Waipahu, HI 96797
+Waldport, OR 97394
+Warren, MI 48089
+Warwick, RI 02886
+Wasilla, AK 99654
+Waterbury, CT 06708
+Waterloo, IA 50701
+Watertown, NY 13601
+Watertown, SD 57201
+Wenatchee, WA 98801
+West Jordan, UT 84081
+West Palm Beach, FL 33411
+Salt Lake City, UT 84120
+Westport, WA 98595
+Wheeling, WV 26003
+Whitethorn, CA 95589
+Wichita Falls, TX 76308
+Williamsport, PA 17701
+Wilmington, DE 19808
+Wilmington, NC 28412
+Winchester, VA 22602
+Winston-Salem, NC 27107
+Wichita, KS 67212
+Worcester, MA 01604
+Wrightsville Beach, NC 28480
+Yachats, OR 97498
+Yakima, WA 98902
+Yonkers, NY 10701
+York, PA 17403
+Youngstown, OH 44512
+Yuma, AZ 85364
+Zanesville, OH 43701

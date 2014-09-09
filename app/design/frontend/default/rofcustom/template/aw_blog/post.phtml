@@ -1,5 +1,5 @@
 <div class="page-title sixteen columns">
-    <h1 id="page-heading"><?php echo stristr($this->getLayout()->getBlock("head")->getTitle(),"Blog");//$this->__('Blog - Rattan Outdoor Furniture') ?></h1>
+    <h1 id="page-heading"><?php echo substr(stristr($this->getLayout()->getBlock("head")->getTitle(),Mage::getStoreConfig('design/head/title_suffix'),true),strlen("Blog - "))." Blog" ?></h1>
     <?php if($this->getMessagesBlock()): ?>
         <?php echo $this->getMessagesBlock()->getGroupedHtml(); ?>
         <script type="text/javascript">

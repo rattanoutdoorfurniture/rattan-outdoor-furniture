@@ -1,10 +1,6 @@
-
-
-
 .blog-title{
 	  background-color: #555555;
 }
-
 
 
 .widget-latest h2{
@@ -36,6 +32,10 @@
 
 .widget-latest *{
 	-moz-transition: all 0.2s; -webkit-transition: all 0.2s; -o-transition: all 0.2s;
+}
+
+.blog-post-view #page-heading {
+    padding-right: 140px;
 }
 
 

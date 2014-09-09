@@ -231,6 +231,8 @@
 }
 .footer-social-icon.pn {
     background-position:  -40px 0px;
+    position: relative;
+    top: -2px;
 }
 .footer-social-icon.gp:hover {
     background-position:  -60px -16px;

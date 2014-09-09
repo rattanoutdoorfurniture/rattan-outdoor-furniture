@@ -2,11 +2,17 @@
 <!-- Basic Page Needs
 ================================================== -->
 <meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
-<title><?php echo $this->getTitle() . (!is_null($pageNum = Mage::app()->getRequest()->getParam("p"))?$this->__(" - Page %s",$pageNum):"") ?></title>
+<?php if(!is_null($pageNum = Mage::app()->getRequest()->getParam("p"))) {
+    $title  = $this->getTitle();
+    $suffix = Mage::getStoreConfig("design/head/title_suffix");
+    $titleNoSuffix = substr($title, 0, strlen($suffix) * -1);
+    $this->setTitle($titleNoSuffix . $this->__("- Page %s",$pageNum));
+} ?>
+<title><?php echo (@$this->getForcedTitle()) ? $this->getForcedTitle() : $this->getTitle(); ?></title>
 <meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
 <meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
 <meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
-<meta name="author" content="https://plus.google.com/105588355789811411119">
+<meta name="author" content="https://google.com/+Rattanoutdoorfurniture">
 <meta name="google-site-verification" content="FZDC31mGIrSoBbOqM8oSp6RrVMZA5IgzITFazM8x3xE" />
 
 <!-- Facebook Open Graph Metas
@@ -15,16 +21,27 @@
     <meta property="og:site_name" content="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"/>
 <?php if (Mage::registry('current_product')) : ?>
     <!-- Facebook product meta -->
-    <meta property="og:title" content="<?php echo Mage::registry('current_product')->getShortDescription()." ".Mage::registry('current_product')->getName() ." by Rattan Outdoor Furniture" ?>" />
+    <meta property="og:title" content="<?php echo Mage::registry('current_product')->getName() ." by Rattan Outdoor Furniture" ?>" />
     <meta property="og:description" content="<?php echo strip_tags(Mage::registry('current_product')->getMetaDescription()); ?>" />
     <meta property="og:image" content="<?php echo Mage::helper('catalog/image')->init(Mage::registry('current_product'), 'image')->resize(200,200);?>" />
-    <meta property="og:url" content="<?php echo Mage::registry('current_product')->getProductUrl(); ?>" />
+    <?php
+    $curProd = Mage::registry('current_product');
+    $url = $curProd->getProductUrl();
+    if($categoryParent = $curProd->getResource()->getAttribute('parent_url_key')) {
+        $categoryParent = $categoryParent->getFrontend()->getValue($curProd);
+        if($categoryParent) {
+            $categoryParent = "products/" . $categoryParent;
+            $url = $this->getUrl($categoryParent."/".basename($url));
+        }
+    }
+    ?>
+    <meta property="og:url" content="<?php echo $url; ?>" />
 <?php else: ?>
     <!-- Facebook general meta -->
-    <meta property="og:title" content="<?php echo $this->getTitle(); ?>" />
-    <meta property="og:url" content="<?php echo $this->getUrl(); ?>" />
+    <meta property="og:title" content="<?php echo (@$this->getForcedTitle()) ? $this->getForcedTitle() : $this->getTitle(); ?>" />
     <meta property="og:image" content="<?php echo str_replace("-left-","-centered-",$this->getSkinUrl(Mage::getStoreConfig('design/header/logo_src'))); ?>" />
     <meta property="og:description" content="<?php echo $this->getDescription(); ?>" />
+    <meta property="og:url" content="<?php echo Mage::helper("core/url")->getCurrentUrl(); ?>" />
 
 <?php endif; ?>
 
@@ -44,28 +61,12 @@
 <link rel="apple-touch-icon" sizes="72x72" href="/skin/frontend/default/rofcustom/images/apple/apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="114x114" href="/skin/frontend/default/rofcustom/images/apple/apple-touch-icon-114x114.png">
 
-
-<!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-<!-- CSS & JAVASCRIPT -->
-<?php echo $this->getCssJsHtml() ?>
-<!-- Child HTML -->
-<?php echo $this->getChildHtml() ?>
-<!-- Translator -->
-<?php echo $this->helper('core/js')->getTranslatorScript() ?>
-<!-- Includes -->
-<?php echo $this->getIncludes() ?>
-<!-- /Includes/ -->
-
 <?php
 /**
  * Set the appropriate rel=next and rel=prev for paginated category pages
  */
 $actionName = $this->getAction()->getFullActionName();
-if ($actionName == 'catalog_category_view') // Category Page
-{
+if ($actionName == 'catalog_category_view') { // Category Page
     $category = Mage::registry('current_category');
     $prodCol = $category->getProductCollection()->addAttributeToFilter('status', 1)->addAttributeToFilter('visibility', array('in' => array(Mage_Catalog_Model_Product_Visibility::VISIBILITY_IN_CATALOG, Mage_Catalog_Model_Product_Visibility::VISIBILITY_BOTH)));
     $tool = $this->getLayout()->createBlock('page/html_pager')->setLimit($this->getLayout()->createBlock('catalog/product_list_toolbar')->getLimit())->setCollection($prodCol);
@@ -83,11 +84,31 @@ if ($actionName == 'catalog_category_view') // Category Page
                     $prevUrl = $tool->getPreviousPageUrl();
                 }
                 $prevUrl = str_replace("&amp;","&",$prevUrl);
+                if(stristr($prevUrl,"?")!==false) {
+                    $urlParts = explode("?",$prevUrl, 2);
+                    if(substr($urlParts[0], -1) != "/") {
+                        $prevUrl = $urlParts[0] . "/?" . $urlParts[1];
+                    }
+                } else {
+                    if(substr($prevUrl, -1) != "/") {
+                        $prevUrl = $prevUrl . "/";
+                    }
+                }
             }
             if (!$tool->isLastPage()) {
                 $linkNext = true;
                 $nextUrl = $tool->getNextPageUrl();
                 $nextUrl = str_replace("&amp;", "&", $nextUrl);
+                if(stristr($nextUrl,"?")!==false) {
+                    $urlParts = explode("?",$nextUrl, 2);
+                    if(substr($urlParts[0], -1) != "/") {
+                        $nextUrl = $urlParts[0] . "/?" . $urlParts[1];
+                    }
+                } else {
+                    if(substr($nextUrl, -1) != "/") {
+                        $nextUrl = $nextUrl . "/";
+                    }
+                }
             }
         }
     }
@@ -96,6 +117,10 @@ if ($actionName == 'catalog_category_view') // Category Page
     if (!$linkNext && !$linkPrev) {
         echo '<link rel="canonical" href="' . $this->getUrl($category->getUrlPath()) . '" />';
     }
+} elseif($actionName == "customer_account_login") {
+    echo '<link rel="canonical" href="'.$this->getUrl("login").'"/>';
+} elseif($actionName == "customer_account_create") {
+    echo '<link rel="canonical" href="'.$this->getUrl("login/register").'"/>';
 } elseif($actionName == "catalog_product_view") {
     // Canonical Tag Set Elsewhere for product views
 } elseif(strpos($actionName,"catalog_seo_sitemap")!==false) {
@@ -133,11 +158,31 @@ if ($actionName == 'catalog_category_view') // Category Page
                     $prevUrl = $tool->getPreviousPageUrl();
                 }
                 $prevUrl = str_replace("&amp;","&",$prevUrl);
+                if(stristr($prevUrl,"?")!==false) {
+                    $urlParts = explode("?",$prevUrl, 2);
+                    if(substr($urlParts[0], -1) != "/") {
+                        $prevUrl = $urlParts[0] . "/?" . $urlParts[1];
+                    }
+                } else {
+                    if(substr($prevUrl, -1) != "/") {
+                        $prevUrl = $nextUrl . "/";
+                    }
+                }
             }
             if (!$tool->isLastPage()) {
                 $linkNext = true;
                 $nextUrl = $tool->getNextPageUrl();
                 $nextUrl = str_replace("&amp;", "&", $nextUrl);
+                if(stristr($nextUrl,"?")!==false) {
+                    $urlParts = explode("?",$nextUrl, 2);
+                    if(substr($urlParts[0], -1) != "/") {
+                        $nextUrl = $urlParts[0] . "/?" . $urlParts[1];
+                    }
+                } else {
+                    if(substr($nextUrl, -1) != "/") {
+                        $nextUrl = $nextUrl . "/";
+                    }
+                }
             }
         }
     }
@@ -171,6 +216,23 @@ if ($actionName == 'catalog_category_view') // Category Page
     echo '<link rel="canonical" href="'.$this->getUrl($actionPath).'" href="'.''.'"/>';
 }
 ?>
+
+<!-- CSS & JAVASCRIPT -->
+<?php echo $this->getCssJsHtml() ?>
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Child HTML -->
+<?php echo $this->getChildHtml() ?>
+<!-- Translator -->
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<!-- Includes -->
+<?php echo $this->getIncludes() ?>
+<!-- /Includes/ -->
+
+
 
 
 <script type="text/javascript">

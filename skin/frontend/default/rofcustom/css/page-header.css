@@ -18,7 +18,7 @@
     z-index: 999;
 }
 
-#page-header + .std > .account-box,
+#page-header + div > .account-box,
 #page-header + .account-box {
     margin-top: 10px;
 }
