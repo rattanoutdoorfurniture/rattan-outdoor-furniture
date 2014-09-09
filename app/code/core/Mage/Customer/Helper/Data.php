@@ -42,7 +42,7 @@ class Mage_Customer_Helper_Data extends Mage_Core_Helper_Abstract
     /**
      * Route for customer account login page
      */
-    const ROUTE_ACCOUNT_LOGIN = 'customer/account/login';
+    const ROUTE_ACCOUNT_LOGIN = 'login'; //'customer/account/login';
 
     /**
      * Config name for Redirect Customer to Account Dashboard after Logging in setting
@@ -254,7 +254,8 @@ class Mage_Customer_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getRegisterUrl()
     {
-        return $this->_getUrl('customer/account/create');
+        return $this->_getUrl('login/register');
+        // return $this->_getUrl('customer/account/create');
     }
 
     /**

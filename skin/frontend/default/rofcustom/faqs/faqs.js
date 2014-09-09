@@ -10,7 +10,7 @@ jQuery(document).ready(function() {
         var toExpand = jQuery();
         toExpand = toExpand.add($this);
         var $curElem = $this;
-        while($curElem.next()[0].tagName.toLowerCase() == "p") {
+        while($curElem.next().length && $curElem.next()[0].tagName.toLowerCase() == "p") {
             $curElem = $curElem.next();
             toExpand = toExpand.add($curElem);
         }

@@ -10,16 +10,40 @@
         <loc>http://www.rattanoutdoorfurniture.com/contact-us/</loc>
         <lastmod>2014-09-03</lastmod>
         <changefreq>daily</changefreq>
-        <priority>0.95</priority>
+        <priority>0.98</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/about-us/</loc>
         <lastmod>2014-09-03</lastmod>
         <changefreq>daily</changefreq>
-        <priority>0.95</priority>
+        <priority>0.98</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/catalog/seo_sitemap/product/</loc>
+        <lastmod>2014-09-08</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.97</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/catalog/seo_sitemap/category/</loc>
+        <lastmod>2014-09-08</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.93</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/privacy/</loc>
+        <lastmod>2014-09-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/login/</loc>
+        <lastmod>2014-09-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/login/register/</loc>
         <lastmod>2014-09-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>

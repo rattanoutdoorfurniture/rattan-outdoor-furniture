@@ -28,6 +28,7 @@ Furniture web site project.
 - Abstract Product_View_Options_Type_Select logic from the Magento core. This should extend the core, which I could not get to work today.
 - Additions to the Mage_Core_Sitemap Product model. (this should be defined elsewhere).
 
+- Update Core Product Block View to add Trailing Slash on product canonical url. Use preferred parent_url_key. Should be a model of some sort.
 - Contacts Core XML change URL Key. (Should be a module).
 - Sales Guest Helper method added. Footer_Links Guest Form link. Create Better Way to set REL.
 - Add to Cart and Checkout: move code from core to local add-on.
