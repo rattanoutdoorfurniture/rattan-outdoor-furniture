@@ -836,11 +836,26 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
         clear: left;
     }
 
+    .cms-widget-state-list .box-content {
+        overflow-y: auto;
+        height: 180px;
+    }
+
     .cms-widget-children-list .box-head > *,
     .cms-widget-state-list .box-head > * {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    .cms-widget-state-list-title {
+        display: inline-block;
+    }
+
+    .cms-widget-state-list-title + small {
+        margin: 0 0 9px 5px;
+        display: inline-block;
+        font-size: 18px;
     }
 
     .cms-widget-children-list .account-box-inner,
@@ -860,6 +875,7 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
         float: left;
         width: 22%;
         margin-left: 2.5%;
+        margin-bottom: 0;
     }
 
     /*.cms-widget-children-list.collapsed .cms-widget-children-list-link-list,*/
@@ -907,6 +923,98 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
             width: 40%;
             max-width: 40%;
         }
+
+    /* Featured Product Widget Styles *****************************************/
+        .featured-products {
+            clear: both;
+            margin-left: 50px;
+        }
+
+        .featured-products .featured-products-title {
+            text-indent: -10000px;
+            background: transparent url('http://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/featured-products-title.png') center center no-repeat;
+            height: 20px;
+            margin-bottom: 20px;
+            background-size: 100% auto;
+        }
+
+        .featured-products .category-product {
+            height: 280px;
+            min-height: 280px;
+        }
+
+        .featured-products .category-product .category-product-inner {
+            height: 260px;
+            min-height: 260px;
+        }
+
+        .featured-products .category-product.five .category-product-inner {
+            width: 260px;
+        }
+
+        .featured-products .category-product.five .category-product-img {
+            width: 250px;
+            height: 177px;
+        }
+
+        .featured-products .category-product.five:hover .category-product-img {
+            width: 260px;
+            height: auto;
+            padding: 5px 0 0 0;
+        }
+
+        .featured-products .category-product.five .category-product-title {
+            margin: 20px 30px;
+            font: bold 18px/22px 'Tahoma', 'Helvetica Neue', Helvetica, Arial;
+            color: #8a6399;
+            cursor: pointer;
+        }
+
+        .featured-products .category-product.five .category-product-title {
+            font-weight: normal;
+        }
+
+        .featured-products .category-product.five:hover .category-product-title {
+            border-radius: 10px;
+            box-shadow: 0 1px 3px 0px #8a6399;
+        }
+
+        .featured-products .category-product.five:hover .category-product-title {
+            font-weight: bold;
+        }
+
+        .featured-products .category-product.three .category-product-inner {
+            width: 140px;
+        }
+
+        .featured-products .category-product.three .category-product-img {
+            width: 130px;
+            height: 92px;
+        }
+
+        .featured-products .category-product.three:hover .category-product-img {
+            width: 140px;
+            height: auto;
+            padding: 5px 0 0 0;
+        }
+
+        .featured-products .category-product.three .category-product-img-underline {
+            width: 140px;
+        }
+
+        .featured-products .category-product.three .category-product-title {
+            margin: 20px 0;
+            font-weight: normal;
+        }
+
+        .featured-products .category-product.three .category-product-add {
+            margin-top: 15px;
+        }
+
+        .featured-products .category-product.three:hover .category-product-add {
+            box-shadow: 0 0 2px 2px rgba(138, 99, 153, 0.5);
+        }
+
 /**
  * Magento
  *
@@ -1004,13 +1112,9 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
 .sidebar .widget-cms-link a { background:url(http://www.rattanoutdoorfurniture.com/skin/frontend/base/default/images/widgets/i_widget-link.gif) 100% 4px no-repeat; padding:0 15px 0 0; }
 /* ======================================================================================= */
 
-
-
-
 .blog-title{
 	  background-color: #555555;
 }
-
 
 
 .widget-latest h2{
@@ -1042,6 +1146,10 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
 
 .widget-latest *{
 	-moz-transition: all 0.2s; -webkit-transition: all 0.2s; -o-transition: all 0.2s;
+}
+
+.blog-post-view #page-heading {
+    padding-right: 140px;
 }
 
 
@@ -2322,6 +2430,11 @@ input[type=checkbox] label {
     z-index: 999;
 }
 
+#page-header + div > .account-box,
+#page-header + .account-box {
+    margin-top: 10px;
+}
+
 nav a {
     text-decoration: none;
 }
@@ -2354,7 +2467,7 @@ nav a {
     margin: -2px;
     padding: 5px 7px;
     background: #FFF;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 #page-header
@@ -2417,7 +2530,7 @@ nav a {
     color: #895c9a;
     font-weight: 400;
     margin-top: 0;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
     text-decoration: none;
 }
 
@@ -2475,7 +2588,7 @@ nav a {
     background-image: url('http://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/nav-main-unselected.png') !important;
 }
 
-.nav-main-item a {
+.nav-main-item > a {
     text-transform: uppercase;
     color: #555;
     font-family: 'FuturaStd-Medium';
@@ -2493,12 +2606,28 @@ nav a {
     display: none;
     position: absolute;
     left: 0px;
-    top: 36px;
-    width: 100%;
+    top: 40px;
+    width: auto;
     margin: 0;
     padding: 10px 10px 10px 15px;
     background: #e6e6e6 url('http://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/nav-main-unselected.png') left bottom repeat-x;
     background-size: auto 100%;
+    white-space: nowrap;
+}
+
+.dropdownEnabled .nav-main-item.parent:hover ul {
+    display: block;
+}
+
+.nav-main-item.parent:hover ul li {
+    height: 22px;
+    text-transform: uppercase;
+    color: #555;
+    font-family: 'FuturaStd-Medium';
+}
+
+.nav-main-item.parent:hover ul li:hover {
+    background: #e6e6e6 url('http://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/nav-main-selected.png') left bottom repeat-x;
 }
 
 #glob-search-form {
@@ -2519,7 +2648,7 @@ nav a {
     padding: 0 0 0 30px;
     border: none;
     background: white url('http://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/glob-search-bg.png') 7px center no-repeat;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
     font-weight: bold;
     color: #888;
     position:relative;
@@ -2637,7 +2766,7 @@ nav a {
     text-decoration: none;
     font-size: 11px;
     color: #888;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 .footer-links-wrap ul li a:hover,
@@ -2662,7 +2791,7 @@ nav a {
 #footer-newsletter-input {
     float: left;
     color: #888;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
     margin-bottom: 0;
     width: 110px;
     height: 1.2em;
@@ -2712,8 +2841,9 @@ nav a {
     top: -2px;
     position: relative;
     color: #8a6399;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
     margin-right: 5px;
+    display: inline-block;
 }
 
 .footer-social-icon {
@@ -2785,6 +2915,8 @@ nav a {
 }
 .footer-social-icon.pn {
     background-position:  -40px 0px;
+    position: relative;
+    top: -2px;
 }
 .footer-social-icon.gp:hover {
     background-position:  -60px -16px;
@@ -2844,7 +2976,7 @@ nav a {
     font-size: 16px;
     color: #895c9a;
     font-weight: 400;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 #footer-logo-phone a:hover {
@@ -2863,7 +2995,7 @@ nav a {
     font-size: 11px;
     padding-top: 7px;
     color: #888;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
 
 }
 
@@ -2995,7 +3127,7 @@ nav a {
     text-align: center;
     text-decoration: none;
     color: #888;
-    font-family: "Tahoma";
+    font: normal 14px/22px "Tahoma","Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* Main Image Slider
@@ -3059,7 +3191,7 @@ nav a {
     padding: 5px 2px;
     font-family: 'abeatbyKai';
     margin-bottom: 3px;
-    /*text-transform: uppercase;*/
+    line-height: 28px;
 }
 
 .home-slide-detail-under {
@@ -3239,7 +3371,7 @@ nav a {
     height: 20px;
     font-size: 12px;
     color: #555;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
     margin: 0 0 20px 0;
 }
 
@@ -3378,7 +3510,7 @@ nav a {
     height: 20px;
     font-size: 12px;
     color: #555;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 .catalogsearch-result-index
@@ -3906,9 +4038,8 @@ nav a {
     padding: 0;
     margin: 0;
     color: #AAA;
-    /*background: #FFF url('http://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/hash-border.png') 0 0 repeat;*/
     background: transparent;
-    /*border-top: 1px solid #e6e6e6;*/
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 .product-tab:nth-child(2) .product-tab-title {
@@ -4015,7 +4146,7 @@ nav a {
 #cart-heading {
     border-bottom: 1px solid #e6e6e6;
     color: #895c9a;
-    font-family: "Tahoma";
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
     text-transform: uppercase;
     margin: 10px 0px 20px;
     font-size: 22px;
@@ -4428,6 +4559,10 @@ img, button, input {
         width: 240px !important;
     }
 
+    .checkout-step1-input#email {
+        display: inline-block;
+    }
+
     .checkout-step1-spacer {
         text-align: center;
         color: #555;
@@ -4436,7 +4571,17 @@ img, button, input {
         margin: 5px auto;
         font-size: 10px;
         font-weight: bold;
-        font-family: "Tahoma";
+        font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .account-box .required em {
+        padding-right: 4px;
+    }
+
+    #register-with-facebook-button {
+        float:left;
+        margin-left:20px;
+        padding: 9px 10px;
     }
 
     #checkout-step1-facebook {
@@ -4446,7 +4591,7 @@ img, button, input {
         text-indent: -10000px;
         border: none;
         margin-bottom: 5px;
-        display: block;
+        display: inline-block;
     }
 
     .checkout-step1-next-step {
@@ -4556,7 +4701,7 @@ img, button, input {
 
     #cart-subtotal-header {
         color: #8a6399;
-        font-family: "Tahoma";
+        font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
         font-size: 18px;
         line-height: 18px;
         padding: 10px 20px;
@@ -4565,7 +4710,7 @@ img, button, input {
 
     #cart-subtotal-sub {
         color: #555;
-        font-family: "Tahoma";
+        font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
         font-size: 16px;
         line-height: 16px;
         padding-bottom: 10px;
@@ -4597,7 +4742,7 @@ img, button, input {
 
     #cart-subtotal-table-title th {
         color: #555;
-        font-family: "Tahoma";
+        font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
         font-weight: bold;
         padding: 10px 20px 10px;
         text-align: left;
@@ -4974,7 +5119,7 @@ img, button, input {
             margin-left: 1em;
             text-decoration: underline;
             font-size: 0.7em;
-            font-family: 'Tahoma';
+            font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
             font-weight: 200;
             color: #888;
             text-transform: capitalize;
@@ -5232,6 +5377,10 @@ img, button, input {
     /* Login / Register Page Styles
     **************************************************************/
 
+    #page-header + .account-login {
+        margin-top: 30px;
+    }
+
     .account-login #account-box {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -5249,10 +5398,19 @@ img, button, input {
    #login-heading {
        margin: 0px;
        color: #895c9a;
-       font-family: "Tahoma";
-       font-variant: small-caps;
+       font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
+       /*font-variant: small-caps;*/
        font-size: 32px;
        line-height: 32px;
+   }
+
+   .account-create label.validation-failed,
+   .account-create .validation-failed ~ label.required {
+       color: #F84A33;
+   }
+
+   .account-create input.validation-failed {
+       background-color: rgb(255, 224, 145) !important;
    }
 
    /* Account Dashboard Styles
@@ -5265,9 +5423,15 @@ img, button, input {
         padding-left: 20px;
     }
 
+    .box-head > h1,
+    .box-head > h2,
+    .box-head > h3 {
+        margin-bottom: 10px;
+    }
+
     .box-head > * {
         color: #444;
-        font-family: "Tahoma";
+        font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
         font-size: 22px;
         line-height: 22px;
     }
@@ -5308,7 +5472,7 @@ img, button, input {
     /*.my-account .dashboard */
     .account-box .box-title > *:first-child {
         color: #444;
-        font-family: "Tahoma";
+        font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
         font-size: 18px;
         line-height: 18px;
         display: inline-block;
