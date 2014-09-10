@@ -370,6 +370,29 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
             max-width: 40%;
         }
 
+        .cms-page-view .std .box-content h2:not(.faq-p-heading),
+        .cms-page-view .std .box-content h3,
+        .cms-page-view .std .box-content h4,
+        .cms-page-view .box-content > h3,
+        .cms-page-view .box-content > h4 {
+            margin-left: 15px;
+            font: normal 18px/22px 'Tahoma', 'Helvetica Neue', Helvetica, Arial;
+        }
+
+        .cms-page-view .box-content {
+            padding: 10px 20px;
+        }
+
+        .cms-page-view a[href^='tel'] {
+            white-space: nowrap;
+        }
+
+        /* Affiliates and Friends Styles *********************************************/
+        .cms-more-info-affiliates-and-friends .std ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
     /* Featured Product Widget Styles *****************************************/
         .featured-products {
             clear: both;

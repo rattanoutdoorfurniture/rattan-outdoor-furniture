@@ -78,6 +78,12 @@ Furniture web site project.
 
 ##Change Log:##
 
+###2014-09-10###
+- Clean and Standardize Info Pages and Headings; This update includes the styles and a few changes required to facilitate the changes to the headings and content of the info pages on the site. Just about every cms page (excluding the location pages) has been re-assessed, with a proper layout of headings and a stardardized look and feel. Also, the link to Black-Sand-Furniture.com has been added into the "Our Friends" section of the site.
+
+###2014-09-09###
+- Large Update; Social Links; Canonical Product Fix; Login/Register; Large round of updates. Includes the Login and register fixes, along with some of the fixes on the blog; Also there are updates for the social media links that changed. Some style changes. This update will also entail the updating of product data, removing the "Brighton" from lingering product img tags and page titles.
+
 ###2014-08-28###
 - Location Page Updates; State Focus; Featured Widget; This update is mainly to the point of releasing the location pages. There are other SEO fixes included. Namely, the removal of the H2 on the product pages, and the fix for the H1 on category pages. Also some smaller fixes, like removing "& Help" from the product page. Mainly, the effort was to perfect the locations and state pages. The location pages include a "Featured Products" widget. Also, The city-list widget has been re-worked to show all cities we've included for that state, and only links the released cities. The 'additional cities' list has been removed from the city pages, although this is not to be released yet anyhow. Also, the double heading has been removed on all the location pages, updating the box heading (heading in the box) to be an H1, and the city list heading is the h2. The locations have been en/dis-abled as it will be for release, with only the first half of the states and the parent locations page being enabled. I am going to being rolling this out. I will do a rather standard release, syncing and inspecting on dev, staging, creating a release, and replicating live.
 

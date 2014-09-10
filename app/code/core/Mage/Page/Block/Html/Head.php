@@ -173,6 +173,7 @@ class Mage_Page_Block_Html_Head extends Mage_Core_Block_Template
                 case 'js':        // js/*.js
                 case 'skin_js':   // skin/*/*.js
                 case 'remote_js':   // http*.js
+                case 'remote_css':   // http*.css
                 case 'js_css':    // js/*.css
                 case 'skin_css':  // skin/*/*.css
                     $lines[$if][$item['type']][$params][$item['name']] = $item['name'];
@@ -196,7 +197,8 @@ class Mage_Page_Block_Html_Head extends Mage_Core_Block_Template
             }
 
             // static and skin css
-            $html .= $this->_prepareStaticAndSkinElements('<link rel="stylesheet" type="text/css" href="%s"%s />' . "\n",
+            $html .= $this->_prepareStaticAndSkinElementsRemote('<link rel="stylesheet" type="text/css" href="%s"%s />' . "\n",
+                empty($items['remote_css']) ? array() : $items['remote_css'],
                 empty($items['js_css']) ? array() : $items['js_css'],
                 empty($items['skin_css']) ? array() : $items['skin_css'],
                 $shouldMergeCss ? array(Mage::getDesign(), 'getMergedCssUrl') : null
