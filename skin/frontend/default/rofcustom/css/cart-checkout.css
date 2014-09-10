@@ -1303,7 +1303,7 @@ img, button, input {
         color: #444;
         font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
         font-size: 22px;
-        line-height: 22px;
+        line-height: 26px;
     }
 
     .box-head > * > a {
@@ -1332,7 +1332,7 @@ img, button, input {
         padding: 10px;
     }
 
-    /*.my-account .dashboard*/
+    .product-tab-body .box-title,
     .account-box .box-title {
         border-bottom: 1px solid #e6e6e6;
         margin: 10px;
@@ -1340,6 +1340,7 @@ img, button, input {
     }
 
     /*.my-account .dashboard */
+    .product-tab-body .box-title > *:first-child,
     .account-box .box-title > *:first-child {
         color: #444;
         font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
