@@ -47,7 +47,7 @@
                     <div class="account-box column col-1 no-border">
                         <div class="account-box-inner">
                             <div class="box-title">
-                                <h2><?php echo $this->__('Personal Details') ?></h2>
+                                <h2><?php echo $this->__('Registration Details') ?></h2>
                             </div>
                             <ul class="form-list box-blurb remove-bottom">
                                 <li class="fields">
@@ -55,13 +55,13 @@
                                 </li>
                                 <li>
                                     <label for="email_address" class="required"><em>*&nbsp;</em><?php echo $this->__('Email Address') ?></label>
-                                    <!--<div class="input-box">-->
+                                    <div class="input-box add-bottom">
                                         <?php
                                             $formEmail  = $this->getFormData()->getEmail();
                                             $emailValue = is_null($formEmail) ? Mage::app()->getRequest()->getParam("email") : $formEmail;
                                         ?>
-                                        <input type="text" name="email" id="email_address" value="<?php echo $emailValue; ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry" />
-                                    <!--</div>-->
+                                        <input type="text" name="email" id="email_address" value="<?php echo $emailValue; ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry remove-bottom" />
+                                    </div>
                                 </li>
                                 <?php if ($this->isNewsletterEnabled()): ?>
                                     <li class="control remove-bottom">
@@ -91,20 +91,20 @@
                     <div class="account-box column col-2 no-border">
                         <div class="account-box-inner">
                             <div class="box-title">
-                                <h3><?php echo $this->__('Set Password') ?></h3>
+                                <h3><?php echo $this->__('Register Password') ?></h3>
                             </div>
                             <ul class="form-list box-blurb remove-bottom">
                                 <li class="fields">
                                     <div class="field clearfix">
                                         <label for="password" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
-                                        <div class="input-box">
-                                            <input type="password" name="password" id="password" title="<?php echo $this->__('Password') ?>" class="input-text required-entry validate-password" />
+                                        <div class="input-box add-bottom">
+                                            <input type="password" name="password" id="password" title="<?php echo $this->__('Password') ?>" class="input-text required-entry validate-password remove-bottom" />
                                         </div>
                                     </div>
-                                    <div class="field clearfix">
+                                    <div class="field clearfix add-bottom">
                                         <label for="confirmation" class="required"><em>*</em><?php echo $this->__('Confirm Password') ?></label>
                                         <div class="input-box">
-                                            <input type="password" name="confirmation" title="<?php echo $this->__('Confirm Password') ?>" id="confirmation" class="input-text required-entry validate-cpassword" />
+                                            <input type="password" name="confirmation" title="<?php echo $this->__('Confirm Password') ?>" id="confirmation" class="input-text required-entry validate-cpassword remove-bottom" />
                                         </div>
                                     </div>
                                 </li>
