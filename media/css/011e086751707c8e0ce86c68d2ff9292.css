@@ -924,6 +924,29 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
             max-width: 40%;
         }
 
+        .cms-page-view .std .box-content h2:not(.faq-p-heading),
+        .cms-page-view .std .box-content h3,
+        .cms-page-view .std .box-content h4,
+        .cms-page-view .box-content > h3,
+        .cms-page-view .box-content > h4 {
+            margin-left: 15px;
+            font: normal 18px/22px 'Tahoma', 'Helvetica Neue', Helvetica, Arial;
+        }
+
+        .cms-page-view .box-content {
+            padding: 10px 20px;
+        }
+
+        .cms-page-view a[href^='tel'] {
+            white-space: nowrap;
+        }
+
+        /* Affiliates and Friends Styles *********************************************/
+        .cms-more-info-affiliates-and-friends .std ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
     /* Featured Product Widget Styles *****************************************/
         .featured-products {
             clear: both;
@@ -5433,7 +5456,7 @@ img, button, input {
         color: #444;
         font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
         font-size: 22px;
-        line-height: 22px;
+        line-height: 26px;
     }
 
     .box-head > * > a {
@@ -5462,7 +5485,7 @@ img, button, input {
         padding: 10px;
     }
 
-    /*.my-account .dashboard*/
+    .product-tab-body .box-title,
     .account-box .box-title {
         border-bottom: 1px solid #e6e6e6;
         margin: 10px;
@@ -5470,6 +5493,7 @@ img, button, input {
     }
 
     /*.my-account .dashboard */
+    .product-tab-body .box-title > *:first-child,
     .account-box .box-title > *:first-child {
         color: #444;
         font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
