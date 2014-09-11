@@ -30,6 +30,20 @@
  *
  * @see Mage_Page_Block_Html_Pager
  */
+
+function trailSlash($url) {
+    if(strpos($url,"?")===false) {
+        if(substr($url,-1)!=="/") {
+            $url .= "/";
+        }
+    } else {
+        $urlParts = explode("?",$url,2);
+        if(substr($urlParts[0],-1)!=="/") {
+            $url = $urlParts[0] . "/?" . $urlParts[1];
+        }
+    }
+    return $url;
+}
 ?>
 <?php if($this->getCollection()->getSize()): ?>
 
@@ -63,7 +77,7 @@
     <?php if($this->getLastPageNum()>1): ?>
         <?php if (!$this->isLastPage()): ?>
             <li id="category-pagi-next" class="category-pagi-nav">
-                <a class="next<?php if(!$this->getAnchorTextForNext()): ?> i-next<?php endif; ?>" href="<?php echo $this->getNextPageUrl() ?>" title="<?php echo $this->__('Next') ?>">
+                <a class="next<?php if(!$this->getAnchorTextForNext()): ?> i-next<?php endif; ?>" href="<?php echo trailSlash($this->getNextPageUrl()) ?>" title="<?php echo $this->__('Next') ?>">
                     <?php if(!$this->getAnchorTextForNext()): ?>
                         <span class="hide-mobile">Next&nbsp;</span>»
                     <?php else: ?>
@@ -75,13 +89,13 @@
 
         <?php if ($this->canShowFirst()): ?>
             <li id="category-pagi-page-one" class="category-pagi-page">
-                <a class="first" href="<?php echo $this->getFirstPageUrl() ?>">1</a>
+                <a class="first" href="<?php echo trailSlash($this->getFirstPageUrl()) ?>">1</a>
             </li>
         <?php endif;?>
 
         <?php if ($this->canShowPreviousJump()): ?>
             <li id="category-pagi-page-jump-prev" class="category-pagi-page">
-                <a class="previous_jump" title="" href="<?php echo $this->getPreviousJumpUrl() ?>">...</a>
+                <a class="previous_jump" title="" href="<?php echo trailSlash($this->getPreviousJumpUrl()) ?>">...</a>
             </li>
         <?php endif;?>
         <?php /* Reverse Page Order because they're Right Floated*/ ?>
@@ -94,7 +108,7 @@
                 </li>
             <?php else: ?>
                 <li id="category-pagi-page-_<?php echo $_page; ?>" class="category-pagi-page">
-                    <a href="<?php echo $this->getPageUrl($_page) ?>"><?php echo $_page ?></a>
+                    <a href="<?php echo trailSlash($this->getPageUrl($_page)) ?>"><?php echo $_page ?></a>
                 </li>
             <?php endif;?>
         <?php endforeach;?>
@@ -102,19 +116,19 @@
 
         <?php if ($this->canShowNextJump()): ?>
             <li id="category-pagi-page-jump-next" class="category-pagi-page">
-                <a class="next_jump" title="" href="<?php echo $this->getNextJumpUrl() ?>">...</a>
+                <a class="next_jump" title="" href="<?php echo trailSlash($this->getNextJumpUrl()) ?>">...</a>
             </li>
         <?php endif;?>
 
         <?php if ($this->canShowLast()): ?>
           <li id="category-pagi-page-last" class="category-pagi-page">
-              <a class="last" href="<?php echo $this->getLastPageUrl() ?>"><?php echo $this->getLastPageNum() ?></a>
+              <a class="last" href="<?php echo trailSlash($this->getLastPageUrl()) ?>"><?php echo $this->getLastPageNum() ?></a>
           </li>
         <?php endif;?>
 
         <?php if (!$this->isFirstPage()): ?>
             <li id="category-pagi-prev" class="category-pagi-nav">
-                <a class="previous<?php if(!$this->getAnchorTextForPrevious()): ?> i-previous<?php endif;?>" href="<?php echo $this->getPreviousPageUrl() ?>" title="<?php echo $this->__('Previous') ?>">
+                <a class="previous<?php if(!$this->getAnchorTextForPrevious()): ?> i-previous<?php endif;?>" href="<?php echo trailSlash($this->getPreviousPageUrl()) ?>" title="<?php echo $this->__('Previous') ?>">
                     <?php if(!$this->getAnchorTextForPrevious()): ?>
                         «<span class="hide-mobile">&nbsp;Prev</span>
                     <?php else: ?>
