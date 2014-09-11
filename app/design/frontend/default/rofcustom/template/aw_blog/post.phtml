@@ -9,7 +9,7 @@
         </script>
     <?php endif; ?>
     <aside class="back-aside">
-        <a href="/blog"><?php echo $this->__("&laquo;&nbsp;Back To Latest"); ?></a>
+        <a href="<?php echo $this->getUrl("blog"); ?>"><?php echo $this->__("&laquo;&nbsp;Back To Latest"); ?></a>
     </aside>
 </div>
 <?php $post = $this->getPost(); ?>

@@ -18,5 +18,5 @@
 /var/importexport/*
 /media/js*
 /media/css*
-/media/wysiwyg/.thumbs/*
+/media/wysiwyg/.thumbs
 
