@@ -50,7 +50,7 @@ class Locations_Cities_Block_List
         "new-mexico"            => "Areas Serviced in",
         "new-york"              => "Areas Serviced in",
         "north-carolina"        => "Service Districts in",
-        "north-dakota"          => "Serving the",
+        "north-dakota"          => "Serving",
         "ohio"                  => "Regional Cities in",
         "oklahoma"              => "Local Cities in",
         "oregon"                => "Servicing Areas of",
