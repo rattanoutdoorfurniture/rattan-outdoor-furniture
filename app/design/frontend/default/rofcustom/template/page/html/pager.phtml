@@ -31,18 +31,20 @@
  * @see Mage_Page_Block_Html_Pager
  */
 
-function trailSlash($url) {
-    if(strpos($url,"?")===false) {
-        if(substr($url,-1)!=="/") {
-            $url .= "/";
+if(!function_exists("trailSlash")) {
+    function trailSlash($url) {
+        if(strpos($url,"?")===false) {
+            if(substr($url,-1)!=="/") {
+                $url .= "/";
+            }
+        } else {
+            $urlParts = explode("?",$url,2);
+            if(substr($urlParts[0],-1)!=="/") {
+                $url = $urlParts[0] . "/?" . $urlParts[1];
+            }
         }
-    } else {
-        $urlParts = explode("?",$url,2);
-        if(substr($urlParts[0],-1)!=="/") {
-            $url = $urlParts[0] . "/?" . $urlParts[1];
-        }
+        return $url;
     }
-    return $url;
 }
 ?>
 <?php if($this->getCollection()->getSize()): ?>
