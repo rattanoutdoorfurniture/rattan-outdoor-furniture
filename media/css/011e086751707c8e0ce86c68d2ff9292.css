@@ -5356,18 +5356,25 @@ img, button, input {
 
     /* Fixes for Contact Page
     *******************************************/
-    .contacts-index-index .buttons-set {
-        clear: none;
-        margin-right: 85px;
-        margin-top: 5px;
-    }
-    .contacts-index-index #comment {
-        height: 230px;
-        margin-bottom: 0 !important;
-    }
     #form-list-contact-us,
     #content-contact-us p:last-child {
         margin-bottom: 0 !important;
+    }
+    .contacts-index-index .list-heading {
+        margin-left: -20px !important;
+    }
+    .contacts-index-index input {
+        width: 260px;
+    }
+    .contacts-index-index #comment {
+        height: 220px;
+        width: 250px;
+        margin-bottom: 0 !important;
+    }
+    .contacts-index-index .buttons-set {
+        clear: none;
+        margin-right: 45px;
+        margin-top: 5px;
     }
 
 .account-box .back-link,
