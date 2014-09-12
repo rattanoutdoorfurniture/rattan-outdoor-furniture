@@ -62,59 +62,88 @@
 
         /**
          * List All Files in the MagentoImport folder, recursively (up to 3 deep)
-         * /
-        $all = $this->getModel()->listFiles()->getItems();
-        $titles = array();
-        foreach($all as $item) {
-            $subItems = $this->listFiles($item->id)->getItems();
-            echo $item->id ." = ". $item->title." (".count($subItems).")<br/>";
-            foreach($subItems as $subItem) {
-                $subItems2 = $this->listFiles($subItem->id)->getItems();
-                echo "\t - " . $subItem->id . " = " . $subItem->title . " (".count($subItems2).")<br/>";
-                if(count($subItems2)==0) continue;
-                foreach($subItems2 as $subItem2) {
-                    echo "\t\t - " . $subItem2->id . " = " . $subItem2->title . "<br/>";
+         */
+        $listFolder = Mage::app()->getRequest()->getQuery("list");
+        if(!empty($listFolder) && boolval($listFolder)!="false") {
+            if($listFolder!=="true") {
+                $parentFolder = $this->getModel()->listFiles($listFolder)->getItems();
+            } else {
+                $parentFolder = $this->getModel()->listFiles()->getItems();
+            }
+            $titles = array();
+            foreach($parentFolder as $item) {
+                $subItems = $this->listFiles($item->id)->getItems();
+                echo $item->id ." = ". $item->title." (".count($subItems).")<br/>";
+                foreach($subItems as $subItem) {
+                    $subItems2 = $this->listFiles($subItem->id)->getItems();
+                    echo "\t - " . $subItem->id . " = " . $subItem->title . " (".count($subItems2).")<br/>";
+                    if(count($subItems2)==0) continue;
+                    foreach($subItems2 as $subItem2) {
+                        echo "\t\t - " . $subItem2->id . " = " . $subItem2->title . "<br/>";
+                    }
                 }
             }
         }
-        / *****************************************************************************************/
+        /*****************************************************************************************/
 
         /**
          * Recursively download all files in the 'locations' folder as .txt
          * and save them to the 'locations-txt' directory in /var/MagentoImport
-         * /
+         */
         $download = Mage::app()->getRequest()->getQuery("download");
-        if($download == "locations") {
-            $saveLocation = Mage::getBaseDir("var")."/MagentoImport/locations-txt";
-            if (!file_exists($saveLocation)) {
-                mkdir($saveLocation, 0755, true);
-            }
-            $locationsId  = "0B9_hVhBJdknvaHdtMUk2QWZJdk0";
-            $locations    = $this->getModel()->listFiles($locationsId)->getItems();
-            $titles = array();
-            foreach($locations as $state) {
-                // This $item should be a state folder
-                $stateName = $state->title;
-                // Create this State Directory if it doesn't exist
-                $stateDir  = str_replace(' ',"-",str_replace("'","",$stateName));
-                $statePath = $saveLocation.DIRECTORY_SEPARATOR.$stateDir;
-                if (!file_exists($statePath)) {
-                    mkdir($statePath, 0755, true);
+        if($download != false && $download === "locations") {
+            $allLocations   = false;
+            $justStates     = true;
+            if($allLocations) {
+                $saveLocation = Mage::getBaseDir("var")."/MagentoImport/locations-txt";
+                if (!file_exists($saveLocation)) {
+                    mkdir($saveLocation, 0755, true);
                 }
-                // City Files for this state:
-                $cities = $this->listFiles($state->id)->getItems();
-                // echo $item->id ." = ". $item->title." (".count($subItems).")<br/>";
-                foreach($cities as $city) {
-                    $cityName = $city->title;
-                    $cityFile = str_replace(' ',"-",str_replace("'","",$cityName)) . ".txt";
-                    $cityPath = $statePath.DIRECTORY_SEPARATOR.$cityFile;
-                    $txtUrl   = $city->exportLinks['text/plain'];
-                    $cityTxt  = $this->getModel()->downloadFile($txtUrl);
-                    file_put_contents($cityPath,$cityTxt);
+                $locationsId  = "0B9_hVhBJdknvaHdtMUk2QWZJdk0";
+                $locations    = $this->getModel()->listFiles($locationsId)->getItems();
+                $titles = array();
+                foreach($locations as $state) {
+                    // This $item should be a state folder
+                    $stateName = $state->title;
+                    // Create this State Directory if it doesn't exist
+                    $stateDir  = str_replace(' ',"-",str_replace("'","",$stateName));
+                    $statePath = $saveLocation.DIRECTORY_SEPARATOR.$stateDir;
+                    if (!file_exists($statePath)) {
+                        mkdir($statePath, 0755, true);
+                    }
+                    // City Files for this state:
+                    $cities = $this->listFiles($state->id)->getItems();
+                    // echo $item->id ." = ". $item->title." (".count($subItems).")<br/>";
+                    foreach($cities as $city) {
+                        $cityName = $city->title;
+                        $cityFile = str_replace(' ',"-",str_replace("'","",$cityName)) . ".txt";
+                        $cityPath = $statePath.DIRECTORY_SEPARATOR.$cityFile;
+                        $txtUrl   = $city->exportLinks['text/plain'];
+                        $cityTxt  = $this->getModel()->downloadFile($txtUrl);
+                        file_put_contents($cityPath,$cityTxt);
+                    }
                 }
+            } elseif($justStates) {
+                $saveLocation = Mage::getBaseDir("var")."/MagentoImport/locations-txt/States";
+                if (!file_exists($saveLocation)) {
+                    mkdir($saveLocation, 0755, true);
+                }
+                $statesId = "0B9_hVhBJdknvc1VzZmpfemFDd2s";
+                $model    = $this->getModel();
+                $states   = $model->listFiles($statesId)->getItems();
+                foreach($states as $state) {
+                    $stateName = $state->title;
+                    $stateFile = str_replace(' ',"-",str_replace("'","",$stateName)) . ".txt";
+                    $statePath = $saveLocation.DIRECTORY_SEPARATOR.$stateFile;
+                    $txtUrl   = $state->exportLinks['text/plain'];
+                    $stateTxt  = $this->getModel()->downloadFile($txtUrl);
+                    file_put_contents($statePath,$stateTxt);
+                }
+            } else {
+                // else
             }
         }
-        / ***************************************************************************************/
+        /***************************************************************************************/
 
         /**
          * - Update - This is the old way of doing things, now I'm downloading as txt and parsing by line
@@ -137,7 +166,8 @@
 <?php endif; ?>
     <div class="link-block">
         <ul>
-            <li><a href="<?php if($this->authed):?>?parse=false&process=false&download=locations<?php else: echo $this->authUrl; endif;?>">Download Locations</a></li>
+            <li><a href="<?php if($this->authed):?>?parse=false&process=false&download=false&list=0B2leKzlKIixAZ1oxYmFubTJ2eEk<?php else: echo $this->authUrl; endif;?>">List "ROF City &amp; State"</a></li>
+            <li><a href="<?php if($this->authed):?>?parse=false&process=false&list=false&download=locations<?php else: echo $this->authUrl; endif;?>">Download Locations</a></li>
             <li><a href="?parse=descriptions&process=true">Parse & Process Descriptions</a></li>
             <li><a href="?parse=locations&process=true">Parse & Process Locations</a></li>
         </ul>

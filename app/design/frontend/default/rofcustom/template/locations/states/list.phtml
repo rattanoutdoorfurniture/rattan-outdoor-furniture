@@ -12,14 +12,15 @@
         <div class="box-content">
             <?php $lists        = 0; ?>
             <?php $i            = 0; ?>
+            <?php $listLimit    = 13; ?>
             <?php foreach($children as $child): ?>
-                <?php if(($i%5)==0): ?>
+                <?php if(($i%$listLimit)==0): ?>
                 <ul class="cms-widget-children-list-link-list">
                 <?php endif; ?>
                 <li class="cms-widget-children-list-link">
                     <a href="<?php echo $this->getUrl($child['identifier']); ?>"><?php echo $this->escapeHtml($child['title']) ?></a>
                 </li>
-                <?php if((($i%5)==4) || ($i==(count($citiesList)-1))): ?>
+                <?php if((($i%$listLimit)==($listLimit-1)) || ($i==(count($citiesList)-1))): ?>
                 </ul><?php $lists++; ?>
                 <?php endif; ?>
                 <?php $i++; ?>
