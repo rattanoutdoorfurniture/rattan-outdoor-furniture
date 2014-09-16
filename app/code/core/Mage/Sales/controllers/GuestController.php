@@ -106,7 +106,7 @@ class Mage_Sales_GuestController extends Mage_Sales_Controller_Abstract
             $this->loadLayout('print');
             $this->renderLayout();
         } else {
-            $this->_redirect('sales/guest/form');
+            $this->_redirect('search/order');
         }
     }
 
@@ -130,7 +130,7 @@ class Mage_Sales_GuestController extends Mage_Sales_Controller_Abstract
             $this->loadLayout('print');
             $this->renderLayout();
         } else {
-            $this->_redirect('sales/guest/form');
+            $this->_redirect('search/order');
         }
     }
 
@@ -155,7 +155,7 @@ class Mage_Sales_GuestController extends Mage_Sales_Controller_Abstract
             $this->loadLayout('print');
             $this->renderLayout();
         } else {
-            $this->_redirect('sales/guest/form');
+            $this->_redirect('search/order');
         }
     }
 }

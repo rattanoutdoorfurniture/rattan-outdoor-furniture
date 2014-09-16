@@ -207,7 +207,7 @@ abstract class Mage_Sales_Controller_Abstract extends Mage_Core_Controller_Front
             if (Mage::getSingleton('customer/session')->isLoggedIn()) {
                 $this->_redirect('*/*/history');
             } else {
-                $this->_redirect('sales/guest/form');
+                $this->_redirect('search/order');
             }
         }
     }
@@ -236,7 +236,7 @@ abstract class Mage_Sales_Controller_Abstract extends Mage_Core_Controller_Front
             if (Mage::getSingleton('customer/session')->isLoggedIn()) {
                 $this->_redirect('*/*/history');
             } else {
-                $this->_redirect('sales/guest/form');
+                $this->_redirect('search/order');
             }
         }
     }
@@ -266,7 +266,7 @@ abstract class Mage_Sales_Controller_Abstract extends Mage_Core_Controller_Front
             if (Mage::getSingleton('customer/session')->isLoggedIn()) {
                 $this->_redirect('*/*/history');
             } else {
-                $this->_redirect('sales/guest/form');
+                $this->_redirect('search/order');
             }
         }
     }

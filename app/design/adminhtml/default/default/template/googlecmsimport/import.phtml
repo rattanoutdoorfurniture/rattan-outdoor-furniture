@@ -1,6 +1,7 @@
 <div>
     <?php
     $gci = MAGE::getSingleton("googlecmsimport/googlecmsimport");
+    $helper = Mage::helper("googlecmsimport");
 //    $uri = "http" . (isset($_SERVER['HTTPS'])?"s":""). "://" . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
 //    echo "<!-- originalUri: $uri -->";
 //    if(substr($uri,-1)=="/") $uri = substr($uri,0,-1);
@@ -64,7 +65,7 @@
          * List All Files in the MagentoImport folder, recursively (up to 3 deep)
          */
         $listFolder = Mage::app()->getRequest()->getQuery("list");
-        if(!empty($listFolder) && boolval($listFolder)!="false") {
+        if(!empty($listFolder) && $listFolder!="false") {
             if($listFolder!=="true") {
                 $parentFolder = $this->getModel()->listFiles($listFolder)->getItems();
             } else {
@@ -91,7 +92,7 @@
          * and save them to the 'locations-txt' directory in /var/MagentoImport
          */
         $download = Mage::app()->getRequest()->getQuery("download");
-        if($download != false && $download === "locations") {
+        if($download != "false" && $download === "locations") {
             $allLocations   = false;
             $justStates     = true;
             if($allLocations) {
@@ -519,6 +520,7 @@
                 $keywords   = str_replace("/"," ",$page["keywords"]);
                 $keywords   = htmlentities(implode(", ",array_unique(explode(" ",str_replace(",",'',$pageTitle)." ".implode(" ", $keywords)))),ENT_QUOTES);
             }
+            $pageIsActive   = $helper->isActiveByIdentifier($pageIdentifier) ? "1" : "0";
             $pageContent    = '<div class="account-box fourteen columns offset-by-one by-margin add-bottom">'
                             . '<div class="account-box-border">&nbsp;</div>'
                             . '<div class="account-box-inner">'
@@ -547,7 +549,7 @@ REPLACE INTO cms_page_tree (
 '{$pageContent}',
 NOW(),
 NOW(),
-0,
+{$pageIsActive},
 0,
 NULL,
 NULL,

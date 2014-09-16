@@ -331,6 +331,7 @@ Guest
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="head">
+            <action method="setTitle" translate="title"><title>Order Status Search</title></action>
             <action method="setDescription"><value>Looking for the status of your order? Search directly online or call our qualified customer service representatives at (844) 2-RATTAN. We want to ensure you're always aware of where your order stands with Rattan Outdoor Furniture.</value></action>
         </reference>
         <reference name="content">
@@ -523,8 +524,8 @@ Guest
      <default>
         <reference name="footer_links">
             <!--<block type="sales/guest_links" name="return_link"/>-->
-            <!--<action method="addLinkBlock"><blockName>return_link</blockName></action>-->
-            <action method="addLink" translate="label title" module="sales"><label>Orders &amp; Returns</label><url helper="sales/guest/getFormLink"></url><title>Orders and Returns</title></action>
+            <action method="addLinkBlock"><blockName>return_link</blockName></action>
+            <action method="addLink" translate="label title" module="sales"><label>Search Order Status</label><url helper="sales/guest/getFormLink" /><title>Order Status Search</title></action>
         </reference>
     </default>
 </layout>

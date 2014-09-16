@@ -41,7 +41,7 @@
             <action method="addLink" translate="label title" module="catalogsearch">
                 <label>Advanced Search</label>
                 <url helper="catalogsearch/getAdvancedSearchUrl" />
-                <title>Advanced Search</title>
+                <title>Advanced Product Search</title>
             </action>
         </reference>
     </default>
@@ -83,14 +83,15 @@
         </reference>
         <remove name="right" />
         <reference name="head">
-            <action method="setTitle" translate="title" module="catalogsearch"><title>Advanced Search</title></action>
-            <action method="addItem"><type>js_css</type><name>calendar/calendar-win2k-1.css</name><params/><!--<if/><condition>can_load_calendar_js</condition>--></action>
-            <action method="addItem"><type>js</type><name>calendar/calendar.js</name><!--<params/><if/><condition>can_load_calendar_js</condition>--></action>
-            <action method="addItem"><type>js</type><name>calendar/calendar-setup.js</name><!--<params/><if/><condition>can_load_calendar_js</condition>--></action>
+            <action method="setTitle" translate="title" module="catalogsearch"><title>Advanced Product Search</title></action>
+            <action method="setDescription"><value>Look up our premium products through our advanced search, where you can look up specifics to discover any particular piece for purchase. Rattan Outdoor Furniture makes purchases quick, easy and accessible.</value></action>
+            <!--<action method="addItem"><type>js_css</type><name>calendar/calendar-win2k-1.css</name><params/><!- -<if/><condition>can_load_calendar_js</condition>- -></action>-->
+            <!--<action method="addItem"><type>js</type><name>calendar/calendar.js</name><!- -<params/><if/><condition>can_load_calendar_js</condition>- -></action>-->
+            <!--<action method="addItem"><type>js</type><name>calendar/calendar-setup.js</name><!- -<params/><if/><condition>can_load_calendar_js</condition>- -></action>-->
         </reference>
         <reference name="content">
             <block type="catalogsearch/advanced_form" name="catalogsearch_advanced_form" template="catalogsearch/advanced/form.phtml"/>
-            <block type="core/html_calendar" name="html_calendar" as="html_calendar" template="page/js/calendar.phtml"/>
+            <!--<block type="core/html_calendar" name="html_calendar" as="html_calendar" template="page/js/calendar.phtml"/>-->
         </reference>
     </catalogsearch_advanced_index>
 

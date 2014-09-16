@@ -63,7 +63,7 @@ class Mage_Sales_Helper_Guest extends Mage_Core_Helper_Data
         $order = Mage::getModel('sales/order');
 
         if (empty($post) && !Mage::getSingleton('core/cookie')->get($this->_cookieName)) {
-            Mage::app()->getResponse()->setRedirect(Mage::getUrl('sales/guest/form'));
+            Mage::app()->getResponse()->setRedirect(Mage::getUrl('search/order'));
             return false;
         } elseif (!empty($post) && isset($post['oar_order_id']) && isset($post['oar_type']))  {
             $type           = $post['oar_type'];
@@ -120,7 +120,7 @@ class Mage_Sales_Helper_Guest extends Mage_Core_Helper_Data
         Mage::getSingleton('core/session')->addError(
             $this->__('Entered data is incorrect. Please try again.')
         );
-        Mage::app()->getResponse()->setRedirect(Mage::getUrl('sales/guest/form'));
+        Mage::app()->getResponse()->setRedirect(Mage::getUrl('search/order'));
         return false;
     }
 
@@ -150,7 +150,7 @@ class Mage_Sales_Helper_Guest extends Mage_Core_Helper_Data
     }
 
     public function getFormLink() {
-        return Mage::getUrl("sales/guest/form");
+        return Mage::getUrl("search/order");
     }
 
 }

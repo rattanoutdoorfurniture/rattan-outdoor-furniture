@@ -28,3 +28,10 @@ over paranthesized
 Line Break SITEMAP XML
 (<url>)(<loc>.*</loc>)(<lastmod>.*</lastmod>)(<changefreq>.*</changefreq>)(<priority>.*</priority>)(</url>)
 \n\t$1\n\t\t$2\n\t\t$3\n\t\t$4\n\t\t$5\n\t$6
+
+Parse Identifier From SiteMap XML
+<url>[\n\r].*<loc>http://www.rattanoutdoorfurniture.com/(.*)/</loc>([\n\r].*){3}[\n\r].*</url>
+"$1",
+
+Check Number of Released Locations (in generated sql file)
+locations/[a-z\-]+/[a-z\-]+',([\n\r].*){4}[\n\r]+NOW\(\),[\n\r]+NOW\(\),[\n\r]+1

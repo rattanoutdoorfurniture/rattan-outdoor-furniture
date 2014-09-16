@@ -1623,12 +1623,12 @@ img, button, input {
 
     /* Advanced Search Form Page
     ************************************************************/
-    .input-range input {
+    .box-search-advanced .input-range input {
         float: left;
-        width: 75px;
+        width: 120px;
         margin-right: 10px;
     }
-    .input-range input + * {
+    .box-search-advanced .input-range input + * {
         float: left;
         margin-right: 10px;
         width: 30px;
@@ -1637,11 +1637,15 @@ img, button, input {
         padding: 6px 0;
     }
 
-    label .label-wrap {
+    .box-search-advanced .input-box input {
+        width: 300px;
+    }
+
+    .box-search-advanced label .label-wrap {
         border-bottom: 1px solid #e6e6e6;
         padding-bottom: 3px;
         margin-bottom: 10px;
-        max-width: 220px;
+        width: 310px;
     }
 
     .account-sub-button.search-button {
