@@ -37,6 +37,18 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>http://www.rattanoutdoorfurniture.com/search/advanced/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/search/order/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>http://www.rattanoutdoorfurniture.com/login/</loc>
         <lastmod>2014-09-11</lastmod>
         <changefreq>daily</changefreq>
@@ -2205,6 +2217,126 @@
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/locations/wisconsin/milwaukee/</loc>
         <lastmod>2014-09-16</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/nevada/las-vegas/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/new-mexico/albuquerque/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/arizona/tucson/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/california/fresno/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/california/sacramento/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/california/long-beach/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/missouri/kansas-city/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/arizona/mesa/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/virginia/virginia-beach/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/georgia/atlanta/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/colorado/colorado-springs/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/north-carolina/raleigh/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/nebraska/omaha/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/florida/miami/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/california/oakland/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/oklahoma/tulsa/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/minnesota/minneapolis/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/ohio/cleveland/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/kansas/wichita/</loc>
+        <lastmod>2014-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/locations/texas/arlington/</loc>
+        <lastmod>2014-09-22</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
