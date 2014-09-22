@@ -56,6 +56,48 @@ class Rofcustom_Googlecmsimport_IndexController extends Mage_Adminhtml_Controlle
             ->_addContent($this->getLayout()->createBlock('googlecmsimport/import'))
             ->renderLayout();
     }
+
+    public function updateAction() {
+        // Set Layout to Print JSON
+        $this->getResponse()->clearHeaders()->setHeader('Content-type','application/json',true);
+
+        $gim = Mage::getSingleton("googlecmsimport/googlecmsimport");
+        $gim->getClient();
+        $gim->doAuth();
+        $drs = $gim->getService();
+
+        $saveLocation = $this->getRequest()->getPost('local_path');
+        $getLocation  = $this->getRequest()->getPost('remote_path');
+
+        if(!strlen($saveLocation) || !strlen($getLocation)) {
+            $response = array(
+                "status" => "Error",
+                "error"  => "Paths Incorrectly Set:<br/>saveLocation: {$saveLocation}<br/>getLocation: {$getLocation}"
+            );
+        } else {
+            // Continue if Paths are set
+            $text  = $gim->downloadFile($getLocation);
+            if(is_null($text)) {
+                $response = array(
+                    "status" => "Error",
+                    "error"  => "Error getting text from Google."
+                );
+            } else {
+                if(file_put_contents($saveLocation,$text)=== false) {
+                    $response = array(
+                        "status" => "Error",
+                        "error"  => "Error Saving Content"
+                    );
+                } else {
+                    $response = array(
+                        "status" => "Success"
+                    );
+                }
+            }
+        }
+
+        $this->getResponse()->setBody(json_encode($response));
+    }
 //
 //    /**
 //     * Create new CMS block

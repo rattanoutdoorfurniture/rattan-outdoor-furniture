@@ -93,8 +93,8 @@
          */
         $download = Mage::app()->getRequest()->getQuery("download");
         if($download != "false" && $download === "locations") {
-            $allLocations   = false;
-            $justStates     = true;
+            $allLocations   = true;
+            $justStates     = false;
             if($allLocations) {
                 $saveLocation = Mage::getBaseDir("var")."/MagentoImport/locations-txt";
                 if (!file_exists($saveLocation)) {
@@ -120,8 +120,12 @@
                         $cityFile = str_replace(' ',"-",str_replace("'","",$cityName)) . ".txt";
                         $cityPath = $statePath.DIRECTORY_SEPARATOR.$cityFile;
                         $txtUrl   = $city->exportLinks['text/plain'];
-                        $cityTxt  = $this->getModel()->downloadFile($txtUrl);
-                        file_put_contents($cityPath,$cityTxt);
+                        /*$cityTxt  = $this->getModel()->downloadFile($txtUrl);
+                        file_put_contents($cityPath,$cityTxt);*/
+                        echo '<article class="google-cms-import update" data-local-path="'.$cityPath.'" data-remote-path="' . $txtUrl . '" >'
+                            .'<span class="google-cms-import status">Pending</span>'
+                            .'<span class="google-cms-import file-name">'.$cityPath.'</span>'
+                            .'</article>';
                     }
                 }
             } elseif($justStates) {
@@ -595,3 +599,56 @@ QUERY;
     <?php endif; ?>
     </div>
 </div>
+
+<?php if(true)://isset($download) && $download != "false" && $download === "locations" && $allLocations == true): ?>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        var procs = [];
+        jQuery(".google-cms-import.update").each(function() {
+            var $this = jQuery(this);
+            var postData = {
+                form_key:    window.FORM_KEY,
+                remote_path: $this.data("remote-path"),
+                local_path:  $this.data("local-path")
+            };
+            procs.push(jQuery.ajax({
+                url: '<?php echo $this->getUrl("googlecmsimport/index/update")."?isAjax=true"; ?>',
+                data: postData,
+                dataType: 'json',
+                type: 'POST',
+                beforeSend: function() {
+                    $this.find(".status").text("Processing...")
+                }
+            }).done(function(json) {
+                $this.find(".status").text(json.status);
+                if(json.error) {
+                    $this.appendChild(jQuery("<div/>").addClass("google-cms-input error").text(json.error));
+                }
+            }));
+        });
+        jQuery.when(procs).done(function() {
+           jQuery(".google-cms-import.update:last").after(function() {
+               var $results = jQuery("<div/>").addClass("google-cms-import results");
+               var files    = jQuery(".google-cms-import.update");
+               var fileCnt  = files.length;
+               var errors   = files.find(".error");
+               var errorCnt = errors.length;
+               var errorHtml= [];
+               errors.each(function() {
+                   var $this = jQuery(this);
+                   var fileName = $this.sibling('.file-name').html();
+                   var error = $this.html();
+                   errorHtml.push("<div><label>"+filename+"</label><span>"+error+"</div>");
+               })
+               var htmlStr  = "Files: " + fileCnt + "<br/>"
+                            + "Error Count: " + errorCnt + "<br />" +
+                            ( (errorHtml.length) ?
+                                "Errors: <br />" + errorHtml.join("") :
+                                ""
+                            );
+
+           });
+        });
+    });
+</script>
+<?php endif; ?>
