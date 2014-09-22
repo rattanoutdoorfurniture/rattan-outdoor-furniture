@@ -122,9 +122,10 @@
                         $txtUrl   = $city->exportLinks['text/plain'];
                         /*$cityTxt  = $this->getModel()->downloadFile($txtUrl);
                         file_put_contents($cityPath,$cityTxt);*/
-                        echo '<article class="google-cms-import update" data-local-path="'.$cityPath.'" data-remote-path="' . $txtUrl . '" >'
-                            .'<span class="google-cms-import status">Pending</span>'
-                            .'<span class="google-cms-import file-name">'.$cityPath.'</span>'
+                        $updated  = false; //strtotime($city->modifiedDate) > strtotime(filemtime($cityPath));
+                        echo '<article class="google-cms-import '.($updated?'updated':'update').'" data-local-path="'.$cityPath.'" data-remote-path="' . $txtUrl . '" >'
+                            .'<span class="google-cms-import status">'.($updated?'Updated':'Pending').'</span>'
+                            .'<span class="google-cms-import file-name"> '.$cityPath.'</span>'
                             .'</article>';
                     }
                 }
