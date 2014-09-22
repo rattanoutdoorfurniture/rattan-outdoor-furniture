@@ -89,18 +89,19 @@
 
         /**
          * Recursively download all files in the 'locations' folder as .txt
-         * and save them to the 'locations-txt' directory in /var/MagentoImport
+         * and save them to the 'locations' directory in /var/MagentoImport
          */
         $download = Mage::app()->getRequest()->getQuery("download");
         if($download != "false" && $download === "locations") {
             $allLocations   = true;
             $justStates     = false;
             if($allLocations) {
-                $saveLocation = Mage::getBaseDir("var")."/MagentoImport/locations-txt";
+                $saveLocation = Mage::getBaseDir("var")."/MagentoImport/locations";
                 if (!file_exists($saveLocation)) {
                     mkdir($saveLocation, 0755, true);
                 }
-                $locationsId  = "0B9_hVhBJdknvaHdtMUk2QWZJdk0";
+                //$locationsId  = "0B9_hVhBJdknvaHdtMUk2QWZJdk0";
+                $locationsId  = "0B2leKzlKIixAZ1oxYmFubTJ2eEk";
                 $locations    = $this->getModel()->listFiles($locationsId)->getItems();
                 $titles = array();
                 foreach($locations as $state) {
@@ -130,7 +131,7 @@
                     }
                 }
             } elseif($justStates) {
-                $saveLocation = Mage::getBaseDir("var")."/MagentoImport/locations-txt/States";
+                $saveLocation = Mage::getBaseDir("var")."/MagentoImport/locations/States";
                 if (!file_exists($saveLocation)) {
                     mkdir($saveLocation, 0755, true);
                 }
@@ -192,9 +193,9 @@
     } else
     if($parse == "locations") {
         $io = array(
-            "input"     => Mage::getBaseDir("var")."/MagentoImport/locations-txt/*/*.txt",
-            "output"    => Mage::getBaseDir("var")."/MagentoImport/locations-txt/locations.sql",
-            "parent"    => Mage::getBaseDir("var")."/MagentoImport/locations-txt/",
+            "input"     => Mage::getBaseDir("var")."/MagentoImport/locations/*/*.txt",
+            "output"    => Mage::getBaseDir("var")."/MagentoImport/locations/locations.sql",
+            "parent"    => Mage::getBaseDir("var")."/MagentoImport/locations/",
             "q"         => '"',
             "usePhrase" => true
         );
