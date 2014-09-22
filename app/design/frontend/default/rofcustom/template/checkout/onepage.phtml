@@ -31,9 +31,9 @@
 <!-- COLLAPSED CART LINK BACK TO FULL CART VIEW
 ---------------------------------------------------------------------------------------------------->
 
-<script type="text/javascript" src="<?php echo $this->getJsUrl('varien/accordion.js') ?>"></script>
-<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/opcheckout.js') ?>"></script>
-<div id="cart-cartbox" class="ten columns cart-box collapse">
+<script type="text/javascript" src="<?php echo str_replace("http:","https:",$this->getJsUrl('varien/accordion.js')) ?>"></script>
+<script type="text/javascript" src="<?php echo str_replace("http:","https:",$this->getSkinUrl('js/opcheckout.js')) ?>"></script>
+<div id="cart-cartbox" class="ten columns cart-box collapse add-bottom">
     <div class="cart-box-border"></div>
     <div class="cart-box-inner">
         <section id="cart-cartbox-toggle">
@@ -48,7 +48,7 @@
 <!-- RIGHT COLUMN TOTALS BOX <?php /** @TODO: Put this in the actual right column, as handled by Magento */ ?>
 -------------------------------------------------------------------------------------------------------------->
 
-<section id="cart-btns" class="six columns">
+<section id="cart-btns" class="six columns" style="float:right;">
     <div id="cart-subtotal" class="cart-box">
         <div class="cart-box-border"></div>
         <div class="cart-box-inner">
@@ -68,10 +68,10 @@
 <!-- LEFT COLUMN ONE PAGE CHECKOUT TAB BOX
 -------------------------------------------------------------------------------------------------------------->
 
-<ol class="opc displaynone" id="checkoutSteps">
+<ol class="opc ten columns account-box no-border" id="checkoutSteps">
 <?php $i=0; foreach($this->getSteps() as $_stepId => $_stepInfo): ?>
 <?php if (!$this->getChild($_stepId) || !$this->getChild($_stepId)->isShow()): continue; endif; $i++ ?>
-    <li id="opc-<?php echo $_stepId ?>" class="section<?php echo !empty($_stepInfo['allow'])?' allow':'' ?><?php echo !empty($_stepInfo['complete'])?' saved':'' ?>">
+    <li id="opc-<?php echo $_stepId ?>" class="account-box-inner section<?php echo !empty($_stepInfo['allow'])?' allow':'' ?><?php echo !empty($_stepInfo['complete'])?' saved':'' ?>">
         <div class="step-title">
             <span class="number"><?php echo $i ?></span>
             <h2><?php echo $_stepInfo['label'] ?></h2>
@@ -96,10 +96,10 @@
     accordion.openSection('opc-<?php echo $this->getActiveStep() ?>');
     <?php endif ?>
     var checkout = new Checkout(accordion,{
-        progress: '<?php echo $this->getUrl('checkout/onepage/progress') ?>',
-        review: '<?php echo $this->getUrl('checkout/onepage/review') ?>',
-        saveMethod: '<?php echo $this->getUrl('checkout/onepage/saveMethod') ?>',
-        failure: '<?php echo $this->getUrl('checkout/cart') ?>'}
+        progress: '<?php echo str_replace("http:","https:",$this->getUrl('checkout/onepage/progress')) ?>',
+        review: '<?php echo str_replace("http:","https:",$this->getUrl('checkout/onepage/review')) ?>',
+        saveMethod: '<?php echo str_replace("http:","https:",$this->getUrl('checkout/onepage/saveMethod')) ?>',
+        failure: '<?php echo str_replace("http:","https:",$this->getUrl('checkout/cart')) ?>'}
     );
 //]]>
 </script>
