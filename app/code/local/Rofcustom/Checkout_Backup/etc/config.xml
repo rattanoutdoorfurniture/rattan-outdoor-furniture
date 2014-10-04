@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config>
+    <!--<modules>-->
+        <!--<Rofcustom_Checkout>-->
+            <!--<version>1.0</version>-->
+        <!--</Rofcustom_Checkout>-->
+    <!--</modules>-->
+    <!--<global>-->
+        <!--<blocks>-->
+            <!--<checkout>-->
+                <!--<rewrite>-->
+                    <!--<class>Rofcustom_Checkout_Block_Onepage</class>-->
+                    <!--&lt;!&ndash;<onepage>Rofcustom_Checkout_Block_Onepage</onepage>&ndash;&gt;-->
+                <!--</rewrite>-->
+            <!--</checkout>-->
+        <!--</blocks>-->
+        <!--<models>-->
+            <!--<checkout>-->
+                <!--<rewrite>-->
+                    <!--<class>Rofcustom_Checkout_Model_Onepage</class>-->
+                <!--</rewrite>-->
+            <!--</checkout>-->
+        <!--</models>-->
+    <!--</global>-->
+    <!--<frontend>-->
+        <!--<routers>-->
+            <!--<checkout_onepage>-->
+                <!--<use>standard</use>-->
+                <!--<args>-->
+                    <!--<modules>-->
+                        <!--<Rofcustom_Checkout before="Mage_Checkout">Rofcustom_Checkout</Rofcustom_Checkout>-->
+                    <!--</modules>-->
+                <!--</args>-->
+            <!--</checkout_onepage>-->
+        <!--</routers>-->
+    <!--</frontend>-->
+</config>

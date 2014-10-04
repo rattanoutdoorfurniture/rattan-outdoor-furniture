@@ -51,6 +51,10 @@
         <!-- Breadcrumbs: <?php echo $this->getChildHtml('breadcrumbs') ?> -->
         <!-- GlobalMessages: <?php echo $this->getChildHtml('global_messages') ?> -->
 
+        <div class="page-title sixteen columns">
+            <h1 id="page-heading"><?php echo strstr($this->getLayout()->getBlock('head')->getTitle(),' '.Mage::getStoreConfig('design/head/title_suffix'),true); ?></h1>
+        </div>
+
         <div class="twelve columns">
             <?php echo $this->getChildHtml('content') ?>
         </div>

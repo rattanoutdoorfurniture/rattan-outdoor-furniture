@@ -194,7 +194,7 @@
         </reference>
         <reference name="checkout.onepage.login">
             <action method="setTemplate" >
-                <template>inchoo/socialconnect/checkout/onepage/login.phtml</template>
+                <template>checkout/onepage/login.phtml</template>
             </action>
             <block type="inchoo_socialconnect/checkout" name="inchoo_socialconnect_checkout">
                 <block type="inchoo_socialconnect/google_button" name="inchoo_socialconnect_checkout_google_button" />

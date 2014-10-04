@@ -168,7 +168,38 @@ jQuery(document).ready(function($){
             }).prop('selected', true);
         });
     }
-    if(location.href.match(/onepage/)) {
+    if(location.href.match(/(onepage|checkout)/)) {
+        /*
+         | ----------------------------------------------------------------------------------
+         | Password Generator
+         | ----------------------------------------------------------------------------------
+         */
+        jQuery.password = function (length, special) {
+            var iteration = 0;
+            var password = "";
+            var randomNumber;
+            if(special == undefined){
+                var special = false;
+            }
+            while(iteration < length){
+                randomNumber = (Math.floor((Math.random() * 100)) % 94) + 33;
+                if(!special){
+                    if ((randomNumber >=33) && (randomNumber <=47)) { continue; }
+                    if ((randomNumber >=58) && (randomNumber <=64)) { continue; }
+                    if ((randomNumber >=91) && (randomNumber <=96)) { continue; }
+                    if ((randomNumber >=123) && (randomNumber <=126)) { continue; }
+                }
+                iteration++;
+                password += String.fromCharCode(randomNumber);
+            }
+            return password;
+        };
+
+        /*
+         | ----------------------------------------------------------------------------------
+         | Credit Card Type Selector
+         | ----------------------------------------------------------------------------------
+         */
         jQuery.getCreditCardType = function(val) {
             if(!val || !val.length) return undefined;
 
@@ -230,6 +261,8 @@ jQuery(document).ready(function($){
                 jQuery(this).parent().on('keyup', "input",keyupHandler).trigger('keyup');
             });
         };
-        jQuery('#paypal_direct_cc_number').creditCardType();
+        if(jQuery('#paypal_direct_cc_number').length) {
+            jQuery('#paypal_direct_cc_number').creditCardType();
+        }
     }
 });

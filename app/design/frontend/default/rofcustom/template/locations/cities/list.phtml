@@ -40,7 +40,7 @@
                     <?php //$stateLink = $citiesList[$i]; ?>
                     <li class="cms-widget-state-list-link">
                         <?php if($city['is_active']): ?>
-                        <a href="<?php echo $this->getUrl($city['identifier']) ?>"><?php echo $this->escapeHtml(stristr($city['title'],",",true)) ?></a>
+                        <a href="<?php echo $this->getUrl($city['identifier']) ?>"><?php echo $this->escapeHtml($state=="district-of-columbia"?$city['title']:stristr($city['title'],",",true)) ?></a>
                         <?php else: ?>
                         <span><?php echo $this->escapeHtml(stristr($city['title'],",",true)); ?></span>
                         <?php endif; ?>

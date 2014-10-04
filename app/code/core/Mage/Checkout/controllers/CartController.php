@@ -83,7 +83,7 @@ class Mage_Checkout_CartController extends Mage_Core_Controller_Front_Action
             if(strcasecmp($proceedTo,"checkout")===0) {
 //                $this->getResponse()->setRedirect(Mage::getUrl('onepage'));
 //                Mage::getSingleton('checkout/session')->setNoCartRedirect(true);
-                $this->_redirect("onepage");
+                $this->_redirect("checkout/onepage");
             } else {
                 $this->getResponse()->setRedirect($proceedTo);
             }

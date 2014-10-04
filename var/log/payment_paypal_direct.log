@@ -184,3 +184,60 @@
     [__pid] => 28408
 )
 
+2014-10-03T18:40:05+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [DoDirectPayment] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [IPADDRESS] => 127.0.0.1
+            [RETURNFMFDETAILS] => 1
+            [AMT] => 4341.00
+            [CURRENCYCODE] => USD
+            [INVNUM] => 1201405326
+            [NOTIFYURL] => http://local.rattanoutdoorfurniture.com/paypal/ipn/
+            [EMAIL] => asdf@asdf.as
+            [CREDITCARDTYPE] => ****
+            [ACCT] => ****
+            [EXPDATE] => ****
+            [CVV2] => ****
+            [ISSUENUMBER] => 
+            [ITEMAMT] => 4341.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [BUSINESS] => 
+            [FIRSTNAME] => asdf
+            [LASTNAME] => asdf
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => AL
+            [CITY] => asdf
+            [STREET] => asdf
+            [ZIP] => 12345
+            [PHONENUM] => 1231231234
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => AL
+            [SHIPTOCITY] => asdf
+            [SHIPTOSTREET] => asdf
+            [SHIPTOZIP] => 12345
+            [SHIPTOPHONENUM] => 1231231234
+            [SHIPTOSTREET2] => 
+            [STREET2] => 
+            [SHIPTONAME] => asdf asdf
+            [METHOD] => DoDirectPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_DP_US
+        )
+
+    [response] => Array
+        (
+        )
+
+    [__pid] => 2496
+)
+

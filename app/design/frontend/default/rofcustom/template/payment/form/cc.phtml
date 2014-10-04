@@ -54,26 +54,28 @@
     <li>
         <label for="<?php echo $_code ?>_cc_number" class="required"><em>*</em><?php echo $this->__('Credit Card Number') ?></label>
         <div class="input-box has-credit-card-logos">
-            <input type="text" id="<?php echo $_code ?>_cc_number" name="payment[cc_number]" title="<?php echo $this->__('Credit Card Number') ?>" class="input-text validate-cc-number validate-cc-type remove-bottom required-entry" value="" />
             <ul id="credit-card-type">
                 <li class="NN active"></li>
                 <li class="VI">Visa</li>
                 <li class="MC">Mastercard</li>
                 <li class="AE">American Express</li>
                 <li class="DI">Discover</li>
-            </ul
+            </ul>
+            <input type="text" id="<?php echo $_code ?>_cc_number" name="payment[cc_number]" title="<?php echo $this->__('Credit Card Number') ?>" class="input-text validate-cc-number validate-cc-type remove-bottom required-entry" value="" />
         </div>
     </li>
     <li id="<?php echo $_code ?>_cc_type_exp_div">
         <label for="<?php echo $_code ?>_expiration" class="required"><em>*</em><?php echo $this->__('Expiration Date') ?></label>
         <div class="input-box">
-            <div class="v-fix">
+            <div class="cc_type_exp_field">
                 <select id="<?php echo $_code ?>_expiration" name="payment[cc_exp_month]" class="month validate-cc-exp required-entry remove-bottom">
                 <?php $_ccExpMonth = $this->getInfoData('cc_exp_month') ?>
                 <?php foreach ($this->getCcMonths() as $k=>$v): ?>
                     <option value="<?php echo $k?$k:'' ?>"<?php if($k==$_ccExpMonth): ?> selected="selected"<?php endif ?>><?php echo $v ?></option>
                 <?php endforeach ?>
                 </select>
+            </div>
+            <div class="cc_type_exp_field">
                 <?php $_ccExpYear = $this->getInfoData('cc_exp_year') ?>
                 <select id="<?php echo $_code ?>_expiration_yr" name="payment[cc_exp_year]" class="year required-entry remove-bottom">
                 <?php foreach ($this->getCcYears() as $k=>$v): ?>
@@ -146,3 +148,11 @@
     </li>
     <?php endif; ?>
 </ul>
+
+<script type="text/javascript">
+    //<![CDATA[
+    jQuery(document).ready(function() {
+        jQuery('#<?php echo $_code; ?>_cc_number').creditCardType();
+    });
+    //]]>
+</script>

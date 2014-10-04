@@ -24,15 +24,13 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div class="page-title sixteen columns">
-    <h1 id="cart-heading"><?php echo $this->__('Checkout') ?></h1>
-</div>
-
 <!-- COLLAPSED CART LINK BACK TO FULL CART VIEW
 ---------------------------------------------------------------------------------------------------->
 
-<script type="text/javascript" src="<?php echo str_replace("http:","https:",$this->getJsUrl('varien/accordion.js')) ?>"></script>
-<script type="text/javascript" src="<?php echo str_replace("http:","https:",$this->getSkinUrl('js/opcheckout.js')) ?>"></script>
+<script type="text/javascript" src="<?php echo str_replace("http:","http:",$this->getJsUrl('varien/accordion.js')) ?>"></script>
+<script type="text/javascript" src="<?php echo str_replace("http:","http:",$this->getSkinUrl('js/opcheckout.js')) ?>"></script>
+
+<?php /**
 <div id="cart-cartbox" class="ten columns cart-box collapse add-bottom">
     <div class="cart-box-border"></div>
     <div class="cart-box-inner">
@@ -44,9 +42,10 @@
     <div class="cart-box-border"></div>
 </div>
 
-
-<!-- RIGHT COLUMN TOTALS BOX <?php /** @TODO: Put this in the actual right column, as handled by Magento */ ?>
+<!-- RIGHT COLUMN TOTALS BOX
 -------------------------------------------------------------------------------------------------------------->
+
+<?php // echo $this->getChildHtml('review')?>
 
 <section id="cart-btns" class="six columns" style="float:right;">
     <div id="cart-subtotal" class="cart-box">
@@ -62,6 +61,7 @@
         <button id="cart-continue-btn" class="cart-btn" onclick="setLocation('<?php echo $this->getUrl("products");?>');">Back to Store</button>
     </section>
 </section>
+ */ ?>
 
 
 
@@ -75,7 +75,7 @@
         <div class="step-title">
             <span class="number"><?php echo $i ?></span>
             <h2><?php echo $_stepInfo['label'] ?></h2>
-            <a href="#"><?php echo $this->__('Edit') ?></a>
+            <a href="#"><?php echo $this->__('&nbsp;') ?></a>
         </div>
         <div id="checkout-step-<?php echo $_stepId ?>" class="step a-item" style="display:none;">
             <?php echo $this->getChildHtml($_stepId) ?>
@@ -84,11 +84,6 @@
 <?php endforeach ?>
 </ol>
 
-
-
-<!-- JAVASCRIPT TO HANDLE MAGENTO ACCORDION. THIS WILL NEED EDITS, I'M SURE
------------------------------------------------------------------------------------------------------------------------>
-
 <script type="text/javascript">
 //<![CDATA[
     var accordion = new Accordion('checkoutSteps', '.step-title', true);
@@ -96,10 +91,10 @@
     accordion.openSection('opc-<?php echo $this->getActiveStep() ?>');
     <?php endif ?>
     var checkout = new Checkout(accordion,{
-        progress: '<?php echo str_replace("http:","https:",$this->getUrl('checkout/onepage/progress')) ?>',
-        review: '<?php echo str_replace("http:","https:",$this->getUrl('checkout/onepage/review')) ?>',
-        saveMethod: '<?php echo str_replace("http:","https:",$this->getUrl('checkout/onepage/saveMethod')) ?>',
-        failure: '<?php echo str_replace("http:","https:",$this->getUrl('checkout/cart')) ?>'}
+        progress: '<?php echo str_replace("http:","http:",$this->getUrl('checkout/onepage/progress')) ?>',
+        review: '<?php echo str_replace("http:","http:",$this->getUrl('checkout/onepage/review')) ?>',
+        saveMethod: '<?php echo str_replace("http:","http:",$this->getUrl('checkout/onepage/saveMethod')) ?>',
+        failure: '<?php echo str_replace("http:","http:",$this->getUrl('checkout/cart')) ?>'}
     );
 //]]>
 </script>

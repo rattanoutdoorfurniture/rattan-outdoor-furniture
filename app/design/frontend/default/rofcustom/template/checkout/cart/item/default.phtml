@@ -84,9 +84,29 @@ $this->overrideProductUrl($itemUrl);
                 <?php echo $this->escapeHtml($this->getProductName()) ?>
             <?php endif; ?>
         </h2>
+        <?php if ($_options = $this->getOptionList()):?>
+            <dl class="item-options">
+                <a class="item-options-open" onclick="jQuery(this).parent().addClass('show');return false;">details</a>
+                <a class="item-options-close"onclick="jQuery(this).parent().removeClass('show');return false;">&#215;</a>
+                <?php foreach ($_options as $_option) : ?>
+                    <?php $_formatedOptionValue = $this->getFormatedOptionValue($_option) ?>
+                    <dt><?php echo $this->escapeHtml($_option['label']) ?></dt>
+                    <dd<?php if (isset($_formatedOptionValue['full_view'])): ?> class="truncated"<?php endif; ?>><?php echo $_formatedOptionValue['value'] ?>
+                        <?php if (isset($_formatedOptionValue['full_view'])): ?>
+                            <div class="truncated_full_value">
+                                <dl class="item-options">
+                                    <dt><?php echo $this->escapeHtml($_option['label']) ?></dt>
+                                    <dd><?php echo $_formatedOptionValue['full_view'] ?></dd>
+                                </dl>
+                            </div>
+                        <?php endif; ?>
+                    </dd>
+                <?php endforeach; ?>
+            </dl>
+        <?php endif;?>
+        <?php /*
         <section  class="cart-cartbox-table-product-detail-item">Item #: 325498</section>
-        <section  class="cart-cartbox-table-product-detail-model">Model #: 019283</section>
-        <?php /* if ($_options = $this->getOptionList()):?>
+        <section  class="cart-cartbox-table-product-detail-model">Model #: 019283</section> if ($_options = $this->getOptionList()):?>
             <?php foreach ($_options as $_option) : ?>
                 <?php $_formatedOptionValue = $this->getFormatedOptionValue($_option) ?>
                 <?php $_optionLabel = $this->escapeHtml($_option['label']); ?>

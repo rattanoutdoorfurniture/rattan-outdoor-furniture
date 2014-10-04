@@ -103,6 +103,11 @@ img, button, input {
         display: none;
     }
 
+    /* Push subtotals to right for new checkout (needs coupon codes on cart) */
+    #cart-btns {
+        float: right;
+    }
+
     #cart-cartbox.hide-items ~ #cart-btns {
         margin-top: -60px;
 
@@ -214,6 +219,20 @@ img, button, input {
         margin: 10px;
         border: 1px solid #e6e6e6;
         padding: 0 10px 0 0;
+    }
+
+    /* Product Color Swatch Values (For Use as Border Color around Product Image) *************/
+    .cart-cartbox-table-product-detail-img-wrap.peach {
+        background-color: #EDDFCC;
+        background-image: none;
+    }
+    .cart-cartbox-table-product-detail-img-wrap.pink {
+        background-color: #DD95BC;
+        background-image: none;
+    }
+    .cart-cartbox-table-product-detail-img-wrap.blue {
+        background-color: #56B2DD;
+        background-image: none;
     }
 
     .cart-cartbox-table-product-detail-img {
@@ -703,446 +722,6 @@ img, button, input {
         width: 170px;
     }
 
-    /* One Page Checkout Custom Styles
-    ********************************************************************/
-
-        /* General One Page Checkout Text Styles
-        *****************************************************/
-        .opc-wrapper-opc * {
-            font-family: 'Open Sans', Arial, Helvetica;
-            color: #393939;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-        .opc-wrapper-opc input {
-            margin-bottom: 0 !important;
-        }
-
-        .opc-wrapper-opc input[type="text"],
-        .opc-wrapper-opc input[type="password"] {
-            border: 1px solid #d8d8d8;
-            height: 22px;
-            padding: 0;
-            width: 100%;
-        }
-
-        /* Cart Toggle Link
-        *****************************************************/
-        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle,
-        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle,
-        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle span,
-        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle span,
-        .opc-wrapper-opc #cart-subtotal-header {
-            color: #8a6399 !important;
-            font: normal 16px/16px "Tahoma" !important;
-            text-decoration: none;
-        }
-
-        .opc-wrapper-opc #cart-subtotal-header {
-            font-weight: bold !important;
-        }
-
-        /* One Page Checkout Heading - Move Login Link Here
-        ****************************************************/
-        .opc-wrapper-opc .page-title {
-            display: inline-block;
-            white-space: nowrap;
-        }
-
-        .opc-wrapper-opc .page-title .text-login {
-            display: inline-block;
-            margin: 0;
-            padding-left: 10px;
-        }
-
-        /* Column And Field Adjustments for Proper Display
-        ****************************************************/
-        .opc-wrapper-opc #cart-cartbox.hide-items #cart-cartbox-toggle,
-        .opc-wrapper-opc #cart-cartbox.collapse #cart-cartbox-toggle {
-            height: 40px !important;
-        }
-
-        .opc-wrapper-opc .opc-col-left h3 {
-            margin-bottom: 5px;
-        }
-
-        .opc-wrapper-opc .opc-col-left h3,
-        .opc-wrapper-opc .opc-col-center h3 {
-            margin: 10px auto 5px;
-        }
-
-        .opc-wrapper-opc .opc-col-left,
-        .opc-wrapper-opc .opc-col-center {
-            margin-right: 10px !important;
-            margin-left: 18px !important;
-            width: 45% !important;
-        }
-        
-        @media print {
-            .opc-wrapper-opc .opc-col-left {
-                float: left !important;
-                max-width: 45%;
-            }
-            .opc-wrapper-opc .opc-col-center {
-                float: right !important;
-                max-width: 45%;
-            }
-        }
-
-        .opc-wrapper-opc .opc-col-right {
-            margin-left: 10px !important;
-            float: right !important;
-        }
-
-        .opc-wrapper-opc .wide .field,
-        .opc-wrapper-opc .fields .field {
-            width: 100% !important;
-            height: 45px !important;
-        }
-
-
-        .opc-wrapper-opc .fields:after,
-        .opc-wrapper-opc .fields .field:after,
-        .opc-wrapper-opc .wide:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
-
-        .opc-wrapper-opc .wide .field label,
-        .opc-wrapper-opc .wide label,
-        .opc-wrapper-opc .fields .field label {
-            height: 22px;
-            padding-top: 5px;
-            margin-left: 5px;
-        }
-
-        .opc-wrapper-opc .wide .field label.required em,
-        .opc-wrapper-opc .wide label.required em,
-        .opc-wrapper-opc .fields .field label.required em {
-            width: 20px;
-            margin-left: 0px;
-            margin-right: 5px;
-        }
-        .opc-wrapper-opc .wide label:not(.required),
-        .opc-wrapper-opc .fields label:not(.required) {
-            margin-left: 18px;
-        }
-
-        .opc-wrapper-opc .wide .input-box input:last-child {
-            margin-bottom: 0px;
-        }
-        
-        .opc-wrapper-opc .wide > .input-box {
-            height: 22px;
-        }
-
-        .opc-wrapper-opc label {
-            color: #393939;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 1.25em;
-            margin-bottom: 2px;
-            text-align: left;
-        }
-
-        .opc-wrapper-opc .form-list ul {
-            margin-left: 0;
-        }
-
-        .opc-wrapper-opc .opc-data-table th {
-            padding-left: 0;
-            text-align: left;
-        }
-
-        /* One Page Checkout Shipping Methods Section
-        ******************************************************/
-        .sp-methods ul li input {
-            display: inline-block !important;
-            float: left;
-            margin-right: 5px;
-        }
-
-        /* One Page Checkout Payment Methods Section
-        ******************************************************/
-        .opc-wrapper-opc .payment-block {
-            margin-top: 10px !important;
-        }
-        .opc-wrapper-opc #co-payment-form {
-            padding-top: 20px;
-            margin-bottom: 0px;
-            display: block;
-        }
-
-        .opc-wrapper-opc #co-payment-form fieldset {
-            margin-bottom: 0px;
-        }
-
-        .has-credit-card-logos {
-            height: 32px;
-            overflow: hidden;
-        }
-
-            /* Credit Cart Type Auto-Select Styles
-            ******************************************************/
-            #credit-cart-type-wrap {
-                height: 0;
-                margin-left: -10000px;
-            }
-            #credit-card-type {
-                position: relative;
-                width: 52px;
-                top: -40px;
-                right: -2px;
-                z-index: 99;
-                left: auto;
-                margin-left: -50px;
-                overflow: hidden;
-                height: 38px;
-                float: right;
-            }
-            #credit-card-type li {
-                display: none;
-                width: 51px;
-                height: 32px;
-                background: url('../images/credit-card-icons.jpg') 0 -32px no-repeat;
-                margin: 5px 6px 0 0;
-                overflow: hidden;
-                text-indent: -500em;
-                float: left;
-                -webkit-transition: all .2s;
-                -moz-transition: all .2s;
-                -ms-transition: all .2s;
-                -o-transition: all .2s;
-                transition: all .2s;
-                position: absolute;
-                z-index: 9;
-            }
-            #credit-card-type li.active {
-                display: block;
-                top: 0;
-            }
-            #credit-card-type .NN {
-                display: none;
-            }
-            #credit-card-type .NN.active {
-                display: block;
-                background: none;
-                background-color: transparent;
-            }
-            #credit-card-type .VI {background-position: 0px -32px;}
-            #credit-card-type .MC {background-position: -51px -32px;}
-            #credit-card-type .AE {background-position: -102px -32px;}
-            #credit-card-type .DI {background-position: -153px -32px;}
-            #credit-card-type .VI.active {background-position: 0px 0px;}
-            #credit-card-type .MC.active  {background-position: -51px 0px;}
-            #credit-card-type .AE.active  {background-position: -102px 0px;}
-            #credit-card-type .DI.active  {background-position: -153px 0px;}
-
-            /* Credit Card Expiration Date Styles
-            ***********************************************************/
-            #paypal_direct_expiration,
-            #paypal_direct_expiration_yr {
-                width: 49%;
-                display: inline-block;
-            }
-
-            .opc-wrapper-opc .required-entry + .validation-advice {
-                display: none;
-            }
-
-            .opc-wrapper-opc .validation-failed {
-                background-color: rgb(255, 69, 69);
-                background-color: rgba(255, 69, 69, 0.3);
-            }
-
-            /* Credit Card Verification Code Styles
-            ****************************************************/
-            #paypal_direct_cc_type_cvv_div label {
-                text-indent: 60%;
-            }
-            #paypal_direct_cc_cid {
-                width: 40%;
-                float: right;
-            }
-            .opc-wrapper-opc .payment-block .tool-tip {
-                top: 0 !important;
-                position: absolute;
-                background: #FFF;
-                padding: 20px;
-                margin: -20px;
-                border: 1px solid black;
-                border-radius: 10px;
-                box-shadow: 2px 2px 16px 4px black;
-            }
-            #payment-tool-tip-close {
-                display: block;
-                width: 100%;
-                margin-bottom: 15px;
-                text-align: right;
-            }
-
-        /* Customize Password Form
-        *************************************************/
-        #opc-account-form-password {
-            width: 100%;
-        }
-        #toggle-custom-password-fields {
-            margin-left: 1em;
-            text-decoration: underline;
-            font-size: 0.7em;
-            font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
-            font-weight: 200;
-            color: #888;
-            text-transform: capitalize;
-            top: -0.15em;
-            display: inline-block;
-            position: relative;
-            cursor: pointer;
-        }
-        #toggle-custom-password-fields:hover {
-            color: #8a6399;
-            text-decoration: none;
-        }
-
-        /* Discount Coupon Form
-        ************************************************/
-        .opc-wrapper-opc .discount-block,
-        .opc-wrapper-opc .discount-block form {
-            margin: 0px auto !important;
-        }
-
-
-        /* One Page Checkout Review Section
-        ******************************************************/
-        .opc-wrapper-opc #checkout-review-table .a-right,
-        .opc-wrapper-opc #checkout-review-table .a-center,
-        .opc-wrapper-opc #checkout-review-table .a-left {
-            vertical-align: middle !important;
-        }
-
-        .opc-wrapper-opc .product-name {
-            text-indent: -10px;
-            padding-left: 15px !important;
-        }
-
-        .cart-cartbox-table-product-detail-img-wrap {
-            margin-bottom: 2px !important;
-            background-color: transparent;
-        }
-
-
-        .opc-wrapper-opc .item-options {
-            padding-left: 10px;
-        }
-
-        .opc-wrapper-opc .item-options dt {
-            float: left;
-            margin-right: 5px;
-            text-transform: capitalize;
-            margin-left: 10px;
-            font-size: 85%;
-        }
-        .opc-wrapper-opc .item-options dt:after {
-            content: " -";
-        }
-
-        .opc-wrapper-opc .item-options dd {
-            font-size: 85%;
-        }
-
-        .opc-wrapper-opc .opc-data-table {
-            width: 90% !important;
-            margin: 10px auto;
-        }
-
-        .opc-wrapper-opc .review-after{
-            background: #FFF;
-            margin-top: -10px;
-            margin-right: 10px;
-            margin-left: 10px;
-            padding-top: 10px;
-        }
-
-        .opc-wrapper-opc .review-after #iframe-warning {
-            height: 0px !important;
-            text-indent: -10000px;
-        }
-
-            /* Product Color Swatch Values (For Use as Border Color around Product Image) **************
-            ********************************************************************************************/
-            .cart-cartbox-table-product-detail-img-wrap.peach {
-                background-color: #EDDFCC;
-            }
-            .cart-cartbox-table-product-detail-img-wrap.pink {
-                background-color: #DD95BC;
-            }
-            .cart-cartbox-table-product-detail-img-wrap.blue {
-                background-color: #56B2DD;
-            }
-
-        /* Fix Misc Floats and Element Labels
-        ******************************************************/
-
-        .opc-wrapper-opc form span.no-display,
-        .opc-wrapper-opc .form-list .control input,
-        .opc-wrapper-opc form dt input,
-        .opc-wrapper-opc .opc-newsletter .input-box {
-            float: left;
-            margin: 2px 5px 0 15px;
-            width: auto !important;
-        }
-
-        /* Fix PayPal Logo Positioning
-        ********************************************************/
-        .opc-wrapper-opc form dt [for="p_method_paypal_express"] img {
-            vertical-align: text-top;
-            margin-top: -0.5em;
-        }
-
-        /* One Page Checkout Buttons
-        *********************************************************/
-
-        .opc-wrapper-opc .button {
-            display: block;
-            border: none;
-            margin: 0 auto;
-            float: left;
-            background: none;
-            text-indent: -10000px;
-            width: 80px;
-            height: 40px !important;
-        }
-
-        .opc-wrapper-opc .discount-block .input-box input {
-            margin-bottom: 10px !important;
-        }
-
-        .opc-wrapper-opc .discount-block .buttons-set {
-            margin-top: 10px !important;
-        }
-
-        .opc-wrapper-opc .button.apply-coupon {
-            background: transparent url('../images/checkout-apply-coupon-btn.png') center center no-repeat;
-            width: 130px;
-            height: 30px !important;
-            float: right !important;
-        }
-
-        .opc-wrapper-opc .button.remove-coupon {
-            text-indent: 0;
-            float: right !important;
-            font-size: 14px;
-            font-weight: 400;
-            margin-right: 20px !important;
-        }
-
-        .opc-wrapper-opc .button.btn-checkout {
-            background: transparent url('../images/cart-checkout-btn-wide.png') center center no-repeat;
-            width: 330px;
-            margin: 10px auto 20px;
-            float: none;
-            background-size: 100% 40px;
-        }
-
 /* Account Pages Styles ***************************************************************************************
 **************************************************************************************************************/
 
@@ -1234,6 +813,7 @@ img, button, input {
         height: 30px;
         border: none;
         display: inline-block;
+        text-align: left;
     }
 
     .account-box .back-link,
@@ -1322,7 +902,8 @@ img, button, input {
     }
 
     .box-head > .box-head-timestamp,
-    .box-head > * + .required {
+    .box-head > * + .required,
+    .box-title > * + .required {
         position: relative;
         top: 3px;
         right: 20px;
@@ -1652,3 +1233,576 @@ img, button, input {
         width: 100px;
         background-image: url('../images/glob-search-submit.png');
     }
+
+/* New Cart Styles for use with new One Page Checkout *************************************************
+******************************************************************************************************/
+
+    /* Show Coupon Code Form Button - Sub Cart **************************/
+    .button.btn-coupon {
+        text-indent: -10000px;
+        width: 130px;
+        height: 30px;
+        border: none;
+        background: transparent url('../images/checkout-apply-coupon-btn.png') center center no-repeat;
+    }
+    .button.btn-coupon-remove {
+        text-indent: -10000px;
+        width: 80px;
+        height: 30px;
+        border: none;
+        background: transparent url('../images/checkout-remove-coupon-btn.png') center center no-repeat;
+    }
+
+    /* Discount Code Styles *********************************************/
+    #cart-coupon {
+        display: none;
+        margin-bottom: 20px;
+    }
+    #cart-coupon.coupon-applied {
+        display: block;
+    }
+    #cart-coupon .discount h3 {
+        font: normal 14px/14px 'Tahoma';
+        padding: 10px 20px 15px;
+        background: #ebebeb;
+        color: #8a6399;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    #cart-coupon .discount .discount-close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        height: 20px;
+        padding: 4px;
+        font-size: 22px;
+        width: 20px;
+        text-align: center;
+        line-height: 22px;
+        background: #FFF;
+        border-radius: 100%;
+        font-weight: bold;
+        color: #ebebeb;
+        text-shadow: 0px 0px 1px #000;
+        cursor: pointer;
+    }
+    #cart-coupon .discount .discount-form {
+        padding: 10px 20px;
+        overflow: hidden;
+    }
+    #cart-coupon .discount .discount-form label {
+        display: none;
+    }
+    #cart-coupon .discount .discount-form .input-box {
+        float: left;
+    }
+    #cart-coupon .discount .discount-form .input-box input#coupon_code {
+        height: 20px;
+        width: 346px;
+        padding: 3px 5px;
+    }
+    #cart-coupon.coupon-applied .discount .discount-form .input-box input#coupon_code {
+        width: 276px;
+    }
+    #cart-coupon .discount .discount-form .buttons-set {
+        float: right;
+    }
+    #cart-coupon .discount .discount-form .buttons-set button.button {
+        margin-bottom: 0;
+    }
+
+    /* Cart subtotal table updated Styles (fix inclusion of discount) *********/
+    #checkout-review-table-tfoot tr,
+    #cart-subtotal-table tr:not(#cart-subtotal-table-title) {
+        padding: 5px 20px 10px;
+        display: block;
+        overflow: hidden;
+    }
+    #checkout-review-table-tfoot tr:not(:first-child) td,
+    #cart-subtotal-table tr:not(:first-child) td {
+        border-bottom: 1px solid #e6e6e6;
+        width: 130px;
+        white-space: nowrap;
+        display: inline-block;
+        overflow: hidden;
+    }
+    #checkout-review-table-tfoot tr:not(:first-child) td:nth-child(odd),
+    #cart-subtotal-table tr:not(:first-child) td:nth-child(odd) {
+        text-align: left !important;
+        padding-left: 10px;
+        float: left;
+    }
+    #checkout-review-table-tfoot tr:not(:first-child) td:nth-child(even),
+    #cart-subtotal-table tr:not(:first-child) td:nth-child(even) {
+        text-align: right;
+        padding-right: 10px;
+        float: right;
+    }
+
+/* New One Page Checkout Styles ***********************************************************************
+******************************************************************************************************/
+#checkoutSteps {
+    margin-top: 105px;
+}
+#checkoutSteps .step-title {
+    position: absolute;
+    width: 104px;
+    top: -105px;
+    background: #FFF;
+    box-shadow: inset 0 0 20px 0 #888;
+    padding-bottom: 20px;
+    border-radius: 20%;
+}
+#checkoutSteps .active .step-title {
+    box-shadow: inset 0 0 20px 3px #8a6399;
+}
+#checkoutSteps li:nth-child(6) .step-title {
+    display: none;
+}
+#checkoutSteps li:nth-child(5) .step-title {
+    left: 466px;
+}
+#checkoutSteps li:nth-child(4) .step-title {
+    left: 352px;
+}
+#checkoutSteps li:nth-child(3) .step-title {
+    left: 238px;
+}
+#checkoutSteps li:nth-child(2) .step-title {
+    left: 124px;
+}
+#checkoutSteps li:nth-child(1) .step-title {
+    left: 10px;
+}
+.step-title > * {
+    text-shadow: 1px 1px 1px #CCC;
+}
+.step-title .number {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 20px 0;
+}
+.step-title h2 {
+    font-size: 11px;
+    line-height: 13px;
+    word-spacing: 200px;
+    font-family: "Tahoma","Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+}
+.step-title a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+}
+
+/* Steps Styles ************************************************/
+.col2-set .col-1,
+.col2-set .col-2 {
+    width: 50%;
+}
+.col2-set .col-1 {
+    float: left;
+}
+.col2-set .col-2 {
+    float: right;
+}
+#checkoutSteps .back-link {
+    position: relative;
+}
+#checkoutSteps .back-link a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    text-indent: 0;
+}
+#checkoutSteps .validation-failed {
+    /*background-color: #F3C3C3 !important;*/
+    background-color: #FFEDED !important;
+}
+#checkoutSteps .validation-advice {
+    background-color: #F6FFB5;
+    padding: 2px 5px 5px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: inset 0px -2px 5px #CCC;
+}
+#checkoutSteps .field .validation-advice {
+    width: 210px;
+}
+#checkoutSteps .wide .validation-advice {
+    width: 450px;
+}
+/* Login Step Styles *******************************************/
+.col2-set .col1-set .col-1 {
+    width: 100%;
+}
+#checkout-step-login .required {
+    margin: -5px 0 0 0;
+}
+#checkout-step-login #login-form fieldset {
+    margin-top: 15px;
+}
+#checkout-step-login .inchoo-socialconnect-checkout-facebook a {
+    width: 230px;
+    height: 35px;
+    background-size: 230px 35px;
+    margin-bottom: 28px;
+    margin-top: 2px;
+}
+#checkout-step-login #guest-submit-register {
+    border: none;
+    border-radius: 0;
+    background: #8a6399 url('../images/onepage-register-button.png') center center no-repeat;
+    width: 230px;
+    height: 35px;
+    background-size: 230px 35px;
+    text-indent: -10000px;
+}
+#checkout-step-login #guest-submit-guest {
+    float: right;
+    margin-right: 20px;
+}
+#remember-me-box {
+    clear: both;
+}
+#remember-me-box > * {
+    display: inline-block;
+    margin-bottom: 0 !important;
+}
+/* Address Info Styles *****************************************/
+#checkoutSteps .input-box {
+    margin-bottom: 20px;
+}
+#checkoutSteps .input-box input,
+#checkoutSteps .input-box select {
+    margin-bottom: 0;
+}
+#checkoutSteps .wide {
+    /*margin-right: 60px;*/
+}
+#checkoutSteps .wide .input-box input {
+    width: 450px;
+}
+#checkoutSteps .input-box select {
+    padding: 5px 0;
+}
+#checkoutSteps .fields,
+#checkoutSteps .wide {
+    clear: both;
+}
+#checkoutSteps .fields .field {
+    float: left;
+}
+#checkoutSteps .fields .field:nth-child(even) {
+    margin-left: 20px;
+}
+#checkoutSteps #co-billing-form .form-list,
+#checkoutSteps #co-shipping-form .form-list {
+    margin-top: 10px;
+}
+#checkoutSteps #billing-new-address-form ul,
+#checkoutSteps #shipping-new-address-form ul {
+    margin-left: 20px;
+}
+#checkoutSteps #co-billing-form .form-list > .control,
+#checkoutSteps #co-shipping-form .form-list > .control {
+    display: inline-block;
+    margin-left: 40px;
+}
+#checkoutSteps #co-billing-form .form-list > .control > *,
+#checkoutSteps #co-shipping-form .form-list > .control > * {
+    float: left;
+    margin-left: 10px;
+}
+#checkoutSteps #co-billing-form .form-list #billing-new-address-form .control,
+#checkoutSteps #co-shipping-form .form-list #shipping-new-address-form .control {
+    clear: both;
+}
+#checkoutSteps #co-billing-form .form-list #billing-new-address-form .control > *,
+#checkoutSteps #co-shipping-form .form-list #shipping-new-address-form .control > * {
+    display: inline;
+    margin-left: 10px;
+}
+#checkoutSteps #opc-login ~ .section .step .buttons-set {
+    margin: 0 auto;
+    width: 80%;
+    float: none;
+    text-align: right;
+}
+#checkoutSteps #opc-login ~ .section .step .buttons-set > * {
+    display: inline-block;
+}
+#checkoutSteps #opc-login ~ .section .step .buttons-set > .required {
+    float: left;
+}
+.please-wait {
+    clear: both;
+    float: right;
+    margin-bottom: 20px;
+}
+#checkoutSteps button.button:not(.submit-button) {
+    margin: 0 0 0 10px;
+    float: right;
+    border: none !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+    height: 30px;
+    text-shadow: none !important;
+    background-image: url('../images/checkout-step1-next-step-guest.png');
+    width: 90px;
+}
+
+#checkoutSteps .sp-methods {
+    margin: 10px auto;
+    width: 80%;
+}
+#opc-shipping_method .buttons-set {
+    margin-bottom: 20px;
+}
+
+/* Payments Styles *********************************************/
+#co-payment-form dt {
+    margin-bottom: 10px;
+}
+#co-payment-form dt > * {
+    display: inline-block;
+}
+#co-payment-form fieldset {
+    margin-bottom: 0;
+}
+#co-payment-form .input-box.has-credit-card-logos input {
+    width: 404px;
+}
+    .has-credit-card-logos {
+        position: relative;
+    }
+
+    /* Credit Cart Type Auto-Select Styles
+    ******************************************************/
+    #credit-cart-type-wrap {
+        display: none;
+    }
+    #credit-card-type {
+        position: absolute;
+        width: 52px;
+        top: -10px;
+        right: -2px;
+        z-index: 99;
+        overflow: hidden;
+        height: 38px;
+    }
+    #credit-card-type li {
+        display: none;
+        width: 51px;
+        height: 32px;
+        background: url('../images/credit-card-icons.jpg') 0 -32px no-repeat;
+        margin: 5px 6px 0 0;
+        overflow: hidden;
+        text-indent: -500em;
+        float: left;
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        -ms-transition: all .2s;
+        -o-transition: all .2s;
+        transition: all .2s;
+        position: absolute;
+        z-index: 9;
+    }
+    #credit-card-type li.active {
+        display: block;
+        top: 0;
+    }
+    #credit-card-type .NN {
+        display: none;
+    }
+    #credit-card-type .NN.active {
+        display: block;
+        background: none;
+        background-color: transparent;
+    }
+    #credit-card-type .VI {background-position: 0px -32px;}
+    #credit-card-type .MC {background-position: -51px -32px;}
+    #credit-card-type .AE {background-position: -102px -32px;}
+    #credit-card-type .DI {background-position: -153px -32px;}
+    #credit-card-type .VI.active {background-position: 0px 0px;}
+    #credit-card-type .MC.active  {background-position: -51px 0px;}
+    #credit-card-type .AE.active  {background-position: -102px 0px;}
+    #credit-card-type .DI.active  {background-position: -153px 0px;}
+
+    /*********************************************** End Credit Card Type Logos ****/
+
+.cc_type_exp_field {
+    width: 49%;
+    display: inline-block;
+}
+.cc_type_exp_field:last-child {
+    float: right;
+}
+
+#paypal_direct_cc_type_cvv_div {
+    float: right;
+    width: 160px;
+    position: relative;
+    margin-right: 10px;
+}
+#paypal_direct_cc_type_cvv_div .input-text.cvv {
+    width: 150px;
+}
+#paypal_direct_cc_type_cvv_div .cvv-what-is-this {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#checkoutSteps #payment-buttons-container {
+    margin-bottom: 10px;
+}
+
+#checkoutSteps .tool-tip {
+    margin-bottom: 20px;
+}
+#checkoutSteps .tool-tip .btn-close {
+    margin-right: 10px;
+}
+#checkoutSteps .tool-tip .tool-tip-content img {
+    display: block;
+    margin: 0 auto;
+}
+/* Review and Submit Step Styles *******************************/
+#checkout-review-table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+#checkout-review-table thead tr {
+    background: #ebebeb;
+}
+#checkout-review-table thead tr th {
+    margin: 0;
+    padding: 10px 20px 15px;
+    color: #8a6399;
+    font: normal 14px/14px "Tahoma";
+    text-transform: uppercase;
+}
+
+
+#checkout-review-table > tbody tr td:first-child {
+    position: relative;
+}
+    /* Product Options Styles ***********************************************
+    ************************************************************************/
+    /*#checkout-review-table*/ .item-options {
+        position: absolute;
+        left: 140px;
+    }
+    /*#checkout-review-table*/ .item-options.show {
+        width: 140px;
+        border: 1px solid black;
+        padding: 10px;
+        background: #FFF;
+    }
+
+    /*#checkout-review-table*/ .item-options .item-options-open,
+    /*#checkout-review-table*/ .item-options .item-options-close {
+        cursor: pointer;
+    }
+
+    /*#checkout-review-table*/ .item-options .item-options-close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+    /*#checkout-review-table*/ .item-options dt,
+    /*#checkout-review-table*/ .item-options dd,
+    /*#checkout-review-table*/ .item-options .item-options-close,
+    /*#checkout-review-table*/ .item-options.show .item-options-open {
+        display: none;
+    }
+
+    /*#checkout-review-table*/ .item-options.show dt,
+    /*#checkout-review-table*/ .item-options.show dd,
+    /*#checkout-review-table*/ .item-options.show .item-options-close,
+    /*#checkout-review-table*/ .item-options .item-options-open {
+        display: block;
+        text-align: left;
+    }
+    /***********************************************************************/
+
+
+#checkout-review-table > tbody td {
+    padding: 0 20px;
+}
+#checkout-review-table > tbody td.last {
+    padding-right: 30px;
+}
+#checkout-review-table > tbody td {
+    vertical-align: middle;
+}
+
+#checkout-review-table-tfoot {
+    float: right;
+}
+#checkout-review-table .trustwaveSealImageWrap {
+    position: relative;
+    float: left;
+    bottom: -15px;
+    left: 30px;
+}
+
+#review-buttons-container {
+    width: auto !important;
+    margin-bottom: 20px !important;
+}
+#review-buttons-container .forgot-item {
+    text-align: center;
+    margin: 0 30px;
+    float: left;
+}
+#review-buttons-container button.button {
+    width: 340px !important;
+    background-image: url('/skin/frontend/default/rofcustom/images/cart-checkout-btn-wide.png') !important;
+    height: 40px !important;
+    float: left !important;
+    margin: 0 30px 10px 30px !important;
+    display: block !important;
+}
+/* Progress Steps **********************************************/
+#checkout-progress-wrapper .opc-block-progress {
+    background: url('../images/hash-border.png');
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#checkout-progress-wrapper .block-title {
+    background: #FFF;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#checkout-progress-wrapper .block-content > dl > div {
+    background: #FFF;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#checkout-progress-wrapper .block-content > dl > div:last-child {
+    margin-bottom: 0;
+}
+#checkout-progress-wrapper #cart-subtotal-table {
+    width: 320px;
+    margin-left: -10px;
+}
+#checkout-progress-wrapper #payment-progress-opcheckout dd.complete p {
+    margin-bottom: 0;
+}

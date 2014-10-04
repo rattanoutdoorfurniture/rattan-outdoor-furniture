@@ -28,6 +28,9 @@ Furniture web site project.
 - Abstract Product_View_Options_Type_Select logic from the Magento core. This should extend the core, which I could not get to work today.
 - Additions to the Mage_Core_Sitemap Product model. (this should be defined elsewhere).
 
+- Core Checkout Edits - Could not get this working with a module - Mage/Checkout/ :: Block/Onepage/Abstract.php && controllers/OnepageController.php
+- Sale Quote Validate Method edit - comment out shipping method validation - Mage_Sales_Model_Service_Quote::_validate()
+
 - Update Core Product Block View to add Trailing Slash on product canonical url. Use preferred parent_url_key. Should be a model of some sort.
 - Contacts Core XML change URL Key. (Should be a module).
 - Sales Guest Helper method added. Footer_Links Guest Form link. Create Better Way to set REL.

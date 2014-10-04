@@ -19,6 +19,25 @@
     echo "Session Val:\t"   . var_export($googleSession,true) . "\n";
     echo "</pre><br/><br/>";*/
     ?>
+<div style="white-space: pre;">
+    <?php
+    echo var_export(
+        $helper->duplicateReleases()
+        ,true
+    );
+    $fake   = $helper->checkReleasedPages();
+    $avail  = $helper->getReleasedPages();
+
+    echo var_export(
+        $helper->getReleasedCount()
+        ,true
+    );
+
+    ?>
+</div>
+    <div class="new-xml" style="white-space: pre;">
+        <?php echo $helper->generateTodaySitemap(); ?>
+    </div>
 <?php if(!$this->authed): ?>
     <div id="login" class="login"><a href="<?php echo $this->authUrl;?>">Connect to Google Apps</a></div>
 <?php else: ?>
@@ -461,6 +480,17 @@
             $stateFiles = glob($io['parent'].DIRECTORY_SEPARATOR.$dashState.DIRECTORY_SEPARATOR."*.txt");
             $cityCount[$state] = count($stateFiles);
         }
+        // String Replace Array
+        $sr = array(
+            // needle
+            "n" => array(
+                " ", "'", "."
+            ),
+            // replacement
+            "r" => array(
+                "-",  "",  ""
+            )
+        );
         // Determine the "Featured" category Id, for now, use static and exchange when importing.
         $featuredCategoryId = 2290;
         $cityId  = 500;
@@ -477,7 +507,7 @@
             if($isState) {
                 $stateName      = trim(str_replace("Outdoor Patio Furniture",'',$page['title']));
                 $pageTitle      = $stateName;
-                $dashState      = str_replace(' ',"-",str_replace("'","",strtolower($stateName)));
+                $dashState      = str_replace($sr['n'],$sr['r'],strtolower($stateName));
                 $pageIdentifier = "locations/$dashState";
                 $parentId       = 22;
                 $pageId         = $statePageId[$stateName];
@@ -489,6 +519,9 @@
                 $city           = preg_filter($titleRegex,"$1",$page['title']);
                 $state          = preg_filter($titleRegex,"$2",$page['title']);
                 $pageTitle      = "$city, $state";
+                if($state=="District of Columbia") {
+                    $pageTitle  = "$city, D.C.";
+                }
                 /* Check For Bad State Name ********************
                 if(!$state || stristr($state,"outdoor patio furniture")!==false) {
                     die(dumper::dump(
@@ -501,8 +534,8 @@
                     ));
                 } ***********************************************/
 
-                $dashCity       = str_replace(' ',"-",str_replace("'","",strtolower($city)));
-                $dashState      = str_replace(' ',"-",str_replace("'","",strtolower($state)));
+                $dashCity       = str_replace($sr['n'],$sr['r'],strtolower($city));
+                $dashState      = str_replace($sr['n'],$sr['r'],strtolower($state));
                 $pageIdentifier = "locations/$dashState/$dashCity";
 
                 $parentId       = $statePageId[$state];

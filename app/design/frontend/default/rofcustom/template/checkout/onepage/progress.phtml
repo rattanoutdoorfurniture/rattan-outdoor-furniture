@@ -30,6 +30,9 @@
     </div>
     <div class="block-content">
         <dl>
+            <div id="order-progress-opcheckout">
+            <?php echo $this->getChildHtml('total_sidebar'); ?>
+            </div>
             <?php if ($this->getCheckout()->getStepData('billing', 'is_show')): ?>
             <div id="billing-progress-opcheckout">
                 <?php echo $this->getChildHtml('billing.progress') ?>
@@ -42,11 +45,11 @@
             </div>
             <?php endif; ?>
 
-            <?php if ($this->getCheckout()->getStepData('shipping_method', 'is_show')): ?>
+            <?php /* if ($this->getCheckout()->getStepData('shipping_method', 'is_show')): ?>
             <div id="shipping_method-progress-opcheckout">
                 <?php echo $this->getChildHtml('shippingmethod.progress') ?>
             </div>
-            <?php endif; ?>
+            <?php endif; */ ?>
 
             <?php if ($this->getCheckout()->getStepData('payment', 'is_show')): ?>
             <div id="payment-progress-opcheckout">

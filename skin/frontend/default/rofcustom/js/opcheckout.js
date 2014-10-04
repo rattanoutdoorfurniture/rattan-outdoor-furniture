@@ -36,7 +36,7 @@ Checkout.prototype = {
         this.method = '';
         this.payment = '';
         this.loadWaiting = false;
-        this.steps = ['login', 'billing', 'shipping', 'shipping_method', 'payment', 'review'];
+        this.steps = ['login', 'billing', 'shipping', /*'shipping_method',*/ 'payment', 'review'];
         //We use billing as beginning step since progress bar tracks from billing
         this.currentStep = 'billing';
 
@@ -170,6 +170,11 @@ Checkout.prototype = {
                 this.saveMethodUrl,
                 {method: 'post', onFailure: this.ajaxFailure.bind(this), parameters: {method:'guest'}}
             );
+            if(jQuery && jQuery.password) {
+                var password = jQuery.password(12);
+                $("billing:customer_password").value = password;
+                $("billing:confirm_password").value  = password;
+            }
             Element.hide('register-customer-password');
             this.gotoSection('billing', true);
         }
@@ -293,12 +298,21 @@ Billing.prototype = {
         this.form = form;
         if ($(this.form)) {
             $(this.form).observe('submit', function(event){this.save();Event.stop(event);}.bind(this));
+            var elements = Form.getElements(this.form);
+            for(var i=0; i<elements.length;i++) {
+                elements[i].observe('keypress', this.saveOnEnter.bind(this));
+            }
         }
         this.addressUrl = addressUrl;
         this.saveUrl = saveUrl;
         this.onAddressLoad = this.fillForm.bindAsEventListener(this);
         this.onSave = this.nextStep.bindAsEventListener(this);
         this.onComplete = this.resetLoadWaiting.bindAsEventListener(this);
+    },
+
+    saveOnEnter: function(event) {
+        var key = event.which || event.keyCode;
+        if(key == Event.KEY_RETURN) billing.save();
     },
 
     setAddress: function(addressId){
@@ -323,7 +337,7 @@ Billing.prototype = {
     },
 
     resetSelectedAddress: function(){
-        var selectElement = $('billing-address-select')
+        var selectElement = $('billing-address-select');
         if (selectElement) {
             selectElement.value='';
         }
@@ -431,6 +445,10 @@ Shipping.prototype = {
         this.form = form;
         if ($(this.form)) {
             $(this.form).observe('submit', function(event){this.save();Event.stop(event);}.bind(this));
+            var elements = Form.getElements(this.form);
+            for(var i=0; i<elements.length;i++) {
+                elements[i].observe('keypress', this.saveOnEnter.bind(this));
+            }
         }
         this.addressUrl = addressUrl;
         this.saveUrl = saveUrl;
@@ -438,6 +456,11 @@ Shipping.prototype = {
         this.onAddressLoad = this.fillForm.bindAsEventListener(this);
         this.onSave = this.nextStep.bindAsEventListener(this);
         this.onComplete = this.resetLoadWaiting.bindAsEventListener(this);
+    },
+
+    saveOnEnter: function(event) {
+        var key = event.which || event.keyCode;
+        if(key == Event.KEY_RETURN) shipping.save();
     },
 
     setAddress: function(addressId){
@@ -719,9 +742,15 @@ Payment.prototype = {
                 elements[i].disabled = true;
             }
             elements[i].setAttribute('autocomplete','off');
+            elements[i].observe('keypress', this.saveOnEnter.bind(this));
         }
         if (method) this.switchMethod(method);
         this.afterInit();
+    },
+
+    saveOnEnter: function(event) {
+        var key = event.which || event.keyCode;
+        if(key == Event.KEY_RETURN) payment.save();
     },
 
     addAfterInitFunction : function(code, func) {
