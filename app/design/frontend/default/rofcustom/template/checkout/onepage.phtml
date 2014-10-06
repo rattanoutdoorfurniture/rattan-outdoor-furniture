@@ -91,10 +91,10 @@
     accordion.openSection('opc-<?php echo $this->getActiveStep() ?>');
     <?php endif ?>
     var checkout = new Checkout(accordion,{
-        progress: '<?php echo str_replace("http:","http:",$this->getUrl('checkout/onepage/progress')) ?>',
-        review: '<?php echo str_replace("http:","http:",$this->getUrl('checkout/onepage/review')) ?>',
-        saveMethod: '<?php echo str_replace("http:","http:",$this->getUrl('checkout/onepage/saveMethod')) ?>',
-        failure: '<?php echo str_replace("http:","http:",$this->getUrl('checkout/cart')) ?>'}
+        progress: '<?php echo str_replace("http:","",$this->getUrl('checkout/onepage/progress')) ?>',
+        review: '<?php echo str_replace("http:","",$this->getUrl('checkout/onepage/review')) ?>',
+        saveMethod: '<?php echo str_replace("http:","",$this->getUrl('checkout/onepage/saveMethod')) ?>',
+        failure: '<?php echo str_replace("http:","",$this->getUrl('checkout/cart')) ?>'}
     );
 //]]>
 </script>

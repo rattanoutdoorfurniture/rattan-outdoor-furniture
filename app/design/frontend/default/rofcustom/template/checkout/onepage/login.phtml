@@ -44,7 +44,7 @@
         <div class="wrap-login">
 
             <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
-            <form id="login-form" action="<?php echo str_replace('http',(Mage::app()->getStore()->isCurrentlySecure()?'https':'http'),$this->getPostAction()) ?>" method="post">
+            <form id="login-form" action="<?php echo str_replace('http:','',$this->getPostAction()) ?>" method="post">
                 <fieldset class="remove-bottom">
                     <ul class="form-list">
                         <li>
