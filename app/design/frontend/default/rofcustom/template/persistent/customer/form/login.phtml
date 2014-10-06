@@ -36,6 +36,7 @@
     // Check if current Magento version includes Persistent Shopping Cart Extension
     $isPersistantShoppingCartEnabled = Mage::getStoreConfigFlag('persistent/options/enabled');
     $isContextCheckout = 0;
+    /** @var $this Mage_Customer_Block_Form_Login */
     if ($isPersistantShoppingCartEnabled) {
         $accountUrl = Mage::helper('persistent')->getCreateAccountUrl($this->getCreateAccountUrl());
         $isContextCheckout = Mage::helper('checkout')->isContextCheckout();
