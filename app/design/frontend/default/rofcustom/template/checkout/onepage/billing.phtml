@@ -203,10 +203,10 @@
 </form>
 <script type="text/javascript">
 //<![CDATA[
-    var billing = new Billing('co-billing-form', '<?php echo $this->getUrl('checkout/onepage/getAddress') ?>address/', '<?php echo $this->getUrl('checkout/onepage/saveBilling') ?>');
+    var billing = new Billing('co-billing-form', '<?php echo str_replace('http:','',$this->getUrl('checkout/onepage/getAddress')) ?>address/', '<?php echo str_replace('http:','',$this->getUrl('checkout/onepage/saveBilling')) ?>');
     var billingForm = new VarienForm('co-billing-form');
 
-    //billingForm.setElementsRelation('billing:country_id', 'billing:region', '<?php echo $this->getUrl('directory/json/childRegion') ?>', '<?php echo $this->__('Select State/Province...') ?>');
+    billingForm.setElementsRelation('billing:country_id', 'billing:region', '<?php echo str_replace('http:','',$this->getUrl('directory/json/childRegion')) ?>', '<?php echo $this->__('Select State/Province...') ?>');
     $('billing-address-select') && billing.newAddress(!$('billing-address-select').value);
 
     var billingRegionUpdater = new RegionUpdater('billing:country_id', 'billing:region', 'billing:region_id', <?php echo $this->helper('directory')->getRegionJson() ?>, undefined, 'billing:postcode');
