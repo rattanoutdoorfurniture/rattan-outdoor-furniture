@@ -161,7 +161,7 @@ nav a {
 .nav-main-item:active ~ .nav-main-item.selected {
     background-image: url('../images/nav-main-unselected.png');
 }
-.nav-main-list:hover .nav-main-item.selected:hover {
+.nav-main-list:hover .nav-main-item.selected:not(.search):hover {
     background-image: url('../images/nav-main-selected.png') !important;
 }
 .nav-main-item.search:hover ~ .nav-main-item.selected {

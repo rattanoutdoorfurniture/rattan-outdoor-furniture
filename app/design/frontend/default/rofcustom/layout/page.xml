@@ -36,6 +36,12 @@ Default layout, loads most of the pages
 
             <block type="page/html_head" name="head" as="head">
 
+                <!--<block type="core/text" name="google.cdn.jquery" before="-">
+                    <action method="setText">
+                        <text><![CDATA[<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script><script>window.jQuery||document.write('<script src="/skin/frontend/default/rofcustom/js/jquery.2-1-0.min.js">\x3c/script>');</script><script>jQuery.noConflict();</script>]]></text>
+                    </action>
+                </block>-->
+
                 <action method="addItem"><type>remote_js</type><name>https://code.jquery.com/jquery-2.1.0.js</name><params/><if/></action>
                 <action method="addItem"><type>js</type><name>jquery/noconflict.js</name><params/><if/></action>
                 <action method="addItem"><type>js</type><name>jquery/modernizr.js</name><params/><if/></action>
@@ -58,11 +64,6 @@ Default layout, loads most of the pages
 
                 <block type="page/js_cookie" name="js_cookies" template="page/js/cookie.phtml"/>
 
-                <action method="addCss"><stylesheet>css/reset.css</stylesheet></action>
-                <action method="addCss"><stylesheet>css/fonts.css</stylesheet></action>
-                <action method="addCss"><stylesheet>css/update.css</stylesheet></action>
-                <!--<action method="addCss"><stylesheet>css/styles.css</stylesheet></action>-->
-                <!--<action method="addCss"><stylesheet>css/opc2.css</stylesheet></action>-->
                 <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 8</if></action>
                 <action method="addCss"><stylesheet>css/widgets.css</stylesheet></action>
                 <!--<action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>-->

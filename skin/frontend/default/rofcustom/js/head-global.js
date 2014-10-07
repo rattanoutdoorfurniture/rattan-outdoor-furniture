@@ -71,34 +71,72 @@ jQuery(document).ready(function($){
     });
 
     if($("#category-slider").length) {
+        $(".cateogry-slider-inner")
+            .on("swiperight", function() {
+                $("#category-slider-prev").trigger("click");
+            })
+            .on("swipeleft",function(){
+                $("#category-slider-next").trigger("click");
+            });
         $(".category-slider-nav").on("click", function(e) {
             var $btn = $(this);
-            if($btn.hasClass('disabled')) return console.log("disabled")&&false;
+            if($btn.parent().data('proc')==true) return false;
+            $btn.parent().data('proc', true);
+            if($btn.hasClass('disabled')) return /*console.log("disabled")&&*/false;
             var $oBtn  = $btn.siblings(".category-slider-nav");
             var dir    = $btn.attr("id") == "category-slider-prev" ? 1 : -1;
             var $wrap  = $("#category-slider-inner");
             var $table = $("table", $wrap);
-            if(!$table.length) return console.log("no table")&&false;
+            if(!$table.length) return /*console.log("no table")&&*/false;
             var tableW = $table.width();
             var curOff = $table.position().left;
             var dist   = $table.find("td").width();
             if(dir>0) {
-                if((curOff*-1)<dist) return console.log("offset less than dist")&&false;
+                if((curOff*-1)<dist) return /*console.log("offset less than dist")&&*/false;
             } else {
                 if(tableW-$wrap.width()-(curOff*dir) < 0) return false;
             }
             var newLeft = "+=" + (dir*dist);
-            $table.animate({
+            var $aniDone = $table.animate({
                 left: newLeft
             },{
                 duration: 400
             });
-            if((curOff<dist)||(tableW-$wrap.width()-(curOff*dir) < 0)) {
-                $btn.addClass("disabled");
-                $oBtn.removeClass("disabled");
-            } else {
-                $btn.removeClass("disabled");
-            }
+            var newOff = curOff+(dir*dist);
+            var wrapWid = $wrap.width();
+
+            var canNext = (tableW + newOff) > (wrapWid);
+            var canPrev = newOff < 0;
+            $.when($aniDone).done(function() {
+                if(dir==-1) {
+                    // NEXT BUTTON PRESSED
+                    if(!canNext) {
+                        $btn.addClass("disabled");
+                    }
+                    if(canPrev) {
+                        $oBtn.removeClass("disabled");
+                    } else {
+                        $oBtn.addClass("disabled");
+                    }
+                } else {
+                    //PREV BUTTON PRESSED
+                    if(!canPrev) {
+                        $btn.addClass("disabled");
+                    }
+                    if(canNext) {
+                        $oBtn.removeClass('disabled');
+                    } else {
+                        $oBtn.addClass("disabled");
+                    }
+                }
+                $btn.parent().data('proc',false);
+            });
+//            if((curOff<dist)&&(tableW-$wrap.width()-(curOff*dir) < 0)) {
+//                $btn.addClass("disabled");
+//                $oBtn.removeClass("disabled");
+//            } else {
+//                $btn.removeClass("disabled");
+//            }
         });
     }
 

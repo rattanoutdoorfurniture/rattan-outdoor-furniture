@@ -162,6 +162,14 @@
     display: inline-block;
 }
 
+.footer-social-widgets {
+
+}
+
+.footer-social-flatlinks {
+    display: none;
+}
+
 .footer-social-icon {
     width: 16px;
     height: 16px;
@@ -172,9 +180,9 @@
     border-radius: 2px;
 }
 
-.footer-social-icon.gp,
-.footer-social-icon.tw,
-.footer-social-icon.fb.fb-follow {
+.footer-social-widgets .footer-social-icon.gp,
+.footer-social-widgets .footer-social-icon.tw,
+.footer-social-widgets .footer-social-icon.fb.fb-follow {
     /*background-position:  0px 0px;*/
     text-indent: 0;
     overflow: hidden;
@@ -183,7 +191,7 @@
     top: 1px;
 }
 
-.footer-social-icon.gp > *:first-child {
+.footer-social-widgets .footer-social-icon.gp > *:first-child {
     -webkit-opacity: 0;
     -moz-opaciy: 0;
     -o-opacity: 0;
@@ -193,22 +201,22 @@
     left: -5px;
 }
 
-.footer-social-icon.tw > *:first-child,
-.footer-social-icon.fb.fb-follow > *:first-child {
+.footer-social-widgets .footer-social-icon.tw > *:first-child,
+.footer-social-widgets .footer-social-icon.fb.fb-follow > *:first-child {
     position: relative;
     top: 20px;
     left: -3px;
 }
 
-.footer-social-icon.gp:hover > *:first-child {
+.footer-social-widgets .footer-social-icon.gp:hover > *:first-child {
     -webkit-opacity: 1;
     -moz-opaciy: 1;
     -o-opacity: 1;
     opacity: 1;
 }
 
-.footer-social-icon.tw:hover > *:first-child,
-.footer-social-icon.fb.fb-follow:hover > *:first-child {
+.footer-social-widgets .footer-social-icon.tw:hover > *:first-child,
+.footer-social-widgets .footer-social-icon.fb.fb-follow:hover > *:first-child {
     position: relative;
     top: -3px;
     left: -3px;
@@ -231,6 +239,8 @@
 }
 .footer-social-icon.pn {
     background-position:  -40px 0px;
+}
+.footer-social-widgets .footer-social-icon.pn {
     position: relative;
     top: -2px;
 }
