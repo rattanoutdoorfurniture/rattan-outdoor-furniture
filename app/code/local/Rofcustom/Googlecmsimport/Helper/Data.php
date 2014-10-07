@@ -13,6 +13,8 @@ function in_array_r($needle, $haystack, $strict = false) {
 
 class Rofcustom_Googlecmsimport_Helper_Data extends Mage_Core_Helper_Abstract {
 
+    protected $_releaseAllPages = true;
+
     protected $_releasedPages = array(
         "2014-09-12" => array(
             "locations/alabama",
@@ -644,7 +646,7 @@ class Rofcustom_Googlecmsimport_Helper_Data extends Mage_Core_Helper_Abstract {
             "locations/florida/marathon",
             "locations/florida/marco-island",
             "locations/california/marina",
-            "locations/massachusetts/martha's-vineyard",
+            "locations/massachusetts/marthas-vineyard",
             "locations/iowa/mason-city",
             "locations/california/mckinleyville",
             "locations/pennsylvania/meadville",
@@ -914,6 +916,7 @@ class Rofcustom_Googlecmsimport_Helper_Data extends Mage_Core_Helper_Abstract {
     }
 
     public function isActiveByIdentifier($identifier) {
+        if($this->_releaseAllPages==true) return true;
         $today = date("Y-m-d");
         $found = false;
         foreach($this->_releasedPages as $releaseDate=>$pages) {
@@ -968,11 +971,52 @@ class Rofcustom_Googlecmsimport_Helper_Data extends Mage_Core_Helper_Abstract {
         return $duplicates;
     }
 
+    public function getFlatReleasePages() {
+        if(isset($this->_flatReleasedPages)) return $this->_flatReleasedPages;
+        $flat = array();
+        foreach($this->_releasedPages as $releaseDate => $pages) {
+            foreach($pages as $identifier) {
+                $flat[] = $identifier;
+            }
+        }
+        $this->_flatReleasedPages = $flat;
+        return $this->_flatReleasedPages;
+    }
+
+    public function arrValsNotInRelease($idents) {
+        $flatReleases = $this->getFlatReleasePages();
+        return array_diff($idents,$flatReleases);
+    }
+
+    public function releaseNotInArrVals($idents) {
+        $flatReleases = $this->getFlatReleasePages();
+        return array_diff($flatReleases, $idents);
+    }
+
+
     public function generateTodaySitemap() {
         $today = date("Y-m-d");
         $todayPages = $this->_releasedPages[$today];
         $newXML = array();
         foreach($todayPages as $page) {
+$xml = <<<XML
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/{$page}/</loc>
+        <lastmod>{$today}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+XML;
+            $newXML[] = htmlspecialchars($xml);
+        }
+        return implode("<br/>",$newXML);
+    }
+
+
+    public function generateSitemapFromIdentifiers($idents) {
+        $today = date("Y-m-d");
+        $newXML = array();
+        foreach($idents as $page) {
 $xml = <<<XML
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/{$page}/</loc>

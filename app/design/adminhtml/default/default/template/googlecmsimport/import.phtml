@@ -21,10 +21,10 @@
     ?>
 <div style="white-space: pre;">
     <?php
-    echo var_export(
+    /*echo var_export(
         $helper->duplicateReleases()
         ,true
-    );
+    );*/
     $fake   = $helper->checkReleasedPages();
     $avail  = $helper->getReleasedPages();
 
@@ -36,7 +36,7 @@
     ?>
 </div>
     <div class="new-xml" style="white-space: pre;">
-        <?php echo $helper->generateTodaySitemap(); ?>
+        <?php //echo $helper->generateTodaySitemap(); ?>
     </div>
 <?php if(!$this->authed): ?>
     <div id="login" class="login"><a href="<?php echo $this->authUrl;?>">Connect to Google Apps</a></div>
@@ -480,15 +480,15 @@
             $stateFiles = glob($io['parent'].DIRECTORY_SEPARATOR.$dashState.DIRECTORY_SEPARATOR."*.txt");
             $cityCount[$state] = count($stateFiles);
         }
-        // String Replace Array
+        // String Replace Array (for identifier)
         $sr = array(
             // needle
             "n" => array(
-                " ", "'", "."
+                " ", "'", ".", "&#39;"
             ),
             // replacement
             "r" => array(
-                "-",  "",  ""
+                "-",  "",  "", ""
             )
         );
         // Determine the "Featured" category Id, for now, use static and exchange when importing.
@@ -497,6 +497,8 @@
         $queries = array();
         // Fix Blank Page Issue
         $props   = array_slice($props,1);
+        // Collect Identifiers (to make sure all pages are used)
+        $identifiers = array();
         foreach($props as $page) {
             $isState        = array_key_exists(trim(str_replace("Outdoor Patio Furniture",'',$page['title'])), $statePageId);
             $pageId         = null;
@@ -509,6 +511,7 @@
                 $pageTitle      = $stateName;
                 $dashState      = str_replace($sr['n'],$sr['r'],strtolower($stateName));
                 $pageIdentifier = "locations/$dashState";
+                $identifiers[]  = $pageIdentifier;
                 $parentId       = 22;
                 $pageId         = $statePageId[$stateName];
                 $treePath       = "2/$parentId/$pageId";
@@ -537,6 +540,7 @@
                 $dashCity       = str_replace($sr['n'],$sr['r'],strtolower($city));
                 $dashState      = str_replace($sr['n'],$sr['r'],strtolower($state));
                 $pageIdentifier = "locations/$dashState/$dashCity";
+                $identifiers[]  = $pageIdentifier;
 
                 $parentId       = $statePageId[$state];
                 // Set PageId to current CityID, Increment after setting (for next city)
@@ -620,11 +624,36 @@ QUERY;
         $resultMsg = $e->getMessage();
     }
     ?>
-        <div>Files Read: <?php echo count($textFiles); ?><br>
-            <?php foreach($textFiles as $textFile){
-                echo $textFile . "<br/>";
-            }
-            ?>
+        <div id="sitemap-of-generated-pages">
+            <div>Sitemap of all generated pages:</div>
+            <div><?php echo $helper->generateSitemapFromIdentifiers($identifiers); ?></div>
+        </div>
+        <div>
+            <div>Generated Pages Not In Release Schedule:</div>
+            <div><?php
+                $notInReleaseArray = $helper->arrValsNotInRelease($identifiers);
+                foreach($notInReleaseArray as $niri) {
+                    echo $niri . "<br/>";
+                }
+            ?></div>
+            <div>Release Schedule Pages not In Generated Pages:</div>
+            <div><?php
+                $notGenerated = $helper->releaseNotInArrVals($identifiers);
+                foreach($notGenerated as $ngpi) {
+                    echo $ngpi . "<br/>";
+                }
+            ?></div>
+        </div>
+        <div>
+            <span>Generated Identifiers (in php array)</span>
+            <div style="height:10px;overflow:hidden;"><?php echo 'array(<br/>"'.implode('",<br/>"',$identifiers).'");' ?></div>
+        </div>
+        <div><div>Files Read: <?php echo count($textFiles); ?></div>
+            <div style="height: 10px;overflow:hidden;"><?php
+                foreach($textFiles as $textFile){
+                    echo $textFile . "<br/>";
+                }
+            ?></div>
         </div>
         <div>Records Recorded: <?php echo count($props); ?></div>
         <div>File Contents Written: <?php echo $result ?
@@ -635,7 +664,7 @@ QUERY;
     </div>
 </div>
 
-<?php if(true)://isset($download) && $download != "false" && $download === "locations" && $allLocations == true): ?>
+<?php if(isset($download) && $download != "false" && $download === "locations" && $allLocations == true): ?>
 <script type="text/javascript">
     jQuery(document).ready(function() {
         var procs = [];
