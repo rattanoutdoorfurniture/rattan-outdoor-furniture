@@ -4,11 +4,19 @@
     background: transparent url('../images/hash-border-darker.png') left top repeat;
 }
 
-#category-banner-img {
-    width: 920px;
-    height: 374px;
+#category-banner-img-wrap {
     margin: 10px;
+    background: #FFF;
+}
+
+#category-banner-img {
+    display: block;
+    width: auto;
+    max-width: 920px;
+    height: 374px;
+    margin: auto;
     outline: none;
+
 }
 
 #category-banner-blurb {
@@ -156,6 +164,11 @@
 
 /* Product listings resluts
 ********************************************************/
+
+.category-products .note-msg {
+    clear: both;
+    padding: 10px 30px;
+}
 
 .category-product {
     background: transparent url('../images/hash-border-darker.png?noCache') center center repeat;

@@ -131,12 +131,26 @@ jQuery(document).ready(function($){
                 }
                 $btn.parent().data('proc',false);
             });
-//            if((curOff<dist)&&(tableW-$wrap.width()-(curOff*dir) < 0)) {
-//                $btn.addClass("disabled");
-//                $oBtn.removeClass("disabled");
-//            } else {
-//                $btn.removeClass("disabled");
-//            }
+        });
+    }
+
+    if(jQuery(".glob-search-focus").length) {
+        jQuery(".glob-search-focus").on("click", function(){
+            var $input = jQuery('#glob-search-input');
+            var inpTop = $input.offset().top;
+            var curTop = jQuery(document).scrollTop();
+            var intTop = inpTop - 20;
+            if(curTop > intTop) {
+                jQuery(document).scrollTop(intTop);
+            }
+            $input.focus();
+            $input.css("opacity","1.0");
+            jQuery.when(
+                $input.animate({opacity: 0.2},250)
+            ).done(function() {
+                $input.animate({opacity: 1.0},250);
+            });
+            return false;
         });
     }
 

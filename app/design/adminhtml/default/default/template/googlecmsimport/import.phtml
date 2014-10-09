@@ -402,7 +402,7 @@
 
     $outputData = '';
 
-    if($parseDescriptions) {
+    if($parse=="descriptions") {
         $csv = 'title,content,keywords,description'.PHP_EOL;
         foreach($props as $page) {
             if(!(strlen($page['title'])>0&&count($page['content'])>0&&count($page['keywords'])>0)) continue;
@@ -410,7 +410,15 @@
             $csv .= "\"";
             $csv .= implode("",$page['content']);
             $csv .= "\",";
-            $csv .= "\"" . implode(", ",explode(" ",implode(" ",$page['keywords']))) . "\",";
+            if($io['usePhrase']) {
+                $csv .= "\"" . str_replace(
+                        array(",","-"),
+                        array("", " "),
+                        $page['title']
+                    ) . "\",";
+            } else {
+                $csv .= "\"" . implode(", ",explode(" ",implode(" ",$page['keywords']))) . "\",";
+            }
             if(isset($page['description'])) {
                 $csv .= "\"" . implode(" ", $page['description']) . "\"";
             } else {
@@ -419,7 +427,8 @@
             $csv .= PHP_EOL;
         }
         $outputData = $csv;
-    } else {
+    } else
+    if($parse == "locations") {
         // Parsing CMS Pages, Write INSERT statements to sql file.
         $statePageId = array(
             "Alabama"	        	=> "50",
