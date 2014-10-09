@@ -117,10 +117,6 @@ if ($actionName == 'catalog_category_view') { // Category Page
     if (!$linkNext && !$linkPrev) {
         echo '<link rel="canonical" href="' . $this->getUrl($category->getUrlPath()) . '" />';
     }
-} elseif($actionName == "customer_account_login" || $actionName == "customer_account_create") {
-		$url = Mage::helper('core/url')->getCurrentUrl();
-		$url = strpos($url,'?')===false ? $url : strstr($url,'?',true);
-    echo '<link rel="canonical" href="'.$url.'"/>';
 } elseif($actionName == "catalog_product_view") {
     // Canonical Tag Set Elsewhere for product views
 } elseif(strpos($actionName,"catalog_seo_sitemap")!==false) {
@@ -208,12 +204,9 @@ if ($actionName == 'catalog_category_view') { // Category Page
 } elseif(strpos($actionName,"blog_post")!==false) {
     echo '<link rel="canonical" href="'.$this->getUrl("blog/".Mage::getSingleton('blog/post')->getIdentifier()).'"/>';
 } else {
-    $actionPieces = explode("_",$actionName);
-    while(strcasecmp(end($actionPieces),"index")==0) {
-        array_pop($actionPieces);
-    }
-    $actionPath   = implode("/",$actionPieces);
-    echo '<link rel="canonical" href="'.$this->getUrl($actionPath).'" href="'.''.'"/>';
+    $url = Mage::helper('core/url')->getCurrentUrl();
+    $url = strpos($url,'?')===false ? $url : strstr($url,'?',true);
+    echo '<link rel="canonical" href="'.$url.'"/>';
 }
 ?>
 
