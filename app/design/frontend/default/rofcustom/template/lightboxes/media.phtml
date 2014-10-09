@@ -126,9 +126,7 @@ if($helper->getConfig('lightbox_type') == 'piroboxextended' && !$includeMainImag
                 <a href="<?php echo $popUpImage; ?>" rel="<?php echo $mainImageRel; ?>" class="product-img-view hashborder<?php echo ($_image==$first?" first":'').($_image==$last?" last":'').(strlen($class)?$class:''); ?>" title="<?php echo $this->htmlEscape($_image->getLabel()) ?>">
                     <?php /** @see Mage_Catalog_Helper_Image */ ?>
                     <?php //echo dumper::dump((($this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->keepAspectRatio(true)->resize($thumbnailSize[0],$thumbnailSize[1])))); ?>
-                    <div class="hashborder-border _05"></div>
                     <img class="product-img-view-thumb" src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->keepAspectRatio(false)->constrainOnly(false)->resize($thumbnailSize[0], $thumbnailSize[1]); ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" />
-                    <div class="hashborder-border _05"></div>
                 </a>
             <?php endforeach; ?>
             <div class="cart-box-border"></div>

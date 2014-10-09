@@ -22,7 +22,7 @@
 
 #product-img-views {
     width: 420px;
-    margin: 0px;
+    margin: 0;
 }
 
 .product-img-view {
@@ -30,13 +30,14 @@
     background: transparent url('../images/hash-border-darker.png') center center repeat;
     margin: 0 5px;
     width: 125px;
-    display: block;
-    height: 87px;
+    display: block !important;
+    height: 87px !important;
 }
 
 .product-img-view:first-child {
     margin-left: 1px;
     margin-right: 7px;
+    display: inline-block;
 }
 .product-img-view:last-child {
     margin-right: 1px;
@@ -54,8 +55,8 @@
 .product-img-view-thumb {
     width: 115px;
     height: 77px;
-    /*padding: 5px 5px 0 5px;*/
-    padding: 0 5px;
+    /*padding: 5px 5px 0 5px;*/;
+    padding: 5px;
     cursor: pointer;
 }
 
