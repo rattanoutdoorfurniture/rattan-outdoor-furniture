@@ -171,7 +171,7 @@
 }
 
 .category-product {
-    background: transparent url('../images/hash-border-darker.png?noCache') center center repeat;
+    background: transparent url('../images/hash-border-darker.png') center center repeat;
     margin-bottom: 20px;
     cursor: pointer;
 }

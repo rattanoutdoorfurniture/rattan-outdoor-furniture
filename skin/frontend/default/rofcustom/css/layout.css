@@ -115,7 +115,7 @@ input[type=checkbox] label {
 .hashborder {
     min-height: 40px;
     position: relative;
-    background: transparent url('../images/hash-border-darker.png?noCache') 0 0 repeat;
+    background: transparent url('../images/hash-border-darker.png') 0 0 repeat;
     height: auto;
 }
 .hashborder-border {
