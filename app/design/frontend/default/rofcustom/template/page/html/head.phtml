@@ -36,20 +36,25 @@
     }
     ?>
     <meta property="og:url" content="<?php echo $url; ?>" />
+    <meta property="og:type" content="product" />
 <?php else: ?>
     <!-- Facebook general meta -->
     <meta property="og:title" content="<?php echo (@$this->getForcedTitle()) ? $this->getForcedTitle() : $this->getTitle(); ?>" />
     <?php
-        if(Mage::helper("core/url")->getCurrentUrl()==Mage::getBaseUrl()) {
             $key  = "fab57e";
             $sec  = "rattanoutdoorfurniture.com";
-            $surl = urlencode(Mage::helper("core/url")->getCurrentUrl());
-            $hash = md5($surl.$sec);
+            $curl = Mage::helper("core/url")->getCurrentUrl();
+            $hash = md5($curl.$sec);
+            $surl = urlencode($curl);
     ?>
-    <meta property="og:image" content="<?php echo "http://api.screenshotmachine.com/?key=$key&size=X&hash=$hash&url=$surl"; ?>" />
-    <?php } else { ?>
-    <meta property="og:image" content="<?php echo str_replace("-left-","-centered-",$this->getSkinUrl(Mage::getStoreConfig('design/header/logo_src'))); ?>" />
-    <?php } ?>
+    <meta property="og:image" content="<?php echo "http://api.screenshotmachine.com/?key=$key&url=$surl&size=X&hash=$hash"; ?>" />
+    <?php switch($this->getAction()->getFullActionName()):
+        case "cms_index_index": ?><meta property="og:type" content="website" />
+    <?php break;
+        case "catalog_category_view": ?><meta property="og:type" content="product.group" />
+    <?php break;
+        default: ?><meta property="og:type" content="article" />
+    <?php endswitch; ?>
     <meta property="og:description" content="<?php echo $this->getDescription(); ?>" />
     <meta property="og:url" content="<?php echo Mage::helper("core/url")->getCurrentUrl(); ?>" />
 
