@@ -18,12 +18,12 @@
 <!-- Facebook Open Graph Metas
 ================================================== -->
     <!-- Facebook global meta  -->
-    <meta name="og:site_name" content="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"/>
+    <meta property="og:site_name" content="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"/>
 <?php if (Mage::registry('current_product')) : ?>
     <!-- Facebook product meta -->
-    <meta name="og:title" content="<?php echo Mage::registry('current_product')->getName() ." by Rattan Outdoor Furniture" ?>" />
-    <meta name="og:description" content="<?php echo strip_tags(Mage::registry('current_product')->getMetaDescription()); ?>" />
-    <meta name="og:image" content="<?php echo Mage::helper('catalog/image')->init(Mage::registry('current_product'), 'image')->resize(200,200);?>" />
+    <meta property="og:title" content="<?php echo Mage::registry('current_product')->getName() ." by Rattan Outdoor Furniture" ?>" />
+    <meta property="og:description" content="<?php echo strip_tags(Mage::registry('current_product')->getMetaDescription()); ?>" />
+    <meta property="og:image" content="<?php echo Mage::helper('catalog/image')->init(Mage::registry('current_product'), 'image')->resize(200,200);?>" />
     <?php
     $curProd = Mage::registry('current_product');
     $url = $curProd->getProductUrl();
@@ -35,23 +35,23 @@
         }
     }
     ?>
-    <meta name="og:url" content="<?php echo $url; ?>" />
+    <meta property="og:url" content="<?php echo $url; ?>" />
 <?php else: ?>
     <!-- Facebook general meta -->
-    <meta name="og:title" content="<?php echo (@$this->getForcedTitle()) ? $this->getForcedTitle() : $this->getTitle(); ?>" />
+    <meta property="og:title" content="<?php echo (@$this->getForcedTitle()) ? $this->getForcedTitle() : $this->getTitle(); ?>" />
     <?php
         if(Mage::helper("core/url")->getCurrentUrl()==Mage::getBaseUrl()) {
             $key  = "fab57e";
             $sec  = "rattanoutdoorfurniture.com";
-            $hash = md5($key.$sec);
             $surl = urlencode(Mage::helper("core/url")->getCurrentUrl());
+            $hash = md5($surl.$sec);
     ?>
-    <meta name="og:image" content="<?php echo "http://api.screenshotmachine.com/?key=$key&size=X&hash=$hash&url=$surl"; ?>" />
+    <meta property="og:image" content="<?php echo "http://api.screenshotmachine.com/?key=$key&size=X&hash=$hash&url=$surl"; ?>" />
     <?php } else { ?>
-    <meta name="og:image" content="<?php echo str_replace("-left-","-centered-",$this->getSkinUrl(Mage::getStoreConfig('design/header/logo_src'))); ?>" />
+    <meta property="og:image" content="<?php echo str_replace("-left-","-centered-",$this->getSkinUrl(Mage::getStoreConfig('design/header/logo_src'))); ?>" />
     <?php } ?>
-    <meta name="og:description" content="<?php echo $this->getDescription(); ?>" />
-    <meta name="og:url" content="<?php echo Mage::helper("core/url")->getCurrentUrl(); ?>" />
+    <meta property="og:description" content="<?php echo $this->getDescription(); ?>" />
+    <meta property="og:url" content="<?php echo Mage::helper("core/url")->getCurrentUrl(); ?>" />
 
 <?php endif; ?>
 
