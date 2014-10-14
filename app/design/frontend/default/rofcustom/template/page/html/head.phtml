@@ -24,6 +24,8 @@
     <meta property="og:title" content="<?php echo Mage::registry('current_product')->getName() ." by Rattan Outdoor Furniture" ?>" />
     <meta property="og:description" content="<?php echo strip_tags(Mage::registry('current_product')->getMetaDescription()); ?>" />
     <meta property="og:image" content="<?php echo Mage::helper('catalog/image')->init(Mage::registry('current_product'), 'image')->resize(200,200);?>" />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
     <?php
     $curProd = Mage::registry('current_product');
     $url = $curProd->getProductUrl();
@@ -47,7 +49,9 @@
             $hash = md5($curl.$sec);
             $surl = urlencode($curl);
     ?>
-    <meta property="og:image" content="<?php echo "http://api.screenshotmachine.com/?key=$key&url=$surl&size=X&hash=$hash"; ?>" />
+    <meta property="og:image" content="<?php echo "http://api.screenshotmachine.com/?key=$key&url=$surl&size=M&hash=$hash"; ?>" />
+    <meta property="og:image:width" content="640" />
+    <meta property="og:image:height" content="480" />
     <?php switch($this->getAction()->getFullActionName()):
         case "cms_index_index": ?><meta property="og:type" content="website" />
     <?php break;
