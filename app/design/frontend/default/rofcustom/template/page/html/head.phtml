@@ -18,12 +18,12 @@
 <!-- Facebook Open Graph Metas
 ================================================== -->
     <!-- Facebook global meta  -->
-    <meta property="og:site_name" content="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"/>
+    <meta name="og:site_name" content="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"/>
 <?php if (Mage::registry('current_product')) : ?>
     <!-- Facebook product meta -->
-    <meta property="og:title" content="<?php echo Mage::registry('current_product')->getName() ." by Rattan Outdoor Furniture" ?>" />
-    <meta property="og:description" content="<?php echo strip_tags(Mage::registry('current_product')->getMetaDescription()); ?>" />
-    <meta property="og:image" content="<?php echo Mage::helper('catalog/image')->init(Mage::registry('current_product'), 'image')->resize(200,200);?>" />
+    <meta name="og:title" content="<?php echo Mage::registry('current_product')->getName() ." by Rattan Outdoor Furniture" ?>" />
+    <meta name="og:description" content="<?php echo strip_tags(Mage::registry('current_product')->getMetaDescription()); ?>" />
+    <meta name="og:image" content="<?php echo Mage::helper('catalog/image')->init(Mage::registry('current_product'), 'image')->resize(200,200);?>" />
     <?php
     $curProd = Mage::registry('current_product');
     $url = $curProd->getProductUrl();
@@ -35,13 +35,23 @@
         }
     }
     ?>
-    <meta property="og:url" content="<?php echo $url; ?>" />
+    <meta name="og:url" content="<?php echo $url; ?>" />
 <?php else: ?>
     <!-- Facebook general meta -->
-    <meta property="og:title" content="<?php echo (@$this->getForcedTitle()) ? $this->getForcedTitle() : $this->getTitle(); ?>" />
-    <meta property="og:image" content="<?php echo str_replace("-left-","-centered-",$this->getSkinUrl(Mage::getStoreConfig('design/header/logo_src'))); ?>" />
-    <meta property="og:description" content="<?php echo $this->getDescription(); ?>" />
-    <meta property="og:url" content="<?php echo Mage::helper("core/url")->getCurrentUrl(); ?>" />
+    <meta name="og:title" content="<?php echo (@$this->getForcedTitle()) ? $this->getForcedTitle() : $this->getTitle(); ?>" />
+    <?php
+        if(Mage::helper("core/url")->getCurrentUrl()==Mage::getBaseUrl()) {
+            $key  = "fab57e";
+            $sec  = "rattanoutdoorfurniture.com";
+            $hash = md5($key.$sec);
+            $surl = urlencode(Mage::helper("core/url")->getCurrentUrl());
+    ?>
+    <meta name="og:image" content="<?php echo "http://api.screenshotmachine.com/?key=$key&size=X&hash=$hash&url=$surl"; ?>" />
+    <?php } else { ?>
+    <meta name="og:image" content="<?php echo str_replace("-left-","-centered-",$this->getSkinUrl(Mage::getStoreConfig('design/header/logo_src'))); ?>" />
+    <?php } ?>
+    <meta name="og:description" content="<?php echo $this->getDescription(); ?>" />
+    <meta name="og:url" content="<?php echo Mage::helper("core/url")->getCurrentUrl(); ?>" />
 
 <?php endif; ?>
 
@@ -51,11 +61,12 @@
 
 <!-- Favicons
 ================================================== -->
-<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
 <?php if($this->getFaviconFile()): ?>
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
 <link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
 <?php else: ?>
-<link rel="shortcut icon" href="/skin/frontend/default/rofcustom/images/favicon.ico">
+<link rel="icon" href="/skin/frontend/default/rofcustom/images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/skin/frontend/default/rofcustom/images/favicon.ico" type="image/x-icon" />
 <?php endif; ?>
 <link rel="apple-touch-icon" href="/skin/frontend/default/rofcustom/images/apple/apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/skin/frontend/default/rofcustom/images/apple/apple-touch-icon-72x72.png">
