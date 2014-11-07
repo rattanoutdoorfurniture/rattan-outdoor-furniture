@@ -90,12 +90,12 @@
                    <input type="hidden" name="checkout_method" id="login:register" value="register"<?php /* if($this->getQuote()->getCheckoutMethod()==Mage_Checkout_Model_Type_Onepage::METHOD_REGISTER || !$this->getQuote()->isAllowedGuestCheckout()): ?> checked="checked"<?php endif */ ?> />
                    <button class="guest-submit" id="guest-submit-register"><?php echo $this->__('Register and Save Time') ?></button>
                </li>
-               <?php if( $this->getQuote()->isAllowedGuestCheckout() ): ?>
                <li class="control">
                    <input type="hidden" name="checkout_method" id="login:guest" value="guest"<?php /* if($this->getQuote()->getCheckoutMethod()==Mage_Checkout_Model_Type_Onepage::METHOD_GUEST): ?> checked="checked"<?php endif; */ ?> />
-                   <button class="guest-submit" id="guest-submit-guest"><?php echo $this->__("Skip This Step"); ?></button>
+                    <?php if( $this->getQuote()->isAllowedGuestCheckout() ): ?>
+                    <button class="guest-submit" id="guest-submit-guest"><?php echo $this->__("Skip This Step"); ?></button>
+                    <?php endif; ?>
                </li>
-               <?php endif; ?>
            </ul>
 
         <?php /* if( $this->getQuote()->isAllowedGuestCheckout() ): ?>
