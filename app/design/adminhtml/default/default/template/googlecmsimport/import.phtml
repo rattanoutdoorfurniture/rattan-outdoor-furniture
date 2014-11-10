@@ -28,10 +28,10 @@
     $fake   = $helper->checkReleasedPages();
     $avail  = $helper->getReleasedPages();
 
-    echo var_export(
-        $helper->getReleasedCount()
-        ,true
-    );
+//    echo var_export(
+//        $helper->getReleasedCount()
+//        ,true
+//    );
 
     ?>
 </div>
@@ -196,6 +196,7 @@
             <li><a href="<?php if($this->authed):?>?parse=false&process=false&list=false&download=locations<?php else: echo $this->authUrl; endif;?>">Download Locations</a></li>
             <li><a href="?parse=descriptions&process=true">Parse & Process Descriptions</a></li>
             <li><a href="?parse=locations&process=true">Parse & Process Locations</a></li>
+            <li><a href="?parse=products&process=true">Parse & Process Products</a></li>
         </ul>
     </div>
     <div style="white-space: pre;">
@@ -206,6 +207,14 @@
         $io = array(
             "input"     => Mage::getBaseDir("var")."/MagentoImport/Products/Descriptions/RattanOutdoorFurniture*.txt",
             "output"    => Mage::getBaseDir('var')."/MagentoImport/Products/Descriptions/Descriptions.csv",
+            "q"         => "'",
+            "usePhrase" => true
+        );
+    } else
+    if($parse == "products") {
+        $io = array(
+            "input"     => Mage::getBaseDir("var")."/MagentoImport/Products/CollectionProducts/*.txt",
+            "output"    => Mage::getBaseDir("var")."/MagentoImport/Products/CollectionProducts/Products.csv",
             "q"         => "'",
             "usePhrase" => true
         );
@@ -402,7 +411,7 @@
 
     $outputData = '';
 
-    if($parse=="descriptions") {
+    if($parse=="descriptions" || $parse=="products") {
         $csv = 'title,content,keywords,description'.PHP_EOL;
         foreach($props as $page) {
             if(!(strlen($page['title'])>0&&count($page['content'])>0&&count($page['keywords'])>0)) continue;

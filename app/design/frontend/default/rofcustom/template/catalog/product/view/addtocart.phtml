@@ -45,7 +45,7 @@
             </div>
             ****************************************************************/ ?>
         <section id="product-details-options-qty" class="product-details-options-section">
-            <span id="product-details-options-qty-label" class="product-details-options-label">Select Quantity:</span>
+            <span id="product-details-options-qty-label" class="product-details-options-label"><?php echo $this->__("Qty"); ?></span>
             <aside id="product-details-options-qty-selector">
                 <select id="qty" name="qty"  title="<?php echo $this->__('Qty') ?>" class="input-text qty">
                     <?php $defQty = $this->getProductDefaultQty() * 1; ?>

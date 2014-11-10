@@ -176,6 +176,10 @@
     cursor: pointer;
 }
 
+.category-product:nth-child(5n+1) {
+    clear: left;
+}
+
 .catalogsearch-result-index
 .category-product:nth-child(3n-1) {
     margin-left: 50px !important;
@@ -339,4 +343,55 @@
     margin-bottom: 20px;
     font-size: 16px;
     text-transform: uppercase;
+}
+
+/* Collections Specific Styles
+*************************************************************************/
+
+.subcategories {
+    clear: left;
+    overflow: visible;
+    float: none;
+}
+
+.subcategories li {
+    height: 350px;
+    overflow: visible;
+}
+
+.subcategories li a {
+    display: block;
+    position: relative;
+    height: 50px;
+    margin: 10px;
+    overflow: visible;
+    background: #FFF;
+    height: 330px;
+}
+
+.subcategories li a img {
+    width: 440px;
+    height: auto;
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.subcategories li a span {
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+    background: rgba(250,250,250,0.75);
+    top: auto;
+    left: auto;
+    color: #8a6399;
+    font-family: 'abeatbyKai', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }

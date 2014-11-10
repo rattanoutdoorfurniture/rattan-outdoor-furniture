@@ -132,7 +132,7 @@
 
     <div id="product-details-special">
         <span id="product-details-special-label">Special Offers:</span>
-        <span id="product-details-special-text">Spend $ 2,000 and save an extra <mark class="purpText">10%</mark></span>
+        <span id="product-details-special-text"><?php echo $this->__("Spend $ 2,000 and receive "); ?><mark class="purpText"><?php echo $this->__("Free Shipping"); ?></mark></span>
     </div>
     <?php if ($_product->isSaleable()):?>
 

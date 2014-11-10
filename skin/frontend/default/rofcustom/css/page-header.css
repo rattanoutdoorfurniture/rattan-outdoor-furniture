@@ -197,21 +197,38 @@ nav a {
     top: 40px;
     width: auto;
     margin: 0;
-    padding: 10px 10px 10px 15px;
+    padding: 10px 0 0 0;
     background: #e6e6e6 url('../images/nav-main-unselected.png') left bottom repeat-x;
     background-size: auto 100%;
     white-space: nowrap;
 }
 
-.dropdownEnabled .nav-main-item.parent:hover ul {
+.nav-main-item.parent:hover > ul {
     display: block;
 }
 
-.nav-main-item.parent:hover ul li {
-    height: 22px;
+.nav-main-item.parent > ul > li > ul {
+    top: 0;
+    left: 100%;
+}
+
+.nav-main-item.parent:hover > ul > li:hover > ul {
+    display: block;
+}
+
+.nav-main-item.parent ul li a {
+    display: block;
+    width: 100%;
+    /* height: 100%; */
+    padding: 5px 0;
+}
+
+.nav-main-item.parent ul li {
+    /*height: 22px;*/
     text-transform: uppercase;
     color: #555;
-    font-family: 'FuturaStd-Medium';
+    padding: 5px 10px;
+    font-family: 'FuturaStd-Medium', Arial, Helvetica, sans-serif;
 }
 
 .nav-main-item.parent:hover ul li:hover {

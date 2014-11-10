@@ -81,7 +81,8 @@ class Mage_Catalog_Block_Product_View extends Mage_Catalog_Block_Product_Abstrac
                     $categoryParent = $categoryParent->getFrontend()->getValue($product);
                     if($categoryParent) {
                         $categoryParent = "products/" . $categoryParent;
-                        $url = $this->getUrl($categoryParent."/".basename($url));
+                        $basename = preg_replace('/([a-z\-]*)(\-\d+)/',"$1",basename($url));
+                    $url = $this->getUrl($categoryParent).$basename."/";
                     }
                 }
                 $headBlock->addLinkRel('canonical', $url);

@@ -33,8 +33,9 @@
             <?php
             $lists        = 0;
             $i            = 0;
+            $colLength = ceil(count($citiesList)/4);
             foreach($citiesList as $city): ?>
-                <?php if(($i%5)==0): ?>
+                <?php if(($i%$colLength)==0): ?>
                 <ul class="cms-widget-state-list-link-list">
                 <?php endif; ?>
                     <?php //$stateLink = $citiesList[$i]; ?>
@@ -45,7 +46,7 @@
                         <span><?php echo $this->escapeHtml(stristr($city['title'],",",true)); ?></span>
                         <?php endif; ?>
                     </li>
-                <?php if((($i%5)==4) || ($i==(count($citiesList)-1))): ?>
+                <?php if((($i%$colLength)==($colLength-1)) || ($i==(count($citiesList)-1))): ?>
                 </ul><?php $lists++; ?>
                 <?php endif; ?>
                 <?php $i++; ?>

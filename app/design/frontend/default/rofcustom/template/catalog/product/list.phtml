@@ -13,7 +13,24 @@
 	$imageHeight = Mage::getStoreConfig('quickview/frontend/listheight');
 ?>
 
-<?php if(!$_productCollection->count()): ?>
+<?php if(!$_productCollection->count() && preg_match('/(products\/collections)/',Mage::app()->getRequest()->getRequestString())): ?>
+    <?php
+    $category = Mage::getSingleton('catalog/layer')->getCurrentCategory();
+    $categories = $category->getCollection()
+        ->addAttributeToSelect(array('name', 'thumbnail'))
+        ->addAttributeToFilter('is_active', 1)
+        ->addIdFilter($category->getChildren())
+        ->setOrder("position","ASC");
+    ?>
+    <ul class="subcategories clearfix">
+        <?php foreach ($categories as $category): ?>
+            <li class="category-product eight columns">
+                <a href="<?php echo rtrim($category->getUrl(),'/').'/'; ?>"><img src="<?php echo Mage::getBaseUrl('media') . 'catalog' . DS . 'category' . DS . $category->getThumbnail() ?>" alt="<?php echo $this->htmlEscape($category->getName()) ?>" />
+                    <span><?php echo $category->getName() ?></span></a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php elseif(!$_productCollection->count()): ?>
     <div class="category-products">
         <p class="note-msg"><span><?php
             echo $this->__('Currently, No products were found in ' . Mage::registry("current_category")->getName()) . ".";
@@ -39,7 +56,8 @@
               $categoryParent = $categoryParent->getFrontend()->getValue($_product);
               if($categoryParent) {
                   $categoryParent = "products/" . $categoryParent;
-                  $url = $this->getUrl($categoryParent."/".basename($url));
+                  $basename = preg_replace('/([a-z\-]*)(\-\d+)/',"$1",basename($url));
+                    $url = $this->getUrl($categoryParent).$basename."/";
               }
           }
           //$proCats = $_product->getCategoryIds();
@@ -55,7 +73,7 @@
             <section class="category-product-title" title="<?php echo $_productNameStripped; ?>">
                 <?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>
             </section>
-            <!--<section class="category-product-collection"><?php /*echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') */?></section>-->
+            <section<?php if (isset($categoryParent) && !is_null($categoryParent)): ?> onclick="setLocation('<?php echo rtrim($this->getUrl($categoryParent),"/")."/"; ?>');"<?php endif; ?> class="category-product-collection"><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></section>
             <?php echo $this->getPriceHtml($_product, true) ?>
             <button class="category-product-add" onclick="setLocation('<?php echo $this->helper('checkout/cart')->getAddUrl($_product) ?>')"><?php echo $this->__("Add to Cart")?></button>
         </a>
@@ -94,7 +112,8 @@
                 $categoryParent = $categoryParent->getFrontend()->getValue($_product);
                 if($categoryParent) {
                     $categoryParent = "products/" . $categoryParent;
-                    $url = $this->getUrl($categoryParent."/".basename($url));
+                    $basename = preg_replace('/([a-z\-]*)(\-\d+)/',"$1",basename($url));
+                    $url = $this->getUrl($categoryParent).$basename."/";
                 }
             }
             //$proCats = $_product->getCategoryIds();
@@ -105,10 +124,10 @@
         <a data-position="<?php echo $_product->getPosition(); ?>" id="category-product-inner-<?php echo $_product->getId()?>" href="<?php echo $url; ?>" class="category-product-inner clearfix"  title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>">
             <img class="category-product-img" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($imageWidth,$imageHeight); ?>" alt="<?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>" width="<?php echo $imageWidth;?>" height="<?php echo $imageHeight; ?>" /><!-- 200x142 -->
             <div class="category-product-img-underline"></div>
-            <section class="category-product-title" title="<?php echo $_productNameStripped; ?>" style="margin: 25px 0;">
+            <section class="category-product-title" title="<?php echo $_productNameStripped; ?>">
                 <?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>
             </section>
-            <!-- <section class="category-product-collection"><?php //echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></section> -->
+            <section<?php if (isset($categoryParent) && !is_null($categoryParent)): ?> onclick="setLocation('<?php echo rtrim($this->getUrl($categoryParent),"/")."/"; ?>');return false;"<?php endif; ?> class="category-product-collection"><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></section>
             <?php echo $this->getPriceHtml($_product, true) ?>
             <button class="category-product-add" onclick="setLocation('<?php echo $this->helper('checkout/cart')->getAddUrl($_product) ?>')" title="View more about <?php echo $_productNameStripped; ?>"><?php echo $this->__("View More")?></button>
         </a>
@@ -119,3 +138,4 @@
 </div>
 
 <?php endif; ?>
+
