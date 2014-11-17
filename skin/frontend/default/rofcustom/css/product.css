@@ -251,6 +251,31 @@
     width: 40px;
 }
 
+#downloadable-links-list .label label {
+    float: none;
+    display: inline-block;
+}
+
+#downloadable-links-list .label {
+    top: -1px;
+    display: inline-block;
+    position: relative;
+}
+
+.options-list {
+    /* margin: auto 0; */
+    /* vertical-align: middle; */
+    height: 22px;
+    position: relative;
+    top: 50%;
+    margin-top: -11px;
+}
+
+#downloadable-links-list .label label + * {
+    /* margin-bottom: 11px; */
+    /* display: inline-block; */
+}
+
 /*.product-details-options-mdd {*/
     /*position: absolute;*/
     /*left: -10000px;*/
