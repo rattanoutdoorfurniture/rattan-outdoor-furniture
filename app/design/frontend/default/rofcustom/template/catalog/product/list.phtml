@@ -36,7 +36,7 @@
             echo $this->__('Currently, No products were found in ' . Mage::registry("current_category")->getName()) . ".";
         ?></span><br><?php
             echo $this->__('Take a look at our ');
-        ?><a href="<?php $this->getUrl('collections');?>" title="<?php echo $this->__("Rattan Outdoor Furniture Collections"); ?>"><?php echo $this->__("Collections"); ?></a><?php
+        ?><a href="<?php echo $this->getUrl('products/collections');?>" title="<?php echo $this->__("Rattan Outdoor Furniture Collections"); ?>"><?php echo $this->__("Collections"); ?></a><?php
             echo $this->__(', or use our ');
         ?><a href="#" class="glob-search-focus">Search</a><?php
             echo $this->__(' to find exactly what you are looking for.');

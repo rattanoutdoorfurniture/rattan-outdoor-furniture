@@ -107,6 +107,7 @@ if($helper->getConfig('lightbox_type') == 'piroboxextended' && !$includeMainImag
             //]]>
         </script>
     <?php endif; ?>
+    <?php $mainPopUpImage = $_product->getImage(); ?>
     <?php if (count($this->getGalleryImages()) > 0):
         ?>
         <section id="product-img-views" class="clearfix">
@@ -122,6 +123,7 @@ if($helper->getConfig('lightbox_type') == 'piroboxextended' && !$includeMainImag
                 else:
                     $popUpImage = $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize($popUpImageSize[0], $popUpImageSize[1]);
                 endif;
+                if($_image->getFile()==$mainPopUpImage) continue;
                 ?>
                 <a href="<?php echo $popUpImage; ?>" rel="<?php echo $mainImageRel; ?>" class="product-img-view hashborder<?php echo ($_image==$first?" first":'').($_image==$last?" last":'').(strlen($class)?$class:''); ?>" title="<?php echo $this->htmlEscape($_image->getLabel()) ?>">
                     <?php /** @see Mage_Catalog_Helper_Image */ ?>
