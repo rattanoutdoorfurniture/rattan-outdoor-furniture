@@ -77,7 +77,13 @@ Load this update on every page when customer is logged out
         <reference name="top.links">
             <action method="addLink" translate="label title" module="customer">
                 <label>Login/Register</label>
-                <url helper="customer/getLoginUrl"/>
+                <url helper="customer/getLoginUrl">
+
+                    <arg>
+                        <_forced_secure>true</_forced_secure>
+                        <_use_rewrite>true</_use_rewrite>
+                    </arg>
+                </url>
                 <title>Login/Register</title>
                 <prepare/>
                 <urlParams/>
