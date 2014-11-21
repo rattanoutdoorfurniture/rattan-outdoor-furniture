@@ -31,9 +31,23 @@
  * @see Mage_Catalog_Block_Product_List_Toolbar
  */
 ?>
-<?php if($this->getCollection()->getSize()): ?>
-
 <?php
+if($this->getCollection()->getSize()):
+    if(!function_exists("trailSlash")) {
+        function trailSlash($url) {
+            if(strpos($url,"?")===false) {
+                if(substr($url,-1)!=="/") {
+                    $url .= "/";
+                }
+            } else {
+                $urlParts = explode("?",$url,2);
+                if(substr($urlParts[0],-1)!=="/") {
+                    $url = $urlParts[0] . "/?" . $urlParts[1];
+                }
+            }
+            return $url;
+        }
+    }
     $textFilterLabels = array(
         "relevance" => array(
             "asc"   => $this->__("Most Relevant"),
@@ -67,7 +81,7 @@
         <?php if(!isset($textFilterLabels[strtolower($_order)])) continue; ?>
         <?php foreach($textFilterLabels[strtolower($_order)] as $_dir=>$textFilterLabel): ?>
         <li class="text-filters-option<?php if($this->isOrderCurrent($_key)): ?> selected<?php endif ?>">
-            <a href="<?php echo $this->getOrderUrl($_key, $_dir) ?>" class="text-filters-link" title="<?php echo $textFilterLabel; ?>" rel="nofollow"><?php echo $textFilterLabel; ?></a>
+            <a href="<?php echo trailslash($this->getOrderUrl($_key, $_dir)); ?>" class="text-filters-link" title="<?php echo $textFilterLabel; ?>" rel="nofollow"><?php echo $textFilterLabel; ?></a>
         </li>
         <?php endforeach; ?>
     <?php endforeach; ?>
