@@ -1,12 +1,20 @@
 ## GENERAL SETTINGS
 
 ## Disallow rule for all crawlers
-User-agent: *
+User-agent: Googlebot
+User-agent: Baiduspider
+User-agent: msnbot
+User-agent: Bingbot
+User-agent: YandexBot
+User-agent: Sosospider
+User-agent: Exabot
+User-agent: Google
+User-agent: facebookexternalhit
+User-agent: Feedfetcher-Google
 Disallow: /
 
 ## Use live robots.txt rules for SEO Tools
-User-agent: Siteliner
-User-agent: INTERNET_EXPLORER_8
+User-agent: *
 
 ## Crawl-delay parameter: number of seconds to wait between successive requests to the same server.
 ## Set a custom crawl rate if you're experiencing traffic problems with your server.
