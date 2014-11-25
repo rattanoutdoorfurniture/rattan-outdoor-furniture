@@ -29,6 +29,9 @@
  *
  * @see Mage_Sendfriend_Block_Send
  */
+
+$pid = $this->getProductId();
+$_product= Mage::getModel('catalog/product')->load($pid);
 ?>
 <script type="text/javascript">
 //<![CDATA[
@@ -64,13 +67,59 @@
 //]]>
 </script>
 
+<style type="text/css">
+    h2.legend {
+        font-family: "Tahoma", Arial, Helvetica, sans-serif;
+    }
+    .page-title.sixteen.columns + p {
+        width: 80%;
+        margin: 10px auto 20px;
+    }
+    .fieldset.forSender {
+        clear: left;
+        float: left;
+        width: 40%;
+        margin-left: 10%;
+    }
+    .fieldset.forReceiver {
+        clear: none;
+        float: left;
+        width: 40%;
+        margin-right: 10%;
+    }
+    .fieldset.forReceiver + .buttons-set {
+        clear: none;
+        float: left;
+        width: 40%;
+        margin-right: 10%;
+    }
+    .fieldset.forReceiver + .buttons-set > * {
+        display: inline-block;
+    }
+    .fieldset.forReceiver + .buttons-set button {
+        height: 30px;
+        border: none;
+        border-radius: 15px;
+        text-indent: -10000px;
+
+    }
+    .fieldset.forReceiver + .buttons-set button[type='submit'] {
+        background: transparent url('/skin/frontend/default/rofcustom/images/email-to-friend-send-btn.png') center center no-repeat;
+        width: 80px;
+    }
+    .fieldset.forReceiver + .buttons-set button[type='button'] {
+        background: transparent url('/skin/frontend/default/rofcustom/images/email-to-friend-add-btn.png') center center no-repeat;
+        width: 100px;
+    }
+</style>
+<div class="page-title sixteen columns">
+    <h1 id="page-heading"><?php echo $this->__('Email to a Friend - ' . $_product->getName()) ?></h1>
+</div>
+<?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('email-to-friend')->toHtml(); ?>
 <div class="send-friend">
     <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
-    <div class="page-title">
-        <h1><?php echo $this->__('Email to a Friend') ?></h1>
-    </div>
     <form action="<?php echo $this->getSendUrl() ?>" method="post" id="product_sendtofriend_form">
-        <div class="fieldset">
+        <div class="fieldset forSender">
             <?php echo $this->getBlockHtml('formkey')?>
             <h2 class="legend"><?php echo $this->__('Sender:') ?></h2>
             <ul class="form-list" id="sender_options">
@@ -96,7 +145,7 @@
                 </li>
             </ul>
         </div>
-        <div class="fieldset">
+        <div class="fieldset forReceiver">
             <h2 class="legend"><?php echo $this->__('Recipient:') ?></h2>
             <ul class="form-list" id="recipients_options">
                 <li class="fields">
@@ -116,7 +165,7 @@
             </ul>
         </div>
         <div class="buttons-set">
-            <p class="back-link"><a href="#" onclick="history.back(); return false;"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
+            <p class="back-link displaynone"><a href="#" onclick="history.back(); return false;"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
             <button type="submit" class="button<?php if (!$this->canSend()):?> disabled<?php endif ?>"<?php if (!$this->canSend()):?> disabled="disabled"<?php endif ?>><span><span><?php echo $this->__('Send Email') ?></span></span></button>
             <div id="max_recipient_message" style="display:none;">
                 <?php if ($this->getMaxRecipients()): ?>
@@ -132,6 +181,13 @@
     </form>
     <script type="text/javascript">
     //<![CDATA[
+        if(!(history.length > 1)) {
+            var backBtn = document.getElementsByClassName("back-link");
+            for(i in backBtn) {
+                if(isNaN(i)) continue;
+                backBtn[i].style.display = "none";
+            }
+        }
         var productSendtofriendForm = new VarienForm('product_sendtofriend_form');
         productSendtofriendForm.submit = function() {
             if(this.validator.validate()) {

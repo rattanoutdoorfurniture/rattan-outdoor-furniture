@@ -77,7 +77,7 @@
 //    }
 ?>
 <?php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
-<form class="clearfix" action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+<form itemscope itemtype="http://schema.org/Product" class="clearfix" action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
 
 <?php echo $this->getBlockHtml('formkey') ?>
 
@@ -96,7 +96,7 @@
 
     <!-- Product Title ----------------------------------------------------------------->
 
-    <h1 id="product-details-title"><?php echo $productName = $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+    <h1 id="product-details-title" itemprop="name"><?php echo $productName = $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
 
     <!-- Text Below Title Section ------------------------------------------------------->
 
@@ -112,7 +112,7 @@
         <!--<span class="product-details-sub-pipe">|</span>-->
         <!--<span id="product-details-sub-item"><?php /*echo $this->__("Item #: "); */?><?php /*echo $proItemNumber; */?></span>-->
         <span class="product-details-sub-pipe">|</span>
-        <span id="product-details-sub-model"><?php echo $this->__("Model #: "); ?><?php echo $_helper->productAttribute($_product, $_product->getSKU(), 'sku') ?></span>
+        <span id="product-details-sub-model" itemprop="identifier" content="sku:<?php echo $_helper->productAttribute($_product, $_product->getSKU(), 'sku') ?>"><?php echo $this->__("Model #: "); ?><?php echo $_helper->productAttribute($_product, $_product->getSKU(), 'sku') ?></span>
     </div>
 
     <!-- Pricing Section -------------------------------------------------------------->
@@ -122,11 +122,16 @@
             <span id="product-details-price-original-label" class="product-details-price-label"><?php echo $this->__("Regular Price"); ?></span>
             <span id="product-details-price-original-price" class="product-details-price-amount">$<?php echo number_format($_helper->productAttribute($_product, $_product->getMsrp(), 'msrp'),0) ?></span>        </section>
         <section id="product-details-price-separator"></section>
-        <section id="product-details-price-sale" class="product-details-price-section">
+        <section id="product-details-price-sale" class="product-details-price-section" itemprop="offerDetails" itemscope="" itemtype="http://schema.org/Offer">
             <span id="product-details-price-sale-label" class="product-details-price-label"><?php echo $this->__("Sale Price"); ?></span>
-            <span id="product-details-price-sale-price" class="product-details-price-amount">$<?php echo number_format($_helper->productAttribute($_product, $_product->getPrice(), 'price'),0) ?></span>
+            <link itemprop="availability" href="http://schema.org/InStock"/>
+            <link itemprop="condition" href="http://schema.org/NewCondition" />
+            <meta itemprop="priceCurrency" content="USD" />
+            <span id="product-details-price-sale-price" class="product-details-price-amount" itemprop="price" content="<?php echo number_format($_helper->productAttribute($_product, $_product->getPrice(), 'price'),2) ?>">$<?php echo number_format($_helper->productAttribute($_product, $_product->getPrice(), 'price'),0) ?></span>
+
         </section>
     </div>
+    <span itemscope="" itemprop="brand" itemtype="http://schema.org/Brand" itemref="rattan-outdoor-furniture-brand"></span>
 
     <!-- Special Offer Section ------------------------------------------------------->
 
@@ -223,7 +228,7 @@
         foreach ($detailedInfo as $alias => $html):?>
         <section id="product-tabs-<?php echo $alias;?>" class="product-tab<?php echo ($html==$detailedInfoFirst) ? $this->__(" active") : ''; ?>">
             <label for="product-tabs-<?php echo $alias;?>" class="product-tab-title"><a href="#product-tabs-<?php echo $alias;?>"><?php echo strlen($title = $this->getChildData($alias, 'title')) ? $this->escapeHtml($title) : $this->__("Overview"); ?></a></label>
-            <div class="product-tab-body">
+            <div class="product-tab-body" itemprop="description">
                 <?php $_description = $this->getProduct()->getDescription(); ?>
                 <?php echo $this->helper('catalog/output')->productAttribute($this->getProduct(), $_description, 'description') ?>
             </div>
