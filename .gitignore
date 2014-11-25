@@ -19,5 +19,5 @@
 /media/js*
 /media/css*
 /media/wysiwyg/.thumbs
-cache/*
+media/catalog/product/cache/*
 
