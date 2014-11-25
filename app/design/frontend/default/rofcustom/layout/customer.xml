@@ -110,6 +110,7 @@ Layout for customer login page
         </reference>
         <reference name="head">
             <action method="setForcedTitle"><title>Login - Rattan Outdoor Furniture</title></action>
+            <action method="setDescription"><value>Quickly login to your Rattan Outdoor Furniture account, or register now. Connect with Facebook for an instant account. Seamlessly review and track your orders.</value></action>
         </reference>
         <reference name="content">
             <block type="customer/form_login" name="customer_form_login" template="customer/form/login.phtml" />

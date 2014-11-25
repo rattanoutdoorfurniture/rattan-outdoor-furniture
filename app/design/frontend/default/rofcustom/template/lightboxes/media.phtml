@@ -58,7 +58,7 @@ if($helper->getConfig('lightbox_type') == 'piroboxextended' && !$includeMainImag
         <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('css/cloud-zoom.css');?>" media="all" />
     <?php endif; ?>
     <?php if($noZoom):
-        $_img = '<img id="product-img-main-img" src="'.$this->helper('catalog/image')->init($_product, 'image')->keepAspectRatio(true)->constrainOnly(true)->resize($mainImageSize[0], $mainImageSize[1]).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
+        $_img = '<img id="product-img-main-img" itemprop="image" src="'.$this->helper('catalog/image')->init($_product, 'image')->keepAspectRatio(true)->constrainOnly(true)->resize($mainImageSize[0], $mainImageSize[1]).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
         if(empty($popUpImageSize[0]) || empty($popUpImageSize[0])):
             $popUpImage = $this->helper('catalog/image')->init($_product, 'image');
         else:
@@ -72,7 +72,7 @@ if($helper->getConfig('lightbox_type') == 'piroboxextended' && !$includeMainImag
         </a>
     <?php endif; ?>
     <?php if(!$noZoom):
-        $_img = '<img id="product-img-main-img" src="'.$this->helper('catalog/image')->init($_product, 'image')->keepAspectRatio(true)->constrainOnly(true)->resize($mainImageSize[0], $mainImageSize[1]).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
+        $_img = '<img id="product-img-main-img" itemprop="image" src="'.$this->helper('catalog/image')->init($_product, 'image')->keepAspectRatio(true)->constrainOnly(true)->resize($mainImageSize[0], $mainImageSize[1]).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
         if(empty($popUpImageSize[0]) || empty($popUpImageSize[0])):
             $popUpImage = $this->helper('catalog/image')->init($_product, 'image');
         else:
