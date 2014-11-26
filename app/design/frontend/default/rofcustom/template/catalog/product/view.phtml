@@ -77,7 +77,7 @@
 //    }
 ?>
 <?php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
-<form itemscope itemtype="http://schema.org/Product" class="clearfix" action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+<form itemscope itemtype="http://schema.org/Product" itemref="rattan-outdoor-furniture-brand" class="clearfix" action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
 
 <?php echo $this->getBlockHtml('formkey') ?>
 
@@ -132,8 +132,7 @@
 
         </section>
     </div>
-    <meta itemprop="brand" itemref="rattan-outdoor-furniture-brand"  itemscope="" itemType="http://schema.org/Brand" />
-    <meta itemprop="manufacturer" itemref="rattan-outdoor-furniture-store" itemscope="" itemtype="http://schema.org/FurnitureStore" />
+   
 
     <!-- Special Offer Section ------------------------------------------------------->
 
