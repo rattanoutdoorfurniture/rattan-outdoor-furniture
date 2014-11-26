@@ -112,7 +112,7 @@
         <!--<span class="product-details-sub-pipe">|</span>-->
         <!--<span id="product-details-sub-item"><?php /*echo $this->__("Item #: "); */?><?php /*echo $proItemNumber; */?></span>-->
         <span class="product-details-sub-pipe">|</span>
-        <span id="product-details-sub-model" itemprop="identifier" content="sku:<?php echo $_helper->productAttribute($_product, $_product->getSKU(), 'sku') ?>"><?php echo $this->__("Model #: "); ?><?php echo $_helper->productAttribute($_product, $_product->getSKU(), 'sku') ?></span>
+        <span id="product-details-sub-model" itemprop="productID" content="sku:<?php echo $_helper->productAttribute($_product, $_product->getSKU(), 'sku') ?>"><?php echo $this->__("Model #: "); ?><span itemprop="sku"><?php echo $_helper->productAttribute($_product, $_product->getSKU(), 'sku') ?></span></span>
     </div>
 
     <!-- Pricing Section -------------------------------------------------------------->
@@ -122,7 +122,7 @@
             <span id="product-details-price-original-label" class="product-details-price-label"><?php echo $this->__("Regular Price"); ?></span>
             <span id="product-details-price-original-price" class="product-details-price-amount">$<?php echo number_format($_helper->productAttribute($_product, $_product->getMsrp(), 'msrp'),0) ?></span>        </section>
         <section id="product-details-price-separator"></section>
-        <section id="product-details-price-sale" class="product-details-price-section" itemprop="offerDetails" itemscope="" itemtype="http://schema.org/Offer">
+        <section id="product-details-price-sale" class="product-details-price-section" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
             <span id="product-details-price-sale-label" class="product-details-price-label"><?php echo $this->__("Sale Price"); ?></span>
             <link itemprop="availability" href="http://schema.org/InStock"/>
             <link itemprop="condition" href="http://schema.org/NewCondition" />
