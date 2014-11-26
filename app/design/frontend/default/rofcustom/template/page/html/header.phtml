@@ -27,13 +27,13 @@
     * @var Mage_Page_Block_Html_Header $this
     */
    ?>
-<header id="page-header" itemscope="" itemtype="http://schema.org/FurnitureStore">
+<header id="page-header" itemscope="" itemtype="http://schema.org/FurnitureStore" itemid="http://www.RattanOutdoorFurniture.com/">
     <a href="https://google.com/+Rattanoutdoorfurniture" rel="publisher"></a>
     <span itemprop="email" id="organization-email" content="<?php echo Mage::getStoreConfig('trans_email/ident_general/email'); ?>"></span>
     <span itemprop="legalName" id="organization-legal-name" content="RattanOutdoorFurniture.com"></span>
     <span itemprop="logo" id="organization-logo" content="<?php echo str_replace("-left-","-centered-",$this->getLogoSrc()); ?>"></span>
     <span itemprop="sameAs" id="organization-same-as" content="https://www.facebook.com/rattanoutdoorfurniture"></span>
-    <div id="rattan-outdoor-furniture-brand" itemprop="brand" itemscope="" itemType="http://schema.org/Brand" class="page-header-logo five columns">
+    <div id="rattan-outdoor-furniture-brand" itemprop="brand" itemscope="" itemType="http://schema.org/Brand" itemid="http://www.RattanOutdoorFurniture.com/Brand" class="page-header-logo five columns">
         <a itemprop="url" id="link-logo-main" href="<?php echo "http://$_SERVER[HTTP_HOST]/"; ?>" title="Rattan Outdoor Furniture">
             <img id="logo-main" class="hide-mobile" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" />
             <img itemprop="logo" id="logo-main-mobile" class="no-display show-mobile" src="<?php echo str_replace("-left-","-centered-",$this->getLogoSrc()); ?>" alt="<?php echo $this->getLogoAlt() ?>" />
