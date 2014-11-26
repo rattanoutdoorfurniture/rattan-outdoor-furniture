@@ -127,14 +127,14 @@
             <link itemprop="availability" href="http://schema.org/InStock"/>
             <link itemprop="itemCondition" href="http://schema.org/NewCondition" />
             <meta itemprop="priceCurrency" content="USD" />
+            <meta itemprop="category" content="Furniture" />
             <span id="product-details-price-sale-price" class="product-details-price-amount" itemprop="price" content="<?php echo number_format($_helper->productAttribute($_product, $_product->getPrice(), 'price'),2) ?>">$<?php echo number_format($_helper->productAttribute($_product, $_product->getPrice(), 'price'),0) ?></span>
 
         </section>
     </div>
-    <link itemprop="brand" itemref="rattan-outdoor-furniture-brand" />
-    <link itemprop="manufacturer" itemref="page-header" />
-    <link itemprop="logo" itemref="logo-main-mobile" />
-    <meta itemprop="category" content="Furniture" />
+    <meta itemprop="brand" itemref="rattan-outdoor-furniture-brand" />
+    <meta itemprop="manufacturer" itemref="page-header" />
+    <meta itemprop="logo" itemref="logo-main-mobile" />
 
     <!-- Special Offer Section ------------------------------------------------------->
 
