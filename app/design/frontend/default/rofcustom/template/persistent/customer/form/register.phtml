@@ -38,6 +38,9 @@
                     <?php echo $fb_button; ?>
                 </aside>
             <?php endif; ?>
+            <?php if($regBlurb = Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('register-blurb')->toHtml()): ?>
+                <p style="margin: 10px 30px 20px;text-align: justify;"><?php echo $regBlurb; ?></p>
+            <?php endif; ?>
             <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="form-validate">
                 <?php echo $this->getBlockHtml('formkey')?>
                 <?php echo $this->getChildHtml('form_fields_before')?>

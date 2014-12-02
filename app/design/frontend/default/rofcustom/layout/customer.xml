@@ -150,6 +150,7 @@ New customer registration
         </reference>
         <reference name="head">
             <action method="setForcedTitle"><title>Register - Rattan Outdoor Furniture</title></action>
+            <action method="setDescription" translate="value"><value>Quickly have access to Rattan Outdoor Furniture and your purchasing history through our quick and easy registration. Become a member and receive full access now.</value></action>
         </reference>
         <reference name="content">
             <block type="customer/form_register" name="customer_form_register" template="customer/form/register.phtml">
