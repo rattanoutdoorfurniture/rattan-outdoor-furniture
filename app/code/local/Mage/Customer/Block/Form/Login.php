@@ -62,9 +62,8 @@ class Mage_Customer_Block_Form_Login extends Mage_Core_Block_Template
         if (is_null($url)) {
             $url = $this->helper('customer')->getRegisterUrl();
         }
-        if(Mage::app()->getStore()->isCurrentlySecure()) {
-            $url = str_replace(Mage::getStoreConfig(Mage_Core_Model_Store::XML_PATH_UNSECURE_BASE_URL),'',$url);
-            $url = $this->getUrl($url, array("_secure"=>true));
+        if(strpos($url,"https:")!==false) {
+            $url = str_replace("http:",'https:',$url);
         }
         return $url;
     }
