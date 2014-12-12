@@ -32,7 +32,22 @@
  */
 ?>
 <?php $_helper = $this->helper('catalog/output'); ?>
-<?php $_product = $this->getProduct(); ?>
+<?php $_product = $this->getProduct();
+$_priceModel  = $_product->getPriceModel();
+$_handles   = $this->getLayout()->getUpdate()->getHandles();
+$_isBundled = in_array("PRODUCT_TYPE_bundle", $_handles);
+$_isGrouped = in_array("PRODUCT_TYPE_grouped", $_handles);
+$_isSet     = !($_isBundled || $_isGrouped);
+if($_isBundled) {
+    list($_minimalPriceTax, $_maximalPriceTax) = $_priceModel->getTotalPrices($_product, null, null, false);
+} elseif($_isGrouped) {
+    $_associatedProducts = $_product->getTypeInstance(true)->getAssociatedProducts($_product);
+    $_minimalPriceTax = 0;
+    foreach($_associatedProducts as $_aProduct) {
+        $_minimalPriceTax += ($_aProduct->getPrice()*$_aProduct->getQty());
+    }
+}
+?>
 <script type="text/javascript">
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
 </script>
@@ -88,7 +103,7 @@
 
 <?php echo $this->getChildHtml('media') ?>
 
-<?php if(preg_match("/\<img.*\>/",$this->getChildHtml('media'))): ?>
+<?php if(preg_match('/\<img.*\>/',$this->getChildHtml('media'))): ?>
 <section id="product-details" class="nine columns">
 <?php else: ?>
 <section id="product-details" class="nine columns offset-by-three-important offset-by-half by-margin">
@@ -117,10 +132,17 @@
 
     <!-- Pricing Section -------------------------------------------------------------->
     <?php //echo $this->getTierPriceHtml($_product,$category) ?>
+    <?php if($_isBundled): ?>
+    <?php echo $this->getChildHtml('product_type_data'); ?>
+    <?php else: ?>
     <div id="product-details-price" class="clearfix">
         <section id="product-details-price-original" class="product-details-price-section">
             <span id="product-details-price-original-label" class="product-details-price-label"><?php echo $this->__("Regular Price"); ?></span>
+            <?php if($_isGrouped): ?>
+            <span id="product-details-price-original-price" class="product-details-price-amount">$<?php echo number_format($_minimalPriceTax*1.2,0) ?></span>        </section>
+            <?php else: ?>
             <span id="product-details-price-original-price" class="product-details-price-amount">$<?php echo number_format($_helper->productAttribute($_product, $_product->getMsrp(), 'msrp'),0) ?></span>        </section>
+            <?php endif; ?>
         <section id="product-details-price-separator"></section>
         <section id="product-details-price-sale" class="product-details-price-section" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
             <span id="product-details-price-sale-label" class="product-details-price-label"><?php echo $this->__("Sale Price"); ?></span>
@@ -128,10 +150,14 @@
             <link itemprop="itemCondition" href="http://schema.org/NewCondition" />
             <meta itemprop="priceCurrency" content="USD" />
             <meta itemprop="category" content="Furniture" />
+            <?php if($_isGrouped): ?>
+            <span id="product-details-price-sale-price" class="product-details-price-amount" itemprop="price" content="<?php echo number_format($_minimalPriceTax,2) ?>">$<?php echo number_format($_minimalPriceTax,0) ?></span>
+            <?php else: ?>
             <span id="product-details-price-sale-price" class="product-details-price-amount" itemprop="price" content="<?php echo number_format($_helper->productAttribute($_product, $_product->getPrice(), 'price'),2) ?>">$<?php echo number_format($_helper->productAttribute($_product, $_product->getPrice(), 'price'),0) ?></span>
-
+            <?php endif; ?>
         </section>
     </div>
+    <?php endif; ?>
    
 
     <!-- Special Offer Section ------------------------------------------------------->
@@ -145,7 +171,12 @@
         <!-- Color and Quantity Section --------------------------------------------------->
 
         <div class="product-details-options" class="clearfix">
-            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+            <?php
+            echo $this->getChildChildHtml('container2', '', true, true);
+            if($_isGrouped) {
+                echo $this->getChildHtml('product_type_data');
+            }
+            ?>
         </div>
 
         <!-- Call to Action buttons For Products Without Color Options --------------------->
@@ -259,11 +290,10 @@
     </section>
 </article>
 
-<!-- print this stuff to see what it is -->
-<?php //echo $this->getChildHtml('alert_urls') ?>
-<?php //echo $this->getChildHtml('product_type_data') ?>
-<?php //echo $this->getTierPriceHtml() ?>
-<?php //echo $this->getChildHtml('extrahint') ?>
+<?php //!-- print this stuff to see what it is --?>
+<?php // echo $this->getChildHtml('alert_urls') ?>
+<?php // echo $this->getTierPriceHtml() ?>
+<?php // echo $this->getChildHtml('extrahint') ?>
 
 <!--
 ------------------------------------------------------------------------------

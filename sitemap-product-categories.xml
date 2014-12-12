@@ -10,346 +10,58 @@
         <loc>http://www.rattanoutdoorfurniture.com/products/accessories/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/accessories/cantilever-umbrellas/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/accessories/flower-pots/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/accessories/ottoman/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/accessories/parasol/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/accessories/planter/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/accessories/replacement-cushions/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/accessories/throw-pillows/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/bar-furniture/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/cafe-sets/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/chairs/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/daybeds/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/deck-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/end-tables/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/essentials/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/furniture-sets/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/lounge-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/modern-wicker-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/modular-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/occasional-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-chairs/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-essentials/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-patio-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-tables-and-bases/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-wicker-essentials/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/patio-chairs/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/patio-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/patio-wicker-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/pool-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/ratan-outdoor-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/seating/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sectionals/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sofas/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sunroom-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-accessories/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-bar-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-beach-chairs/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-cafe-sets/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-chairs/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-deck-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-end-tables/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-essentials/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-furniture-sets/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-lounge-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-occasional-chairs/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-chairs/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-patio-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-patio-chairs/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-patio-furniture/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-patio-furniture-sale/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-seating/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sectionals/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sofas/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-daybeds/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.90</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/bar-furniture/3-piece-bar-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/3-piece-bistro-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/3-piece-dining-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sectionals/3-piece-sectional/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sofas/3-piece-sofa-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sofas/4-piece-sofa-set/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
@@ -361,88 +73,10 @@
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/5-piece-bistro-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/5-piece-dining-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sectionals/5-piece-sectional/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sofas/5-piece-sofa-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sectionals/6-piece-sectional/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sofas/6-piece-sofa-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/bar-furniture/7-piece-bar-set/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/7-piece-dining-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/modular-furniture/7-piece-modular-sectional/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-tables-and-bases/7-piece-outdoor-dining-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/9-piece-dining-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/modular-furniture/9-piece-modular-sectional/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/chairs/armchairs/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/furniture-sets/bar-and-bar-stool/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/bar-furniture/bar-and-stool/</loc>
@@ -463,10 +97,22 @@
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/bistro-set/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/bar-furniture/counter-stools/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/bar-furniture/outdoor-bar/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/cafe-sets/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/cafe-sets/cafe-chairs/</loc>
@@ -475,25 +121,19 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/daybeds/canopy-daybeds/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/chairs/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.90</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/accessories/cantilever-umbrellas/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/chairs/armchairs/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/chairs/chair/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/lounge-furniture/chaise-lounge/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
@@ -511,25 +151,97 @@
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/cocktail-table/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/chairs/easy-chairs/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/coffee-table/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/chairs/sand-chairs/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/bar-furniture/counter-stools/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/chairs/spring-chair/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/chairs/swivel-chair/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/daybeds/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/daybeds/canopy-daybeds/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/deck-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/deck-furniture/deck-chair/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/end-tables/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/end-tables/end-table/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/end-tables/side-tables/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/essentials/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/essentials/foot-stool/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/essentials/pillows/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/furniture-sets/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/furniture-sets/bar-and-bar-stool/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -547,46 +259,16 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/dining-table/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/lounge-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/lounge-furniture/chaise-lounge/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/drink-stands/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/chairs/easy-chairs/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/end-tables/end-table/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/accessories/flower-pots/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/essentials/foot-stool/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/seating/island-stools/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/lounge-furniture/lounge-chair/</loc>
@@ -595,16 +277,40 @@
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sofas/loveseat/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/modern-wicker-furniture/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
+        <priority>0.80</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/occasional-furniture/occasional/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/modern-wicker-furniture/wicker-modern-sofas/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/modular-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/modular-furniture/7-piece-modular-sectional/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/modular-furniture/9-piece-modular-sectional/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/occasional-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/occasional-furniture/occasional-chairs/</loc>
@@ -613,25 +319,19 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/accessories/ottoman/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-chairs/outdoor-armchair/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/occasional-furniture/occasional/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/bar-furniture/outdoor-bar/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-chairs/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
+        <priority>0.80</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-furniture/outdoor-bar-stool/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-chairs/outdoor-armchair/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -649,13 +349,37 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-tables-and-bases/outdoor-coffee-table/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-chairs/outdoor-easy-chair/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-tables-and-bases/outdoor-coffee-tables/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-essentials/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-essentials/outdoor-footrests/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-essentials/outdoor-planter/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-furniture/outdoor-bar-stool/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -667,28 +391,22 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-chairs/outdoor-easy-chair/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-tables-and-bases/outdoor-end-table/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-essentials/outdoor-footrests/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-furniture/outdoor-ottoman/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-furniture/outdoor-sectional-pieces/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-patio-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-patio-furniture/outdoor-patio-armchairs/</loc>
@@ -829,13 +547,31 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-essentials/outdoor-planter/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-tables-and-bases/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-tables-and-bases/7-piece-outdoor-dining-set/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-furniture/outdoor-sectional-pieces/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-tables-and-bases/outdoor-coffee-table/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-tables-and-bases/outdoor-coffee-tables/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-tables-and-bases/outdoor-end-table/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -847,22 +583,10 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-patio-furniture/outdoor-wicker-coffee-tables/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-wicker-essentials/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-furniture/outdoor-wicker-end-tables/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-furniture/outdoor-wicker-ottomans/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/outdoor-wicker-essentials/outdoor-wicker-planters/</loc>
@@ -871,16 +595,22 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/accessories/parasol/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/patio-chairs/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
+        <priority>0.80</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/patio-furniture/patio-bar/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/patio-chairs/patio-chair/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/patio-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/patio-furniture/patio-bar-stool/</loc>
@@ -889,7 +619,7 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/patio-chairs/patio-chair/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/patio-furniture/patio-bar/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -949,22 +679,64 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/essentials/pillows/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/patio-wicker-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/patio-wicker-furniture/wicker-patio-bar/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/accessories/planter/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/patio-wicker-furniture/wicker-patio-cocktail-tables/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/patio-wicker-furniture/wicker-patio-end-tables/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/patio-wicker-furniture/wicker-patio-sets/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/patio-wicker-furniture/wicker-patio-table-sets/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/patio-wicker-furniture/wicker-patio-tables/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/pool-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/pool-furniture/pool-loungers/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/ratan-outdoor-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/ratan-outdoor-furniture/ratan-bar-sets/</loc>
@@ -1015,49 +787,13 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/accessories/replacement-cushions/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/seating/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
+        <priority>0.80</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/chairs/sand-chairs/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sectionals/sectional/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sectionals/sectional-pieces/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/end-tables/side-tables/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sofas/sofa/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/chairs/spring-chair/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/sunroom-furniture/sun-beds/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/seating/island-stools/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -1069,13 +805,163 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/chairs/swivel-chair/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sectionals/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sectionals/3-piece-sectional/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/table/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sectionals/5-piece-sectional/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sectionals/6-piece-sectional/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sectionals/sectional-pieces/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sectionals/sectional/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sofas/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sofas/3-piece-sofa-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sofas/4-piece-sofa-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sofas/5-piece-sofa-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sofas/6-piece-sofa-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sofas/loveseat/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sofas/sofa/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sunroom-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/sunroom-furniture/sun-beds/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/3-piece-bistro-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/3-piece-dining-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/5-piece-bistro-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/5-piece-dining-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/7-piece-dining-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/9-piece-dining-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/bistro-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/cocktail-table/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/coffee-table/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/dining-table/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/drink-stands/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
@@ -1087,7 +973,7 @@
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/accessories/throw-pillows/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/tables-and-bases/table/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
@@ -1099,31 +985,43 @@
         <priority>0.95</priority>
     </url>
     <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-accessories/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-accessories/wicker-cantilever-umbrellas/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-accessories/wicker-flower-pots/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-accessories/wicker-replacement-cushions/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-accessories/wicker-throw-pillows/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-bar-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/wicker-bar-furniture/wicker-3-piece-bar-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-3-piece-bistro-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-3-piece-dining-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sectionals/wicker-3-piece-sectional/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sofas/wicker-3-piece-sofa-set/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -1135,97 +1033,13 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sectionals/wicker-4-piece-sectional/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sofas/wicker-4-piece-sofa-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/wicker-bar-furniture/wicker-5-piece-bar-set/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-5-piece-bistro-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-5-piece-dining-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sectionals/wicker-5-piece-sectional/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sofas/wicker-5-piece-sofa-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sectionals/wicker-6-piece-sectional/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sofas/wicker-6-piece-sofa-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/wicker-bar-furniture/wicker-7-piece-bar-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-7-piece-dining-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-furniture-sets/wicker-7-piece-modular-sectional/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-furniture/wicker-7-piece-outdoor-dining-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-9-piece-dining-set/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-furniture-sets/wicker-9-piece-modular-sectional/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-furniture-sets/wicker-bar-and-bar-stools/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -1249,16 +1063,34 @@
         <priority>0.85</priority>
     </url>
     <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-bar-furniture/wicker-counter-stools/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-bar-furniture/wicker-outdoor-bars/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-beach-chairs/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/wicker-beach-chairs/wicker-beach-sand-chairs/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-bistro-set/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-cafe-sets/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/wicker-cafe-sets/wicker-cafe-chairs/</loc>
@@ -1267,25 +1099,13 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-daybeds/wicker-canopy-beds/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-chairs/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-accessories/wicker-cantilever-umbrellas/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/wicker-chairs/wicker-chair/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-lounge-furniture/wicker-chaise-lounge/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -1297,25 +1117,109 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-cocktail-tables/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-chairs/wicker-sand-chairs/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-coffee-tables/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-chairs/wicker-swivel-chairs/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-bar-furniture/wicker-counter-stools/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-daybeds/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-daybeds/wicker-canopy-beds/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-deck-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/wicker-deck-furniture/wicker-deck-chairs/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-end-tables/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-end-tables/wicker-end-table/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-end-tables/wicker-side-tables/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-end-tables/wicker-tray-tables/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-essentials/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-essentials/wicker-foot-stools/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-essentials/wicker-pillows/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-essentials/wicker-planters/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-furniture-sets/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-furniture-sets/wicker-7-piece-modular-sectional/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-furniture-sets/wicker-9-piece-modular-sectional/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-furniture-sets/wicker-bar-and-bar-stools/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -1333,37 +1237,31 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-dining-tables/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-furniture/wicker-ottomans/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-drink-stands/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-furniture/wicker-table-sets/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-end-tables/wicker-end-table/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-lounge-furniture/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.80</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-accessories/wicker-flower-pots/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-essentials/wicker-foot-stools/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-seating/wicker-island-stools/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-lounge-furniture/wicker-chaise-lounge/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -1375,16 +1273,10 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sofas/wicker-loveseats/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-occasional-chairs/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/modern-wicker-furniture/wicker-modern-sofas/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/wicker-occasional-chairs/wicker-occasional/</loc>
@@ -1393,25 +1285,43 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-furniture/wicker-ottomans/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-chairs/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-chairs/wicker-outdoor-chair/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-furniture/outdoor-wicker-end-tables/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-furniture/outdoor-wicker-ottomans/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-furniture/wicker-7-piece-outdoor-dining-set/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-furniture/wicker-outdoor-bar-stools/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-bar-furniture/wicker-outdoor-bars/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-chairs/wicker-outdoor-chair/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -1429,16 +1339,22 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/patio-wicker-furniture/wicker-patio-bar/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-patio-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-outdoor-patio-furniture/outdoor-wicker-coffee-tables/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-patio-furniture/wicker-patio-bar-stools/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-patio-chairs/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/wicker-patio-chairs/wicker-patio-chair/</loc>
@@ -1447,7 +1363,25 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/patio-wicker-furniture/wicker-patio-cocktail-tables/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-patio-furniture-sale/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-patio-furniture-sale/wicker-patio-planters/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-patio-furniture/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-patio-furniture/wicker-patio-bar-stools/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -1471,79 +1405,19 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/patio-wicker-furniture/wicker-patio-end-tables/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/wicker-patio-furniture/wicker-patio-ottomans/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-patio-furniture-sale/wicker-patio-planters/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-seating/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.80</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/patio-wicker-furniture/wicker-patio-sets/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/patio-wicker-furniture/wicker-patio-table-sets/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/patio-wicker-furniture/wicker-patio-tables/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-essentials/wicker-pillows/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-essentials/wicker-planters/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-accessories/wicker-replacement-cushions/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-chairs/wicker-sand-chairs/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sectionals/wicker-sectional/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sectionals/wicker-sectional-pieces/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-end-tables/wicker-side-tables/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-seating/wicker-island-stools/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -1555,13 +1429,151 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-chairs/wicker-swivel-chairs/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sectionals/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sectionals/wicker-3-piece-sectional/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-furniture/wicker-table-sets/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sectionals/wicker-4-piece-sectional/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sectionals/wicker-5-piece-sectional/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sectionals/wicker-6-piece-sectional/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sectionals/wicker-sectional-pieces/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sectionals/wicker-sectional/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sofas/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sofas/wicker-3-piece-sofa-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sofas/wicker-4-piece-sofa-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sofas/wicker-5-piece-sofa-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sofas/wicker-6-piece-sofa-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-sofas/wicker-loveseats/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-3-piece-bistro-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-3-piece-dining-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-5-piece-bistro-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-5-piece-dining-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-7-piece-dining-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-9-piece-dining-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-bistro-set/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-cocktail-tables/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-coffee-tables/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-dining-tables/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-drink-stands/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -1573,21 +1585,10 @@
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-accessories/wicker-throw-pillows/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/products/wicker-end-tables/wicker-tray-tables/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/wicker-tables-and-bases/wicker-universal-side-tables/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
 </urlset>
+

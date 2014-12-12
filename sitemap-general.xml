@@ -4,13 +4,7 @@
         <loc>http://www.rattanoutdoorfurniture.com/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/contact-us/</loc>
-        <lastmod>2014-11-22</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.98</priority>
+        <priority>1.00</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/about-us/</loc>
@@ -19,58 +13,22 @@
         <priority>0.98</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/catalog/seo_sitemap/product/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
         <loc>http://www.rattanoutdoorfurniture.com/catalog/seo_sitemap/category/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.97</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/privacy/</loc>
-        <lastmod>2014-09-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <loc>http://www.rattanoutdoorfurniture.com/catalog/seo_sitemap/product/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/search/advanced/</loc>
+        <loc>http://www.rattanoutdoorfurniture.com/contact-us/</loc>
         <lastmod>2014-11-22</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.rattanoutdoorfurniture.com/search/order/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.rattanoutdoorfurniture.com/login/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.rattanoutdoorfurniture.com/login/register/</loc>
-        <lastmod>2014-12-02</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/terms/</loc>
-        <lastmod>2014-11-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/shipping-and-returns/</loc>
-        <lastmod>2014-11-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.98</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/faq/</loc>
@@ -85,39 +43,81 @@
         <priority>0.89</priority>
     </url>
     <url>
-        <loc>http://www.rattanoutdoorfurniture.com/more-info/price-match/</loc>
-        <lastmod>2014-09-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/more-info/cushion-care/</loc>
-        <lastmod>2014-11-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/more-info/furniture-care/</loc>
-        <lastmod>2014-11-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>http://www.rattanoutdoorfurniture.com/more-info/account-program/</loc>
         <lastmod>2014-11-11</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>http://www.rattanoutdoorfurniture.com/more-info/warranties/</loc>
-        <lastmod>2014-11-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.70</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/more-info/affiliates-and-friends/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/more-info/cushion-care/</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/more-info/furniture-care/</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/more-info/price-match/</loc>
+        <lastmod>2014-09-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/more-info/warranties/</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/privacy/</loc>
+        <lastmod>2014-09-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/search/advanced/</loc>
+        <lastmod>2014-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/shipping-and-returns/</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/terms/</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://www.rattanoutdoorfurniture.com/login/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://www.rattanoutdoorfurniture.com/login/register/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://www.rattanoutdoorfurniture.com/search/order/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
     </url>
 </urlset>

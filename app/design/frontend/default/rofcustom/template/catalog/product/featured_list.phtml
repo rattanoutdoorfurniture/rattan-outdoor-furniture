@@ -76,7 +76,7 @@
                 <?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>
             </label>
             <?php echo $this->getPriceHtml($_product, true) ?>
-            <button class="category-product-add" onclick="setLocation('<?php echo $url; ?>')" title="View more about <?php echo $_productNameStripped; ?>"><?php echo $this->__("View More")?></button>
+            <button class="category-product-view-more" title="View more about the <?php echo $_productNameStripped; ?>"><?php echo $this->__("More Details About The ".$_productNameStripped)?></button>
         </a>
     </section>
   <?php $i++; endforeach ?>

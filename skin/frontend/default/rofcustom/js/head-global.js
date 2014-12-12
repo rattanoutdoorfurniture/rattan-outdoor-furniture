@@ -70,6 +70,16 @@ jQuery(document).ready(function($){
 
     });
 
+    var $add_btns;
+    if(($add_btns = $(".category-product-add")).length) {
+        $add_btns.on("click", function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var addToCartUrl = $(this).data("url");
+            setLocation(addToCartUrl);
+        });
+    }
+
     if($("#category-slider").length) {
         $(".cateogry-slider-inner")
             .on("swiperight", function() {

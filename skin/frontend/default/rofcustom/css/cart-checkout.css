@@ -1707,12 +1707,14 @@ img, button, input {
     /*#checkout-review-table*/ .item-options {
         position: absolute;
         left: 140px;
+        z-index: 10;
     }
     /*#checkout-review-table*/ .item-options.show {
         width: 140px;
         border: 1px solid black;
         padding: 10px;
         background: #FFF;
+        z-index: 12;
     }
 
     /*#checkout-review-table*/ .item-options .item-options-open,

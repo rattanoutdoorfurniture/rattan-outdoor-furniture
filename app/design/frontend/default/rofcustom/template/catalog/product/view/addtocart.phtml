@@ -26,6 +26,8 @@
 ?>
 <?php $_product = $this->getProduct(); ?>
 <?php $buttonTitle = $this->__('Add to Cart'); ?>
+<?php $_handles   = $this->getLayout()->getUpdate()->getHandles(); ?>
+<?php $_isBundled = in_array("PRODUCT_TYPE_bundle", $_handles); ?>
 
 
 <?php if($_product->isSaleable()): ?>
@@ -44,7 +46,10 @@
                 </div>
             </div>
             ****************************************************************/ ?>
-        <section id="product-details-options-qty" class="product-details-options-section">
+        <section id="product-details-options-qty" class="product-details-options-section<?php echo $_isBundled ? ' bundled-product-details-options-qty':''; ?>">
+            <?php if($_isBundled): ?>
+            <label for="qty" id="bundled-product-details-options-qty-label"><?php echo $this->__('Number of Sets (as Configured Above)'); ?></label>
+            <?php endif; ?>
             <span id="product-details-options-qty-label" class="product-details-options-label"><?php echo $this->__("Qty"); ?></span>
             <aside id="product-details-options-qty-selector">
                 <select id="qty" name="qty"  title="<?php echo $this->__('Qty') ?>" class="input-text qty">

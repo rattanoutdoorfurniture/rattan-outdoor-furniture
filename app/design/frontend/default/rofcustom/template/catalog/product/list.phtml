@@ -74,8 +74,24 @@
                 <?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>
             </section>
             <section<?php if (isset($categoryParent) && !is_null($categoryParent)): ?> onclick="setLocation('<?php echo rtrim($this->getUrl($categoryParent),"/")."/"; ?>');"<?php endif; ?> class="category-product-collection"><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></section>
-            <?php echo $this->getPriceHtml($_product, true) ?>
-            <button class="category-product-add" onclick="setLocation('<?php echo $this->helper('checkout/cart')->getAddUrl($_product) ?>')"><?php echo $this->__("Add to Cart")?></button>
+            <?php if ($_product->getData('type_id') == 'grouped'):?>
+                <?php $_associatedProducts = $_product->getTypeInstance()->getAssociatedProducts(); ?>
+                <?php $_hasAssociatedProducts = count($_associatedProducts) > 0; ?>
+                <?php if ($_hasAssociatedProducts): ?>
+                    <?php $sum = 0;?>
+                    <?php foreach ($_associatedProducts as $_item): ?>
+                            <?php $sum += $_item->getPrice();?>
+                    <?php endforeach; ?>
+                    <div class="price-box category-product-price">
+                        <span class="minimal-price"><?php echo Mage::app()->getStore()->formatPrice($sum); ?></span>
+                    </div>
+                <?php else: ?>
+                    <?php echo $this->getPriceHtml($_product, true) ?>
+                <?php endif;?>
+            <?php else: ?>
+                <?php echo $this->getPriceHtml($_product, true) ?>
+            <?php endif;?>
+            <button class="category-product-view-more" onclick="setLocation('<?php echo $this->helper('checkout/cart')->getAddUrl($_product) ?>')"><?php echo $this->__("Add to Cart")?></button>
         </a>
     </section>
     <?php endforeach; ?>
@@ -128,8 +144,25 @@
                 <?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>
             </section>
             <section<?php if (isset($categoryParent) && !is_null($categoryParent)): ?> onclick="setLocation('<?php echo rtrim($this->getUrl($categoryParent),"/")."/"; ?>');return false;"<?php endif; ?> class="category-product-collection"><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></section>
-            <?php echo $this->getPriceHtml($_product, true) ?>
-            <button class="category-product-add" onclick="setLocation('<?php echo $this->helper('checkout/cart')->getAddUrl($_product) ?>')" title="View more about <?php echo $_productNameStripped; ?>"><?php echo $this->__("View More")?></button>
+            <?php if ($_product->getData('type_id') == 'grouped'):?>
+                <?php $_associatedProducts = $_product->getTypeInstance()->getAssociatedProducts(); ?>
+                <?php $_hasAssociatedProducts = count($_associatedProducts) > 0; ?>
+                <?php if ($_hasAssociatedProducts): ?>
+                    <?php $sum = 0;?>
+                    <?php foreach ($_associatedProducts as $_item): ?>
+                        <?php $sum += $_item->getPrice();?>
+                    <?php endforeach; ?>
+                    <div class="price-box category-product-price">
+                        <span class="minimal-price"><?php echo Mage::app()->getStore()->formatPrice($sum); ?></span>
+                    </div>
+                <?php else: ?>
+                    <?php echo $this->getPriceHtml($_product, true) ?>
+                <?php endif;?>
+            <?php else: ?>
+                <?php echo $this->getPriceHtml($_product, true) ?>
+            <?php endif;?>
+            <button class="category-product-add" data-url="<?php echo $this->helper('checkout/cart')->getAddUrl($_product) ?>" title="Add <?php echo $_productNameStripped; ?> to Your Cart"><?php echo $this->__("Add ".$_productNameStripped." to Your Cart")?></button>
+            <button class="category-product-view-more" title="View more about the <?php echo $_productNameStripped; ?>"><?php echo $this->__("More Details About The ".$_productNameStripped)?></button>
         </a>
     </section>
   <?php endforeach ?>

@@ -1,5 +1,5 @@
 function addToFavorites() {
-    var url = locatoin.href;
+    var url = location.href;
     var title = document.title.toString();
     if(window.sidebar){
         window.sidebar.addPanel(title, url, "");
@@ -7,7 +7,7 @@ function addToFavorites() {
         window.external.AddFavorite(url, title);
     } else if(window.opera && window.print){
         alert('Press ctrl+D to bookmark (Command+D for macs) after you click Ok');
-    } else if(window.chrome){
+    } else if(typeof(window.chrome)!="undefined"){
         alert('Press ctrl+D to bookmark (Command+D for macs) after you click Ok');
     }
 }
@@ -36,4 +36,41 @@ jQuery(document).ready(function() {
         location.hash = this.hash;
         jQuery(document).scrollTop(scrollTop);
     });
+    if(jQuery(".grouped-items-table").length) {
+        var $price = jQuery("#product-details-price-sale-price");
+        var $qtys = jQuery("input[name^='super_group']");
+        $qtys.on("keyup change", function() {
+            var newPrice = 0;
+            var NaNbreak = false;
+            $qtys.each(function() {
+                var $qty  = jQuery(this);
+                var qty   = parseInt($qty.val());
+                if(isNaN(qty)) {
+                    NaNbreak = true;
+                }
+                var qprice = parseFloat($qty.parents("tr").find(".price").text().replace(/,/g,'').match(/\d+\.?\d{1,2}/).toString());
+                newPrice += (qty * qprice);
+            });
+            if(NaNbreak) {
+                NaNbreak = false;
+                $price.html("-------");
+                return;
+            }
+            newPrice = Math.round(newPrice);
+            var newPriceParts = newPrice.toString().split(".");
+            var npDollars     = newPriceParts[0];
+            //var npCents       = newPriceParts.length == 2 ? newPriceParts[1] : "00";
+            npDollars     = npDollars.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            //newPrice = npDollars+"."+(npCents+"00").slice(0,2);
+            //$price.html("$"+newPrice);
+            $price.html("$"+npDollars);
+        });
+    }
+});
+
+document.observe("bundle:reload-price",function(event) {
+    var orgPrice;
+    if((orgPrice = $("product-details-price-original-price")) && !isNaN(event.memo.price)) {
+        orgPrice.update("$"+(event.memo.price*1.2).toFixed(2).toString());
+    }
 });
