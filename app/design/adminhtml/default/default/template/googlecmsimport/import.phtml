@@ -683,6 +683,10 @@ QUERY;
 </div>
 
 <?php if(isset($download) && $download != "false" && $download === "locations" && $allLocations == true): ?>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+    jQuery.noConflict();
+</script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
         var procs = [];

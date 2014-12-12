@@ -33,5 +33,31 @@ Parse Identifier From SiteMap XML
 <url>[\n\r].*<loc>http://www.rattanoutdoorfurniture.com/(.*)/</loc>([\n\r].*){3}[\n\r].*</url>
 "$1",
 
+Parse URL From SiteMap XML
+<url>[\n\r].*<loc>(https?://www.rattanoutdoorfurniture.com/?.*/)</loc>([\n\r].*){3}[\n\r].*</url>
+$1
+
 Check Number of Released Locations (in generated sql file)
 locations/[a-z\-]+/[a-z\-]+',([\n\r].*){4}[\n\r]+NOW\(\),[\n\r]+NOW\(\),[\n\r]+1
+
+Replace XML Export From Drive for Sitemap
+<cell cellsource="A\d+">(.*)</cell>
+<loc>$1</loc>
+----
+<cell cellsource="B\d+">(.*)</cell>
+<lastmod>$1</lastmod>
+-----
+<cell cellsource="C\d+">(.*)</cell>
+<changefreq>$1</changefreq>
+----
+<cell cellsource="D\d+">(.*)</cell>
+<priority>$1</priority>
+----
+(</?)row.*>
+$1url>
+----
+<data>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+----
+</data>
+</urlset>

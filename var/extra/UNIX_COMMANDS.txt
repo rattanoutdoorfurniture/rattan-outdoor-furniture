@@ -1,0 +1,2 @@
+Copy sub-directory structure of relative folder in current directory (i.e. "../middle" folder's sub-folders):
+find ../middle -type d -print | while read filename; do mkdir "$(basename "$filename")"; done

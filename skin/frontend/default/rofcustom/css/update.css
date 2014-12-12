@@ -408,13 +408,13 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
         }
 
         .featured-products .category-product {
-            height: 280px;
-            min-height: 280px;
+            height: 270px;
+            min-height: 270px;
         }
 
         .featured-products .category-product .category-product-inner {
-            height: 260px;
-            min-height: 260px;
+            height: 250px;
+            min-height: 250px;
         }
 
         .featured-products .category-product.five .category-product-inner {
@@ -476,10 +476,19 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
             font-weight: normal;
         }
 
-        .featured-products .category-product.three .category-product-add {
-            margin-top: 15px;
+        .featured-products .category-product.three .category-product-view-more {
+            margin: 15px auto;
+            float: none;
+            display: block;
         }
 
-        .featured-products .category-product.three:hover .category-product-add {
+        .featured-products .category-product.three:hover .category-product-view-more {
             box-shadow: 0 0 2px 2px rgba(138, 99, 153, 0.5);
+        }
+
+    /* Location Pages Style Updates (2014-12-12)
+    **************************************************************************************/
+
+        body[class*='cms-locations'] .box-content p:nth-child(4) {
+            text-align: right;
         }
