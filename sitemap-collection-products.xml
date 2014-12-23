@@ -289,6 +289,30 @@
         <priority>0.90</priority>
     </url>
     <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/rattan-outdoor-furniture/armchair/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/rattan-outdoor-furniture/canopy-daybed/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/rattan-outdoor-furniture/cantilever-umbrella/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/rattan-outdoor-furniture/parasol-umbrella/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/collections/utopia/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
@@ -313,4 +337,3 @@
         <priority>0.90</priority>
     </url>
 </urlset>
-        

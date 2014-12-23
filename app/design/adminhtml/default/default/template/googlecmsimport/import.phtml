@@ -380,6 +380,7 @@
         $props[$key]["keywords"]    = array();
         $contentComplete            = false;
         $descriptionComplete        = !hasDescription($lines);
+        $addressMatches             = array();
         foreach($lines as $prop) {
             if($contentComplete && $descriptionComplete) {
                 $keyword = preg_filter('/^([^\:]+)\:.*$/', '$1',$prop);
@@ -397,7 +398,26 @@
                     $prop = linkify($prop);
                     $prop = linkPhone($prop);
                     $prop = linkEmail($prop);
-                    $props[$key][$subKey][] = $contentComplete ? strip_tags($prop) : "<p>".$prop."</p>";
+                    if(preg_match('/^([a-zA-z\s.\']{3,38}),\s([A-Z]{2})\s(\d{5})\.?$/',$prop,$addressMatches)) {
+                        $ad_city  = isset($addressMatches[1]) && strlen($addressMatches[1]) ? $addressMatches[1] : null;
+                        $ad_state = isset($addressMatches[2]) && strlen($addressMatches[2]) ? $addressMatches[2] : null;
+                        $ad_zip   = isset($addressMatches[3]) && strlen($addressMatches[3]) ? $addressMatches[3] : null;
+                        if($ad_city && $ad_state && $ad_zip) {
+                            $ad_cityHtml  = '<span itemprop='.$io['q'].'addressLocality'.$io['q'].'>'.$ad_city.'</span>';
+                            $ad_stateHtml = '<span itemprop='.$io['q'].'addressRegion'.$io['q'].'>'.$ad_state.'</span>';
+                            $ad_zipHtml   = '<span itemprop='.$io['q'].'postalCode'.$io['q'].'>'.$ad_zip.'</span>';
+                            $ad_wrapHtml  = '<p  itemprop='.$io['q'].'address'.$io['q'].' itemscope itemtype='.$io['q'].'http://schema.org/PostalAddress'.$io['q'].'>'
+                                          . $ad_cityHtml . ", "
+                                          . $ad_stateHtml . " "
+                                          . $ad_zipHtml
+                                          . '</p>';
+                            $props[$key][$subKey][] = $contentComplete ? strip_tags($ad_wrapHtml) : $ad_wrapHtml;
+                        } else {
+                            $props[$key][$subKey][] = $contentComplete ? strip_tags($prop) : "<p>".$prop."</p>";
+                        }
+                    } else {
+                        $props[$key][$subKey][] = $contentComplete ? strip_tags($prop) : "<p>".$prop."</p>";
+                    }
                 }
             }
         }

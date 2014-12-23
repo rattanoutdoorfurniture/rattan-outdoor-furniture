@@ -28,3 +28,10 @@ UPDATE `cms_page_tree` SET `content` = REPLACE(REPLACE(`content`, "(888) 555-555
 
 -- Remove Widget from location state pages --
 UPDATE `cms_page_tree` SET `content` = CONCAT(SUBSTR(content, 1, LOCATE('{{', content)-1),SUBSTR(content, LOCATE('}}', content)+2)) WHERE content LIKE '%{{widget type="states/list" state="%"}}%'
+
+-- Strip Incriments Off request_path in core_url_rewrite (SELECT)--
+SET @regex_path='';
+SELECT request_path as org_request_path,IF((@regex_path:=regex_replace("[0-9]+$","",request_path))<>request_path,SUBSTRING(@regex_path,1,CHAR_LENGTH(@regex_path)-1),request_path) as request_path FROM core_url_rewrite;
+-- (UPDATE) --
+SET @regex_path='';
+UPDATE core_url_rewrite SET request_path=SUBSTRING((@regex_path:=regex_replace("[0-9]+$","",request_path)),1,CHAR_LENGTH(@regex_path)-1) WHERE STRCMP(request_path,regex_replace("[0-9]+$","",request_path))!=0
