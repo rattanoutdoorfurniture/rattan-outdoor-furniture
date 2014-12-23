@@ -8,9 +8,27 @@
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/collections/brighton/</loc>
-        <lastmod>2014-12-02</lastmod>
+        <lastmod>2014-12-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/brighton/6-piece-sectional-set/</loc>
+        <lastmod>2014-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/brighton/9-piece-conversation-set/</loc>
+        <lastmod>2014-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/brighton/9-piece-sectional-set/</loc>
+        <lastmod>2014-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/collections/brighton/armchair/</loc>
@@ -31,6 +49,12 @@
         <priority>0.90</priority>
     </url>
     <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/brighton/configuration-examples/</loc>
+        <lastmod>2014-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/collections/brighton/dining-chair/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
@@ -39,6 +63,24 @@
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/collections/brighton/dining-table/</loc>
         <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/brighton/sectional-corner-piece/</loc>
+        <lastmod>2014-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/brighton/sectional-end-piece/</loc>
+        <lastmod>2014-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/brighton/sectional-middle-piece/</loc>
+        <lastmod>2014-12-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
     </url>
@@ -242,6 +284,30 @@
     </url>
     <url>
         <loc>http://www.rattanoutdoorfurniture.com/products/collections/pompano/swivel-rocker/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/rattan-outdoor-furniture/armchair/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/rattan-outdoor-furniture/canopy-daybed/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/rattan-outdoor-furniture/cantilever-umbrella/</loc>
+        <lastmod>2014-12-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://www.rattanoutdoorfurniture.com/products/collections/rattan-outdoor-furniture/parasol-umbrella/</loc>
         <lastmod>2014-12-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>

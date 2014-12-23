@@ -1,0 +1,7 @@
+AuthName "MAGento Mass Import"
+AuthUserFile "/home/rof/.htpasswds/public_html/dev/magmi/passwd"
+AuthType Basic
+require valid-user
+ErrorDocument 401 "Authorisation Required"
+
+                            
