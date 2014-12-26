@@ -340,6 +340,7 @@ class Mage_Page_Block_Html_Head extends Mage_Core_Block_Template
                 $html .= sprintf($format, $mergedUrl, $params);
             } else {
                 foreach ($rows as $src) {
+                    $src = strpos($src,"?")===false ? $src."?_=".filemtime(Mage::getBaseDir().parse_url($src,PHP_URL_PATH)) : $src."&_=".filemtime(Mage::getBaseDir().current(explode("?",parse_url($src,PHP_URL_PATH))));
                     $html .= sprintf($format, $src, $params);
                 }
             }
