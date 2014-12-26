@@ -57,7 +57,7 @@ $_weeeTaxAmount = 0;
  * @var $_isCategory boolean Whether this page is a category page
  */
 
-$_isCategory = in_array("catalog_category_view", $this->getLayout()->getUpdate()->getHandles());
+$_isCategory = count(array_intersect(array("catalog_category_view","catalogsearch_result_index"), $this->getLayout()->getUpdate()->getHandles()));
 ?>
 <?php
 if ($_product->getPriceType() == 1) {

@@ -177,7 +177,7 @@
 }
 
 .category-product:nth-child(5n+1) {
-    clear: left;
+    clear: none !important;
 }
 
 .catalogsearch-result-index
