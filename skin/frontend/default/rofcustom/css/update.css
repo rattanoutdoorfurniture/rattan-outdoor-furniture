@@ -486,6 +486,12 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
             box-shadow: 0 0 2px 2px rgba(138, 99, 153, 0.5);
         }
 
+        .featured-products p.note-msg {
+            height: 22px;
+            margin: 124px auto 124px 60px;
+            display: inline-block;
+        }
+
     /* Location Pages Style Updates (2014-12-12)
     **************************************************************************************/
 

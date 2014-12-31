@@ -42,6 +42,14 @@
             echo $this->__(' to find exactly what you are looking for.');
         ?></p>
     </div>
+    <?php
+        $featured_id = Mage::getResourceModel('catalog/category_collection')->addFieldToFilter('name', 'Featured')->getFirstItem()->getId();
+        $featured    = $this->getLayout()
+                            ->createBlock("catalog/product_list")
+                            ->setTemplate("catalog/product/featured_list.phtml");
+        $featured->setCategoryId($featured_id);
+        echo $featured->toHtml();
+    ?>
 <?php else: ?>
 
 <div class="category-products">

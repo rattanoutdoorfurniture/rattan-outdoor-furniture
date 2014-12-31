@@ -38,7 +38,7 @@ if($productParentUrlAttr && ($parentUrl = $productParentUrlAttr->getFrontend()->
     $categoryid = end($categories);
     $category   = Mage::getModel('catalog/category')->load($categoryid);
     $itemPath   = "/".$category->getUrlPath()."/".basename($_product->getProductUrl());
-    $itemUrl    = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}" . $itemPath;
+    $itemUrl    = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . "://$_SERVER[HTTP_HOST]$itemPath";
 }
 
 $this->overrideProductUrl($itemUrl);

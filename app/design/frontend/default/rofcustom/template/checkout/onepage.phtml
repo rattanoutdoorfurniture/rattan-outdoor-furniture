@@ -27,8 +27,8 @@
 <!-- COLLAPSED CART LINK BACK TO FULL CART VIEW
 ---------------------------------------------------------------------------------------------------->
 
-<script type="text/javascript" src="<?php echo str_replace("http:","http:",$this->getJsUrl('varien/accordion.js')) ?>"></script>
-<script type="text/javascript" src="<?php echo str_replace("http:","http:",$this->getSkinUrl('js/opcheckout.js')) ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getJsUrl('varien/accordion.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/opcheckout.js') ?>"></script>
 
 <?php /**
 <div id="cart-cartbox" class="ten columns cart-box collapse add-bottom">
@@ -91,10 +91,10 @@
     accordion.openSection('opc-<?php echo $this->getActiveStep() ?>');
     <?php endif ?>
     var checkout = new Checkout(accordion,{
-        progress: '<?php echo str_replace("http:","",$this->getUrl('checkout/onepage/progress')) ?>',
-        review: '<?php echo str_replace("http:","",$this->getUrl('checkout/onepage/review')) ?>',
-        saveMethod: '<?php echo str_replace("http:","",$this->getUrl('checkout/onepage/saveMethod')) ?>',
-        failure: '<?php echo str_replace("http:","",$this->getUrl('checkout/cart')) ?>'}
+        progress:   '<?php echo $this->getUrl('checkout/onepage/progress') ?>',
+        review:     '<?php echo $this->getUrl('checkout/onepage/review') ?>',
+        saveMethod: '<?php echo $this->getUrl('checkout/onepage/saveMethod') ?>',
+        failure:    '<?php echo $this->getUrl('checkout/cart') ?>'}
     );
 //]]>
 </script>

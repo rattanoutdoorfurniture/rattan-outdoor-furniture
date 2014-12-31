@@ -216,7 +216,7 @@ class Mage_CatalogSearch_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getAdvancedSearchUrl()
     {
-        return $this->_getUrl('search/advanced');
+        return $this->_getUrl('catalogsearch/advanced');
     }
 
     /**

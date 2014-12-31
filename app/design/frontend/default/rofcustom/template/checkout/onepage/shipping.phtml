@@ -144,11 +144,11 @@
 </form>
 <script type="text/javascript">
 //<![CDATA[
-    var shipping = new Shipping('co-shipping-form', '<?php echo str_replace('http:','',$this->getUrl('checkout/onepage/getAddress')) ?>address/', '<?php echo str_replace('http:','',$this->getUrl('checkout/onepage/saveShipping')) ?>',
-        '<?php echo str_replace('http:','',$this->getUrl('checkout/onepage/shippingMethod')) ?>');
+    var shipping = new Shipping('co-shipping-form', '<?php echo $this->getUrl('checkout/onepage/getAddress') ?>address/', '<?php echo $this->getUrl('checkout/onepage/saveShipping') ?>',
+        '<?php echo $this->getUrl('checkout/onepage/shippingMethod') ?>');
     var shippingForm = new VarienForm('co-shipping-form');
     shippingForm.extraChildParams = ' onchange="shipping.setSameAsBilling(false);"';
-    shippingForm.setElementsRelation('shipping:country_id', 'shipping:region', '<?php echo str_replace('http:','',$this->getUrl('directory/json/childRegion')) ?>', '<?php echo $this->__('Select State/Province...') ?>');
+    shippingForm.setElementsRelation('shipping:country_id', 'shipping:region', '<?php echo $this->getUrl('directory/json/childRegion') ?>', '<?php echo $this->__('Select State/Province...') ?>');
     $('shipping-address-select') && shipping.newAddress(!$('shipping-address-select').value);
 
     var shippingRegionUpdater = new RegionUpdater('shipping:country_id', 'shipping:region', 'shipping:region_id', <?php echo $this->helper('directory')->getRegionJson() ?>, undefined, 'shipping:postcode');

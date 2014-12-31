@@ -232,10 +232,10 @@ if ($actionName == 'catalog_category_view') { // Category Page
 ?>
 
 <!-- CSS & JAVASCRIPT -->
-<?php echo str_replace("http:","http:",$this->getCssJsHtml()); ?>
+<?php echo $this->getCssJsHtml(); ?>
 
 <!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
 <!-- Child HTML -->

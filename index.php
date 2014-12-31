@@ -50,8 +50,6 @@ if (file_exists($compilerConfig)) {
 }
 
 $mageFilename = MAGENTO_ROOT . '/app/Mage.php';
-$maintenanceFile = 'maintenance.flag';
-
 if (!file_exists($mageFilename)) {
     if (is_dir('downloader')) {
         header("Location: downloader");
@@ -61,6 +59,7 @@ if (!file_exists($mageFilename)) {
     exit;
 }
 
+$maintenanceFile = 'maintenance.flag';
 if (file_exists($maintenanceFile)) {
     include_once dirname(__FILE__) . '/errors/503.php';
     exit;
@@ -68,52 +67,10 @@ if (file_exists($maintenanceFile)) {
 
 require_once $mageFilename;
 
-/*
-
-#set URL based on hostname
-$dnsWhite    = array(
-    "www.rattanoutdoorfurniture.com"    => array(
-        "environment"   => "www"
-    ),
-    "dev.rattanoutdoorfurniture.com"    => array(
-        "environment"   => "dev"
-    ),
-    "local.rattanoutdoorfurniture.com"  => array(
-        "environment"   => "local"
-    ),
-    "staging.rattanoutdoorfurniture.com" => array(
-	"environment" 	=> "staging"
-    )
-);
-$curHost     = $_SERVER['HTTP_HOST'];
-$cacheHost   = array(
-    'uns' => '',
-    's'   => '',
-);
-$environment = "www";
-if(array_key_exists($curHost,$dnsWhite)) {
-    $environment      = $dnsWhite[$curHost]['environment'];
-    $config           = MAGE::app()->getConfig();
-    $cacheHost['uns'] = MAGE::getStoreConfig("web/unsecure/base_url");
-    $cacheHost['s']   = MAGE::getStoreConfig("web/secure/base_url");
-    $config->saveConfig("web/unsecure/base_url","http://".$curHost."/");
-    $config->saveConfig("web/secure/base_url","http://".$curHost."/");
-    $config->reinit();
-    MAGE::app()->reinitStores();
+$rofCustomFunctions = MAGENTO_ROOT . "/lib/RofCustomFunctions.php";
+if (file_exists($rofCustomFunctions)) {
+    include_once $rofCustomFunctions;
 }
-define('SERVER_ENV', $environment);
-
-#Varien_Profiler::enable();
-
-if (isset($_SERVER['MAGE_IS_DEVELOPER_MODE'])){//||SERVER_ENV!="www") {
-    Mage::setIsDeveloperMode(true);
-    include_once("Dumper.php");
-    //include_once("ChromePHP.php");
-}
-
-#ini_set('display_errors', 1);
-
-*/
 
 if(file_exists('vendor/autoload.php')) {
     require 'vendor/autoload.php';
@@ -128,9 +85,3 @@ $mageRunCode = isset($_SERVER['MAGE_RUN_CODE']) ? $_SERVER['MAGE_RUN_CODE'] : ''
 $mageRunType = isset($_SERVER['MAGE_RUN_TYPE']) ? $_SERVER['MAGE_RUN_TYPE'] : 'store';
 
 Mage::run($mageRunCode, $mageRunType);
-
-/*
-$config = MAGE::app()->getConfig();
-$config->saveConfig("web/unsecure/base_url",$cacheHost['uns']);
-$config->saveConfig("web/secure/base_url",$cacheHost['s']);
-*/

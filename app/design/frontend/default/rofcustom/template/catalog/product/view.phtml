@@ -91,7 +91,7 @@ if($_isBundled) {
 //        $swatches[] = $swatch->getData();
 //    }
 ?>
-<?php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
+
 <form itemscope itemtype="http://schema.org/Product" itemref="rattan-outdoor-furniture-brand" class="clearfix" action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
 
 <?php echo $this->getBlockHtml('formkey') ?>
@@ -168,51 +168,52 @@ if($_isBundled) {
     </div>
     <?php if ($_product->isSaleable()):?>
 
-        <!-- Color and Quantity Section --------------------------------------------------->
+    <!-- Color and Quantity Section --------------------------------------------------->
 
-        <div class="product-details-options" class="clearfix">
-            <?php
-            echo $this->getChildChildHtml('container2', '', true, true);
-            if($_isGrouped) {
-                echo $this->getChildHtml('product_type_data');
-            }
-            ?>
-        </div>
+    <div class="product-details-options" class="clearfix">
+        <?php
+        echo $this->getChildChildHtml('container2', '', true, true);
+        if($_isGrouped) {
+            echo $this->getChildHtml('product_type_data');
+        }
+        ?>
+    </div>
 
-        <!-- Call to Action buttons For Products Without Color Options --------------------->
+    <!-- Call to Action buttons For Products Without Color Options --------------------->
 
-        <?php /*if (!$this->hasOptions()):?>
-            <div class="add-to-box">
-                <?php if($_product->isSaleable()): ?>
-                    <?php echo $this->getChildHtml('addtocart') ?>
-                    <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
-                        <span class="or"><?php echo $this->__('OR') ?></span>
-                    <?php endif; ?>
+    <?php /*if (!$this->hasOptions()):?>
+        <div class="add-to-box">
+            <?php if($_product->isSaleable()): ?>
+                <?php echo $this->getChildHtml('addtocart') ?>
+                <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                    <span class="or"><?php echo $this->__('OR') ?></span>
                 <?php endif; ?>
-                <?php echo $this->getChildHtml('addto') ?>
-            </div>
-            <?php echo $this->getChildHtml('extra_buttons') ?>
-        <?php elseif (!$_product->isSaleable()): ?>
-            <div class="add-to-box">
-                <?php echo $this->getChildHtml('addto') ?>
-            </div>
-        <?php endif;*/ ?>
+            <?php endif; ?>
+            <?php echo $this->getChildHtml('addto') ?>
+        </div>
+        <?php echo $this->getChildHtml('extra_buttons') ?>
+    <?php elseif (!$_product->isSaleable()): ?>
+        <div class="add-to-box">
+            <?php echo $this->getChildHtml('addto') ?>
+        </div>
+    <?php endif;*/ ?>
 
+    <?php $actual_link = "http".(isset($_SERVER['HTTPS'])&&!in_array($_SERVER['HTTPS'],array("off",""))?"s":"")."://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]".(preg_match('/\/$/',$_SERVER['REQUEST_URI'])==1?"":"/"); ?>
     <div id="product-details-social">
-        <div class="fb-share-button" data-href="<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" data-type="icon_link"></div>
+        <div class="fb-share-button" data-href="<?php echo $actual_link; ?>" data-type="icon_link"></div>
         <!-- Remove Facebook Old-School Share Link in exchange for the above javascript share button -----------
-        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>"
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($actual_link); ?>"
            target="_blank"
            class="product-details-social-btn fb">Facebook</a>
         ------------------------------------------------------------------------------------------------------- -->
-        <a href="https://twitter.com/home?status=<?php echo urlencode("Look at this $productName by @Rattanof at http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>"
+        <a href="https://twitter.com/home?status=<?php echo urlencode("Look at this $productName by @RattanOutdoor at $actual_link"); ?>"
            target="_blank"
            class="product-details-social-btn tw">Twitter</a>
-        <a href="https://plus.google.com/share?url=<?php echo urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>"
+        <a href="https://plus.google.com/share?url=<?php echo urlencode($actual_link); ?>"
            target="_blank"
            class="product-details-social-btn gp">Google Plus</a>
         <a href="<?php echo
-        "https://pinterest.com/pin/create/button/?url=".urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]") .
+        "https://pinterest.com/pin/create/button/?url=".urlencode($actual_link) .
         "&media=".urlencode($this->helper('catalog/image')->init($_product, 'image')) .
         "&description=". urlencode($this->getMetaDescription()); ?>"
            target="_blank"
@@ -223,11 +224,11 @@ if($_isBundled) {
            class="product-details-social-btn em">Email</a>
         <a href="<?php echo
         "http://www.houzz.com/buttonWidget/1" .
-        "?url=". urlencode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]") .
+        "?url=". urlencode($actual_link) .
         "&img=". urlencode($this->helper('catalog/image')->init($_product, 'image')) .
         "&title=". $productName .
         "&hzid=21826".
-        "&ref=".urlencode("http://$_SERVER[HTTP_HOST]"); ?>"
+        "&ref=".urlencode("http".(isset($_SERVER['HTTPS'])&&!in_array($_SERVER['HTTPS'],array("off",""))?"s":"")."://$_SERVER[HTTP_HOST]".(preg_match('/\/$/',$_SERVER['HTTP_HOST'])==1?"":"/")); ?>"
            target="_blank"
            class="product-details-social-btn hz">Houzz</a>
         <a href=""

@@ -145,23 +145,57 @@ jQuery(document).ready(function($){
     }
 
     if(jQuery(".glob-search-focus").length) {
+        window.flashSearch    = window.flashSearch || function() {};
+        window.flashSearchRan = false;
+        jQuery.getScript("/skin/frontend/default/rofcustom/js/jquery.animate-shadow-min.js", (function() {
+            window.flashSearch = function() {
+                var caller = window.flashSearch.caller;
+                var $input = jQuery('#glob-search-input');
+//                $input.focus();
+//                $input.animate({opacity:1.0},1);
+//                $input.animate({boxShadow:"0 0 0 transparent"},1);
+                $input.animate(
+                    {
+                        //opacity: 0.2,
+                        boxShadow: "-5px 0px 5px #8a6399"
+                    },
+                    (!!window.flashSearchRan?250:1),
+                    "swing",
+                    function() {
+                        $input.animate(
+                            {
+                                //opacity: 1.0,
+                                boxShadow: "none"
+                            },
+                            (!!window.flashSearchRan?250:1),
+                            "swing",
+                            function() {
+                                $input.focus();
+                                if(window.flashSearchRan!==true) {
+                                    window.flashSearchRan=true;
+                                    window.flashSearch();
+                                }
+                            }
+                        );
+                    }
+                );
+            };
+        }));
         jQuery(".glob-search-focus").on("click", function(){
+            var $body  = jQuery("body");
             var $input = jQuery('#glob-search-input');
             var inpTop = $input.offset().top;
-            var curTop = jQuery(document).scrollTop();
+            var curTop = $body.scrollTop();
             var intTop = inpTop - 20;
             if(curTop > intTop) {
-                jQuery(document).scrollTop(intTop);
+                $body.animate({scrollTop:intTop},300,"linear",window.flashSearch);
+            } else {
+                window.flashSearch();
             }
-            $input.focus();
-            $input.css("opacity","1.0");
-            jQuery.when(
-                $input.animate({opacity: 0.2},250)
-            ).done(function() {
-                $input.animate({opacity: 1.0},250);
-            });
+
             return false;
         });
+
     }
 
     if(location.pathname.match(/^\/$/)) {
