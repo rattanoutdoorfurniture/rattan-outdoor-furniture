@@ -21,7 +21,7 @@ User-agent: *
 # Crawl-delay: 30
 
 ## Magento sitemap: uncomment and replace the URL to your Magento sitemap file
-Sitemap: http://staging.rattanoutdoorfurniture.com/sitemap.xml
+Sitemap: https://staging.rattanoutdoorfurniture.com/sitemap-https.xml
 
 ## Don't crawl development files and folders
 Disallow: CVS
