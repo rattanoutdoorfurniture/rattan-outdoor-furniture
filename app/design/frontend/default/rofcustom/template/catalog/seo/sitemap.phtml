@@ -43,7 +43,7 @@ $productParentUrlAttr = $catalog_product->getResource()->getAttribute("parent_ur
                 if($parentUrl) {
                     $categoryParent = "products/" . $parentUrl;
                     $urlkey = preg_replace('/([a-z0-9\-]*)(\-default)$/',"$1",preg_replace('/([a-z0-9\-]*)(\-\d+)$/',"$1",$_item->getUrlKey()));
-                    $url = $this->getUrl($categoryParent).$basename."/";
+                    $url = $this->getUrl($categoryParent).$urlkey."/";
                 }
             }
             ?>
