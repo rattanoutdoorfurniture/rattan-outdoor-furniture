@@ -56,8 +56,8 @@ $_weeeTaxAmount = 0;
  *
  * @var $_isCategory boolean Whether this page is a category page
  */
-
-$_isCategory = count(array_intersect(array("catalog_category_view","catalogsearch_result_index"), $this->getLayout()->getUpdate()->getHandles()));
+//echo Zend_Debug::dump($this->getIsUpsell());
+$_isCategory = count(array_intersect(array("catalog_category_view","catalogsearch_result_index"), $this->getLayout()->getUpdate()->getHandles())) || $this->getIsUpsell()===true;
 ?>
 <?php
 if ($_product->getPriceType() == 1) {

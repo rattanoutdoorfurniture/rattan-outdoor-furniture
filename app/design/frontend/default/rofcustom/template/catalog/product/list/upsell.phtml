@@ -24,7 +24,7 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<?php if(count($this->getItemCollection()->getItems())): ?>
+<?php if(count($this->getItemCollection()->getItems())): /*?>
 <div class="box-collateral box-up-sell">
     <h2><?php echo $this->__('You may also be interested in the following product(s)') ?></h2>
     <table class="products-grid" id="upsell-product-table">
@@ -48,5 +48,72 @@
     <?php endfor; ?>
     </table>
     <script type="text/javascript">decorateTable('upsell-product-table')</script>
-</div>
+</div> */ ?>
+    <?php
+    $_productCollection=$this->getItemCollection();
+    $_productCollection->addAttributeToSelect(array("parent_url_key"));
+    $_helper = $this->helper('catalog/output');
+    $imageWidth = Mage::getStoreConfig('quickview/frontend/listwidth');
+    $imageHeight = Mage::getStoreConfig('quickview/frontend/listheight');
+    ?>
+    <div class="upsell-products self-clear">
+        <div class="upsell-products-title fourteen columns offset-by-one by-margin">Related Products</div>
+        <?php // $this->setColumnCount(5); // uncomment this line if you want to have another number of columns. also can be changed in layout ?>
+        <?php $this->resetItemsIterator() ?>
+        <?php $_columnCount = $this->getColumnCount(); ?>
+        <?php for($_i=0;$_i<$this->getRowCount();$_i++): ?>
+            <?php for($_j=0;$_j<$_columnCount;$_j++): ?>
+                <?php if($_product=$this->getIterableItem()): ?>
+                <section class="category-product four columns<?php if(($_j+1)%$_columnCount==1): ?> first<?php elseif(($_j+1)%$_columnCount==0): ?> last<?php endif; ?>">
+                    <?php
+                    $_productNameStripped = $this->stripTags($_product->getName(), null, true);
+                    ?>
+                    <?php
+                    /**
+                     * @TODO Make this take into account the parent url's parents
+                     * Currently just assuming parent is in 'products', this will change when we do tiered
+                     * categories. (aka, sub-categories).
+                     */
+                    $url = $_product->getProductUrl();
+                    if($categoryParent = $_product->getResource()->getAttribute('parent_url_key')) {
+                        $categoryParent = $categoryParent->getFrontend()->getValue($_product);
+                        if($categoryParent) {
+                            $categoryParent = "products/" . $categoryParent;
+                            $urlkey = preg_replace('/([a-z0-9\-]*)(\-default)$/',"$1",preg_replace('/([a-z0-9\-]*)(\-\d+)$/',"$1",$_product->getUrlKey()));
+                            $url = $this->getUrl($categoryParent).$urlkey."/";
+                        }
+                    }
+                    ?>
+                    <a data-position="<?php echo $_product->getPosition(); ?>" id="category-product-inner-<?php echo $_product->getId()?>" href="<?php echo $url; ?>" class="category-product-inner clearfix"  title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>">
+                        <img class="category-product-img" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($imageWidth,$imageHeight); ?>" alt="<?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>" width="<?php echo $imageWidth;?>" height="<?php echo $imageHeight; ?>" /><!-- 200x142 -->
+                        <div class="category-product-img-underline"></div>
+                        <section class="category-product-title" title="<?php echo $_productNameStripped; ?>">
+                            <?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>
+                        </section>
+                        <section<?php if (isset($categoryParent) && !is_null($categoryParent)): ?> onclick="setLocation('<?php echo rtrim($this->getUrl($categoryParent),"/")."/"; ?>');return false;"<?php endif; ?> class="category-product-collection"><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></section>
+                        <?php if ($_product->getData('type_id') == 'grouped'):?>
+                            <?php $_associatedProducts = $_product->getTypeInstance()->getAssociatedProducts(); ?>
+                            <?php $_hasAssociatedProducts = count($_associatedProducts) > 0; ?>
+                            <?php if ($_hasAssociatedProducts): ?>
+                                <?php $sum = 0;?>
+                                <?php foreach ($_associatedProducts as $_item): ?>
+                                    <?php $sum += $_item->getPrice(); // Need to add quantity to this; ?>
+                                <?php endforeach; ?>
+                                <div class="price-box category-product-price">
+                                    <span class="minimal-price"><?php echo Mage::app()->getStore()->formatPrice($sum); ?></span>
+                                </div>
+                            <?php else: ?>
+                                <?php echo $this->getPriceHtml($_product, false,'',true) ?>
+                            <?php endif;?>
+                        <?php else: ?>
+                            <?php echo $this->getPriceHtml($_product, false,'',true) ?>
+                        <?php endif;?>
+                        <button class="category-product-add" data-url="<?php echo $this->helper('checkout/cart')->getAddUrl($_product) ?>" title="Add <?php echo $_productNameStripped; ?> to Your Cart"><?php echo $this->__("Add ".$_productNameStripped." to Your Cart")?></button>
+                        <button class="category-product-view-more" title="View more about the <?php echo $_productNameStripped; ?>"><?php echo $this->__("More Details About The ".$_productNameStripped)?></button>
+                    </a>
+                </section>
+                <?php endif; ?>
+            <?php endfor; ?>
+        <?php endfor; ?>
+    </div>
 <?php endif ?>

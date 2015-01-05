@@ -64,8 +64,8 @@
               $categoryParent = $categoryParent->getFrontend()->getValue($_product);
               if($categoryParent) {
                   $categoryParent = "products/" . $categoryParent;
-                  $basename = preg_replace('/([a-z\-]*)(\-\d+)/',"$1",basename($url));
-                    $url = $this->getUrl($categoryParent).$basename."/";
+                  $urlkey = preg_replace('/([a-z0-9\-]*)(\-default)$/',"$1",preg_replace('/([a-z0-9\-]*)(\-\d+)$/',"$1",$_product->getUrlKey()));
+                  $url = $this->getUrl($categoryParent).$urlkey."/";
               }
           }
           //$proCats = $_product->getCategoryIds();
@@ -76,7 +76,7 @@
     <section class="category-product four columns<?php if( ++$_iterator == sizeof($_productCollection) ): ?> last<?php endif; ?>">
         <?php $_productNameStripped = $this->stripTags($_product->getName(), null, true); ?>
         <a id="category-product-inner-<?php echo $_product->getId()?>" href="<?php echo $url ?>" class="category-product-inner clearfix"  title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>">
-            <img class="category-product-img" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($imageWidth,$imageHeight); ?>" alt="<?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>" width="<?php echo $imageWidth;?>"<!-- 200 --> height="<?php echo $imageHeight; ?>"<!-- 142 --> />
+            <img class="category-product-img" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($imageWidth,$imageHeight); ?>" alt="<?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>" width="<?php echo $imageWidth;?>" height="<?php echo $imageHeight; ?>" /><!-- 200 x 142 -->
             <div class="category-product-img-underline"></div>
             <section class="category-product-title" title="<?php echo $_productNameStripped; ?>">
                 <?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>
@@ -136,8 +136,8 @@
                 $categoryParent = $categoryParent->getFrontend()->getValue($_product);
                 if($categoryParent) {
                     $categoryParent = "products/" . $categoryParent;
-                    $basename = preg_replace('/([a-z\-]*)(\-\d+)/',"$1",basename($url));
-                    $url = $this->getUrl($categoryParent).$basename."/";
+                    $urlkey = preg_replace('/([a-z0-9\-]*)(\-default)$/',"$1",preg_replace('/([a-z0-9\-]*)(\-\d+)$/',"$1",$_product->getUrlKey()));
+                    $url = $this->getUrl($categoryParent).$urlkey."/";
                 }
             }
             //$proCats = $_product->getCategoryIds();

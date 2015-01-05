@@ -40,7 +40,7 @@
     <div class="input-box">
     <?php /** @var $_selection Mage_Catalog_Model_Product*/ ?>
     <?php if ($this->_showSingle()): ?>
-        <?php echo preg_replace("/ - Default/",'',$this->getSelectionTitlePrice($_selections[0])); ?>
+        <?php echo preg_replace("/ - Default/",'',$this->getSelectionTitlePrice($_selections[0],true,true)); ?>
         <?php if ($_selections[0]->getSelectionCanChangeQty()): ?>
             <?php $tierPriceHtml = $this->getTierPriceHtml($_selections[0]); ?>
         <?php endif; ?>

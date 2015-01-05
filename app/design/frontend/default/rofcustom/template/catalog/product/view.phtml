@@ -168,6 +168,10 @@ if($_isBundled) {
     </div>
     <?php if ($_product->isSaleable()):?>
 
+    <!-- Simple Product Additional Details -->
+
+    <?php /*if($_product->getData('type_id') == "simple") echo preg_replace('/h2/','h3',$this->getChildHtml('additional'));*/ ?>
+
     <!-- Color and Quantity Section --------------------------------------------------->
 
     <div class="product-details-options" class="clearfix">
@@ -260,7 +264,7 @@ if($_isBundled) {
         $detailedInfoFirst  = array_shift($detialedInfoCopy);
         foreach ($detailedInfo as $alias => $html):?>
         <section id="product-tabs-<?php echo $alias;?>" class="product-tab<?php echo ($html==$detailedInfoFirst) ? $this->__(" active") : ''; ?>">
-            <label for="product-tabs-<?php echo $alias;?>" class="product-tab-title"><a href="#product-tabs-<?php echo $alias;?>"><?php echo strlen($title = $this->getChildData($alias, 'title')) ? $this->escapeHtml($title) : $this->__("Overview"); ?></a></label>
+            <label for="product-tabs-<?php echo $alias;?>" class="product-tab-title"><h2><a href="#product-tabs-<?php echo $alias;?>"><?php echo strlen($title = $this->getChildData($alias, 'title')) ? $this->escapeHtml($title) : $this->__("Description"); ?></a></h2></label>
             <div class="product-tab-body" itemprop="description">
                 <?php $_description = $this->getProduct()->getDescription(); ?>
                 <?php echo $this->helper('catalog/output')->productAttribute($this->getProduct(), $_description, 'description') ?>
@@ -301,7 +305,29 @@ if($_isBundled) {
 ------------------------ Related Product Listings ----------------------------
 ----------------------------------------------------------------------------->
 
-<?php // echo $this->getChildHtml("related_products"); ?>
+<?php //echo $this->getChildHtml("related_products"); ?>
+
+<?php echo $this->getChildHtml('upsell_products') ?>
+
+<?php
+/**
+ * This is how the Additional Data (and Description) should be loaded in, when we get there.
+ */
+/*
+<div class="product-collateral">
+    <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
+    <div class="box-collateral <?php echo "box-{$alias}"?>">
+        <?php if ($title = $this->getChildData($alias, 'title')):?>
+        <h2><?php echo $this->escapeHtml($title); ?></h2>
+        <?php endif;?>
+            <?php echo $html; ?>
+    </div>
+    <?php endforeach;?>
+        <?php echo $this->getChildHtml('upsell_products') ?>
+        <?php echo $this->getChildHtml('product_additional_data') ?>
+</div>
+ */
+?>
 
 <input type="hidden" name="proceedTo" value=""/>
 
@@ -363,7 +389,3 @@ if($_isBundled) {
         }.bind(productAddToCartForm);
     //]]>
     </script>
-
-<?php /* echo $this->getChildHtml('product_additional_data') ?>
-
-<?php echo $this->getChildHtml('upsell_products') */ ?>

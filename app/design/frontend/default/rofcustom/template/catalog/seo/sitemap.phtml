@@ -42,7 +42,7 @@ $productParentUrlAttr = $catalog_product->getResource()->getAttribute("parent_ur
                 $parentUrl = $productParentUrlAttr->getFrontend()->getValue($catalog_product->load($_item->getId()));
                 if($parentUrl) {
                     $categoryParent = "products/" . $parentUrl;
-                    $basename = preg_replace('/([a-z\-]*)(\-\d+)/',"$1",basename($url));
+                    $urlkey = preg_replace('/([a-z0-9\-]*)(\-default)$/',"$1",preg_replace('/([a-z0-9\-]*)(\-\d+)$/',"$1",$_item->getUrlKey()));
                     $url = $this->getUrl($categoryParent).$basename."/";
                 }
             }

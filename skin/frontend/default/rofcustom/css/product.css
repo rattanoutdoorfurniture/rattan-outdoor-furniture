@@ -493,17 +493,13 @@
 
 .product-tab-title {
     position: absolute;
-    font-size: 16px;
-    font-weight: normal;
     width: 225px;
     height: 35px;
     top: -35px;
     left: 0;
     padding: 0;
     margin: 0;
-    color: #AAA;
     background: transparent;
-    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 .product-tab:nth-child(2) .product-tab-title {
@@ -524,9 +520,12 @@
     line-height: 35px;
     text-align: center;
     text-decoration: none;
-    color: inherit;
     outline: 0 none;
     text-transform: uppercase;
+    font-size: 16px;
+    color: #AAA;
+    font-weight: normal;
+    font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 .product-tab.active {
@@ -552,7 +551,6 @@
 
 .product-tab:target .product-tab-title,
 .product-tab.active .product-tab-title {
-    color: #8a6399;
     background: #FFF none;
     z-index: 2;
 }
@@ -560,6 +558,7 @@
 .product-tab:target .product-tab-title a,
 .product-tab.active .product-tab-title a {
     margin-right: 10px;
+    color: #8a6399;
 }
 
 .product-tab.active .product-tab-body {

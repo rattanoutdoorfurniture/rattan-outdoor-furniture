@@ -492,6 +492,50 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
             display: inline-block;
         }
 
+    /* Upsell Product Widget Styles *****************************************/
+        .upsell-products {
+            clear: both;
+        }
+
+        .upsell-products .upsell-products-title {
+            text-indent: -10000px;
+            background: transparent url('../images/related-products-title.png') center center no-repeat;
+            height: 20px;
+            background-size: 100% auto;
+            margin: 0 auto 20px !important;
+            display: block;
+            float: none;
+        }
+
+        .upsell-products p.note-msg {
+            height: 22px;
+            margin: 124px auto 124px 60px;
+            display: inline-block;
+        }
+
+        /*.upsell-products .category-product .product-details-price-section {
+            max-width: 100%;
+            width: 100%;
+            padding: 0;
+            float: left;
+            margin: 0 0 10px 0;
+            position: relative;
+            top: 0;
+            text-align: center;
+        }
+
+        .upsell-products .category-product .product-details-price-label {
+            display: none;
+        }
+
+        .upsell-products .category-product .product-details-price-amount {
+            text-align: center;
+            text-decoration: none !important;
+            color: #8a6399;
+            font-family: 'FuturaStd-Bold', Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }*/
+
     /* Location Pages Style Updates (2014-12-12)
     **************************************************************************************/
 

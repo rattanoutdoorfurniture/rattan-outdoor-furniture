@@ -33,8 +33,8 @@
         $categoryParent = $categoryParent->getFrontend()->getValue($curProd);
         if($categoryParent) {
             $categoryParent = "products/" . $categoryParent;
-            $basename = preg_replace('/([a-z\-]*)(\-\d+)/',"$1",basename($url));
-                    $url = $this->getUrl($categoryParent).$basename."/";
+            $urlkey = preg_replace('/([a-z0-9\-]*)(\-default)$/',"$1",preg_replace('/([a-z0-9\-]*)(\-\d+)$/',"$1",$curProd->getUrlKey()));
+            $url = $this->getUrl($categoryParent).$urlkey."/";
         }
     }
     ?>
