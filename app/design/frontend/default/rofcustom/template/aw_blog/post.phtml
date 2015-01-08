@@ -42,42 +42,31 @@
 
 <?php if ($this->getCommentsEnabled()): ?>
     <?php $comments = $this->getComment(); ?>
-
-    
     <div class="post-details">
-            <table>
-              <tbody><tr>
+        <table>
+            <tbody>
+            <tr>
                 <td><i class="icon-comment"></i> <?php echo $this->__('Post Comments') ?></td>
-                <td><i class="icon-time" style="margin-right:6px;"></i><?php echo $post->getCreatedTime(); ?></td>
-              </tr>
-            </tbody></table>
-          </div>
-          
-          
-    <div class="comment-section"> 
-<?php /*?>    <?php echo $this->getChildHtml('aw_blog_comments_toolbar'); ?><?php */?>
+                <td><i class="icon-time"></i><?php echo $post->getCreatedTime(); ?></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="comment-section">
+        <?php echo $this->getChildHtml('aw_blog_comments_toolbar'); ?>
         <?php foreach ($comments as $comment) : ?>
-
-    
-    <div class="comment-wrap">
-          
-                
+            <div class="comment-wrap">
                 <h4 class="comment-name"><?php echo $comment->getUser(); ?>
-                
-               <span class="time-ago">  <?php echo $this->__("posted on") ?>
-                  <?php echo $this->formatDate($comment->getCreatedTime(), Mage::getStoreConfig('blog/blog/dateformat'), true); ?></span></h4>
-           
-                  
-                  
+                    <span class="time-ago">
+                        <?php echo $this->__("posted on") ?>
+                        <?php echo $this->formatDate($comment->getCreatedTime(), Mage::getStoreConfig('blog/blog/dateformat'), true); ?>
+                    </span>
+                </h4>
                 <div class="comment"><?php echo nl2br($comment->getComment()); ?></div>
-                
-                
-            </div>  
+            </div>
         <?php endforeach; ?>
-        
-        </div>   
-        
-<?php /*?>     <?php echo $this->getChildHtml('aw_blog_comments_toolbar'); ?><?php */?>
+    </div>
+    <?php echo $this->getChildHtml('aw_blog_comments_toolbar'); ?>
  
 
     <?php if ($post->getComments()): ?>
@@ -90,21 +79,18 @@
                         <h3><?php echo Mage::helper('blog')->__('Submit Comment') ?></h3>
                         <ul class="form-list">
                             <li>
-
                                 <div class="input-box aw-blog-comment-area">
-                                   
-                                    <textarea name="comment" id="comment" title="<?php echo $this->__('Comment') ?>" class="required-entry input-text" style="height:150px;width:95%;" cols="50" rows="5"><?php echo $this->getCommentText(); ?></textarea>
+                                    <textarea name="comment" id="comment" title="<?php echo $this->__('Comment') ?>" class="required-entry input-text" cols="50" rows="5"><?php echo $this->getCommentText(); ?></textarea>
                                 </div>
                             </li>
                         </ul>
                     </fieldset>
-                    
-                    <div class="button-set" style="width:96%">
+                    <div class="button-set">
                         <input name="post_id" type="hidden" value="<?php echo $post->getPostId(); ?>" />
                         <input name="email" type="hidden" value="<?php echo $this->htmlEscape($this->helper('blog')->getUserEmail()) ?>"/>
                         <input name="user" type="hidden" value="<?php echo $this->htmlEscape($this->helper('blog')->getUserName()) ?>"/>
                         <p class="required"><?php echo $this->__('* Required Fields') ?></p>
-                        <button class="form-button button" type="submit" style="float:right;"><span><span><?php echo Mage::helper('blog')->__('Submit Comment') ?></span></span></button>
+                        <button class="form-button button" type="submit"><span><span><?php echo Mage::helper('blog')->__('Submit Comment') ?></span></span></button>
                     </div>
                 </form>
 
@@ -138,27 +124,26 @@
 
                             <div class="input-box aw-blog-comment-area">
                                 <label for="comment" class="required"><?php echo Mage::helper('blog')->__('Comment') ?><em>*</em></label><br />
-                                <textarea name="comment" id="comment" title="<?php echo Mage::helper('blog')->__('Comment') ?>" class="required-entry input-text" style="height:150px;width:95%;" cols="50" rows="5"><?php echo $this->getCommentText(); ?></textarea>
+                                <textarea name="comment" id="comment" title="<?php echo Mage::helper('blog')->__('Comment') ?>" class="required-entry input-text" cols="50" rows="5"><?php echo $this->getCommentText(); ?></textarea>
                             </div>
                         </li>
+                        <?php if(Mage::getStoreConfig('blog/recaptcha/enabled') && !$this->helper('customer')->isLoggedIn()): ?>
+                        <li>
+                            <?php
+                                require_once 'recaptcha/recaptchalib-aw.php';
 
-                        <?php
-                        if (Mage::getStoreConfig('blog/recaptcha/enabled') && !$this->helper('customer')->isLoggedIn()) {
-                            ?><li><?php
-                require_once 'recaptcha/recaptchalib-aw.php';
+                                // Get a key from http://recaptcha.net/api/getkey
+                                $publickey = Mage::getStoreConfig('blog/recaptcha/publickey');
+                                $privatekey = Mage::getStoreConfig('blog/recaptcha/privatekey');
+                                $error = null;
 
-                // Get a key from http://recaptcha.net/api/getkey
-                $publickey = Mage::getStoreConfig('blog/recaptcha/publickey');
-                $privatekey = Mage::getStoreConfig('blog/recaptcha/privatekey');
-                $error = null;
-
-                echo recaptcha_get_html($publickey, $error);
-                            ?></li><?php
-            }
-                        ?>                        
+                                echo recaptcha_get_html($publickey, $error);
+                            ?>
+                        </li>
+                        <?php endif; ?>
                     </ul>
                 </fieldset>
-                <div class="button-set" style="width:96%">
+                <div class="button-set">
                     <input name="post_id" type="hidden" value="<?php echo $post->getPostId(); ?>" />
                     <p class="required"><?php echo $this->__('* Required Fields') ?></p>
                     <button class="button form-button" type="submit"><span><span><?php echo Mage::helper('blog')->__('Submit Comment') ?></span></span></button>

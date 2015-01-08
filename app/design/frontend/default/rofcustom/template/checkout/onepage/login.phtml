@@ -67,9 +67,9 @@
                 </fieldset>
             </form>
 
-            <div class="buttons-set" style="width: 240px;margin: 0 auto;padding: 10px 20px;">
-                <a href="<?php echo $this->getUrl('customer/account/forgotpassword') ?>" style="float:left"><?php echo $this->__('Forgot your password?') ?></a>
-                <button type="submit" class="button submit-button account-sub-button" style="float:right;" onclick="onepageLogin(this)"><span><span><?php echo $this->__('Login') ?></span></span></button>
+            <div class="buttons-set">
+                <a class="forgot-password-btn" href="<?php echo $this->getUrl('customer/account/forgotpassword') ?>"><?php echo $this->__('Forgot your password?') ?></a>
+                <button type="submit" class="button submit-button account-sub-button" onclick="onepageLogin(this)"><span><span><?php echo $this->__('Login') ?></span></span></button>
             </div>
 
         </div>

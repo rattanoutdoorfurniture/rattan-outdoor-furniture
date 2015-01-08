@@ -51,6 +51,12 @@
         <reference name="root">
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/search.css</name>
+            </action>
+        </reference>
         <reference name="left">
             <block type="catalogsearch/layer" name="catalogsearch.leftnav" after="currency" template="catalog/layer/view.phtml"/>
         </reference>
@@ -88,6 +94,10 @@
             <!--<action method="addItem"><type>js_css</type><name>calendar/calendar-win2k-1.css</name><params/><!- -<if/><condition>can_load_calendar_js</condition>- -></action>-->
             <!--<action method="addItem"><type>js</type><name>calendar/calendar.js</name><!- -<params/><if/><condition>can_load_calendar_js</condition>- -></action>-->
             <!--<action method="addItem"><type>js</type><name>calendar/calendar-setup.js</name><!- -<params/><if/><condition>can_load_calendar_js</condition>- -></action>-->
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/search.css</name>
+            </action>
         </reference>
         <reference name="content">
             <block type="catalogsearch/advanced_form" name="catalogsearch_advanced_form" template="catalogsearch/advanced/form.phtml"/>
@@ -105,6 +115,12 @@ Advanced search results
         <!-- Mage_Catalogsearch -->
         <reference name="root">
             <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/search.css</name>
+            </action>
         </reference>
         <reference name="content">
             <block type="catalogsearch/advanced_result" name="catalogsearch_advanced_result" template="catalogsearch/advanced/result.phtml">
@@ -134,6 +150,10 @@ Advanced search results
 
         <reference name="head">
             <action method="setTitle" translate="title" module="catalogsearch"><title>Search Terms</title></action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/search.css</name>
+            </action>
         </reference>
         <reference name="root">
             <action method="setTemplate"><template>page/1column.phtml</template></action>

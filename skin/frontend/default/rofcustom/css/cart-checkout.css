@@ -407,6 +407,11 @@ img, button, input {
     /* Checkout Step 1 - Login - Account / Guest - Continue
     *******************************************************************************/
 
+    .register-blurb {
+        margin: 10px 30px 20px;
+        text-align: justify;
+    }
+
     .checkout-box-login-box {
         width: 240px;
         background: transparent url('../images/hash-border-darker.png') 0 0 repeat;
@@ -465,6 +470,11 @@ img, button, input {
 
     .account-box .required em {
         padding-right: 4px;
+    }
+
+    .register-fb-btn-wrap {
+        margin: 0 auto;
+        width: 260px;
     }
 
     #register-with-facebook-button {
@@ -546,12 +556,12 @@ img, button, input {
     }
 
     /*#checkout-step2-next-step {*/
-        /*width: 170px;*/
-        /*height: 40px;*/
-        /*background: transparent url('../images/checkout-step2-next-step.png') center center no-repeat;*/
-        /*float: right;*/
-        /*text-indent: -10000px;*/
-        /*margin: 20px 0 0 0;*/
+    /*width: 170px;*/
+    /*height: 40px;*/
+    /*background: transparent url('../images/checkout-step2-next-step.png') center center no-repeat;*/
+    /*float: right;*/
+    /*text-indent: -10000px;*/
+    /*margin: 20px 0 0 0;*/
     /*}*/
 
     /* Checkout Step 3 - Shipping Information - Complete
@@ -572,18 +582,18 @@ img, button, input {
     }
 
     /*#checkout-step3-submit-order {*/
-        /*width: 170px;*/
-        /*height: 40px;*/
-        /*background: transparent url('../images/checkout-step3-submit-order.png') center center no-repeat;*/
-        /*float: right;*/
-        /*text-indent: -10000px;*/
-        /*margin: 0;*/
+    /*width: 170px;*/
+    /*height: 40px;*/
+    /*background: transparent url('../images/checkout-step3-submit-order.png') center center no-repeat;*/
+    /*float: right;*/
+    /*text-indent: -10000px;*/
+    /*margin: 0;*/
     /*}*/
 
 
 
-/* Right Column
-*******************************************************************/
+    /* Right Column
+    *******************************************************************/
 
     /* Subtotal Box area
     **********************************************************/
@@ -722,20 +732,20 @@ img, button, input {
         width: 170px;
     }
 
-/* Account Pages Styles ***************************************************************************************
-**************************************************************************************************************/
+    /* Account Pages Styles ***************************************************************************************
+    **************************************************************************************************************/
 
     .account-box.no-border {
         padding: 10px 0 !important;
         max-width: 90%;
     }
 
-	@media only screen and (max-width: 767px) {
-		.account-box.no-border {
-        	clear: both;
-        	margin: 10px 5% !important;
-		}
-	}
+    @media only screen and (max-width: 767px) {
+        .account-box.no-border {
+            clear: both;
+            margin: 10px 5% !important;
+        }
+    }
 
     .account-box.no-border .account-box-inner {
         margin: 0 10px !important;
@@ -803,7 +813,7 @@ img, button, input {
         margin-top: 5px;
     }
 
-.account-box .back-link,
+    .account-box .back-link,
     .account-box .account-sub-button,
     .my-account .back-link,
     .my-account .account-sub-button {
@@ -852,26 +862,26 @@ img, button, input {
         text-align: justify;
     }
 
-   #login-heading {
-       margin: 0px;
-       color: #895c9a;
-       font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
-       /*font-variant: small-caps;*/
-       font-size: 32px;
-       line-height: 32px;
-   }
+    #login-heading {
+        margin: 0px;
+        color: #895c9a;
+        font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif;
+        /*font-variant: small-caps;*/
+        font-size: 32px;
+        line-height: 32px;
+    }
 
-   .account-create label.validation-failed,
-   .account-create .validation-failed ~ label.required {
-       color: #F84A33;
-   }
+    .account-create label.validation-failed,
+    .account-create .validation-failed ~ label.required {
+        color: #F84A33;
+    }
 
-   .account-create input.validation-failed {
-       background-color: rgb(255, 224, 145) !important;
-   }
+    .account-create input.validation-failed {
+        background-color: rgb(255, 224, 145) !important;
+    }
 
-   /* Account Dashboard Styles
-   *****************************************************************/
+    /* Account Dashboard Styles
+    *****************************************************************/
 
     .box-head {
         position: relative;
@@ -972,98 +982,98 @@ img, button, input {
         clear: both;
     }
 
-        /* Account Dashboard Recent Orders Section
-        *********************************************************/
+    /* Account Dashboard Recent Orders Section
+    *********************************************************/
 
-        #my-orders-table-wrap {
-            margin: 20px 35px 0px;
-        }
+    #my-orders-table-wrap {
+        margin: 20px 35px 0px;
+    }
 
+    #my-orders-table {
+        width: 600px;
+        margin: 5px;
+        background: #FFF;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .account-box .box-head + .box-blurb,
+        .cart-box .box-head + .box-blurb,
+        .checkout-box .box-head + .box-blurb,
         #my-orders-table {
-            width: 600px;
-            margin: 5px;
-            background: #FFF;
+            width: 90% !important;
+            margin: 10px 5% !important;
         }
-
-		@media only screen and (max-width: 767px) {
-            .account-box .box-head + .box-blurb,
-            .cart-box .box-head + .box-blurb,
-            .checkout-box .box-head + .box-blurb,
-			#my-orders-table {
-				width: 90% !important;
-				margin: 10px 5% !important;
-			}
-			#my-orders-table tr td,
-			#my-orders-table tr th {
-			    display: none;
-			}
-			table th.show-mobile,
-			table td.show-mobile {
-			    display: table-cell !important;
-			    width: 50% !important;
-			}
-		}
-
+        #my-orders-table tr td,
         #my-orders-table tr th {
-            font-weight: bold;
-            margin: 0;
+            display: none;
         }
+        table th.show-mobile,
+        table td.show-mobile {
+            display: table-cell !important;
+            width: 50% !important;
+        }
+    }
 
-        #my-orders-table tr th,
-        #my-orders-table tr td {
-            padding: 10px;
-            vertical-align: middle;
-            text-align: center;
-            border-bottom: 1px solid #e6e6e6;
-            border-right: 1px solid #e6e6e6;
-        }
+    #my-orders-table tr th {
+        font-weight: bold;
+        margin: 0;
+    }
 
-        #my-orders-table tr th:last-child,
-        #my-orders-table tr td:last-child {
-            border-right: none;
-        }
+    #my-orders-table tr th,
+    #my-orders-table tr td {
+        padding: 10px;
+        vertical-align: middle;
+        text-align: center;
+        border-bottom: 1px solid #e6e6e6;
+        border-right: 1px solid #e6e6e6;
+    }
 
-        #my-orders-table td a {
-            text-decoration: none;
-        }
+    #my-orders-table tr th:last-child,
+    #my-orders-table tr td:last-child {
+        border-right: none;
+    }
 
-        #my-orders-table td a:hover {
-            text-decoration: underline;
-        }
+    #my-orders-table td a {
+        text-decoration: none;
+    }
 
-        #recent-orders-view-all {
-            background-image: url('../images/account-dashboard-recent-orders-view-all.png');
-            width: 90px;
-            margin-right: 40px;
-        }
+    #my-orders-table td a:hover {
+        text-decoration: underline;
+    }
 
-        /* Dashboard Account Information Section
-        *******************************************************************/
-        .my-account .dashboard .account-box.box-info
-            .account-box.column,
-        .my-account .dashboard .account-box.box-info
-            .account-box.column .account-box-inner {
-            min-height: 130px;
-        }
+    #recent-orders-view-all {
+        background-image: url('../images/account-dashboard-recent-orders-view-all.png');
+        width: 90px;
+        margin-right: 40px;
+    }
 
-        #account-info-edit-password {
-            width: 150px;
-            background-image: url('../images/account-dashboard-button-edit-password.png');
-        }
+    /* Dashboard Account Information Section
+    *******************************************************************/
+    .my-account .dashboard .account-box.box-info
+    .account-box.column,
+    .my-account .dashboard .account-box.box-info
+    .account-box.column .account-box-inner {
+        min-height: 130px;
+    }
 
-        /* Dashboard Account Addresses Section
-        *********************************************************************/
-        .my-account .dashboard .account-box.box-address
-        .account-box.column,
-        .my-account .dashboard .account-box.box-address
-        .account-box.column .account-box-inner {
-            min-height: 235px;
-        }
+    #account-info-edit-password {
+        width: 150px;
+        background-image: url('../images/account-dashboard-button-edit-password.png');
+    }
 
-        #account-info-edit-addresses {
-            width: 150px;
-            background-image: url('../images/account-dashboard-button-edit-addresses.png');
-        }
+    /* Dashboard Account Addresses Section
+    *********************************************************************/
+    .my-account .dashboard .account-box.box-address
+    .account-box.column,
+    .my-account .dashboard .account-box.box-address
+    .account-box.column .account-box-inner {
+        min-height: 235px;
+    }
+
+    #account-info-edit-addresses {
+        width: 150px;
+        background-image: url('../images/account-dashboard-button-edit-addresses.png');
+    }
 
     /* Account Order History Page
     ***************************************************************************************/
@@ -1126,8 +1136,6 @@ img, button, input {
         clear: right;
         padding-left: 10px;
     }
-
-
 
     /* Account Edit Info Page
     *****************************************************/
@@ -1199,8 +1207,8 @@ img, button, input {
         background-image: url('../images/cart-continue-btn.png');
     }
 
-/* Search Pages ************************************************************************************
-***************************************************************************************************/
+    /* Search Pages ************************************************************************************
+    ***************************************************************************************************/
 
     /* Advanced Search Form Page
     ************************************************************/
@@ -1234,8 +1242,8 @@ img, button, input {
         background-image: url('../images/glob-search-submit.png');
     }
 
-/* New Cart Styles for use with new One Page Checkout *************************************************
-******************************************************************************************************/
+    /* New Cart Styles for use with new One Page Checkout *************************************************
+    ******************************************************************************************************/
 
     /* Show Coupon Code Form Button - Sub Cart **************************/
     .button.btn-coupon {
@@ -1472,13 +1480,108 @@ img, button, input {
     float: right;
     margin-right: 20px;
 }
-#remember-me-box {
+#checkout-step-login .buttons-set {
+    width: 240px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+#checkout-step-login .buttons-set .forgot-password-btn {
+    float: left;
+}
+#checkout-step-login .buttons-set .button.submit-button {
+    float: right;
+}
+#checkout-step-login #remember-me-box {
     clear: both;
 }
-#remember-me-box > * {
+#checkout-step-login #remember-me-box > * {
     display: inline-block;
     margin-bottom: 0 !important;
 }
+    /* Remember Me Popup ===================================================================== */
+    .window-overlay {
+        background: url(../images/window_overlay.png) repeat;
+        background: rgba(0, 0, 0, 0.35);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .remember-me label {
+        float: none;
+        margin: 0 6px;
+    }
+
+    .remember-me-popup {
+        background: #fff;
+        border: 1px solid #ccc;
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        margin: -85px 0 0 -200px;
+        width: 400px;
+        text-align: left;
+        -moz-box-shadow: 0 0 6px #ccc;
+        -webkit-box-shadow: 0 0 6px #ccc;
+        -box-shadow: 0 0 6px #ccc;
+        z-index: 1000;
+    }
+
+    .remember-me-popup h3 {
+        background: #8a6399;
+        border-bottom: 1px solid #8a3699;
+        font-size: 18px;
+        padding: 5px 10px;
+        color: #FFF;
+        font-family: "Tahoma", Arial, Helvetica, sans-serif;
+        font-variant: small-caps;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #8a3699;
+        letter-spacing: 0.1em;
+    }
+
+    .remember-me-popup .remember-me-popup-head {
+        position: relative;
+    }
+
+    .remember-me-popup .remember-me-popup-head .remember-me-popup-close {
+        background: url('../images/close.png') no-repeat;
+        display: block;
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        right: 15px;
+        height: 20px;
+        width: 20px;
+        text-indent: -9999em;
+        background-size: 100%;
+        box-shadow: 0 0 5px #8a3699;
+        border-radius: 100%;
+    }
+
+    .remember-me-popup .remember-me-popup-body {
+        padding: 10px;
+    }
+
+    .remember-me-popup .remember-me-popup-body a {
+        display: inline-block;
+        height: 19px;
+        border: 1px solid #8a3699;
+        background: #8a6399;
+        padding: 0 8px;
+        font: bold 12px/19px "Tahoma", Arial, Helvetica, sans-serif;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+        color: #fff;
+        text-shadow: 1px 1px 1px #8a3699;
+        letter-spacing: 0.1em;
+    }
+
+    /* Remember Me Popup ===================================================================== */
 /* Address Info Styles *****************************************/
 #checkoutSteps .input-box {
     margin-bottom: 20px;
@@ -1587,63 +1690,63 @@ img, button, input {
 #co-payment-form .input-box.has-credit-card-logos input {
     width: 404px;
 }
-    .has-credit-card-logos {
-        position: relative;
-    }
+.has-credit-card-logos {
+    position: relative;
+}
 
-    /* Credit Cart Type Auto-Select Styles
-    ******************************************************/
-    #credit-cart-type-wrap {
-        display: none;
-    }
-    #credit-card-type {
-        position: absolute;
-        width: 52px;
-        top: -10px;
-        right: -2px;
-        z-index: 99;
-        overflow: hidden;
-        height: 38px;
-    }
-    #credit-card-type li {
-        display: none;
-        width: 51px;
-        height: 32px;
-        background: url('../images/credit-card-icons.jpg') 0 -32px no-repeat;
-        margin: 5px 6px 0 0;
-        overflow: hidden;
-        text-indent: -500em;
-        float: left;
-        -webkit-transition: all .2s;
-        -moz-transition: all .2s;
-        -ms-transition: all .2s;
-        -o-transition: all .2s;
-        transition: all .2s;
-        position: absolute;
-        z-index: 9;
-    }
-    #credit-card-type li.active {
-        display: block;
-        top: 0;
-    }
-    #credit-card-type .NN {
-        display: none;
-    }
-    #credit-card-type .NN.active {
-        display: block;
-        background: none;
-        background-color: transparent;
-    }
-    #credit-card-type .VI {background-position: 0px -32px;}
-    #credit-card-type .MC {background-position: -51px -32px;}
-    #credit-card-type .AE {background-position: -102px -32px;}
-    #credit-card-type .DI {background-position: -153px -32px;}
-    #credit-card-type .VI.active {background-position: 0px 0px;}
-    #credit-card-type .MC.active  {background-position: -51px 0px;}
-    #credit-card-type .AE.active  {background-position: -102px 0px;}
-    #credit-card-type .DI.active  {background-position: -153px 0px;}
+/* Credit Cart Type Auto-Select Styles
+******************************************************/
+#credit-cart-type-wrap {
+    display: none;
+}
+#credit-card-type {
+    position: absolute;
+    width: 52px;
+    top: -10px;
+    right: -2px;
+    z-index: 99;
+    overflow: hidden;
+    height: 38px;
+}
+#credit-card-type li {
+    display: none;
+    width: 51px;
+    height: 32px;
+    background: url('../images/credit-card-icons.jpg') 0 -32px no-repeat;
+    margin: 5px 6px 0 0;
+    overflow: hidden;
+    text-indent: -500em;
+    float: left;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    position: absolute;
+    z-index: 9;
+}
+#credit-card-type li.active {
+    display: block;
+    top: 0;
+}
+#credit-card-type .NN {
+    display: none;
+}
+#credit-card-type .NN.active {
+    display: block;
+    background: none;
+    background-color: transparent;
+}
+#credit-card-type .VI {background-position: 0px -32px;}
+#credit-card-type .MC {background-position: -51px -32px;}
+#credit-card-type .AE {background-position: -102px -32px;}
+#credit-card-type .DI {background-position: -153px -32px;}
+#credit-card-type .VI.active {background-position: 0px 0px;}
+#credit-card-type .MC.active  {background-position: -51px 0px;}
+#credit-card-type .AE.active  {background-position: -102px 0px;}
+#credit-card-type .DI.active  {background-position: -153px 0px;}
 
-    /*********************************************** End Credit Card Type Logos ****/
+/*********************************************** End Credit Card Type Logos ****/
 
 .cc_type_exp_field {
     width: 49%;
@@ -1702,47 +1805,47 @@ img, button, input {
 #checkout-review-table > tbody tr td:first-child {
     position: relative;
 }
-    /* Product Options Styles ***********************************************
-    ************************************************************************/
-    /*#checkout-review-table*/ .item-options {
-        position: absolute;
-        left: 140px;
-        z-index: 10;
-    }
-    /*#checkout-review-table*/ .item-options.show {
-        width: 140px;
-        border: 1px solid black;
-        padding: 10px;
-        background: #FFF;
-        z-index: 12;
-    }
+/* Product Options Styles ***********************************************
+************************************************************************/
+/*#checkout-review-table*/ .item-options {
+                               position: absolute;
+                               left: 140px;
+                               z-index: 10;
+                           }
+/*#checkout-review-table*/ .item-options.show {
+                               width: 140px;
+                               border: 1px solid black;
+                               padding: 10px;
+                               background: #FFF;
+                               z-index: 12;
+                           }
 
-    /*#checkout-review-table*/ .item-options .item-options-open,
-    /*#checkout-review-table*/ .item-options .item-options-close {
-        cursor: pointer;
-    }
+/*#checkout-review-table*/ .item-options .item-options-open,
+                               /*#checkout-review-table*/ .item-options .item-options-close {
+                               cursor: pointer;
+                           }
 
-    /*#checkout-review-table*/ .item-options .item-options-close {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-    }
+/*#checkout-review-table*/ .item-options .item-options-close {
+                               position: absolute;
+                               top: 5px;
+                               right: 5px;
+                           }
 
-    /*#checkout-review-table*/ .item-options dt,
-    /*#checkout-review-table*/ .item-options dd,
-    /*#checkout-review-table*/ .item-options .item-options-close,
-    /*#checkout-review-table*/ .item-options.show .item-options-open {
-        display: none;
-    }
+/*#checkout-review-table*/ .item-options dt,
+                               /*#checkout-review-table*/ .item-options dd,
+                               /*#checkout-review-table*/ .item-options .item-options-close,
+                               /*#checkout-review-table*/ .item-options.show .item-options-open {
+                               display: none;
+                           }
 
-    /*#checkout-review-table*/ .item-options.show dt,
-    /*#checkout-review-table*/ .item-options.show dd,
-    /*#checkout-review-table*/ .item-options.show .item-options-close,
-    /*#checkout-review-table*/ .item-options .item-options-open {
-        display: block;
-        text-align: left;
-    }
-    /***********************************************************************/
+/*#checkout-review-table*/ .item-options.show dt,
+                               /*#checkout-review-table*/ .item-options.show dd,
+                               /*#checkout-review-table*/ .item-options.show .item-options-close,
+                               /*#checkout-review-table*/ .item-options .item-options-open {
+                               display: block;
+                               text-align: left;
+                           }
+/***********************************************************************/
 
 
 #checkout-review-table > tbody td {

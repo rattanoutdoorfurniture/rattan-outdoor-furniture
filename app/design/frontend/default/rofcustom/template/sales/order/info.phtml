@@ -29,7 +29,7 @@
 <div class="page-title title-buttons sixteen columns">
     <h1 class="page-heading"><?php echo $this->__('Order #%s - %s', $_order->getRealOrderId(), $_order->getStatusLabel()) ?></h1>
     <aside class="back-aside normal-hover">
-        <span class="order-date" style="padding-right: 10px;"><?php echo $this->__('%s', $this->formatDate($_order->getCreatedAtStoreDate(), 'long')) ?></span>
+        <span class="order-date"><?php echo $this->__('%s', $this->formatDate($_order->getCreatedAtStoreDate(), 'long')) ?></span>
         <?php echo $this->getChildHtml('buttons') ?>
     </aside>
     <?php if($this->getMessagesBlock()): ?>
@@ -42,7 +42,8 @@
     <?php endif; ?>
 </div>
 <?php
-    /** Ignore Additional Links for now, namely the invoice link, cause it's basically the same page.
+    /**
+     * Ignore Additional Links for now, namely the invoice link, cause it's basically the same page.
 ?>
     <?php // echo $this->getStatusHistoryRssUrl($_order) ?>
 <dl class="order-info">

@@ -30,8 +30,7 @@
             <?php echo $post->getCommentCount(); ?>
             <a href="<?php echo $post->getAddress(); ?>#commentBox" ><?php echo $this->__("Comments"); ?></a>
             <?php endif; ?>
-            <!-- -------------------------------- REMOVE USER (POST AUTHOR) --------------------------------- -->
-            <!-- <i class="icon-user" style="margin-right:7px;"></i><?php echo $post->getUser(); ?> --------- -->
+            <?php // echo $post->getUser(); // Get Post Author ?>
             <a class="read-more btn" href="<?php echo $post->getAddress(); ?>"><?php echo $this->__("Read more"); ?></a>
         </div>
     </div>

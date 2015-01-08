@@ -30,49 +30,49 @@
 ?>
 <?php if(substr(Mage::app()->getRequest()->getRequestString(), 0, 8) === "/onepage"): ?>
     <tr>
-        <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
+        <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="a-right" colspan="<?php echo $this->getColspan(); ?>">
             <?php $shippingTitle = $this->getTotal()->getTitle() ?>
             <?php $newShippingTitle = array(); ?>
             <?php $matched = preg_match_all('/\(([A-Za-z0-9\s\-]+?)\)/', $shippingTitle, $newShippingTitle); ?>
             <?php $newShippingTitle = count($newShippingTitle) >= 2 ? (count($newShippingTitle[1]) ? $newShippingTitle[1][0] : $newShippingTitle[1]) : ($newShippingTitle = $shippingTitle); ?>
             <?php echo $matched===1 ? $newShippingTitle : $shippingTitle;  ?>
         </td>
-        <td style="<?php echo $this->getStyle() ?>" class="a-right">
+        <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="a-right">
             <?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValue()) ?>
         </td>
     </tr>
 <?php elseif ($this->displayBoth()):?>
 <tr id="cart-subtotal-table-shipping" class="cart-subtotal-table-row clearfix">
-    <td style="<?php //echo $this->getStyle() ?>" class="cart-subtotal-table-left">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-left">
         <?php echo $this->getExcludeTaxLabel() ?>
     </td>
-    <td style="<?php //echo $this->getStyle() ?>" class="cart-subtotal-table-right">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-right">
         <?php echo $this->helper('checkout')->formatPrice($this->getShippingExcludeTax()) ?>
     </td>
 </tr>
 <tr id="cart-subtotal-table-shipping-taxed" class="cart-subtotal-table-row clearfix">
-    <td style="<?php //echo $this->getStyle() ?>" class="cart-subtotal-table-left">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-left">
         <?php echo $this->getIncludeTaxLabel() ?>
     </td>
-    <td style="<?php //echo $this->getStyle() ?>" class="cart-subtotal-table-right">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-right">
         <?php echo $this->helper('checkout')->formatPrice($this->getShippingIncludeTax()) ?>
     </td>
 </tr>
 <?php elseif($this->displayIncludeTax()) : ?>
 <tr id="cart-subtotal-table-shipping-taxed" class="cart-subtotal-table-row clearfix">
-    <td style="<?php //echo $this->getStyle() ?>" class="cart-subtotal-table-left">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-left">
         <?php echo $this->getTotal()->getTitle() ?>
     </td>
-    <td style="<?php //echo $this->getStyle() ?>" class="cart-subtotal-table-right">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-right">
         <?php echo $this->helper('checkout')->formatPrice($this->getShippingIncludeTax()) ?>
     </td>
 </tr>
 <?php else:?>
 <tr id="cart-subtotal-table-shipping" class="cart-subtotal-table-row clearfix">
-    <td style="<?php //echo $this->getStyle() ?>" class="cart-subtotal-table-left">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-left">
         <?php echo $this->escapeHtml($this->getTotal()->getTitle()) ?>
     </td>
-    <td style="<?php //echo $this->getStyle() ?>" class="cart-subtotal-table-right">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-right">
         <?php echo $this->helper('checkout')->formatPrice($this->getShippingExcludeTax()) ?>
     </td>
 </tr>

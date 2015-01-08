@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
         $(this).siblings(".selected").removeClass("selected").end().addClass("selected");
     });
 
-    $(".nav-main-item.no-display.show-mobile-inline").on("click",function() {
+    $("#mobile-search-toggle").on("click",function() {
         $(".nav-main-item.search").toggleClass("float-show");
         return false;
     });

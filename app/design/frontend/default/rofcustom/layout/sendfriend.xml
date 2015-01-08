@@ -33,6 +33,10 @@
         </reference>
         <reference name="head">
             <action method="addJs"><script>varien/product.js</script></action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/sendfriend.css</name>
+            </action>
             <action method="setTitle" translate="title"><title>Email a Friend</title></action>
             <action method="setDescription"><value>Send an email to share the enjoyment of Rattan Outdoor Furniture and our premier products and accessories with all your friends and family.</value></action>
         </reference>

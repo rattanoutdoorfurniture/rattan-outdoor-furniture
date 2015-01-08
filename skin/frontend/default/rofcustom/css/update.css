@@ -542,3 +542,10 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
         body[class*="cms-locations-"] p[itemprop="address"] {
             text-align: right;
         }
+    /* 404 Page Style (2015-01-08)
+    **************************************************************************************/
+        #404-image {
+            margin: 0 auto 10px;
+            display: block;
+            clear: both;
+        }

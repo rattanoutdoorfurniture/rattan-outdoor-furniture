@@ -287,3 +287,21 @@ nav a {
     text-indent: -10000px;
     z-index: 99;
 }
+
+/* Mobile Search Toggle Handle Styles
+*****************************************/
+
+#nav-main #mobile-search-toggle-wrap {
+    width: 60px;
+    background-image: none !important;
+}
+#nav-main #mobile-search-toggle-wrap #mobile-search-toggle {
+    display: block;
+    background: transparent url('../images/glob-search-submit-mini.png') center center no-repeat;
+    width: 40px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0;
+    margin: 5px auto;
+    box-shadow: 0 0 4px 1px #FFF;
+}

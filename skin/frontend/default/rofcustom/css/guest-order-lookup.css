@@ -1,0 +1,26 @@
+/*****************************\
+|* Guest Order Lookup Styles *|
+\*****************************/
+
+/* Sales Guest Order Lookup Form Specific Styles
+******************************************************/
+.sales-guest-form .guest-order-lookup-blurb {
+    width: 45%;
+    float: left;
+    margin: 0 2.5%;
+}
+.sales-guest-form #oar_widget_orders_and_returns_form {
+    width: 45%;
+    margin: 10px 2% 20px;
+    float: left;
+}
+.sales-guest-form #oar_widget_orders_and_returns_form.has-blurb {
+    float: right;
+}
+.sales-guest-form #oar_widget_orders_and_returns_form input.input-text {
+    width: 300px;
+}
+.sales-guest-form #oar_widget_orders_and_returns_form select.guest-select {
+    width: 310px;
+    padding:6px 4px;
+}

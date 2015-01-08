@@ -30,37 +30,37 @@
 ?>
 <?php if(substr(Mage::app()->getRequest()->getRequestString(), 0, 8) === "/onepage"): ?>
 <tr>
-    <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="a-right" colspan="<?php echo $this->getColspan(); ?>">
         <?php echo $this->getTotal()->getTitle() ?>
     </td>
-    <td style="<?php echo $this->getStyle() ?>" class="a-right">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="a-right">
         <?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValue()) ?>
     </td>
 </tr>
 <?php elseif ($this->includeTax() && $this->getTotalExclTax()>=0):?>
 <tr id="cart-subtotal-table-grandtotal" class="cart-subtotal-table-row clearfix">
-    <td style="<?php //echo $this->getStyle() ?>" class="cart-subtotal-table-left">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-left">
         <strong><?php echo $this->helper('tax')->__('Grand Total Excl. Tax')?></strong>
     </td>
-    <td style="<?php //echo $this->getStyle() ?>" class="cart-subtotal-table-right">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-right">
         <strong><?php echo $this->helper('checkout')->formatPrice($this->getTotalExclTax()) ?></strong>
     </td>
 </tr>
 <?php echo $this->renderTotals('taxes', $this->getColspan()); ?>
 <tr id="cart-subtotal-table-grandtotal-taxed" class="cart-subtotal-table-row clearfix">
-    <td style="<?php //echo $this->getStyle() ?>" class="cart-subtotal-table-left">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-left">
         <strong><?php echo $this->helper('tax')->__('Grand Total Incl. Tax')?></strong>
     </td>
-    <td style="<?php //echo $this->getStyle() ?>" class="cart-subtotal-table-right">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-right">
         <strong><?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValue()) ?></strong>
     </td>
 </tr>
 <?php else:?>
 <tr id="cart-subtotal-table-grandtotal" class="cart-subtotal-table-row clearfix">
-    <td style="<?php //echo $this->getStyle() ?>" class="cart-subtotal-table-left">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-left">
         <strong><?php echo $this->getTotal()->getTitle() ?></strong>
     </td>
-    <td style="<?php //echo $this->getStyle() ?>" class="cart-subtotal-table-right">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-right">
         <strong><?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValue()) ?></strong>
     </td>
 </tr>

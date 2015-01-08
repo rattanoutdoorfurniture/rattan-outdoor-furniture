@@ -56,12 +56,8 @@
             <a href="<?php echo $this->getUrl($route) ?>"> <?php echo $route ?></a>
         </li>
         <?php endif; ?>
-        <li class="nav-main-item no-display show-mobile-inline">
-            <a href="#" style="float:right;clear:both;position: absolute;padding: 0 !important;height: 0px;width: auto;border: none;">
-                <div style="border: 3px solid #555;border-left:none;border-right:none;margin:5px 0;padding: 5px 0px; display: inline-block;position: absolute;top: 5px;left: 22px;">
-                    <hr style="height: 0px;border:none;border-top: 3px solid #555; width: 20px;margin:0 auto;">
-                </div>
-            </a>
+        <li id="mobile-search-toggle-wrap" class="nav-main-item no-display show-mobile-inline">
+            <a href="#" id="mobile-search-toggle">&nbsp;</a>
         </li>
     </ul>
 </nav>

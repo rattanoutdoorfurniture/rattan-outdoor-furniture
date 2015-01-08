@@ -118,7 +118,7 @@
         <div class="cart-box-border clear-margin"></div>
         <div class="cart-box-sub">
             <?php $couponCode = Mage::getSingleton('checkout/session')->getQuote()->getCouponCode(); ?>
-            <button type="button" name="show_coupon_form"<?php if(strlen($couponCode)):?> style="display: none;"<?php endif; ?> title="<?php echo $this->__("Apply Coupon"); ?>" class="button btn-coupon" onclick="jQuery('#cart-coupon').show();jQuery(this).hide();"><?php echo $this->__("Apply Coupon"); ?></button>
+            <button type="button" name="show_coupon_form" title="<?php echo $this->__("Apply Coupon"); ?>" class="button btn-coupon<?php if(strlen($couponCode)):?> displaynone<?php endif; ?>" onclick="jQuery('#cart-coupon').show();jQuery(this).hide();"><?php echo $this->__("Apply Coupon"); ?></button>
             <button type="submit" name="update_cart_action" value="update_qty" title="<?php echo $this->__('Update Shopping Cart'); ?>" class="button btn-update"><span><span><i class="icon-refresh"></i><?php echo $this->__('Update Shopping Cart'); ?></span></span></button>
         </div>
     </form>

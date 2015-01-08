@@ -58,18 +58,18 @@
         <div class="box-content self-clear">
             <?php $asb = Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('advanced-search-blurb')->toHtml(); ?>
             <?php if($asb): ?>
-                <div style="width: 45%; float: left;margin: 20px 2.5%;"><?php echo $asb; ?></div>
+                <div class="advanced-search-blurb"><?php echo $asb; ?></div>
             <?php endif; ?>
-            <form action="<?php echo $this->getSearchPostUrl() ?>" method="get" id="form-validate" class="self-clear" style="width:45%;margin:0 2% 20px;float:<?php echo($asb?'right':'left');?>;">
+            <form action="<?php echo $this->getSearchPostUrl() ?>" method="get" id="form-validate" class="self-clear">
                 <div class="fieldset advanced-search">
                     <ul class="form-list" id="advanced-search-list">
-                        <li class="box-title" style="margin-left: -20px;"><h3>Advanced Search Product Attributes:</h3></li>
+                        <li class="box-title"><h3>Advanced Search Product Attributes:</h3></li>
                         <?php foreach ($this->getSearchableAttributes() as $_attribute): ?>
                             <?php $_code = $_attribute->getAttributeCode() ?>
                             <?php if(in_array($_code,$_ignore_fields)) continue; ?>
                             <li>
                                 <label for="<?php echo $_code ?>" data-attr-type="<?php echo $this->getAttributeInputType($_attribute); ?>">
-                                    <div class="label-wrap" style="width: 310px;"><strong class="nobr"><?php echo $this->getAttributeLabel($_attribute) ?>:</strong></div>
+                                    <div class="label-wrap"><strong class="nobr"><?php echo $this->getAttributeLabel($_attribute) ?>:</strong></div>
                                     <?php switch($this->getAttributeInputType($_attribute)):
                                         case 'number': ?>
                                             <div class="input-range">
@@ -80,9 +80,9 @@
                                             <?php break;
                                         case 'price': ?>
                                             <div class="input-range">
-                                                <input name="<?php echo $_code ?>[from]" value="<?php echo $this->escapeHtml($this->getAttributeValue($_attribute, 'from')) ?>" id="<?php echo $_code ?>" title="<?php echo $this->escapeHtml($this->getAttributeLabel($_attribute)) ?>"  class="input-text validate-number" type="text" maxlength="<?php echo $maxQueryLength;?>" />
+                                                <input placeholder="From" name="<?php echo $_code ?>[from]" value="<?php echo $this->escapeHtml($this->getAttributeValue($_attribute, 'from')) ?>" id="<?php echo $_code ?>" title="<?php echo $this->escapeHtml($this->getAttributeLabel($_attribute)) ?>"  class="input-text validate-number" type="text" maxlength="<?php echo $maxQueryLength;?>" />
                                                 <span class="separator">&ndash;</span>
-                                                <input name="<?php echo $_code ?>[to]" value="<?php echo $this->escapeHtml($this->getAttributeValue($_attribute, 'to')) ?>" id="<?php echo $_code ?>_to" title="<?php echo $this->escapeHtml($this->getAttributeLabel($_attribute)) ?>"  class="input-text validate-number" type="text" maxlength="<?php echo $maxQueryLength;?>" />
+                                                <input placeholder="To" name="<?php echo $_code ?>[to]" value="<?php echo $this->escapeHtml($this->getAttributeValue($_attribute, 'to')) ?>" id="<?php echo $_code ?>_to" title="<?php echo $this->escapeHtml($this->getAttributeLabel($_attribute)) ?>"  class="input-text validate-number" type="text" maxlength="<?php echo $maxQueryLength;?>" />
                                                 <small>(<?php echo $this->getCurrency($_attribute); ?>)</small>
                                             </div>
                                             <?php break;
@@ -103,7 +103,7 @@
                                             <?php break;
                                         default: ?>
                                             <div class="input-box">
-                                                <input style="width: 300px;" type="text" name="<?php echo $_code ?>" id="<?php echo $_code ?>" value="<?php echo $this->escapeHtml($this->getAttributeValue($_attribute)) ?>" title="<?php echo $this->escapeHtml($this->getAttributeLabel($_attribute)) ?>"  class="input-text <?php echo $this->getAttributeValidationClass($_attribute) ?>" maxlength="<?php echo $maxQueryLength;?>" />
+                                                <input type="text" name="<?php echo $_code ?>" id="<?php echo $_code ?>" value="<?php echo $this->escapeHtml($this->getAttributeValue($_attribute)) ?>" title="<?php echo $this->escapeHtml($this->getAttributeLabel($_attribute)) ?>"  class="input-text <?php echo $this->getAttributeValidationClass($_attribute) ?>" maxlength="<?php echo $maxQueryLength;?>" />
                                             </div>
                                     <?php endswitch; ?>
                                 </label>

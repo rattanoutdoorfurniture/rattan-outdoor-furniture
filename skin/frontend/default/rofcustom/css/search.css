@@ -1,0 +1,48 @@
+/**********************\
+|* Search Page Styles *|
+\**********************/
+
+/** Global Search Styles **
+*********************************************************************************/
+
+
+
+/** Quick Search Styles **
+********************************************************************************/
+
+    /*** Quick Search Results ***
+    ******************************************************************/
+
+
+/** Advanced Search Styles **
+********************************************************************************/
+
+    /*** Advanced Search Form ***
+    ******************************************************************/
+    .box-search-advanced .advanced-search-blurb {
+        width: 45%;
+        float: left;
+        margin: 20px 2.5%;
+    }
+    .box-search-advanced form#form-validate {
+        width: 45%;
+        margin: 0 2% 20px;
+        float: left;
+    }
+    .box-search-advanced .advanced-search-blurb + form#form-validate {
+        float: right;
+    }
+    .box-search-advanced form#form-validate .advanced-search ul.form-list li.box-title {
+        margin-left: -20px;
+    }
+    .box-search-advanced form#form-validate .advanced-search ul.form-list li .label-wrap {
+        width: 310px;
+    }
+    .box-search-advanced form#form-validate .advanced-search ul.form-list li input.input-text {
+        width: 300px;
+    }
+
+
+
+    /*** Advanced Search Results ***
+    ******************************************************************/

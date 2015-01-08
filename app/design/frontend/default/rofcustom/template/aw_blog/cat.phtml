@@ -19,8 +19,9 @@
         <i class="icon-comment"></i>  <?php echo $post->getCommentCount(); ?> <a href="<?php echo $post->getAddress(); ?>#commentBox" ><?php echo $this->__("Comments"); ?> </a></td>
         <td>
           <?php endif; ?>
-<i class="icon-user" style="margin-right:7px;"></i><?php echo $post->getUser(); ?></td>
-        <td class="first-bg"><a href="<?php echo $post->getAddress(); ?>" style="color:#fff; font-style:italic;"><?php echo $this->__("Read more"); ?></a></td>
+          <?php // echo $post->getUser(); // Get Post Author ?>
+        </td>
+        <td class="first-bg"><a href="<?php echo $post->getAddress(); ?>"><?php echo $this->__("Read more"); ?></a></td>
       </tr>
     </table>
   </div>

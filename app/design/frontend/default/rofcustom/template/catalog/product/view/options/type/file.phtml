@@ -87,7 +87,7 @@
            <span class="label"><?php echo Mage::helper('catalog')->__('Delete') ?></span>
         <?php endif; ?>
     <?php endif; ?>
-    <div class="input-box" <?php echo $_fileExists ? 'style="display:none"' : '' ?>>
+    <div class="input-box<?php echo $_fileExists ? ' displaynone' : '' ?>">
         <input type="file" name="<?php echo $_fileName; ?>" class="product-custom-option<?php echo $_option->getIsRequire() ? ' required-entry' : '' ?>" <?php echo $_fileExists ? 'disabled="disabled"' : '' ?> onchange="opConfig.reloadPrice()" />
         <input type="hidden" name="<?php echo $_fieldNameAction; ?>" value="<?php echo $_fieldValueAction; ?>" />
         <?php if ($_option->getFileExtension()): ?>
