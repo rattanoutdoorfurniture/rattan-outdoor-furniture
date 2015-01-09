@@ -51,7 +51,7 @@
 #category-slider-inner table {
     position: absolute;
     top: 0;
-    left: 0px;
+    left: 0;
 }
 
 .category-slider-slide-link:hover .category-slider-slide-label {
