@@ -1,6 +1,6 @@
 <?php
-Class Rofcustom_Rofcustom_Block_Product_View_Options_Type_Select
-    extends Mage_Catalog_Block_Product_View_Options_Type_Select {
+class Mage_Catalog_Block_Product_View_Options_Type_Select
+    extends Mage_Catalog_Block_Product_View_Options_Abstract
     /**
      * Return html for control element
      *

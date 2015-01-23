@@ -85,6 +85,7 @@
            <ul class="form-list">
                <?php if($this->getChildHtml('inchoo_socialconnect_checkout')): ?>
                <li class="control"><?php echo $this->getChildHtml("inchoo_socialconnect_checkout"); ?></li>
+                   <?php $this->unsetChild("inchoo_socialconnect_checkout"); ?>
                <?php endif; ?>
                <li class="control">
                    <input type="hidden" name="checkout_method" id="login:register" value="register"<?php /* if($this->getQuote()->getCheckoutMethod()==Mage_Checkout_Model_Type_Onepage::METHOD_REGISTER || !$this->getQuote()->isAllowedGuestCheckout()): ?> checked="checked"<?php endif */ ?> />

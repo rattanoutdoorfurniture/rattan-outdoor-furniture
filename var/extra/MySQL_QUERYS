@@ -35,3 +35,12 @@ SELECT request_path as org_request_path,IF((@regex_path:=regex_replace("[0-9]+$"
 -- (UPDATE) --
 SET @regex_path='';
 UPDATE core_url_rewrite SET request_path=SUBSTRING((@regex_path:=regex_replace("[0-9]+$","",request_path)),1,CHAR_LENGTH(@regex_path)-1) WHERE STRCMP(request_path,regex_replace("[0-9]+$","",request_path))!=0
+
+-- Cross Sale Product Relation by SKU --
+SELECT product.sku as sku, GROUP_CONCAT(product_link.sku) as linked_sku
+FROM `catalog_product_link` link
+INNER JOIN catalog_product_flat_1 product
+ON product.entity_id = link.product_id
+INNER JOIN catalog_product_flat_1 product_link
+ON product_link.entity_id = link.linked_product_id
+GROUP BY sku

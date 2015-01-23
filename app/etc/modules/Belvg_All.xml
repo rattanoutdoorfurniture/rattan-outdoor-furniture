@@ -33,7 +33,7 @@
 <config>
 	<modules>
 		<Belvg_All>
-			<active>true</active>
+			<active>false</active>
 			<codePool>community</codePool>
 			<version>1.0</version>
         </Belvg_All>

@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Slider_Slider>
-            <active>true</active>
+            <active>false</active>
             <codePool>local</codePool>
         </Slider_Slider>
     </modules>

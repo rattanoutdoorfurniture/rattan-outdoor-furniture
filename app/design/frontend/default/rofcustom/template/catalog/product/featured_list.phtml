@@ -6,13 +6,19 @@
  */
 ?>
 <?php
+    /** @see Mage_Catalog_Block_Product_List */
+
     $_productCollection=$this->getLoadedProductCollection();
     $_productCollection->addAttributeToSelect(array("parent_url_key"));
     $_helper = $this->helper('catalog/output');
 	$imageWidth = 130;
 	$imageHeight = 92;
+
+    $filters = $_productCollection->getLimitationFilters();
+
+    $category_id = $filters['category_id'];
 ?>
-<div class="featured-products self-clear">
+<div class="featured-products self-clear"<?php if($category_id): ?> data-category-id="<?php echo $category_id; ?>"<?php endif; ?>>
 
     <div class="featured-products-title fourteen columns">Featured Products</div>
 

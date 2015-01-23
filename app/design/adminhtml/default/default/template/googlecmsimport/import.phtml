@@ -197,12 +197,42 @@
             <li><a href="?parse=descriptions&process=true">Parse & Process Descriptions</a></li>
             <li><a href="?parse=locations&process=true">Parse & Process Locations</a></li>
             <li><a href="?parse=products&process=true">Parse & Process Products</a></li>
+            <li><a href="?parse=sitemap-categories&process=false">Parse & Update Sitemap: Categories</a></li>
         </ul>
     </div>
     <div style="white-space: pre;">
     <?php
     global $io;
     $parse = Mage::app()->getRequest()->getQuery("parse");
+    if($parse == "sitemap-categories") {
+        $categorySitemap = Mage::getBaseDir(). DIRECTORY_SEPARATOR . "sitemap-https-product-categories.xml";
+        if(!file_exists($categorySitemap)) {
+            printf("Category Sitemap Not Found at location: %s", $categorySitemap);
+        } else {
+            $categorySitemapUpdate = array();
+            $csmh = fopen($categorySitemap,'r+');
+            while(!feof($csmh)) {
+                $line = fgets($csmh);
+                $line = trim($line);
+                $line = preg_replace('/<cell cellsource="A\d+">(.*)<\/cell>/','        <loc>$1</loc>',$line);
+                $line = preg_replace('/<cell cellsource="B\d+">(.*)<\/cell>/','        <lastmod>$1</lastmod>',$line);
+                $line = preg_replace('/<cell cellsource="C\d+">(.*)<\/cell>/','        <changefreq>$1</changefreq>',$line);
+                $line = preg_replace('/<cell cellsource="D\d+">(.*)<\/cell>/','        <priority>$1</priority>',$line);
+                $line = preg_replace('/(<\/?)row.*>/','    $1url>',$line);
+                $line = preg_replace('/<data>/','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',$line);
+                $line = preg_replace('/<\/data>/','</urlset>',$line);
+                $categorySitemapUpdate[] = $line;
+            }
+            $categorySitemapUpdate = implode(PHP_EOL,$categorySitemapUpdate);
+            $result = file_put_contents($categorySitemap,$categorySitemapUpdate);
+            fclose($csmh);
+            if($result) {
+                echo "Sitemap Updated Successfully";
+            } else {
+                echo "Failed Updating Sitemap";
+            }
+        }
+    } else
     if($parse == "descriptions") {
         $io = array(
             "input"     => Mage::getBaseDir("var")."/MagentoImport/Products/Descriptions/RattanOutdoorFurniture*.txt",
@@ -613,8 +643,8 @@
                             . '</div>'
                             . '</div>'
                             . '<div class="account-box-border">&nbsp;</div>'
-                            . '</div>'
-                            . '<div>{{block type="catalog/product_list" category_id="'.$featuredCategoryId.'" template="catalog/product/featured_list.phtml"}}</div>';
+                            . '</div>';
+                            // . '<div>{{block type="catalog/product_list" category_id="'.$featuredCategoryId.'" template="catalog/product/featured_list.phtml"}}</div>';
 
             $query = <<<QUERY
 REPLACE INTO cms_page_tree (

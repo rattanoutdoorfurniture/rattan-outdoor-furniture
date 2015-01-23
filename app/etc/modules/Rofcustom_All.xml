@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rofcustom_Catalog>
+            <codePool>local</codePool>
+            <active>true</active>
+        </Rofcustom_Catalog>
+        <Rofcustom_Checkout>
+            <codePool>local</codePool>
+            <active>true</active>
+        </Rofcustom_Checkout>
+        <Rofcustom_General>
+            <codePool>local</codePool>
+            <active>true</active>
+        </Rofcustom_General>
+        <Rofcustom_Googlecmsimport>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Rofcustom_Googlecmsimport>
+    </modules>
+</config>

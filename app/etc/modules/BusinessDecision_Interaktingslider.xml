@@ -23,7 +23,7 @@
 <config>
     <modules>
         <BusinessDecision_Interaktingslider>
-            <active>true</active>
+            <active>false</active>
             <codePool>community</codePool>
         </BusinessDecision_Interaktingslider>
     </modules>

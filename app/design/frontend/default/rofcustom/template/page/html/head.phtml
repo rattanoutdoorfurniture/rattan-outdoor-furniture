@@ -231,6 +231,11 @@ if ($actionName == 'catalog_category_view') { // Category Page
 }
 ?>
 
+<!-- Lightboxes HTML -->
+<?php
+    echo $this->getChildHtml('lightboxes_head');
+    $this->unsetChild('lightboxes_head');
+?>
 <!-- CSS & JAVASCRIPT -->
 <?php echo $this->getCssJsHtml(); ?>
 

@@ -2,7 +2,7 @@
 <config>
 <modules>
    <Belvg_Quickview>
-      <active>true</active>
+      <active>false</active>
       <codePool>community</codePool>
       <version>1.0.1</version>
    </Belvg_Quickview>

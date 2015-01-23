@@ -42,7 +42,7 @@
 			</block>
 		</reference>
     </default>  
-	<!--<catalog_category_layered translate="label">        
+	<catalog_category_layered translate="label">
 		<reference name="content"> 
 			<reference name="category.products">
                 <reference  name="product_list">
@@ -60,7 +60,7 @@
 				</reference>
 			</reference>	
 		</reference>		
-	</catalog_category_default>-->
+	</catalog_category_default>
 	
 
   

@@ -37,7 +37,7 @@
                 <use>standard</use>
                 <args>
                     <module>Mage_Contacts</module>
-                    <frontName>contact-us</frontName>
+                    <frontName>contacts</frontName>
                 </args>
             </contacts>
         </routers>
