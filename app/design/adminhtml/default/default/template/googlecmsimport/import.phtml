@@ -465,7 +465,7 @@
         $csv = 'title,content,keywords,description'.PHP_EOL;
         foreach($props as $page) {
             if(!(strlen($page['title'])>0&&count($page['content'])>0&&count($page['keywords'])>0)) continue;
-            $csv .= "\"".$page['title']."\",";
+            $csv .= "\"".trim($page['title'])."\",";
             $csv .= "\"";
             $csv .= implode("",$page['content']);
             $csv .= "\",";
