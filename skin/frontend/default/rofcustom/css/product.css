@@ -591,6 +591,11 @@
     margin-left: 50px;
 }
 
+    /* add handle for tab navigation for mobile, hide elsewhere */
+    #product-tabs-next {
+        display: none;
+    }
+
 /* Hide Product Availability
 *******************************************************************************/
 

@@ -15,6 +15,18 @@ jQuery(document).ready(function($){
         return false;
     });
 
+    $(".main-nav-select").on("change", function() {
+        if($(this).val()!='') {
+            $(".main-nav-select-loading").show();
+            window.location.href=$(this).val();
+        }
+    }).find("option.first").on("select", function() {
+        if($(this).val()!='') {
+            $(".main-nav-select-loading").show();
+            window.location.href=$(this).val();
+        }
+    });
+
     $("#footer-newsletter").on("submit",function(e) {
         var $form    = $(this);
         var postUrl  = $form.prop("action");
@@ -86,7 +98,7 @@ jQuery(document).ready(function($){
     }
 
     if($("#category-slider").length) {
-        $(".cateogry-slider-inner")
+        $("#category-slider-inner")
             .on("swiperight", function() {
                 $("#category-slider-prev").trigger("click");
             })
@@ -97,55 +109,36 @@ jQuery(document).ready(function($){
             var $btn = $(this);
             if($btn.parent().data('proc')==true) return false;
             $btn.parent().data('proc', true);
-            if($btn.hasClass('disabled')) return /*console.log("disabled")&&*/false;
+            if($btn.hasClass('disabled')) return false;
             var $oBtn  = $btn.siblings(".category-slider-nav");
             var dir    = $btn.attr("id") == "category-slider-prev" ? 1 : -1;
             var $wrap  = $("#category-slider-inner");
             var $table = $("table", $wrap);
-            if(!$table.length) return /*console.log("no table")&&*/false;
+            if(!$table.length) return false;
             var tableW = $table.width();
             var curOff = $table.position().left;
             var dist   = $table.find("td").width();
+            var reset  = false;
             if(dir>0) {
-                if((curOff*-1)<dist) return /*console.log("offset less than dist")&&*/false;
+                if((curOff*-1)<dist) { // No More Items To The Left
+                    $table.find("tr").prepend($table.find("td").last()); // Move last item to front
+                    $table.css("left",dist*-1); // compensate for movement
+                }
             } else {
-                if(tableW-$wrap.width()-(curOff*dir) < 0) return false;
+                if(tableW-$wrap.width()-(curOff*dir) < (dist-10)) { // No More Items to the Right
+                    reset = true; // no more items, slide back to beginning
+                }
             }
-            var newLeft = "+=" + (dir*dist);
+            var newLeft = reset ? "0" : "+=" + (dir*dist);
             var $aniDone = $table.animate({
                 left: newLeft
             },{
-                duration: 400
+                duration: 250
             });
-            var newOff = curOff+(dir*dist);
-            var wrapWid = $wrap.width();
-
-            var canNext = (tableW + newOff) > (wrapWid);
-            var canPrev = newOff < 0;
             $.when($aniDone).done(function() {
-                if(dir==-1) {
-                    // NEXT BUTTON PRESSED
-                    if(!canNext) {
-                        $btn.addClass("disabled");
-                    }
-                    if(canPrev) {
-                        $oBtn.removeClass("disabled");
-                    } else {
-                        $oBtn.addClass("disabled");
-                    }
-                } else {
-                    //PREV BUTTON PRESSED
-                    if(!canPrev) {
-                        $btn.addClass("disabled");
-                    }
-                    if(canNext) {
-                        $oBtn.removeClass('disabled');
-                    } else {
-                        $oBtn.addClass("disabled");
-                    }
-                }
                 $btn.parent().data('proc',false);
             });
+            return false;
         });
     }
 
@@ -201,6 +194,23 @@ jQuery(document).ready(function($){
             return false;
         });
 
+    }
+
+    var nextTabBtn;
+    if((nextTabBtn = jQuery("#product-tabs-next")).length) {
+        var $tabs = jQuery(".product-tab");
+        var curTab = $tabs.filter(".active").index(".product-tab");
+        var nextTab = curTab+1 >= $tabs.length ? 0 : curTab+1;
+        var nextTitle = $tabs.eq(nextTab).find(".product-tab-title").text().split(" ")[0];
+        jQuery("#product-tabs-next-label").text(nextTitle);
+        nextTabBtn.on("click", function() {
+            var $tabs = jQuery(".product-tab");
+            var curTab = $tabs.filter(".active").index(".product-tab");
+            var nextTab = curTab+1 >= $tabs.length ? 0 : curTab+1;
+            var nextTitle = $tabs.eq(nextTab+1>=$tabs.length?0:nextTab+1).find(".product-tab-title").text().split(" ")[0];
+            jQuery("#product-tabs-next-label").text(nextTitle);
+            $tabs.eq(nextTab).find(".product-tab-title a").trigger("click");
+        });
     }
 
     if(location.pathname.match(/^\/$/)) {

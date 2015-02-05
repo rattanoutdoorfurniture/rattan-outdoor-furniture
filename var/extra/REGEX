@@ -61,3 +61,7 @@ $1url>
 ----
 </data>
 </urlset>
+
+
+Centimeters to Inches from 123 x 123 x 123 format
+=JOIN(" x ",ARRAYFORMULA(CONCAT(ROUND(TRANSPOSE(SPLIT(TRIM(REGEXREPLACE(REGEXREPLACE(REGEXREPLACE(D3,"[^\d\s]+",""),"\s{2,}"," "),"\s\d{1}\s"," "))," ",false))*0.3937,2),"""")))

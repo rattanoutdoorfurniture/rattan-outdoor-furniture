@@ -24,7 +24,7 @@
     ?>
     <ul class="subcategories clearfix">
         <?php foreach ($categories as $category): ?>
-            <li class="category-product eight columns">
+            <li class="category-product eight columns add-bottom">
                 <a href="<?php echo rtrim($category->getUrl(),'/').'/'; ?>"><img src="<?php echo Mage::getBaseUrl('media') . 'catalog' . DS . 'category' . DS . $category->getThumbnail() ?>" alt="<?php echo $this->htmlEscape($category->getName()) ?>" />
                     <span><?php echo $category->getName() ?></span></a>
             </li>

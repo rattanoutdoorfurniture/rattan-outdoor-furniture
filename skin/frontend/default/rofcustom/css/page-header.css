@@ -176,6 +176,22 @@ nav a {
     background-image: url('../images/nav-main-unselected.png') !important;
 }
 
+.nav-main-item.main-nav-select {
+    display: none;
+}
+.main-nav-select-loading {
+    display: none;
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 102px;
+    height: 100%;
+    background: #EEE url('../images/loader.gif') center center no-repeat;
+    background-size: auto 80%;
+    opacity: 0.5;
+}
+
 .nav-main-item > a {
     text-transform: uppercase;
     color: #555;
@@ -292,7 +308,7 @@ nav a {
 *****************************************/
 
 #nav-main #mobile-search-toggle-wrap {
-    width: 60px;
+    width: 55px;
     background-image: none !important;
 }
 #nav-main #mobile-search-toggle-wrap #mobile-search-toggle {

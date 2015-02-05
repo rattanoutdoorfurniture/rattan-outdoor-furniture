@@ -33,8 +33,9 @@ jQuery(document).ready(function() {
         jQuery("#product-tabs").find(".product-tab.active").removeClass("active");
         jQuery(this.hash).addClass("active");
         var scrollTop = jQuery(document).scrollTop();
-        location.hash = this.hash;
+        //location.hash = this.hash;
         jQuery(document).scrollTop(scrollTop);
+        return false;
     });
     if(jQuery(".grouped-items-table").length) {
         var $price = jQuery("#product-details-price-sale-price");

@@ -35,7 +35,8 @@
 <?php
     $helper = Mage::helper('blog');
     $route = $helper->getRoute();
-    $_menu = $this->getHtml('nav-main-item');
+    $_menu = $this->getHtml('nav-main-item hide-mobile');
+    $_selectMenu = $this->getSelectHtml('nav-main-item main-nav-select');
     if($_menu):
 ?>
 
@@ -48,6 +49,7 @@
             <a href="<?php echo $this->getUrl('/'); ?>" title="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"><?php echo $this->__("Home"); ?></a>
         </li>
         <?php echo $_menu; ?>
+        <?php echo $_selectMenu; ?>
         <li class="nav-main-item<?php echo preg_match('/^\/about-us\/?.*$/',Mage::app()->getRequest()->getRequestString())===1 ? ' selected':''; ?>">
             <a href="<?php echo $this->getUrl('about-us') ?>"><?php echo $this->__("About Us"); ?></a>
         </li>
@@ -60,6 +62,7 @@
             <a href="#" id="mobile-search-toggle">&nbsp;</a>
         </li>
     </ul>
+    <div class="main-nav-select-loading"></div>
 </nav>
 
 <?php endif ?>

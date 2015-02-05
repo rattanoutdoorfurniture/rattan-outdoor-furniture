@@ -118,7 +118,7 @@ color: #161616;
     height: 30px;
     border: none;
     border-radius: 15px;
-    background: transparent url('../../images/category-banner-blurb-btn.png') center center no-repeat;
+    background: transparent url('../../images/category-banner-blurb-btn.png') center top no-repeat;
     text-indent: -10000px;
 }
 
@@ -245,10 +245,27 @@ A.awblog_current_comment { text-decoration:none!important; font-weight: bold!imp
 }
 
  @media only screen and (max-width: 800px) {
+
+     .blog-index-list .postContent {
+         padding: 10px 20px 0;
+         text-align: left;
+         margin-bottom: 0 !important;
+     }
+     .blog-index-list .postContent img {
+         margin-left: 0 !important;
+     }
+     .blog-index-list .post-details.row {
+         margin-bottom: 0;
+     }
+
     .postContent img{
-        width:100%;
+        max-width:100%;
         height:auto;
     }
+
+     .box-head-timestamp {
+         display: none;
+     }
 
     .postWrapper,
     .post-details,

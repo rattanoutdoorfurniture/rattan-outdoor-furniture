@@ -83,6 +83,28 @@ Furniture web site project.
 
 ##Change Log:##
 
+###2015-01-04###
+- Moved away from daily updates to the README, as it takes too much time, and never gets read. I wanted to make notes, of changes today, here so that I can keep track of a multitude of mobile fixes.
+- Category Slider (Fixed for mobile portrait and desktop)
+-- Moves items from end of list to beginning if trying to go too far left, slides back to the beginning when the end is reached to the right (most seamless method across devices)
+-- Also re-fixed the 'swipe' gesture on the slider, so on mobile, sliding a finger should move the slider
+- Mobile Portrait:
+-- Category Pages:
+--- Centered Product results on page better
+--- Fixed Text Filters (Oldest First, A-Z, etc) to fit better
+--- Fixed Banner Image border
+--- Fixed Category Text section, moved button down, fixed overflow of paragraph, made Read More change to Read Less when expanded.
+-- Product Page
+--- Resize and center main image
+--- Style Additional Images (2 columns under main image)
+--- Model Number on its own line
+--- Fix Pricing Styles (now displays like on desktop)
+--- Styled Options (Mainly focused on grouped products, not  too sure how I want to layout the frame and rattan options for single items).
+--- Cleaned up the social media buttons area on mobile (added a little more spacing and fixed the centering)
+--- Widened Call-to-action buttons (i.e. Add To Cart, Buy Now), to make them full width. Also added some extra padding so they weren't right on top of each other.
+--- Tab Boxes, many little fixes went into getting this to function the way it does now,
+---- I made a button to be able to toggle thru the tabs, fixed the padding (too much on mobile), and added the functionality to switch tab panes on mobile
+
 ###2014-09-10###
 - Clean and Standardize Info Pages and Headings; This update includes the styles and a few changes required to facilitate the changes to the headings and content of the info pages on the site. Just about every cms page (excluding the location pages) has been re-assessed, with a proper layout of headings and a stardardized look and feel. Also, the link to Black-Sand-Furniture.com has been added into the "Our Friends" section of the site.
 

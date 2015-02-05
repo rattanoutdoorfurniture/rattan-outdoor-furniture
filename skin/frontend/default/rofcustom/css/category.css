@@ -98,9 +98,12 @@
     padding-right: 3%;
     border: none;
     border-radius: 0;
-    /*background: #8a6399 url('../images/category-banner-blurb-btn.png') center center no-repeat;*/
-    background: transparent url('../images/category-banner-blurb-btn.png') center center no-repeat;
+    background: transparent url('../images/category-banner-blurb-btn.png?_=1423062073029') center 0 no-repeat;
     text-indent: -10000px;
+}
+
+#category-banner-blurb-text.expanded + #category-banner-blurb-btn {
+    background-position: 0 -30px;
 }
 
 /*@import url('category-slider.css');*/
@@ -388,6 +391,7 @@
 
 .subcategories li a img {
     width: 440px;
+    max-width: 100%;
     height: auto;
     margin: auto 0;
     position: absolute;

@@ -109,6 +109,13 @@
                 <name>js/jquery/noconflict.js</name>
                 <params/><if/>
             </action>
+            <!-- Add Slider Library -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.touchSwipe.min.js</name>
+                <params/>
+                <if/>
+            </action>
             <!-- Modernizer
             <action method="addItem">
                 <type>skin_js</type>
@@ -190,6 +197,7 @@
     <!-- CMS_INDEX_INDEX LAYOUT HANDLE ====================================================================== -->
     <cms_index_index><!-- =================================================================================== -->
         <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <!-- Force Home Page Title -->
             <action method="setForcedTitle">
                 <title>Rattan Outdoor Furniture: Outdoor Patio Furniture</title>
             </action>
