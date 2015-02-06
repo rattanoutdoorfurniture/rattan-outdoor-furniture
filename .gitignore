@@ -21,3 +21,5 @@
 /media/wysiwyg/.thumbs
 media/catalog/product/cache
 media/optimages/cache
+/var/resource_config.json
+
