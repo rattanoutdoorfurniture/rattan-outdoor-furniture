@@ -400,6 +400,7 @@
     /* Tab Box, Description, etc.. ***/
     #product-tabs {
         overflow-x: hidden;
+        margin-left: 0 !important;
     }
     #product-tabs .product-tab {
         display: none;
@@ -415,6 +416,20 @@
     }
     #product-tabs .product-tab-body p {
         text-align: left;
+    }
+    #product-tabs .product-tab-body .box-content {
+        max-width: 100%;
+    }
+    #product-tabs #product-tabs-faq .product-tab-body,
+    #product-tabs #product-tabs-special .product-tab-body {
+        padding: 0 !important;
+        height: 100%;
+        max-height: 500px;
+    }
+    #product-tabs #product-tabs-faq .product-tab-body .box-content,
+    #product-tabs #product-tabs-special .product-tab-body .box-content {
+        width: 100%;
+        max-width: 255px;
     }
     #product-tabs-next {
         display: block;
@@ -432,6 +447,10 @@
     }
     #product-tabs-next #product-tabs-next-label {
         display: none;
+    }
+    /* Frequently Asked Questions, on product page */
+    p.faq-p.expanded {
+        padding: 0 20px 20px !important;
     }
     /* Related Products ****/
     .upsell-products .upsell-products-title {
@@ -455,8 +474,105 @@
         margin: 0 auto;
         display: block;
     }
+    /* CMS Page Fixes (General) ***/
+    .account-box .box-head + .box-blurb,
+    .cart-box .box-head + .box-blurb,
+    .checkout-box .box-head + .box-blurb,
+    #my-orders-table {
+        margin: 0 !important;
+        padding: 0;
+        width: 100% !important;
+        max-width: 260px;
+    }
+    .cms-page-view .account-box .box-head {
+        padding-left: 0;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .cms-page-view .account-box .box-content {
+        padding: 10px;
+    }
+    .cms-page-view .account-box .box-content p {
+        padding: 0;
+        text-align: left;
+    }
     /* Locations Fixes ***/
     .cms-widget-children-list {
         width: 300px !important;
+    }
+    /* About Us Fixes ***/
+    p.about-us-img {
+        max-width: 100%;
+        padding: 0 !important;
+        margin: 0 0 20px;
+    }
+    p.about-us-img a {
+        margin: 10px;
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        max-width: 240px;
+    }
+    p.about-us-img a img {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        border: 7px double #4f3a57;
+        margin: -7px
+    }
+    .cms-page-view .std .box-content h2:not(.faq-p-heading),
+    .cms-page-view .std .box-content h3,
+    .cms-page-view .std .box-content h4,
+    .cms-page-view .box-content > h3,
+    .cms-page-view .box-content > h4 {
+        margin-left: 0;
+    }
+    /* Contact Us Page ***/
+    #content-contact-us {
+        width: 100%;
+        max-width: 250px;
+    }
+    #content-contact-us p {
+        text-align: left;
+    }
+    #content-contact-us img {
+        display: none;
+    }
+    #form-list-contact-us {
+        width: 100%;
+        max-width: 250px;
+        padding-left: 10px;
+    }
+    #form-list-contact-us #comment {
+        max-width: 240px;
+    }
+    .contacts-index-index .box-head .required {
+        display: none;
+    }
+    /* Login Page ***/
+    .account-login #login-heading {
+        padding: 10px 0;
+    }
+    .account-login .account-box .account-box-inner p:first-child {
+        width: 90%;
+        padding: 0 5%;
+    }
+    .account-login #checkout-box-login-account {
+        max-width: 250px;
+        margin: 10px 10px;
+    }
+    .account-login #checkout-box-login-account .checkout-box-login-box-inner.content input {
+        max-width: 210px;
+    }
+    .account-login #checkout-box-login-guest {
+        max-width: 250px;
+        margin: 10px 10px;
+    }
+    .account-login #checkout-box-login-guest .checkout-box-login-box-inner.content input {
+        max-width: 210px;
+    }
+    .account-login #checkout-box-login-guest .checkout-box-login-box-inner.content #checkout-step1-facebook {
+        max-width: 230px;
+        background-size: 100% auto;
     }
 }

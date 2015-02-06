@@ -549,3 +549,21 @@ html .product-view .box-up-sell .product-name, html .product-view .box-up-sell .
             display: block;
             clear: both;
         }
+
+    /* About Us Page Specific Styles
+    **************************************************************************************/
+        .cms-about-us .box-content h2 {
+            font-size: 22px !important;
+            font-weight: bolder !important;
+            font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif !important;
+            color: #8a6399;
+            text-shadow: 1px 1px 1px #DDD;
+        }
+
+        .cms-about-us .box-content h3 {
+            font-size: 18px !important;
+            font-weight: bolder !important;
+            font-family: 'Tahoma', Helvetica, "Helvetica Neue", Arial, sans-serif !important;
+            color: #000;
+            text-shadow: 1px 1px 1px #DDD;
+        }
