@@ -36,6 +36,9 @@ Parse Identifier From SiteMap XML
 Parse URL From SiteMap XML
 <url>[\n\r].*<loc>(https?://www.rattanoutdoorfurniture.com/?.*/)</loc>([\n\r].*){3}[\n\r].*</url>
 $1
+----
+<url>[\s\n\r]*<loc>(.*)</loc>.*[\n\r\s]+.*[\n\r\s]+.*[\n\r\s]+.*[\n\r\s]+</url>
+$1
 
 Check Number of Released Locations (in generated sql file)
 locations/[a-z\-]+/[a-z\-]+',([\n\r].*){4}[\n\r]+NOW\(\),[\n\r]+NOW\(\),[\n\r]+1
