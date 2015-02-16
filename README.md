@@ -2,7 +2,7 @@ Rattan Outdoor Furniture
 ========================
 
 ##Current Release Version##
-Rattan Outdoor Furniture v2.2.5
+Rattan Outdoor Furniture v2.2.6
 
 ##Overview##
 This file will contain daily update information, along with general todos and
