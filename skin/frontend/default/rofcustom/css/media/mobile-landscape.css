@@ -1,11 +1,9 @@
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    /*body {*/
-        /*background-image: none;*/
-    /*}*/
+/*@media only screen and (min-width: 480px) and (max-width: 767px) {*/
+@media only screen and (min-width: 480px) and (max-width: 959px) { /* Due to time, include under-sized and tablet portrait in this view */
     .container {
         padding: 10px;
-        /*box-shadow: none;*/
+        overflow-x: hidden;
     }
     .offset-by-half.by-margin,
     .offset-by-one.by-margin,

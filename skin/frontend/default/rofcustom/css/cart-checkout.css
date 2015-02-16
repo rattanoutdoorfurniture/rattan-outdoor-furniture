@@ -1350,57 +1350,115 @@ img, button, input {
 /* New One Page Checkout Styles ***********************************************************************
 ******************************************************************************************************/
 #checkoutSteps {
-    margin-top: 105px;
+    margin-top: 20px;
+    max-width: 100%;
 }
 #checkoutSteps .step-title {
     position: absolute;
-    width: 104px;
-    top: -105px;
-    background: #FFF;
-    box-shadow: inset 0 0 20px 0 #888;
-    padding-bottom: 20px;
-    border-radius: 20%;
+    width: 23%;
+    top: -30px;
+    overflow: hidden;
+    background: none;
+    border: none;
+    white-space: nowrap;
+    background: #f0f0f0;
+    height: 22px;
 }
-#checkoutSteps .active .step-title {
-    box-shadow: inset 0 0 20px 3px #8a6399;
-}
+
 #checkoutSteps li:nth-child(6) .step-title {
     display: none;
+    z-index: -1;
 }
 #checkoutSteps li:nth-child(5) .step-title {
-    left: 466px;
+    left: 80%;
+    z-index: 41;
 }
 #checkoutSteps li:nth-child(4) .step-title {
-    left: 352px;
+    left: 60%;
+    z-index: 43;
 }
 #checkoutSteps li:nth-child(3) .step-title {
-    left: 238px;
+    left: 40%;
+    z-index: 45;
 }
 #checkoutSteps li:nth-child(2) .step-title {
-    left: 124px;
+    left: 20%;
+    z-index: 47;
 }
 #checkoutSteps li:nth-child(1) .step-title {
-    left: 10px;
+    left: 0;
+    z-index: 49;
+    margin-left: -10px;
 }
 .step-title > * {
     text-shadow: 1px 1px 1px #CCC;
 }
 .step-title .number {
     display: block;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 20px;
-    padding: 20px 0;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 3%;
+    box-sizing: border-box;
+    float: left;
+    line-height: 22px;
+    font-size: 12px;
+    width: 10%;
+    background: #f0f0f0;
+    height: 22px;
 }
 .step-title h2 {
-    font-size: 11px;
-    line-height: 13px;
-    word-spacing: 200px;
+    font-size: 12px;
+    line-height: 22px;
+    /* word-spacing: 200px; */
     font-family: "Tahoma","Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    text-align: center;
-    margin: 0 auto;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 5px;
+    display: inline-block;
+    /* float: left; */
+    position: relative;
+    box-shadow: 10px 0 10px 0 #DDD;
+    background: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    white-space: nowrap;
+    width: 70%;
+    height: 22px;
+    max-height: 22px;
 }
+#checkoutSteps .step-title h2:after,
+#checkoutSteps .step-title h2:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+#checkoutSteps .step-title h2:after {
+    border-color: rgba(240, 240, 240, 0);
+    border-left-color: #f0f0f0;
+    border-width: 10px;
+    margin-top: -10px;
+}
+#checkoutSteps .step-title h2:before {
+    border-color: rgba(240, 240, 240, 0);
+    border-left-color: #f0f0f0;
+    border-width: 11px;
+    margin-top: -11px;
+}
+
+#checkoutSteps li:last-child .step-title {
+    background: none;
+}
+
+#checkoutSteps li:last-child .step-title h2 {
+    box-shadow: none;
+}
+
 .step-title a {
     position: absolute;
     top: 0;
@@ -1409,6 +1467,41 @@ img, button, input {
     height: 100%;
     display: block;
     opacity: 0;
+}
+
+#checkoutSteps li.active .step-title,
+#checkoutSteps li.allow .step-title {
+    z-index: 59 !important;
+}
+
+#checkoutSteps li:nth-child(1).active .step-title,
+#checkoutSteps li:nth-child(1).allow .step-title {
+    border-left: 10px solid #8a6399;
+}
+
+#checkoutSteps li:not(:nth-child(1)).allow:not(.active) .step-title {
+    background: #8a6399;
+}
+
+#checkoutSteps .active .step-title > *,
+#checkoutSteps .allow .step-title > * {
+    background: #8a6399;
+    border-color: #8a6399;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #8a3699;
+}
+
+#checkoutSteps .active .step-title h2:before,
+#checkoutSteps .active .step-title h2:after,
+#checkoutSteps .allow .step-title h2:before,
+#checkoutSteps .allow .step-title h2:after {
+    border-left-color: #8a6399;
+}
+
+@media only screen and (min-width: 960px) {
+    #checkoutSteps .allow.section:not(.active) .step-title {
+        width: 25% !important;
+    }
 }
 
 /* Steps Styles ************************************************/
@@ -1652,6 +1745,7 @@ img, button, input {
     clear: both;
     float: right;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 #checkoutSteps button.button:not(.submit-button) {
     margin: 0 0 0 10px;
@@ -1884,6 +1978,12 @@ img, button, input {
     float: left !important;
     margin: 0 30px 10px 30px !important;
     display: block !important;
+}
+
+@media only screen and (min-width: 960px) {
+    #review-buttons-container button.button.btn-checkout {
+        float: right !important;
+    }
 }
 /* Progress Steps **********************************************/
 #checkout-progress-wrapper .opc-block-progress {

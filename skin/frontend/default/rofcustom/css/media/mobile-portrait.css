@@ -575,4 +575,143 @@
         max-width: 230px;
         background-size: 100% auto;
     }
+    /*** Cart Section ***
+    *************************************************************************/
+    #cart-cartbox-table tr th:nth-child(4),
+    #cart-cartbox-table tr td:nth-child(4) {
+        display: none;
+    }
+    .cart-cartbox-table-product-qty-edit div {
+        display: none;
+    }
+
+    .cart-cartbox-table-product-qty-edit input.input-text.qty {
+        -webkit-appearance: textfield;
+        border: 2px inset !important;
+        border-collapse: separate !important;
+        width: 22px;
+        margin-top: 20px;
+    }
+    .data-table:not(#cart-subtotal-table) > tbody td {
+        padding: 0 !important;
+        text-align: center !important;
+        position: relative;
+    }
+
+    /*** Checkout Section Mobile Portrait Specific Styles ***
+    *************************************************************************/
+    #checkoutSteps .section.active .step-title { /* Active Section, That Title */
+        width: 30%;
+    }
+    #checkoutSteps .section.active + .section .step-title { /* Active Section, Next Title */
+        width: 50%;
+    }
+    #checkoutSteps li.allow.section:not(.active) .step-title { /* Previously Active Sections */
+        width: 10%;
+        background: #8a6399;
+    }
+    #checkoutSteps li.section.allow:not(.active) .step-title h2 { /* Previously Active Sections, Text */
+        display: none;
+    }
+    #checkoutSteps li.section.allow:not(.active) .step-title .number, /* Previously Active Sections, Number */
+    #checkoutSteps .section.active + .section ~ .section .step-title .number { /* Titles after Next, Number */
+        width: 100%;
+        text-align: center !important;
+    }
+    #checkoutSteps .section.active + .section ~ .section .step-title { /* Titles after Next ([active step] -> [next] -> this) */
+        width: 5%;
+    }
+    #checkoutSteps .section.active + .section ~ .section .step-title h2 { /* Titles after Next, Text */
+        display: none;
+    }
+    #checkoutSteps li.allow:nth-child(1) .step-title { /* First Section Active / Completed, That Title */
+        left: 0%;
+    }
+    #checkoutSteps li.allow.active:nth-child(1) + .section .step-title { /* First Section Active, Next Title */
+        left: 30%;
+    }
+    #checkoutSteps li.section.active:nth-child(1) + .section ~ .section:nth-child(3) .step-title { /* First Section Active, Titles after next, Section 3 */
+        left: 80%;
+    }
+    #checkoutSteps li.section.active:nth-child(1) + .section ~ .section:nth-child(4) .step-title { /* First Section Active, Titles after next, Section 4 */
+        left: 85%;
+    }
+    #checkoutSteps li.section.active:nth-child(1) + .section ~ .section:nth-child(5) .step-title { /* First Section Active, Titles after next, Section 5 */
+        left: 90%;
+        width:10%;
+    }
+    #checkoutSteps li.allow:nth-child(2) .step-title { /* Second Section Active / Completed, That Title */
+        left: 10%;
+    }
+    #checkoutSteps li.allow.active:nth-child(2) + .section .step-title { /* Second Section Active, Next Title */
+        left: 40%;
+    }
+    #checkoutSteps li.section.active:nth-child(2) + .section ~ .section:nth-child(4) .step-title { /* First Section Active, Titles after next, Section 4 */
+        left: 90%;
+    }
+    #checkoutSteps li.section.active:nth-child(2) + .section ~ .section:nth-child(5) .step-title { /* First Section Active, Titles after next, Section 5 */
+        left: 95%;
+    }
+    #checkoutSteps li.allow:nth-child(3) .step-title { /* Third Section Active / Completed, That Title */
+        left: 20%;
+    }
+    #checkoutSteps li.allow.active:nth-child(3) + .section .step-title { /* Third Section Active, Next Title */
+        left: 50%;
+    }
+    #checkoutSteps li.section.active:nth-child(3) + .section ~ .section .step-title { /* Third Section Active, Titles after next */
+        left: 95%;
+        z-index: 60;
+    }
+    #checkoutSteps li.allow:nth-child(4) .step-title { /* Fourth Section Active / Completed, That Title */
+        left: 30%;
+    }
+    #checkoutSteps li.allow.active:nth-child(4) + .section .step-title { /* Fourth Section Active, Next Title */
+        left: 60%;
+    }
+    #checkoutSteps li.allow:nth-child(5) .step-title { /* Fifth Section Active / Completed, That Title */
+        left: 40%;
+        width: 60%;
+    }
+
+    #checkoutSteps #payment-buttons-container {
+        float: left !important;
+        padding: 0 20px 10px;
+    }
+
+    #checkout-review-table {
+        margin-bottom: 0 !important;
+    }
+    #checkout-review-table-tfoot {
+        float: left;
+        width: 260px;
+        margin: 10px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .cart-subtotal-table-left,
+    .cart-subtotal-table-right {
+        width: 50%;
+        box-sizing: border-box;
+        max-width: 150px;
+    }
+    #checkout-review-table-tfoot tr,
+    #cart-subtotal-table tr:not(#cart-subtotal-table-title) {
+        padding: 10px 0;
+    }
+    #review-buttons-container button.button.btn-checkout {
+        margin: 0 10px !important;
+        width: 260px !important;
+        background-size: 100% auto;
+    }
+    #checkout-progress-wrapper #cart-subtotal-table {
+        margin-left: 0;
+        width: 260px;
+    }
+    /* Checkout Login Page ***/
+    #checkoutSteps #checkout-step-login .buttons-set {
+        margin-right: -40px !important;
+    }
+    #checkoutSteps #checkout-step-login .col2-set .col-2 .wrap-login {
+        width: 100% !important;
+    }
 }

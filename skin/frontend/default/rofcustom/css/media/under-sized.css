@@ -1,4 +1,150 @@
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
+    /* Checkout Boxes Fixes, using fluid layout, should work across all mobile */
+    #checkoutSteps {
+        margin: 20px auto !important;
+        width: 100%;
+    }
+
+    #checkoutSteps li:last-child .step-title {
+        background: #f0f0f0;
+    }
+    #checkoutSteps li:last-child .step-title h2 {
+        box-shadow: 10px 0 10px 0 #DDD;
+    }
+
+    #checkoutSteps #checkout-step-login .col2-set > div[class*='col-'] {
+        width: 90%;
+        display: block;
+        max-width: 90%;
+        float: left;
+        padding: 0 5%;
+    }
+    #checkoutSteps #checkout-step-login .col2-set > div[class*='col-'] .wrap-login {
+        width: 80%;
+        margin: 0 auto;
+    }
+    #checkoutSteps #checkout-step-login .col2-set > div[class*='col-'] .wrap-login .form-list .control {
+        text-align: center;
+    }
+
+    #checkoutSteps .step form {
+        position: relative;
+        width: 100% !important;
+        max-width: 100% !important;
+        float: left;
+	}
+
+    #checkoutSteps .step fieldset,
+    #checkoutSteps .step .form-list {
+        margin-left: 0 !important;
+        max-width: 100% !important;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    #checkoutSteps .step .form-list ul,
+    #checkoutSteps .step .form-list li:not(.control) {
+        margin-left: 0 !important;
+        width: 100%;
+        max-width: 100%;
+        float: left;
+	}
+    #checkoutSteps .step .form-list ul#credit-card-type {
+        margin: 0 !important;
+        width: 52px !important;
+        float: none !important;
+    }
+
+    #checkoutSteps .step .form-list li.control {
+        text-align: center;
+    }
+    #checkoutSteps .step .form-list li.control label[for^='remember'] {
+        float: left;
+        margin-left: 5px;
+    }
+    #checkoutSteps .step .form-list li.control .input-box {
+        display: inline-block;
+        float: left;
+        overflow: hidden;
+        min-width: 30px;
+        text-align: right;
+    }
+
+    #checkoutSteps .step .fields,
+    #checkoutSteps .step .wide {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #checkoutSteps .field {
+        display: block;
+        clear: right;
+        float: left;
+        width: 100%;
+        max-width: 100%;
+	}
+
+    #checkoutSteps .input-box {
+         margin-bottom: 0;
+    }
+
+    #checkoutSteps .step ul.form-list ul li:not(.control) label {
+        max-width: 90%;
+        text-align: left;
+        display: inline-block;
+        width: auto !important;
+        margin: 10px 0 5px 10px;
+    }
+
+    #checkoutSteps .step ul.form-list ul li:not(.control) label.required em {
+        float: right;
+    }
+
+    #checkoutSteps .step li:not(.control) .input-box.add-bottom {
+        margin-bottom: 6px !important;
+    }
+
+    #checkoutSteps .step li:not(.control) .input-box input,
+    #checkoutSteps .step li:not(.control) .input-box select {
+        width: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    #checkoutSteps .fields .field:nth-child(even) {
+        margin: 0;
+        clear: left;
+    }
+
+    .item-options {
+        left: 155px;
+        top: 55px;
+    }
+
+    .data-table:not(#cart-subtotal-table) > tbody td {
+        padding: 0 !important;
+        text-align: center !important;
+        position: relative;
+    }
+
+    .trustwaveSealImageWrap,
+    .forgot-item {
+        display: none !important;
+    }
+
+
+    table#cart-subtotal-table {
+        margin: 0 auto !important;
+    }
+
+    /** Cart Section ***
+    ***************************************************/
+    .cart-subtotal-table-left,
+    .cart-subtotal-table-right {
+        width: 50% !important;
+        box-sizing: border-box !important;
+        text-overflow: ellipsis !important;
+    }
 
 }

@@ -72,9 +72,9 @@
 
 
 /* #Tablet (Portrait)
-================================================== */
+================================================== * /
 
-    /* Note: Design for a width of 768px */
+    / * Note: Design for a width of 768px * /
 
     @media only screen and (min-width: 768px) and (max-width: 959px) {
         .container                                  { width: 768px; }
@@ -105,7 +105,7 @@
         .container .one-third.column                { width: 236px; }
         .container .two-thirds.column               { width: 492px; }
 
-        /* Offsets */
+        / * Offsets * /
         .container .offset-by-one                   { padding-left: 48px; }
         .container .offset-by-two                   { padding-left: 96px; }
         .container .offset-by-three                 { padding-left: 144px; }
@@ -179,7 +179,8 @@
 
     /* Note: Design for a width of 480px */
 
-    @media only screen and (min-width: 480px) and (max-width: 767px) {
+    /*@media only screen and (min-width: 480px) and (max-width: 767px) {*/
+    @media only screen and (min-width: 480px) and (max-width: 959px) {
         .container { width: 420px; }
         .container .columns,
         .container .column { margin: 0; }
