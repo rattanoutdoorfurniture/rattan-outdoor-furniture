@@ -62,6 +62,7 @@
         background: #FFF;
         padding-top: 15px !important;
         box-shadow: 0 0 20px #AAA;
+        overflow-x: hidden;
     }
 
     .container > div:after { content: "\00D\00A"; display: block; height: 0; clear: both; visibility: hidden; }
