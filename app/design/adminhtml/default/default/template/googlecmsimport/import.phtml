@@ -197,7 +197,7 @@
             <li><a href="?parse=descriptions&process=true">Parse & Process Descriptions</a></li>
             <li><a href="?parse=locations&process=true">Parse & Process Locations</a></li>
             <li><a href="?parse=products&process=true">Parse & Process Products</a></li>
-            <li><a href="?parse=sitemaps&process=false">Parse & Update Sitemap: Categories</a></li>
+            <li><a href="?parse=sitemaps&process=false">Parse & Update All Sitemaps</a></li>
         </ul>
     </div>
     <div style="white-space: pre;">
@@ -205,26 +205,40 @@
     global $io;
     $parse = Mage::app()->getRequest()->getQuery("parse");
     if($parse == "sitemaps") {
-        $sitemap_files = Mage::getBaseDir(). DIRECTORY_SEPARATOR . "sitemap-*.xml";
+        $sitemap_files = Mage::getBaseDir(). DIRECTORY_SEPARATOR . "sitemap*.xml";
         $sitemaps = glob($sitemap_files);
         foreach($sitemaps as $sitemap) {
-            $sitemap_name = ucfirst(str_replace("-"," ",basename($sitemap)));
+            $sitemap_name = uc_words(basename($sitemap)," ","-");
             if(!file_exists($sitemap)) {
-                printf($sitemap_name."Sitemap Not Found at location: %s", $categorySitemap);
+                printf($sitemap_name." Sitemap Not Found at location: %s", $sitemap);
             } else {
                 $sitemapUpdate = array();
                 $csmh = fopen($sitemap,'r+');
                 while(!feof($csmh)) {
-                    $line = fgets($csmh);
+                    $preSpace = '';
+                    $line = $orgLine = rtrim(fgets($csmh),PHP_EOL);
+                    if(preg_match('/^\s*$/',$line)) continue;
+                    $pregResults = preg_match('/^(\s*)([^\s]+)$/',$line,$line_parts);
+                    if(count($line_parts)==3) {
+                        $preSpace = $line_parts[1];
+                        $line = $line_parts[2];
+                    }
                     $line = trim($line);
-                    $line = preg_replace('/<cell cellsource="A\d+">(.*)<\/cell>/','        <loc>$1</loc>',$line);
-                    $line = preg_replace('/<cell cellsource="B\d+">(.*)<\/cell>/','        <lastmod>$1</lastmod>',$line);
-                    $line = preg_replace('/<cell cellsource="C\d+">(.*)<\/cell>/','        <changefreq>$1</changefreq>',$line);
-                    $line = preg_replace('/<cell cellsource="D\d+">(.*)<\/cell>/','        <priority>$1</priority>',$line);
-                    $line = preg_replace('/(<\/?)row.*>/','    $1url>',$line);
+                    $preProcLine = $line;
+                    $line = preg_replace('/<cell cellsource="A\d+">(.*)<\/cell>/',(strlen($preSpace)?'':'        ').'<loc>$1</loc>',$line);
+                    $line = preg_replace('/<cell cellsource="B\d+">(.*)<\/cell>/',(strlen($preSpace)?'':'        ').'<lastmod>$1</lastmod>',$line);
+                    $line = preg_replace('/<cell cellsource="C\d+">(.*)<\/cell>/',(strlen($preSpace)?'':'        ').'<changefreq>$1</changefreq>',$line);
+                    $line = preg_replace('/<cell cellsource="D\d+">(.*)<\/cell>/',(strlen($preSpace)?'':'        ').'<priority>$1</priority>',$line);
+                    $line = preg_replace('/(<\/?)row.*>/',(strlen($preSpace)?'':'    ').'$1url>',$line);
                     $line = preg_replace('/<data>/','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',$line);
                     $line = preg_replace('/<\/data>/','</urlset>',$line);
-                    $sitemapUpdate[] = $line;
+                    if(strcmp($line,$preProcLine)==0) {
+                        $orgLine = preg_replace('/<lastmod>(.*)<\/lastmod>/','<lastmod>'.date("Y-m-d").'</lastmod>',$orgLine);
+                        $sitemapUpdate[] = $orgLine;
+                    } else {
+                        $line = preg_replace('/(\s*)<lastmod>(.*)<\/lastmod>/',(strlen($preSpace)?'':'        ').'<lastmod>'.date("Y-m-d").'</lastmod>',$line);
+                        $sitemapUpdate[] = $preSpace.$line;
+                    }
                 }
                 $sitemapUpdate = implode(PHP_EOL,$sitemapUpdate);
                 $result = file_put_contents($sitemap,$sitemapUpdate);
@@ -718,10 +732,10 @@ QUERY;
         </div>
         <div>
             <span>Generated Identifiers (in php array)</span>
-            <div style="height:10px;overflow:hidden;"><?php echo 'array(<br/>"'.implode('",<br/>"',$identifiers).'");' ?></div>
+            <div style="height:60px;overflow-x:visible;overflow-y:scroll;"><?php echo 'array(<br/>"'.implode('",<br/>"',$identifiers).'");' ?></div>
         </div>
         <div><div>Files Read: <?php echo count($textFiles); ?></div>
-            <div style="height: 10px;overflow:hidden;"><?php
+            <div style="height: 60px;overflow-x:visible;overflow-y:scroll;"><?php
                 foreach($textFiles as $textFile){
                     echo $textFile . "<br/>";
                 }
