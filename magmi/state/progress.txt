@@ -1,7 +1,7 @@
 title:MAGMI by dweeves - version:0.7.21
 startup:Running Magmi Product Import Engine v1.9 by dweeves
 startup:Import Profile:default
-startup:Import Mode:update
+startup:Import Mode:create
 step:step:0.5%
 plugin;Magmi_CSVDataSource;pluginhello:CSV Datasource-1.3.1-Dweeves- 
 plugin;Magmi_OptimizerPlugin;pluginhello:Magmi Optimizer-1.0.5-Dweeves-http://wiki.magmi.org/index.php?title=Magmi_Optimizer 
@@ -29,565 +29,334 @@ plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Already optmized!
 plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Adding index MAGMI_EA_CODE_OPTIMIZATION_IDX on eav_attribute
 plugin;Magmi_OptimizerPlugin;info:Magmi Optimizer v1.0.5 - Already optmized!
 startup:Performing Datasouce Lookup...
-lookup:273:0.0569789409637
-startup:Found 273 records, took 0.0569789409637 sec
+lookup:273:0.0644719600677
+startup:Found 273 records, took 0.0644719600677 sec
 columns:88
 plugin;DefaultValuesItemProcessor;startup:Default Values setter v0.0.5 - Adding Columns 
-plugin;Magmi_ConfigurableItemProcessor;startup:Configurable Item processor v1.3.7a - no options_container set, defaulting to :Block after product info
-startup:Ajusted processed columns:84
-error:No sku info found for record #1
-itime:2 - 0.00321984291077 - 0.00321984291077
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #2
-error:No sku info found for record #3
-itime:4 - 0.00669193267822 - 0.00326490402222
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #4
-error:No sku info found for record #5
-itime:6 - 0.00823903083801 - 0.00148606300354
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #6
-error:No sku info found for record #7
-itime:8 - 0.00957703590393 - 0.00127720832825
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #8
-error:No sku info found for record #9
-itime:10 - 0.0107789039612 - 0.00113201141357
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #10
-error:No sku info found for record #11
-itime:12 - 0.0119178295135 - 0.00107789039612
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #12
-error:No sku info found for record #13
-itime:14 - 0.0130920410156 - 0.00111413002014
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #14
-error:No sku info found for record #15
-itime:16 - 0.0142638683319 - 0.00108504295349
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #16
-error:No sku info found for record #17
-itime:18 - 0.0154848098755 - 0.00115895271301
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #18
-error:No sku info found for record #19
-itime:20 - 0.0168838500977 - 0.00133800506592
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #20
-error:No sku info found for record #21
-itime:22 - 0.0181169509888 - 0.00117301940918
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #22
-error:No sku info found for record #23
-itime:24 - 0.0193028450012 - 0.00109791755676
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #24
-error:No sku info found for record #25
-itime:26 - 0.0204648971558 - 0.00107192993164
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #26
-error:No sku info found for record #27
-itime:28 - 0.0216619968414 - 0.0011351108551
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #28
-error:No sku info found for record #29
-itime:30 - 0.0228409767151 - 0.0011191368103
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #30
-error:No sku info found for record #31
-itime:32 - 0.0239689350128 - 0.00106811523438
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #32
-error:No sku info found for record #33
-itime:34 - 0.0251638889313 - 0.00109601020813
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #34
-error:No sku info found for record #35
-itime:36 - 0.026603937149 - 0.00137805938721
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #36
-error:No sku info found for record #37
-itime:38 - 0.0278358459473 - 0.00117087364197
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #38
-error:No sku info found for record #39
-itime:40 - 0.0290009975433 - 0.00110507011414
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #40
-error:No sku info found for record #41
-itime:42 - 0.0302410125732 - 0.00114607810974
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #42
-error:No sku info found for record #43
-itime:44 - 0.0314838886261 - 0.00118088722229
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #44
-error:No sku info found for record #45
-itime:46 - 0.0326209068298 - 0.00107598304749
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #46
-error:No sku info found for record #47
-itime:48 - 0.0338208675385 - 0.00113987922668
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #48
-error:No sku info found for record #49
-itime:50 - 0.0349969863892 - 0.00111603736877
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #50
-error:No sku info found for record #51
-itime:52 - 0.0363028049469 - 0.00120186805725
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #52
-error:No sku info found for record #53
-itime:54 - 0.0374739170074 - 0.00107908248901
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #54
-error:No sku info found for record #55
-itime:56 - 0.0387959480286 - 0.00126099586487
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #56
-error:No sku info found for record #57
-itime:58 - 0.0399649143219 - 0.00110793113708
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #58
-error:No sku info found for record #59
-itime:60 - 0.0411758422852 - 0.00113892555237
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #60
-error:No sku info found for record #61
-itime:62 - 0.0423269271851 - 0.00108909606934
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #62
-error:No sku info found for record #63
-itime:64 - 0.0434880256653 - 0.00107216835022
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #64
-error:No sku info found for record #65
-itime:66 - 0.0446259975433 - 0.00107717514038
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #66
-error:No sku info found for record #67
-itime:68 - 0.0457618236542 - 0.00107598304749
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #68
-error:No sku info found for record #69
-itime:70 - 0.0469119548798 - 0.00109004974365
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #70
-error:No sku info found for record #71
-itime:72 - 0.0483908653259 - 0.00141787528992
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #72
-error:No sku info found for record #73
-itime:74 - 0.0496289730072 - 0.00117516517639
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #74
-error:No sku info found for record #75
-itime:76 - 0.0508568286896 - 0.00116801261902
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #76
-error:No sku info found for record #77
-itime:78 - 0.0525619983673 - 0.0016450881958
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #78
-error:No sku info found for record #79
-itime:80 - 0.0538258552551 - 0.00118589401245
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #80
-error:No sku info found for record #81
-itime:82 - 0.0549929141998 - 0.00110602378845
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #82
-error:No sku info found for record #83
-itime:84 - 0.0562059879303 - 0.00111198425293
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #84
-error:No sku info found for record #85
-itime:86 - 0.0574288368225 - 0.00116086006165
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #86
-error:No sku info found for record #87
-itime:88 - 0.0585608482361 - 0.00107097625732
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #88
-error:No sku info found for record #89
-itime:90 - 0.0597479343414 - 0.00112700462341
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #90
-error:No sku info found for record #91
-itime:92 - 0.0608940124512 - 0.00108504295349
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #92
-error:No sku info found for record #93
-itime:94 - 0.0621538162231 - 0.0011990070343
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #94
-error:No sku info found for record #95
-itime:96 - 0.0632789134979 - 0.00106310844421
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #96
-error:No sku info found for record #97
-itime:98 - 0.0644528865814 - 0.0010838508606
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #98
-error:No sku info found for record #99
-itime:100 - 0.0655839443207 - 0.00107097625732
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #100
-error:No sku info found for record #101
-itime:102 - 0.066722869873 - 0.00107884407043
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #102
-error:No sku info found for record #103
-itime:104 - 0.0678999423981 - 0.00111699104309
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #104
-error:No sku info found for record #105
-itime:106 - 0.0690360069275 - 0.00107598304749
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #106
-error:No sku info found for record #107
-itime:108 - 0.0703039169312 - 0.00114798545837
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #108
-error:No sku info found for record #109
-itime:110 - 0.0715110301971 - 0.00111508369446
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #110
-error:No sku info found for record #111
-itime:112 - 0.0726459026337 - 0.00107502937317
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #112
-error:No sku info found for record #113
-itime:114 - 0.0740959644318 - 0.00138998031616
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #114
-error:No sku info found for record #115
-itime:116 - 0.0753879547119 - 0.00119996070862
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #116
-error:No sku info found for record #117
-itime:118 - 0.0765960216522 - 0.00114512443542
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #118
-error:No sku info found for record #119
-itime:120 - 0.0777978897095 - 0.0011420249939
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #120
-error:No sku info found for record #121
-itime:122 - 0.0789608955383 - 0.00110387802124
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #122
-error:No sku info found for record #123
-itime:124 - 0.0801608562469 - 0.00112795829773
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #124
-error:No sku info found for record #125
-itime:126 - 0.0813868045807 - 0.00115585327148
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #126
-error:No sku info found for record #127
-itime:128 - 0.082582950592 - 0.00112891197205
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #128
-error:No sku info found for record #129
-itime:130 - 0.0839188098907 - 0.00127482414246
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #130
-error:No sku info found for record #131
-itime:132 - 0.0854458808899 - 0.0014660358429
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #132
-error:No sku info found for record #133
-itime:134 - 0.08677983284 - 0.00127100944519
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #134
-error:No sku info found for record #135
-itime:136 - 0.088259935379 - 0.00141906738281
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #136
-error:No sku info found for record #137
-itime:138 - 0.0895969867706 - 0.00127506256104
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #138
-error:No sku info found for record #139
-itime:140 - 0.0908749103546 - 0.00121688842773
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #140
-error:No sku info found for record #141
-itime:142 - 0.0920820236206 - 0.00114703178406
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #142
-error:No sku info found for record #143
-itime:144 - 0.0933220386505 - 0.00115323066711
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #144
-error:No sku info found for record #145
-itime:146 - 0.0945520401001 - 0.00114107131958
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #146
-error:No sku info found for record #147
-itime:148 - 0.0957000255585 - 0.0010871887207
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #148
-error:No sku info found for record #149
-itime:150 - 0.0968580245972 - 0.00109720230103
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #150
-error:No sku info found for record #151
-itime:152 - 0.0980079174042 - 0.00109004974365
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #152
-error:No sku info found for record #153
-itime:154 - 0.0992529392242 - 0.00114703178406
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #154
-error:No sku info found for record #155
-itime:156 - 0.100456953049 - 0.00114107131958
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #156
-error:No sku info found for record #157
-itime:158 - 0.10161781311 - 0.0010998249054
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #158
-error:No sku info found for record #159
-itime:160 - 0.102766036987 - 0.00108814239502
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #160
-error:No sku info found for record #161
-itime:162 - 0.103920936584 - 0.0010941028595
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #162
-error:No sku info found for record #163
-itime:164 - 0.105105876923 - 0.0011248588562
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #164
-error:No sku info found for record #165
-itime:166 - 0.10644197464 - 0.00125193595886
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #166
-error:No sku info found for record #167
-itime:168 - 0.107609033585 - 0.00110507011414
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #168
-error:No sku info found for record #169
-itime:170 - 0.108796834946 - 0.00112795829773
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #170
-error:No sku info found for record #171
-itime:172 - 0.110002994537 - 0.00114512443542
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #172
-error:No sku info found for record #173
-itime:174 - 0.111224889755 - 0.00111889839172
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #174
-error:No sku info found for record #175
-itime:176 - 0.11240196228 - 0.00111508369446
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #176
-error:No sku info found for record #177
-itime:178 - 0.113552808762 - 0.00108289718628
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #178
-error:No sku info found for record #179
-itime:180 - 0.114719867706 - 0.00110602378845
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #180
-error:No sku info found for record #181
-itime:182 - 0.115839958191 - 0.00105905532837
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #182
-error:No sku info found for record #183
-itime:184 - 0.117165803909 - 0.00126481056213
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #184
-error:No sku info found for record #185
-itime:186 - 0.118412017822 - 0.00118398666382
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #186
-error:No sku info found for record #187
-itime:188 - 0.119575023651 - 0.00110101699829
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #188
-error:No sku info found for record #189
-itime:190 - 0.120761871338 - 0.00112700462341
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #190
-error:No sku info found for record #191
-itime:192 - 0.121985912323 - 0.00116395950317
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #192
-error:No sku info found for record #193
-itime:194 - 0.123211860657 - 0.0011248588562
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #194
-error:No sku info found for record #195
-itime:196 - 0.124488830566 - 0.00121378898621
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #196
-error:No sku info found for record #197
-itime:198 - 0.125654935837 - 0.00110602378845
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #198
-error:No sku info found for record #199
-itime:200 - 0.126896858215 - 0.00118184089661
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #200
-error:No sku info found for record #201
-itime:202 - 0.128281831741 - 0.00132489204407
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #202
-error:No sku info found for record #203
-itime:204 - 0.129628896713 - 0.00125908851624
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #204
-error:No sku info found for record #205
-itime:206 - 0.130952835083 - 0.00126385688782
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #206
-error:No sku info found for record #207
-itime:208 - 0.132287979126 - 0.00127506256104
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #208
-error:No sku info found for record #209
-itime:210 - 0.133709907532 - 0.00133204460144
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #210
-error:No sku info found for record #211
-itime:212 - 0.135087966919 - 0.00131797790527
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #212
-error:No sku info found for record #213
-itime:214 - 0.13649892807 - 0.00132298469543
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #214
-error:No sku info found for record #215
-itime:216 - 0.137851953506 - 0.00129199028015
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #216
-error:No sku info found for record #217
-itime:218 - 0.139206886292 - 0.0012948513031
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #218
-error:No sku info found for record #219
-itime:220 - 0.140633821487 - 0.00136399269104
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #220
-error:No sku info found for record #221
-itime:222 - 0.141989946365 - 0.00129508972168
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #222
-error:No sku info found for record #223
-itime:224 - 0.143299818039 - 0.00120687484741
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #224
-error:No sku info found for record #225
-itime:226 - 0.144662857056 - 0.00127291679382
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #226
-error:No sku info found for record #227
-itime:228 - 0.145921945572 - 0.00119805335999
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #228
-error:No sku info found for record #229
-itime:230 - 0.1474609375 - 0.00147891044617
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #230
-error:No sku info found for record #231
-itime:232 - 0.148730993271 - 0.00120806694031
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #232
-error:No sku info found for record #233
-itime:234 - 0.150421857834 - 0.00162386894226
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #234
-error:No sku info found for record #235
-itime:236 - 0.15180182457 - 0.00131797790527
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #236
-error:No sku info found for record #237
-itime:238 - 0.153203964233 - 0.00134205818176
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #238
-error:No sku info found for record #239
-itime:240 - 0.154522895813 - 0.00125598907471
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #240
-error:No sku info found for record #241
-itime:242 - 0.155894994736 - 0.00131011009216
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #242
-error:No sku info found for record #243
-itime:244 - 0.157246828079 - 0.00129199028015
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #244
-error:No sku info found for record #245
-itime:246 - 0.158658981323 - 0.00134897232056
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #246
-error:No sku info found for record #247
-itime:248 - 0.159972906113 - 0.00125288963318
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #248
-error:No sku info found for record #249
-itime:250 - 0.161381959915 - 0.00131106376648
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #250
-error:No sku info found for record #251
-itime:252 - 0.162683010101 - 0.00123810768127
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #252
-error:No sku info found for record #253
-itime:254 - 0.164111852646 - 0.00136804580688
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #254
-error:No sku info found for record #255
-itime:256 - 0.165577888489 - 0.00138306617737
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #256
-error:No sku info found for record #257
-itime:258 - 0.16686296463 - 0.00122094154358
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #258
-error:No sku info found for record #259
-itime:260 - 0.168215990067 - 0.00129318237305
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #260
-error:No sku info found for record #261
-itime:262 - 0.169569015503 - 0.00128602981567
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #262
-error:No sku info found for record #263
-itime:264 - 0.170977830887 - 0.00134587287903
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #264
-error:No sku info found for record #265
-itime:266 - 0.172382831573 - 0.00129699707031
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #266
-error:No sku info found for record #267
-itime:268 - 0.173738002777 - 0.00129318237305
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #268
-error:No sku info found for record #269
-itime:270 - 0.175273895264 - 0.00147604942322
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #270
-error:No sku info found for record #271
-itime:272 - 0.176828861237 - 0.00146794319153
-dbtime:0 - 0 - 0 - 0
-error:No sku info found for record #272
-error:No sku info found for record #273
-itime:273 - 0.178684949875 - 0.00179505348206
-dbtime:1 - 0.000563859939575 - 0.000563859939575 - 1
-info:Skus imported OK:0/273
-warning:Skus imported KO:273/273
+plugin;Magmi_DefaultAttributeItemProcessor;startup:Standard Attribute Import v1.1 - Newly created items will have default values for columns:
+startup:Ajusted processed columns:89
+itime:2 - 0.664671897888 - 0.664671897888
+dbtime:137 - 0.58186674118 - 0.58186674118 - 137
+itime:4 - 0.882270097733 - 0.217358112335
+dbtime:291 - 0.676680326462 - 0.0948135852814 - 154
+error:SKU BRT654150-00 - 1:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU BRT654150-00 - 2:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #5
+itime:6 - 1.09148406982 - 0.208948135376
+dbtime:372 - 0.787112951279 - 0.110432624817 - 81
+itime:8 - 1.25031995773 - 0.158664941788
+dbtime:436 - 0.882830619812 - 0.0957176685333 - 64
+itime:10 - 1.50079202652 - 0.250272035599
+dbtime:540 - 0.969426870346 - 0.0865962505341 - 104
+itime:12 - 1.59253907204 - 0.0914521217346
+dbtime:603 - 0.991488218307 - 0.0220613479614 - 63
+itime:14 - 1.6929910183 - 0.100363016129
+dbtime:659 - 1.02850937843 - 0.0370211601257 - 56
+itime:16 - 1.78464388847 - 0.0914158821106
+dbtime:717 - 1.04957985878 - 0.0210704803467 - 58
+itime:18 - 1.95206308365 - 0.167330980301
+dbtime:773 - 1.15067720413 - 0.101097345352 - 56
+error:SKU BRT653801-00 - 3:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU BRT653801-00 - 4:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #19
+itime:20 - 2.03631806374 - 0.0839829444885
+dbtime:828 - 1.16641259193 - 0.0157353878021 - 55
+itime:22 - 2.1274330616 - 0.0909581184387
+dbtime:885 - 1.18856024742 - 0.0221476554871 - 57
+itime:24 - 2.34525990486 - 0.217736959457
+dbtime:961 - 1.3057551384 - 0.117194890976 - 76
+itime:26 - 2.51210188866 - 0.166646003723
+dbtime:1020 - 1.40288925171 - 0.0971341133118 - 59
+itime:28 - 2.69748306274 - 0.185106039047
+dbtime:1092 - 1.50511360168 - 0.102224349976 - 72
+itime:30 - 2.79779696465 - 0.100116968155
+dbtime:1148 - 1.53130602837 - 0.0261924266815 - 56
+itime:32 - 2.93988800049 - 0.141906023026
+dbtime:1220 - 1.60410857201 - 0.0728025436401 - 72
+itime:34 - 3.02342295647 - 0.0833380222321
+dbtime:1276 - 1.62356877327 - 0.0194602012634 - 56
+itime:36 - 3.24112510681 - 0.21751499176
+dbtime:1429 - 1.73389387131 - 0.110325098038 - 153
+itime:38 - 3.4585878849 - 0.217216968536
+dbtime:1485 - 1.81235194206 - 0.078458070755 - 56
+itime:40 - 3.61767411232 - 0.158786058426
+dbtime:1569 - 1.89468955994 - 0.0823376178741 - 84
+itime:42 - 3.7925620079 - 0.174638986588
+dbtime:1625 - 1.99418258667 - 0.0994930267334 - 56
+itime:44 - 3.90173888206 - 0.109076976776
+dbtime:1709 - 2.0213675499 - 0.0271849632263 - 84
+itime:46 - 4.01897311211 - 0.116963148117
+dbtime:1765 - 2.07967686653 - 0.0583093166351 - 56
+itime:48 - 4.22761702538 - 0.208450078964
+dbtime:1849 - 2.21656918526 - 0.136892318726 - 84
+itime:50 - 4.40347290039 - 0.175759792328
+dbtime:1905 - 2.32423639297 - 0.107667207718 - 56
+itime:52 - 4.49585008621 - 0.0922842025757
+dbtime:1989 - 2.35100650787 - 0.0267701148987 - 84
+itime:54 - 4.58754611015 - 0.0915071964264
+dbtime:2045 - 2.37251424789 - 0.0215077400208 - 56
+itime:56 - 4.73859405518 - 0.150866985321
+dbtime:2101 - 2.44581222534 - 0.0732979774475 - 56
+error:SKU BRT653979-00 - 5:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU BRT653979-00 - 6:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #56
+itime:58 - 4.96392607689 - 0.225118160248
+dbtime:2145 - 2.58622288704 - 0.140410661697 - 44
+itime:60 - 5.04743599892 - 0.0833039283752
+dbtime:2201 - 2.60532283783 - 0.0190999507904 - 56
+itime:62 - 5.25756311417 - 0.209943056107
+dbtime:2260 - 2.75418066978 - 0.148857831955 - 59
+itime:64 - 5.38323903084 - 0.12540102005
+dbtime:2316 - 2.7927467823 - 0.0385661125183 - 56
+itime:66 - 5.55849194527 - 0.17501282692
+dbtime:2372 - 2.87385439873 - 0.0811076164246 - 56
+itime:68 - 5.65037298203 - 0.0916850566864
+dbtime:2428 - 2.89335298538 - 0.0194985866547 - 56
+itime:70 - 5.74211096764 - 0.0915219783783
+dbtime:2484 - 2.91287779808 - 0.0195248126984 - 56
+itime:72 - 5.82645988464 - 0.0841588973999
+dbtime:2540 - 2.93072462082 - 0.0178468227386 - 56
+itime:74 - 6.10140109062 - 0.274751186371
+dbtime:2701 - 3.02872371674 - 0.0979990959167 - 161
+itime:76 - 6.26063394547 - 0.159034013748
+dbtime:2789 - 3.11968851089 - 0.0909647941589 - 88
+error:SKU BRT879209-00 - 7:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU BRT879209-00 - 8:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #77
+itime:78 - 6.41233706474 - 0.151482105255
+dbtime:2871 - 3.16678667068 - 0.04709815979 - 82
+itime:80 - 6.51155400276 - 0.0990359783173
+dbtime:2928 - 3.19066905975 - 0.0238823890686 - 57
+itime:82 - 6.65306305885 - 0.141314983368
+dbtime:3015 - 3.2579395771 - 0.0672705173492 - 87
+itime:84 - 6.73678708076 - 0.0835921764374
+dbtime:3071 - 3.27758479118 - 0.0196452140808 - 56
+itime:86 - 6.88756203651 - 0.150496006012
+dbtime:3155 - 3.35200810432 - 0.0744233131409 - 84
+itime:88 - 6.97936296463 - 0.0915989875793
+dbtime:3211 - 3.37380886078 - 0.0218007564545 - 56
+itime:90 - 7.18026399612 - 0.200702905655
+dbtime:3295 - 3.44141292572 - 0.0676040649414 - 84
+itime:92 - 7.35547089577 - 0.174963951111
+dbtime:3351 - 3.52288103104 - 0.0814681053162 - 56
+itime:94 - 7.50623011589 - 0.150601148605
+dbtime:3435 - 3.5983402729 - 0.0754592418671 - 84
+itime:96 - 7.5980091095 - 0.0915830135345
+dbtime:3491 - 3.61936903 - 0.0210287570953 - 56
+itime:98 - 7.71507406235 - 0.116827964783
+dbtime:3547 - 3.66848468781 - 0.0491156578064 - 56
+error:SKU BRT654679-00 - 9:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU BRT654679-00 - 10:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #98
+itime:100 - 7.79149603844 - 0.0762331485748
+dbtime:3583 - 3.68145418167 - 0.012969493866 - 36
+itime:102 - 7.88332700729 - 0.0916450023651
+dbtime:3639 - 3.70275640488 - 0.0213022232056 - 56
+error:SKU BRT654082-00 - 11:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU BRT654082-00 - 12:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #103
+itime:104 - 7.95979094505 - 0.0762779712677
+dbtime:3674 - 3.71569824219 - 0.0129418373108 - 35
+itime:106 - 8.04201793671 - 0.0820250511169
+dbtime:3731 - 3.73317551613 - 0.017477273941 - 57
+itime:108 - 8.12593603134 - 0.0836930274963
+dbtime:3787 - 3.7514731884 - 0.0182976722717 - 56
+itime:110 - 8.36005496979 - 0.233891963959
+dbtime:3899 - 3.82437705994 - 0.0729038715363 - 112
+itime:112 - 8.5015900135 - 0.141237974167
+dbtime:3955 - 3.89195561409 - 0.0675785541534 - 56
+itime:114 - 8.68625593185 - 0.18457198143
+dbtime:4083 - 3.97850584984 - 0.0865502357483 - 128
+itime:116 - 8.79444909096 - 0.107953071594
+dbtime:4179 - 4.00698018074 - 0.0284743309021 - 96
+itime:118 - 9.01226592064 - 0.217720985413
+dbtime:4279 - 4.11936426163 - 0.112384080887 - 100
+itime:120 - 9.15465307236 - 0.142189025879
+dbtime:4348 - 4.19600772858 - 0.0766434669495 - 69
+itime:122 - 9.24642705917 - 0.0914890766144
+dbtime:4404 - 4.21799612045 - 0.0219883918762 - 56
+itime:124 - 9.41359806061 - 0.166974067688
+dbtime:4460 - 4.24025630951 - 0.0222601890564 - 56
+itime:126 - 9.56403207779 - 0.150180101395
+dbtime:4516 - 4.32741951942 - 0.0871632099152 - 56
+itime:128 - 9.73974490166 - 0.175481796265
+dbtime:4572 - 4.43115401268 - 0.103734493256 - 56
+itime:130 - 9.84888195992 - 0.108896970749
+dbtime:4657 - 4.46247029305 - 0.031316280365 - 85
+error:SKU BRT879438-00 - 13:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU BRT879438-00 - 14:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #131
+itime:132 - 9.94206500053 - 0.0929360389709
+dbtime:4712 - 4.4828441143 - 0.0203738212585 - 55
+itime:134 - 10.1083059311 - 0.166081905365
+dbtime:4809 - 4.51630091667 - 0.0334568023682 - 97
+error:SKU BRT879506-00 - 15:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU BRT879506-00 - 16:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #135
+itime:136 - 10.2016999722 - 0.0931949615479
+dbtime:4864 - 4.53254818916 - 0.0162472724915 - 55
+itime:138 - 10.4529440403 - 0.251177072525
+dbtime:4961 - 4.69574999809 - 0.163201808929 - 97
+itime:140 - 10.5952959061 - 0.142149925232
+dbtime:5061 - 4.72555565834 - 0.0298056602478 - 100
+error:SKU BRT654495-00 - 17:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU BRT654495-00 - 18:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #140
+itime:142 - 10.6783139706 - 0.0828099250793
+dbtime:5097 - 4.73847198486 - 0.0129163265228 - 36
+itime:144 - 10.7622981071 - 0.0838961601257
+dbtime:5153 - 4.75716662407 - 0.0186946392059 - 56
+itime:146 - 10.9546880722 - 0.192200183868
+dbtime:5212 - 4.86238884926 - 0.105222225189 - 59
+itime:148 - 11.0800380707 - 0.125102996826
+dbtime:5268 - 4.90606069565 - 0.0436718463898 - 56
+itime:150 - 11.1884350777 - 0.108204126358
+dbtime:5324 - 4.95539021492 - 0.0493295192719 - 56
+itime:152 - 11.2886500359 - 0.100080966949
+dbtime:5380 - 4.99469876289 - 0.0393085479736 - 56
+error:SKU BRT654273-00 - 19:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU BRT654273-00 - 20:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #153
+itime:154 - 11.4074859619 - 0.118605852127
+dbtime:5415 - 5.00779604912 - 0.0130972862244 - 35
+itime:156 - 11.4897859097 - 0.082142829895
+dbtime:5472 - 5.02963972092 - 0.0218436717987 - 57
+itime:158 - 11.6232581139 - 0.133233070374
+dbtime:5528 - 5.09325504303 - 0.063615322113 - 56
+itime:160 - 11.7571289539 - 0.133615016937
+dbtime:5587 - 5.15012097359 - 0.0568659305573 - 59
+itime:162 - 11.873718977 - 0.116314888
+dbtime:5643 - 5.20130491257 - 0.0511839389801 - 56
+itime:164 - 11.9576458931 - 0.0837118625641
+dbtime:5699 - 5.2207698822 - 0.019464969635 - 56
+itime:166 - 12.0748560429 - 0.116935014725
+dbtime:5755 - 5.26881504059 - 0.0480451583862 - 56
+itime:168 - 12.1663858891 - 0.0912189483643
+dbtime:5823 - 5.29418516159 - 0.0253701210022 - 68
+itime:170 - 12.2500939369 - 0.0836188793182
+dbtime:5879 - 5.31392526627 - 0.0197401046753 - 56
+itime:172 - 12.3506290913 - 0.100274085999
+dbtime:5938 - 5.33735585213 - 0.0234305858612 - 59
+itime:174 - 12.4339089394 - 0.083037853241
+dbtime:5994 - 5.35866475105 - 0.0213088989258 - 56
+itime:176 - 12.5606350899 - 0.126440048218
+dbtime:6050 - 5.41797876358 - 0.0593140125275 - 56
+itime:178 - 12.6441650391 - 0.0833389759064
+dbtime:6106 - 5.4365196228 - 0.0185408592224 - 56
+itime:180 - 12.727339983 - 0.0829448699951
+dbtime:6174 - 5.46063327789 - 0.0241136550903 - 68
+itime:182 - 12.8105649948 - 0.0831270217896
+dbtime:6230 - 5.48339867592 - 0.0227653980255 - 56
+itime:184 - 13.0038900375 - 0.193234920502
+dbtime:6286 - 5.60856389999 - 0.125165224075 - 56
+itime:186 - 13.0955080986 - 0.0914239883423
+dbtime:6351 - 5.63308143616 - 0.0245175361633 - 65
+itime:188 - 13.2038779259 - 0.10818195343
+dbtime:6407 - 5.65237092972 - 0.0192894935608 - 56
+itime:190 - 13.3796219826 - 0.175498962402
+dbtime:6473 - 5.74703550339 - 0.0946645736694 - 66
+itime:192 - 13.504379034 - 0.124536991119
+dbtime:6541 - 5.80203032494 - 0.0549948215485 - 68
+itime:194 - 13.9315879345 - 0.427115917206
+dbtime:6597 - 6.15686249733 - 0.354832172394 - 56
+itime:196 - 14.0232110023 - 0.0914061069489
+dbtime:6662 - 6.18067669868 - 0.023814201355 - 65
+itime:198 - 14.1069619656 - 0.0835559368134
+dbtime:6718 - 6.19721364975 - 0.0165369510651 - 56
+itime:200 - 14.2065680027 - 0.099308013916
+dbtime:6774 - 6.2208981514 - 0.0236845016479 - 56
+plugin;DownloadableProcessor;debug:Downloadable products importer v1.0.0.1 - file:http://www.rattanoutdoorfurniture.com/media/BrightonConfigurationExamples/BrightonConfigurationExamples.pdf,sort_order:1,Adobe® PDF,sample:http://www.rattanoutdoorfurniture.com/media/BrightonConfigurationExamples/BrightonConfigurationExamples-Sample.pdf,is_shareable:2,number_of_downloads:0;file:http://www.rattanoutdoorfurniture.com/media/BrightonConfigurationExamples/BrightonConfigurationExamples.jpg;sort_order:2;JPEG - Standard Photo File;sample:http://www.rattanoutdoorfurniture.com/media/BrightonConfigurationExamples/BrightonConfigurationExamples-Sample.jpg;is_shareable:3;number_of_downloads:0
+plugin;DownloadableProcessor;warning:SKU BRT-00 - Downloadable products importer v1.0.0.1 - Le fichier n' pas été trouvé à l'emplacement 
+plugin;DownloadableProcessor;warning:SKU BRT-00 - Downloadable products importer v1.0.0.1 - Le fichier n' pas été trouvé à l'emplacement 
+plugin;DownloadableProcessor;warning:SKU BRT-00 - Downloadable products importer v1.0.0.1 - Le fichier n' pas été trouvé à l'emplacement 
+plugin;DownloadableProcessor;warning:SKU BRT-00 - Downloadable products importer v1.0.0.1 - Le fichier n' pas été trouvé à l'emplacement 
+plugin;DownloadableProcessor;warning:SKU BRT-00 - Downloadable products importer v1.0.0.1 - Le fichier n' pas été trouvé à l'emplacement http://www.rattanoutdoorfurniture.com/media/BrightonConfigurationExamples/BrightonConfigurationExamples.pdf
+plugin;DownloadableProcessor;warning:SKU BRT-00 - Downloadable products importer v1.0.0.1 - Le fichier n' pas été trouvé à l'emplacement http://www.rattanoutdoorfurniture.com/media/BrightonConfigurationExamples/BrightonConfigurationExamples.jpg
+plugin;DownloadableProcessor;warning:SKU BRT-00 - Downloadable products importer v1.0.0.1 - Le fichier n' pas été trouvé à l'emplacement 
+plugin;ImageAttributeItemProcessor;warning:SKU BRT-00 - Image attributes processor v1.0.33 - brightonconfigurationexamples-sample.jpg cannot be found in images path
+itime:202 - 14.6925549507 - 0.485892057419
+dbtime:6904 - 6.55197763443 - 0.331079483032 - 130
+itime:204 - 14.8347599506 - 0.141998052597
+dbtime:7028 - 6.61273145676 - 0.0607538223267 - 124
+itime:206 - 15.0183360577 - 0.183298110962
+dbtime:7143 - 6.69123196602 - 0.0785005092621 - 115
+itime:208 - 15.3541030884 - 0.335657119751
+dbtime:7273 - 6.90214490891 - 0.210912942886 - 130
+itime:210 - 15.6046791077 - 0.250365018845
+dbtime:7394 - 7.02061343193 - 0.118468523026 - 121
+itime:212 - 15.9138400555 - 0.308869123459
+dbtime:7495 - 7.19916272163 - 0.178549289703 - 101
+itime:214 - 16.0805211067 - 0.166369199753
+dbtime:7596 - 7.26238918304 - 0.0632264614105 - 101
+itime:216 - 16.2307209969 - 0.150094032288
+dbtime:7698 - 7.32782244682 - 0.0654332637787 - 102
+itime:218 - 16.3985030651 - 0.167500972748
+dbtime:7800 - 7.40949988365 - 0.0816774368286 - 102
+itime:220 - 16.6069560051 - 0.208244085312
+dbtime:7905 - 7.49620842934 - 0.0867085456848 - 105
+itime:222 - 16.7998669147 - 0.192649841309
+dbtime:8020 - 7.58582854271 - 0.0896201133728 - 115
+itime:224 - 16.9747591019 - 0.174670219421
+dbtime:8129 - 7.65182161331 - 0.0659930706024 - 109
+itime:226 - 17.1333870888 - 0.158401012421
+dbtime:8239 - 7.71957588196 - 0.0677542686462 - 110
+itime:228 - 17.2837910652 - 0.150195121765
+dbtime:8350 - 7.7844517231 - 0.0648758411407 - 111
+itime:230 - 17.5509870052 - 0.266860961914
+dbtime:8466 - 7.92695665359 - 0.142504930496 - 116
+itime:232 - 17.7180030346 - 0.166806936264
+dbtime:8580 - 7.98252010345 - 0.0555634498596 - 114
+itime:234 - 17.9613599777 - 0.243077039719
+dbtime:8698 - 8.11895871162 - 0.13643860817 - 118
+itime:236 - 18.2281880379 - 0.266623020172
+dbtime:8824 - 8.2427084446 - 0.123749732971 - 126
+itime:238 - 18.4218480587 - 0.193353176117
+dbtime:8952 - 8.31478071213 - 0.0720722675323 - 128
+itime:240 - 18.6724839211 - 0.250363826752
+dbtime:9076 - 8.45495033264 - 0.140169620514 - 124
+itime:242 - 18.8312370777 - 0.158553123474
+dbtime:9202 - 8.51569008827 - 0.0607397556305 - 126
+itime:244 - 19.0321929455 - 0.200707912445
+dbtime:9327 - 8.60475873947 - 0.0890686511993 - 125
+itime:246 - 19.1997029781 - 0.167285919189
+dbtime:9451 - 8.67095828056 - 0.0661995410919 - 124
+itime:248 - 19.4334449768 - 0.233525037766
+dbtime:9551 - 8.75252223015 - 0.081563949585 - 100
+itime:250 - 19.592263937 - 0.158613920212
+dbtime:9651 - 8.81542062759 - 0.0628983974457 - 100
+itime:252 - 19.8009340763 - 0.208467960358
+dbtime:9776 - 8.89622855186 - 0.0808079242706 - 125
+itime:254 - 19.9683470726 - 0.16720700264
+dbtime:9877 - 8.95293521881 - 0.0567066669464 - 101
+itime:256 - 20.1601150036 - 0.191565990448
+dbtime:9977 - 9.03502988815 - 0.082094669342 - 100
+itime:258 - 20.4858429432 - 0.325451850891
+dbtime:10102 - 9.24978327751 - 0.214753389359 - 125
+itime:260 - 20.6447720528 - 0.158643007278
+dbtime:10227 - 9.31892704964 - 0.0691437721252 - 125
+itime:262 - 20.8119940758 - 0.166995048523
+dbtime:10352 - 9.38741660118 - 0.0684895515442 - 125
+error:SKU POM879162 - 21:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU POM879162 - 22:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #262
+itime:264 - 20.9042348862 - 0.0919528007507
+dbtime:10407 - 9.4100894928 - 0.0226728916168 - 55
+error:SKU POM878929 - 23:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU POM878929 - 24:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #264
+itime:266 - 21.0047500134 - 0.100419998169
+dbtime:10474 - 9.43976044655 - 0.0296709537506 - 67
+error:SKU POM878844 - 25:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU POM878844 - 26:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #266
+itime:268 - 21.1315131187 - 0.126523017883
+dbtime:10541 - 9.47051715851 - 0.0307567119598 - 67
+error:SKU UTP879179 - 27:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU UTP879179 - 28:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #268
+itime:270 - 21.2568840981 - 0.12517619133
+dbtime:10609 - 9.52544999123 - 0.0549328327179 - 68
+error:SKU UTP879193 - 29:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU UTP879193 - 30:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #270
+plugin;ImageAttributeItemProcessor;warning:SKU UTP879193-00 - Image attributes processor v1.0.33 - china-coffee-table-main.jpg cannot be found in images path
+itime:272 - 21.4577450752 - 0.200663089752
+dbtime:10662 - 9.61901831627 - 0.0935683250427 - 53
+error:SKU UTP879186 - 31:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - 
+error:SKU UTP879186 - 32:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'attribute_id' cannot be null - ERROR ON RECORD #272
+itime:273 - 21.6003639698 - 0.14236998558
+dbtime:10730 - 9.67083382607 - 0.0518155097961 - 68
+info:Skus imported OK:257/273
+warning:SKU UTP879186-00 - Skus imported KO:16/273
 plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.3a - Cleaning flat tables before reindex...
 plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.3a - running indexer
 plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.3a - Reindexing ....
 plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.3a - X-Powered-By: PHP/5.4.31<br><br>Content-type: text/html<br><br><br><br><br /><br><b>Warning</b>:  require_once(../engines/.php): failed to open stream: No such file or directory in <b>/home/dev/public_html/magmi/web/magmi_run.php</b> on line <b>12</b><br /><br><br /><br><b>Fatal error</b>:  require_once(): Failed opening required '../engines/.php' (include_path='.:/usr/lib/php:/usr/local/lib/php:/home/dev/public_html/magmi/inc:/home/dev/public_html/magmi/integration/inc:/home/dev/public_html/magmi/engines') in <b>/home/dev/public_html/magmi/web/magmi_run.php</b> on line <b>12</b><br /><br>
-plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.3a - done in 0.22 secs
+plugin;Magmi_ReindexingPlugin;info:Magmi Magento Reindexer v1.0.3a - done in 0.33 secs
 plugin;CategoryImporter;info:On the fly category creator/importer v0.2.5 - Updating Category children count....
 end:Import Ended
