@@ -40,10 +40,11 @@
             </db>
             <default_setup>
                 <connection>
+                    <!--<host><![CDATA[64.251.10.133]]></host>-->
                     <host><![CDATA[localhost]]></host>
-                    <username><![CDATA[rof_live]]></username>
-                    <password><![CDATA[t8A4hhBQG7gY]]></password>
-                    <dbname><![CDATA[rof_live]]></dbname>
+                    <username><![CDATA[rof_magento]]></username>
+                    <password><![CDATA[ezkGPw9Y5MsY]]></password>
+                    <dbname><![CDATA[rof_magento]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
