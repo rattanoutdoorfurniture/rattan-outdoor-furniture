@@ -13,7 +13,7 @@
     <input type="submit" id="glob-search-submit" value="Search"/>
     <div id="search_autocomplete" class="search-autocomplete"></div>
 </form>        </li>
-        <li class="nav-main-item first hide-mobile selected">
+        <li class="nav-main-item first hide-mobile">
             <a href="https://www.rattanoutdoorfurniture.com/" title="Rattan Outdoor Furniture">Home</a>
         </li>
         <li class="level0  first last nav-main-item hide-mobile parent"><a href="https://www.rattanoutdoorfurniture.com/products/" ><span>Products</span></a><ul class="level0"><li class="level1  first parent"><a href="https://www.rattanoutdoorfurniture.com/products/collections/" 1><span>Furniture Collections</span></a><ul class="level1"><li class="level2  first"><a href="https://www.rattanoutdoorfurniture.com/products/collections/java-isle/" 1><span>The Java Isle Collection</span></a></li>
