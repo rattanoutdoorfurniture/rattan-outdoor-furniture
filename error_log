@@ -15618,3 +15618,18 @@ Module compiled with module API=20090626
 PHP    compiled with module API=20100525
 These options need to match
  in Unknown on line 0
+[26-Feb-2015 14:44:48 America/New_York] PHP Warning:  PHP Startup: mcrypt: Unable to initialize module
+Module compiled with module API=20090626
+PHP    compiled with module API=20100525
+These options need to match
+ in Unknown on line 0
+[26-Feb-2015 14:47:33 America/New_York] PHP Warning:  PHP Startup: mcrypt: Unable to initialize module
+Module compiled with module API=20090626
+PHP    compiled with module API=20100525
+These options need to match
+ in Unknown on line 0
+[26-Feb-2015 14:50:49 America/New_York] PHP Warning:  PHP Startup: mcrypt: Unable to initialize module
+Module compiled with module API=20090626
+PHP    compiled with module API=20100525
+These options need to match
+ in Unknown on line 0
