@@ -1,0 +1,53 @@
+
+
+<nav id="nav-main" class="nav-main">
+    <ul id="nav-main-list" class="nav-main-list">
+        <li class="nav-main-item last search hide-mobile">
+            <form id="glob-search-form" class="moblie-hide" action="https://www.rattanoutdoorfurniture.com/catalogsearch/result/" method="get">
+    <input type="search" id="glob-search-input" placeholder="Search"
+           name="q"
+           value=""
+           maxlength="128"
+           form="glob-search-form"
+           autocomplete="on" />
+    <input type="submit" id="glob-search-submit" value="Search"/>
+    <div id="search_autocomplete" class="search-autocomplete"></div>
+</form>        </li>
+        <li class="nav-main-item first hide-mobile">
+            <a href="https://www.rattanoutdoorfurniture.com/" title="Rattan Outdoor Furniture">Home</a>
+        </li>
+        <li class="level0  first active last nav-main-item hide-mobile selected parent"><a href="https://www.rattanoutdoorfurniture.com/products/" ><span>Products</span></a><ul class="level0"><li class="level1  first active parent"><a href="https://www.rattanoutdoorfurniture.com/products/collections/" 1><span>Furniture Collections</span></a><ul class="level1"><li class="level2  first"><a href="https://www.rattanoutdoorfurniture.com/products/collections/java-isle/" 1><span>The Java Isle Collection</span></a></li>
+<li class="level2 "><a href="https://www.rattanoutdoorfurniture.com/products/collections/napa-grove/" 1><span>The Napa Grove Collection</span></a></li>
+<li class="level2 "><a href="https://www.rattanoutdoorfurniture.com/products/collections/pompano/" 1><span>The Pompano Collection</span></a></li>
+<li class="level2  active"><a href="https://www.rattanoutdoorfurniture.com/products/collections/brighton/" 1><span>The Brighton Collection</span></a></li>
+<li class="level2  last"><a href="https://www.rattanoutdoorfurniture.com/products/collections/utopia/" 1><span>The Utopia Collection</span></a></li></ul></li>
+<li class="level1 "><a href="https://www.rattanoutdoorfurniture.com/products/accessories/" 1><span>Accessories</span></a></li>
+<li class="level1 "><a href="https://www.rattanoutdoorfurniture.com/products/bar-furniture/" 1><span>Bar Furniture</span></a></li>
+<li class="level1 "><a href="https://www.rattanoutdoorfurniture.com/products/chairs/" 1><span>Chairs</span></a></li>
+<li class="level1 "><a href="https://www.rattanoutdoorfurniture.com/products/lounge-furniture/" 1><span>Lounge Furniture</span></a></li>
+<li class="level1 "><a href="https://www.rattanoutdoorfurniture.com/products/sectionals/" 1><span>Sectionals</span></a></li>
+<li class="level1 "><a href="https://www.rattanoutdoorfurniture.com/products/sofas/" 1><span>Sofas</span></a></li>
+<li class="level1  last"><a href="https://www.rattanoutdoorfurniture.com/products/tables-and-bases/" 1><span>Tables and Bases</span></a></li></ul></li>        <select class="nav-main-item main-nav-select"><option>Navigate</option><optgroup label="Products"><option class="level0  first active last nav-main-item main-nav-select selected parent" value="https://www.rattanoutdoorfurniture.com/products/"  class="nav-main-item main-nav-select selected" ><span>Products</span></option><optgroup label="Furniture Collections"><option class="level1  first active parent" value="https://www.rattanoutdoorfurniture.com/products/collections/" ><span>Furniture Collections</span></option><option class="level2  first" value="https://www.rattanoutdoorfurniture.com/products/collections/java-isle/" ><span>The Java Isle Collection</span></option>
+<option class="level2 " value="https://www.rattanoutdoorfurniture.com/products/collections/napa-grove/" ><span>The Napa Grove Collection</span></option>
+<option class="level2 " value="https://www.rattanoutdoorfurniture.com/products/collections/pompano/" ><span>The Pompano Collection</span></option>
+<option class="level2  active" value="https://www.rattanoutdoorfurniture.com/products/collections/brighton/" ><span>The Brighton Collection</span></option>
+<option class="level2  last" value="https://www.rattanoutdoorfurniture.com/products/collections/utopia/" ><span>The Utopia Collection</span></option></optgroup>
+<option class="level1 " value="https://www.rattanoutdoorfurniture.com/products/accessories/" ><span>Accessories</span></option>
+<option class="level1 " value="https://www.rattanoutdoorfurniture.com/products/bar-furniture/" ><span>Bar Furniture</span></option>
+<option class="level1 " value="https://www.rattanoutdoorfurniture.com/products/chairs/" ><span>Chairs</span></option>
+<option class="level1 " value="https://www.rattanoutdoorfurniture.com/products/lounge-furniture/" ><span>Lounge Furniture</span></option>
+<option class="level1 " value="https://www.rattanoutdoorfurniture.com/products/sectionals/" ><span>Sectionals</span></option>
+<option class="level1 " value="https://www.rattanoutdoorfurniture.com/products/sofas/" ><span>Sofas</span></option>
+<option class="level1  last" value="https://www.rattanoutdoorfurniture.com/products/tables-and-bases/" ><span>Tables and Bases</span></option></optgroup></select>        <li class="nav-main-item">
+            <a href="https://www.rattanoutdoorfurniture.com/about-us/">About Us</a>
+        </li>
+                <li class="nav-main-item">
+            <a href="https://www.rattanoutdoorfurniture.com/blog/"> blog</a>
+        </li>
+                <li id="mobile-search-toggle-wrap" class="nav-main-item no-display show-mobile-inline">
+            <a href="#" id="mobile-search-toggle">&nbsp;</a>
+        </li>
+    </ul>
+    <div class="main-nav-select-loading"></div>
+</nav>
+
