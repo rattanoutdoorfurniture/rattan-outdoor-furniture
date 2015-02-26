@@ -1,0 +1,23 @@
+/****************************************\
+|* MEDIA QUERY LOADER FOR MOBILE STYLES *|
+\****************************************/
+
+/* #Media Queries
+================================================== */
+
+/* Smaller than standard 960 (devices and browsers) */
+@import url('./under-sized.css') only screen and (max-width: 959px);
+
+/*Remove - Use Mobile Landscape for - Tablet Portrait size to standard 960 (devices and browsers) */
+/*@import url('./tablet-portrait.css') only screen and (min-width: 768px) and (max-width: 959px); */
+
+/* All Mobile Sizes (devices and browser) */
+@import url('./all-mobile.css') only screen and (max-width: 767px);
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+/*@import url('./mobile-landscape.css') only screen and (min-width: 480px) and (max-width: 767px); */
+/* Mobile Landscape Size to Tablet Portrait (include tablet-portrait / undersized) (devices and browsers) */
+@import url('./mobile-landscape.css') only screen and (min-width: 480px) and (max-width: 959px);
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@import url('./mobile-portrait.css') only screen and (max-width: 479px);

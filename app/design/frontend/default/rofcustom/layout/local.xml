@@ -1,0 +1,920 @@
+<?xml version="1.0"?>
+<!--
+/**
+* local.xml
+*
+* Local layout modifications for the RofCustom Theme
+*
+* @category    design
+* @package     rofcustom
+* @copyright   Copyright (c) 2015 Rattan Outdoor Furniture
+*/
+-->
+<layout version="0.1.0">
+
+<!-- ============================================================================================================= -->
+<!-- == Layout Update Templates ================================================================================== -->
+<!-- ============================================================================================================= -->
+
+
+
+<!-- ============================================================================================================= -->
+<!-- == Default (Global) Page Layout ============================================================================= -->
+<!-- ============================================================================================================= -->
+
+
+    <!-- START DEFAULT (ALL) LAYOUT HANDLE ================================================================== -->
+    <default><!-- =========================================================================================== -->
+        <!-- General Removal of Blocks
+        ======================================================================================== -->
+        <remove name="block-banner"/>
+        <remove name="catalog_product_price_template"/>
+
+        <reference name="root"><!-- Start ROOT Reference =============================================== -->
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+        </reference><!-- /End ROOT Reference/ ========================================================== -->
+
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <!-- Google Analytics: Univeral Analytics -->
+            <block type="googleanalytics/ga" name="google_analytics" as="google_analytics" template="googleanalytics/ga.phtml" before="-" />
+            <!-- Remove Unneeded CSS
+            ======================================================================================== -->
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/styles.css</name>
+            </action>
+            <action method="removeItem">
+                <type>css</type>
+                <name>css/print.css</name>
+            </action>
+            <!-- CSS styles
+            ======================================================================================== -->
+            <action method="addCss">
+                <stylesheet>css/reset.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/base.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/skeleton.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/fonts.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/page-header.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/page-footer.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/category-slider.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/home.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/category.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/product.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/cart-checkout.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/layout.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/update.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/media/media-queries.css</stylesheet>
+            </action>
+            <!-- JS
+            ======================================================================================== -->
+            <!-- jQuery Include File (Minified version if Config Merge Enabled) -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name helper="general/getJSifMin">
+                    <file>js/jquery/jquery-2.1.0</file>
+                </name>
+                <params/><if/>
+            </action>
+            <!-- jQuery NoConflict -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery/noconflict.js</name>
+                <params/><if/>
+            </action>
+            <!-- Add Slider Library -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.touchSwipe.min.js</name>
+                <params/>
+                <if/>
+            </action>
+            <!-- Modernizer
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery/modernizr.js</name>
+                <params/><if/>
+            </action> -->
+            <!-- Global JS File -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/head-global.js</name>
+                <params/><if/>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+
+        <reference name="after_body_start"><!-- Start AFTER_BODY_START Reference ======================= -->
+            <block type="core/template" name="fb_root" template="page/html/fb-root.phtml" before="-" />
+        </reference><!-- /End AFTER_BODY_START Reference/ ============================================== -->
+
+        <reference name="right"><!-- Start RIGHT Reference ============================================= -->
+            <remove name="cart_sidebar"/>
+            <remove name="right.poll"/>
+            <remove name="right.permanent.callout"/>
+            <remove name="right.reports.product.viewed"/>
+            <remove name="right.reports.product.compared"/>
+            <remove name="catalog.compare.sidebar"/>
+            <remove name="paypal.partner.right.logo"/>
+        </reference><!-- /End RIGHT Reference/ ========================================================= -->
+
+        <reference name="left"><!-- Start LEFT Reference =============================================== -->
+            <remove name="left.newsletter"/>
+            <remove name="left.permanent.callout"/>
+            <remove name="catalog.leftnav"/>
+        </reference><!-- /End LEFT Reference/ ========================================================== -->
+
+        <reference name="top.links"><!-- Start TOP.LINKS Reference ===================================== -->
+            <!-- Only Remove For Logged Out Users (this would be required to change position of the link) -->
+            <!--<action method="removeLinkByUrl">-->
+                <!--<url helper="customer/getAccountUrl"/>-->
+            <!--</action>-->
+        </reference><!-- /End TOP.LINKS Reference/ ===================================================== -->
+
+        <reference name="catalog.topnav"><!-- Start CATALOG.TOPNAV Reference =========================== -->
+            <block type="core/text_list" name="top.search" as="topSearch" translate="label">
+                <label>Navigation Search</label>
+                <block type="core/template" name="catalogsearch.topsearch" template="catalogsearch/form.mini.phtml"/>
+            </block>
+        </reference><!-- /End CATALOG.TOPNAV Reference/ ================================================ -->
+
+        <reference name="top.container"><!-- Start TOP.CONTAINER Reference ============================= -->
+            <remove name="welcome"/>
+        </reference><!-- /End TOP.CONTAINER Reference/ ================================================= -->
+
+        <reference name="footer"><!-- Start FOOTER Reference =========================================== -->
+            <reference name="footer_links"><!-- Start FOOTER_LINKS Reference =========================== -->
+                <!-- Update ADVANCED SEARCH Footer Link -->
+                <action method="updateLinkByUrl" translate="label title" module="catalogsearch">
+                    <url helper="catalogsearch/getAdvancedSearchUrl" />
+                    <label>Advanced Search</label>
+                    <newUrl />
+                    <title>Advanced Product Search</title>
+                    <prepare/>
+                    <urlParams/>
+                    <position>15</position>
+                </action>
+                <!-- Guest Order Lookup Block added in Sales.xml by Default, Properties edited in app/code/local/Mage/Sales/Block/Guest/Links.php -->
+            </reference><!-- /End FOOTER_LINKS Reference/ ============================================== -->
+            <block type="newsletter/subscribe" name="newsletter_subscribe" as="newsletter_subscribe" template="newsletter/subscribe.phtml" after="footer_links"/>
+        </reference><!-- /End FOOTER Reference/ ======================================================== -->
+    </default><!-- ========================================================================================== -->
+    <!-- /END DEFAULT (ALL) LAYOUT HANDLE/ ================================================================== -->
+
+
+<!-- ============================================================================================================= -->
+<!-- == CMS Page Layouts ========================================================================================= -->
+<!-- ============================================================================================================= -->
+
+
+    <!-- || HOME_PAGE ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- CMS_INDEX_INDEX LAYOUT HANDLE ====================================================================== -->
+    <cms_index_index><!-- =================================================================================== -->
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <!-- Force Home Page Title -->
+            <action method="setForcedTitle">
+                <title>Rattan Outdoor Furniture: Outdoor Patio Furniture</title>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+    </cms_index_index><!-- ================================================================================== -->
+    <!-- /END CMS_INDEX_INDEX LAYOUT HANDLE/ ================================================================ -->
+
+
+    <!-- || LOCATIONS_PAGE |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- CMS_PAGE_LOCATIONS_INDEX LAYOUT HANDLE ============================================================= -->
+    <cms_page_locations_index><!-- ========================================================================== -->
+        <reference name="cms.wrapper"><!-- Start CMS.WRAPPER Reference ================================= -->
+            <block type="catalog/product_list" name="featured_products" template="catalog/product/featured_list.phtml">
+                <action method="setCategoryId">
+                    <category_id helper="general/getCategoryIdByName">
+                        <name>Featured</name>
+                    </category_id>
+                </action>
+            </block>
+            <block type="states/list" name="locations_states_list" as="locations_states_list">
+                <action method="setTitle"><value>Locations Serviced by Rattan Outdoor Furniture - by State</value></action>
+            </block>
+        </reference><!-- /End CMS_PAGE Reference/ ====================================================== -->
+    </cms_page_locations_index><!-- ========================================================================= -->
+    <!-- /END CMS_PAGE_LOCATIONS_INDEX LAYOUT HANDLE/ ======================================================= -->
+
+
+    <!-- || STATE_PAGES ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- CMS_PAGE_LOCATIONS_STATE LAYOUT HANDLE ============================================================= -->
+    <cms_page_locations_state><!-- ========================================================================== -->
+        <reference name="cms.wrapper"><!-- Start CMS.WRAPPER Reference ================================= -->
+            <block type="catalog/product_list" name="featured_products" template="catalog/product/featured_list.phtml">
+                <action method="setCategoryId">
+                    <category_id helper="general/getCategoryIdByName">
+                        <name>Featured</name>
+                    </category_id>
+                </action>
+            </block>
+            <block type="cities/list" name="city_list" after="featured_products"/>
+        </reference><!-- /End CMS.WRAPPER Reference/ =================================================== -->
+    </cms_page_locations_state><!-- ========================================================================= -->
+    <!-- /END CMS_PAGE_LOCATIONS_STATE LAYOUT HANDLE/ ======================================================= -->
+
+
+    <!-- || CITY_PAGES |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- CMS_PAGE_LOCATIONS_CITY LAYOUT HANDLE ============================================================== -->
+    <cms_page_locations_city><!-- =========================================================================== -->
+        <reference name="cms.wrapper"><!-- Start CMS.WRAPPER Reference ================================= -->
+            <block type="catalog/product_list" name="featured_products" template="catalog/product/featured_list.phtml">
+                <action method="setCategoryId">
+                    <category_id helper="general/getCategoryIdByName">
+                        <name>Featured</name>
+                    </category_id>
+                </action>
+            </block>
+        </reference><!-- /End CMS.WRAPPER Reference/ =================================================== -->
+    </cms_page_locations_city><!-- ========================================================================== -->
+    <!-- /END CMS_PAGE_LOCATIONS_CITY LAYOUT HANDLE/ ======================================================== -->
+
+
+    <!-- || CONTACT_US_PAGE ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- START CONTACTS_INDEX_INDEX LAYOUT HANDLE =========================================================== -->
+    <contacts_index_index><!-- ============================================================================== -->
+        <!-- Block Removal -->
+        <remove name="right"/>
+
+        <!-- Set Template -->
+        <reference name="root"><!-- Start ROOT Reference =============================================== -->
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+        </reference><!-- /End ROOT Reference/ ========================================================== -->
+
+        <!-- Set Meta Data -->
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <action method="setDescription" translate="description" module="contacts">
+                <description>Questions? Comments? Concerns? Drop us a line here for a quick and easy solution to any Rattan Outdoor Furniture inquiries you may have.</description>
+            </action>
+            <action method="addItem" module="contacts">
+                <type>skin_css</type>
+                <name>css/contact.css</name>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+    </contacts_index_index><!-- ============================================================================= -->
+    <!-- /END CONTACTS_INDEX_INDEX LAYOUT HANDLE/ =========================================================== -->
+
+
+<!-- ============================================================================================================= -->
+<!-- == Account Status & Page Layouts ============================================================================ -->
+<!-- ============================================================================================================= -->
+
+
+    <!-- START CUSTOMER_LOGGED_OUT LAYOUT HANDLE ============================================================ -->
+    <customer_logged_out><!-- =============================================================================== -->
+        <reference name="top.links"><!-- Start TOP.LINKS Reference ===================================== -->
+            <!-- Only Remove For Logged Out Users (this would be required to change position of the link) -->
+            <action method="removeLinkByUrl">
+                <url helper="customer/getAccountUrl"/>
+            </action>
+
+            <!-- Re-add New LOGIN Link with Updated Properties (LOGIN/REGISTER) -->
+            <action method="updateLinkByUrl" translate="label title" module="customer">
+                <url helper="customer/getLoginUrl"/>
+                <label>Login/Register</label>
+                <newUrl/>
+                <title>Login/Register</title>
+                <prepare/>
+                <urlParams/>
+                <position>20</position>
+                <liParams>
+                    <class>nav-top-item</class>
+                </liParams>
+            </action>
+        </reference><!-- /End TOP.LINKS Reference/ ===================================================== -->
+    </customer_logged_out><!-- ============================================================================== -->
+    <!-- /END CUSTOMER_LOGGED_OUT LAYOUT HANDLE/ ============================================================ -->
+
+
+    <!-- START CUSTOMER_LOGGED_IN LAYOUT HANDLE ============================================================= -->
+    <customer_logged_in><!-- ================================================================================ -->
+        <reference name="top.links"><!-- Start TOP.LINKS Reference ===================================== -->
+            <!-- Re-add New LOGOUT Link with Updated Properties (LOGOUT) -->
+            <action method="updateLinkByUrl" translate="label title" module="customer">
+                <url helper="customer/getLogoutUrl"/>
+                <label>Logout</label>
+                <newUrl/>
+                <title>Log Out</title>
+                <prepare/>
+                <urlParams/>
+                <position>15</position>
+                <liParams>
+                    <class>nav-top-item</class>
+                </liParams>
+            </action>
+        </reference><!-- /End TOP.LINKS Reference/ ===================================================== -->
+    </customer_logged_in><!-- =============================================================================== -->
+    <!-- /END CUSTOMER_LOGGED_IN LAYOUT HANDLE/ ============================================================= -->
+
+
+    <!-- || LOGIN_PAGE |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- START CUSTOMER_ACCOUNT_LOGIN LAYOUT HANDLE ========================================================= -->
+    <customer_account_login><!-- ============================================================================ -->
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <!-- Force Page Title -->
+            <action method="setForcedTitle">
+                <title>Login - Rattan Outdoor Furniture</title>
+            </action>
+
+            <!-- Set Meta Description -->
+            <action method="setDescription">
+                <value>Quickly login to your Rattan Outdoor Furniture account, or register now. Connect with Facebook for an instant account. Seamlessly review and track your orders.</value>
+            </action>
+
+            <!-- Remove Default Social Media Login Button Styles -->
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>inchoo_socialconnect/css/styles.css</name>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+        <reference name="content"><!-- Start CONTENT Reference ========================================= -->
+            <!-- Remove Standard Social Media Button Wrapper -->
+            <action method="unsetChild">
+                <name>inchoo_socialconnect_login</name>
+            </action>
+
+            <reference name="customer_form_login"><!-- Start CUSTOMER_FORM_LOGIN Reference ============= -->
+                <!-- Add Single Facebook Login Button to page -->
+                <block type="inchoo_socialconnect/facebook_button" name="inchoo_socialconnect_facebook_login_button" />
+            </reference><!-- /End CUSTOMER_FORM_LOGIN Reference/ ======================================= -->
+        </reference><!-- /End CONTENT Reference/ ======================================================= -->
+    </customer_account_login><!-- =========================================================================== -->
+    <!-- /END CUSTOMER_ACCOUNT_LOGIN LAYOUT HANDLE/ ========================================================= -->
+
+
+    <!-- || REGISTER_PAGE ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- START CUSTOMER_ACCOUNT_CREATE LAYOUT HANDLE ======================================================== -->
+    <customer_account_create><!-- =========================================================================== -->
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <action method="setForcedTitle">
+                <title>Register - Rattan Outdoor Furniture</title>
+            </action>
+            <action method="setDescription">
+                <value>Quickly have access to Rattan Outdoor Furniture and your purchasing history through our quick and easy registration. Become a member and receive full access now.</value>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+        <reference name="customer_form_register"><!-- Start CUSTOMER_FORM_REGISTER Reference =========== -->
+            <!-- Set Template Back To Default -->
+            <action method="setTemplate" >
+                <template>customer/form/register.phtml</template>
+            </action>
+            <!-- Remove Google and Twitter Buttons -->
+            <action method="unsetChild">
+                <name>inchoo_socialconnect_checkout_google_button</name>
+            </action>
+            <action method="unsetChild">
+                <name>inchoo_socialconnect_checkout_twitter_button</name>
+            </action>
+        </reference><!-- /End CUSTOMER_FORM_REGISTER Reference/ ======================================== -->
+    </customer_account_create><!-- ========================================================================== -->
+    <!-- /END CUSTOMER_ACCOUNT_CREATE LAYOUT HANDLE/ ======================================================== -->
+
+
+    <!-- || ACCOUNT_PAGES ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- START CUSTOMER_ACCOUNT LAYOUT HANDLE =============================================================== -->
+    <customer_account><!-- ================================================================================== -->
+        <!-- Block Removal -->
+        <remove name="catalog.compare.sidebar"/>
+        <remove name="sale.reorder.sidebar"/>
+
+        <!-- Set Template -->
+        <reference name="root"><!-- Start ROOT Reference =============================================== -->
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+        </reference><!-- /End ROOT Reference/ ========================================================== -->
+    </customer_account><!-- ================================================================================= -->
+    <!-- /END CUSTOMER_ACCOUNT LAYOUT HANDLE/ =============================================================== -->
+
+
+    <!-- || ACCOUNT_DASHBOARD_PAGE |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- START CUSTOMER_ACCOUNT_INDEX LAYOUT HANDLE ========================================================= -->
+    <customer_account_index><!-- ============================================================================ -->
+        <!-- Set Template -->
+        <reference name="root"><!-- Start ROOT Reference =============================================== -->
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+        </reference><!-- /End ROOT Reference/ ========================================================== -->
+    </customer_account_index><!-- =========================================================================== -->
+    <!-- /END CUSTOMER_ACCOUNT_INDEX LAYOUT HANDLE/ ========================================================= -->
+
+
+<!-- ============================================================================================================= -->
+<!-- == Category Page Layouts ==================================================================================== -->
+<!-- ============================================================================================================= -->
+
+
+    <!-- START CATALOG_CATEGORY_DEFAULT LAYOUT HANDLE ======================================================= -->
+    <catalog_category_default><!-- ========================================================================== -->
+        <!-- Block Removals
+        ======================================================================================== -->
+        <remove name="left"/>
+
+        <reference name="content"><!-- Start CONTENT Reference ========================================= -->
+            <reference name="product_list"><!-- Start PRODUCT_LIST Reference ======================= -->
+                <action method="addColumnCountLayoutDepend"><layout>empty</layout><count>4</count></action>
+                <action method="addColumnCountLayoutDepend"><layout>one_column</layout><count>4</count></action>
+                <action method="addColumnCountLayoutDepend"><layout>two_columns_left</layout><count>4</count></action>
+                <action method="addColumnCountLayoutDepend"><layout>two_columns_right</layout><count>4</count></action>
+                <action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>4</count></action>
+                <action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
+                <block type="page/html_pager" name="product_list_pager" template="catalog/product/list/pager.phtml"/>
+            </reference><!-- /End PRODUCT_LIST Reference/ ========================================== -->
+        </reference><!-- /End CONTENT Reference/ ======================================================= -->
+    </catalog_category_default><!-- ========================================================================= -->
+    <!-- /END CATALOG_CATEGORY_DEFAULT LAYOUT HANDLE/ ======================================================= -->
+
+
+    <!-- START CATALOG_CATEGORY_LAYERED LAYOUT HANDLE ======================================================= -->
+    <catalog_category_layered><!-- ========================================================================== -->
+        <!-- Block Removals
+        ======================================================================================== -->
+        <remove name="left"/>
+
+        <reference name="content"><!-- Start CONTENT Reference ========================================= -->
+            <reference name="product_list"><!-- Start PRODUCT_LIST Reference ======================= -->
+                <action method="addColumnCountLayoutDepend"><layout>empty</layout><count>4</count></action>
+                <action method="addColumnCountLayoutDepend"><layout>one_column</layout><count>4</count></action>
+                <action method="addColumnCountLayoutDepend"><layout>two_columns_left</layout><count>4</count></action>
+                <action method="addColumnCountLayoutDepend"><layout>two_columns_right</layout><count>4</count></action>
+                <action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>4</count></action>
+                <action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
+                <block type="page/html_pager" name="product_list_pager" template="catalog/product/list/pager.phtml"/>
+            </reference><!-- /End PRODUCT_LIST Reference/ ========================================== -->
+        </reference><!-- /End CONTENT Reference/ ======================================================= -->
+    </catalog_category_layered><!-- ========================================================================= -->
+    <!-- /END CATALOG_CATEGORY_LAYERED LAYOUT HANDLE/ ======================================================= -->
+
+
+<!-- ============================================================================================================= -->
+<!-- == Product Page Layouts ===================================================================================== -->
+<!-- ============================================================================================================= -->
+
+
+    <!-- START CATALOG_PRODUCT_VIEW LAYOUT HANDLE =========================================================== -->
+    <catalog_product_view><!-- ============================================================================== -->
+        <!-- Block Removals
+        ======================================================================================== -->
+        <remove name="right"/>
+
+        <reference name="root"><!-- Start ROOT Reference =============================================== -->
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+        </reference><!-- /End ROOT Reference/ ========================================================== -->
+
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <!-- Remove 2.1.0 jQuery - Lightboxes uses 1.7 -->
+            <action method="removeItem">
+                <type>skin_js</type>
+                <name helper="general/getJSifMin">
+                    <file>js/jquery/jquery-2.1.0</file>
+                </name>
+            </action>
+            <!-- jQuery NoConflict -->
+            <action method="removeItem">
+                <type>skin_js</type>
+                <name>js/jquery/noconflict.js</name>
+            </action>
+            <!-- Lightboxes Head Block - Adds jQuery 1.7, noconflict, and modenizer -->
+            <block type="page/html_head" name="lightboxes_head" as="lightboxes_head" template="lightboxes/head.phtml" before="-">
+                <block type="lightboxes/lightboxes" name="jquery_inclusion" as="jquery_inclusion" template="lightboxes/jquery_inclusion.phtml" />
+                <block type="lightboxes/lightboxes" name="lightboxes_inclusion" as="lightboxes_inclusion" template="lightboxes/lightboxes_inclusion.phtml" />
+                <block type="lightboxes/lightboxes" name="lightboxes_initialization" as="lightboxes_initialization" template="lightboxes/lightboxes_initialization.phtml" />
+            </block>
+            <!-- Add Default-Option select script -/-/>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/default-options.js</name>
+                <params/><if/>
+            </action> -->
+            <!-- Add Custom Product JS -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/products.js</name>
+                <params/><if/>
+            </action>
+            <!-- Add FAQs CSS for proper display of the FAQs tab on product page -->
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>faqs/faqs.css</name>
+                <params/><if/>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+
+        <reference name="content"><!-- Start CONTENT Reference ========================================= -->
+            <remove name="options_js"/>
+            <remove name="html_calendar"/>
+            <reference name="product.info"><!-- Start PRODUCT.INFO Reference =========================== -->
+                <reference name="product.info.media"><!-- Start PRODUCT.INFO.MEDIA Reference =========== -->
+                    <action method="setTemplate" ifconfig="lightboxes/option/active"><template>lightboxes/media.phtml</template></action>
+                    <block type="lightboxes/lightboxes" name="jquery_inclusion" as="jquery_inclusion" template="lightboxes/jquery_inclusion.phtml" />
+                    <block type="lightboxes/lightboxes" name="lightboxes_inclusion" as="lightboxes_inclusion" template="lightboxes/lightboxes_inclusion.phtml" />
+                    <block type="lightboxes/lightboxes" name="lightboxes_initialization" as="lightboxes_initialization" template="lightboxes/lightboxes_initialization.phtml" />
+                </reference><!-- /End PRODUCT.INFO.MEDIA Reference/ ==================================== -->
+
+                <!-- Start PRODUCT_OPTIONS_WRAPPER_BOTTOM Reference ==================================== -->
+                <reference name="product_options_wrapper_bottom">
+                    <remove name="product.tierprices"/>
+                    <remove name="product.clone_prices"/>
+                    <remove name="product.info.addto"/>
+                </reference>
+                <!-- /End PRODUCT_OPTIONS_WRAPPER_BOTTOM Reference/ ==================================== -->
+
+                <block type="review/product_view_list" name="product.info.product_additional_data" as="reviews" template="review/product/view/review_summary.phtml" before="container2" />
+            </reference><!-- /End PRODUCT.INFO Reference/ ============================================== -->
+        </reference><!-- /End CONTENT Reference ======================================================== -->
+    </catalog_product_view><!-- ============================================================================= -->
+    <!-- /END CATALOG_PRODUCT_VIEW LAYOUT HANDLE/ =========================================================== -->
+
+
+    <!-- START CATALOG_PRODUCT_SEND LAYOUT HANDLE =========================================================== -->
+    <catalog_product_send><!-- ============================================================================== -->
+        <!-- Block Removals
+        ======================================================================================== -->
+        <remove name="right"/>
+
+        <reference name="root"><!-- Start ROOT Reference =============================================== -->
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference><!-- /End ROOT Reference/ ========================================================== -->
+
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <action method="setTitle" translate="title">
+                <title>Email a Friend</title>
+            </action>
+            <action method="setDescription" translate="value">
+                <value>Send an email to share the enjoyment of Rattan Outdoor Furniture and our premier products and accessories with all your friends and family.</value>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+    </catalog_product_send><!-- ============================================================================= -->
+    <!-- /END CATALOG_PRODUCT_SEND LAYOUT HANDLE/ =========================================================== -->
+
+
+    <!-- START SENDFRIEND_PRODUCT_SEND LAYOUT HANDLE ======================================================== -->
+    <sendfriend_product_send><!-- =========================================================================== -->
+        <!-- Borrow Styles from catalog_product_send Handle -->
+        <update handle="catalog_product_send"/>
+
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/sendfriend.css</name>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+
+        <reference name="content"><!-- Start CONTENT Reference ========================================= -->
+            <action method="unsetChild">
+                <name>product.send</name>
+            </action>
+        </reference><!-- /End CONTENT Reference/ ======================================================= -->
+    </sendfriend_product_send><!-- ========================================================================== -->
+    <!-- /END SENDFRIEND_PRODUCT_SEND LAYOUT HANDLE/ ======================================================== -->
+
+
+    <!-- START REVIEW_PRODUCT_LIST LAYOUT HANDLE ============================================================ -->
+    <review_product_list><!-- =============================================================================== -->
+        <reference name="root"><!-- Start ROOT Reference =============================================== -->
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+        </reference><!-- /End ROOT Reference/ ========================================================== -->
+
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <!-- Remove 2.1.0 jQuery - Lightboxes uses 1.7 -->
+            <action method="removeItem">
+                <type>skin_js</type>
+                <name helper="general/getJSifMin">
+                    <file>js/jquery/jquery-2.1.0</file>
+                </name>
+            </action>
+            <!-- jQuery NoConflict -->
+            <action method="removeItem">
+                <type>skin_js</type>
+                <name>js/jquery/noconflict.js</name>
+            </action>
+            <!-- Lightboxes Head Block - Adds jQuery 1.7, noconflict, and modenizer -->
+            <block type="page/html_head" name="lightboxes_head" as="lightboxes_head" template="lightboxes/head.phtml">
+                <block type="lightboxes/lightboxes" name="jquery_inclusion" as="jquery_inclusion" template="lightboxes/jquery_inclusion.phtml" />
+                <block type="lightboxes/lightboxes" name="lightboxes_inclusion" as="lightboxes_inclusion" template="lightboxes/lightboxes_inclusion.phtml" />
+                <block type="lightboxes/lightboxes" name="lightboxes_initialization" as="lightboxes_initialization" template="lightboxes/lightboxes_initialization.phtml" />
+            </block>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+
+        <reference name="product.info.media"><!-- Start PRODUCT.INFO.MEDIA Reference =================== -->
+            <action method="setTemplate" ifconfig="lightboxes/option/active"><template>lightboxes/media.phtml</template></action>
+            <block type="lightboxes/lightboxes" name="jquery_inclusion" as="jquery_inclusion" template="lightboxes/jquery_inclusion.phtml" />
+            <block type="lightboxes/lightboxes" name="lightboxes_inclusion" as="lightboxes_inclusion" template="lightboxes/lightboxes_inclusion.phtml" />
+            <block type="lightboxes/lightboxes" name="lightboxes_initialization" as="lightboxes_initialization" template="lightboxes/lightboxes_initialization.phtml" />
+        </reference><!-- /End PRODUCT.INFO.MEDIA Reference/ ============================================ -->
+    </review_product_list><!-- ============================================================================== -->
+    <!-- /END REVIEW_PRODUCT_LIST LAYOUT HANDLE/ ============================================================ -->
+
+
+    <!-- START PRODUCT_TYPE_CONFIGURABLE LAYOUT HANDLE ====================================================== -->
+    <PRODUCT_TYPE_configurable><!-- ========================================================================= -->
+        <reference name="product.info.upsell"><!-- Start PRODUCT.INFO.UPSELL Reference ================= -->
+            <action method="addPriceBlockType">
+                <type>bundle</type>
+                <block>bundle/catalog_product_price</block>
+                <template>bundle/catalog/product/price.phtml</template>
+            </action>
+            <action method="setItemLimit"><type>bundle</type><limit>4</limit></action>
+        </reference><!-- /End PRODUCT.INFO.UPSELL Reference/ =========================================== -->
+    </PRODUCT_TYPE_configurable><!-- ======================================================================== -->
+    <!-- /END PRODUCT_TYPE_CONFIGURABLE LAYOUT HANDLE/ ====================================================== -->
+
+
+    <!-- START PRODUCT_TYPE_BUNDLE LAYOUT HANDLE ============================================================ -->
+    <PRODUCT_TYPE_bundle><!-- =============================================================================== -->
+        <reference name="product.info.upsell"><!-- Start PRODUCT.INFO.UPSELL Reference ================= -->
+            <action method="addPriceBlockType">
+                <type>bundle</type>
+                <block>bundle/catalog_product_price</block>
+                <template>bundle/catalog/product/price.phtml</template>
+            </action>
+            <action method="setItemLimit"><type>bundle</type><limit>4</limit></action>
+        </reference><!-- /End PRODUCT.INFO.UPSELL Reference/ =========================================== -->
+    </PRODUCT_TYPE_bundle><!-- ============================================================================== -->
+    <!-- /END PRODUCT_TYPE_BUNDLE LAYOUT HANDLE/ ============================================================ -->
+
+
+<!-- ============================================================================================================= -->
+<!-- == Cart/Checkout Page Layouts =============================================================================== -->
+<!-- ============================================================================================================= -->
+
+
+    <!-- START CHECKOUT_CART_INDEX LAYOUT HANDLE ============================================================ -->
+    <checkout_cart_index><!-- =============================================================================== -->
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <action method="setDescription">
+                <value>Check out with Rattan Outdoor Furniture and see how easy it is to purchase high-quality outdoor furniture.</value>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+
+        <reference name="content"><!-- Start CONTENT Reference ========================================= -->
+            <reference name="methods"><!-- Start METHODS Reference ===================================== -->
+                <remove name="checkout.cart.methods.multishipping"/>
+            </reference><!-- /End METHODS Reference ==================================================== -->
+
+            <reference name="totals"><!-- Start TOTALS Reference ======================================= -->
+                <block type="checkout/cart_shipping" name="checkout.cart.shipping" as="shipping" template="checkout/cart/shipping.phtml"/>
+            </reference><!-- /End TOTALS Reference ===================================================== -->
+        </reference><!-- /End CONTENT Reference ======================================================== -->
+    </checkout_cart_index><!-- ============================================================================== -->
+    <!-- /END CHECKOUT_CART_INDEX LAYOUT HANDLE/ ============================================================ -->
+
+
+    <!-- START CHECKOUT_ONEPAGE_INDEX ======================================================================= -->
+    <checkout_onepage_index><!-- ============================================================================ -->
+        <reference name="root"><!-- Start ROOT Reference =============================================== -->
+            <action method="setTemplate">
+                <template>page/onepage-checkout.phtml</template>
+            </action>
+        </reference><!-- /End ROOT Reference/ ========================================================== -->
+
+        <reference name="right"><!-- Start RIGHT Reference ============================================= -->
+            <reference name="checkout.progress.wrapper"><!-- Start CHECKOUT.PROGRESS.WRAPPER Reference = -->
+                <action method="setElementClass">
+                    <value>six columns</value>
+                </action>
+                <reference name="checkout.progress"><!-- Start CHECKOUT.PROGRESS Reference ============= -->
+                    <block type="checkout/cart_totals" name="total_sidebar" as="total_sidebar" template="checkout/onepage/review/totals_right.phtml" before="-">
+                        <action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                        <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                        <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                    </block>
+                </reference><!-- /End CHECKOUT.PROGRESS Reference/ ===================================== -->
+            </reference><!-- /End CHECKOUT.PROGRESS.WRAPPER Reference ================================== -->
+        </reference><!-- /End RIGHT Reference/ ========================================================= -->
+
+        <reference name="content"><!-- Start CONTENT Reference ========================================= -->
+            <reference name="checkout.onepage"><!-- Start CHECKOUT.ONEPAGE Reference =================== -->
+                <remove name="shipping_method"/>
+                <remove name="totals"/>
+                <reference name="checkout.onepage.login"><!-- Start CHECKOUT.ONEPAGE.LOGIN Reference === -->
+                    <action method="setTemplate" >
+                        <template>checkout/onepage/login.phtml</template>
+                    </action>
+                </reference><!-- /End CHECKOUT.ONEPAGE.LOGIN Reference/ ================================ -->
+            </reference><!-- /End CHECKOUT.ONEPAGE Reference =========================================== -->
+        </reference><!-- /End CONTENT Reference ======================================================== -->
+    </checkout_onepage_index><!-- =========================================================================== -->
+    <!-- /END CHECKOUT_ONEPAGE_INDEX LAYOUT HANDLE/ ========================================================= -->
+
+
+    <!-- START CHECKOUT_ONEPAGE_PROGRESS LAYOUT HANDLE ====================================================== -->
+    <checkout_onpage_progress><!-- ========================================================================== -->
+        <reference name="root"><!-- Start ROOT Reference =============================================== -->
+            <block type="checkout/cart_totals" name="total_sidebar" as="total_sidebar" template="checkout/onepage/review/totals_right.phtml" before="-">
+                <action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/cart/sidebar/default.phtml</template></action>
+            </block>
+        </reference><!-- /End ROOT Reference/ ========================================================== -->
+    </checkout_onpage_progress><!-- ========================================================================== -->
+    <!-- /END CHECKOUT_ONEPAGE_PROGRESS LAYOUT HANDLE/ ======================================================= -->
+
+
+<!-- ============================================================================================================= -->
+<!-- == Sales Order Page Layouts ================================================================================= -->
+<!-- ============================================================================================================= -->
+
+
+    <!-- START SALES_ORDER_VIEW LAYOUT HANDLE =============================================================== -->
+    <sales_order_view><!-- ================================================================================== -->
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <!-- Add Account Styles -->
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/account.css</name>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+    </sales_order_view><!-- ================================================================================= -->
+    <!-- /END SALES_ORDER_VIEW LAYOUT HANDLE/ =============================================================== -->
+
+
+    <!-- START SALES_GUEST_FORM LAYOUT HANDLE =============================================================== -->
+    <sales_guest_form><!-- ================================================================================== -->
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+           <!-- Set Page Title -->
+            <action method="setTitle" translate="title">
+                <title>Search Order</title>
+            </action>
+            <!-- Set Meta Description -->
+            <action method="setDescription">
+                <value>Looking for the status of your order? Search directly online or call our qualified customer service representatives at (844) 2-RATTAN. We want to ensure you're always aware of where your order stands with Rattan Outdoor Furniture.</value>
+            </action>
+            <!-- Add Guest Order Lookup Styles -->
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/guest-order-lookup.css</name>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+    </sales_guest_form><!-- ================================================================================= -->
+    <!-- /END SALES_GUEST_FORM LAYOUT HANDLE/ =============================================================== -->
+
+
+<!-- ============================================================================================================= -->
+<!-- == Search Page Layouts ====================================================================================== -->
+<!-- ============================================================================================================= -->
+
+
+    <!-- CATALOGSEARCH_RESULT_INDEX LAYOUT HANDLE =========================================================== -->
+    <catalogsearch_result_index><!-- ======================================================================== -->
+        <!-- Blocks Removal -->
+        <remove name="left"/>
+        <remove name="right"/>
+
+        <reference name="root"><!-- Start ROOT Reference =============================================== -->
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference><!-- /End ROOT Reference/ ========================================================== -->
+
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/search.css</name>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+
+        <reference name="search_result_list"><!-- Start SEARCH_RESULT_LIST Reference =================== -->
+            <reference name="product_list_toolbar"><!-- Start PRODUCT_LIST_TOOLBAR Reference =========== -->
+                <action method="setDefaultGridPerPage"><limit>9</limit></action>
+            </reference><!-- /End PRODUCT_LIST_TOOLBAR Reference ======================================= -->
+            <action method="addColumnCountLayoutDepend"><layout>empty</layout><count>4</count></action>
+            <action method="addColumnCountLayoutDepend"><layout>one_column</layout><count>3</count></action>
+            <action method="addColumnCountLayoutDepend"><layout>two_columns_left</layout><count>3</count></action>
+            <action method="addColumnCountLayoutDepend"><layout>two_columns_right</layout><count>3</count></action>
+            <action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>3</count></action>
+        </reference><!-- /End SEARCH_RESULT_LIST Reference/ ============================================ -->
+    </catalogsearch_result_index><!-- ======================================================================= -->
+    <!-- /END CATALOGSEARCH_RESULT_INDEX LAYOUT HANDLE/ ===================================================== -->
+
+
+    <!-- CATALOGSEARCH_ADVANCED_INDEX LAYOUT HANDLE ========================================================= -->
+    <catalogsearch_advanced_index><!-- ====================================================================== -->
+        <!-- Blocks Removal -->
+        <remove name="right"/>
+
+        <reference name="root"><!-- Start ROOT Reference =============================================== -->
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference><!-- /End ROOT Reference/ ========================================================== -->
+
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <action method="setTitle" translate="title" module="catalogsearch">
+                <title>Advanced Product Search</title>
+            </action>
+            <action method="setDescription">
+                <value>Look up our premium products through our advanced search, where you can look up specifics to discover any particular piece for purchase. Rattan Outdoor Furniture makes purchases quick, easy and accessible.</value>
+            </action>
+            <action method="removeItem">
+                <type>js_css</type>
+                <name>calendar/calendar-win2k-1.css</name>
+            </action>
+            <action method="removeItem">
+                <type>js</type>
+                <name>calendar/calendar.js</name>
+            </action>
+            <action method="removeItem">
+                <type>js</type>
+                <name>calendar/calendar-setup.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/search.css</name>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+
+        <reference name="content"><!-- Start CONTENT Reference ========================================= -->
+            <remove name="html_calendar"/>
+        </reference><!-- /End CONTENT Reference/ ======================================================= -->
+    </catalogsearch_advanced_index><!-- ===================================================================== -->
+    <!-- /END CATALOGSEARCH_ADVANCED_INDEX LAYOUT HANDLE/ =================================================== -->
+
+
+    <!-- CATALOGSEARCH_ADVANCED_RESULT LAYOUT HANDLE ======================================================== -->
+    <catalogsearch_advanced_result><!-- ===================================================================== -->
+        <!-- Update with Settings of Simple Search: Same Values -->
+        <update handle="catalogsearch_result_index"/>
+    </catalogsearch_advanced_result><!-- ==================================================================== -->
+    <!-- /END CATALOGSEARCH_ADVANCED_RESULT LAYOUT HANDLE/ ================================================== -->
+
+
+<!-- ============================================================================================================= -->
+<!-- == Sitemap Page Layouts ===================================================================================== -->
+<!-- ============================================================================================================= -->
+
+
+    <!-- CATALOG_SEO_SITEMAP_CATEGORY LAYOUT HANDLE ========================================================= -->
+    <catalog_seo_sitemap_category><!-- ====================================================================== -->
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <action method="setTitle" translate="title" module="catalog">
+                <title>Category Site Map</title>
+            </action>
+            <action method="setDescription" translate="value" module="catalog">
+                <value>Search our site for a specific category or product by viewing Rattan Outdoor Furniture's site map. Find leading rattan and wicker furnishings today.</value>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+    </catalog_seo_sitemap_category><!-- ===================================================================== -->
+    <!-- /END CATALOG_SEO_SITEMAP_CATEGORY LAYOUT HANDLE/ =================================================== -->
+
+
+    <!-- CATALOG_SEO_SITEMAP_CATEGORY_TREE LAYOUT HANDLE ==================================================== -->
+    <catalog_seo_sitemap_category_tree><!-- ================================================================= -->
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <action method="setTitle" translate="title" module="catalog">
+                <title>Category Site Map</title>
+            </action>
+            <action method="setDescription" translate="value" module="catalog">
+                <value>Looking for a specific kind of product but unsure of what style you'd like to choose? Browse our category tree and view our collections with ease.</value>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+    </catalog_seo_sitemap_category_tree><!-- ================================================================ -->
+    <!-- /END CATALOG_SEO_SITEMAP_CATEGORY_TREE LAYOUT HANDLE/ ============================================== -->
+
+
+    <!-- CATALOG_SEO_SITEMAP_PRODUCT LAYOUT HANDLE ========================================================== -->
+    <catalog_seo_sitemap_product><!-- ======================================================================= -->
+        <reference name="head"><!-- Start HEAD Reference =============================================== -->
+            <action method="setTitle" translate="title" module="catalog">
+                <title>Product Site Map</title>
+            </action>
+            <action method="setDescription" translate="value" module="catalog">
+                <value>See our complete product list here and find incredibly low prices on your favorite furniture collections at Rattan Outdoor Furniture.</value>
+            </action>
+        </reference><!-- /End HEAD Reference/ ========================================================== -->
+    </catalog_seo_sitemap_product><!-- ====================================================================== -->
+    <!-- /END CATALOG_SEO_SITEMAP_PRODUCT LAYOUT HANDLE/ ==================================================== -->
+
+
+</layout>

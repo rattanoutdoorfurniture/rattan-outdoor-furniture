@@ -1,0 +1,114 @@
+/********************** Tabs */
+
+.product-collateral .padder {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #D5D5D5;
+	border-top:0;
+	clear: both;
+	padding: 20px;
+}
+.product-view .tabs {
+	border-bottom: 1px solid #D5D5D5;
+	margin: 15px 0 0;
+	overflow: hidden;
+	zoom: 1;
+}
+.product-view .tabs li {
+	border:1px solid #dddddd;
+	border-bottom:0;
+	font-size: 16px;
+	line-height: 17px;
+	list-style:none;
+	cursor: pointer;
+	float: left;
+	font-size: 18px;
+	margin: 0 -1px 0 0;
+	background:#fff;
+	padding: ;
+	text-align: center;
+	color:#000;
+	transition: all 0.6s ease 0s;
+}
+.product-view .tabs li.active {
+   background: none repeat scroll 0 0 #F71919;
+}
+
+.product-view .tabs li.active a{
+	color:#fff;
+}
+
+.product-view .tabs li.last {
+	border-right:0;
+}
+.product-view .tabs a {
+	color:#000000;
+display: block;
+font-size: 14px;
+line-height: 27px;
+padding: 17px 10px;
+text-decoration: none;
+text-decoration: none;
+}
+
+
+#product_tabs_tags_tabbed_contents.input-box input {
+	width: 300px;
+}
+#product_tabs_tags_tabbed_contents .input-box {
+	width: 300px;
+	float:left;
+	margin-right: 10px;
+}
+
+#product_tabs_related_tabbed_contents li {
+  display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    text-align: center;
+    width: 12%;
+}
+
+.checkbox-container{
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+#product_tabs_related_tabbed_contents ol {
+	clear: both;
+}
+.product-collateral:after {
+	content:".";
+	display:block;
+	clear:both;
+	font-size:0;
+	line-height:0;
+	height:0;
+	overflow:hidden;
+	zoom: 1
+}
+
+ @media only screen and (max-width: 800px) {
+	 .product-view .tabs li{
+border: 1px solid #DDDDDD !important;
+    margin: 1%;
+    padding: 2%;
+    width: 94%;
+	 }
+	 
+	 
+.product-view .tabs a {
+
+
+    font-size: 21px;
+	line-height:normal;
+    padding: 17px 10px;
+    text-transform: uppercase;
+}
+	
+	
+
+	 
+	 
+ }
+ 

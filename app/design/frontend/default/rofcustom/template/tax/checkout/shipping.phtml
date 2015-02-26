@@ -1,0 +1,79 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var $this Mage_Tax_Block_Checkout_Shipping
+ * @see Mage_Tax_Block_Checkout_Shipping
+ */
+?>
+<?php if(substr(Mage::app()->getRequest()->getRequestString(), 0, 8) === "/onepage"): ?>
+    <tr>
+        <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="a-right" colspan="<?php echo $this->getColspan(); ?>">
+            <?php $shippingTitle = $this->getTotal()->getTitle() ?>
+            <?php $newShippingTitle = array(); ?>
+            <?php $matched = preg_match_all('/\(([A-Za-z0-9\s\-]+?)\)/', $shippingTitle, $newShippingTitle); ?>
+            <?php $newShippingTitle = count($newShippingTitle) >= 2 ? (count($newShippingTitle[1]) ? $newShippingTitle[1][0] : $newShippingTitle[1]) : ($newShippingTitle = $shippingTitle); ?>
+            <?php echo $matched===1 ? $newShippingTitle : $shippingTitle;  ?>
+        </td>
+        <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="a-right">
+            <?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValue()) ?>
+        </td>
+    </tr>
+<?php elseif ($this->displayBoth()):?>
+<tr id="cart-subtotal-table-shipping" class="cart-subtotal-table-row clearfix">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-left">
+        <?php echo $this->getExcludeTaxLabel() ?>
+    </td>
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-right">
+        <?php echo $this->helper('checkout')->formatPrice($this->getShippingExcludeTax()) ?>
+    </td>
+</tr>
+<tr id="cart-subtotal-table-shipping-taxed" class="cart-subtotal-table-row clearfix">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-left">
+        <?php echo $this->getIncludeTaxLabel() ?>
+    </td>
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-right">
+        <?php echo $this->helper('checkout')->formatPrice($this->getShippingIncludeTax()) ?>
+    </td>
+</tr>
+<?php elseif($this->displayIncludeTax()) : ?>
+<tr id="cart-subtotal-table-shipping-taxed" class="cart-subtotal-table-row clearfix">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-left">
+        <?php echo $this->getTotal()->getTitle() ?>
+    </td>
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-right">
+        <?php echo $this->helper('checkout')->formatPrice($this->getShippingIncludeTax()) ?>
+    </td>
+</tr>
+<?php else:?>
+<tr id="cart-subtotal-table-shipping" class="cart-subtotal-table-row clearfix">
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-left">
+        <?php echo $this->escapeHtml($this->getTotal()->getTitle()) ?>
+    </td>
+    <td<?php if(strlen($inline_style = $this->getStyle())): ?> style="<?php echo $inline_style; ?>"<?php endif; ?> class="cart-subtotal-table-right">
+        <?php echo $this->helper('checkout')->formatPrice($this->getShippingExcludeTax()) ?>
+    </td>
+</tr>
+<?php endif;?>

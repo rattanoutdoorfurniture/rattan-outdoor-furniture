@@ -1,0 +1,12 @@
+/* Webfont: FuturaStd-CondExtraBoldObl */@font-face {
+    font-family: 'FuturaStdCondensedExtBd';
+    src: url('FuturaStd-CondExtraBoldObl.eot'); /* IE9 Compat Modes */
+    src: url('FuturaStd-CondExtraBoldObl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('FuturaStd-CondExtraBoldObl.woff') format('woff'), /* Modern Browsers */
+         url('FuturaStd-CondExtraBoldObl.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('FuturaStd-CondExtraBoldObl.svg#FuturaStd-CondExtraBoldObl') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

@@ -1,0 +1,49 @@
+
+<div id="page-footer-banner" class="sixteen columns">
+    <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('footer-banner')->toHtml(); ?>
+</div>
+
+<footer id="page-footer">
+    <hr class="footer-rule sixteen columns"/>
+    <aside class="footer-box three columns">
+        <div class="footer-box-inner">
+            <h5>Customer Services</h5>
+            <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('footer-links-customer-service')->toHtml(); ?>
+        </div>
+    </aside>
+    <aside class="footer-box three columns">
+        <div class="footer-box-inner footer-links-wrap">
+            <h5 class="footer-links-heading">Information</h5>
+            <?php echo $this->getChildHtml("footer_links"); ?>
+        </div>
+    </aside>
+    <aside class="footer-box three columns">
+        <div class="footer-box-inner">
+            <h5>My Account</h5>
+            <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('footer-links-my-account')->toHtml(); ?>
+        </div>
+    </aside>
+    <aside class="footer-box four columns">
+        <div class="footer-box-inner">
+            <?php echo $this->getChildHtml("newsletter_subscribe"); ?>
+            <div id="footer-social">
+                <h6 id="footer-social-label">Follow Us On:</h6>
+                <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('social-footer')->toHtml(); ?>
+            </div>
+        </div>
+    </aside>
+    <aside class="footer-box three columns">
+        <div class="footer-box-inner last">
+            <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('footer-logo')->toHtml(); ?>
+        </div>
+    </aside>
+    <div class="clear"></div>
+    <hr class="footer-rule sixteen columns"/>
+    <div id="footer-sub">
+        <div id="footer-sub-copyright" class="eight columns"><?php echo Mage::getStoreConfig('design/footer/copyright'); ?></div>
+        <div id="footer-sub-icons" class="eight columns">
+            <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('footer-badges')->toHtml(); ?>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</footer>

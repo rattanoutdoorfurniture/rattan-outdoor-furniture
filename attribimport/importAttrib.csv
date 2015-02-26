@@ -1,0 +1,66 @@
+attribute_id|entity_type_id|attribute_code|attribute_model|backend_model|backend_type|backend_table|frontend_model|frontend_input|frontend_label|frontend_class|source_model|is_required|is_user_defined|default_value|is_unique|note|frontend_input_renderer|is_global|is_visible|is_searchable|is_filterable|is_comparable|is_visible_on_front|is_html_allowed_on_front|is_used_for_price_rules|is_filterable_in_search|used_in_product_listing|used_for_sort_by|is_configurable|apply_to|is_visible_in_advanced_search|position|is_wysiwyg_enabled|is_used_for_promo_rules|_options
+71|4|name|||varchar|||text|Name|||1|0||0|||0|1|1|0|0|0|0|0|0|1|1|1||1|0|0|0|
+72|4|description|||text|||textarea|Description|||1|0||0|||0|1|1|0|1|0|1|0|0|0|0|1||1|0|1|0|
+73|4|short_description|||text|||textarea|"Short Description"|||1|0||0|||0|1|1|0|1|0|1|0|0|1|0|1||1|0|1|0|
+74|4|sku||catalog/product_attribute_backend_sku|static|||text|SKU|||1|0||1|||1|1|1|0|1|0|0|0|0|0|0|1||1|0|0|0|
+75|4|price||catalog/product_attribute_backend_price|decimal|||price|Price|||1|0||0|||2|1|1|1|0|0|0|0|0|1|1|1|simple,configurable,virtual,bundle,downloadable|1|0|0|0|
+76|4|special_price||catalog/product_attribute_backend_price|decimal|||price|"Special Price"|||0|0||0|||2|1|0|0|0|0|0|0|0|1|0|1|simple,configurable,virtual,bundle,downloadable|0|0|0|0|
+77|4|special_from_date||catalog/product_attribute_backend_startdate|datetime|||date|"Special Price From Date"|||0|0||0|||2|1|0|0|0|0|0|0|0|1|0|1|simple,configurable,virtual,bundle,downloadable|0|0|0|0|
+78|4|special_to_date||eav/entity_attribute_backend_datetime|datetime|||date|"Special Price To Date"|||0|0||0|||2|1|0|0|0|0|0|0|0|1|0|1|simple,configurable,virtual,bundle,downloadable|0|0|0|0|
+79|4|cost||catalog/product_attribute_backend_price|decimal|||price|Cost|||0|1||0|||2|1|0|0|0|0|0|0|0|0|0|1|virtual,downloadable|0|0|0|0|
+80|4|weight|||decimal|||weight|Weight|||1|0||0|||1|1|0|0|0|0|0|0|0|0|0|1|simple,bundle|0|0|0|0|
+82|4|meta_title|||varchar|||text|"Meta Title"|||0|0||0|||0|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+83|4|meta_keyword|||text|||textarea|"Meta Keywords"|||0|0||0|||0|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+84|4|meta_description|||varchar|||textarea|"Meta Description"|||0|0||0|"Maximum 255 chars"||0|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+85|4|image|||varchar||catalog/product_attribute_frontend_image|media_image|"Base Image"|||0|0||0|||0|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+86|4|small_image|||varchar||catalog/product_attribute_frontend_image|media_image|"Small Image"|||0|0||0|||0|1|0|0|0|0|0|0|0|1|0|1||0|0|0|0|
+87|4|thumbnail|||varchar||catalog/product_attribute_frontend_image|media_image|Thumbnail|||0|0||0|||0|1|0|0|0|0|0|0|0|1|0|1||0|0|0|0|
+88|4|media_gallery||catalog/product_attribute_backend_media|varchar|||gallery|"Media Gallery"|||0|0||0|||1|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+89|4|old_id|||int|||text||||0|0||0|||1|0|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+90|4|group_price||catalog/product_attribute_backend_groupprice|decimal|||text|"Group Price"|||0|0||0|||2|1|0|0|0|0|0|0|0|0|0|1|simple,configurable,virtual,bundle,downloadable|0|0|0|0|
+91|4|tier_price||catalog/product_attribute_backend_tierprice|decimal|||text|"Tier Price"|||0|0||0|||2|1|0|0|0|0|0|0|0|0|0|1|simple,configurable,virtual,bundle,downloadable|0|0|0|0|
+93|4|news_from_date||catalog/product_attribute_backend_startdate|datetime|||date|"Set Product as New from Date"|||0|0||0|||2|1|0|0|0|0|0|0|0|1|0|1||0|0|0|0|
+94|4|news_to_date||eav/entity_attribute_backend_datetime|datetime|||date|"Set Product as New to Date"|||0|0||0|||2|1|0|0|0|0|0|0|0|1|0|1||0|0|0|0|
+95|4|gallery|||varchar|||gallery|"Image Gallery"|||0|0||0|||1|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+96|4|status|||int|||select|Status||catalog/product_status|1|0||0|||2|1|1|0|0|0|0|0|0|1|0|1||0|0|0|0|
+97|4|url_key||catalog/product_attribute_backend_urlkey|varchar|||text|"URL Key"|||0|0||0|||0|1|0|0|0|0|0|0|0|1|0|1||0|0|0|0|
+98|4|url_path|||varchar|||text||||0|0||0|||0|0|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+99|4|minimal_price|||decimal|||price|"Minimal Price"|||0|0||0|||0|0|0|0|0|0|0|0|0|0|0|1|simple,configurable,virtual,bundle,downloadable|0|0|0|0|
+100|4|is_recurring|||int|||select|"Enable Recurring Profile"||eav/entity_attribute_source_boolean|0|0||0|"Products with recurring profile participate in catalog as nominal items."||1|1|0|0|0|0|0|0|0|0|0|0|simple,virtual|0|0|0|0|
+101|4|recurring_profile||catalog/product_attribute_backend_recurring|text|||text|"Recurring Payment Profile"|||0|0||0|||1|1|0|0|0|0|0|0|0|0|0|0|simple,virtual|0|0|0|0|
+102|4|visibility|||int|||select|Visibility||catalog/product_visibility|1|0|4|0|||0|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+103|4|custom_design|||varchar|||select|"Custom Design"||core/design_source_design|0|0||0|||0|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+104|4|custom_design_from||catalog/product_attribute_backend_startdate|datetime|||date|"Active From"|||0|0||0|||0|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+105|4|custom_design_to||eav/entity_attribute_backend_datetime|datetime|||date|"Active To"|||0|0||0|||0|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+106|4|custom_layout_update||catalog/attribute_backend_customlayoutupdate|text|||textarea|"Custom Layout Update"|||0|0||0|||0|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+107|4|page_layout|||varchar|||select|"Page Layout"||catalog/product_attribute_source_layout|0|0||0|||0|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+108|4|category_ids|||static|||text||||0|0||0|||1|0|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+109|4|options_container|||varchar|||select|"Display Product Options In"||catalog/entity_product_attribute_design_options_container|0|0|container2|0|||0|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+110|4|required_options|||static|||text||||0|0||0|||1|0|0|0|0|0|0|0|0|1|0|1||0|0|0|0|
+111|4|has_options|||static|||text||||0|0||0|||1|0|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+112|4|image_label|||varchar|||text|"Image Label"|||0|0||0|||0|0|0|0|0|0|0|0|0|1|0|0||0|0|0|0|
+113|4|small_image_label|||varchar|||text|"Small Image Label"|||0|0||0|||0|0|0|0|0|0|0|0|0|1|0|0||0|0|0|0|
+114|4|thumbnail_label|||varchar|||text|"Thumbnail Label"|||0|0||0|||0|0|0|0|0|0|0|0|0|1|0|0||0|0|0|0|
+115|4|created_at||eav/entity_attribute_backend_time_created|static|||text||||1|0||0|||1|0|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+116|4|updated_at||eav/entity_attribute_backend_time_updated|static|||text||||1|0||0|||1|0|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
+117|4|country_of_manufacture|||varchar|||select|"Country of Manufacture"||catalog/product_attribute_source_countryofmanufacture|0|0||0|||2|1|0|0|0|0|0|0|0|0|0|0|simple,configurable,bundle,grouped|0|0|0|0|
+118|4|msrp_enabled||catalog/product_attribute_backend_msrp|varchar|||select|"Apply MAP"||catalog/product_attribute_source_msrp_type_enabled|0|0|2|0||adminhtml/catalog_product_helper_form_msrp_enabled|2|1|0|0|0|0|0|0|0|1|0|1|simple,bundle,configurable,virtual,downloadable|0|0|0|0|
+119|4|msrp_display_actual_price_type||catalog/product_attribute_backend_boolean|varchar|||select|"Display Actual Price"||catalog/product_attribute_source_msrp_type_price|0|0|4|0||adminhtml/catalog_product_helper_form_msrp_price|2|1|0|0|0|0|0|0|0|1|0|1|simple,bundle,configurable,virtual,downloadable|0|0|0|0|
+120|4|msrp||catalog/product_attribute_backend_price|decimal|||price|"Manufacturer's Suggested Retail Price"|||0|0||0|||2|1|0|0|0|0|0|0|0|1|0|1|simple,bundle,configurable,virtual,downloadable|0|0|0|0|
+121|4|tax_class_id|||int|||select|"Tax Class"||tax/class_source_product|1|0||0|||2|1|1|0|0|0|0|0|0|1|0|1|simple,configurable,virtual,downloadable,bundle|1|0|0|0|
+122|4|gift_message_available||catalog/product_attribute_backend_boolean|varchar|||select|"Allow Gift Message"||eav/entity_attribute_source_boolean|0|0||0||giftmessage/adminhtml_product_helper_form_config|1|1|0|0|0|0|0|0|0|0|0|0||0|0|0|0|
+123|4|price_type|||int|||||||1|0||0|||1|0|0|0|0|0|0|0|0|1|0|0|bundle|0|0|0|0|
+124|4|sku_type|||int|||||||1|0||0|||1|0|0|0|0|0|0|0|0|0|0|0|bundle|0|0|0|0|
+125|4|weight_type|||int|||||||1|0||0|||1|0|0|0|0|0|0|0|0|1|0|0|bundle|0|0|0|0|
+126|4|price_view|||int|||select|"Price View"||bundle/product_attribute_source_price_view|1|0||0|||1|1|0|0|0|0|0|0|0|1|0|0|bundle|0|0|0|0|
+127|4|shipment_type|||int||||Shipment|||1|0||0|||1|0|0|0|0|0|0|0|0|1|0|0|bundle|0|0|0|0|
+128|4|links_purchased_separately|||int||||"Links can be purchased separately"|||1|0||0|||1|0|0|0|0|0|0|0|0|1|0|0|downloadable|0|0|0|0|
+129|4|samples_title|||varchar||||"Samples title"|||1|0||0|||0|0|0|0|0|0|0|0|0|0|0|0|downloadable|0|0|0|0|
+130|4|links_title|||varchar||||"Links title"|||1|0||0|||0|0|0|0|0|0|0|0|0|0|0|0|downloadable|0|0|0|0|
+131|4|links_exist|||int|||||||0|0|0|0|||1|0|0|0|0|0|0|0|0|1|0|0|downloadable|0|0|0|0|
+139|4|parent_url_key|||varchar|||text|"Parent URL"|||0|1||0|||0|1|0|0|0|0|0|0|0|1|1|0||0|0|0|0|
+140|4|frame|||int|||select|Frame||eav/entity_attribute_source_table|0|1||0|||1|1|1|0|1|1|1|0|0|1|1|1||1|0|0|1|"Driftwood;Rattan Cane;Natural Wood;Two Tone"
+141|4|rattan|||int|||select|Rattan||eav/entity_attribute_source_table|0|1||0|||1|1|1|0|1|1|1|0|0|1|1|1||1|0|0|1|"Pearly Grey 3x1.5mm Web Smooth;KB2 8mm Roun;KB2 5mm Round;KB2 3mm Round;CC2 8mm Round;CC2 5mm Round;CC2 3mm Round;Arabica 8mm Round;Arabica 7mm Peel;Arabica 3mm Round"
+142|4|fabric|||int|||select|Fabric||eav/entity_attribute_source_table|0|1||0|||1|1|1|0|1|1|1|0|0|1|1|1||1|0|0|1|791R1C1;791R1C2;791R1C3;791R1C4;791R2C1;791R2C2;791R2C3;791R2C4;795R1C1;795R1C2;795R1C3;795R1C4;795R2C1;795R2C2;795R2C3;796R1C1;796R1C2;796R1C3;796R1C4;796R1C5;796R2C1;796R2C2;796R2C3;796R2C4;796R2C5
+143|4|tabletop|||int|||select|"Table Top"||eav/entity_attribute_source_table|0|1||0|||1|1|1|0|1|1|1|0|0|1|1|1||1|0|0|0|"Glass;Rattan;Marble - Tiled;Marble - Dark / Light Tiled;Granite - Dark;Granite - Dark / Light Diffuse"
+144|4|default_configuration_id|||int|||hidden|"Default configuration id"|||0|1||0|||1|1|0|0|0|0|0|0|0|0|0|0|configurable|0|0|0|0|

@@ -1,0 +1,30 @@
+<div>
+    <?php
+    // echo $this->getChildHtml('main');
+    // die("Google CMS Import");
+    echo "Google CMS Import: /Users/mike/Projects/RattanOutdoorFurniture/code/dev/app/design/adminhtml/default/default/template/googlecmsimport/index.phtml";
+    ?>
+    <br/><br/>
+    <button type="button" id="pick">Pick File</button>
+
+    <script>
+        function initPicker() {
+            var picker = new FilePicker({
+                apiKey: 'AIzaSyBm5cV6yQ3t4sMxNpHDcfrfw38r0kxiRmc',
+                clientId: '745606635853-k51mb3f98f1ss0miljo5k6n87b28d26a.apps.googleusercontent.com',
+                buttonEl: document.getElementById('pick'),
+                onSelect: function(file) {
+                    console.log(file);
+                    alert('Selected ' + file.title);
+                }
+            });
+        }
+    </script>
+
+    <script src="https://www.google.com/jsapi?key=AIzaSyBm5cV6yQ3t4sMxNpHDcfrfw38r0kxiRmc"></script>
+    <script src="https://apis.google.com/js/client.js?onload=initPicker"></script>
+
+
+
+
+</div>

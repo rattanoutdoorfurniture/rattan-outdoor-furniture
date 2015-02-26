@@ -1,0 +1,153 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+
+
+ <style>
+ 
+ .block-layered-nav-slider {
+	 display: block !important;
+ }
+ 
+ .block-layered-nav{
+	 display: none;
+ }
+ 
+ 
+ 
+ .ftr-box input{
+	 border: 1px solid #D4D4D4;
+ 
+	 
+ }
+ 
+ 
+ 
+ </style>
+
+
+
+
+<?php
+/**
+ * Category layered navigation
+ *
+ * @see Mage_Catalog_Block_Layer_View
+ */
+ 
+ 
+
+ 
+ ?>
+<?php if($this->canShowBlock()): ?>
+<div class="block block-layered-nav block-layered-nav-slider">
+
+    <div class="block-title">
+        <strong><span><?php echo $this->__('Shop By') ?></span></strong>
+    </div>
+    
+	<script type="text/javascript">
+	
+	jQuery(document).ready(function(){ jQuery('#simplediv').hide();});
+	
+	jQuery(function()
+	{
+					<?php 	$max=Mage::getModel('catalog/layer_filter_price');
+							$maxPrice=$max->getMaxPriceInt();
+					?>
+					jQuery("#slider").slider({range:true,
+										min:0,
+										max:jQuery("#max-price").val(),
+										values:[0,300],
+										slide: function( event, ui ) {
+																					 jQuery( "#price-filter" ).val(ui.values[ 0 ]);
+																					 jQuery( "#price-filter12" ).val(ui.values[ 1 ] );
+											} ,
+										stop: function(event, ui){
+											var ids = jQuery("#category").val();
+											
+											var baseurl= jQuery('#price-filterF').val();
+											
+											var remainurl='slider/slider/view?min='+ ui.values[ 0 ] +'&max='+ui.values[ 1] +'&id='+ids ;
+											
+											var correctbaseurl=baseurl + remainurl;
+																													jQuery('#simplediv').show(1000);
+											jQuery('#center_column').first().load(correctbaseurl, function(){ jQuery('#simplediv').hide(500);}  );	
+											}
+					});
+	 });
+	 function callPriceSlider()
+	 {
+											var ids = jQuery("#category").val();
+											
+											var baseurl= jQuery('#price-filterF').val();
+											
+											var remainurl='slider/slider/view?min='+ jQuery('#price-filter').val() +'&max='+jQuery('#price-filter12').val() +'&id='+ids ;
+											
+											var correctbaseurl=baseurl + remainurl;
+											jQuery('#simplediv').show(1000);
+											jQuery('#center_column').first().load(correctbaseurl, function(){ jQuery('#simplediv').hide(500);}  );
+	 
+	 }
+	 </script>
+    <div class="block-content">
+        <?php echo $this->getStateHtml() ?>
+        <?php if($this->canShowOptions()): ?>
+            <p class="block-subtitle"><?php echo $this->__('Shopping Options') ?></p>
+            <dl id="narrow-by-list">
+                <?php $_filters = $this->getFilters() ?>
+                <?php foreach ($_filters as $_filter): ?>
+				<?php //var_dump($_filter); ?>
+                <?php if($_filter->getItemsCount()): ?>
+                    <dt><?php echo $this->__($_filter->getName()) ?></dt>
+                    <dd><?php echo $_filter->getHtml() ?></dd>
+                <?php endif; ?>
+                <?php endforeach; ?>
+				<dt><?php echo $this->__('Price Slider:') ?></dt>
+				<dd id="slider" style="height:1px"></dd>
+				<dd class="ftr-box"><?php echo $this->__('From') ?>&nbsp;:&nbsp;<?php $curr=Mage::helper('core')->currency(''); $curr1=str_replace('0','',$curr); echo str_replace('.','',$curr1);?>&nbsp;<input id="price-filter" type="text" style='width:35px' name="price-filter" value="">&nbsp;&nbsp;To&nbsp;:&nbsp;<?php $curr=Mage::helper('core')->currency('');$curr1=str_replace('.','',$curr); echo str_replace('0','',$curr1);?>&nbsp;<input id="price-filter12" type="text" style='width:35px' name="price-filter" value=""> <label onclick='callPriceSlider()' style="cursor:pointer; margin-left:3px;"> <b>Go</b> <label> </dd>
+            			
+		</dl>
+            <script type="text/javascript">decorateDataList('narrow-by-list')</script>
+        <?php endif; ?>
+    </div>
+</div>
+	<?php 	$max=Mage::getModel('catalog/layer_filter_price');
+							$maxPrice=$max->getMaxPriceInt();
+							$maxPrice++;
+	?>
+	
+	<input id="max-price" type="hidden" name="max-price" value="<?php echo $maxPrice; ?>">
+	<?php $url=Mage::getBaseUrl(); $pos=strpos($url,'index.php');  ?>
+	<input id="price-filterF" type="hidden"  name="price-filterF" value="<?php echo $url;?>">
+	
+	<div id="simplediv" style="display:block;width:100px;height:40px; align:center;margin-left:30px">
+			<span style="margin-left:28px;"><img src="<?php echo $this->getSkinUrl('images/slider/loading.gif')?>" height="40" width="40"/>	</span>
+	</div>
+	
+	
+	<input id="category" type="hidden"  value="<?php $arr=$this->getRequest()->getParams(id,false); echo $arr['id']; ?>">
+<?php endif; ?>

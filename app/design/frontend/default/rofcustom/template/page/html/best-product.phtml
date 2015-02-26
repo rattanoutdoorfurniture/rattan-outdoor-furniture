@@ -1,0 +1,58 @@
+<?php 
+$storeId    = Mage::app()->getStore()->getId();
+
+$products = Mage::getResourceModel('reports/product_collection')
+	->addOrderedQty()
+	->addAttributeToSelect(array('name', 'price', 'small_image', 'short_description', 'description')) //edit to suit tastes
+	->setStoreId($storeId)
+	->addStoreFilter($storeId)
+	->setOrder('ordered_qty', 'desc'); //best sellers on top
+
+Mage::getSingleton('catalog/product_status')->addVisibleFilterToCollection($products);
+Mage::getSingleton('catalog/product_visibility')->addVisibleInCatalogFilterToCollection($products);
+
+$products->setPageSize(6)->setCurPage(1);
+?>
+
+
+
+
+<div class="width-carousel">
+        <div class="title-box">
+          <h3 class="title-carousel first-brd"><?php echo $this->__('Bestseller products') ?></h3>
+        </div>
+        
+
+ 
+        <ul class="products-grid first odd bxslider">
+        
+        <?php foreach($products as $_product):?>
+ <li class="item first fadeIn animated"> <a href="<?php echo $_product->getProductUrl()?>"  class="product-image"><img  src="<?php echo $this->helper('catalog/image')->init($_product,"image")->resize($imageWidth,$imageHeight);?>"></a>
+    <h2 class="product-name"> <a href="<?php echo $_product->getProductUrl()?>"> <?php echo $_product->getName()?> </a> </h2>
+    <div class="actions"> 
+    <a class="btn-circle first-bg-hover" href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>"> <i class="icon-heart"></i> </a> 
+    <a class="btn-circle first-bg-hover" href="<?php echo $_product->getProductUrl()?>"> <i class="icon-shopping-cart"></i> </a>
+  <?php if($_compareUrl=$this->getLayout()->createBlock('catalog/product_list')->getAddToCompareUrl($_product)): ?>
+     <a class="btn-circle first-bg-hover" href="<?php echo $_compareUrl ?>"> <i class="icon-exchange"></i> </a> 
+ <?php endif; ?>
+     
+     </div>
+  </li>
+  <?php endforeach; ?>
+  
+  
+      
+        </ul>
+      </div>
+      
+      
+      
+
+      
+      
+      
+      
+
+
+
+                            

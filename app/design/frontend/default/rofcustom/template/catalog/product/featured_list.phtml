@@ -1,0 +1,91 @@
+<?php
+/**
+ * Product list template
+ *
+ * @see Mage_Catalog_Block_Product_List
+ */
+?>
+<?php
+    /** @see Mage_Catalog_Block_Product_List */
+
+    $_productCollection=$this->getLoadedProductCollection();
+    $_productCollection->addAttributeToSelect(array("parent_url_key"));
+    $_helper = $this->helper('catalog/output');
+	$imageWidth = 130;
+	$imageHeight = 92;
+
+    $filters = $_productCollection->getLimitationFilters();
+
+    $category_id = $filters['category_id'];
+?>
+<div class="featured-products self-clear"<?php if($category_id): ?> data-category-id="<?php echo $category_id; ?>"<?php endif; ?>>
+
+    <div class="featured-products-title fourteen columns">Featured Products</div>
+
+    <section class="category-product five columns">
+        <a id="featured-products-all-products-link" href="<?php echo $this->getUrl("products"); ?>" class="category-product-inner clearfix" title="View All Products">
+            <img class="category-product-img" src="<?php echo $this->getUrl('skin/frontend/default/rofcustom/images') .'swivel-rocker-cta.jpg'; ?>" alt="Rattan Outdoor Furniture - View All Products" width="250" height="177" />
+            <label for="featured-products-all-products-link" class="category-product-title" title="<?php echo $this->__("All Rattan Outdoor Furniture Products"); ?>"><?php echo $this->__("View All Products"); ?></label>
+        </a>
+    </section>
+
+<?php if(!$_productCollection->count()): ?>
+
+<p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+
+<?php else: ?>
+  <?php // Grid Mode ?>
+  <?php $_collectionSize = $_productCollection->count() ?>
+  <?php $_columnCount = $this->getColumnCount(); ?>
+  <?php $i=1; foreach ($_productCollection as $_product): ?>
+    <section class="category-product three columns<?php if(($i-1)%$_columnCount==0): ?> first<?php elseif($i%$_columnCount==0): ?> last<?php endif; ?>">
+        <?php
+            $_productNameStripped = $this->stripTags($_product->getName(), null, true);
+            $hasSpecial = ($_product->getSpecialPrice())?true:false;
+            $isNew = false;
+            $newFrom = strtotime($_product->getNewsFromDate());
+            $newTo = strtotime($_product->getNewsToDate());
+            if (time()>$newFrom && time()<$newTo){
+                $isNew = true;
+            }
+        ?>
+        <?php if(false&&$hasSpecial):?>
+            <div class="ribbon special first-bg "><?php echo $this->__('special') ?></div>
+        <?php endif;?>
+        <?php if(false&&$isNew):?>
+            <div class="ribbon new first-bg"><?php echo $this->__('new') ?></div>
+        <?php endif;?>
+        <?php
+        /**
+         * @TODO Make this take into account the parent url's parents
+         * Currently just assuming parent is in 'products', this will change when we do tiered
+         * categories. (aka, sub-categories).
+         */
+            $url = $_product->getProductUrl();
+            if($categoryParent = $_product->getResource()->getAttribute('parent_url_key')) {
+                $categoryParent = $categoryParent->getFrontend()->getValue($_product);
+                if($categoryParent) {
+                    $categoryParent = "products/" . $categoryParent;
+                    $urlkey = preg_replace('/([a-z0-9\-]*)(\-default)$/',"$1",preg_replace('/([a-z0-9\-]*)(\-\d+)$/',"$1",$_product->getUrlKey()));
+                    $url = $this->getUrl($categoryParent).$urlkey."/";
+                }
+            }
+            //$proCats = $_product->getCategoryIds();
+            //$pc = end($proCats);
+            //$category = Mage::getModel('catalog/category')->load($pc);
+            //$categoryParent = $category->getUrlPath();
+        ?>
+        <a id="category-product-inner-<?php echo $_product->getId()?>" href="<?php echo $url; ?>" class="category-product-inner clearfix"  title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>">
+            <img class="category-product-img" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($imageWidth,$imageHeight); ?>" alt="<?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>" width="<?php echo $imageWidth;?>" height="<?php echo $imageHeight; ?>" />
+            <div class="category-product-img-underline"></div>
+            <label for="category-product-inner-<?php echo $_product->getId()?>" class="category-product-title" title="<?php echo $_productNameStripped; ?>">
+                <?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>
+            </label>
+            <?php echo $this->getPriceHtml($_product, true) ?>
+            <button class="category-product-view-more" title="View more about the <?php echo $_productNameStripped; ?>"><?php echo $this->__("More Details About The ".$_productNameStripped)?></button>
+        </a>
+    </section>
+  <?php $i++; endforeach ?>
+
+<?php endif; ?>
+</div>

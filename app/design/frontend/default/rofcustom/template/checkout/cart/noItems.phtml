@@ -1,0 +1,83 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<div class="page-title sixteen columns">
+    <h1 id="cart-heading"><?php echo $this->__('Your Cart') ?></h1>
+</div>
+<div class="cart-empty displaynone">
+    <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+    <?php echo $this->getChildHtml('checkout_cart_empty_widget'); ?>
+    <p><?php echo $this->__('You have no items in your shopping cart.') ?></p>
+    <p><?php echo $this->__('Click <a href="%s">here</a> to continue shopping.', $this->getContinueShoppingUrl()) ?></p>
+    <?php echo $this->getChildHtml('shopping.cart.table.after'); ?>
+</div>
+
+<div id="cart-cartbox" class="ten columns cart-box add-bottom">
+    <div class="cart-box-border"></div>
+    <div class="cart-box-inner">
+        <table id="cart-cartbox-table">
+            <tr id="cart-cartbox-table-header">
+                <th class="cart-cartbox-table-header-label"><?php echo $this->__("Product"); ?></th>
+                <th class="cart-cartbox-table-header-label"><?php echo $this->__("Price"); ?></th>
+                <th class="cart-cartbox-table-header-label"><?php echo $this->__("Qty"); ?></th>
+                <th class="cart-cartbox-table-header-label"><?php echo $this->__("Total"); ?></th>
+                <th id="cart-cartbox-table-edit">
+                    <a href="#" id="cart-cartbox-table-edit-btn" onclick="return false;" class="displaynone">
+                        <img id="cart-cartbox-table-edit-btn-img" src="/skin/frontend/default/rofcustom/images/cart-cartbox-table-edit-icon.png" alt="Edit Cart" />
+                    </a>&nbsp;
+                </th>
+            </tr>
+            <tr class="cart-cartbox-table-product">
+                <td class="cart-cartbox-table-product-detail" colspan="5">
+                    <p></p>
+                    <p><?php echo $this->__('You have no items in your shopping cart.') ?></p>
+                </td>
+            </tr>
+        </table>
+        <section id="cart-cartbox-toggle">
+            <span id="cart-cartbox-toggle-text">Show Items In Your Cart (2)</span>
+            <div id="cart-cartbox-toggle-btn" title="Show / Hide Cart Items">Show / Hide Cart Items</div>
+        </section>
+    </div>
+    <div class="cart-box-border"></div>
+</div>
+
+<section id="cart-btns" class="six columns hideCheckout">
+    <div id="cart-subtotal" class="cart-box">
+        <div class="cart-box-border"></div>
+        <div class="cart-box-inner">
+            <h3 id="cart-subtotal-header"><?php echo $this->__("Order Subtotal - Cart Empty"); ?></h3>
+            <section id="cart-subtotal-sub"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('cart-subtitle')->toHtml(); ?></section>
+        </div>
+        <div class="cart-box-border"></div>
+    </div>
+    <section id="cart-continue" class="cart-btn-wrap clearfix">
+        <button id="cart-continue-btn" class="cart-btn" onclick="setLocation('<?php echo $this->getUrl("products");?>');">Back to Store</button>
+    </section>
+    <section id="cart-checkout" class="cart-btn-wrap clearfix">
+        <button id="cart-checkout-btn" class="cart-btn">Checkout</button>
+    </section>
+</section>

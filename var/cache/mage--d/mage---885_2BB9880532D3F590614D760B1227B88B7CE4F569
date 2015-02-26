@@ -1,0 +1,91 @@
+
+<div id="page-footer-banner" class="sixteen columns">
+    <span></span></div>
+
+<footer id="page-footer">
+    <hr class="footer-rule sixteen columns"/>
+    <aside class="footer-box three columns">
+        <div class="footer-box-inner">
+            <h5>Customer Services</h5>
+            <ul class="footer-box-list">
+<!-- <li><a title="Special - 60 Day Price Match" href="/more-info/price-match/" rel="nofollow">Specials</a></li> -->
+<li><a title="Newest Products" href="/products/">New Products</a></li>
+<li><a title="Frequently Asked Questions" href="/faq/" rel="nofollow">FAQ</a></li>
+<li><a title="Rattan Outdoor Furniture Locations" href="/locations/">Locations</a></li>
+<li><a title="More Info - Rattan Outdoor Furniture" href="/more-info/">More Info</a></li>
+</ul>        </div>
+    </aside>
+    <aside class="footer-box three columns">
+        <div class="footer-box-inner footer-links-wrap">
+            <h5 class="footer-links-heading">Information</h5>
+            
+<nav class="nav-top">
+    <ul class="nav-top-list">
+                        <li class="nav-top-item first" ><a href="https://www.rattanoutdoorfurniture.com/catalog/seo_sitemap/category/" title="Site Map" >Site Map</a></li>
+                                <li class="nav-top-item" ><a href="https://www.rattanoutdoorfurniture.com/search/advanced/" title="Advanced Product Search"  rel="nofollow">Advanced Search</a></li>
+                                <li class="nav-top-item" ><a href="https://www.rattanoutdoorfurniture.com/search/order/" title="Order Search" >Search Order</a></li>                                <li class="nav-top-item last" ><a href="https://www.rattanoutdoorfurniture.com/contact-us/" title="Contact Us"  rel="nofollow">Contact Us</a></li>
+                </ul>
+</nav>
+        </div>
+    </aside>
+    <aside class="footer-box three columns">
+        <div class="footer-box-inner">
+            <h5>My Account</h5>
+            <ul class="footer-box-list">
+<li><a href="/privacy/" rel="nofollow">Privacy Policy</a></li>
+<li><a href="/terms/" rel="nofollow">Terms &amp; Conditions</a></li>
+</ul>        </div>
+    </aside>
+    <aside class="footer-box four columns">
+        <div class="footer-box-inner">
+            <h5 id="footer-newsletter-heading">Join our Newsletter</h5>
+<form id="footer-newsletter" method="post" action="https://www.rattanoutdoorfurniture.com/newsletter/subscriber/new/">
+    <input type="email" name="email" placeholder="Email Address" id="footer-newsletter-input" title="Join our Newsletter" class="input-text required-entry validate-email"  />
+    <input type="submit" id="footer-newsletter-submit" value="Send" title="Subscribe" class="button" />
+    <div id="footer-newsletter-msg"></div>
+</form>
+<script type="text/javascript">
+    //<![CDATA[
+    // var newsletterSubscriberFormDetail = new VarienForm('footer-newsletter');
+    //]]>
+</script>            <div id="footer-social">
+                <h6 id="footer-social-label">Follow Us On:</h6>
+                <span class="footer-social-widgets">
+<div class="fb-follow footer-social-icon fb" data-href="https://www.facebook.com/rattanoutdoorfurniture" data-width="16" data-height="16" data-colorscheme="light" data-layout="button" data-show-faces="false"></div>
+<span href="https://twitter.com/rattanoutdoor" class="footer-social-icon tw" title="Twitter - Rattan Outdoor Furn."><a href="https://twitter.com/rattanoutdoor" class="twitter-follow-button" data-show-count="false">Twitter - Rattan Outdoor Furn.</a></span>
+<a href="https://www.pinterest.com/rattanoutdoor/" class="footer-social-icon pn" title="Pinterest - Rattan Outdoor Furniture">Pinterest - Rattan Outdoor Furniture</a>
+<a href="https://plus.google.com/+Rattanoutdoorfurniture?rel=author" class="footer-social-icon gp" title="Google Plus - Rattan Outdoor Furniture"><div class="g-follow" data-annotation="none" data-height="20" data-href="https://plus.google.com/+Rattanoutdoorfurniture?rel=author" data-rel="author">Google+ - Rattan Outdoor Furniture</div></a>
+<!--
+<a href="#" class="footer-social-icon ig"></a>
+<a href="https://www.houzz.com/pro/rattanoutdoorfurniture/rattan-outdoor-furniture" class="footer-social-icon hz" title="Houzz - Rattan Outdoor Furniture">Houzz - Rattan Outdoor Furniture</a>
+-->
+</span>
+<span class="footer-social-flatlinks">
+<a class="footer-social-icon fb" target="_default" href="https://www.facebook.com/rattanoutdoorfurniture" title="Facebook.com | Rattan Outdoor Furniture">Facebook - Rattan Outdoor Furniture</a>
+<a class="footer-social-icon tw" target="_default" href="https://twitter.com/rattanoutdoor" title="Rattan Outdoor Furn. on Twitter">Twitter - Rattan Outdoor Furniture</a>
+<a class="footer-social-icon pn" target="_default" href="https://www.pinterest.com/rattanoutdoor/" title="Rattan Outdoor Furniture on Pinterest">Pinterest - Rattan Outdoor Furniture</a>
+<a class="footer-social-icon gp" target="_default" href="https://plus.google.com/+RattanOutdoorFurniture?rel=author" title="Rattan Outdoor Furniture on Google Plus">Google+ - Rattan Outdoor Furniture</a>
+</span>            </div>
+        </div>
+    </aside>
+    <aside class="footer-box three columns">
+        <div class="footer-box-inner last">
+            <h6>
+<a id="footer-logo-wrap" title="Rattan Outdoor Furniture" href="/">
+<img src="https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/footer-logo-img.png" alt="Rattan Outdoor Furniture" width="140" height="78" />
+<img src="https://www.rattanoutdoorfurniture.com/skin/frontend/default/rofcustom/images/logo/logo-270x150-centered-vector.png" alt="Rattan Outdoor Furniture" width="140" height="78">
+</a>
+<div id="footer-logo-email"><a href="mailto:sales@rattanoutdoorfurniture.com">sales@rattanoutdoorfurniture.com</a></div>
+<div id="footer-logo-phone"><a href="tel:18442728826">(844) 2-RATTAN</a></div>
+</h6>        </div>
+    </aside>
+    <div class="clear"></div>
+    <hr class="footer-rule sixteen columns"/>
+    <div id="footer-sub">
+        <div id="footer-sub-copyright" class="eight columns">Copyright &copy; 2015 Rattan Outdoor Furniture - RattanOutdoorFurniture.com</div>
+        <div id="footer-sub-icons" class="eight columns">
+            <p>
+<script type="text/javascript" src="https://sealserver.trustwave.com/seal.js?style=invert"></script><img style="float: right; margin-top: 4px; margin-bottom: 15px;" title="PayPal Acceptance Mark" src="https://www.rattanoutdoorfurniture.com/media/wysiwyg/CreditCardLogos/credit-card-logos.jpg" alt="PayPal Acceptance Mark" /></p>        </div>
+        <div class="clearfix"></div>
+    </div>
+</footer>

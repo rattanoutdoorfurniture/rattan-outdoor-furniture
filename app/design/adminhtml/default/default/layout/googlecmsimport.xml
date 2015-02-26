@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<layout version="0.1.1">
+    <default>
+        <reference name="head">
+            <action method="addJs"><script>varien/jquery-1.4.1.min.js</script></action>
+            <action method="addJs"><script>varien/jquery-ui-1.8rc1.custom.min.js</script></action>
+        </reference>
+    </default>
+    <googlecmsimport_index_index>
+        <update handle="googlecmsimport_index_index"/>
+        <reference name="content">
+            <block type="googlecmsimport/index" name="index" template="googlecmsimport/index.phtml"/>
+        </reference>
+    </googlecmsimport_index_index>
+    <googlecmsimport_index_import>
+        <reference name="content">
+            <block type="googlecmsimport/import" name="index" template="googlecmsimport/import.phtml"/>
+        </reference>
+    </googlecmsimport_index_import>
+</layout>

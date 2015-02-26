@@ -1,0 +1,75 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Product list toolbar
+ *
+ * @see Mage_Catalog_Block_Product_List_Toolbar
+ */
+?>
+<?php
+if($this->getCollection()->getSize()):
+    $textFilterLabels = array(
+        "relevance" => array(
+            "asc"   => $this->__("Most Relevant"),
+        /**
+         * This does not help, relevance is just the default sorting.
+         *
+            "desc"  => $this->__("Least Relevant")
+         */
+        ),
+        "position"  => array(
+            "asc"   => $this->__("Newest First"),
+            "desc"  => $this->__("Oldest First")
+        ),
+        "name"      => array(
+            "asc"   => $this->__("Name A - Z"),
+            "desc"  => $this->__("Name Z - A")
+        ),
+        "price"     => array(
+            "asc"   => $this->__("Price Low to High"),
+            "desc"  => $this->__("Price High to Low")
+        )
+    );
+    $textFilters     = $this->getAvailableOrders();
+    $textFilterNum   = 0;
+    $textFilterCount = count($textFilters)*2;
+?>
+
+<ul id="text-filters" class="sixteen columns">
+    <span id="text-filters-label"><?php echo $this->__("View by:")?></span>
+    <?php foreach($textFilters as  $_key=>$_order): ?>
+        <?php if(!isset($textFilterLabels[strtolower($_order)])) continue; ?>
+        <?php foreach($textFilterLabels[strtolower($_order)] as $_dir=>$textFilterLabel): ?>
+        <li class="text-filters-option<?php if($this->isOrderCurrent($_key)): ?> selected<?php endif ?>">
+            <a href="<?php echo trailslash($this->getOrderUrl($_key, $_dir)); ?>" class="text-filters-link" title="<?php echo $textFilterLabel; ?>" rel="nofollow"><?php echo $textFilterLabel; ?></a>
+        </li>
+        <?php endforeach; ?>
+    <?php endforeach; ?>
+</ul>
+
+<?php endif ?>

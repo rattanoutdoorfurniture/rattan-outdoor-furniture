@@ -1,0 +1,127 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Catalog advanced search form
+ *
+ * @see Mage_CatalogSearch_Block_Advanced_Form
+ */
+?>
+<?php
+    $_ignore_fields = array(
+        "tax_class_id"
+    );
+?>
+<?php $maxQueryLength= $this->helper('catalogsearch')->getMaxQueryLength();?>
+<div class="page-title sixteen columns">
+    <h1 id="search-heading"><?php echo $this->__('Advanced Product Search') ?></h1>
+    <?php if($this->getMessagesBlock()): ?>
+        <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+        <script type="text/javascript">
+            setTimeout(function() {
+                jQuery("ul.messages").slideUp("slow");
+            }, 5000);
+        </script>
+    <?php endif; ?>
+</div>
+<div class="account-box box-search-advanced fourteen columns offset-by-one by-margin add-bottom">
+    <div class="account-box-border"></div>
+    <div class="account-box-inner">
+        <div class="box-head">
+            <h2><?php echo $this->__('Advanced Search') ?></h2>
+            <p class="required"><?php echo $this->__('No Required Fields') ?></p>
+        </div>
+        <div class="box-content self-clear">
+            <?php $asb = Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('advanced-search-blurb')->toHtml(); ?>
+            <?php if($asb): ?>
+                <div class="advanced-search-blurb"><?php echo $asb; ?></div>
+            <?php endif; ?>
+            <form action="<?php echo $this->getSearchPostUrl() ?>" method="get" id="form-validate" class="self-clear">
+                <div class="fieldset advanced-search">
+                    <ul class="form-list" id="advanced-search-list">
+                        <li class="box-title"><h3>Advanced Search Product Attributes:</h3></li>
+                        <?php foreach ($this->getSearchableAttributes() as $_attribute): ?>
+                            <?php $_code = $_attribute->getAttributeCode() ?>
+                            <?php if(in_array($_code,$_ignore_fields)) continue; ?>
+                            <li>
+                                <label for="<?php echo $_code ?>" data-attr-type="<?php echo $this->getAttributeInputType($_attribute); ?>">
+                                    <div class="label-wrap"><strong class="nobr"><?php echo $this->getAttributeLabel($_attribute) ?>:</strong></div>
+                                    <?php switch($this->getAttributeInputType($_attribute)):
+                                        case 'number': ?>
+                                            <div class="input-range">
+                                                <input type="text" name="<?php echo $_code ?>[from]" value="<?php echo $this->escapeHtml($this->getAttributeValue($_attribute, 'from')) ?>" id="<?php echo $_code ?>" title="<?php echo $this->escapeHtml($this->getAttributeLabel($_attribute)) ?>" class="input-text validate-number" maxlength="<?php echo $maxQueryLength;?>" />
+                                                <span class="separator">-</span>
+                                                <input type="text" name="<?php echo $_code ?>[to]" value="<?php echo $this->escapeHtml($this->getAttributeValue($_attribute, 'to')) ?>" id="<?php echo $_code ?>_to" title="<?php echo $this->escapeHtml($this->getAttributeLabel($_attribute)) ?>" class="input-text validate-number" maxlength="<?php echo $maxQueryLength;?>" />
+                                            </div>
+                                            <?php break;
+                                        case 'price': ?>
+                                            <div class="input-range">
+                                                <input placeholder="From" name="<?php echo $_code ?>[from]" value="<?php echo $this->escapeHtml($this->getAttributeValue($_attribute, 'from')) ?>" id="<?php echo $_code ?>" title="<?php echo $this->escapeHtml($this->getAttributeLabel($_attribute)) ?>"  class="input-text validate-number" type="text" maxlength="<?php echo $maxQueryLength;?>" />
+                                                <span class="separator">&ndash;</span>
+                                                <input placeholder="To" name="<?php echo $_code ?>[to]" value="<?php echo $this->escapeHtml($this->getAttributeValue($_attribute, 'to')) ?>" id="<?php echo $_code ?>_to" title="<?php echo $this->escapeHtml($this->getAttributeLabel($_attribute)) ?>"  class="input-text validate-number" type="text" maxlength="<?php echo $maxQueryLength;?>" />
+                                                <small>(<?php echo $this->getCurrency($_attribute); ?>)</small>
+                                            </div>
+                                            <?php break;
+                                        case 'select': ?>
+                                            <div class="input-box">
+                                                <?php echo $this->getAttributeSelectElement($_attribute) ?>
+                                            </div>
+                                            <?php break;
+                                        case 'yesno': ?>
+                                            <?php echo $this->getAttributeYesNoElement($_attribute) ?>
+                                            <?php break;
+                                        case 'date': ?>
+                                            <div class="input-range">
+                                                <?php echo $this->getDateInput($_attribute, 'from') ?>
+                                                <span class="separator">-</span>
+                                                <?php echo $this->getDateInput($_attribute, 'to') ?>
+                                            </div>
+                                            <?php break;
+                                        default: ?>
+                                            <div class="input-box">
+                                                <input type="text" name="<?php echo $_code ?>" id="<?php echo $_code ?>" value="<?php echo $this->escapeHtml($this->getAttributeValue($_attribute)) ?>" title="<?php echo $this->escapeHtml($this->getAttributeLabel($_attribute)) ?>"  class="input-text <?php echo $this->getAttributeValidationClass($_attribute) ?>" maxlength="<?php echo $maxQueryLength;?>" />
+                                            </div>
+                                    <?php endswitch; ?>
+                                </label>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                    <script type="text/javascript">decorateList('advanced-search-list')</script>
+                </div>
+                <div class="buttons-set">
+                    <button type="submit" title="<?php echo $this->__('Search') ?>" class="account-sub-button search-button button"><span><span><?php echo $this->__('Search') ?></span></span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="account-box-border"></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+    var dataForm = new VarienForm('form-validate', true);
+//]]>
+</script>

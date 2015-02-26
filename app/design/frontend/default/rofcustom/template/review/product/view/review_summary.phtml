@@ -1,0 +1,14 @@
+<?php $_items = $this->getReviewsCollection()->getItems();
+if( count( $_items ) ){
+    // Once we've stored the reviews, we can loop through them and get the data we need from each
+    foreach( $_items as $_review ){
+        // Get the Review Title
+        echo $this->htmlEscape( $_review->getTitle() );
+
+        // Get the Review Content
+        echo $this->htmlEscape( $_review->getDetail() );
+
+        // Get the Review Author
+        echo $this->htmlEscape( $_review->getNickname() );
+    }
+} ?>

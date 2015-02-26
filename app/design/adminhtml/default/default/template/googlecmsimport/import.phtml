@@ -1,0 +1,808 @@
+<div>
+    <?php
+    $gci = MAGE::getSingleton("googlecmsimport/googlecmsimport");
+    $helper = Mage::helper("googlecmsimport");
+//    $uri = "http" . (isset($_SERVER['HTTPS'])?"s":""). "://" . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
+//    echo "<!-- originalUri: $uri -->";
+//    if(substr($uri,-1)=="/") $uri = substr($uri,0,-1);
+//    if(strpos($uri,"?")!==false) $uri = substr($uri,0,strpos($uri,"?"));
+    /*echo "<!-- " . "http" . (isset($_SERVER['HTTPS'])?"s":""). "://" . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'] . " -->";
+    echo "<pre>";
+    echo "Client ID:\t"     . $this->getClientId() . "\n";
+    echo "Client Secret:\t" . $this->getClientSecret() . "\n";
+    echo "Request URI:\t"   . $gci->getRequestUri() . "\n";
+    echo "Auth Code Set:\t" .($gci->authCodeSet()?"true":"false") . "\n";
+    echo "Auth Code:\t"     . $gci->getAuthCode() . "\n";
+    $googleSession = $gci->getSession();
+    echo "Access Token:\t"  . $googleSession['auth/access_token'] . "\n";
+    //echo "Class Methods:\t" . var_export(get_class_methods($gci),true) . "\n";
+    echo "Session Val:\t"   . var_export($googleSession,true) . "\n";
+    echo "</pre><br/><br/>";*/
+    ?>
+<div style="white-space: pre;">
+    <?php
+    /*echo var_export(
+        $helper->duplicateReleases()
+        ,true
+    );*/
+    $fake   = $helper->checkReleasedPages();
+    $avail  = $helper->getReleasedPages();
+
+//    echo var_export(
+//        $helper->getReleasedCount()
+//        ,true
+//    );
+
+    ?>
+</div>
+    <div class="new-xml" style="white-space: pre;">
+        <?php //echo $helper->generateTodaySitemap(); ?>
+    </div>
+<?php if(!$this->authed): ?>
+    <div id="login" class="login"><a href="<?php echo $this->authUrl;?>">Connect to Google Apps</a></div>
+<?php else: ?>
+    <div id="logout" class="login"><a href="?logout">Disconnect from Google Apps</a></div>
+    <h3>Google Import:</h3>
+    <div id="dr_results" style="white-space: pre;">
+        <?php
+//        $rootFolder = "0B9_hVhBJdknvYUNLZWpuclhUUEU";
+//        global $drs;
+//        $drs = $this->getModel()->getService();
+//        $children = $drs->children->listChildren($rootFolder);
+//        //echo var_export($children->getItems(),true);
+//
+//        function getSubs($folderId) {
+//            global $drs;
+//            $children = $drs->children->listChildren($folderId);
+//            foreach($children as $child) {
+//                echo "die child";
+//                die(var_export($drs->children->get($child),true));
+//                echo $child->title;
+//                getSubs($child->id);
+//            }
+//        }
+//        getSubs($rootFolder);
+
+
+//        echo var_export($this->listFiles()->getItems(),true);
+//        echo "<br>----------<br>";
+//        $top = $this->listFiles()->getItems()[0];
+//        $one = $this->listFiles($top->id)->getItems()[0];
+//        $two = $this->listFiles($one->id)->getItems()[0];
+//        echo $top->title . "/" . $one->title . "/" . $two->title . "<br/>";
+//        echo "downloadUrl: " . $two['downloadUrl'] . "<br/>";
+//        $text = $this->getModel()->downloadFile($two['downloadUrl']);
+//        $lines = explode(chr(0x0D),$text);
+//        echo "<pre>";
+//        echo var_export($lines,true);
+//        echo "</pre>";
+
+//        $this->getModel()->syncDriveFiles();
+
+
+        /**
+         * List All Files in the MagentoImport folder, recursively (up to 3 deep)
+         */
+        $listFolder = Mage::app()->getRequest()->getQuery("list");
+        if(!empty($listFolder) && $listFolder!="false") {
+            if($listFolder!=="true") {
+                $parentFolder = $this->getModel()->listFiles($listFolder)->getItems();
+            } else {
+                $parentFolder = $this->getModel()->listFiles()->getItems();
+            }
+            $titles = array();
+            foreach($parentFolder as $item) {
+                $subItems = $this->listFiles($item->id)->getItems();
+                echo $item->id ." = ". $item->title." (".count($subItems).")<br/>";
+                foreach($subItems as $subItem) {
+                    $subItems2 = $this->listFiles($subItem->id)->getItems();
+                    echo "\t - " . $subItem->id . " = " . $subItem->title . " (".count($subItems2).")<br/>";
+                    if(count($subItems2)==0) continue;
+                    foreach($subItems2 as $subItem2) {
+                        echo "\t\t - " . $subItem2->id . " = " . $subItem2->title . "<br/>";
+                    }
+                }
+            }
+        }
+        /*****************************************************************************************/
+
+        /**
+         * Recursively download all files in the 'locations' folder as .txt
+         * and save them to the 'locations' directory in /var/MagentoImport
+         */
+        $download = Mage::app()->getRequest()->getQuery("download");
+        if($download != "false" && $download === "locations") {
+            $allLocations   = true;
+            $justStates     = false;
+            if($allLocations) {
+                $saveLocation = Mage::getBaseDir("var")."/MagentoImport/locations";
+                if (!file_exists($saveLocation)) {
+                    mkdir($saveLocation, 0755, true);
+                }
+                //$locationsId  = "0B9_hVhBJdknvaHdtMUk2QWZJdk0";
+                $locationsId  = "0B2leKzlKIixAZ1oxYmFubTJ2eEk";
+                $locations    = $this->getModel()->listFiles($locationsId)->getItems();
+                $titles = array();
+                foreach($locations as $state) {
+                    // This $item should be a state folder
+                    $stateName = $state->title;
+                    // Create this State Directory if it doesn't exist
+                    $stateDir  = str_replace(' ',"-",str_replace("'","",$stateName));
+                    $statePath = $saveLocation.DIRECTORY_SEPARATOR.$stateDir;
+                    if (!file_exists($statePath)) {
+                        mkdir($statePath, 0755, true);
+                    }
+                    // City Files for this state:
+                    $cities = $this->listFiles($state->id)->getItems();
+                    // echo $item->id ." = ". $item->title." (".count($subItems).")<br/>";
+                    foreach($cities as $city) {
+                        $cityName = $city->title;
+                        $cityFile = str_replace(' ',"-",str_replace("'","",$cityName)) . ".txt";
+                        $cityPath = $statePath.DIRECTORY_SEPARATOR.$cityFile;
+                        $txtUrl   = $city->exportLinks['text/plain'];
+                        /*$cityTxt  = $this->getModel()->downloadFile($txtUrl);
+                        file_put_contents($cityPath,$cityTxt);*/
+                        $updated  = false; //strtotime($city->modifiedDate) > strtotime(filemtime($cityPath));
+                        echo '<article class="google-cms-import '.($updated?'updated':'update').'" data-local-path="'.$cityPath.'" data-remote-path="' . $txtUrl . '" >'
+                            .'<span class="google-cms-import status">'.($updated?'Updated':'Pending').'</span>'
+                            .'<span class="google-cms-import file-name"> '.$cityPath.'</span>'
+                            .'</article>';
+                    }
+                }
+            } elseif($justStates) {
+                $saveLocation = Mage::getBaseDir("var")."/MagentoImport/locations/States";
+                if (!file_exists($saveLocation)) {
+                    mkdir($saveLocation, 0755, true);
+                }
+                $statesId = "0B9_hVhBJdknvc1VzZmpfemFDd2s";
+                $model    = $this->getModel();
+                $states   = $model->listFiles($statesId)->getItems();
+                foreach($states as $state) {
+                    $stateName = $state->title;
+                    $stateFile = str_replace(' ',"-",str_replace("'","",$stateName)) . ".txt";
+                    $statePath = $saveLocation.DIRECTORY_SEPARATOR.$stateFile;
+                    $txtUrl   = $state->exportLinks['text/plain'];
+                    $stateTxt  = $this->getModel()->downloadFile($txtUrl);
+                    file_put_contents($statePath,$stateTxt);
+                }
+            } else {
+                // else
+            }
+        }
+        /***************************************************************************************/
+
+        /**
+         * - Update - This is the old way of doing things, now I'm downloading as txt and parsing by line
+         * Parse Word Documents (WORKING, currently docx)
+         */
+        /*
+        $dir = Mage::getBaseDir("media") . "/MagentoImport";
+        */
+        //$files = glob($dir."/locations/*/*.docx");
+        /*
+        echo var_export($files, true);
+        $wordx = array();
+        $wordx[$files[0]] = $this->getModel()->parseWordX($files[0]);
+        echo "<pre>";
+        echo var_export($wordx,true);
+        echo "</pre>";
+        */
+        ?>
+    </div>
+<?php endif; ?>
+    <div class="link-block">
+        <ul>
+            <li><a href="<?php if($this->authed):?>?parse=false&process=false&download=false&list=0B2leKzlKIixAZ1oxYmFubTJ2eEk<?php else: echo $this->authUrl; endif;?>">List "ROF City &amp; State"</a></li>
+            <li><a href="<?php if($this->authed):?>?parse=false&process=false&list=false&download=locations<?php else: echo $this->authUrl; endif;?>">Download Locations</a></li>
+            <li><a href="?parse=descriptions&process=true">Parse & Process Descriptions</a></li>
+            <li><a href="?parse=locations&process=true">Parse & Process Locations</a></li>
+            <li><a href="?parse=products&process=true">Parse & Process Products</a></li>
+            <li><a href="?parse=sitemaps&process=false">Parse & Update All Sitemaps</a></li>
+        </ul>
+    </div>
+    <div style="white-space: pre;">
+    <?php
+    global $io;
+    $parse = Mage::app()->getRequest()->getQuery("parse");
+    if($parse == "sitemaps") {
+        $sitemap_files = Mage::getBaseDir(). DIRECTORY_SEPARATOR . "sitemap*.xml";
+        $sitemaps = glob($sitemap_files);
+        foreach($sitemaps as $sitemap) {
+            $sitemap_name = uc_words(basename($sitemap)," ","-");
+            if(!file_exists($sitemap)) {
+                printf($sitemap_name." Sitemap Not Found at location: %s", $sitemap);
+            } else {
+                $sitemapUpdate = array();
+                $csmh = fopen($sitemap,'r+');
+                while(!feof($csmh)) {
+                    $preSpace = '';
+                    $line = $orgLine = rtrim(fgets($csmh),PHP_EOL);
+                    if(preg_match('/^\s*$/',$line)) continue;
+                    $pregResults = preg_match('/^(\s*)([^\s]+)$/',$line,$line_parts);
+                    if(count($line_parts)==3) {
+                        $preSpace = $line_parts[1];
+                        $line = $line_parts[2];
+                    }
+                    $line = trim($line);
+                    $preProcLine = $line;
+                    $line = preg_replace('/<cell cellsource="A\d+">(.*)<\/cell>/',(strlen($preSpace)?'':'        ').'<loc>$1</loc>',$line);
+                    $line = preg_replace('/<cell cellsource="B\d+">(.*)<\/cell>/',(strlen($preSpace)?'':'        ').'<lastmod>$1</lastmod>',$line);
+                    $line = preg_replace('/<cell cellsource="C\d+">(.*)<\/cell>/',(strlen($preSpace)?'':'        ').'<changefreq>$1</changefreq>',$line);
+                    $line = preg_replace('/<cell cellsource="D\d+">(.*)<\/cell>/',(strlen($preSpace)?'':'        ').'<priority>$1</priority>',$line);
+                    $line = preg_replace('/(<\/?)row.*>/',(strlen($preSpace)?'':'    ').'$1url>',$line);
+                    $line = preg_replace('/<data>/','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',$line);
+                    $line = preg_replace('/<\/data>/','</urlset>',$line);
+                    if(strcmp($line,$preProcLine)==0) {
+                        $orgLine = preg_replace('/<lastmod>(.*)<\/lastmod>/','<lastmod>'.date("Y-m-d").'</lastmod>',$orgLine);
+                        $sitemapUpdate[] = $orgLine;
+                    } else {
+                        $line = preg_replace('/(\s*)<lastmod>(.*)<\/lastmod>/',(strlen($preSpace)?'':'        ').'<lastmod>'.date("Y-m-d").'</lastmod>',$line);
+                        $sitemapUpdate[] = $preSpace.$line;
+                    }
+                }
+                $sitemapUpdate = implode(PHP_EOL,$sitemapUpdate);
+                $result = file_put_contents($sitemap,$sitemapUpdate);
+                fclose($csmh);
+                if($result) {
+                    echo "Sitemap Updated Successfully: " . $sitemap_name . "<br />" . PHP_EOL;
+                } else {
+                    echo "Failed Updating Sitemap: " . $sitemap_name . "<br />" . PHP_EOL;
+                }
+            }
+        }
+    } else
+    if($parse == "descriptions") {
+        $io = array(
+            "input"     => Mage::getBaseDir("var")."/MagentoImport/Products/Descriptions/RattanOutdoorFurniture*.txt",
+            "output"    => Mage::getBaseDir('var')."/MagentoImport/Products/Descriptions/Descriptions.csv",
+            "q"         => "'",
+            "usePhrase" => true
+        );
+    } else
+    if($parse == "products") {
+        $io = array(
+            "input"     => Mage::getBaseDir("var")."/MagentoImport/Products/CollectionProducts/*.txt",
+            "output"    => Mage::getBaseDir("var")."/MagentoImport/Products/CollectionProducts/Products.csv",
+            "q"         => "'",
+            "usePhrase" => true
+        );
+    } else
+    if($parse == "locations") {
+        $io = array(
+            "input"     => Mage::getBaseDir("var")."/MagentoImport/locations/*/*.txt",
+            "output"    => Mage::getBaseDir("var")."/MagentoImport/locations/locations.sql",
+            "parent"    => Mage::getBaseDir("var")."/MagentoImport/locations/",
+            "q"         => '"',
+            "usePhrase" => true
+        );
+    } else {
+        $parse = null;
+    }
+    $doProcess = is_null($parse) ? false : boolval(Mage::app()->getRequest()->getQuery("process"));
+    if($doProcess):
+    /**
+     * Parse .txt from .doc to .csv
+     *
+     * Parse Word Docs downloaded as txt files (from google docs, done manually for now,
+     *  - ^ update - now downloaded from google docs, functionality commented out above -
+     * but everything is in place to get the files directly from google drive), and write
+     * their contents to a single csv file. This parsing should work just the same on cms pages.
+     * There have been paragraph tags with the class 'box-blurb' wrapped around each paragraph of
+     * content. Also, commas have be encoded as &comma; which should work, but may be an issue.
+     */
+
+    $textFiles = glob($io['input']);
+    $descsStr  = '';
+    foreach($textFiles as $textFile) {
+        $descsStr .= file_get_contents($textFile) .PHP_EOL . "________________".PHP_EOL;
+    }
+    $descs     = preg_split("/_+[\n\r]/",$descsStr);
+    $descArr   = array();
+    $props     = array();
+    $title     = '';
+    $unaccent  = array("á"=>"a","Á"=>"A","à"=>"a","À"=>"A","ă"=>"a","Ă"=>"A","â"=>"a","Â"=>"A","å"=>"a","Å"=>"A","ã"=>"a","Ã"=>"A","ą"=>"a","Ą"=>"A","ā"=>"a","Ā"=>"A","ä"=>"ae","Ä"=>"AE","æ"=>"ae","Æ"=>"AE","ḃ"=>"b","Ḃ"=>"B","ć"=>"c","Ć"=>"C","ĉ"=>"c","Ĉ"=>"C","č"=>"c","Č"=>"C","ċ"=>"c","Ċ"=>"C","ç"=>"c","Ç"=>"C","ď"=>"d","Ď"=>"D","ḋ"=>"d","Ḋ"=>"D","đ"=>"d","Đ"=>"D","ð"=>"dh","Ð"=>"Dh","é"=>"e","É"=>"E","è"=>"e","È"=>"E","ĕ"=>"e","Ĕ"=>"E","ê"=>"e","Ê"=>"E","ě"=>"e","Ě"=>"E","ë"=>"e","Ë"=>"E","ė"=>"e","Ė"=>"E","ę"=>"e","Ę"=>"E","ē"=>"e","Ē"=>"E","ḟ"=>"f","Ḟ"=>"F","ƒ"=>"f","Ƒ"=>"F","ğ"=>"g","Ğ"=>"G","ĝ"=>"g","Ĝ"=>"G","ġ"=>"g","Ġ"=>"G","ģ"=>"g","Ģ"=>"G","ĥ"=>"h","Ĥ"=>"H","ħ"=>"h","Ħ"=>"H","í"=>"i","Í"=>"I","ì"=>"i","Ì"=>"I","î"=>"i","Î"=>"I","ï"=>"i","Ï"=>"I","ĩ"=>"i","Ĩ"=>"I","į"=>"i","Į"=>"I","ī"=>"i","Ī"=>"I","ĵ"=>"j","Ĵ"=>"J","ķ"=>"k","Ķ"=>"K","ĺ"=>"l","Ĺ"=>"L","ľ"=>"l","Ľ"=>"L","ļ"=>"l","Ļ"=>"L","ł"=>"l","Ł"=>"L","ṁ"=>"m","Ṁ"=>"M","ń"=>"n","Ń"=>"N","ň"=>"n","Ň"=>"N","ñ"=>"n","Ñ"=>"N","ņ"=>"n","Ņ"=>"N","ó"=>"o","Ó"=>"O","ò"=>"o","Ò"=>"O","ô"=>"o","Ô"=>"O","ő"=>"o","Ő"=>"O","õ"=>"o","Õ"=>"O","ø"=>"oe","Ø"=>"OE","ō"=>"o","Ō"=>"O","ơ"=>"o","Ơ"=>"O","ö"=>"oe","Ö"=>"OE","ṗ"=>"p","Ṗ"=>"P","ŕ"=>"r","Ŕ"=>"R","ř"=>"r","Ř"=>"R","ŗ"=>"r","Ŗ"=>"R","ś"=>"s","Ś"=>"S","ŝ"=>"s","Ŝ"=>"S","š"=>"s","Š"=>"S","ṡ"=>"s","Ṡ"=>"S","ş"=>"s","Ş"=>"S","ș"=>"s","Ș"=>"S","ß"=>"SS","ť"=>"t","Ť"=>"T","ṫ"=>"t","Ṫ"=>"T","ţ"=>"t","Ţ"=>"T","ț"=>"t","Ț"=>"T","ŧ"=>"t","Ŧ"=>"T","ú"=>"u","Ú"=>"U","ù"=>"u","Ù"=>"U","ŭ"=>"u","Ŭ"=>"U","û"=>"u","Û"=>"U","ů"=>"u","Ů"=>"U","ű"=>"u","Ű"=>"U","ũ"=>"u","Ũ"=>"U","ų"=>"u","Ų"=>"U","ū"=>"u","Ū"=>"U","ư"=>"u","Ư"=>"U","ü"=>"ue","Ü"=>"UE","ẃ"=>"w","Ẃ"=>"W","ẁ"=>"w","Ẁ"=>"W","ŵ"=>"w","Ŵ"=>"W","ẅ"=>"w","Ẅ"=>"W","ý"=>"y","Ý"=>"Y","ỳ"=>"y","Ỳ"=>"Y","ŷ"=>"y","Ŷ"=>"Y","ÿ"=>"y","Ÿ"=>"Y","ź"=>"z","Ź"=>"Z","ž"=>"z","Ž"=>"Z","ż"=>"z","Ż"=>"Z","þ"=>"th","Þ"=>"Th","µ"=>"u","а"=>"a","А"=>"a","б"=>"b","Б"=>"b","в"=>"v","В"=>"v","г"=>"g","Г"=>"g","д"=>"d","Д"=>"d","е"=>"e","Е"=>"e","ё"=>"e","Ё"=>"e","ж"=>"zh","Ж"=>"zh","з"=>"z","З"=>"z","и"=>"i","И"=>"i","й"=>"j","Й"=>"j","к"=>"k","К"=>"k","л"=>"l","Л"=>"l","м"=>"m","М"=>"m","н"=>"n","Н"=>"n","о"=>"o","О"=>"o","п"=>"p","П"=>"p","р"=>"r","Р"=>"r","с"=>"s","С"=>"s","т"=>"t","Т"=>"t","у"=>"u","У"=>"u","ф"=>"f","Ф"=>"f","х"=>"h","Х"=>"h","ц"=>"c","Ц"=>"c","ч"=>"ch","Ч"=>"ch","ш"=>"sh","Ш"=>"sh",'щ' => 'sch', 'Щ' => 'sch', 'ъ' => '', 'Ъ' => '', "ы"=>"y","Ы"=>"y",'ь' => '', 'Ь' => '', "э"=>"e","Э"=>"e","ю"=>"ju","Ю"=>"ju","я"=>"ja",'Я' => 'ja');
+    function cleanCsvValue(&$lval,$lkey, $unaccent) {
+        $lval = str_replace(array_keys($unaccent), array_values($unaccent), $lval);
+        $lval = preg_replace('/^([^\d]*)(\d)\-/',"$1$2 ",$lval);
+        return filter_var($lval, FILTER_SANITIZE_SPECIAL_CHARS, array(FILTER_FLAG_ENCODE_LOW,FILTER_FLAG_ENCODE_HIGH));
+    }
+    function multi_unique($array) {
+        $new = array();
+        foreach ($array as $k=>$na)
+            $new[$k] = serialize($na);
+        $uniq = array_unique($new);
+        $new1 = array();
+        foreach($uniq as $k=>$ser)
+            $new1[$k] = unserialize($ser);
+        return ($new1);
+    }
+    function truncate($string,$length=100,$append="&hellip;") {
+        $string = trim($string);
+
+        if(strlen($string) > $length) {
+            $string = wordwrap($string, $length);
+            $string = explode("\n",$string);
+            $string = array_shift($string) . $append;
+        }
+
+        return $string;
+    }
+
+    function phoneLink($phone) {
+        $phoneStrip = preg_filter('/[^0-9A-Za-z]+/','',$phone);
+        global $io;
+        $phoneTable = array(
+            2   => array("a","b","c"),
+            3   => array("d","e","f"),
+            4   => array("g","h","i"),
+            5   => array("j","k","l"),
+            6   => array("m","n","o"),
+            7   => array("p","q","r","s"),
+            8   => array("t","u","v"),
+            9   => array("w","x","y","z")
+        );
+        $phoneDigits = str_split($phoneStrip);
+        $phoneNumber = '';
+        foreach($phoneDigits as $phoneDigit) {
+            if(is_numeric($phoneDigit)) {
+                $phoneNumber.= $phoneDigit;
+                continue;
+            }
+            foreach($phoneTable as $phoneBtn=>$btnValues) {
+                if(in_array(strtolower($phoneDigit),$btnValues)) {
+                    $phoneNumber .= $phoneBtn;
+                    break;
+                }
+            }
+        }
+        if($phoneNumber[0]!=="1") {
+            $phoneNumber = "1" . $phoneNumber;
+        }
+
+        return '<a href='.$io['q'].'tel:'.$phoneNumber.$io['q'].'>'.$phone.'</a>';
+    }
+
+    function getPhoneLinkNumber($phone = NULL) {
+        if(is_null($phone)) $phone = Mage::getStoreConfig('general/store_information/phone');
+        return phoneLink($phone);
+    }
+
+    $phoneReplace = getPhoneLinkNumber();
+
+    function linkPhone($prop) {
+        global $phoneReplace;
+        // $prop = preg_replace('/(\(\d{3}\)\s?\d{3}\-\d{4})/', "<a href='tel:18442728826'>(844) 2-RATTAN</a>", $prop);
+        // $phoneReplace = "<a href='tel:18442728826'>(844) 2-RATTAN</a>"
+        $phoneReplace = $phoneReplace == "" ? getPhoneLinkNumber() : $phoneReplace;
+        return preg_replace('/(\(888\)\s?555\-5555)/', $phoneReplace, $prop);
+    }
+    function linkEmail($prop) {
+        global $io;
+        return preg_replace('/([A-z0-9_-]+\@[A-z0-9_-]+\.)([A-z0-9\_\-\.]{1,}[A-z])/', '<a href='.$io['q'].'mailto:$1$2'.$io['q'].'>$1$2</a>', $prop);
+    }
+    function isEmail($str) {
+        return (preg_match('/([A-z0-9_-]+\@[A-z0-9_-]+\.)([A-z0-9\_\-\.]{1,}[A-z])/',$str)===1);
+    }
+    function isWordcountLine($line) {
+        return preg_match('/^\(\d+\)$/',trim($line));
+    }
+    function hasDescription($lines) {
+        $lines = array_filter($lines,"isWordcountLine");
+        return count($lines) > 1;
+    }
+    function linkify($line) {
+        global $io;
+        $matches = array();
+        // $regex = '/(https?:\/\/)?(www\.)?[-a-zA-Z0-9:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9:%_\+.~#?&//=]*))';
+        $regex = '/((https?:\/\/)?([-\w]+\.[-\w\.]+)+\w(:\d+)?(\/([-\w\/,_\.]*(\?\S+)?)?)*)/';
+        $pregStat = preg_match_all($regex,$line,$matches, PREG_SET_ORDER);
+        if($pregStat===false) return $line;
+        $newLine = $line;
+        if(count($matches)>0) {
+            $lastLink = "";
+            foreach($matches as $pLink) {
+                $link = rtrim($pLink[0], ".");
+                if($link=="rattanoutdoorfurniture.com"): continue; endif;
+                if($link==$lastLink): continue; endif;
+                $lastLink = $link;
+                $newLine = str_replace($link,'<a href='.$io['q'].''.((preg_match('/^https?:\/\//i',$link)!==1)?'http://':'').$link.''.$io['q'].' title='.$io['q'].''.$link.''.$io['q'].' rel='.$io['q'].'external'.$io['q'].' target='.$io['q'].'_default'.$io['q'].'>'.$link.'</a>',$newLine);
+            }
+        }
+        return $newLine;
+    }
+    foreach($descs as $key=>$desc) {
+        $descArr[$key] = array(
+            'full'  => $desc,
+            'lines' => preg_split(
+                '/[\n\r]+/',
+                $desc
+            )
+        );
+        $lines = array_filter($descArr[$key]['lines']);
+        array_walk($lines,"cleanCsvValue",$unaccent);
+        $title = filter_var(array_shift($lines),FILTER_SANITIZE_SPECIAL_CHARS,FILTER_FLAG_STRIP_HIGH);
+        $props[$key]                = array();
+        $props[$key]["title"]       = $title;
+        $props[$key]["content"]     = array();
+        $props[$key]["description"] = array();
+        $props[$key]["keywords"]    = array();
+        $contentComplete            = false;
+        $descriptionComplete        = !hasDescription($lines);
+        $addressMatches             = array();
+        foreach($lines as $prop) {
+            if($contentComplete && $descriptionComplete) {
+                $keyword = preg_filter('/^([^\:]+)\:.*$/', '$1',$prop);
+                if(!is_null($keyword)) {
+                    $props[$key]['keywords'][] = $keyword;
+                }
+            } else {
+                $subKey = !$contentComplete ? "content" : "description";
+                if(preg_match('/^\(\d+\)$/',trim($prop))) {
+                    ${$subKey.'Complete'} = true;
+                    continue;
+                }
+                if(!preg_match('/\'*^\s*\'*$/',trim($prop))) {
+                    $prop = htmlentities(trim($prop),ENT_QUOTES);
+                    $prop = linkify($prop);
+                    $prop = linkPhone($prop);
+                    $prop = linkEmail($prop);
+                    if(preg_match('/^([a-zA-z\s.\']{3,38}),\s([A-Z]{2})\s(\d{5})\.?$/',$prop,$addressMatches)) {
+                        $ad_city  = isset($addressMatches[1]) && strlen($addressMatches[1]) ? $addressMatches[1] : null;
+                        $ad_state = isset($addressMatches[2]) && strlen($addressMatches[2]) ? $addressMatches[2] : null;
+                        $ad_zip   = isset($addressMatches[3]) && strlen($addressMatches[3]) ? $addressMatches[3] : null;
+                        if($ad_city && $ad_state && $ad_zip) {
+                            $ad_cityHtml  = '<span itemprop='.$io['q'].'addressLocality'.$io['q'].'>'.$ad_city.'</span>';
+                            $ad_stateHtml = '<span itemprop='.$io['q'].'addressRegion'.$io['q'].'>'.$ad_state.'</span>';
+                            $ad_zipHtml   = '<span itemprop='.$io['q'].'postalCode'.$io['q'].'>'.$ad_zip.'</span>';
+                            $ad_wrapHtml  = '<p  itemprop='.$io['q'].'address'.$io['q'].' itemscope itemtype='.$io['q'].'http://schema.org/PostalAddress'.$io['q'].'>'
+                                          . $ad_cityHtml . ", "
+                                          . $ad_stateHtml . " "
+                                          . $ad_zipHtml
+                                          . '</p>';
+                            $props[$key][$subKey][] = $contentComplete ? strip_tags($ad_wrapHtml) : $ad_wrapHtml;
+                        } else {
+                            $props[$key][$subKey][] = $contentComplete ? strip_tags($prop) : "<p>".$prop."</p>";
+                        }
+                    } else {
+                        $props[$key][$subKey][] = $contentComplete ? strip_tags($prop) : "<p>".$prop."</p>";
+                    }
+                }
+            }
+        }
+    }
+
+    $props = array_filter($props);
+    usort($props, function($a,$b) {
+        return strcasecmp($a['title'],$b['title']);
+    });
+    $props = multi_unique($props);
+
+    $outputData = '';
+
+    if($parse=="descriptions" || $parse=="products") {
+        $csv = 'title,content,keywords,description'.PHP_EOL;
+        foreach($props as $page) {
+            if(!(strlen($page['title'])>0&&count($page['content'])>0&&count($page['keywords'])>0)) continue;
+            $csv .= "\"".trim($page['title'])."\",";
+            $csv .= "\"";
+            $csv .= implode("",$page['content']);
+            $csv .= "\",";
+            if($io['usePhrase']) {
+                $csv .= "\"" . str_replace(
+                        array(",","-"),
+                        array("", " "),
+                        $page['title']
+                    ) . "\",";
+            } else {
+                $csv .= "\"" . implode(", ",explode(" ",implode(" ",$page['keywords']))) . "\",";
+            }
+            if(isset($page['description'])) {
+                $csv .= "\"" . implode(" ", $page['description']) . "\"";
+            } else {
+                $csv .= "\"\"";
+            }
+            $csv .= PHP_EOL;
+        }
+        $outputData = $csv;
+    } else
+    if($parse == "locations") {
+        // Parsing CMS Pages, Write INSERT statements to sql file.
+        $statePageId = array(
+            "Alabama"	        	=> "50",
+            "Alaska"	        	=> "51",
+            "Arizona"	        	=> "32",
+            "Arkansas"	        	=> "26",
+            "California"	    	=> "92",
+            "Colorado"	        	=> "52",
+            "Connecticut"	    	=> "53",
+            "Delaware"	        	=> "54",
+            "District of Columbia"  => "93",
+            "Florida"	        	=> "55",
+            "Georgia"	        	=> "56",
+            "Hawaii"	        	=> "57",
+            "Idaho"	            	=> "38",
+            "Illinois"	        	=> "58",
+            "Indiana"	        	=> "44",
+            "Iowa"	            	=> "59",
+            "Kansas"	        	=> "60",
+            "Kentucky"	        	=> "61",
+            "Louisiana"	        	=> "62",
+            "Maine"	            	=> "63",
+            "Maryland"	        	=> "64",
+            "Massachusetts"	    	=> "65",
+            "Michigan"	        	=> "66",
+            "Minnesota"	        	=> "67",
+            "Mississippi"	    	=> "68",
+            "Missouri"	        	=> "69",
+            "Montana"	        	=> "70",
+            "Nebraska"	        	=> "71",
+            "Nevada"	        	=> "72",
+            "New Hampshire"	    	=> "73",
+            "New Jersey"	    	=> "74",
+            "New Mexico"	    	=> "75",
+            "New York"	        	=> "76",
+            "North Carolina"		=> "77",
+            "North Dakota"	    	=> "78",
+            "Ohio"	            	=> "79",
+            "Oklahoma"	        	=> "80",
+            "Oregon"	        	=> "81",
+            "Pennsylvania"	    	=> "23",
+            "Rhode Island"	    	=> "82",
+            "South Carolina"    	=> "83",
+            "South Dakota"	    	=> "84",
+            "Tennessee"	        	=> "85",
+            "Texas"	            	=> "86",
+            "Utah"	            	=> "87",
+            "Vermont"	        	=> "88",
+            "Virginia"	        	=> "89",
+            "Washington"	    	=> "90",
+            "West Virginia"	    	=> "91",
+            "Wisconsin"	        	=> "24",
+            "Wyoming"	        	=> "25"
+        );
+        $cityCount = array();
+        foreach($statePageId as $state=>$stateId) {
+            $dashState  = str_replace(' ',"-",str_replace("'","",$state));
+            $stateFiles = glob($io['parent'].DIRECTORY_SEPARATOR.$dashState.DIRECTORY_SEPARATOR."*.txt");
+            $cityCount[$state] = count($stateFiles);
+        }
+        // String Replace Array (for identifier)
+        $sr = array(
+            // needle
+            "n" => array(
+                " ", "'", ".", "&#39;"
+            ),
+            // replacement
+            "r" => array(
+                "-",  "",  "", ""
+            )
+        );
+        // Determine the "Featured" category Id, for now, use static and exchange when importing.
+        $featuredCategoryId = 2290;
+        $cityId  = 500;
+        $queries = array();
+        // Fix Blank Page Issue
+        $props   = array_slice($props,1);
+        // Collect Identifiers (to make sure all pages are used)
+        $identifiers = array();
+        foreach($props as $page) {
+            $isState        = array_key_exists(trim(str_replace("Outdoor Patio Furniture",'',$page['title'])), $statePageId);
+            $pageId         = null;
+            $pageTitle      = null;
+            $pageIdentifier = null;
+            $treePath       = null;
+            $pageLevel      = null;
+            if($isState) {
+                $stateName      = trim(str_replace("Outdoor Patio Furniture",'',$page['title']));
+                $pageTitle      = $stateName;
+                $dashState      = str_replace($sr['n'],$sr['r'],strtolower($stateName));
+                $pageIdentifier = "locations/$dashState";
+                $identifiers[]  = $pageIdentifier;
+                $parentId       = 22;
+                $pageId         = $statePageId[$stateName];
+                $treePath       = "2/$parentId/$pageId";
+                $pageLevel      = 3;
+                $pageChildren   = $cityCount[$stateName];
+            } else {
+                $titleRegex     = '/([^,]+),\s([A-z\'\s]+)\s[Oo]utdoor\s[Pp]atio\s[Ff]urniture.*/';
+                $city           = preg_filter($titleRegex,"$1",$page['title']);
+                $state          = preg_filter($titleRegex,"$2",$page['title']);
+                $pageTitle      = "$city, $state";
+                if($state=="District of Columbia") {
+                    $pageTitle  = "$city, D.C.";
+                }
+                /* Check For Bad State Name ********************
+                if(!$state || stristr($state,"outdoor patio furniture")!==false) {
+                    die(dumper::dump(
+                        array(
+                            "title" => $page['title'],
+                            "city"  => $city,
+                            "state" => $state,
+                            "regex" => $titleRegex
+                        )
+                    ));
+                } ***********************************************/
+
+                $dashCity       = str_replace($sr['n'],$sr['r'],strtolower($city));
+                $dashState      = str_replace($sr['n'],$sr['r'],strtolower($state));
+                $pageIdentifier = "locations/$dashState/$dashCity";
+                $identifiers[]  = $pageIdentifier;
+
+                $parentId       = $statePageId[$state];
+                // Set PageId to current CityID, Increment after setting (for next city)
+                $pageId         = $cityId++;
+                $treePath       = "2/22/$parentId/$pageId";
+                $pageLevel      = 4;
+                $pageChildren   = 0;
+            }
+            if(isset($page['description']) && strlen(implode(" ",$page['description']))>1) {
+                $metaDesc   = implode(" ", $page['description']);
+            } else {
+                reset($page["content"]);
+                $metaDesc   = current($page["content"]);
+                $metaDesc   = strip_tags($metaDesc);
+                $metaDesc   = truncate($metaDesc,250,"...");
+            }
+            if($io["usePhrase"]) {
+                $keywords   = str_replace(",","",$pageTitle);
+            } else {
+                $keywords   = str_replace("/"," ",$page["keywords"]);
+                $keywords   = htmlentities(implode(", ",array_unique(explode(" ",str_replace(",",'',$pageTitle)." ".implode(" ", $keywords)))),ENT_QUOTES);
+            }
+            $pageIsActive   = $helper->isActiveByIdentifier($pageIdentifier) ? "1" : "0";
+            $pageContent    = '<div class="account-box fourteen columns offset-by-one by-margin add-bottom">'
+                            . '<div class="account-box-border">&nbsp;</div>'
+                            . '<div class="account-box-inner">'
+                            . '<div class="box-head">'
+                            . '<h1>'.$pageTitle.' Rattan Outdoor Furniture</h1>'
+                            . '</div>'
+                            . '<div class="box-content box-blurb">'
+                            . implode("",$page["content"])
+                            . '</div>'
+                            . '</div>'
+                            . '<div class="account-box-border">&nbsp;</div>'
+                            . '</div>';
+                            // . '<div>{{block type="catalog/product_list" category_id="'.$featuredCategoryId.'" template="catalog/product/featured_list.phtml"}}</div>';
+
+            $query = <<<QUERY
+REPLACE INTO cms_page_tree (
+`page_id`, `title`, `root_template`, `meta_keywords`, `meta_description`, `identifier`, `content_heading`, `content`, `creation_time`, `update_time`, `is_active`, `sort_order`, `layout_update_xml`, `custom_theme`, `custom_root_template`, `custom_layout_update_xml`, `custom_theme_from`, `custom_theme_to`, `store_id`, `parent_id`, `path`, `position`, `level`, `children_count`, `include_in_menu`
+) VALUES (
+{$pageId},
+'{$pageTitle}',
+'one_column',
+'{$keywords}',
+'{$metaDesc}',
+'{$pageIdentifier}',
+'',
+'{$pageContent}',
+NOW(),
+NOW(),
+{$pageIsActive},
+0,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+1,
+{$parentId},
+'{$treePath}',
+{$pageId},
+{$pageLevel},
+{$pageChildren},
+0
+);
+QUERY;
+            $queries[]= $query;
+        }
+        $outputData = implode(PHP_EOL, $queries);
+    }
+    $result    = false;
+    $resultMsg = '';
+    try {
+        $result = file_put_contents(
+            $io['output'],
+            $outputData
+        );
+    } catch(Exception $e) {
+        $resultMsg = $e->getMessage();
+    }
+    ?>
+        <div id="sitemap-of-generated-pages">
+            <div>Sitemap of all generated pages:</div>
+            <div><?php echo $helper->generateSitemapFromIdentifiers($identifiers); ?></div>
+        </div>
+        <div>
+            <div>Generated Pages Not In Release Schedule:</div>
+            <div><?php
+                $notInReleaseArray = $helper->arrValsNotInRelease($identifiers);
+                foreach($notInReleaseArray as $niri) {
+                    echo $niri . "<br/>";
+                }
+            ?></div>
+            <div>Release Schedule Pages not In Generated Pages:</div>
+            <div><?php
+                $notGenerated = $helper->releaseNotInArrVals($identifiers);
+                foreach($notGenerated as $ngpi) {
+                    echo $ngpi . "<br/>";
+                }
+            ?></div>
+        </div>
+        <div>
+            <span>Generated Identifiers (in php array)</span>
+            <div style="height:60px;overflow-x:visible;overflow-y:scroll;"><?php echo 'array(<br/>"'.implode('",<br/>"',$identifiers).'");' ?></div>
+        </div>
+        <div><div>Files Read: <?php echo count($textFiles); ?></div>
+            <div style="height: 60px;overflow-x:visible;overflow-y:scroll;"><?php
+                foreach($textFiles as $textFile){
+                    echo $textFile . "<br/>";
+                }
+            ?></div>
+        </div>
+        <div>Records Recorded: <?php echo count($props); ?></div>
+        <div>File Contents Written: <?php echo $result ?
+                'Successfully':
+                'Unsuccessfully<br>Message: '.$resultMsg;
+        ?></div>
+    <?php endif; ?>
+    </div>
+</div>
+
+<?php if(isset($download) && $download != "false" && $download === "locations" && $allLocations == true): ?>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+    jQuery.noConflict();
+</script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        var procs = [];
+        jQuery(".google-cms-import.update").each(function() {
+            var $this = jQuery(this);
+            var postData = {
+                form_key:    window.FORM_KEY,
+                remote_path: $this.data("remote-path"),
+                local_path:  $this.data("local-path")
+            };
+            procs.push(jQuery.ajax({
+                url: '<?php echo $this->getUrl("googlecmsimport/index/update")."?isAjax=true"; ?>',
+                data: postData,
+                dataType: 'json',
+                type: 'POST',
+                beforeSend: function() {
+                    $this.find(".status").text("Processing...")
+                }
+            }).done(function(json) {
+                $this.find(".status").text(json.status);
+                if(json.error) {
+                    $this.appendChild(jQuery("<div/>").addClass("google-cms-input error").text(json.error));
+                }
+            }));
+        });
+        jQuery.when(procs).done(function() {
+           jQuery(".google-cms-import.update:last").after(function() {
+               var $results = jQuery("<div/>").addClass("google-cms-import results");
+               var files    = jQuery(".google-cms-import.update");
+               var fileCnt  = files.length;
+               var errors   = files.find(".error");
+               var errorCnt = errors.length;
+               var errorHtml= [];
+               errors.each(function() {
+                   var $this = jQuery(this);
+                   var fileName = $this.sibling('.file-name').html();
+                   var error = $this.html();
+                   errorHtml.push("<div><label>"+filename+"</label><span>"+error+"</div>");
+               })
+               var htmlStr  = "Files: " + fileCnt + "<br/>"
+                            + "Error Count: " + errorCnt + "<br />" +
+                            ( (errorHtml.length) ?
+                                "Errors: <br />" + errorHtml.join("") :
+                                ""
+                            );
+
+           });
+        });
+    });
+</script>
+<?php endif; ?>

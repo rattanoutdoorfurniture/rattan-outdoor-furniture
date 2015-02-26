@@ -1,0 +1,120 @@
+<script type="text/javascript">
+    //countryRegions = <?php echo $this->helper('directory')->getRegionJson() ?>;
+</script>
+<div class="opc-wrapper-opc">
+    <div class="page-title sixteen columns">
+        <h2 id="cart-heading"><?php echo $this->__('Checkout');
+        if (!Mage::getSingleton('customer/session')->isLoggedIn()):?>
+            <?php echo $this->getChildHtml('login');?>
+        <?php endif;?></h2>
+        <p class="displaynone"><?php echo $this->__('Fill in the Fields below to complete your purchase!')?></p>
+    </div>
+
+	<div class="clear move-columns displaynone"></div>
+
+    <div id="cart-cartbox" class="ten columns cart-box collapse">
+        <div class="cart-box-border"></div>
+        <div class="cart-box-inner">
+            <a id="cart-cartbox-toggle" href="<?php echo $this->getUrl("checkout/cart"); ?>">
+                <span id="cart-cartbox-toggle-text"><?php echo $this->__("Edit Your Cart (". Mage::helper("checkout/cart")->getItemsCount().")"); ?></span>
+                <div id="cart-cartbox-toggle-btn" title="Show / Hide Cart Items"><?php echo $this->__("Show / Hide Cart Items"); ?></div>
+            </a>
+        </div><!-- /.cart-box-inner/ -->
+        <div class="cart-box-border"></div>
+    </div>
+
+    <?php echo $this->_getReviewHtml()?>
+
+    <div id="checkout-box" class="ten columns cart-box">
+        <div class="cart-box-border"></div>
+        <div class="cart-box-inner clearfix">
+            <div class="opc-col-left add-bottom">
+                <form id="opc-address-form-billing" method="post">
+                    <?php echo $this->getChildHtml('billing')?>
+                </form>
+
+                <form id="opc-address-form-shipping" class="hidden" method="post">
+                <?php echo $this->getChildHtml('shipping')?>
+                </form>
+
+            </div>
+
+            <div class="opc-col-center">
+                <?php if (!$this->getOnepage()->getQuote()->isVirtual()):?>
+                <div class="shipping-block">
+                    <h3><?php echo $this->__('Shipping Method')?></h3>
+                    <div id="shipping-block-methods">
+                        <?php echo $this->getChildHtml('shipping_method');//$this->_getShippingMethodsHtml();?>
+                    </div>
+                </div>
+                <?php endif;?>
+                <div class="payment-block <?php if ($this->getOnepage()->getQuote()->isVirtual()):?>clear-margin<?php endif;?>">
+                    <h3><?php echo $this->__('Payment Method')?></h3>
+                    <?php echo $this->getChildHtml('payment')//$this->_getPaymentMethodsHtml();?>
+                </div>
+
+                <div class="account-set-password">
+                    <h3>
+                        <?php echo $this->__("Customize Password"); ?>
+                        <a href="#" id="toggle-custom-password-fields"><?php echo $this->__("Show Fields"); ?></a>
+                    </h3>
+                    <small><?php echo $this->__("Set a custom password. - Optional"); ?></small>
+                    <form id="opc-account-form-password" style="display:none;" method="post">
+                        <div class="fields">
+                            <div class="field">
+                                <label for="additional:customer_password" class=""><?php echo $this->__('Password') ?></label>
+                                <div class="input-box">
+                                    <input type="password" name="additional[customer_password]" id="additional:customer_password" title="<?php echo $this->__('Password') ?>" class="input-text validate-password" autocomplete="off"/>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="additional:confirm_password" class=""><?php echo $this->__('Confirm Password') ?></label>
+                                <div class="input-box">
+                                    <input type="password" name="additional[confirm_password]" title="<?php echo $this->__('Confirm Password') ?>" id="additional:confirm_password" class="input-text validate-cpassword" autocomplete="off"/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="discount-block">
+                    <h3><?php echo $this->__('Discount Codes')?></h3>
+                    <?php echo $this->getChildhtml('coupon');?>
+                </div>
+
+                <?php if(Mage::helper('opc')->isShowComment()):?>
+                    <?php echo $this->getChildhtml('customer.comment');?>
+                <?php endif;?>
+
+            </div>
+        </div><!-- /.cart-box-inner/ -->
+        <div class="cart-box-border"></div>
+    </div>
+</div>
+<script>
+	IWD.OPC.Checkout.config = '<?php echo $this->getJsonConfig()?>';
+	<?php if ($this->getOnepage()->getQuote()->isVirtual()):?>
+	IWD.OPC.Checkout.isVirtual = true;
+	<?php endif;?>	 
+</script>
+
+<div class="opc-ajax-loader">
+	<div id="floatingCirclesG">
+		<div class="f_circleG" id="frotateG_01"></div>
+		<div class="f_circleG" id="frotateG_02"></div>
+		<div class="f_circleG" id="frotateG_03"></div>
+		<div class="f_circleG" id="frotateG_04"></div>
+		<div class="f_circleG" id="frotateG_05"></div>
+		<div class="f_circleG" id="frotateG_06"></div>
+		<div class="f_circleG" id="frotateG_07"></div>
+		<div class="f_circleG" id="frotateG_08"></div>
+	</div>
+</div>
+<div class="opc-message-wrapper">
+	
+	<div class="opc-messages">
+		<a class="close-message-wrapper"></a>
+		<div class="opc-message-container"></div>
+		<div class="opc-messages-action"><button class="button"><span><span><?php echo $this->__('Close')?></span></span></button></div>
+	</div>
+</div>

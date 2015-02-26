@@ -1,0 +1,160 @@
+/*******************************\
+* Styles for Global Page Header *
+\*******************************/
+
+#page-header {
+    position: relative;
+    padding-top: 10px;
+    height: 150px;
+    z-index: 999;
+}
+
+#page-header-right {
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.nav-top {
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    border: 2px solid #e2e2e2;
+    padding: 10px 10px 5px 10px;
+    height: 22px;
+    z-index: 998;
+}
+
+.navDel {
+    position: relative;
+    top: -1px;
+    color: #666666;
+}
+
+.nav-top-item {
+    display: inline;
+    list-style-type: none;
+    padding: 0 5px;
+    color: #666666;
+    font-size: 12px;
+}
+
+.nav-top-item:hover a {
+    text-decoration: underline;
+}
+
+#page-header-right {
+    position: relative;
+    height: 100%;
+}
+
+#page-header-cart {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    font-size: 13px;
+    z-index: 996;
+}
+
+#page-header-cart a {
+    text-decoration: none;
+}
+
+#header-cart-cart:hover,
+#header-cart-checkout:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#page-header-phone {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    text-align: center;
+}
+
+#header-phone-blurb {
+    font-size: 12px;
+    display: none;
+}
+
+#header-phone-num {
+    font-size: 18px;
+    color: #895c9a;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+
+/* MAIN NAV
+***********************/
+.nav-main {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    z-index: 997;
+    background-color: #F0F0F0;
+}
+
+.nav-main-list {
+    height: 40px;
+}
+
+.nav-main-item {
+    display: inline-block;
+    height: 28px;
+    list-style-type: none;
+    padding: 12px 10px 0;
+    border-right: 3px solid #FFF;
+    background: #F0F0F0 url('../images/nav-main-unselected.png')  left bottom repeat-x;
+    margin-bottom: 0;
+}
+
+.nav-main-item.selected,
+.nav-main-item:hover {
+    background: #F0F0F0 url('../images/nav-main-selected.png') left bottom repeat-x;
+}
+
+.nav-main-item.last {
+    float: right;
+    position: relative;
+    padding: 0 5px 0 0;
+    border: none;
+    background-image: url('../images/nav-main-unselected.png') !important;
+}
+
+.nav-main-item a {
+    text-transform: uppercase;
+}
+
+#glob-search-form {
+    display: inline-block;
+    padding: 6px 0;
+    float: right;
+}
+
+#glob-search-form input {
+    float: left;
+}
+
+#glob-search-input{
+    height: 28px;
+    width: 194px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: white;
+}
+
+#glob-search-submit {
+    width: 98px;
+    height: 28px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent url('../images/glob-search-submit.png') center center no-repeat;
+}

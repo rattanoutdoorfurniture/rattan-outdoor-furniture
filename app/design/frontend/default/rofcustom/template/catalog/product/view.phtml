@@ -1,0 +1,392 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $_product = $this->getProduct();
+$_priceModel  = $_product->getPriceModel();
+$_handles   = $this->getLayout()->getUpdate()->getHandles();
+$_isBundled = in_array("PRODUCT_TYPE_bundle", $_handles);
+$_isGrouped = in_array("PRODUCT_TYPE_grouped", $_handles);
+$_isSet     = !($_isBundled || $_isGrouped);
+if($_isBundled) {
+    list($_minimalPriceTax, $_maximalPriceTax) = $_priceModel->getTotalPrices($_product, null, null, false);
+} elseif($_isGrouped) {
+    $_associatedProducts = $_product->getTypeInstance(true)->getAssociatedProducts($_product);
+    $_minimalPriceTax = 0;
+    foreach($_associatedProducts as $_aProduct) {
+        $_minimalPriceTax += ($_aProduct->getPrice()*$_aProduct->getQty());
+    }
+}
+?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+
+
+<?php $proCats = $_product->getCategoryIds();
+    //die(dumper::auto($proCats));
+//  foreach ($proCats as $_proCat){
+//      $pc = $_proCat;
+//  }
+  $pc = end($proCats);
+  $category = Mage::getModel('catalog/category')->load($pc);
+  $url = $this->getUrl($category->getUrlPath()).basename($_product->getProductUrl());
+  $_products = $category->getProductCollection();
+  $customPro = array();$i=0;$index =0;
+  foreach ($_products as $_pro){
+      $_pro = Mage::getModel('catalog/product')->load($_pro->getId());
+      if ($_pro->getId() == $_product->getId())  $index =  $i;
+      $customPro[$i] = $_pro;
+      $i++;
+  }
+  $productId = $_product->getId();
+  $proItemNumber = "32" . ($pc<1000?($pc<100?($pc<10?("000".$pc):"00".$pc):"0".$pc):$pc) . "0" . $productId;
+?>
+
+
+<?php
+/**
+ * New Product Markup Section
+ */
+?>
+<?php
+/**
+ * @see Mage_Catalog_Model_Product_Option
+ */
+//    $colorSwatchOptions = $_helper->productAttribute($_product, $_product->getOptions(), 'color');
+//    $colorSwatch = current($colorSwatchOptions);
+//    $colorSwatches = $colorSwatch->getValues();
+    $swatches = array();
+//    foreach($colorSwatches as $swatch) {
+//        $swatches[] = $swatch->getData();
+//    }
+?>
+
+<form itemscope itemtype="http://schema.org/Product" itemref="rattan-outdoor-furniture-brand" class="clearfix" action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+
+<?php echo $this->getBlockHtml('formkey') ?>
+
+<div class="no-display">
+    <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+    <input type="hidden" name="related_product" id="related-products-field" value="" />
+</div>
+
+<?php echo $this->getChildHtml('media') ?>
+
+<?php if(preg_match('/\<img.*\>/',$this->getChildHtml('media'))): ?>
+<section id="product-details" class="nine columns">
+<?php else: ?>
+<section id="product-details" class="nine columns offset-by-three-important offset-by-half by-margin">
+<?php endif; ?>
+
+    <!-- Product Title ----------------------------------------------------------------->
+
+    <h1 id="product-details-title" itemprop="name"><?php echo $productName = $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+
+    <!-- Text Below Title Section ------------------------------------------------------->
+
+    <div id="product-details-sub">
+        <span id="product-details-sub-review">
+            <?php //echo $this->getReviewsSummaryHtml($_product, false, true)?>
+            <span id="product-details-sub-review-stars" class="review-stars _00"></span>
+            <span id="product-details-sub-review-text">
+                Be the first to <a href="#product-tabs-reviews" title="Write a Review" onclick="jQuery('#product-tabs-reviews').find('a').trigger('click');"> write a review</a>
+            </span>
+        </span>
+        <!-- REMOVE ITEM NUMBER -->
+        <!--<span class="product-details-sub-pipe">|</span>-->
+        <!--<span id="product-details-sub-item"><?php /*echo $this->__("Item #: "); */?><?php /*echo $proItemNumber; */?></span>-->
+        <span class="product-details-sub-pipe">|</span>
+        <span id="product-details-sub-model" itemprop="productID" content="sku:<?php echo $_helper->productAttribute($_product, $_product->getSKU(), 'sku') ?>"><?php echo $this->__("Model #: "); ?><span itemprop="sku"><?php echo $_helper->productAttribute($_product, $_product->getSKU(), 'sku') ?></span></span>
+    </div>
+
+    <!-- Pricing Section -------------------------------------------------------------->
+    <?php //echo $this->getTierPriceHtml($_product,$category) ?>
+    <?php if($_isBundled): ?>
+    <?php echo $this->getChildHtml('product_type_data'); ?>
+    <?php else: ?>
+    <div id="product-details-price" class="clearfix">
+        <section id="product-details-price-original" class="product-details-price-section">
+            <span id="product-details-price-original-label" class="product-details-price-label"><?php echo $this->__("Regular Price"); ?></span>
+            <?php if($_isGrouped): ?>
+            <span id="product-details-price-original-price" class="product-details-price-amount">$<?php echo number_format($_minimalPriceTax*1.2,0) ?></span>        </section>
+            <?php else: ?>
+            <span id="product-details-price-original-price" class="product-details-price-amount">$<?php echo number_format($_helper->productAttribute($_product, $_product->getMsrp(), 'msrp'),0) ?></span>        </section>
+            <?php endif; ?>
+        <section id="product-details-price-separator"></section>
+        <section id="product-details-price-sale" class="product-details-price-section" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+            <span id="product-details-price-sale-label" class="product-details-price-label"><?php echo $this->__("Sale Price"); ?></span>
+            <link itemprop="availability" href="http://schema.org/InStock"/>
+            <link itemprop="itemCondition" href="http://schema.org/NewCondition" />
+            <meta itemprop="priceCurrency" content="USD" />
+            <meta itemprop="category" content="Furniture" />
+            <?php if($_isGrouped): ?>
+            <span id="product-details-price-sale-price" class="product-details-price-amount" itemprop="price" content="<?php echo number_format($_minimalPriceTax,2) ?>">$<?php echo number_format($_minimalPriceTax,0) ?></span>
+            <?php else: ?>
+            <span id="product-details-price-sale-price" class="product-details-price-amount" itemprop="price" content="<?php echo number_format($_helper->productAttribute($_product, $_product->getPrice(), 'price'),2) ?>">$<?php echo number_format($_helper->productAttribute($_product, $_product->getPrice(), 'price'),0) ?></span>
+            <?php endif; ?>
+        </section>
+    </div>
+    <?php endif; ?>
+   
+
+    <!-- Special Offer Section ------------------------------------------------------->
+
+    <div id="product-details-special">
+        <span id="product-details-special-label">Special Offers:</span>
+        <span id="product-details-special-text"><?php echo $this->__("Spend $ 2,000 and receive "); ?><mark class="purpText"><?php echo $this->__("Free Shipping"); ?></mark></span>
+    </div>
+    <?php if ($_product->isSaleable()):?>
+
+    <!-- Simple Product Additional Details -->
+
+    <?php /*if($_product->getData('type_id') == "simple") echo preg_replace('/h2/','h3',$this->getChildHtml('additional'));*/ ?>
+
+    <!-- Color and Quantity Section --------------------------------------------------->
+
+    <div class="product-details-options" class="clearfix">
+        <?php
+        echo $this->getChildChildHtml('container2', '', true, true);
+        if($_isGrouped) {
+            echo $this->getChildHtml('product_type_data');
+        }
+        ?>
+    </div>
+
+    <!-- Call to Action buttons For Products Without Color Options --------------------->
+
+    <?php /*if (!$this->hasOptions()):?>
+        <div class="add-to-box">
+            <?php if($_product->isSaleable()): ?>
+                <?php echo $this->getChildHtml('addtocart') ?>
+                <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                    <span class="or"><?php echo $this->__('OR') ?></span>
+                <?php endif; ?>
+            <?php endif; ?>
+            <?php echo $this->getChildHtml('addto') ?>
+        </div>
+        <?php echo $this->getChildHtml('extra_buttons') ?>
+    <?php elseif (!$_product->isSaleable()): ?>
+        <div class="add-to-box">
+            <?php echo $this->getChildHtml('addto') ?>
+        </div>
+    <?php endif;*/ ?>
+
+    <?php $actual_link = "http".(isset($_SERVER['HTTPS'])&&!in_array($_SERVER['HTTPS'],array("off",""))?"s":"")."://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]".(preg_match('/\/$/',$_SERVER['REQUEST_URI'])==1?"":"/"); ?>
+    <div id="product-details-social">
+        <div class="fb-share-button" data-href="<?php echo $actual_link; ?>" data-type="icon_link"></div>
+        <!-- Remove Facebook Old-School Share Link in exchange for the above javascript share button -----------
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($actual_link); ?>"
+           target="_blank"
+           class="product-details-social-btn fb">Facebook</a>
+        ------------------------------------------------------------------------------------------------------- -->
+        <a href="https://twitter.com/home?status=<?php echo urlencode("Look at this $productName by @RattanOutdoor at $actual_link"); ?>"
+           target="_blank"
+           class="product-details-social-btn tw">Twitter</a>
+        <a href="https://plus.google.com/share?url=<?php echo urlencode($actual_link); ?>"
+           target="_blank"
+           class="product-details-social-btn gp">Google Plus</a>
+        <a href="<?php echo
+        "https://pinterest.com/pin/create/button/?url=".urlencode($actual_link) .
+        "&media=".urlencode($this->helper('catalog/image')->init($_product, 'image')) .
+        "&description=". urlencode($this->getMetaDescription()); ?>"
+           target="_blank"
+           class="product-details-social-btn pn">Pinterest</a>
+        <a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"
+           target="_blank"
+           rel="nofollow"
+           class="product-details-social-btn em">Email</a>
+        <a href="<?php echo
+        "http://www.houzz.com/buttonWidget/1" .
+        "?url=". urlencode($actual_link) .
+        "&img=". urlencode($this->helper('catalog/image')->init($_product, 'image')) .
+        "&title=". $productName .
+        "&hzid=21826".
+        "&ref=".urlencode("http".(isset($_SERVER['HTTPS'])&&!in_array($_SERVER['HTTPS'],array("off",""))?"s":"")."://$_SERVER[HTTP_HOST]".(preg_match('/\/$/',$_SERVER['HTTP_HOST'])==1?"":"/")); ?>"
+           target="_blank"
+           class="product-details-social-btn hz">Houzz</a>
+        <a href=""
+           target="_blank"
+           class="product-details-social-btn ig displaynone">Instagram</a>
+    </div>
+    <?php endif;?>
+
+    <!-- Social Media Buttons Area -------------------------------------------------------->
+
+        <div id="product-details-btns">
+            <section id="product-details-btns-add" class="product-details-btn">
+                <button id="product-details-btns-add-btn" class="product-details-btn-img" onclick="productAddToCartForm.submit(this)">Add To Cart</button>
+            </section>
+            <section id="product-details-btns-checkout" class="product-details-btn">
+                <button id="product-details-btns-checkout-btn" class="product-details-btn-img" onclick="productAddToCartForm.submit(this)">Checkout</button>
+            </section>
+        </div>
+
+</section>
+
+
+<!-- Page Tabs Section ---------------------------------------------------------------------->
+
+<article id="product-tabs" class="sixteen columns">
+    <?php
+        $detailedInfo       =  $this->getChildGroup('detailed_info', 'getChildHtml');
+        $detialedInfoCopy   = array_slice($detailedInfo, 0, 1);
+        $detailedInfoFirst  = array_shift($detialedInfoCopy);
+        foreach ($detailedInfo as $alias => $html):?>
+        <section id="product-tabs-<?php echo $alias;?>" class="product-tab<?php echo ($html==$detailedInfoFirst) ? $this->__(" active") : ''; ?>">
+            <label for="product-tabs-<?php echo $alias;?>" class="product-tab-title"><h2><a href="#product-tabs-<?php echo $alias;?>"><?php echo strlen($title = $this->getChildData($alias, 'title')) ? $this->escapeHtml($title) : $this->__("Description"); ?></a></h2></label>
+            <div class="product-tab-body" itemprop="description">
+                <?php $_description = $this->getProduct()->getDescription(); ?>
+                <?php echo $this->helper('catalog/output')->productAttribute($this->getProduct(), $_description, 'description') ?>
+            </div>
+        </section>
+    <?php break;endforeach;?>
+    <section id="product-tabs-faq" class="product-tab">
+        <label for="product-tabs-faq" class="product-tab-title"><a href="#product-tabs-faq">FAQ</a></label>
+        <div class="product-tab-body">
+            <p class="ease-loading">Loading...</p>
+        </div>
+    </section>
+    <section id="product-tabs-special" class="product-tab">
+        <label for="product-tabs-special" class="product-tab-title"><a href="#product-tabs-special">Shipping & Returns</a></label>
+        <div class="product-tab-body">
+            <p class="ease-loading">Loading...</p>
+        </div>
+    </section>
+    <section id="product-tabs-reviews" class="product-tab">
+        <label for="product-tabs-reviews" class="product-tab-title"><a href="#product-tabs-reviews">Reviews</a></label>
+        <div class="product-tab-body">
+            <?php //echo $this->getChildHtml('reviews'); ?>
+            <p></p>
+            <p><strong>Reviews are curretly unavailable.</strong></p>
+            <p>This feature will be available in the near future, so check back soon for reviews.</p>
+            <p>You can <a href="javascript:addToFavorites();">bookmark</a> this page and be brought right back to this reviews section.</p>
+        </div>
+    </section>
+    <aside id="product-tabs-next"><span id="product-tabs-next-label">Next Section</span>&gt;</aside>
+</article>
+
+<?php //!-- print this stuff to see what it is --?>
+<?php // echo $this->getChildHtml('alert_urls') ?>
+<?php // echo $this->getTierPriceHtml() ?>
+<?php // echo $this->getChildHtml('extrahint') ?>
+
+<!--
+------------------------------------------------------------------------------
+------------------------ Related Product Listings ----------------------------
+----------------------------------------------------------------------------->
+
+<?php //echo $this->getChildHtml("related_products"); ?>
+
+<?php echo $this->getChildHtml('upsell_products') ?>
+
+<?php
+/**
+ * This is how the Additional Data (and Description) should be loaded in, when we get there.
+ */
+/*
+<div class="product-collateral">
+    <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
+    <div class="box-collateral <?php echo "box-{$alias}"?>">
+        <?php if ($title = $this->getChildData($alias, 'title')):?>
+        <h2><?php echo $this->escapeHtml($title); ?></h2>
+        <?php endif;?>
+            <?php echo $html; ?>
+    </div>
+    <?php endforeach;?>
+        <?php echo $this->getChildHtml('upsell_products') ?>
+        <?php echo $this->getChildHtml('product_additional_data') ?>
+</div>
+ */
+?>
+
+<input type="hidden" name="proceedTo" value=""/>
+
+</form>
+    <script type="text/javascript">
+    //<![CDATA[
+        var productAddToCartForm = new VarienForm('product_addtocart_form');
+        productAddToCartForm.submit = function(button, url) {
+            if (this.validator.validate()) {
+                var form = this.form;
+                var oldUrl = form.action;
+
+                if(url) {
+                   form.action = url;
+                } else {
+                    if(button.id=="product-details-btns-checkout-btn") {
+                        form.elements.proceedTo.value += "checkout";
+                    }
+                }
+
+                var e = null;
+                try {
+                    this.form.submit();
+                } catch (e) {}
+
+                this.form.action = oldUrl;
+
+                if (e) {
+                    throw e;
+                }
+
+                if (button && button != 'undefined') {
+                    button.disabled = true;
+                }
+            }
+        }.bind(productAddToCartForm);
+
+        productAddToCartForm.submitLight = function(button, url){
+            if(this.validator) {
+                var nv = Validation.methods;
+                delete Validation.methods['required-entry'];
+                delete Validation.methods['validate-one-required'];
+                delete Validation.methods['validate-one-required-by-name'];
+                // Remove custom datetime validators
+                for (var methodName in Validation.methods) {
+                    if (methodName.match(/^validate-datetime-.*/i)) {
+                        delete Validation.methods[methodName];
+                    }
+                }
+
+                if (this.validator.validate()) {
+                    if (url) {
+                        this.form.action = url;
+                    }
+                    this.form.submit();
+                }
+                Object.extend(Validation.methods, nv);
+            }
+        }.bind(productAddToCartForm);
+    //]]>
+    </script>

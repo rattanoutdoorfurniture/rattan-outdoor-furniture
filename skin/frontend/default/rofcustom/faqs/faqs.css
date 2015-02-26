@@ -1,0 +1,67 @@
+.std {
+    padding-top: 10px;
+}
+
+.box-content {
+    width: 700px;
+    margin: 0 auto;
+}
+
+h2.faq-p-heading {
+    font: normal 14px/16px "Tahoma-Bold";
+    padding: 3px 15px;
+    border-radius: 10px;
+    border: 1px solid #AAA;
+    cursor: pointer;
+}
+
+h2.faq-p-heading:hover {
+    background: rgba(138, 99, 153, 0.4);
+    border: 1px solid #888;
+}
+
+h2.faq-p-heading em {
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/faq-sprite.png");
+    display: inline-block;
+    float: left;
+    margin-right: 6px;
+}
+
+h2.faq-p-heading.expanded {
+    border-radius: 10px 10px 0px 0px !important;
+    border: 1px solid #888;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: rgba(138, 99, 153, 0.4);
+}
+
+h2.faq-p-heading.expanded em {
+    background-position: -16px 0;
+}
+
+h2.faq-p-heading.expanded + p.expanded {
+    padding-top: 10px;
+}
+
+p.faq-p {
+    display: none;
+}
+
+p.faq-p.expanded {
+    display: block !important;
+    border-left: 1px solid #888;
+    border-right: 1px solid #888;
+    margin-bottom: 0;
+    text-indent: 2em;
+    padding: 0 50px 20px;
+}
+
+p.faq-p.qbreak.expanded {
+    border-bottom: 1px solid #888;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 20px;
+}

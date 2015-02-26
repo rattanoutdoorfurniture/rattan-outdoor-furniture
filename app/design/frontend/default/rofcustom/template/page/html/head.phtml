@@ -1,0 +1,264 @@
+<meta charset="UTF-8" />
+<!-- Basic Page Needs
+================================================== -->
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+<?php if(!is_null($pageNum = Mage::app()->getRequest()->getParam("p"))) {
+    $title  = $this->getTitle();
+    $suffix = Mage::getStoreConfig("design/head/title_suffix");
+    $titleNoSuffix = substr($title, 0, strlen($suffix) * -1);
+    $this->setTitle($titleNoSuffix . $this->__("- Page %s",$pageNum));
+} ?>
+<title><?php echo (@$this->getForcedTitle()) ? $this->getForcedTitle() : $this->getTitle(); ?></title>
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<meta name="author" content="https://google.com/+Rattanoutdoorfurniture">
+<meta name="google-site-verification" content="FZDC31mGIrSoBbOqM8oSp6RrVMZA5IgzITFazM8x3xE" />
+
+<!-- Facebook Open Graph Metas
+================================================== -->
+    <!-- Facebook global meta  -->
+    <meta property="og:site_name" content="<?php echo $this->__("Rattan Outdoor Furniture"); ?>"/>
+<?php if (Mage::registry('current_product')) : ?>
+    <!-- Facebook product meta -->
+    <meta property="og:title" content="<?php echo Mage::registry('current_product')->getName() ." by Rattan Outdoor Furniture" ?>" />
+    <meta property="og:description" content="<?php echo strip_tags(Mage::registry('current_product')->getMetaDescription()); ?>" />
+    <meta property="og:image" content="<?php echo Mage::helper('catalog/image')->init(Mage::registry('current_product'), 'image')->resize(200,200);?>" />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+    <?php
+    $curProd = Mage::registry('current_product');
+    $url = $curProd->getProductUrl();
+    if($categoryParent = $curProd->getResource()->getAttribute('parent_url_key')) {
+        $categoryParent = $categoryParent->getFrontend()->getValue($curProd);
+        if($categoryParent) {
+            $categoryParent = "products/" . $categoryParent;
+            $urlkey = preg_replace('/([a-z0-9\-]*)(\-default)$/',"$1",preg_replace('/([a-z0-9\-]*)(\-\d+)$/',"$1",$curProd->getUrlKey()));
+            $url = $this->getUrl($categoryParent).$urlkey."/";
+        }
+    }
+    ?>
+    <meta property="og:url" content="<?php echo $url; ?>" />
+    <meta property="og:type" content="product" />
+<?php else: ?>
+    <!-- Facebook general meta -->
+    <meta property="og:title" content="<?php echo (@$this->getForcedTitle()) ? $this->getForcedTitle() : $this->getTitle(); ?>" />
+    <?php
+            $key  = "fab57e";
+            $sec  = "rattanoutdoorfurniture.com";
+            $curl = Mage::helper("core/url")->getCurrentUrl();
+            $hash = md5($curl.$sec);
+            $surl = urlencode($curl);
+    ?>
+    <meta property="og:image" content="<?php echo "http://api.screenshotmachine.com/?key=$key&url=$surl&size=M&hash=$hash"; ?>" />
+    <meta property="og:image:width" content="640" />
+    <meta property="og:image:height" content="480" />
+    <?php switch($this->getAction()->getFullActionName()):
+        case "cms_index_index": ?><meta property="og:type" content="website" />
+    <?php break;
+        case "catalog_category_view": ?><meta property="og:type" content="product.group" />
+    <?php break;
+        default: ?><meta property="og:type" content="article" />
+    <?php endswitch; ?>
+    <meta property="og:description" content="<?php echo $this->getDescription(); ?>" />
+    <meta property="og:url" content="<?php echo Mage::helper("core/url")->getCurrentUrl(); ?>" />
+
+<?php endif; ?>
+
+<!-- Mobile Specific Metas
+================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- Favicons
+================================================== -->
+<?php if($this->getFaviconFile()): ?>
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<?php else: ?>
+<link rel="icon" href="/skin/frontend/default/rofcustom/images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/skin/frontend/default/rofcustom/images/favicon.ico" type="image/x-icon" />
+<?php endif; ?>
+<link rel="apple-touch-icon" href="/skin/frontend/default/rofcustom/images/apple/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/skin/frontend/default/rofcustom/images/apple/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/skin/frontend/default/rofcustom/images/apple/apple-touch-icon-114x114.png">
+
+<?php
+/**
+ * Set the appropriate rel=next and rel=prev for paginated category pages
+ */
+$actionName = $this->getAction()->getFullActionName();
+if ($actionName == 'catalog_category_view') { // Category Page
+    $category = Mage::registry('current_category');
+    $prodCol = $category->getProductCollection()->addAttributeToFilter('status', 1)->addAttributeToFilter('visibility', array('in' => array(Mage_Catalog_Model_Product_Visibility::VISIBILITY_IN_CATALOG, Mage_Catalog_Model_Product_Visibility::VISIBILITY_BOTH)));
+    $tool = $this->getLayout()->createBlock('page/html_pager')->setLimit($this->getLayout()->createBlock('catalog/product_list_toolbar')->getLimit())->setCollection($prodCol);
+    $linkPrev = false;
+    $linkNext = false;
+    if ($tool->getCollection()->getSelectCountSql()) {
+        if ($tool->getLastPageNum() > 1) {
+            if (!$tool->isFirstPage()) {
+                $linkPrev = true;
+                if ($tool->getCurrentPage() == 2) {
+                    $url = explode('?', $tool->getPreviousPageUrl());
+                    $prevUrl = @$url[0];
+                }
+                else {
+                    $prevUrl = $tool->getPreviousPageUrl();
+                }
+                $prevUrl = str_replace("&amp;","&",$prevUrl);
+                if(stristr($prevUrl,"?")!==false) {
+                    $urlParts = explode("?",$prevUrl, 2);
+                    if(substr($urlParts[0], -1) != "/") {
+                        $prevUrl = $urlParts[0] . "/?" . $urlParts[1];
+                    }
+                } else {
+                    if(substr($prevUrl, -1) != "/") {
+                        $prevUrl = $prevUrl . "/";
+                    }
+                }
+            }
+            if (!$tool->isLastPage()) {
+                $linkNext = true;
+                $nextUrl = $tool->getNextPageUrl();
+                $nextUrl = str_replace("&amp;", "&", $nextUrl);
+                if(stristr($nextUrl,"?")!==false) {
+                    $urlParts = explode("?",$nextUrl, 2);
+                    if(substr($urlParts[0], -1) != "/") {
+                        $nextUrl = $urlParts[0] . "/?" . $urlParts[1];
+                    }
+                } else {
+                    if(substr($nextUrl, -1) != "/") {
+                        $nextUrl = $nextUrl . "/";
+                    }
+                }
+            }
+        }
+    }
+    if ($linkPrev) echo '<link rel="prev" href="' . $prevUrl . '" />';
+    if ($linkNext) echo '<link rel="next" href="' . $nextUrl . '" />';
+    if (!$linkNext && !$linkPrev) {
+        echo '<link rel="canonical" href="' . Mage::helper("core/url")->getCurrentUrl() . '" />';
+    }
+} elseif($actionName == "catalog_product_view") {
+    // Canonical Tag Set Elsewhere for product views
+} elseif(strpos($actionName,"catalog_seo_sitemap")!==false) {
+
+    if(strpos($actionName,'category')!==false) {
+        $collection =  Mage::helper('catalog/category')->getStoreCategories('name', true, false);
+        $limit = 50;
+    } elseif(strpos($actionName,'product')!==false) {
+        $collection = Mage::getResourceModel('catalog/product_collection')
+            ->addAttributeToSelect('*')
+            ->addAttributeToFilter('visibility', array(
+                Mage_Catalog_Model_Product_Visibility::VISIBILITY_BOTH,
+                Mage_Catalog_Model_Product_Visibility::VISIBILITY_IN_CATALOG
+            ))
+            ->addAttributeToFilter('status', array('value'=>1));
+
+        // $limit = $this->getLayout()->createBlock('catalog/product_list')->setCollection($_productCollection)->getLimit();
+        $toolbar = Mage::getBlockSingleton('catalog/product_list')->getToolbarBlock()->setCollection($collection);
+        // $limit = $toolbar->getLimit();
+        $limit = 50;
+    }
+
+    $tool = $this->getLayout()->createBlock('page/html_pager')->setLimit($limit)->setCollection($collection);
+    $linkPrev = false;
+    $linkNext = false;
+    if ($tool->getCollection()->getSelectCountSql()) {
+        if ($tool->getLastPageNum() > 1) {
+            if (!$tool->isFirstPage()) {
+                $linkPrev = true;
+                if ($tool->getCurrentPage() == 2) {
+                    $url = explode('?', $tool->getPreviousPageUrl());
+                    $prevUrl = @$url[0];
+                }
+                else {
+                    $prevUrl = $tool->getPreviousPageUrl();
+                }
+                $prevUrl = str_replace("&amp;","&",$prevUrl);
+                if(stristr($prevUrl,"?")!==false) {
+                    $urlParts = explode("?",$prevUrl, 2);
+                    if(substr($urlParts[0], -1) != "/") {
+                        $prevUrl = $urlParts[0] . "/?" . $urlParts[1];
+                    }
+                } else {
+                    if(substr($prevUrl, -1) != "/") {
+                        $prevUrl = $nextUrl . "/";
+                    }
+                }
+            }
+            if (!$tool->isLastPage()) {
+                $linkNext = true;
+                $nextUrl = $tool->getNextPageUrl();
+                $nextUrl = str_replace("&amp;", "&", $nextUrl);
+                if(stristr($nextUrl,"?")!==false) {
+                    $urlParts = explode("?",$nextUrl, 2);
+                    if(substr($urlParts[0], -1) != "/") {
+                        $nextUrl = $urlParts[0] . "/?" . $urlParts[1];
+                    }
+                } else {
+                    if(substr($nextUrl, -1) != "/") {
+                        $nextUrl = $nextUrl . "/";
+                    }
+                }
+            }
+        }
+    }
+    if ($linkPrev) echo '<link rel="prev" href="' . $prevUrl . '" />';
+    if ($linkNext) echo '<link rel="next" href="' . $nextUrl . '" />';
+    if (!$linkNext && !$linkPrev && ($curUrl = Mage::helper('core/url')->getCurrentUrl())) {
+        echo '<link rel="canonical" href="' . $curUrl . '" />';
+    }
+} elseif(strpos($actionName,"cms_")!==false) {
+    echo '<link rel="canonical" href="'.$this->getUrl(Mage::getSingleton('cms/page')->getIdentifier()).'"/>';
+} elseif(strpos($actionName,"blog_index_list")!==false) {
+    $reqPath = trim(Mage::app()->getRequest()->getRequestString(),"/");
+    $reqArr  = explode("/",$reqPath);
+    if(count($reqArr)<2) {
+        echo '<link rel="canonical" href="'.$this->getUrl("blog").'"/>';
+    } else {
+        if(isset($reqArr[1]) && $reqArr[1]=="tag") {
+            if(isset($reqArr[2])) {
+                echo '<link rel="canonical" href="'.$this->getUrl("blog/tag/".$reqArr[2]).'"/>';
+            }
+        }
+    }
+} elseif(strpos($actionName,"blog_post")!==false) {
+    echo '<link rel="canonical" href="'.$this->getUrl("blog/".Mage::getSingleton('blog/post')->getIdentifier()).'"/>';
+} else {
+    $url = Mage::helper('core/url')->getCurrentUrl();
+    $url = strpos($url,'?')===false ? $url : strstr($url,'?',true);
+    echo '<link rel="canonical" href="'.$url.'"/>';
+}
+?>
+
+<!-- Lightboxes HTML -->
+<?php
+    echo $this->getChildHtml('lightboxes_head');
+    $this->unsetChild('lightboxes_head');
+?>
+<!-- CSS & JAVASCRIPT -->
+<?php echo $this->getCssJsHtml(); ?>
+
+<!--[if lt IE 9]>
+<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Child HTML -->
+<?php echo $this->getChildHtml() ?>
+<!-- Translator -->
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<!-- Includes -->
+<?php echo $this->getIncludes() ?>
+<!-- /Includes/ -->
+
+
+<script type="text/javascript">
+    //<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+    //]]>
+</script>
+
+
+
+

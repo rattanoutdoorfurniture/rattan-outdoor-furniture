@@ -1,0 +1,85 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<div class="account-box box-contact fourteen columns offset-by-one by-margin add-bottom">
+    <div class="account-box-border"></div>
+    <div class="account-box-inner">
+        <div class="box-head">
+            <h1><?php echo $this->__('Contact Us') ?></h1>
+            <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+        </div>
+        <form action="<?php echo $this->getFormAction(); ?>" id="contactForm" method="post" class="remove-bottom self-clear">
+            <div id="content-contact-us"><?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('contact-us-blurb')->toHtml(); ?></div>
+            <ul id="form-list-contact-us" class="form-list">
+                <li class="list-heading box-title"><h2><?php echo $this->__("Contact Us Form"); ?></h2></li>
+                <li class="fields">
+                    <div class="field">
+                        <div class="input-box">
+                            <label for="name" class="required">
+                                <div class="label-wrap"><strong class="nobr"><em>*</em><?php echo Mage::helper('contacts')->__('Name') ?></strong></div>
+                                <input name="name" id="name" title="<?php echo Mage::helper('contacts')->__('Name') ?>" value="<?php echo $this->htmlEscape($this->helper('contacts')->getUserName()) ?>" class="input-text required-entry" type="text" tabindex="1" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="input-box">
+                            <label for="email" class="required">
+                                <div class="label-wrap"><strong class="nobr"><em>*</em><?php echo Mage::helper('contacts')->__('Email') ?></strong></div>
+                                <input name="email" id="email" title="<?php echo Mage::helper('contacts')->__('Email') ?>" value="<?php echo $this->htmlEscape($this->helper('contacts')->getUserEmail()) ?>" class="input-text required-entry validate-email" type="text" />
+                            </label>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="input-box">
+                        <label for="telephone">
+                            <div class="label-wrap"><strong class="nobr"><?php echo Mage::helper('contacts')->__('Telephone') ?></strong></div>
+                            <input name="telephone" id="telephone" title="<?php echo Mage::helper('contacts')->__('Telephone') ?>" value="" class="input-text" type="text" />
+                        </label>
+                    </div>
+                </li>
+                <li class="wide">
+                    <div class="input-box">
+                        <label for="comment" class="required">
+                            <div class="label-wrap"><strong class="nobr"><em>*</em><?php echo Mage::helper('contacts')->__('Comment') ?></strong></div>
+                            <textarea name="comment" id="comment" title="<?php echo Mage::helper('contacts')->__('Comment') ?>" class="required-entry input-text" cols="5" rows="3"></textarea>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+            <div class="buttons-set">
+                <input type="text" name="hideit" id="hideit" value="" />
+                <button type="submit" title="<?php echo Mage::helper('contacts')->__('Submit') ?>" class="account-sub-button submit-button button"><span><span><?php echo Mage::helper('contacts')->__('Submit') ?></span></span></button>
+            </div>
+        </form>
+    </div>
+    <div class="account-box-border"></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+    var contactForm = new VarienForm('contactForm', true);
+//]]>
+</script>

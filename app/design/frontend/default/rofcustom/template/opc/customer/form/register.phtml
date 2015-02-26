@@ -1,0 +1,149 @@
+<?php
+    // Check if current Magento version includes Persistent Shopping Cart Extension
+    $isPersistantShoppingCartEnabled = Mage::getStoreConfigFlag('persistent/options/enabled');
+    $isContextCheckout = 0;
+    if ($isPersistantShoppingCartEnabled) {
+        $html = $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getFormData())->setForceUseCustomerAttributes(true)->toHtml();
+        $isContextCheckout = Mage::helper('checkout')->isContextCheckout();
+    } else {
+        $html = $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getFormData())->toHtml();
+    }
+?>
+
+<div class="account-create">
+    <?php /* ?>
+    <div class="page-title sixteen columns">
+        <h1 id="cart-heading"><?php echo $this->__('Registration') ?></h1>
+        <?php if($this->getMessagesBlock()): ?>
+            <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+            <script type="text/javascript">
+                setTimeout(function() {
+                    jQuery("ul.messages").slideUp("slow");
+                }, 5000);
+            </script>
+        <?php endif; ?>
+    </div>
+    <?php */ ?>
+    <?php /*echo $this->getChildHtml('paypalauth.register');*/ ?>
+    <div class="account-box box-create-account fourteen columns offset-by-one by-margin add-bottom">
+        <div class="account-box-border"></div>
+        <div class="account-box-inner">
+            <div class="box-head">
+                <h1><?php echo $this->__('Register') ?></h1>
+                <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+            </div>
+            <?php if(false&&$fb_button = $this->getChildHtml('inchoo_socialconnect_checkout_facebook_button')): ?>
+                <aside class="box-content register-with-facebook-block">
+                    <label id="register-with-facebook-button" for="checkout-step1-facebook"><?php echo $this->__("Or skip all the typing and simply:"); ?></label>
+                    <?php echo $fb_button; ?>
+                </aside>
+            <?php endif; ?>
+            <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="form-validate">
+                <?php echo $this->getBlockHtml('formkey')?>
+                <?php echo $this->getChildHtml('form_fields_before')?>
+                <input type="hidden" name="success_url" value="<?php echo $this->getSuccessUrl() ?>" />
+                <input type="hidden" name="error_url" value="<?php echo $this->getErrorUrl() ?>" />
+                <div class="col2-set self-clear">
+                    <div class="account-box column col-1 no-border">
+                        <div class="account-box-inner">
+                            <div class="box-title">
+                                <h2><?php echo $this->__('Registration Details') ?></h2>
+                            </div>
+                            <ul class="form-list box-blurb remove-bottom">
+                                <li class="fields">
+                                    <?php echo $html ?>
+                                </li>
+                                <li>
+                                    <label for="email_address" class="required"><em>*&nbsp;</em><?php echo $this->__('Email Address') ?></label>
+                                    <div class="input-box add-bottom">
+                                        <?php
+                                            $formEmail  = $this->getFormData()->getEmail();
+                                            $emailValue = is_null($formEmail) ? Mage::app()->getRequest()->getParam("email") : $formEmail;
+                                        ?>
+                                        <input type="text" name="email" id="email_address" value="<?php echo $emailValue; ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry remove-bottom" />
+                                    </div>
+                                </li>
+                                <?php if ($this->isNewsletterEnabled()): ?>
+                                    <li class="control remove-bottom">
+                                        <div class="input-box">
+                                            <label for="is_subscribed">
+                                                <input type="checkbox" name="is_subscribed" title="<?php echo $this->__('Sign Up for Newsletter') ?>" value="1" id="is_subscribed"<?php if(($chkSub=$this->getFormData()->getIsSubscribed())): ?> checked="checked"<?php elseif(is_null($chkSub)): ?> checked="checked"<?php endif; ?> class="checkbox" tabindex="-1" />
+                                                <span class="nobr"><?php echo $this->__('Sign Up for Newsletter') ?></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                <?php endif ?>
+                                <?php $_dob = $this->getLayout()->createBlock('customer/widget_dob') ?>
+                                <?php if ($_dob->isEnabled()): ?>
+                                    <li><?php echo $_dob->setDate($this->getFormData()->getDob())->toHtml() ?></li>
+                                <?php endif ?>
+                                <?php $_taxvat = $this->getLayout()->createBlock('customer/widget_taxvat') ?>
+                                <?php if ($_taxvat->isEnabled()): ?>
+                                    <li><?php echo $_taxvat->setTaxvat($this->getFormData()->getTaxvat())->toHtml() ?></li>
+                                <?php endif ?>
+                                <?php $_gender = $this->getLayout()->createBlock('customer/widget_gender') ?>
+                                <?php if ($_gender->isEnabled()): ?>
+                                    <li><?php echo $_gender->setGender($this->getFormData()->getGender())->toHtml() ?></li>
+                                <?php endif ?>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="account-box column col-2 no-border">
+                        <div class="account-box-inner">
+                            <div class="box-title">
+                                <h3><?php echo $this->__('Register Password') ?></h3>
+                            </div>
+                            <ul class="form-list box-blurb remove-bottom">
+                                <li class="fields">
+                                    <div class="field clearfix">
+                                        <label for="password" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
+                                        <div class="input-box add-bottom">
+                                            <input type="password" name="password" id="password" title="<?php echo $this->__('Password') ?>" class="input-text required-entry validate-password remove-bottom" />
+                                        </div>
+                                    </div>
+                                    <div class="field clearfix add-bottom">
+                                        <label for="confirmation" class="required"><em>*</em><?php echo $this->__('Confirm Password') ?></label>
+                                        <div class="input-box">
+                                            <input type="password" name="confirmation" title="<?php echo $this->__('Confirm Password') ?>" id="confirmation" class="input-text required-entry validate-cpassword remove-bottom" />
+                                        </div>
+                                    </div>
+                                </li>
+                                <?php if($fb_button = $this->getChildHtml('inchoo_socialconnect_checkout_facebook_button')): ?>
+                                <div class="checkout-step1-spacer add-bottom" id="checkout-step1-or">----------------- or -----------------</div>
+                                <div style="margin:0 auto;width: 260px;">
+                                    <?php echo $fb_button; ?>
+                                </div>
+                                <?php endif; ?>
+                                <?php //echo $this->getChildHtml('persistent.remember.me'); ?>
+                            </ul>
+                            <?php //echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
+                        </div>
+                    </div>
+                    <div class="buttons-set">
+                        <?php $backUrl = $this->escapeUrl((($backUrl=$this->getBackUrl())==$this->getBaseUrl())?$this->getBaseUrl()."customer/account/index":$backUrl); ?>
+                        <button id="back-link" class="back-link button" title="<?php echo $this->__('Back') ?>" onclick="window.location='<?php echo $backUrl; ?>';"><small>&laquo; </small><?php echo $this->__("Back"); ?></button>
+                        <button type="submit" title="<?php echo $this->__('Submit') ?>" class="submit-button account-sub-button button" tabindex="6"><span><span><?php echo $this->__('Submit') ?></span></span></button>
+                    </div>
+                </div>
+                <?php if ($isContextCheckout): ?>
+                    <input name="context" type="hidden" value="checkout" />
+                <?php endif; ?>
+            </form>
+        </div>
+        <div class="account-box-border"></div>
+    </div>
+    <script type="text/javascript">
+    //<![CDATA[
+        var dataForm = new VarienForm('form-validate', true);
+        <?php /* if($this->getShowAddressFields()): ?>
+        new RegionUpdater('country', 'region', 'region_id', <?php echo $this->helper('directory')->getRegionJson() ?>, undefined, 'zip');
+        <?php endif; */ ?>
+        jQuery(document).ready(function() {
+            $email = jQuery("#email_address");
+            if($email.val().length>0) {
+                $email.prop("tabindex","-1");
+            }
+        });
+    //]]>
+    </script>
+</div>

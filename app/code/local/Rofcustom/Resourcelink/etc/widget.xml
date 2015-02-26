@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgets>
+	<resourcelink_linkblock type="resourcelink/linkblock">
+		<name>Resource Link Block</name>
+		<description type="desc">Adds a block with defineable resource links</description>
+	</resourcelink_linkblock>
+</widgets>

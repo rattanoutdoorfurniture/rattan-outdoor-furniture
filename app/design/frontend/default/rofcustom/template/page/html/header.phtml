@@ -1,0 +1,51 @@
+<?php
+   /**
+    * Magento
+    *
+    * NOTICE OF LICENSE
+    *
+    * This source file is subject to the Academic Free License (AFL 3.0)
+    * that is bundled with this package in the file LICENSE_AFL.txt.
+    * It is also available through the world-wide-web at this URL:
+    * http://opensource.org/licenses/afl-3.0.php
+    * If you did not receive a copy of the license and are unable to
+    * obtain it through the world-wide-web, please send an email
+    * to license@magentocommerce.com so we can send you a copy immediately.
+    *
+    * DISCLAIMER
+    *
+    * Do not edit or add to this file if you wish to upgrade Magento to newer
+    * versions in the future. If you wish to customize Magento for your
+    * needs please refer to http://www.magentocommerce.com for more information.
+    *
+    * @category    design
+    * @package     base_default
+    * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+    * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+    */
+   /**
+    * @var Mage_Page_Block_Html_Header $this
+    */
+   ?>
+<header id="page-header" itemscope="" itemtype="http://schema.org/FurnitureStore" itemid="rattan-outdoor-furniture-store">
+    <a href="https://google.com/+Rattanoutdoorfurniture" rel="publisher"></a>
+    <span itemprop="email" id="organization-email" content="<?php echo Mage::getStoreConfig('trans_email/ident_general/email'); ?>"></span>
+    <span itemprop="legalName" id="organization-legal-name" content="RattanOutdoorFurniture.com"></span>
+    <span itemprop="logo" id="organization-logo" content="<?php echo str_replace("-left-","-centered-",$this->getLogoSrc()); ?>"></span>
+    <span itemprop="sameAs" id="organization-same-as" content="https://www.facebook.com/rattanoutdoorfurniture"></span>
+    <div id="rattan-outdoor-furniture-brand" itemprop="brand" itemscope="" itemType="http://schema.org/Brand" itemid="rattan-outdoor-furniture-brand" class="page-header-logo five columns">
+        <a itemprop="url" id="link-logo-main" href="<?php echo $this->getBaseUrl(); ?>" title="Rattan Outdoor Furniture">
+            <img id="logo-main" class="hide-mobile" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" />
+            <img itemprop="logo" id="logo-main-mobile" class="no-display show-mobile" src="<?php echo str_replace("-left-","-centered-",$this->getLogoSrc()); ?>" alt="<?php echo $this->getLogoAlt() ?>" />
+        </a>
+        <span itemprop="name" id="logo-main-name" content="Rattan Outdoor Furniture"></span>
+        <span itemprop="alternateName" id="logo-main-alternate-name" content="RattanOutdoorFurniture.com"></span>
+
+        <span itemprop="sameAs" id="logo-main-same-as" content="https://www.facebook.com/rattanoutdoorfurniture"></span>
+    </div>
+    <div id="page-header-right" class="eleven columns">
+        <?php echo $this->getChildHtml('topLinks') ?>
+        <?php echo Mage::app()->getLayout()->createBlock('cms/block')->setBlockId('header-phone')->toHtml(); ?>
+        <?php echo $this->getChildHtml('topMenu') ?>
+    </div>
+</header>

@@ -1,0 +1,62 @@
+2014-09-24T15:58:02+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [AMT] => 854.00
+            [CURRENCYCODE] => USD
+            [RETURNURL] => http://local.rattanoutdoorfurniture.com/paypal/express/return/
+            [CANCELURL] => http://local.rattanoutdoorfurniture.com/paypal/express/cancel/
+            [INVNUM] => 1201405325
+            [SOLUTIONTYPE] => Sole
+            [GIROPAYCANCELURL] => http://local.rattanoutdoorfurniture.com/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => http://local.rattanoutdoorfurniture.com/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => http://local.rattanoutdoorfurniture.com/checkout/onepage/success/
+            [LOCALECODE] => en_US
+            [ITEMAMT] => 849.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 5.00
+            [L_NUMBER0] => R74B44-002-#EDDFCC
+            [L_NAME0] => 3 Piece Bar Set
+            [L_QTY0] => 1
+            [L_AMT0] => 849.00
+            [BUSINESS] => 
+            [NOTETEXT] => 
+            [EMAIL] => _dev@brainycouch.com
+            [FIRSTNAME] => Mike
+            [LASTNAME] => Simoneau
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => US
+            [STATE] => OH
+            [CITY] => Beachwood
+            [STREET] => 2000 Auburn Drive, One
+            [ZIP] => 44122
+            [PHONENUM] => 4406066306
+            [SHIPTOCOUNTRYCODE] => US
+            [SHIPTOSTATE] => OH
+            [SHIPTOCITY] => Beachwood
+            [SHIPTOSTREET] => 2000 Auburn Drive, One
+            [SHIPTOZIP] => 44122
+            [SHIPTOPHONENUM] => 4406066306
+            [SHIPTOSTREET2] => Chagrin Highlands, Suite 200
+            [STREET2] => Chagrin Highlands, Suite 200
+            [SHIPTONAME] => Mike Simoneau
+            [ADDROVERRIDE] => 1
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 94.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => IWD_SI_MagentoCE_WPS
+        )
+
+    [response] => Array
+        (
+        )
+
+    [__pid] => 2496
+)
+

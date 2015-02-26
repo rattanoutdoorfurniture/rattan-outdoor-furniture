@@ -1,0 +1,127 @@
+/* Product Category Slider
+*******************************************/
+
+#category-slider {
+    height: 150px;
+    margin-bottom: 20px;
+
+}
+
+#category-slider-title {
+    text-indent: -10000px;
+    background: transparent url('../images/category-slider-title.png') center center no-repeat;
+    height: 40px;
+    margin-bottom: 20px;
+
+}
+
+.category-slider-nav {
+    float: left;
+    display: block;
+    height: 90px;
+    width: 30px;
+    background-color: transparent;
+    background-image: url('../images/controls.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.category-slider-nav.disabled {
+    cursor: default;
+    visibility: hidden;
+}
+
+#category-slider-prev {
+    background-position: right 30px;
+}
+
+#category-slider-next {
+    background-position: left -68px;
+}
+
+#category-slider-inner {
+    position: relative;
+    float: left;
+    display: block;
+    height: 90px;
+    width: 880px;
+    overflow: hidden;
+}
+
+#category-slider-inner table {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.category-slider-slide-link:hover .category-slider-slide-label {
+    /*text-decoration: underline;*/
+}
+.category-slider-slide-link {
+    text-decoration: none;
+}
+
+.category-slider-slide {
+    float: left;
+    display: block;
+    height: 90px;
+    width: 130px;
+    margin: 0 8px;
+}
+
+.category-slider-slide:hover {
+    box-shadow: 0 0 5px 0px rgba(138, 99, 153, 1);
+    border-radius: 15px;
+}
+
+.category-slider-slide-img {
+    height: 64px;
+    width: 91px;
+    /**
+     * Use Darker Color for Icons
+     */
+    background: transparent url('../images/categories-icon-sprite-darker.png') 0px 0px no-repeat;
+    margin: 0 auto;
+
+}
+
+.cat-sectionals .category-slider-slide-img {
+    background-position: 0px center;
+}
+
+
+.cat-sofas .category-slider-slide-img {
+    background-position: -148px center;
+}
+
+
+.cat-chairs .category-slider-slide-img {
+    background-position: -282px center;
+}
+
+
+.cat-loungers .category-slider-slide-img {
+    background-position: -415px center;
+}
+
+
+.cat-diningtables .category-slider-slide-img {
+    background-position: -567px center;
+}
+
+
+.cat-barsets .category-slider-slide-img {
+    background-position: -707px center;
+}
+
+.cat-accessories .category-slider-slide-img {
+    background-position: -795px center;
+}
+
+
+.category-slider-slide-label {
+    text-align: center;
+    text-decoration: none;
+    color: #888;
+    font: normal 14px/22px "Tahoma","Helvetica Neue", Helvetica, Arial, sans-serif;
+}

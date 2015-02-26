@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+<default>
+
+<remove name="block-banner"/>
+  <!-- <remove name="right.poll" />
+     <remove name="catalog.compare.sidebar" />-->
+	 <remove name="paypal.partner.right.logo" />
+	 	 <remove name="left.newsletter" />
+	  <remove name="catalog.leftnav" />
+	  
+	  
+	  
+	  
+	 
+<reference name="head">
+	 
+
+
+
+	<!-- CSS styles
+    ============================================================================== -->
+	
+
+<action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/custom-style.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/prettyPhoto.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/magento.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/jquery.bxslider.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/iview.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/skin/slider.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/jquery-ui-1.8rc1.custom.css</stylesheet></action>
+<action method="addCss"><stylesheet>css/update.css</stylesheet></action>
+
+
+
+
+	<!-- JS 
+    ============================================================================== -->
+
+<action method="addItem"><type>skin_js</type><name>js/jquery-1.7.1.min.js</name><params/><if/></action>
+<action method="addItem"><type>skin_js</type><name>js/cssua.min.js</name><params/><if/></action>
+<action method="addItem"><type>skin_js</type><name>js/noconflict.js</name><params/><if/></action>
+<action method="addItem"><type>skin_js</type><name>js/modernizr.custom.js</name><params/><if/></action>
+
+
+
+<!--Price slider -->
+<action method="addItem"><type>skin_js</type><name>js/price-slider/jquery-ui-1.8rc1.custom.min.js</name><params/><if/></action>  
+
+<!--Bx Carousel -->
+<action method="addItem"><type>skin_js</type><name>js/jquery.bxslider.js</name><params/><if/></action>
+
+<!--Mobile navigation -->
+<action method="addItem"><type>skin_js</type><name>js/jquery.dlmenu.js</name><params/><if/></action> 
+
+<!--Slider -->
+<action method="addItem"><type>skin_js</type><name>js/slider/raphael-min.js</name><params/><if/></action>
+<action method="addItem"><type>skin_js</type><name>js/slider/jquery.easing.js</name><params/><if/></action>
+<action method="addItem"><type>skin_js</type><name>js/slider/iview.js</name><params/><if/></action>
+<action method="addItem"><type>skin_js</type><name>js/respond.src.js</name><params/><if/></action>
+
+<action method="addItem"><type>skin_js</type><name>js/scripts.js</name><params/><if/></action>
+
+
+
+
+
+		
+
+        
+
+
+</reference>
+
+
+
+
+</default>
+
+
+
+
+
+
+ 
+    
+        
+
+
+</layout>
+
+ 
+
+ 
+
+ 

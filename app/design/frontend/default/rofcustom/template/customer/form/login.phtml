@@ -1,0 +1,124 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Customer login form template
+ *
+ * @see app/design/frontend/base/default/template/customer/form/login.phtml
+ */
+?>
+
+<?php
+    // Check if current Magento version includes Persistent Shopping Cart Extension
+    $isPersistantShoppingCartEnabled = Mage::getStoreConfigFlag('persistent/options/enabled');
+    $isContextCheckout = 0;
+    /** @var $this Mage_Customer_Block_Form_Login */
+    if ($isPersistantShoppingCartEnabled) {
+        $accountUrl = Mage::helper('persistent')->getCreateAccountUrl($this->getCreateAccountUrl());
+        $isContextCheckout = Mage::helper('checkout')->isContextCheckout();
+    } else {
+        $accountUrl = $this->getCreateAccountUrl();
+    }
+?>
+
+<div class="account-login" data-register-url="<?php echo $this->getCreateAccountUrl(); ?>">
+    <?php /* ?>
+    <div class="page-title sixteen columns">
+        <h1 id="cart-heading"><?php echo $this->__('My Account') ?></h1>
+        <?php if($this->getMessagesBlock()): ?>
+            <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+            <script type="text/javascript">
+                setTimeout(function() {
+                    jQuery("ul.messages").slideUp("slow");
+                }, 5000);
+            </script>
+        <?php endif; ?>
+    </div>
+    <?php */ ?>
+    <?php /* echo $this->getChildHtml('paypalauth.login'); */ ?>
+    <h1 id="login-heading" class="twelve columns offset-by-two a-center"><?php echo $this->__("Login Rattan Outdoor Furniture"); ?></h1>
+    <div id="account-box" class="twelve columns account-box offset-by-two by-margin">
+        <div class="account-box-border"></div>
+        <div class="account-box-inner">
+            <p class="ten columns offset-by-half self-clear">
+                <?php /*echo $this->__("Login to Rattan Outdoor Furniture for access to your past order history, "
+                                    ."current order progress and ease of use for future purchases to come. Save "
+                                    ."addresses associated with your account for simple checkout and order tracking. "
+                                    ."If you are not yet a member, sign up below by connecting with facebook or filling "
+                                    ."out a few simple questions. Already a member, and Forgot Your Password? ")
+                                    .'<a href="'.$this->getForgotPasswordUrl().'" title="'
+                                    .$this->__("Forgot Your Password?").'">'.$this->__("Click Here").'</a>';*/ ?>
+                <?php echo $this->__('Rattan Outdoor Furniture login allows you to quickly checkout, view your purchasing history and check the progress of your current order. Do you need an account? Register now by filling out our registration form or connect with Facebook.') ?>
+                <?php ?> <a href="<?php echo $this->getForgotPasswordUrl() ?>" title="<?php echo $this->__("Forgot Your Password?"); ?>"><?php echo $this->__("Forgot Your Password?"); ?></a> <?php ?>
+            </p>
+            <div id="checkout-box-login-account" class="checkout-box-login-box col-1 registered-users five columns">
+                <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form">
+                    <?php echo $this->getBlockHtml('formkey'); ?>
+                    <div class="checkout-box-login-box-inner content">
+                        <h2 class="checkout-box-login-box-heading"><?php echo $this->__("Login"); ?></h2>
+                        <input id="email" class="checkout-step1-input input-text required-entry validate-email" value="<?php echo $this->htmlEscape($this->getUsername()) ?>" name="login[username]" type="email" placeholder="Email" title="<?php echo $this->__('Email Address') ?>" />
+                        <div class="checkout-step1-spacer" id="checkout-step1-account-spacer">&nbsp;</div>
+                        <input id="pass" class="checkout-step1-input input-text required-entry validate-password" name="login[password]" type="password" placeholder="Password" title="<?php echo $this->__('Password') ?>" />
+                        <div class="displaynone"><?php echo $this->getChildHtml('persistent.remember.me'); ?></div>
+                        <input type="submit" id="checkout-step1-next-step-account" class="checkout-step1-next-step checkout-step-next-step" value="<?php echo $this->__("Login"); ?>" />
+                    </div>
+                    <?php //echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
+                    <?php if ($isContextCheckout): ?>
+                        <input name="context" type="hidden" value="checkout" />
+                    <?php endif; ?>
+                </form>
+            </div>
+            <div id="checkout-box-login-guest" class="checkout-box-login-box col-2 new-users five columns">
+                <form action="<?php echo $accountUrl; ?>" method="get" id="login-register-form">
+                <div class="checkout-box-login-box-inner content">
+                    <h3 class="checkout-box-login-box-heading"><?php echo $this->__('Register') ?></h3>
+                    <?php echo $this->getChildHtml('inchoo_socialconnect_facebook_login_button'); ?>
+                    <div class="checkout-step1-spacer" id="checkout-step1-or"><?php echo $this->__("----------------- or -----------------"); ?></div>
+                    <input id="checkout-step1-input-guest" class="checkout-step1-input" name="email" type="email" placeholder="Email">
+                    <input type="submit" id="checkout-step1-next-step-guest" class="checkout-step1-next-step checkout-step-next-step button" title="<?php echo $this->__('Create an Account') ?>" value="Continue" />
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="account-box-border"></div>
+    </div>
+
+    <script type="text/javascript">
+    //<![CDATA[
+        var dataForm = new VarienForm('login-form', true);
+//        jQuery(document).ready(function() {
+//            jQuery("#login-register-form").submit(function() {
+//                var guest_email = jQuery('#checkout-step1-input-guest').val();
+//                if(guest_email.length) {
+//                    this.action += "?email="+encodeURIComponent(guest_email);
+//                }
+//                return true;
+//            });
+//        });
+    //]]>
+    </script>
+</div>

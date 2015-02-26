@@ -1,0 +1,7 @@
+/***************************************\
+|* Contact-Us: Section Specific Styles *|
+\***************************************/
+
+#contactForm #hideit {
+    display: none !important;
+}
