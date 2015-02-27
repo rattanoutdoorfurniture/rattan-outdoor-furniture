@@ -21,4 +21,4 @@ media/css*
 media/wysiwyg/.thumbs
 *cache*
 var/resource_config.json
-
+magmi/
