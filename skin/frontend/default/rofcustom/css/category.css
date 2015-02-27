@@ -221,6 +221,7 @@
 .category-product-title {
     font-size: 13px;
     margin-bottom: 2px;
+    min-height: 42px;
 }
 
 .category-product-collection {

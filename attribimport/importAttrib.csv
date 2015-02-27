@@ -1,6 +1,6 @@
 attribute_id|entity_type_id|attribute_code|attribute_model|backend_model|backend_type|backend_table|frontend_model|frontend_input|frontend_label|frontend_class|source_model|is_required|is_user_defined|default_value|is_unique|note|frontend_input_renderer|is_global|is_visible|is_searchable|is_filterable|is_comparable|is_visible_on_front|is_html_allowed_on_front|is_used_for_price_rules|is_filterable_in_search|used_in_product_listing|used_for_sort_by|is_configurable|apply_to|is_visible_in_advanced_search|position|is_wysiwyg_enabled|is_used_for_promo_rules|_options
 71|4|name|||varchar|||text|Name|||1|0||0|||0|1|1|0|0|0|0|0|0|1|1|1||1|0|0|0|
-72|4|description|||text|||textarea|Description|||1|0||0|||0|1|1|0|1|0|1|0|0|0|0|1||1|0|1|0|
+72|4|description|||text|||textarea|Description|||1|0||0|||0|1|0|0|1|0|1|0|0|0|0|1||1|0|1|0|
 73|4|short_description|||text|||textarea|"Short Description"|||1|0||0|||0|1|1|0|1|0|1|0|0|1|0|1||1|0|1|0|
 74|4|sku||catalog/product_attribute_backend_sku|static|||text|SKU|||1|0||1|||1|1|1|0|1|0|0|0|0|0|0|1||1|0|0|0|
 75|4|price||catalog/product_attribute_backend_price|decimal|||price|Price|||1|0||0|||2|1|1|1|0|0|0|0|0|1|1|1|simple,configurable,virtual,bundle,downloadable|1|0|0|0|
@@ -9,6 +9,7 @@ attribute_id|entity_type_id|attribute_code|attribute_model|backend_model|backend
 78|4|special_to_date||eav/entity_attribute_backend_datetime|datetime|||date|"Special Price To Date"|||0|0||0|||2|1|0|0|0|0|0|0|0|1|0|1|simple,configurable,virtual,bundle,downloadable|0|0|0|0|
 79|4|cost||catalog/product_attribute_backend_price|decimal|||price|Cost|||0|1||0|||2|1|0|0|0|0|0|0|0|0|0|1|virtual,downloadable|0|0|0|0|
 80|4|weight|||decimal|||weight|Weight|||1|0||0|||1|1|0|0|0|0|0|0|0|0|0|1|simple,bundle|0|0|0|0|
+81|4|manufacturer|||int|||select|Manufacturer|||0|1||0|||1|1|1|1|1|0|0|0|0|0|0|1|simple|1|0|0|0|
 82|4|meta_title|||varchar|||text|"Meta Title"|||0|0||0|||0|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
 83|4|meta_keyword|||text|||textarea|"Meta Keywords"|||0|0||0|||0|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
 84|4|meta_description|||varchar|||textarea|"Meta Description"|||0|0||0|"Maximum 255 chars"||0|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
@@ -19,6 +20,7 @@ attribute_id|entity_type_id|attribute_code|attribute_model|backend_model|backend
 89|4|old_id|||int|||text||||0|0||0|||1|0|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
 90|4|group_price||catalog/product_attribute_backend_groupprice|decimal|||text|"Group Price"|||0|0||0|||2|1|0|0|0|0|0|0|0|0|0|1|simple,configurable,virtual,bundle,downloadable|0|0|0|0|
 91|4|tier_price||catalog/product_attribute_backend_tierprice|decimal|||text|"Tier Price"|||0|0||0|||2|1|0|0|0|0|0|0|0|0|0|1|simple,configurable,virtual,bundle,downloadable|0|0|0|0|
+92|4|color|||int|||select|Color|||0|1||0|||1|1|1|1|1|0|0|0|0|0|0|1|simple|1|0|0|0|
 93|4|news_from_date||catalog/product_attribute_backend_startdate|datetime|||date|"Set Product as New from Date"|||0|0||0|||2|1|0|0|0|0|0|0|0|1|0|1||0|0|0|0|
 94|4|news_to_date||eav/entity_attribute_backend_datetime|datetime|||date|"Set Product as New to Date"|||0|0||0|||2|1|0|0|0|0|0|0|0|1|0|1||0|0|0|0|
 95|4|gallery|||varchar|||gallery|"Image Gallery"|||0|0||0|||1|1|0|0|0|0|0|0|0|0|0|1||0|0|0|0|
@@ -59,8 +61,8 @@ attribute_id|entity_type_id|attribute_code|attribute_model|backend_model|backend
 130|4|links_title|||varchar||||"Links title"|||1|0||0|||0|0|0|0|0|0|0|0|0|0|0|0|downloadable|0|0|0|0|
 131|4|links_exist|||int|||||||0|0|0|0|||1|0|0|0|0|0|0|0|0|1|0|0|downloadable|0|0|0|0|
 139|4|parent_url_key|||varchar|||text|"Parent URL"|||0|1||0|||0|1|0|0|0|0|0|0|0|1|1|0||0|0|0|0|
-140|4|frame|||int|||select|Frame||eav/entity_attribute_source_table|0|1||0|||1|1|1|0|1|1|1|0|0|1|1|1||1|0|0|1|"Driftwood;Rattan Cane;Natural Wood;Two Tone"
-141|4|rattan|||int|||select|Rattan||eav/entity_attribute_source_table|0|1||0|||1|1|1|0|1|1|1|0|0|1|1|1||1|0|0|1|"Pearly Grey 3x1.5mm Web Smooth;KB2 8mm Roun;KB2 5mm Round;KB2 3mm Round;CC2 8mm Round;CC2 5mm Round;CC2 3mm Round;Arabica 8mm Round;Arabica 7mm Peel;Arabica 3mm Round"
-142|4|fabric|||int|||select|Fabric||eav/entity_attribute_source_table|0|1||0|||1|1|1|0|1|1|1|0|0|1|1|1||1|0|0|1|791R1C1;791R1C2;791R1C3;791R1C4;791R2C1;791R2C2;791R2C3;791R2C4;795R1C1;795R1C2;795R1C3;795R1C4;795R2C1;795R2C2;795R2C3;796R1C1;796R1C2;796R1C3;796R1C4;796R1C5;796R2C1;796R2C2;796R2C3;796R2C4;796R2C5
-143|4|tabletop|||int|||select|"Table Top"||eav/entity_attribute_source_table|0|1||0|||1|1|1|0|1|1|1|0|0|1|1|1||1|0|0|0|"Glass;Rattan;Marble - Tiled;Marble - Dark / Light Tiled;Granite - Dark;Granite - Dark / Light Diffuse"
-144|4|default_configuration_id|||int|||hidden|"Default configuration id"|||0|1||0|||1|1|0|0|0|0|0|0|0|0|0|0|configurable|0|0|0|0|
+140|4|default_configuration_id|||int|||hidden|"Default configuration id"|||0|1||0|||1|1|0|0|0|0|0|0|0|0|0|0|configurable|0|0|0|0|
+141|4|frame|||int|||select|Frame||eav/entity_attribute_source_table|0|1||0|||1|1|1|0|1|1|1|0|0|1|1|1||1|0|0|1|"Driftwood;Rattan Cane;Natural Wood;Two Tone;Black"
+142|4|rattan|||int|||select|Rattan||eav/entity_attribute_source_table|0|1||0|||1|1|1|0|1|1|1|0|0|1|1|1||1|0|0|1|"Pearly Grey 3x1.5mm Web Smooth;KB2 8mm Roun;KB2 5mm Round;KB2 3mm Round;CC2 8mm Round;CC2 5mm Round;CC2 3mm Round;Arabica 8mm Round;Arabica 7mm Peel;Arabica 3mm Round;Brown;Grey;Wheat;White"
+143|4|fabric|||int|||select|Fabric||eav/entity_attribute_source_table|0|1||0|||1|1|1|0|1|1|1|0|0|1|1|1||1|0|0|1|791R1C1;791R1C2;791R1C3;791R1C4;791R2C1;791R2C2;791R2C3;791R2C4;795R1C1;795R1C2;795R1C3;795R1C4;795R2C1;795R2C2;795R2C3;796R1C1;796R1C2;796R1C3;796R1C4;796R1C5;796R2C1;796R2C2;796R2C3;796R2C4;796R2C5;Yellow;Aqua;Black;Green;Neutral;Orange
+144|4|tabletop|||int|||select|"Table Top"||eav/entity_attribute_source_table|0|1||0|||1|1|1|0|1|1|1|0|0|1|1|1||1|0|0|0|"Glass;Rattan;Marble - Tiled;Marble - Dark / Light Tiled;Granite - Dark;Granite - Dark / Light Diffuse;Black Glass;Blue Glass"

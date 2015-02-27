@@ -243,7 +243,45 @@
 }
 .product-details-options dl > dd .input-box {
     margin: 5px auto;
-    height: 40px;
+    height: 46px;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.styledscroll::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+.styledscroll::-webkit-scrollbar
+{
+    height: 6px;
+    background-color: #F5F5F5;
+}
+
+.styledscroll::-webkit-scrollbar-thumb
+{
+    background-color: #000000;
+}
+
+.switcher-field {
+    max-height: 40px;
+    max-width: 1000000px;
+    width: auto;
+    white-space: nowrap;
+    position: absolute;
+    top: 2px;
+}
+
+.switcher-field label {
+    display: inline-block;
+}
+
+.switcher-label.selected img {
+    box-shadow: 0 0 5px 1px #57405F;
+    border-radius: 5px;
 }
 
 #product-details-options-qty-selector select {
