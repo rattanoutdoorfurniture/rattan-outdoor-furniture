@@ -5,7 +5,7 @@ error_log
 DEV_NOTES
 cache
 robots.txt
-app/etc/local.xml
+/app/etc/local.xml
 magmi/
 media/wysiwyg/.thumbs
 media/catalog
