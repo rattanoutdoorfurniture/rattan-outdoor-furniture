@@ -9,8 +9,8 @@
 *error_log
 *DEV_NOTES
 *_snapshot_*
-/var/backups/archive
-/var/backups
+var/backups/archive
+var/backups
 #/media/catalog/*
 /app/etc/local.xml
 robots.txt
