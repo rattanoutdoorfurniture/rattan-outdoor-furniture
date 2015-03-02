@@ -16,6 +16,10 @@
     display: none;
     top: 0;
     left: 0;
+	width: 920px;
+	height: 360px;
+	background: #FFF;
+	overflow: hidden;
 }
 
 .home-slide.current {
@@ -32,9 +36,12 @@
 }
 
 .home-slide-img {
+	position: relative;
+	display: block;
     width: 920px;
     height: 360px;
     outline: none;
+	margin: 0 auto !important;
 }
 
 .home-slide-detail {
@@ -44,6 +51,19 @@
     display: block;
     padding: 10px;
     background-color: rgba(240,240,240,0.8);
+	min-width: 280px;
+	width: 50%;
+	max-width: 400px;
+}
+
+.home-slide-detail.left {
+	right: auto;
+	left: 0;
+}
+
+.home-slide-detail.center {
+	right: 25%;
+	left: 25%;
 }
 
 .home-slide-detail-title {
