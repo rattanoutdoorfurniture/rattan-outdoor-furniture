@@ -229,7 +229,7 @@
                     $line = preg_replace('/<cell cellsource="B\d+">(.*)<\/cell>/',(strlen($preSpace)?'':'        ').'<lastmod>$1</lastmod>',$line);
                     $line = preg_replace('/<cell cellsource="C\d+">(.*)<\/cell>/',(strlen($preSpace)?'':'        ').'<changefreq>$1</changefreq>',$line);
                     $line = preg_replace('/<cell cellsource="D\d+">(.*)<\/cell>/',(strlen($preSpace)?'':'        ').'<priority>$1</priority>',$line);
-                    $line = preg_replace('/(<\/?)row.*>/',(strlen($preSpace)?'':'    ').'$1url>',$line);
+                    $line = preg_replace('/(<[\/]?)row.*>/',(strlen($preSpace)>2?'':'    ').'$1url>',$line);
                     $line = preg_replace('/<data>/','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',$line);
                     $line = preg_replace('/<\/data>/','</urlset>',$line);
                     if(strcmp($line,$preProcLine)==0) {
